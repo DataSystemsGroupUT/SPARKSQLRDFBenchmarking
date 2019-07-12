@@ -1,0 +1,55 @@
+Time taken: 2239 ms
+Time taken: 13060 ms
+Time taken: 819 ms
+Time taken: 27420 ms
+Time taken: 15342 ms
+Time taken: 15078 ms
+Time taken: 11818 ms
+Time taken: 2542 ms
+Time taken: 737 ms
+Time taken: 79152 ms
+===================================
+Time taken: 2597 ms
+Time taken: 11951 ms
+Time taken: 733 ms
+Time taken: 26462 ms
+Time taken: 14873 ms
+Time taken: 12796 ms
+Time taken: 11890 ms
+Time taken: 2082 ms
+Time taken: 795 ms
+Time taken: 83735 ms
+===================================
+Time taken: 3006 ms
+Time taken: 12006 ms
+Time taken: 798 ms
+Time taken: 27068 ms
+Time taken: 14679 ms
+Time taken: 12984 ms
+Time taken: 11657 ms
+Time taken: 2004 ms
+Time taken: 747 ms
+Time taken: 85578 ms
+===================================
+Time taken: 2683 ms
+Time taken: 12114 ms
+Time taken: 765 ms
+Time taken: 27386 ms
+Time taken: 14381 ms
+Time taken: 13769 ms
+Time taken: 13445 ms
+Time taken: 2264 ms
+Time taken: 752 ms
+Time taken: 83795 ms
+===================================
+Time taken: 2819 ms
+Time taken: 13195 ms
+Time taken: 930 ms
+Time taken: 27354 ms
+Time taken: 14751 ms
+Time taken: 12962 ms
+Time taken: 12455 ms
+Time taken: 2013 ms
+Time taken: 1041 ms
+Time taken: 80423 ms
+===================================
