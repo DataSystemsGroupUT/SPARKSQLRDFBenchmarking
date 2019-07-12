@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="ivy-report.xsl"?>
+<ivy-report version="1.0">
+	<info
+		organisation="default"
+		module="rdfbenchamrkingproject-master-build"
+		revision="0.1.0-SNAPSHOT"
+		extra-scalaVersion="2.12"
+		extra-sbtVersion="1.0"
+		conf="runtime-internal"
+		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, pom, scala-tool"
+		date="20190627032012"/>
+	<dependencies>
+		<module organisation="org.scala-sbt" name="global-plugins">
+			<revision name="0.0" status="integration" pubdate="20190627031957" resolver="inter-project" artresolver="inter-project" extra-scalaVersion="2.12" extra-sbtVersion="1.0" downloaded="false" searched="false" default="false" conf="compile, default(compile)" position="0">
+				<metadata-artifact status="failed" details="" size="0" time="0" searched="false"/>
+				<caller organisation="default" name="rdfbenchamrkingproject-master-build" conf="compile, runtime-internal, runtime, optional" rev="0.0" rev-constraint-default="0.0" rev-constraint-dynamic="0.0" callerrev="0.1.0-SNAPSHOT" extra-scalaVersion="2.12" extra-sbtVersion="1.0"/>
+				<artifacts>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.jetbrains" name="sbt-idea-shell">
+			<revision name="2018.3" status="release" pubdate="20181105210000" resolver="sbt-chain" artresolver="sbt-chain" extra-scalaVersion="2.12" extra-sbtVersion="1.0" downloaded="false" searched="false" default="false" conf="compile, default(compile)" position="2">
+				<license name="Apache-2.0" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
+				<metadata-artifact status="no" details="" size="2421" time="0" location="/home/cloudera/.ivy2/cache/scala_2.12/sbt_1.0/org.jetbrains/sbt-idea-shell/ivy-2018.3.xml" searched="false" origin-is-local="false" origin-location="https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.jetbrains/sbt-idea-shell/scala_2.12/sbt_1.0/2018.3/ivys/ivy.xml"/>
+				<caller organisation="org.scala-sbt" name="global-plugins" conf="compile" rev="2018.3" rev-constraint-default="2018.3" rev-constraint-dynamic="2018.3" callerrev="0.0" extra-scalaVersion="2.12" extra-sbtVersion="1.0"/>
+				<artifacts>
+					<artifact name="sbt-idea-shell" type="jar" ext="jar" status="no" details="" size="10705" time="0" location="/home/cloudera/.ivy2/cache/scala_2.12/sbt_1.0/org.jetbrains/sbt-idea-shell/jars/sbt-idea-shell-2018.3.jar">
+						<origin-location is-local="false" location="https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.jetbrains/sbt-idea-shell/scala_2.12/sbt_1.0/2018.3/jars/sbt-idea-shell.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.jetbrains" name="sbt-structure-extractor">
+			<revision name="2018.2.1+4-88400d3f" status="integration" pubdate="20180919230826" resolver="sbt-chain" artresolver="sbt-chain" extra-scalaVersion="2.12" extra-sbtVersion="1.0" downloaded="false" searched="false" default="false" conf="compile, default(compile)" position="1">
+				<license name="Apache-2.0" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
+				<metadata-artifact status="no" details="" size="2067" time="0" location="/home/cloudera/.ivy2/cache/scala_2.12/sbt_1.0/org.jetbrains/sbt-structure-extractor/ivy-2018.2.1+4-88400d3f.xml" searched="false" origin-is-local="false" origin-location="https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.jetbrains/sbt-structure-extractor/scala_2.12/sbt_1.0/2018.2.1+4-88400d3f/ivys/ivy.xml"/>
+				<caller organisation="org.scala-sbt" name="global-plugins" conf="compile" rev="2018.2.1+4-88400d3f" rev-constraint-default="2018.2.1+4-88400d3f" rev-constraint-dynamic="2018.2.1+4-88400d3f" callerrev="0.0" extra-scalaVersion="2.12" extra-sbtVersion="1.0"/>
+				<artifacts>
+					<artifact name="sbt-structure-extractor" type="jar" ext="jar" status="no" details="" size="367489" time="0" location="/home/cloudera/.ivy2/cache/scala_2.12/sbt_1.0/org.jetbrains/sbt-structure-extractor/jars/sbt-structure-extractor-2018.2.1+4-88400d3f.jar">
+						<origin-location is-local="false" location="https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.jetbrains/sbt-structure-extractor/scala_2.12/sbt_1.0/2018.2.1+4-88400d3f/jars/sbt-structure-extractor.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+	</dependencies>
+</ivy-report>
