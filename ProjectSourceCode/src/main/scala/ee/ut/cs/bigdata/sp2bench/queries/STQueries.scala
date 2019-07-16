@@ -5,8 +5,6 @@ class STQueries {
 
 
 
-  //Q1  100%
-
 val q1=
   """
     |SELECT
@@ -22,7 +20,7 @@ val q1=
   """.stripMargin
 
 
-  // Q2    2,149   xrH3b6b  100%
+ 
 
 
 val q2=
@@ -68,7 +66,7 @@ val q2=
 
 
 
-  //Q3  6,879  100%
+
 
 
   val q3=
@@ -85,8 +83,6 @@ val q2=
 
 
 
-
-  //Q4  100%
 
 
   val q4=
@@ -125,10 +121,6 @@ val q2=
 
 
 
-
-
-  // Q5  2,383  100%
-
   val q5=
     """
       |SELECT DISTINCT
@@ -157,10 +149,6 @@ val q2=
     """.stripMargin
 
 
-
-
-
-  //Q6  4050
 
 val q6=
 
@@ -226,9 +214,6 @@ val q6=
   """.stripMargin
 
 
-
-
-  //Q7    100%
 
 
   val q7=
@@ -307,9 +292,6 @@ val q6=
     """.stripMargin
 
 
-
-  //Q8  301    100%
-
   val q8=
     """
       |SELECT DISTINCT
@@ -374,9 +356,6 @@ val q6=
 
 
 
-
-  //Q9  4   100%
-
   val q9=
     """
       |SELECT DISTINCT L.predicate AS predicate
@@ -406,7 +385,7 @@ val q6=
       |
     """.stripMargin
 
-  //Q10   368   100%
+
 
   val q10=
     """
@@ -423,7 +402,7 @@ val q6=
 
 
 
-  //Q11    100%  //OFFSET not supported by Spark-SQL
+  //Q11  //OFFSET not supported by Spark-SQL
 
   val q11=
     """
