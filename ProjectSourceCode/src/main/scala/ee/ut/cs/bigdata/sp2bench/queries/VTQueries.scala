@@ -3,10 +3,6 @@ package ee.ut.cs.bigdata.sp2bench.queries
 class VTQueries {
 
 
-
-
-  //Q1  100%
-
 val q1=
   """
     |SELECT
@@ -20,8 +16,6 @@ val q1=
     |    AND DT.object='Journal 1 (1940)'
   """.stripMargin
 
-
-  // Q2    2,149   xrH3b6b  100%
 
 
 val q2=
@@ -53,9 +47,6 @@ val q2=
 
 
 
-  //Q3  6,879  100%
-
-
   val q3=
   """
     | SELECT DISTINCT Ty.subject AS article
@@ -67,12 +58,6 @@ val q2=
     |AND
     |P.object IS NOT NULL
   """.stripMargin
-
-
-
-
-
-  //Q4  100%
 
 
   val q4=
@@ -97,11 +82,6 @@ val q2=
     """.stripMargin
 
 
-
-
-
-  // Q5  2,383  100%
-
   val q5=
     """
       |SELECT DISTINCT
@@ -120,11 +100,6 @@ val q2=
       |    AND N1.object=N2.object
     """.stripMargin
 
-
-
-
-
-  //Q6  4050
 
 val q6=
 
@@ -170,11 +145,6 @@ val q6=
     |    ON L1.author=L2.author AND L2.yr<L1.yr
     |WHERE L2.author IS NULL
   """.stripMargin
-
-
-
-
-  //Q7    100%
 
 
   val q7=
@@ -241,8 +211,6 @@ val q6=
 
 
 
-  //Q8  301    100%
-
   val q8=
     """
       |SELECT DISTINCT
@@ -292,9 +260,6 @@ val q6=
 
 
 
-
-  //Q9  4   100%
-
   val q9=
     """
       |SELECT DISTINCT predicate
@@ -338,10 +303,7 @@ val q6=
       |) AS L
     """.stripMargin
 
-
-
-
-  //Q11    100%  //OFFSET not supported by Spark-SQL
+  //Q11    //OFFSET not supported by Spark-SQL
 
   val q11=
     """
@@ -354,8 +316,6 @@ val q6=
       |--OFFSET 50
       |LIMIT 10
     """.stripMargin
-
-
 
 
 
