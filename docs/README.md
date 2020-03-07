@@ -12,15 +12,15 @@ We present a systematic comparison of three relevant RDF relational schemas such
 
 **Single Statement Table** requires  storing RDF datasets in a single triples table of three columns that represent the three components of the RDF triple, i.e., Subject, Predicate, and Object.
 
-<img src="https://github.com/DataSystemsGroupUT/SPARKSQLRDFBenchmarking/blob/master/docs/images/pt.JPG" alt="spark" width="500" height="200">
+<img src="images/st.JPG" alt="spark" width="500" height="200">
 
 **Vertically-Partitioned Tables** is an alterna-tive schema storage in which the RDF triples table is decomposed into a table of two columns (Subject, Object) for each unique property  in  the  RDF  dataset  such  that  the  first  (subject) column contains all subject URIs of that unique property, and the second (object) contains all the object values (URIs and Literals) for those subjects
 
-<img src="https://github.com/DataSystemsGroupUT/SPARKSQLRDFBenchmarking/blob/master/docs/images/pt.JPG" alt="spark" width="500" height="200">
+<img src="images/vt.JPG" alt="spark" width="500" height="200">
 
 **Property Tables** is proposed to cluster multiple RDF properties as n-ary table columns for the same subject to group entities that are similar instructure.
 
-<img src="https://github.com/DataSystemsGroupUT/SPARKSQLRDFBenchmarking/blob/master/docs/images/pt.JPG" alt="spark" width="500" height="200">
+<img src="images/pt.JPG" alt="spark" width="500" height="200">
 
 
 ### Storage backends and storage formats
