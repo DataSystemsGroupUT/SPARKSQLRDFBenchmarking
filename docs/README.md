@@ -6,3 +6,4 @@ We evaluate the performance Spark SQL querying engine for processing SPARQL quer
 We drove our experiment using a representative query workloads from the SP2Bench benchmark scenario.
 
 The results of our experiments show many interesting insights about the impact of the relational encoding scheme, storage backends and storage formats on the performance of the query execution process.
+
