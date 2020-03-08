@@ -40,8 +40,8 @@ _[SP2Bench Data Generator](http://dbis.informatik.uni-freiburg.de/index.php?proj
 Sp2Bench  _SPARQL_ queries and their _SQL_ translations for ST,VT, and PT relational schemas (that we will use in our experiments, compliant with the SparkSQL) can be found [here](http://dbis.informatik.uni-freiburg.de/index.php?project=SP2B/translations.html)
 
 
-* [Results](https://datasystemsgrouput.github.io/AutoMLMicroAnalysis/results)
-  * [Centralized Experiments](https://github.com/DataSystemsGroupUT/SPARKSQLRDFBenchmarking/docs/ResultsCenteralized)
+### Results
+  * [Centralized Experiments](https://github.io/DataSystemsGroupUT/SPARKSQLRDFBenchmarking/docs/ResultsCenteralized)
   * [Distributed Experiments](https://datasystemsgrouput.github.io/AutoMLMicroAnalysis/results#impact-of-ensembling)
   
 
