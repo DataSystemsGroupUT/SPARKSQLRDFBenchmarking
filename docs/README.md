@@ -42,7 +42,9 @@ Sp2Bench  _SPARQL_ queries and their _SQL_ translations for ST,VT, and PT relati
 
 ### Results
   * [Centralized Experiments](ResultsCenteralized.md)
-  * [Distributed Experiments](https://datasystemsgrouput.github.io/AutoMLMicroAnalysis/results#impact-of-ensembling)
+  * [Distributed Experiments]
+    *[Runtimes](DistributedExperiments.md)
+    
   
 
 ### Project Phases
