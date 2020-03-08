@@ -33,8 +33,9 @@ In addition, we show the impact of using three different RDF-based partitioning 
 
 ### Installation
 
-_[Data Generator](http://dbis.informatik.uni-freiburg.de/index.php?project=SP2B/download.php)_ generates data in N3 format. _[Apache Jena](https://jena.apache.org/download/)_ is used to convert N3 into TDB files, afterwards converting TDB files into CSV relational schemas.
+_[SP2Bench Data Generator](http://dbis.informatik.uni-freiburg.de/index.php?project=SP2B/download.php)_ generates data in N3 format. _[Apache Jena](https://jena.apache.org/download/)_ is used to convert N3 into TDB files. Afterwards, we query TDB datasets using SPARQL to generate our different CSV relational schemas (i.e. ST, PT, and VT).
 
+### SP2Bench Queries
 The _SPARQL_ and _SQL_ queries can be found [here](http://dbis.informatik.uni-freiburg.de/index.php?project=SP2B/translations.html)
 
 
