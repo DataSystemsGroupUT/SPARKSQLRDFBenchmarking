@@ -49,12 +49,12 @@ _[SP2Bench Data Generator](http://dbis.informatik.uni-freiburg.de/index.php?proj
 Sp2Bench  _SPARQL_ queries and their _SQL_ translations for ST,VT, and PT relational schemas (that we will use in our experiments, compliant with the SparkSQL) can be found [here](http://dbis.informatik.uni-freiburg.de/index.php?project=SP2B/translations.html)
 
 - Query Analysis (i.e in terms of NO. Joins, Selections, and Projections)
-<p align="center"><img src="images/queryAnalysis.png" alt="spark" width="500" height="200"></p>
+<p align="center"><img src="images/queryAnalysis.png" alt="spark"></p>
 
 
 ### Experiments Architecture
 
-<p align="center"><img src="images/experiments.JPG" alt="spark" width="500" height="200"></p>
+<p align="center"><img src="images/experiments.JPG" alt="spark"></p>
 
 ### Results
   * [Centralized Experiments](ResultsCenteralized.md)
