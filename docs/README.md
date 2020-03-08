@@ -70,7 +70,7 @@ Sp2Bench  _SPARQL_ queries and their _SQL_ translations for ST,VT, and PT relati
 
 ### Project Phases
 
-<p align="center"><img src="images/SparkSQLRDFBenchPhases.png" alt="spark" width="500" height="200"> </p>
+<p align="center"><img src="images/SparkSQLRDFBenchPhases.png" alt="spark"> </p>
 
 ### Publication
 
