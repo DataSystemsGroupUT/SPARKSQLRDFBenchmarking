@@ -32,6 +32,8 @@ We evaluate the performance of SparkSQL querying engine for processing SPARQL qu
 -----
 In addition, we show the impact of using three different RDF-based partitioning techniques with our relational scenario which are _Subject-based_, _Predicate-based_, and _Horizontal partitioning_.
 
+<p align="center"><img src="images/parttechs.png" alt="spark" width="500" height="200"> </p>
+
 - Horizontal -Based Partitioning (HP): a technique that evenly partitions the data horizontally on the number of machines in the cluster. In particular, it partitions the relational tables we have according to ($n$) number of machines in the cluster.
 
 - Subject-Based Partitioning (SBP): a technique which distributes triples to the partitions according to the \textit{subject}. As a result, all the triples that have the same \textit{subject} are assumed to reside on the same partition. In our scenario, we applied spark partitioning using the \textit{subject}- key with our different relational schema tables/Dataframes.
