@@ -30,9 +30,9 @@ We evaluate the performance of SparkSQL querying engine for processing SPARQL qu
 
 
 
+### Project Phases
 
-
-
+<img src="images/SparkSQLRDFBenchPhases.png" alt="spark" width="500" height="200">
 
 ### Publication
 
