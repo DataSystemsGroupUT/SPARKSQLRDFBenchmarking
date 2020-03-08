@@ -42,7 +42,7 @@ The _SPARQL_ and _SQL_ queries can be found [here](http://dbis.informatik.uni-fr
 
 ### Project Phases
 
-<div style="text-align:center"> <img src="images/SparkSQLRDFBenchPhases.png" alt="spark" width="500" height="200"> </div>
+<p align="center"><img src="images/SparkSQLRDFBenchPhases.png" alt="spark" width="500" height="200"> </p>
 
 ### Publication
 
