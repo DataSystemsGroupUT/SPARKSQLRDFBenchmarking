@@ -47,4 +47,4 @@ The _SPARQL_ and _SQL_ queries can be found [here](http://dbis.informatik.uni-fr
 
 ### Publication
 
-    M. Ragab, R. Tommasini and S. Sakr, Benchmarking SparkSQL under Alliterative RDF Relational Storage Backends (2019).
+    M. Ragab, R. Tommasini and S. Sakr, Benchmarking SparkSQL under Alliterative RDF Relational Storage Backends, QuWeDa@ISWC 2019.
