@@ -41,7 +41,7 @@ The _SPARQL_ and _SQL_ queries can be found [here](http://dbis.informatik.uni-fr
 
 
 * [Results](https://datasystemsgrouput.github.io/AutoMLMicroAnalysis/results)
-  * [Centralized Experiments](https://datasystemsgrouput.github.io/AutoMLMicroAnalysis/results#impact-of-meta-learning)
+  * [Centralized Experiments](https://github.com/DataSystemsGroupUT/SPARKSQLRDFBenchmarking/blob/master/docs/ResultsCenteralized)
   * [Distributed Experiments](https://datasystemsgrouput.github.io/AutoMLMicroAnalysis/results#impact-of-ensembling)
   
 
