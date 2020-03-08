@@ -53,7 +53,7 @@ Sp2Bench  _SPARQL_ queries and their _SQL_ translations for ST,VT, and PT relati
 
 
 ### Experiments Architecture
-
+This figure shows the summary of our experiments configurations. 
 <p align="center"><img src="images/experiments.JPG" alt="spark"></p>
 
 ### Source Code
