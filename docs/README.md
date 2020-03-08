@@ -23,11 +23,6 @@ We present a systematic comparison of three relevant RDF relational schemas such
 <img src="images/pt.JPG" alt="spark" width="500" height="200">
 
 
-### Storage backends and storage formats
------
-We evaluate the performance of SparkSQL querying engine for processing SPARQL queries using two different storage backends, namely, _Hive_, and _HDFS_. For the latter one, we compare four different data formats (_CSV_, _ORC_, _Avro_, and _Parquet_). 
-
-
 ### Storage backends/formats
 -----
 We evaluate the performance of SparkSQL querying engine for processing SPARQL queries using two different storage backends, namely, _Hive_, and _HDFS_. For the latter one, we compare four different data formats (_CSV_, _ORC_, _Avro_, and _Parquet_). 
