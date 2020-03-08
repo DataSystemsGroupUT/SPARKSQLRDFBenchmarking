@@ -37,7 +37,7 @@ In addition, we show the impact of using three different RDF-based partitioning 
 _[SP2Bench Data Generator](http://dbis.informatik.uni-freiburg.de/index.php?project=SP2B/download.php)_ generates RDF data in N3 format. _[Apache Jena](https://jena.apache.org/download/)_ is used to convert N3 into TDB files. Afterwards, we query TDB datasets using SPARQL quereis to generate our different CSV relational schemas (i.e. ST, PT, and VT).
 
 ### SP2Bench Queries
-The _SPARQL_ and _SQL_ queries can be found [here](http://dbis.informatik.uni-freiburg.de/index.php?project=SP2B/translations.html)
+Sp2Bench  _SPARQL_ queries and their _SQL_ translations for ST,VT, and PT relational schemas (that we will use in our experiments, compliant with the SparkSQL) can be found [here](http://dbis.informatik.uni-freiburg.de/index.php?project=SP2B/translations.html)
 
 
 * [Results](https://datasystemsgrouput.github.io/AutoMLMicroAnalysis/results)
