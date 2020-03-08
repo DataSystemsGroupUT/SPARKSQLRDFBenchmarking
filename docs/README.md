@@ -52,6 +52,10 @@ Sp2Bench  _SPARQL_ queries and their _SQL_ translations for ST,VT, and PT relati
 <p align="center"><img src="images/queryAnalysis.png" alt="spark" width="500" height="200"></p>
 
 
+### Experiments Architecture
+
+<p align="center"><img src="images/experiments.JPG" alt="spark" width="500" height="200"></p>
+
 ### Results
   * [Centralized Experiments](ResultsCenteralized.md)
   * Distributed Experiments
