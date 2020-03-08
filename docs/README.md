@@ -13,15 +13,15 @@ We present a systematic comparison of three relevant RDF relational schemas such
 
 **Single Statement Table** requires  storing RDF datasets in a single triples table of three columns that represent the three components of the RDF triple, i.e., Subject, Predicate, and Object.
 
-<p align="center"><img src="images/st.JPG" alt="spark" width="500" height="200"></p>
+<p align="center"><img src="images/st.JPG" alt="spark"></p>
 
 **Vertically-Partitioned Tables** is an alterna-tive schema storage in which the RDF triples table is decomposed into a table of two columns (Subject, Object) for each unique property  in  the  RDF  dataset  such  that  the  first  (subject) column contains all subject URIs of that unique property, and the second (object) contains all the object values (URIs and Literals) for those subjects
 
-<p align="center"><img src="images/vt.JPG" alt="spark" width="500" height="200"></p>
+<p align="center"><img src="images/vt.JPG" alt="spark"></p>
 
 **Property Tables** is proposed to cluster multiple RDF properties as n-ary table columns for the same subject to group entities that are similar instructure.
 
-<p align="center"><img src="images/pt.JPG" alt="spark" width="500" height="200"></p>
+<p align="center"><img src="images/pt.JPG" alt="spark"></p>
 
 
 ### Storage backends/formats
@@ -32,7 +32,7 @@ We evaluate the performance of SparkSQL querying engine for processing SPARQL qu
 -----
 In addition, we show the impact of using three different RDF-based partitioning techniques with our relational scenario which are _Subject-based_, _Predicate-based_, and _Horizontal partitioning_.
 
-<p align="center"><img src="images/parttechs.png" alt="spark" width="500" height="200"> </p>
+<p align="center"><img src="images/parttechs.png" alt="spark"> </p>
 
 - Horizontal -Based Partitioning (HP): a technique that evenly partitions the data horizontally on the number of machines in the cluster. In particular, it partitions the relational tables we have according to ($n$) number of machines in the cluster.
 
