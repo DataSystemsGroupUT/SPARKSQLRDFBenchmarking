@@ -43,10 +43,10 @@ Sp2Bench  _SPARQL_ queries and their _SQL_ translations for ST,VT, and PT relati
 ### Results
   * [Centralized Experiments](ResultsCenteralized.md)
   * Distributed Experiments
-    * [Execution Runtimes](https://datasystemsgrouput.github.io/AutoMLMicroAnalysis/results#impact-of-meta-learning)
-    * [Relational Schema Ranking Scores](https://datasystemsgrouput.github.io/AutoMLMicroAnalysis/results#impact-of-ensembling)
-    * [Partitioning Techs. Ranking Scores](https://datasystemsgrouput.github.io/AutoMLMicroAnalysis/results#impact-of-)
-    * [Storage Backends Ranking Scores](https://datasystemsgrouput.github.io/AutoMLMicroAnalysis/results#impact-of-)
+    * [Execution Runtimes](DistributedExperiments.md)
+    * [Relational Schema Ranking Scores](SchemaRanking.md)
+    * [Partitioning Techs. Ranking Scores](PartitioningRanking.md)
+    * [Storage Backends Ranking Scores](StorageRanking.md)
   
   
     
