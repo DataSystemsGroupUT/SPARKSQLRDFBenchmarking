@@ -3,9 +3,7 @@
 **Hardware and Software Configurations**: Our experiments have been executed on a bare metal cluster of four machines with a CentOS-Linux V7 OS, running on a 32-AMD cores per node processors, and 128 GB of memory per node, alongside with a high speed 2 TB SSD drive as the data drive on each node. We used Spark V2.4 to fully support Spark-SQL capabilities. We used Hive V3.2.1. In particular, our Spark cluster is consisted of one master node and three worker machines, while Yarn is used as the resource manager, which in total uses 330 GB and 84 virtual processing cores.
 
 
-### Execution Runtimes
-
-#### 100M Triples Dataset Results
+### Execution Runtimes (100M Triples Dataset Results)
 
 * **100M Results[Horizontally Partitioned]**
 
@@ -27,7 +25,7 @@
 
 
 
-#### 500M Triples Dataset Results
+### Execution Runtimes (500M Triples Dataset Results)
 
 * **500M Results[Horizontally Partitioned]**
 
