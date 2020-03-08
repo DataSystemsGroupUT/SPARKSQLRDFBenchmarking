@@ -66,12 +66,18 @@ Sp2Bench  _SPARQL_ queries and their _SQL_ translations for ST,VT, and PT relati
   
   
     
-  
-
 ### Project Phases
 
 <p align="center"><img src="images/SparkSQLRDFBenchPhases.png" alt="spark"> </p>
 
-### Publication
+
+### Project Authors
+ - [Mohamed Ragab](https://bigdata.cs.ut.ee/mohamed-ragab)
+ - [Riccardo Tommasini](https://rictomm.me/)
+ - [Sherif Sakr](http://kodu.ut.ee/~sakr/)
+ - Sadiq Eyvazov 
+
+
+### Publications
 
     M. Ragab, R. Tommasini and S. Sakr, Benchmarking SparkSQL under Alliterative RDF Relational Storage Backends, QuWeDa@ISWC 2019.
