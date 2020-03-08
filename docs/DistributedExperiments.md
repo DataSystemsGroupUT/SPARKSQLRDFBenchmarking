@@ -6,7 +6,7 @@
 
 <img src="figures/DistributedExperiments/ExecutionRuntimes/100M/100M-Horizontal/ST-100M-Horizontal All queries.png" alt="spark" > 
 <img src="figures/DistributedExperiments/ExecutionRuntimes/100M/100M-Horizontal/VT-100M-Horizontal All queries.png" alt="spark" >
-<img src="figures/DistributedExperiments/SExecutionRuntimes/100M/100M-Horizontal/PT-100M-Horizontal All queries.png" alt="spark" >
+<img src="figures/DistributedExperiments/ExecutionRuntimes/100M/100M-Horizontal/PT-100M-Horizontal All queries.png" alt="spark" >
 
 * 100M Results[Predicate-Based Partitioned]
 
