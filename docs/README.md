@@ -40,6 +40,10 @@ _[SP2Bench Data Generator](http://dbis.informatik.uni-freiburg.de/index.php?proj
 The _SPARQL_ and _SQL_ queries can be found [here](http://dbis.informatik.uni-freiburg.de/index.php?project=SP2B/translations.html)
 
 
+* [Results](https://datasystemsgrouput.github.io/AutoMLMicroAnalysis/results)
+  * [Centralized Experiments](https://datasystemsgrouput.github.io/AutoMLMicroAnalysis/results#impact-of-meta-learning)
+  * [Distributed Experiments](https://datasystemsgrouput.github.io/AutoMLMicroAnalysis/results#impact-of-ensembling)
+  
 
 ### Project Phases
 
