@@ -1,19 +1,15 @@
-### Figures of experiment results for Partitioning Techniques, Relational Schemas, and Storage formats
+### Figures of experiment results for Storage Backends
 ---
-  * Partitioning technique
+
+#### 100M Triples Storage BackendsRanking Scores
 
 
-<img src="https://github.com/EyvazovSadiq/SPARKSQLRDFBenchmarking/blob/master/figures/Partitioning_100M_ST.png" alt="spark" width="250" height="150">       <img src="https://github.com/EyvazovSadiq/SPARKSQLRDFBenchmarking/blob/master/figures/Partitioning_100M_VT.png" alt="spark" width="250" height="150">       <img src="https://github.com/EyvazovSadiq/SPARKSQLRDFBenchmarking/blob/master/figures/Partitioning_100M_PT.png" alt="spark" width="250" height="150">
+<img src="figures/DistributedExperiments/storageRankingScores/100M/StorageFormats_100M_ST.png" alt="spark" width="250" height="150">       <img src="figures/DistributedExperiments/storageRankingScores/100M/StorageFormats_100M_VT.png" alt="spark" width="250" height="150">       <img src="figures/DistributedExperiments/storageRankingScores/100M/StorageFormats_100M_PT.png" alt="spark" width="250" height="150">
+
+#### 500M Triples Storage Backends Ranking Scores
 
 
-  * Relational Schema
+<img src="figures/DistributedExperiments/storageRankingScores/500M/StorageFormats_500M_ST.png" alt="spark" width="250" height="150">       <img src="figures/DistributedExperiments/storageRankingScores/500M/StorageFormats_500M_VT.png" alt="spark" width="250" height="150">       <img src="figures/DistributedExperiments/storageRankingScores/500M/StorageFormats_500M_PT.png" alt="spark" width="250" height="150">
 
-
-<img src="https://github.com/EyvazovSadiq/SPARKSQLRDFBenchmarking/blob/master/figures/Schema_100M_HP.png" alt="spark" width="250" height="150">       <img src="https://github.com/EyvazovSadiq/SPARKSQLRDFBenchmarking/blob/master/figures/Schema_100M_SBP.png" alt="spark" width="250" height="150">       <img src="https://github.com/EyvazovSadiq/SPARKSQLRDFBenchmarking/blob/master/figures/Schema_100M_PBP.png" alt="spark" width="250" height="150">
-
-
-  * Storage Format
-  
-<img src="https://github.com/EyvazovSadiq/SPARKSQLRDFBenchmarking/blob/master/figures/StorageFormats_100M_ST.png" alt="spark" width="250" height="150">       <img src="https://github.com/EyvazovSadiq/SPARKSQLRDFBenchmarking/blob/master/figures/StorageFormats_100M_VT.png" alt="spark" width="250" height="150">       <img src="https://github.com/EyvazovSadiq/SPARKSQLRDFBenchmarking/blob/master/figures/StorageFormats_100M_PT.png" alt="spark" width="250" height="150">
-
-These figures show the comparative representation of partitioning technique's, relational schema's and storage format's performance, accordingly.
+ 
+These figures show the comparative representation of Storage backends (i.e. HDFS [CSV,AVRO, PARQUET, ORC], and HIVE) for 100M, and 500M Respectively.
