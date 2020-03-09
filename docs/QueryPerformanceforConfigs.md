@@ -4,14 +4,22 @@ The following figures show the best and worst confguration combinations for runn
 
 
 * 100M Results
-<img src="figures/centeralizedExperiments/ST100k.png" alt="spark" > 
-<img src="figures/centeralizedExperiments/VT100K.png" alt="spark" > 
-<img src="figures/centeralizedExperiments/PT100K.png" alt="spark" > 
 
-<img src="figures/centeralizedExperiments/ST1M.png" alt="spark" > 
-<img src="figures/centeralizedExperiments/VT1M.png" alt="spark" > 
-<img src="figures/centeralizedExperiments/PT1M.png" alt="spark" > 
-
-<img src="figures/centeralizedExperiments/ST10M.png" alt="spark" > 
-<img src="figures/centeralizedExperiments/VT10M.png" alt="spark" > 
-<img src="figures/centeralizedExperiments/PT10M.png" alt="spark" > 
+- Q1 
+<img src="figures/DistributedExperiments/ConfigurationsQuerExecutionPerformance/Q1.JPG" alt="spark" > 
+- Q2 
+<img src="figures/DistributedExperiments/ConfigurationsQuerExecutionPerformance/Q2.JPG" alt="spark" > 
+- Q3 
+<img src="figures/DistributedExperiments/ConfigurationsQuerExecutionPerformance/Q3.JPG" alt="spark" > 
+- Q4 
+<img src="figures/DistributedExperiments/ConfigurationsQuerExecutionPerformance/Q4.JPG" alt="spark" > 
+- Q5 
+<img src="figures/DistributedExperiments/ConfigurationsQuerExecutionPerformance/Q5.JPG" alt="spark" > 
+- Q6 
+<img src="figures/DistributedExperiments/ConfigurationsQuerExecutionPerformance/Q6.JPG" alt="spark" > 
+- Q8 
+<img src="figures/DistributedExperiments/ConfigurationsQuerExecutionPerformance/Q8.JPG" alt="spark" > 
+- Q10 
+<img src="figures/DistributedExperiments/ConfigurationsQuerExecutionPerformance/Q10.JPG" alt="spark" > 
+- Q11 
+<img src="figures/DistributedExperiments/ConfigurationsQuerExecutionPerformance/Q11.JPG" alt="spark" > 
