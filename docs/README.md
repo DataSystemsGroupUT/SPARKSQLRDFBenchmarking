@@ -1,6 +1,6 @@
 # SPARKSQL RDF Processing Benchmarking
 ### Project description
-In this Project, we present a systematic comparison of there relevant RDF relational schemas, i.e., Single Statement Table, Property Tables or Vertically-Partitioned Tables queried using Apache Spark. We evaluate the performance Spark SQL querying engine for processing SPARQL queries using three different storage back-ends, namely, Postgres SQL, Hive, and HDFS. For the latter one, we compare four different data formats (CSV, ORC, Avro, and Parquet). We drove our experiment using a representative query workloads from the SP2Bench benchmark scenario. The results of our experiments show many interesting insights about the impact of the relational encoding scheme, storage backends and storage formats on the performance of the query execution process.
+In this Project, we present a systematic comparison of the relevant RDF relational schemas, i.e., Single Statement Table, Property Tables or Vertically-Partitioned Tables queried using Apache Spark. We evaluate the performance Spark SQL querying engine for processing SPARQL queries using three different storage back-ends, namely, PostgresSQL, Hive, and HDFS. For the latter one, we compare four different data formats (CSV, ORC, Avro, and Parquet). We drove our experiment using a representative query workloads from the SP2Bench benchmark scenario. The results of our experiments show many interesting insights about the impact of the relational encoding scheme, storage backends and storage formats on the performance of the query execution process.
 
 ## Spark-SQL
 -----
@@ -36,9 +36,9 @@ In addition, we show the impact of using three different RDF-based partitioning 
 
 - Horizontal -Based Partitioning (HP): a technique that evenly partitions the data horizontally on the number of machines in the cluster. In particular, it partitions the relational tables we have according to ($n$) number of machines in the cluster.
 
-- Subject-Based Partitioning (SBP): a technique which distributes triples to the partitions according to the \textit{subject}. As a result, all the triples that have the same \textit{subject} are assumed to reside on the same partition. In our scenario, we applied spark partitioning using the \textit{subject}- key with our different relational schema tables/Dataframes.
+- Subject-Based Partitioning (SBP): a technique which distributes triples to the partitions according to the subject. As a result, all the triples that have the same subject are assumed to reside on the same partition. In our scenario, we applied spark partitioning using the subject- key with our different relational schema tables/Dataframes.
 
-- Predicate-Based Partitioning (PBP): a technique distributes triples to the partitions based on the RDF \textit{predicate}. As a result, all the triples that have the same \textit{predicate} are assumed to reside on the same partition. In our scenario, we applied Spark partitioning using the \textit{predicate}- key with our different relational schema tables/Dataframes.
+- Predicate-Based Partitioning (PBP): a technique distributes triples to the partitions based on the RDF predicate. As a result, all the triples that have the same predicate are assumed to reside on the same partition. In our scenario, we applied Spark partitioning using the predicate- key with our different relational schema tables/Dataframes.
 
 
 ### Installation
