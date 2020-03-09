@@ -5,6 +5,8 @@ The following figures show the best and worst confguration combinations for runn
 
 * 100M Results
 
+Notably, Figures of Q7 are missing since the query failed some times, while the results of Q9 bcause it is not implemented in the third schema (PT).
+
 **Q1** 
 <img src="figures/DistributedExperiments/ConfigurationsQuerExecutionPerformance/Q1.JPG" alt="spark" > 
 
