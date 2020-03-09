@@ -5,21 +5,29 @@ The following figures show the best and worst confguration combinations for runn
 
 * 100M Results
 
-- Q1 
+**Q1** 
 <img src="figures/DistributedExperiments/ConfigurationsQuerExecutionPerformance/Q1.JPG" alt="spark" > 
-- Q2 
+
+**Q2** 
 <img src="figures/DistributedExperiments/ConfigurationsQuerExecutionPerformance/Q2.JPG" alt="spark" > 
-- Q3 
+
+**Q3** 
 <img src="figures/DistributedExperiments/ConfigurationsQuerExecutionPerformance/Q3.JPG" alt="spark" > 
-- Q4 
+
+**Q4** 
 <img src="figures/DistributedExperiments/ConfigurationsQuerExecutionPerformance/Q4.JPG" alt="spark" > 
-- Q5 
+
+**Q5** 
 <img src="figures/DistributedExperiments/ConfigurationsQuerExecutionPerformance/Q5.JPG" alt="spark" > 
-- Q6 
+
+**Q6** 
 <img src="figures/DistributedExperiments/ConfigurationsQuerExecutionPerformance/Q6.JPG" alt="spark" > 
-- Q8 
+
+**Q8** 
 <img src="figures/DistributedExperiments/ConfigurationsQuerExecutionPerformance/Q8.JPG" alt="spark" > 
-- Q10 
+
+**Q10** 
 <img src="figures/DistributedExperiments/ConfigurationsQuerExecutionPerformance/Q10.JPG" alt="spark" > 
-- Q11 
+
+**Q11** 
 <img src="figures/DistributedExperiments/ConfigurationsQuerExecutionPerformance/Q11.JPG" alt="spark" > 
