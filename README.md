@@ -35,4 +35,4 @@ In this phase also we conduct the phase#2 experimetns but with way larger datset
 
 ### Publications
 
-    Mohamed Ragab, Riccardo Tommasini and Sherif Sakr, Benchmarking SparkSQL under Alliterative RDF Relational Storage Backends, QuWeDa@ISWC 2019.
+[Mohamed Ragab, Riccardo Tommasini and Sherif Sakr, Benchmarking SparkSQL under Alliterative RDF Relational Storage Backends, QuWeDa@ISWC 2019.](http://ceur-ws.org/Vol-2496/paper5.pdf)
