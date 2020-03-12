@@ -1,0 +1,10 @@
+subject,object
+http://localhost/vocabulary/bench/Journal,http://xmlns.com/foaf/0.1/Document
+http://localhost/vocabulary/bench/Proceedings,http://xmlns.com/foaf/0.1/Document
+http://localhost/vocabulary/bench/Inproceedings,http://xmlns.com/foaf/0.1/Document
+http://localhost/vocabulary/bench/Article,http://xmlns.com/foaf/0.1/Document
+http://localhost/vocabulary/bench/Www,http://xmlns.com/foaf/0.1/Document
+http://localhost/vocabulary/bench/MastersThesis,http://xmlns.com/foaf/0.1/Document
+http://localhost/vocabulary/bench/PhDThesis,http://xmlns.com/foaf/0.1/Document
+http://localhost/vocabulary/bench/Incollection,http://xmlns.com/foaf/0.1/Document
+http://localhost/vocabulary/bench/Book,http://xmlns.com/foaf/0.1/Document
