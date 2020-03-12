@@ -48,7 +48,7 @@ _[SP2Bench Data Generator](http://dbis.informatik.uni-freiburg.de/index.php?proj
 ### Datasets
 SP2Bench Benchmark is scalable benchmark, whichj means it comprise a data generator that enables generatring arbitrarly large RDF datasets. For our First Phase of this project (Centralized Experiments), we generated datasets with the sizes [100K, 1M, and 10M] triples. While, for the second phase (Distributed experiments), we scale up to datasets with the sizes [100M, 500M, and 1B] triples.
 
-For reproducability, We will put here 100K triples dataset along side with their relational schema conversions in different file formats.
+For reproducability, We put here 100K triples dataset along side with their relational schema conversions in different file formats. you can find these datasets [here](https://github.com/DataSystemsGroupUT/SPARKSQLRDFBenchmarking/tree/master/Datasets/100K). 
 
 
 ### SP2Bench Queries
