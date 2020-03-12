@@ -24,7 +24,7 @@ We present a systematic comparison of three relevant RDF relational schemas such
 <p align="center"><img src="images/pt.JPG" alt="spark"></p>
 
 
-### Storage backends/formats
+### Storage Backends
 -----
 We evaluate the performance of SparkSQL querying engine for processing SPARQL queries using two different storage backends, namely, _Hive_, and _HDFS_. For the latter one, we compare four different data formats (_CSV_, _ORC_, _Avro_, and _Parquet_). 
 
@@ -41,9 +41,9 @@ In addition, we show the impact of using three different RDF-based partitioning 
 - Predicate-Based Partitioning (PBP): a technique distributes triples to the partitions based on the RDF predicate. As a result, all the triples that have the same predicate are assumed to reside on the same partition. In our scenario, we applied Spark partitioning using the predicate- key with our different relational schema tables/Dataframes.
 
 
-### Installation
+### Installation & Pre-Processing
 
-_[SP2Bench Data Generator](http://dbis.informatik.uni-freiburg.de/index.php?project=SP2B/download.php)_ generates RDF data in N3 format. _[Apache Jena](https://jena.apache.org/download/)_ is used to convert N3 into TDB files. Afterwards, we query TDB datasets using SPARQL quereis to generate our different CSV relational schemas (i.e. ST, PT, and VT).
+_[SP2Bench Data Generator](http://dbis.informatik.uni-freiburg.de/index.php?project=SP2B/download.php)_ generates RDF data in __N3__ format. _[Apache Jena](https://jena.apache.org/download/)_ is used to convert N3 into TDB files. Afterwards, we query TDB datasets using SPARQL quereis to generate our different CSV relational schemas (i.e. ST, PT, and VT). We further, used Spark-SQL framework to convert the CSV data into other HDFS file formats such as (Parquet, ORC, Avro). We used the same approach to load the data into the tables of the Apache Hive data warehouse using a created database for our datasets. Data conversion to Hive files requires to enable the support for Hive in the Spark session configuration using the _enableHiveSupport_ function.
 
 ### Datasets
 SP2Bench Benchmark is scalable benchmark, whichj means it comprise a data generator that enables generatring arbitrarly large RDF datasets. For our First Phase of this project (Centralized Experiments), we generated datasets with the sizes [100K, 1M, and 10M] triples. While, for the second phase (Distributed experiments), we scale up to datasets with the sizes [100M, 500M, and 1B] triples.
@@ -54,7 +54,7 @@ For reproducability, We will put here 100K triples dataset along side with their
 ### SP2Bench Queries
 Sp2Bench  _SPARQL_ queries and their _SQL_ translations for ST,VT, and PT relational schemas (that we will use in our experiments, compliant with the SparkSQL) can be found [here](http://dbis.informatik.uni-freiburg.de/index.php?project=SP2B/translations.html)
 
-- Query Analysis (i.e in terms of NO. of Joins, Selections, and Projections)
+- Query Analysis (i.e in terms of Number of Joins, Selections, Filters, and Projections)
 <p align="center"><img src="images/queryAnalysis.png" alt="spark"></p>
 
 
@@ -101,7 +101,7 @@ In this phase also we conduct the phase#2 experimetns but with way larger datset
  - [Mohamed Ragab](https://bigdata.cs.ut.ee/mohamed-ragab)
  - [Riccardo Tommasini](https://rictomm.me/)
  - [Sherif Sakr](http://kodu.ut.ee/~sakr/)
- - Sadiq Eyvazov 
+ - [Sadiq Eyvazov]() 
 
 
 ### Publications
