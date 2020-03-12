@@ -9,3 +9,13 @@ The results of our experiments show many interesting insights about the impact o
 - You can Visist the [Project webpage](https://datasystemsgrouput.github.io/SPARKSQLRDFBenchmarking/) for more details about the datasets, benchmark, installation, preprocessing , and experiments results.
 
 
+### Project Authors
+ - [Mohamed Ragab](https://bigdata.cs.ut.ee/mohamed-ragab)
+ - [Riccardo Tommasini](https://rictomm.me/)
+ - [Sherif Sakr](http://kodu.ut.ee/~sakr/)
+ - [Sadiq Eyvazov]() 
+
+
+### Publications
+
+    Mohamed Ragab, Riccardo Tommasini and Sherif Sakr, Benchmarking SparkSQL under Alliterative RDF Relational Storage Backends, QuWeDa@ISWC 2019.
