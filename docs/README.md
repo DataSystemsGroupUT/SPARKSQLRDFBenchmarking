@@ -124,5 +124,9 @@ In this phase also we conduct the phase#2 experimetns but with way larger datset
 
 
 ### Publications
+Phase#1 of this project has been accepted at QuWeDa@ISWC conference in Auckland, New Zealand [PDF](http://ceur-ws.org/Vol-2496/paper5.pdf):
 
     Mohamed Ragab, Riccardo Tommasini and Sherif Sakr, Benchmarking SparkSQL under Alliterative RDF Relational Storage Backends, QuWeDa@ISWC 2019.
+    
+### Licence
+This work is licensed under the terms of the GNU General Public License, version 3.0 (GPLv3)
