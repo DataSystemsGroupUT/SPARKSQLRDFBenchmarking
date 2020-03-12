@@ -16,11 +16,10 @@ The following figure quantitatively shows the impact of certain query over the s
 </p>
 
 <br />
-The following figures show the best and worst confguration combinations for running the SP2Bench 11 queries. we run our experiments 5 times, and we take the average run time. 
+The following figures show the best and worst confguration combinations for running the SP2Bench 11 queries. we run our experiments 5 times, and we take the average run time. In particular, these figures show the experiments results ordering the confguration combinations from the worst performing (leftmost) to the best performing one (i.e. rightmost). Three horizontal lines represent the maximum (squares red line), average (triangles yellow line), and minimum (diamonds green line) performing confguration.
 
-* 100M Results
-
-Notably, Figures of Q7 are missing since the query failed some times, while the results of Q9 bcause it is not implemented in the third schema (PT).
+- Notably, Figures of Q7 are missing since the query failed some times, while the results of Q9 bcause it is not implemented in the third schema (PT).
+- These Results are for #phase2 experiments (__100M__) triples Results.
 
 **Q1** 
 <img src="figures/DistributedExperiments/ConfigurationsQuerExecutionPerformance/Q1.JPG" alt="spark" > 
