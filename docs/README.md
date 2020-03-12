@@ -42,16 +42,18 @@ In addition, we show the impact of using three different RDF-based partitioning 
 
 
 ### Installation & Pre-Processing
-
+-----
 _[SP2Bench Data Generator](http://dbis.informatik.uni-freiburg.de/index.php?project=SP2B/download.php)_ generates RDF data in __N3__ format. _[Apache Jena](https://jena.apache.org/download/)_ is used to convert N3 into TDB files. Afterwards, we query TDB datasets using [SPARQL quereis](https://github.com/DataSystemsGroupUT/SPARKSQLRDFBenchmarking/tree/master/Datasets/QueriesTDB) to generate our different CSV relational schemas (i.e. ST, PT, and VT). We further, used Spark-SQL framework to convert the CSV data into other HDFS file formats such as (Parquet, ORC, Avro). We used the same approach to load the data into the tables of the Apache Hive data warehouse using a created database for our datasets. Data conversion to Hive files requires to enable the support for Hive in the Spark session configuration using the _enableHiveSupport_ function. Notably, we have used another approach for creating Hive tables and loading data into them. We use [HQL queries](https://github.com/DataSystemsGroupUT/SPARKSQLRDFBenchmarking/tree/master/Datasets/HiveQueriesLoading) rough the hive CLI to create tables and load data in the form of the three differnt Relational schemas.
 
 ### Datasets
+-----
 SP2Bench Benchmark is scalable benchmark, whichj means it comprise a data generator that enables generatring arbitrarly large RDF datasets. For our First Phase of this project (Centralized Experiments), we generated datasets with the sizes [100K, 1M, and 10M] triples. While, for the second phase (Distributed experiments), we scale up to datasets with the sizes [100M, 500M, and 1B] triples.
 
 For reproducability, We put here 100K triples dataset along side with their relational schema conversions in different file formats. you can find these datasets [here](https://github.com/DataSystemsGroupUT/SPARKSQLRDFBenchmarking/tree/master/Datasets). 
 
 
 ### SP2Bench Queries
+-----
 Sp2Bench  _SPARQL_ queries and their _SQL_ translations for ST,VT, and PT relational schemas (that we will use in our experiments, compliant with the SparkSQL) can be found [here](http://dbis.informatik.uni-freiburg.de/index.php?project=SP2B/translations.html)
 
 - Query Analysis (i.e in terms of Number of Joins, Selections, Filters, and Projections)
@@ -59,16 +61,19 @@ Sp2Bench  _SPARQL_ queries and their _SQL_ translations for ST,VT, and PT relati
 
 
 ### Experiments Architecture
+-----
 This figure shows the summary of our experiments configurations. It guides the reader through the naming process, i.e.,
 (Schema.PartitioniningTechnique.Storage_Backend). For instance, (__a.ii.4__) corresponds to Single ST schema, SBP partitioning, and Parquet backend.
 
 <p align="center"><img src="images/experiments.JPG" alt="spark"></p>
 
 ### Source Code
+-----
 - [Centralized(Single machine experiments)](https://github.com/DataSystemsGroupUT/SPARKSQLRDFBenchmarking/tree/master/ProjectSourceCode%5BCenteralized%5D/src/main/scala/ee/ut/cs/bigdata/sp2bench) 
 - [Distributed(Spark Cluster experiments)](https://github.com/DataSystemsGroupUT/SPARKSQLRDFBenchmarking/tree/master/ProjectSourceCode%5BDistributed%5D/src/main/scala/ee/ut/cs/bigdata/sp2bench)
 
 ### Experiments Running
+-----
 We used the Spark.time function by passing the spark.sql(query) query execution function as a parameter. The output of this function is the running time of evaluating the SQL query into the Spark environment using the Spark session interface. All queries are evaluated for all schemas and partitioned horizontally (HP), or over subject and predicate (SBP, PBP respectively), and on top of all the diﬀerent storage backends Hive, and the HDFS fle formats.
 
 For each storage backend, partitioning method, and a relational schema, we run the experiments for all queries fve times (excluding the frst cold start run time, to avoid the warm-up bias, and computed an average of the other four
@@ -77,6 +82,7 @@ run times).
 
 
 ### Results
+-----
   * [Centralized Experiments](ResultsCenteralized.md)
   * Distributed Experiments
     * [Execution Runtimes](DistributedExperiments.md)
@@ -88,7 +94,7 @@ run times).
   
     
 ### Project Phases
-
+-----
 <p align="center"><img src="images/SparkSQLRDFBenchPhases.png" alt="spark"> </p>
 
 #### Phase#1
