@@ -1,0 +1,1 @@
+ SELECT create_distributed_table('singlestmttable','subject');
