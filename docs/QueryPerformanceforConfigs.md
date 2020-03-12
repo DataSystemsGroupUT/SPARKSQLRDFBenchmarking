@@ -1,7 +1,17 @@
 ### Query Performance for Configuration Combination
 
-The following figures show the best and worst confguration combinations for running the SP2Bench 11 queries. we run our experiments 5 times, and we take the average run time. 
+The following figure quantitatively shows the impact of certain query over the selected confguration combination. We can notice sevral interesting points:
+- Q1, Q3, Q5 are the least impacting queries (take the minimum running times across all the configuration combinations).
+- Q4, followed by Q8, then Q2 are the highes impactful queries across all the configuration cominations. 
 
+<img src="figures/DistributedExperiments/ConfigurationsQuerExecutionPerformance/queryconfigs.png" alt="spark" > 
+
+
+
+
+
+
+The following figures show the best and worst confguration combinations for running the SP2Bench 11 queries. we run our experiments 5 times, and we take the average run time. 
 
 * 100M Results
 
