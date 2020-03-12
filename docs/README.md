@@ -131,4 +131,4 @@ Phase#1 of this project has been accepted at QuWeDa@ISWC conference in Auckland,
     
 ### Licence
 ----
-This work is licensed under the terms of the GNU General Public License, version 3.0 (GPLv3)
+This work is mainianed by the [DataSystems Group](https://bigdata.cs.ut.ee/), University of Tartu, licensed under the terms of the GNU General Public License, version 3.0 (GPLv3)
