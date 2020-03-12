@@ -59,12 +59,22 @@ Sp2Bench  _SPARQL_ queries and their _SQL_ translations for ST,VT, and PT relati
 
 
 ### Experiments Architecture
-This figure shows the summary of our experiments configurations. 
+This figure shows the summary of our experiments configurations. It guides the reader through the naming process, i.e.,
+(Schema.PartitioniningTechnique.Storage_Backend). For instance, (__a.ii.4__) corresponds to Single ST schema, SBP partitioning, and Parquet backend.
+
 <p align="center"><img src="images/experiments.JPG" alt="spark"></p>
 
 ### Source Code
 - [Centralized(Single machine experiments)](https://github.com/DataSystemsGroupUT/SPARKSQLRDFBenchmarking/tree/master/ProjectSourceCode%5BCenteralized%5D/src/main/scala/ee/ut/cs/bigdata/sp2bench) 
 - [Distributed(Spark Cluster experiments)](https://github.com/DataSystemsGroupUT/SPARKSQLRDFBenchmarking/tree/master/ProjectSourceCode%5BDistributed%5D/src/main/scala/ee/ut/cs/bigdata/sp2bench)
+
+### Experiments Running
+We used the Spark.time function by passing the spark.sql(query) query execution function as a parameter. The output of this function is the running time of evaluating the SQL query into the Spark environment using the Spark session interface. All queries are evaluated for all schemas and partitioned horizontally (HP), or over subject and predicate (SBP, PBP respectively), and on top of all the diﬀerent storage backends Hive, and the HDFS fle formats.
+
+For each storage backend, partitioning method, and a relational schema, we run the experiments for all queries fve times (excluding the frst cold start run time, to avoid the warm-up bias, and computed an average of the other four
+run times).
+
+
 
 ### Results
   * [Centralized Experiments](ResultsCenteralized.md)
