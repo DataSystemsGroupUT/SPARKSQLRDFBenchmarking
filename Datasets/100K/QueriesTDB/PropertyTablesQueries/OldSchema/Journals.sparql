@@ -1,0 +1,16 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+prefix bench: <http://localhost/vocabulary/bench/>
+
+SELECT ?subject ?title ?number ?issued ?volume ?editor 
+WHERE {
+         ?subject 	rdf:type bench:Journal.
+ 
+ OPTIONAL{?subject <http://swrc.ontoware.org/ontology#number> ?number.}
+ OPTIONAL{?subject <http://purl.org/dc/elements/1.1/title>    ?title.}
+ OPTIONAL{?subject <http://swrc.ontoware.org/ontology#volume> ?volume.}
+  
+ OPTIONAL{?subject <http://purl.org/dc/terms/issued>	        ?issued.}
+  
+ OPTIONAL{?subject <http://swrc.ontoware.org/ontology#editor> ?editor.}
+  }
+

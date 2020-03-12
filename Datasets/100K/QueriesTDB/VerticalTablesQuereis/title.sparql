@@ -1,0 +1,4 @@
+SELECT DISTINCT ?subject ?object
+       WHERE {
+           ?subject <http://purl.org/dc/elements/1.1/title> ?object.
+       }

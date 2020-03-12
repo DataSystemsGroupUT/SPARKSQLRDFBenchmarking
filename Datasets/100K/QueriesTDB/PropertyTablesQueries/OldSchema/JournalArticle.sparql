@@ -1,0 +1,18 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix bench: <http://localhost/vocabulary/bench/>
+SELECT ?subject ?title ?journal ?cdrom ?homepage ?month ?note ?pages ?seeAlso ?abstract ?creator
+WHERE {
+  ?subject rdf:type bench:Article.
+  OPTIONAL{?subject <http://purl.org/dc/elements/1.1/title> ?title.}
+  OPTIONAL{?subject <http://localhost/vocabulary/bench/abstract> ?abstract.}
+  OPTIONAL{?subject <http://localhost/vocabulary/bench/cdrom> ?cdrom.}
+  OPTIONAL{?subject <http://www.w3.org/2000/01/rdf-schema#seeAlso> ?seeAlso.}
+  OPTIONAL{?subject <http://swrc.ontoware.org/ontology#month> ?month.}
+  OPTIONAL{?subject <http://swrc.ontoware.org/ontology#note> ?note.}
+  OPTIONAL{?subject <http://swrc.ontoware.org/ontology#pages> ?pages.}
+  OPTIONAL{?subject <http://xmlns.com/foaf/0.1/homepage> ?homepage.}
+  OPTIONAL{?subject <http://swrc.ontoware.org/ontology#journal> ?journal.}
+  OPTIONAL{?subject <http://purl.org/dc/elements/1.1/creator> ?creator.}
+}

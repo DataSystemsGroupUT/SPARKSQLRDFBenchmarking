@@ -1,0 +1,42 @@
+# sparql query to generaete a table of publications or venues with any kind
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix owl: <http://www.w3.org/2002/07/owl#>
+PREFIX bench:<http://localhost/vocabulary/bench/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX swrc: <http://swrc.ontoware.org/ontology#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+SELECT  ?document ?title ?homepage ?pages ?number ?creator ?editor ?seeAlso ?series ?note  ?cdrom ?isbn ?month ?issued ?booktitle ?publisher ?abstract
+{
+  
+  	  {?document  rdf:type bench:Article.}
+ UNION{ ?document rdf:type bench:Inproceedings.}
+ UNION{ ?document rdf:type bench:Book.}
+ UNION{ ?document rdf:type bench:Www.}
+ UNION{ ?document rdf:type bench:MastersThesis.}
+ UNION{ ?document rdf:type bench:PhDThesis.}
+ UNION{ ?document rdf:type bench:Incollection.}
+ UNION{ ?document rdf:type bench:Journal.}
+ UNION{ ?document rdf:type bench:Proceedings.}
+ 
+ OPTIONAL {?document  dc:title ?title}
+ OPTIONAL {?document  foaf:homepage ?homepage}
+ OPTIONAL {?document  swrc:pages ?pages}
+ OPTIONAL {?document  rdfs:seeAlso ?seeAlso}
+ OPTIONAL {?document  dcterms:issued ?issued}
+ OPTIONAL {?document  bench:booktitle ?booktitle}
+ OPTIONAL {?document  swrc:note ?note}
+ OPTIONAL {?document  dc:publisher ?publisher} 
+ OPTIONAL {?document  bench:cdrom ?cdrom}
+ OPTIONAL {?document  swrc:isbn ?isbn}
+ OPTIONAL {?document  swrc:month ?month}
+ OPTIONAL {?document  bench:abstract ?abstract}
+ 
+ OPTIONAL {?document  dc:creator ?creator}
+ OPTIONAL {?document  swrc:editor ?editor}
+ 
+ OPTIONAL {?document  swrc:number ?number}
+ OPTIONAL {?document  swrc:volume ?volume}
+ OPTIONAL {?document  swrc:series ?series.}
+}

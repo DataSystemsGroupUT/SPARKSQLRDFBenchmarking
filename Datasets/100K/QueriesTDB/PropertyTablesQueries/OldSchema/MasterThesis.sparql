@@ -1,0 +1,10 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX bench:<http://localhost/vocabulary/bench/>
+SELECT ?subject ?title   ?publisher ?issued ?creator
+WHERE {
+  ?subject rdf:type bench:MastersThesis.
+  OPTIONAL{?subject <http://purl.org/dc/elements/1.1/title> ?title.}
+  OPTIONAL{?subject <http://purl.org/dc/terms/issued> ?issued.}
+  OPTIONAL{?subject <http://purl.org/dc/elements/1.1/publisher> ?publisher.}
+  OPTIONAL{?subject <http://purl.org/dc/elements/1.1/creator> ?creator.}
+}

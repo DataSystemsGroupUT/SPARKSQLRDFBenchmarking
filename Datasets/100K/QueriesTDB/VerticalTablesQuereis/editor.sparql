@@ -1,0 +1,4 @@
+SELECT DISTINCT ?subject ?object
+       WHERE {
+           ?subject <http://swrc.ontoware.org/ontology#editor> ?object.
+       }
