@@ -1,4 +1,4 @@
-title: SPARKSQL RDF Benchmarking
+title: SPARKSQL_RDF_Benchmarking
 sidebar_home_link: true
 description: A systematic Benchmarking on the performance of Spark-SQL for processing Vast RDF datasets
 theme: jekyll-theme-dinky
