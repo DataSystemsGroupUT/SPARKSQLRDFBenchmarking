@@ -1,7 +1,7 @@
 ### Figures of experiment results for Storage Backends
 ---
 
-These figures show the comparative representation of Storage backends (i.e. HDFS [CSV,AVRO, PARQUET, ORC], and HIVE) for 100M, and 500M Respectively.
+These figures show the comparative representation of Storage backends (i.e. HDFS [CSV,AVRO, PARQUET, ORC], and HIVE) for 100M, 250M, and 500M respectively.
 
 #### 100M Triples Storage BackendsRanking Scores
 
