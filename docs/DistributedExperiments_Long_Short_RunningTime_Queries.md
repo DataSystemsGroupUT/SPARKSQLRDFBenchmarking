@@ -7,7 +7,11 @@
 ### Execution Runtimes (100M Triples Dataset Results)
 
 * **100M Results[Horizontally Partitioned]**
-- Property Tables Schema
+- Property Tables Schema:
+
 <img src="figures/DistributedExperiments/ExecutionRuntimes/100M/100M-Horizontal-Long/ST-100M-Horizontal Long queries.png" alt="spark" > <img src="figures/DistributedExperiments/ExecutionRuntimes/100M/100M-Horizontal-Short/ST-100M-Horizontal Short queries.png" alt="spark" >
+
+
+![Long]("figures/DistributedExperiments/ExecutionRuntimes/100M/100M-Horizontal-Long/ST-100M-Horizontal Long queries.png") ![short]("figures/DistributedExperiments/ExecutionRuntimes/100M/100M-Horizontal-Short/ST-100M-Horizontal Short queries.png")
 
 
