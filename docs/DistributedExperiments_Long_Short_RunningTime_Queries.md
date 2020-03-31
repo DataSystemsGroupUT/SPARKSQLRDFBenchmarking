@@ -18,7 +18,9 @@
 
 <img src="figures/DistributedExperiments/ExecutionRuntimes/100M/100M-Horizontal-Long/VT-100M-Horizontal Long queries.png" alt="spark" > <img src="figures/DistributedExperiments/ExecutionRuntimes/100M/100M-Horizontal-Short/VT-100M-Horizontal Short queries.png" alt="spark" >
 
+- Property Tables Schema (PT), Long, and Short Queries:
 
+<img src="figures/DistributedExperiments/ExecutionRuntimes/100M/100M-Horizontal-Long/PT-100M-Horizontal Long queries.png" alt="spark" > <img src="figures/DistributedExperiments/ExecutionRuntimes/100M/100M-Horizontal-Short/PT-100M-Horizontal Short queries.png" alt="spark" >
 
 
 
