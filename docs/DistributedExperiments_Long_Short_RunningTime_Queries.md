@@ -7,7 +7,7 @@
 ### Execution Runtimes (100M Triples Dataset Results)
 
 
-#### **100M Triples Dataset Results**
+#### **100M Triples Dataset Results Figures**
 
 * **[Horizontally Partitioned]**
 - Single Table Schema (ST) Short(left) and Long (right) Queries:
@@ -52,7 +52,7 @@
 
 
 
-#### **250M Triples Dataset Results**
+#### **250M Triples Dataset Results Figures**
 
 * **[Horizontally Partitioned]**
 - Single Table Schema (ST) Short(left) and Long (right) Queries:
@@ -94,5 +94,50 @@
 - Property Tables Schema (PT), Short(left) and Long (right) Queries:
 
 <img src="figures/DistributedExperiments/ExecutionRuntimes/250M/250M-Subject-Short/PT-250M-Subject Short queries.png" alt="spark" > <img src="figures/DistributedExperiments/ExecutionRuntimes/250M/250M-Subject-Long/PT-250M-Subject Long queries.png" alt="spark" > 
+
+
+
+#### **500M Triples Dataset Results Figures**
+
+* **[Horizontally Partitioned]**
+- Single Table Schema (ST) Short(left) and Long (right) Queries:
+
+<img src="figures/DistributedExperiments/ExecutionRuntimes/500M/500M-Horizontal-Short/ST-500M-Horizontal Short queries.png" alt="spark" > <img src="figures/DistributedExperiments/ExecutionRuntimes/500M/500M-Horizontal-Long/ST-500M-Horizontal Long queries.png" alt="spark" > 
+
+- Vertical Tables Schema (VT), Short(left) and Long (right) Queries:
+
+<img src="figures/DistributedExperiments/ExecutionRuntimes/500M/500M-Horizontal-Short/VT-500M-Horizontal Short queries.png" alt="spark" > <img src="figures/DistributedExperiments/ExecutionRuntimes/500M/500M-Horizontal-Long/VT-500M-Horizontal Long queries.png" alt="spark" > 
+
+- Property Tables Schema (PT), Short(left) and Long (right) Queries:
+
+<img src="figures/DistributedExperiments/ExecutionRuntimes/500M/500M-Horizontal-Short/PT-500M-Horizontal Short queries.png" alt="spark" > <img src="figures/DistributedExperiments/ExecutionRuntimes/500M/500M-Horizontal-Long/PT-500M-Horizontal Long queries.png" alt="spark" > 
+
+
+* **[Predicate-Based Partitioned]**
+- Single Table Schema (ST) Short(left) and Long (right) Queries:
+
+ <img src="figures/DistributedExperiments/ExecutionRuntimes/500M/500M-Predicate-Short/ST-500M-Predicate Short queries.png" alt="spark" > <img src="figures/DistributedExperiments/ExecutionRuntimes/500M/500M-Predicate-Long/ST-500M-Predicate Long queries.png" alt="spark" >
+
+- Vertical Tables Schema (VT), Short(left) and Long (right) Queries:
+
+ <img src="figures/DistributedExperiments/ExecutionRuntimes/500M/500M-Predicate-Short/VT-500M-Predicate Short queries.png" alt="spark" > <img src="figures/DistributedExperiments/ExecutionRuntimes/500M/500M-Predicate-Long/VT-500M-Predicate Long queries.png" alt="spark" >
+
+- Property Tables Schema (PT), Short(left) and Long (right) Queries:
+
+ <img src="figures/DistributedExperiments/ExecutionRuntimes/500M/500M-Predicate-Short/PT-500M-Predicate Short queries.png" alt="spark" > <img src="figures/DistributedExperiments/ExecutionRuntimes/500M/500M-Predicate-Long/PT-500M-Predicate Long queries.png" alt="spark" >
+
+
+* **[Subject-Based Partitioned]**
+- Single Table Schema (ST) Short(left) and Long (right) Queries:
+
+ <img src="figures/DistributedExperiments/ExecutionRuntimes/500M/500M-Subject-Short/ST-500M-Subject Short queries.png" alt="spark" > <img src="figures/DistributedExperiments/ExecutionRuntimes/500M/500M-Subject-Long/ST-500M-Subject Long queries.png" alt="spark" >
+
+- Vertical Tables Schema (VT), Short(left) and Long (right) Queries:
+
+<img src="figures/DistributedExperiments/ExecutionRuntimes/500M/500M-Subject-Short/VT-500M-Subject Short queries.png" alt="spark" > <img src="figures/DistributedExperiments/ExecutionRuntimes/500M/500M-Subject-Long/VT-500M-Subject Long queries.png" alt="spark" > 
+
+- Property Tables Schema (PT), Short(left) and Long (right) Queries:
+
+<img src="figures/DistributedExperiments/ExecutionRuntimes/500M/500M-Subject-Short/PT-500M-Subject Short queries.png" alt="spark" > <img src="figures/DistributedExperiments/ExecutionRuntimes/500M/500M-Subject-Long/PT-500M-Subject Long queries.png" alt="spark" > 
 
 
