@@ -10,43 +10,43 @@
 #### **100M Results**
 
 * **[Horizontally Partitioned]**
-- Single Table Schema (ST) Long, and Short Queries:
+- Single Table Schema (ST) Short(left) and Long (right) Queries:
 
 <img src="figures/DistributedExperiments/ExecutionRuntimes/100M/100M-Horizontal-Short/ST-100M-Horizontal Short queries.png" alt="spark" > <img src="figures/DistributedExperiments/ExecutionRuntimes/100M/100M-Horizontal-Long/ST-100M-Horizontal Long queries.png" alt="spark" > 
 
-- Vertical Tables Schema (VT), Long, and Short Queries:
+- Vertical Tables Schema (VT), Short(left) and Long (right) Queries:
 
 <img src="figures/DistributedExperiments/ExecutionRuntimes/100M/100M-Horizontal-Short/VT-100M-Horizontal Short queries.png" alt="spark" > <img src="figures/DistributedExperiments/ExecutionRuntimes/100M/100M-Horizontal-Long/VT-100M-Horizontal Long queries.png" alt="spark" > 
 
-- Property Tables Schema (PT), Long, and Short Queries:
+- Property Tables Schema (PT), Short(left) and Long (right) Queries:
 
 <img src="figures/DistributedExperiments/ExecutionRuntimes/100M/100M-Horizontal-Short/PT-100M-Horizontal Short queries.png" alt="spark" > <img src="figures/DistributedExperiments/ExecutionRuntimes/100M/100M-Horizontal-Long/PT-100M-Horizontal Long queries.png" alt="spark" > 
 
 
 * **[Predicate-Based Partitioned]**
-- Single Table Schema (ST) Long, and Short Queries:
+- Single Table Schema (ST) Short(left) and Long (right) Queries:
 
  <img src="figures/DistributedExperiments/ExecutionRuntimes/100M/100M-Predicate-Short/ST-100M-Predicate Short queries.png" alt="spark" > <img src="figures/DistributedExperiments/ExecutionRuntimes/100M/100M-Predicate-Long/ST-100M-Predicate Long queries.png" alt="spark" >
 
-- Vertical Tables Schema (VT), Long, and Short Queries:
+- Vertical Tables Schema (VT), Short(left) and Long (right) Queries:
 
  <img src="figures/DistributedExperiments/ExecutionRuntimes/100M/100M-Predicate-Short/VT-100M-Predicate Short queries.png" alt="spark" > <img src="figures/DistributedExperiments/ExecutionRuntimes/100M/100M-Predicate-Long/VT-100M-Predicate Long queries.png" alt="spark" >
 
-- Property Tables Schema (PT), Long, and Short Queries:
+- Property Tables Schema (PT), Short(left) and Long (right) Queries:
 
  <img src="figures/DistributedExperiments/ExecutionRuntimes/100M/100M-Predicate-Short/PT-100M-Predicate Short queries.png" alt="spark" > <img src="figures/DistributedExperiments/ExecutionRuntimes/100M/100M-Predicate-Long/PT-100M-Predicate Long queries.png" alt="spark" >
 
 
 * **[Subject-Based Partitioned]**
-- Single Table Schema (ST) Long, and Short Queries:
+- Single Table Schema (ST) Short(left) and Long (right) Queries:
 
  <img src="figures/DistributedExperiments/ExecutionRuntimes/100M/100M-Subject-Short/ST-100M-Subject Short queries.png" alt="spark" > <img src="figures/DistributedExperiments/ExecutionRuntimes/100M/100M-Subject-Long/ST-100M-Subject Long queries.png" alt="spark" >
 
-- Vertical Tables Schema (VT), Long, and Short Queries:
+- Vertical Tables Schema (VT), Short(left) and Long (right) Queries:
 
 <img src="figures/DistributedExperiments/ExecutionRuntimes/100M/100M-Subject-Short/VT-100M-Subject Short queries.png" alt="spark" > <img src="figures/DistributedExperiments/ExecutionRuntimes/100M/100M-Subject-Long/VT-100M-Subject Long queries.png" alt="spark" > 
 
-- Property Tables Schema (PT), Long, and Short Queries:
+- Property Tables Schema (PT), Short(left) and Long (right) Queries:
 
 <img src="figures/DistributedExperiments/ExecutionRuntimes/100M/100M-Subject-Short/PT-100M-Subject Short queries.png" alt="spark" > <img src="figures/DistributedExperiments/ExecutionRuntimes/100M/100M-Subject-Long/PT-100M-Subject Long queries.png" alt="spark" > 
 
