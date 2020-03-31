@@ -37,3 +37,16 @@
 <img src="figures/DistributedExperiments/ExecutionRuntimes/100M/100M-Predicate-Long/PT-100M-Predicate Long queries.png" alt="spark" > <img src="figures/DistributedExperiments/ExecutionRuntimes/100M/100M-Predicate-Short/PT-100M-Predicate Short queries.png" alt="spark" >
 
 
+* **[Subject-Based Partitioned]**
+- Single Table Schema (ST) Long, and Short Queries:
+
+<img src="figures/DistributedExperiments/ExecutionRuntimes/100M/100M-Subject-Long/ST-100M-Subject Long queries.png" alt="spark" > <img src="figures/DistributedExperiments/ExecutionRuntimes/100M/100M-Subject-Short/ST-100M-Subject Short queries.png" alt="spark" >
+
+- Vertical Tables Schema (VT), Long, and Short Queries:
+
+<img src="figures/DistributedExperiments/ExecutionRuntimes/100M/100M-Subject-Long/VT-100M-Subject Long queries.png" alt="spark" > <img src="figures/DistributedExperiments/ExecutionRuntimes/100M/100M-Subject-Short/VT-100M-Subject Short queries.png" alt="spark" >
+
+- Property Tables Schema (PT), Long, and Short Queries:
+
+<img src="figures/DistributedExperiments/ExecutionRuntimes/100M/100M-Subject-Long/PT-100M-Subject Long queries.png" alt="spark" > <img src="figures/DistributedExperiments/ExecutionRuntimes/100M/100M-Subject-Short/PT-100M-Subject Short queries.png" alt="spark" >
+
