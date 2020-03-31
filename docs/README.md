@@ -82,7 +82,9 @@ We used the Spark.time function by passing the spark.sql(query) query execution 
 For each storage backend, partitioning method, and a relational schema, we run the experiments for all queries fve times (excluding the frst cold start run time, to avoid the warm-up bias, and computed an average of the other four
 run times).
 
-
+### Scripts
+-----
+In the directory of [Scirpts](https://github.com/DataSystemsGroupUT/SPARKSQLRDFBenchmarking/tree/master/Scripts), we share full scripts we used in our benchmaking experiments to make all computations and analysis as well as plotting all the figures over the logs of the experiments.
 
 ### Results
 -----
@@ -110,9 +112,6 @@ In the second phase of our project, we conducted the same settings and configura
 
 #### Phase#3
 In this phase also we conduct the phase#2 experimetns but with way larger datsets (100M, 500M, and 1B) triples. moreover, differently from the previous phase, we apply different ranking and combined ranking criteria to quantitively and effectively help practioners to choose the best configuration combinations in such complex solution space of different dimensions (schema, partitioning, and storage).
-
-
-
 
 
 
