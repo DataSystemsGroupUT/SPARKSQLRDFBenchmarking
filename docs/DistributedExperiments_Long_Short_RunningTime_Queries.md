@@ -9,10 +9,24 @@
 
 #### **100M Results**
 
-* **100M Results[Horizontally Partitioned]**
+* **[Horizontally Partitioned]**
 - Single Table Schema (ST) Long, and Short Queries:
 
 <img src="figures/DistributedExperiments/ExecutionRuntimes/100M/100M-Horizontal-Long/ST-100M-Horizontal Long queries.png" alt="spark" > <img src="figures/DistributedExperiments/ExecutionRuntimes/100M/100M-Horizontal-Short/ST-100M-Horizontal Short queries.png" alt="spark" >
 
+- Vertical Tables Schema (VT), Long, and Short Queries:
+
+<img src="figures/DistributedExperiments/ExecutionRuntimes/100M/100M-Horizontal-Long/VT-100M-Horizontal Long queries.png" alt="spark" > <img src="figures/DistributedExperiments/ExecutionRuntimes/100M/100M-Horizontal-Short/VT-100M-Horizontal Short queries.png" alt="spark" >
+
+
+
+
+
+
+
+* **[Predicate-based Partitioned]**
+- Single Table Schema (ST) Long, and Short Queries:
+
+<img src="figures/DistributedExperiments/ExecutionRuntimes/100M/100M-Horizontal-Long/ST-100M-Horizontal Long queries.png" alt="spark" > <img src="figures/DistributedExperiments/ExecutionRuntimes/100M/100M-Horizontal-Short/ST-100M-Horizontal Short queries.png" alt="spark" >
 
 
