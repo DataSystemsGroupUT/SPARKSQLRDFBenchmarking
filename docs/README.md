@@ -13,15 +13,15 @@ We present a systematic comparison of three relevant RDF relational schemas such
 
 **Single Statement Table** requires  storing RDF datasets in a single triples table of three columns that represent the three components of the RDF triple, i.e., Subject, Predicate, and Object.
 
-<p align="center"><img src="images/st.JPG" alt="spark"></p>
+<p align="center"><img src="images/st1.png" alt="spark"></p>
 
 **Vertically-Partitioned Tables** is an alterna-tive schema storage in which the RDF triples table is decomposed into a table of two columns (Subject, Object) for each unique property  in  the  RDF  dataset  such  that  the  first  (subject) column contains all subject URIs of that unique property, and the second (object) contains all the object values (URIs and Literals) for those subjects
 
-<p align="center"><img src="images/vt.JPG" alt="spark"></p>
+<p align="center"><img src="images/vt1.png" alt="spark"></p>
 
 **Property Tables** is proposed to cluster multiple RDF properties as n-ary table columns for the same subject to group entities that are similar instructure.
 
-<p align="center"><img src="images/pt.JPG" alt="spark"></p>
+<p align="center"><img src="images/pt1.png" alt="spark"></p>
 
 
 ### Storage Backends
@@ -88,13 +88,16 @@ In the directory of [Scirpts](https://github.com/DataSystemsGroupUT/SPARKSQLRDFB
 
 ### Results
 -----
-  * [Centralized Experiments](ResultsCenteralized.md)
+* [Centralized Experiments](ResultsCenteralized.md)
+  
   * Distributed Experiments
     * [Execution Runtimes](DistributedExperiments.md)
+    * [Execution Runtimes with Categorizing Figures Long/Short Running Queries](DistributedExperiments_Long_Short_RunningTime_Queries.md)
     * [Relational Schema Ranking Scores](SchemaRanking.md)
     * [Partitioning Techs. Ranking Scores](PartitioningRanking.md)
     * [Storage Backends Ranking Scores](StorageRanking.md)
     * [Best and Worst Configuration Cominataion (Schema, Storage, Partitioning) '100M' ](QueryPerformanceforConfigs.md)
+    * [Download The Results Sheets For all the datsets](https://github.com/DataSystemsGroupUT/SPARKSQLRDFBenchmarking/tree/master/results)
   
   
     
