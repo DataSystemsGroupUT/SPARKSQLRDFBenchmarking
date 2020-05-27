@@ -30,6 +30,12 @@ For our new extension of the Phase #2 of this paper, we include two other Relati
 
 <p align="center"><img src="images/wpt.png" alt="spark"></p>
 
+
+**Extended Vertical Tables ["ExtVP"]** aims at minimizing the size of input data during query evaluation [22]. In particular, ExtVP minimizes data skewness and eliminates dangling triples (i.e. triples that do not have
+a join partner) that do not contribute to any join in the query. This extension is inspired by the Semi-Join  reductions.
+
+<p align="center"><img src="images/extvp.png" alt="spark"></p>
+
 ### Storage Backends
 -----
 We evaluate the performance of SparkSQL querying engine for processing SPARQL queries using two different storage backends, namely, _Hive_, and _HDFS_. For the latter one, we compare four different data formats (_CSV_, _ORC_, _Avro_, and _Parquet_). 
