@@ -115,7 +115,7 @@ In the directory of [Scirpts](https://github.com/DataSystemsGroupUT/SPARKSQLRDFB
     
 ### Project Phases
 -----
-<p align="center"><img src="images/SparkSQLRDFBenchPhases.jpg" alt="spark"> </p>
+<p align="center"><img src="docs/images/SparkSQLRDFBenchPhases.jpg" alt="spark"> </p>
 
 #### Phase#1
 In the frst phase of our work, we presented a systematic analysis of the performance of Spark-SQL query engine (mainly
