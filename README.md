@@ -37,7 +37,7 @@ In this phase also we conduct the phase#2 experimetns but with way larger datset
 
 Phase#2 of this project has been accepted at Semantic Big Data (SBD 2020)@In conjunction with ACM SIGMOD 2020 in Portland, OR, USA [PDF](https://dl.acm.org/doi/10.1145/3391274.3393632):
 
-Towards making sense of Spark-SQL performance for processing vast distributed RDF datasets
+	Towards making sense of Spark-SQL performance for processing vast distributed RDF datasets
 
 Phase#1 of this project has been accepted at QuWeDa@ISWC conference in Auckland, New Zealand [PDF](http://ceur-ws.org/Vol-2496/paper5.pdf):
 
