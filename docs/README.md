@@ -24,6 +24,12 @@ We present a systematic comparison of three relevant RDF relational schemas such
 <p align="center"><img src="images/pt1.png" alt="spark"></p>
 
 
+For our new extension of the Phase #2 of this paper, we include two other Relational schemata to our experiemtns (The Wide Property Table ["WPT"], and the Extended Vertical Tables ["ExtVP"]).
+
+**Wide Property Table** extends the PT schema for optimizing star-shaped SPARQL queries. WPT aims at representing the whole RDF dataset into a single unified table. Such table uses all RDF properties in the dataset as columns.
+
+<p align="center"><img src="images/wpt.png" alt="spark"></p>
+
 ### Storage Backends
 -----
 We evaluate the performance of SparkSQL querying engine for processing SPARQL queries using two different storage backends, namely, _Hive_, and _HDFS_. For the latter one, we compare four different data formats (_CSV_, _ORC_, _Avro_, and _Parquet_). 
