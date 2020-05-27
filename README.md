@@ -24,6 +24,8 @@ In the second phase of our project, we conducted the same settings and configura
 In this phase also we conduct the phase#2 experimetns but with way larger datsets (100M, 500M, and 1B) triples. moreover, differently from the previous phase, we apply different ranking and combined ranking criteria to quantitively and effectively help practioners to choose the best configuration combinations in such complex solution space of different dimensions (schema, partitioning, and storage).
 
 
+#### Phase#4 
+In this phase, we repeated the phase#2 experimetns, but this time we extended our compared relatonal experiments with new proposed relational schema representations (ExtVP, and WPT) from the State-of-the-art. Extended Vertically Partitioned Tables (ExtVP) and Wide Property Tables (WPT) are prominent optimizations that target specific workloads. Nevertheless, in a distributed context (with presenace of data pratitioning, and altenaritve storage backends) such improvements do not always outperform their baselines. Thus, we compare ExtVP with the baseline VT, and WPT with the baseline PT schema considering different partitoning techniques, and different file formats for storage.
 
 
 ### Project Authors
