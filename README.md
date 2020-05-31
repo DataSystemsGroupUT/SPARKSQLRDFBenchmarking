@@ -1,4 +1,9 @@
 # SPARKSQL RDF Benchmarking
+
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3870891.svg)](https://doi.org/10.5281/zenodo.3870891)
+
+
 In this Project, we present a systematic comparison of there relevant RDF relational schemas, i.e., Single Statement Table, Property Tables or Vertically-Partitioned Tables queried using Apache Spark.
 
 We evaluate the performance Spark SQL querying engine for processing SPARQL queries using three different storage back-ends, namely, Postgres SQL, Hive, and HDFS. For the latter one, we compare four different data formats (CSV, ORC, Avro, and Parquet).
