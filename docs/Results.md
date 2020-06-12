@@ -11,7 +11,7 @@
     * [Best and Worst Configuration Cominataion (Schema, Storage, Partitioning) '100M' ](QueryPerformanceforConfigs.md)
     * [Download The Results Sheets For all the datsets](https://github.com/DataSystemsGroupUT/SPARKSQLRDFBenchmarking/tree/master/results)
 
-  * Relational Schemata Optimizattion VS BaseLine Schemata Results
+  * [Relational Schemata Optimizattion VS BaseLine Schemata Results](OptimizedVsBaselinComparsions.md)
     
 - Note: We share all the [scirpts](https://github.com/DataSystemsGroupUT/SPARKSQLRDFBenchmarking/tree/master/Scripts) that we used in our benchmaking experiments to make all computations and analysis as well as plotting all the figures over the logs of the experiments.
 - Results sheets of these scripts calculations are also shared [here](https://github.com/DataSystemsGroupUT/SPARKSQLRDFBenchmarking/tree/master/results) in the reposiory.
