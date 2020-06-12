@@ -17,7 +17,7 @@ DistributedExperiments/OptimizedVSBaselineSchemata/plots_short_long/100M-Horizon
 <img src="figures/DistributedExperiments/OptimizedVSBaselineSchemata/plots_short_long/100M-Horizontal/avro-100M-Horizontal Short queries.png" alt="spark" >
 
 * Avro Long
-<img src="figures/DistributedExperiments/OptimizedVSBaselineSchemata/plots_short_long/100M-Horizontal/csv-100M-Horizontal All queries.png" alt="spark" >
+<img src="figures/DistributedExperiments/OptimizedVSBaselineSchemata/plots_short_long/100M-Horizontal/avro-100M-Horizontal Long queries.png" alt="spark" >
 
 
 * CSV Short
