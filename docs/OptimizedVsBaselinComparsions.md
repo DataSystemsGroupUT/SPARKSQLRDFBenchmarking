@@ -26,13 +26,25 @@
 
 * **100M Results[Predicate-Based Partitioned]**
 
-<img src="figures/DistributedExperiments/ExecutionRuntimes/100M/100M-Predicate/ST-100M-Predicate All queries.png" alt="spark" > 
-<img src="figures/DistributedExperiments/ExecutionRuntimes/100M/100M-Predicate/VT-100M-Predicate All queries.png" alt="spark" >
-<img src="figures/DistributedExperiments/ExecutionRuntimes/100M/100M-Predicate/PT-100M-Predicate All queries.png" alt="spark" >
+<img src="figures/DistributedExperiments/OptimizedVSBaselineSchemata/plots_all/100M-Predicate/avro-100M-Predicate All queries.png" alt="spark" >
+
+<img src="figures/DistributedExperiments/OptimizedVSBaselineSchemata/plots_all/100M-Predicate/csv-100M-Predicate All queries.png" alt="spark" >
+
+<img src="figures/DistributedExperiments/OptimizedVSBaselineSchemata/plots_all/100M-Predicate/hive-100M-Predicate All queries.png" alt="spark" >
+
+<img src="figures/DistributedExperiments/OptimizedVSBaselineSchemata/plots_all/100M-Predicate/orc-100M-Predicate All queries.png" alt="spark" >
+
+<img src="figures/DistributedExperiments/OptimizedVSBaselineSchemata/plots_all/100M-Predicate/parquet-100M-Predicate All queries.png" alt="spark" >
 
 * **100M Results[Subject-Based Partitioned]**
 
-<img src="figures/DistributedExperiments/ExecutionRuntimes/100M/100M-Subject/ST-100M-Subject All queries.png" alt="spark" > 
-<img src="figures/DistributedExperiments/ExecutionRuntimes/100M/100M-Subject/VT-100M-Subject All queries.png" alt="spark" >
-<img src="figures/DistributedExperiments/ExecutionRuntimes/100M/100M-Subject/PT-100M-Subject All queries.png" alt="spark" >
+<img src="figures/DistributedExperiments/OptimizedVSBaselineSchemata/plots_all/100M-Horizontal/avro-100M-Horizontal All queries.png" alt="spark" >
+
+<img src="figures/DistributedExperiments/OptimizedVSBaselineSchemata/plots_all/100M-Horizontal/csv-100M-Horizontal All queries.png" alt="spark" >
+
+<img src="figures/DistributedExperiments/OptimizedVSBaselineSchemata/plots_all/100M-Horizontal/hive-100M-Horizontal All queries.png" alt="spark" >
+
+<img src="figures/DistributedExperiments/OptimizedVSBaselineSchemata/plots_all/100M-Horizontal/orc-100M-Horizontal All queries.png" alt="spark" >
+
+<img src="figures/DistributedExperiments/OptimizedVSBaselineSchemata/plots_all/100M-Horizontal/parquet-100M-Horizontal All queries.png" alt="spark" >
 
