@@ -6,11 +6,14 @@
 * **Note**:  We also provide Long and Short Running Query Results Figures that looks clearer [here](DistributedExperiments_Long_Short_RunningTime_Queries.md)
 
 
+/OptimizedVSBaselineSchemata/plots_all/100M-Horizontal
+
 ### Execution Runtimes (100M Triples Dataset Results)
 
 * **100M Results[Horizontally Partitioned]**
 
-<img src="figures/DistributedExperiments/ExecutionRuntimes/100M/100M-Horizontal/ST-100M-Horizontal All queries.png" alt="spark" > 
+<img src="figures/DistributedExperiments/ExecutionRuntimes/OptimizedVSBaselineSchemata/plots_all/100M-Horizontal/avro-100M-Horizontal All queries.png" alt="spark" >
+ 
 <img src="figures/DistributedExperiments/ExecutionRuntimes/100M/100M-Horizontal/VT-100M-Horizontal All queries.png" alt="spark" >
 <img src="figures/DistributedExperiments/ExecutionRuntimes/100M/100M-Horizontal/PT-100M-Horizontal All queries.png" alt="spark" >
 
@@ -26,47 +29,3 @@
 <img src="figures/DistributedExperiments/ExecutionRuntimes/100M/100M-Subject/VT-100M-Subject All queries.png" alt="spark" >
 <img src="figures/DistributedExperiments/ExecutionRuntimes/100M/100M-Subject/PT-100M-Subject All queries.png" alt="spark" >
 
-
-### Execution Runtimes (250M Triples Dataset Results)
-
-* **250M Results[Horizontally Partitioned]**
-
-<img src="figures/DistributedExperiments/ExecutionRuntimes/250M/250M-Horizontal/ST-250M-Horizontal All queries.png" alt="spark" > 
-<img src="figures/DistributedExperiments/ExecutionRuntimes/250M/250M-Horizontal/VT-250M-Horizontal All queries.png" alt="spark" >
-<img src="figures/DistributedExperiments/ExecutionRuntimes/250M/250M-Horizontal/PT-250M-Horizontal All queries.png" alt="spark" >
-
-* **250M Results[Predicate-Based Partitioned]**
-
-<img src="figures/DistributedExperiments/ExecutionRuntimes/250M/250M-Predicate/ST-250M-Predicate All queries.png" alt="spark" > 
-<img src="figures/DistributedExperiments/ExecutionRuntimes/250M/250M-Predicate/VT-250M-Predicate All queries.png" alt="spark" >
-<img src="figures/DistributedExperiments/ExecutionRuntimes/250M/250M-Predicate/PT-250M-Predicate All queries.png" alt="spark" >
-
-* **250M Results[Subject-Based Partitioned]**
-
-<img src="figures/DistributedExperiments/ExecutionRuntimes/250M/250M-Subject/ST-250M-Subject All queries.png" alt="spark" > 
-<img src="figures/DistributedExperiments/ExecutionRuntimes/250M/250M-Subject/VT-250M-Subject All queries.png" alt="spark" >
-<img src="figures/DistributedExperiments/ExecutionRuntimes/250M/250M-Subject/PT-250M-Subject All queries.png" alt="spark" >
-
-
-
-
-
-### Execution Runtimes (500M Triples Dataset Results)
-
-* **500M Results[Horizontally Partitioned]**
-
-<img src="figures/DistributedExperiments/ExecutionRuntimes/500M/500M-Horizontal/ST-500M-Horizontal All queries.png" alt="spark" > 
-<img src="figures/DistributedExperiments/ExecutionRuntimes/500M/500M-Horizontal/VT-500M-Horizontal All queries.png" alt="spark" >
-<img src="figures/DistributedExperiments/ExecutionRuntimes/500M/500M-Horizontal/PT-500M-Horizontal All queries.png" alt="spark" >
-
-* **500M Results[Predicate-Based Partitioned]**
-
-<img src="figures/DistributedExperiments/ExecutionRuntimes/500M/500M-Predicate/ST-500M-Predicate All queries.png" alt="spark" > 
-<img src="figures/DistributedExperiments/ExecutionRuntimes/500M/500M-Predicate/VT-500M-Predicate All queries.png" alt="spark" >
-<img src="figures/DistributedExperiments/ExecutionRuntimes/500M/500M-Predicate/PT-500M-Predicate All queries.png" alt="spark" >
-
-* **500M Results[Subject-Based Partitioned]**
-
-<img src="figures/DistributedExperiments/ExecutionRuntimes/500M/500M-Subject/ST-500M-Subject All queries.png" alt="spark" > 
-<img src="figures/DistributedExperiments/ExecutionRuntimes/500M/500M-Subject/VT-500M-Subject All queries.png" alt="spark" >
-<img src="figures/DistributedExperiments/ExecutionRuntimes/500M/500M-Subject/PT-500M-Subject All queries.png" alt="spark" >
