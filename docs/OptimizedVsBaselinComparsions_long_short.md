@@ -28,10 +28,10 @@ DistributedExperiments/OptimizedVSBaselineSchemata/plots_short_long/100M-Horizon
 
 
 * Hive Short
-<img src="figures/DistributedExperiments/OptimizedVSBaselineSchemata/plots_short_long/100M-Horizontal/parquet-100M-Horizontal All queries.png" alt="spark" >
+<img src="figures/DistributedExperiments/OptimizedVSBaselineSchemata/plots_short_long/100M-Horizontal/hive-100M-Horizontal Short queries.png" alt="spark" >
 
 * Hive Long
-<img src="figures/DistributedExperiments/OptimizedVSBaselineSchemata/plots_short_long/100M-Horizontal/parquet-100M-Horizontal All queries.png" alt="spark" >
+<img src="figures/DistributedExperiments/OptimizedVSBaselineSchemata/plots_short_long/100M-Horizontal/hive-100M-Horizontal Long queries.png" alt="spark" >
 
 * ORC Short 
 <img src="figures/DistributedExperiments/OptimizedVSBaselineSchemata/plots_short_long/100M-Horizontal/parquet-100M-Horizontal All queries.png" alt="spark" >
