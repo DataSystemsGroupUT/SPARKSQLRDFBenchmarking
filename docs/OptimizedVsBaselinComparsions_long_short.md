@@ -7,7 +7,6 @@
 * **Note**:  - In the following figures we cateogrized running times queries into Long-Running Queries (Q1,Q3, Q10, Q11), and Short-Running Queries. We think that this grouping makes the queris plots looks clearer than the grouped query runtimes plots, due to they have big different running times.
 
 
-DistributedExperiments/OptimizedVSBaselineSchemata/plots_short_long/100M-Horizontal
 
 ### Execution Runtimes (100M Triples Dataset Results)
 
