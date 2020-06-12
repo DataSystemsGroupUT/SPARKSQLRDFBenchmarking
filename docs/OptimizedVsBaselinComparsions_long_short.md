@@ -13,8 +13,10 @@ DistributedExperiments/OptimizedVSBaselineSchemata/plots_short_long/100M-Horizon
 
 * **100M Results[Horizontally Partitioned]**
 
-* Avro Short 
+* Avro Short
+<p align="center">
 <img src="figures/DistributedExperiments/OptimizedVSBaselineSchemata/plots_short_long/100M-Horizontal/avro-100M-Horizontal Short queries.png" alt="spark" >
+</p> 
 
 * Avro Long
 <img src="figures/DistributedExperiments/OptimizedVSBaselineSchemata/plots_short_long/100M-Horizontal/avro-100M-Horizontal Long queries.png" alt="spark" >
