@@ -12,18 +12,23 @@
 * **100M Results[Horizontally Partitioned]**
 
 * AVRO
+
 <img src="figures/DistributedExperiments/OptimizedVSBaselineSchemata/plots_all/100M-Horizontal/avro-100M-Horizontal All queries.png" alt="spark" >
 
 * CSV
+
 <img src="figures/DistributedExperiments/OptimizedVSBaselineSchemata/plots_all/100M-Horizontal/csv-100M-Horizontal All queries.png" alt="spark" >
 
 * Hive
+
 <img src="figures/DistributedExperiments/OptimizedVSBaselineSchemata/plots_all/100M-Horizontal/hive-100M-Horizontal All queries.png" alt="spark" >
 
 * ORC
+
 <img src="figures/DistributedExperiments/OptimizedVSBaselineSchemata/plots_all/100M-Horizontal/orc-100M-Horizontal All queries.png" alt="spark" >
 
 * Parquet
+
 <img src="figures/DistributedExperiments/OptimizedVSBaselineSchemata/plots_all/100M-Horizontal/parquet-100M-Horizontal All queries.png" alt="spark" >
 
 * **100M Results[Predicate-Based Partitioned]**
