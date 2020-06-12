@@ -21,10 +21,10 @@ DistributedExperiments/OptimizedVSBaselineSchemata/plots_short_long/100M-Horizon
 
 
 * CSV Short
-<img src="figures/DistributedExperiments/OptimizedVSBaselineSchemata/plots_short_long/100M-Horizontal/hive-100M-Horizontal All queries.png" alt="spark" >
+<img src="figures/DistributedExperiments/OptimizedVSBaselineSchemata/plots_short_long/100M-Horizontal/csv-100M-Horizontal Short queries.png" alt="spark" >
 
 * CSV Long
-<img src="figures/DistributedExperiments/OptimizedVSBaselineSchemata/plots_short_long/100M-Horizontal/orc-100M-Horizontal All queries.png" alt="spark" >
+<img src="figures/DistributedExperiments/OptimizedVSBaselineSchemata/plots_short_long/100M-Horizontal/csv-100M-Horizontal Long queries.png" alt="spark" >
 
 
 * Hive Short
