@@ -8,12 +8,14 @@
 
 /OptimizedVSBaselineSchemata/plots_all/100M-Horizontal
 
+/DistributedExperiments/OptimizedVSBaselineSchemata/plots_all/100M-Horizontal
+
 ### Execution Runtimes (100M Triples Dataset Results)
 
 * **100M Results[Horizontally Partitioned]**
 
-<img src="figures/DistributedExperiments/ExecutionRuntimes/OptimizedVSBaselineSchemata/plots_all/100M-Horizontal/avro-100M-Horizontal All queries.png" alt="spark" >
- 
+<img src="figures/DistributedExperiments/OptimizedVSBaselineSchemata/plots_all/100M-Horizontal/avro-100M-Horizontal All queries.png" alt="spark" >
+
 <img src="figures/DistributedExperiments/ExecutionRuntimes/100M/100M-Horizontal/VT-100M-Horizontal All queries.png" alt="spark" >
 <img src="figures/DistributedExperiments/ExecutionRuntimes/100M/100M-Horizontal/PT-100M-Horizontal All queries.png" alt="spark" >
 
