@@ -7,23 +7,49 @@
 * **Note**:  - In the following figures we cateogrized running times queries into Long-Running Queries (Q1,Q3, Q10, Q11), and Short-Running Queries. We think that this grouping makes the queris plots looks clearer than the grouped query runtimes plots, due to they have big different running times.
 
 
-/OptimizedVSBaselineSchemata/plots_all/100M-Horizontal
-
-/DistributedExperiments/OptimizedVSBaselineSchemata/plots_all/100M-Horizontal
+DistributedExperiments/OptimizedVSBaselineSchemata/plots_short_long/100M-Horizontal
 
 ### Execution Runtimes (100M Triples Dataset Results)
 
 * **100M Results[Horizontally Partitioned]**
 
-<img src="figures/DistributedExperiments/OptimizedVSBaselineSchemata/plots_all/100M-Horizontal/avro-100M-Horizontal All queries.png" alt="spark" >
+* Avro Short 
+<img src="figures/DistributedExperiments/OptimizedVSBaselineSchemata/plots_short_long/100M-Horizontal/avro-100M-Horizontal Short queries.png" alt="spark" >
 
-<img src="figures/DistributedExperiments/OptimizedVSBaselineSchemata/plots_all/100M-Horizontal/csv-100M-Horizontal All queries.png" alt="spark" >
+* Avro Long
+<img src="figures/DistributedExperiments/OptimizedVSBaselineSchemata/plots_short_long/100M-Horizontal/csv-100M-Horizontal All queries.png" alt="spark" >
 
-<img src="figures/DistributedExperiments/OptimizedVSBaselineSchemata/plots_all/100M-Horizontal/hive-100M-Horizontal All queries.png" alt="spark" >
 
-<img src="figures/DistributedExperiments/OptimizedVSBaselineSchemata/plots_all/100M-Horizontal/orc-100M-Horizontal All queries.png" alt="spark" >
+* CSV Short
+<img src="figures/DistributedExperiments/OptimizedVSBaselineSchemata/plots_short_long/100M-Horizontal/hive-100M-Horizontal All queries.png" alt="spark" >
 
-<img src="figures/DistributedExperiments/OptimizedVSBaselineSchemata/plots_all/100M-Horizontal/parquet-100M-Horizontal All queries.png" alt="spark" >
+* CSV Long
+<img src="figures/DistributedExperiments/OptimizedVSBaselineSchemata/plots_short_long/100M-Horizontal/orc-100M-Horizontal All queries.png" alt="spark" >
+
+
+* Hive Short
+<img src="figures/DistributedExperiments/OptimizedVSBaselineSchemata/plots_short_long/100M-Horizontal/parquet-100M-Horizontal All queries.png" alt="spark" >
+
+* Hive Long
+<img src="figures/DistributedExperiments/OptimizedVSBaselineSchemata/plots_short_long/100M-Horizontal/parquet-100M-Horizontal All queries.png" alt="spark" >
+
+* ORC Short 
+<img src="figures/DistributedExperiments/OptimizedVSBaselineSchemata/plots_short_long/100M-Horizontal/parquet-100M-Horizontal All queries.png" alt="spark" >
+
+* ORC Long
+
+<img src="figures/DistributedExperiments/OptimizedVSBaselineSchemata/plots_short_long/100M-Horizontal/parquet-100M-Horizontal All queries.png" alt="spark" >
+
+
+* Parquet Short 
+<img src="figures/DistributedExperiments/OptimizedVSBaselineSchemata/plots_short_long/100M-Horizontal/parquet-100M-Horizontal All queries.png" alt="spark" >
+
+* Parquet Long
+
+<img src="figures/DistributedExperiments/OptimizedVSBaselineSchemata/plots_short_long/100M-Horizontal/parquet-100M-Horizontal All queries.png" alt="spark" >
+
+
+
 
 * **100M Results[Predicate-Based Partitioned]**
 
