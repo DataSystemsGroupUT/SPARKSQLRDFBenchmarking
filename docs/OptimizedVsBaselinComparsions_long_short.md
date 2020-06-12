@@ -34,44 +34,94 @@ DistributedExperiments/OptimizedVSBaselineSchemata/plots_short_long/100M-Horizon
 <img src="figures/DistributedExperiments/OptimizedVSBaselineSchemata/plots_short_long/100M-Horizontal/hive-100M-Horizontal Long queries.png" alt="spark" >
 
 * ORC Short 
-<img src="figures/DistributedExperiments/OptimizedVSBaselineSchemata/plots_short_long/100M-Horizontal/parquet-100M-Horizontal All queries.png" alt="spark" >
+<img src="figures/DistributedExperiments/OptimizedVSBaselineSchemata/plots_short_long/100M-Horizontal/orc-100M-Horizontal Short queries.png" alt="spark" >
 
 * ORC Long
 
-<img src="figures/DistributedExperiments/OptimizedVSBaselineSchemata/plots_short_long/100M-Horizontal/parquet-100M-Horizontal All queries.png" alt="spark" >
+<img src="figures/DistributedExperiments/OptimizedVSBaselineSchemata/plots_short_long/100M-Horizontal/orc-100M-Horizontal Long queries.png" alt="spark" >
 
 
 * Parquet Short 
-<img src="figures/DistributedExperiments/OptimizedVSBaselineSchemata/plots_short_long/100M-Horizontal/parquet-100M-Horizontal All queries.png" alt="spark" >
+<img src="figures/DistributedExperiments/OptimizedVSBaselineSchemata/plots_short_long/100M-Horizontal/parquet-100M-Horizontal Short queries.png" alt="spark" >
 
 * Parquet Long
 
-<img src="figures/DistributedExperiments/OptimizedVSBaselineSchemata/plots_short_long/100M-Horizontal/parquet-100M-Horizontal All queries.png" alt="spark" >
+<img src="figures/DistributedExperiments/OptimizedVSBaselineSchemata/plots_short_long/100M-Horizontal/parquet-100M-Horizontal Long queries.png" alt="spark" >
 
 
 
 
 * **100M Results[Predicate-Based Partitioned]**
 
-<img src="figures/DistributedExperiments/OptimizedVSBaselineSchemata/plots_all/100M-Predicate/avro-100M-Predicate All queries.png" alt="spark" >
+* Avro Short 
+<img src="figures/DistributedExperiments/OptimizedVSBaselineSchemata/plots_short_long/100M-Predicate/avro-100M-Predicate Short queries.png" alt="spark" >
 
-<img src="figures/DistributedExperiments/OptimizedVSBaselineSchemata/plots_all/100M-Predicate/csv-100M-Predicate All queries.png" alt="spark" >
+* Avro Long
+<img src="figures/DistributedExperiments/OptimizedVSBaselineSchemata/plots_short_long/100M-Predicate/avro-100M-Predicate Long queries.png" alt="spark" >
 
-<img src="figures/DistributedExperiments/OptimizedVSBaselineSchemata/plots_all/100M-Predicate/hive-100M-Predicate All queries.png" alt="spark" >
 
-<img src="figures/DistributedExperiments/OptimizedVSBaselineSchemata/plots_all/100M-Predicate/orc-100M-Predicate All queries.png" alt="spark" >
+* CSV Short
+<img src="figures/DistributedExperiments/OptimizedVSBaselineSchemata/plots_short_long/100M-Predicate/csv-100M-Predicate Short queries.png" alt="spark" >
 
-<img src="figures/DistributedExperiments/OptimizedVSBaselineSchemata/plots_all/100M-Predicate/parquet-100M-Predicate All queries.png" alt="spark" >
+* CSV Long
+<img src="figures/DistributedExperiments/OptimizedVSBaselineSchemata/plots_short_long/100M-Predicate/csv-100M-Predicate Long queries.png" alt="spark" >
+
+
+* Hive Short
+<img src="figures/DistributedExperiments/OptimizedVSBaselineSchemata/plots_short_long/100M-Predicate/hive-100M-Predicate Short queries.png" alt="spark" >
+
+* Hive Long
+<img src="figures/DistributedExperiments/OptimizedVSBaselineSchemata/plots_short_long/100M-Predicate/hive-100M-Predicate Long queries.png" alt="spark" >
+
+* ORC Short 
+<img src="figures/DistributedExperiments/OptimizedVSBaselineSchemata/plots_short_long/100M-Predicate/orc-100M-Predicate Short queries.png" alt="spark" >
+
+* ORC Long
+
+<img src="figures/DistributedExperiments/OptimizedVSBaselineSchemata/plots_short_long/100M-Predicate/orc-100M-Predicate Long queries.png" alt="spark" >
+
+
+* Parquet Short 
+<img src="figures/DistributedExperiments/OptimizedVSBaselineSchemata/plots_short_long/100M-Predicate/parquet-100M-Predicate Short queries.png" alt="spark" >
+
+* Parquet Long
+
+<img src="figures/DistributedExperiments/OptimizedVSBaselineSchemata/plots_short_long/100M-Predicate/parquet-100M-Predicate Long queries.png" alt="spark" >
 
 * **100M Results[Subject-Based Partitioned]**
 
-<img src="figures/DistributedExperiments/OptimizedVSBaselineSchemata/plots_all/100M-Subject/avro-100M-Subject All queries.png" alt="spark" >
+* Avro Short 
+<img src="figures/DistributedExperiments/OptimizedVSBaselineSchemata/plots_short_long/100M-Subject/avro-100M-Subject Short queries.png" alt="spark" >
 
-<img src="figures/DistributedExperiments/OptimizedVSBaselineSchemata/plots_all/100M-Subject/csv-100M-Subject All queries.png" alt="spark" >
+* Avro Long
+<img src="figures/DistributedExperiments/OptimizedVSBaselineSchemata/plots_short_long/100M-Subject/avro-100M-Subject Long queries.png" alt="spark" >
 
-<img src="figures/DistributedExperiments/OptimizedVSBaselineSchemata/plots_all/100M-Subject/hive-100M-Subject All queries.png" alt="spark" >
 
-<img src="figures/DistributedExperiments/OptimizedVSBaselineSchemata/plots_all/100M-Subject/orc-100M-Subject All queries.png" alt="spark" >
+* CSV Short
+<img src="figures/DistributedExperiments/OptimizedVSBaselineSchemata/plots_short_long/100M-Subject/csv-100M-Subject Short queries.png" alt="spark" >
 
-<img src="figures/DistributedExperiments/OptimizedVSBaselineSchemata/plots_all/100M-Subject/parquet-100M-Subject All queries.png" alt="spark" >
+* CSV Long
+<img src="figures/DistributedExperiments/OptimizedVSBaselineSchemata/plots_short_long/100M-Subject/csv-100M-Subject Long queries.png" alt="spark" >
+
+
+* Hive Short
+<img src="figures/DistributedExperiments/OptimizedVSBaselineSchemata/plots_short_long/100M-Subject/hive-100M-Subject Short queries.png" alt="spark" >
+
+* Hive Long
+<img src="figures/DistributedExperiments/OptimizedVSBaselineSchemata/plots_short_long/100M-Subject/hive-100M-Subject Long queries.png" alt="spark" >
+
+* ORC Short 
+<img src="figures/DistributedExperiments/OptimizedVSBaselineSchemata/plots_short_long/100M-Subject/orc-100M-Subject Short queries.png" alt="spark" >
+
+* ORC Long
+
+<img src="figures/DistributedExperiments/OptimizedVSBaselineSchemata/plots_short_long/100M-Subject/orc-100M-Subject Long queries.png" alt="spark" >
+
+
+* Parquet Short 
+<img src="figures/DistributedExperiments/OptimizedVSBaselineSchemata/plots_short_long/100M-Subject/parquet-100M-Subject Short queries.png" alt="spark" >
+
+* Parquet Long
+
+<img src="figures/DistributedExperiments/OptimizedVSBaselineSchemata/plots_short_long/100M-Subject/parquet-100M-Subject Long queries.png" alt="spark" >
 
