@@ -2,6 +2,7 @@
   <library name="sbt: stax:stax-api:1.0.1:jar">
     <CLASSES>
       <root url="jar://$USER_HOME$/.ivy2/cache/stax/stax-api/jars/stax-api-1.0.1.jar!/" />
+      <root url="jar://$USER_HOME$/.cache/coursier/v1/https/repo1.maven.org/maven2/stax/stax-api/1.0.1/stax-api-1.0.1.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

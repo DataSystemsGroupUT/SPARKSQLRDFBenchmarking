@@ -2,10 +2,14 @@
   <library name="sbt: io.netty:netty:3.9.9.Final:jar">
     <CLASSES>
       <root url="jar://$USER_HOME$/.ivy2/cache/io.netty/netty/bundles/netty-3.9.9.Final.jar!/" />
+      <root url="jar://$USER_HOME$/.cache/coursier/v1/https/repo1.maven.org/maven2/io/netty/netty/3.9.9.Final/netty-3.9.9.Final.jar!/" />
     </CLASSES>
-    <JAVADOC />
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.cache/coursier/v1/https/repo1.maven.org/maven2/io/netty/netty/3.9.9.Final/netty-3.9.9.Final-javadoc.jar!/" />
+    </JAVADOC>
     <SOURCES>
       <root url="jar://$USER_HOME$/.ivy2/cache/io.netty/netty/srcs/netty-3.9.9.Final-sources.jar!/" />
+      <root url="jar://$USER_HOME$/.cache/coursier/v1/https/repo1.maven.org/maven2/io/netty/netty/3.9.9.Final/netty-3.9.9.Final-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

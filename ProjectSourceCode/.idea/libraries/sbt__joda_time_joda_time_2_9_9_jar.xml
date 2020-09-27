@@ -2,10 +2,14 @@
   <library name="sbt: joda-time:joda-time:2.9.9:jar">
     <CLASSES>
       <root url="jar://$USER_HOME$/.ivy2/cache/joda-time/joda-time/jars/joda-time-2.9.9.jar!/" />
+      <root url="jar://$USER_HOME$/.cache/coursier/v1/https/repo1.maven.org/maven2/joda-time/joda-time/2.9.9/joda-time-2.9.9.jar!/" />
     </CLASSES>
-    <JAVADOC />
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.cache/coursier/v1/https/repo1.maven.org/maven2/joda-time/joda-time/2.9.9/joda-time-2.9.9-javadoc.jar!/" />
+    </JAVADOC>
     <SOURCES>
       <root url="jar://$USER_HOME$/.ivy2/cache/joda-time/joda-time/srcs/joda-time-2.9.9-sources.jar!/" />
+      <root url="jar://$USER_HOME$/.cache/coursier/v1/https/repo1.maven.org/maven2/joda-time/joda-time/2.9.9/joda-time-2.9.9-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

@@ -1,0 +1,5 @@
+[0m[[0m[33mwarn[0m] [0m[0marrow-memory-0.10.0.jar no longer exists at /home/jc/.cache/coursier/v1/https/repo1.maven.org/maven2/org/apache/arrow/arrow-memory/0.10.0/arrow-memory-0.10.0.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0m"not up to date. inChanged = false, force = false[0m
+[0m[[0m[0mdebug[0m] [0m[0mUpdating ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mDone updating [0m
+[0m[[0m[33mwarn[0m] [0m[0mThere may be incompatibilities among your library dependencies; run 'evicted' to see detailed eviction warnings.[0m

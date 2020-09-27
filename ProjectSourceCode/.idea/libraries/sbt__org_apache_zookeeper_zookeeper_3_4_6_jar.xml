@@ -2,10 +2,14 @@
   <library name="sbt: org.apache.zookeeper:zookeeper:3.4.6:jar">
     <CLASSES>
       <root url="jar://$USER_HOME$/.ivy2/cache/org.apache.zookeeper/zookeeper/jars/zookeeper-3.4.6.jar!/" />
+      <root url="jar://$USER_HOME$/.cache/coursier/v1/https/repo1.maven.org/maven2/org/apache/zookeeper/zookeeper/3.4.6/zookeeper-3.4.6.jar!/" />
     </CLASSES>
-    <JAVADOC />
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.cache/coursier/v1/https/repo1.maven.org/maven2/org/apache/zookeeper/zookeeper/3.4.6/zookeeper-3.4.6-javadoc.jar!/" />
+    </JAVADOC>
     <SOURCES>
       <root url="jar://$USER_HOME$/.ivy2/cache/org.apache.zookeeper/zookeeper/srcs/zookeeper-3.4.6-sources.jar!/" />
+      <root url="jar://$USER_HOME$/.cache/coursier/v1/https/repo1.maven.org/maven2/org/apache/zookeeper/zookeeper/3.4.6/zookeeper-3.4.6-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

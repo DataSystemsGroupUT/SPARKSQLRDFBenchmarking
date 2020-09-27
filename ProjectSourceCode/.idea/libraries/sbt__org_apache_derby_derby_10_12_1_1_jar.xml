@@ -2,6 +2,7 @@
   <library name="sbt: org.apache.derby:derby:10.12.1.1:jar">
     <CLASSES>
       <root url="jar://$USER_HOME$/.ivy2/cache/org.apache.derby/derby/jars/derby-10.12.1.1.jar!/" />
+      <root url="jar://$USER_HOME$/.cache/coursier/v1/https/repo1.maven.org/maven2/org/apache/derby/derby/10.12.1.1/derby-10.12.1.1.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

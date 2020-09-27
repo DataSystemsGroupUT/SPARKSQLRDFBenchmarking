@@ -1,0 +1,200 @@
+package ee.ut.cs.bigdata.sp2bench.hive
+
+import java.io.{File, FileOutputStream}
+import java.util.concurrent.TimeoutException
+import ee.ut.cs.bigdata.sp2bench.queries.WPTQueries
+import org.apache.log4j.{Level, Logger}
+import org.apache.spark.sql.SparkSession
+
+object WPTTables {
+  def main(args: Array[String]): Unit = {
+
+    Logger.getLogger("org").setLevel(Level.OFF)
+    Logger.getLogger("akka").setLevel(Level.OFF)
+    val warehouseLocation = "hdfs://172.17.77.48:9000/user/hive/warehouse"
+
+    val spark = SparkSession
+      .builder()
+      .appName("rdfbench Hive WPT")
+      .config("spark.sql.warehouse.dir", warehouseLocation)
+      .config("hive.metastore.uris","thrift://172.17.77.48:9083")
+      .enableHiveSupport()
+      .getOrCreate()
+
+    import spark.implicits._    
+        
+    val db = "rdfbench"
+    val ds = args(0)			//value = {"100M", "500M, or "1B"} 
+    var partitionType=args(1)		//value = {"Horizontal", "Subject", or "Predicate"}
+  
+
+    //use partitioned db
+    var hiveDB= db.concat(ds)
+    hiveDB=hiveDB.concat(partitionType)
+    spark.sql(s"USE $hiveDB")
+
+    if (partitionType.toLowerCase == "predicate")       
+    {
+     // read splitted WPT tables
+     import org.apache.spark.sql.functions._
+     val wpt1 = spark.sql("SELECT * FROM wptabstract").toDF()
+              .groupBy("Subject")
+              .agg(collect_list("abstract") as "abstract")
+
+     val wpt2 = spark.sql("SELECT * FROM wptbooktitle").toDF()
+              .groupBy("Subject")
+              .agg(collect_list("booktitle") as "booktitle")
+
+     val wpt3 = spark.sql("SELECT * FROM wptcdrom").toDF()
+              .groupBy("Subject")
+              .agg(collect_list("cdrom") as "cdrom")
+
+     val wpt4 = spark.sql("SELECT * FROM wptcreator").toDF()
+              .groupBy("Subject")
+              .agg(collect_list("creator") as "creator")
+
+     val wpt5 = spark.sql("SELECT * FROM wpteditor").toDF()
+              .groupBy("Subject")
+              .agg(collect_list("editor") as "editor")
+
+     val wpt6 = spark.sql("SELECT * FROM wpthomepage").toDF()
+              .groupBy("Subject")
+              .agg(collect_list("homepage") as "homepage")
+
+     val wpt7 = spark.sql("SELECT * FROM wptisbn").toDF()
+              .groupBy("Subject")
+              .agg(collect_list("isbn") as "isbn")
+
+     val wpt8 = spark.sql("SELECT * FROM wptissued").toDF()
+              .groupBy("Subject")
+              .agg(collect_list("issued") as "issued")
+
+     val wpt9 = spark.sql("SELECT * FROM wptjournal").toDF()
+              .groupBy("Subject")
+              .agg(collect_list("journal") as "journal")
+
+     val wpt10 = spark.sql("SELECT * FROM wptmonth").toDF()
+              .groupBy("Subject")
+              .agg(collect_list("month") as "month")
+
+     val wpt11 = spark.sql("SELECT * FROM wptname").toDF()
+              .groupBy("Subject")
+              .agg(collect_list("name") as "name")
+
+     val wpt12 = spark.sql("SELECT * FROM wptnote").toDF()
+              .groupBy("Subject")
+              .agg(collect_list("note") as "note")
+
+     val wpt13 = spark.sql("SELECT * FROM wptnumber").toDF()
+              .groupBy("Subject")
+              .agg(collect_list("number") as "number")
+
+     val wpt14 = spark.sql("SELECT * FROM wptpages").toDF()
+              .groupBy("Subject")
+              .agg(collect_list("pages") as "pages")
+
+     val wpt15 = spark.sql("SELECT * FROM wptpartof").toDF()
+              .groupBy("Subject")
+              .agg(collect_list("partOf") as "partOf")
+
+     val wpt16 = spark.sql("SELECT * FROM wptpublisher").toDF()
+              .groupBy("Subject")
+              .agg(collect_list("publisher") as "publisher")
+
+     val wpt17 = spark.sql("SELECT * FROM wptreferences").toDF()
+              .groupBy("Subject")
+              .agg(collect_list("references") as "references")
+
+     val wpt18 = spark.sql("SELECT * FROM wptseealso").toDF()
+              .groupBy("Subject")
+              .agg(collect_list("seeAlso") as "seeAlso")
+
+     val wpt19 = spark.sql("SELECT * FROM wptseries").toDF()
+              .groupBy("Subject")
+              .agg(collect_list("series") as "series")
+
+     val wpt20 = spark.sql("SELECT * FROM wptsubclassof").toDF()
+              .groupBy("Subject")
+              .agg(collect_list("subClassOf") as "subClassOf")
+
+     val wpt21 = spark.sql("SELECT * FROM wpttitle").toDF()
+              .groupBy("Subject")
+              .agg(collect_list("title") as "title")
+
+     val wpt22 = spark.sql("SELECT * FROM wpttype").toDF()
+              .groupBy("Subject")
+              .agg(collect_list("type") as "type")
+
+     val wpt23 = spark.sql("SELECT * FROM wptvolume").toDF()
+              .groupBy("Subject")
+              .agg(collect_list("volume") as "volume")
+
+    println("tables are read")
+
+    //join WPT tables based on 'Subject' column
+    val wpt_join1 = wpt1.join(wpt2, wpt1("Subject")===wpt2("Subject")).drop(wpt2("Subject"))
+    val wpt_join2 = wpt_join1.join(wpt3 , wpt_join1("Subject")===wpt3("Subject")).drop(wpt3("Subject"))
+    val wpt_join3 = wpt_join2.join(wpt4, wpt_join2("Subject")===wpt4("Subject")).drop(wpt4("Subject"))
+    val wpt_join4 = wpt_join3.join(wpt5, wpt_join3("Subject")===wpt5("Subject")).drop(wpt5("Subject"))
+    val wpt_join5 = wpt_join4.join(wpt6, wpt_join4("Subject")===wpt6("Subject")).drop(wpt6("Subject"))
+    val wpt_join6 = wpt_join5.join(wpt7, wpt_join5("Subject")===wpt7("Subject")).drop(wpt7("Subject"))
+    val wpt_join7 = wpt_join6.join(wpt8, wpt_join6("Subject")===wpt8("Subject")).drop(wpt8("Subject"))
+    val wpt_join8 = wpt_join7.join(wpt9, wpt_join7("Subject")===wpt9("Subject")).drop(wpt9("Subject"))
+    val wpt_join9 = wpt_join8.join(wpt10, wpt_join8("Subject")===wpt10("Subject")).drop(wpt10("Subject"))
+    val wpt_join10 = wpt_join9.join(wpt11, wpt_join9("Subject")===wpt11("Subject")).drop(wpt11("Subject"))
+    val wpt_join11 = wpt_join10.join(wpt12, wpt_join10("Subject")===wpt12("Subject")).drop(wpt12("Subject"))
+    val wpt_join12 = wpt_join11.join(wpt13, wpt_join11("Subject")===wpt13("Subject")).drop(wpt13("Subject"))
+    val wpt_join13 = wpt_join12.join(wpt14, wpt_join12("Subject")===wpt14("Subject")).drop(wpt14("Subject"))
+    val wpt_join14 = wpt_join13.join(wpt15, wpt_join13("Subject")===wpt15("Subject")).drop(wpt15("Subject"))
+    val wpt_join15 = wpt_join14.join(wpt16, wpt_join14("Subject")===wpt16("Subject")).drop(wpt16("Subject"))
+    val wpt_join16 = wpt_join15.join(wpt17, wpt_join15("Subject")===wpt17("Subject")).drop(wpt17("Subject"))
+    val wpt_join17 = wpt_join16.join(wpt18, wpt_join16("Subject")===wpt18("Subject")).drop(wpt18("Subject"))
+    val wpt_join18 = wpt_join17.join(wpt19, wpt_join17("Subject")===wpt19("Subject")).drop(wpt19("Subject"))
+    val wpt_join19 = wpt_join18.join(wpt20, wpt_join18("Subject")===wpt20("Subject")).drop(wpt20("Subject"))
+    val wpt_join20 = wpt_join19.join(wpt21, wpt_join19("Subject")===wpt21("Subject")).drop(wpt21("Subject"))
+    val wpt_join21 = wpt_join20.join(wpt22, wpt_join20("Subject")===wpt22("Subject")).drop(wpt22("Subject"))
+    val wpt_join22 = wpt_join21.join(wpt23, wpt_join21("Subject")===wpt23("Subject")).drop(wpt23("Subject"))
+    println("Tables are joined")
+
+    val result = wpt_join22
+       .withColumn("tmp", arrays_zip(col("type"), col("name"), col("title"), col("issued"), col("creator"), col("homepage"), col("seeAlso"), col("booktitle"), col("partOf"), col("abstract"), col("pages"), col("journal"), col("series"), col("number"), col("note"), col("volume"), col("subClassOf"), col("month"), col("isbn"), col("editor"), col("publisher"), col("references"), col("cdrom")))
+       .withColumn("tmp", explode(col("tmp")))
+       .select(col("Subject"), col("tmp.type"), col("tmp.name"), col("tmp.title"), col("tmp.issued"), col("tmp.creator"), col("tmp.homepage"), col("tmp.seeAlso"), col("tmp.booktitle"), col("tmp.partOf"), col("tmp.abstract"), col("tmp.pages"), col("tmp.journal"), col("tmp.series"), col("tmp.number"), col("tmp.note"), col("tmp.volume"), col("tmp.subClassOf"), col("tmp.month"), col("tmp.isbn"), col("tmp.editor"), col("tmp.publisher"), col("tmp.references"), col("tmp.cdrom"))
+    println("Unzipped")
+
+    result.createOrReplaceTempView("WPT")
+    }
+
+    //create file to write the query run time results
+    val fos = new FileOutputStream(new File(s"/home/hadoop/RDFBenchMarking/logs/$ds/hive/WPT/$ds$partitionType.txt"),true)
+
+    val queries = List(new WPTQueries q1,
+		       new WPTQueries q2,
+		       new WPTQueries q3, 
+                       new WPTQueries q4, 
+                       new WPTQueries q5, 
+                       new WPTQueries q6,
+                       new WPTQueries q8,
+                       new WPTQueries q10,
+                       new WPTQueries q11)    
+      
+    var count = 1
+    for (query <- queries)
+    { 
+       val starttime=System.nanoTime()
+       val df=spark.sql(query)
+       df.take(100).foreach(println)
+       val endtime=System.nanoTime()
+       val result = (endtime-starttime).toDouble/1000000000
+
+        if( count != queries.size ) {
+            Console.withOut(fos){print(result + ",")}
+        } else {
+            Console.withOut(fos){println(result)}
+        }
+        count+=1   
+    }    
+    println("All Queries are Done - HIVE - WPT!")
+    
+  }
+}

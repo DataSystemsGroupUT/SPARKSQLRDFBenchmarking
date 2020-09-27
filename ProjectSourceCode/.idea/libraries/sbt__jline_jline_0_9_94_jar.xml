@@ -2,10 +2,12 @@
   <library name="sbt: jline:jline:0.9.94:jar">
     <CLASSES>
       <root url="jar://$USER_HOME$/.ivy2/cache/jline/jline/jars/jline-0.9.94.jar!/" />
+      <root url="jar://$USER_HOME$/.cache/coursier/v1/https/repo1.maven.org/maven2/jline/jline/0.9.94/jline-0.9.94.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
       <root url="jar://$USER_HOME$/.ivy2/cache/jline/jline/srcs/jline-0.9.94-sources.jar!/" />
+      <root url="jar://$USER_HOME$/.cache/coursier/v1/https/repo1.maven.org/maven2/jline/jline/0.9.94/jline-0.9.94-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

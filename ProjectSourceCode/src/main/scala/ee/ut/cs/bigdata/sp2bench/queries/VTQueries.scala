@@ -60,6 +60,55 @@ val q2=
   """.stripMargin
 
 
+val q4=
+  """
+    |SELECT DISTINCT tab5.name2 AS name2 , tab3.name1 AS name1
+    | FROM    (SELECT Subject AS article1
+    |	 FROM type
+    |	 WHERE Object= 'http://localhost/vocabulary/bench/Article'
+    |	) tab0
+    | JOIN    (SELECT Object AS journal , Subject AS article1
+    |	 FROM journal
+    |	
+    |	) tab6
+    | ON(tab0.article1=tab6.article1)
+    | JOIN    (SELECT Object AS journal , Subject AS article2
+    |	 FROM journal
+    |	
+    |	) tab7
+    | ON(tab6.journal=tab7.journal)
+    | JOIN    (SELECT Subject AS article2
+    |	 FROM type
+    |	 WHERE Object= 'http://localhost/vocabulary/bench/Article'
+    |	) tab1
+    | ON(tab7.article2=tab1.article2)
+    | JOIN    (SELECT Object AS author1 , Subject AS article1
+    |	 FROM creator
+    |	) tab2
+    | ON(tab6.article1=tab2.article1)
+    | JOIN    (SELECT Object AS author2 , Subject AS article2
+    |	 FROM creator
+    |	) tab4
+    | ON(tab1.article2=tab4.article2)
+    | JOIN    (SELECT Subject AS author1 , Object AS name1
+    |	 FROM name
+    |	) tab3
+    | ON(tab2.author1=tab3.author1)
+    | JOIN    (SELECT Subject AS author2 , Object AS name2
+    |	 FROM name
+    |	) tab5
+    | ON(tab4.author2=tab5.author2)
+    |
+    | WHERE (tab3.name1 < tab5.name2)
+  """.stripMargin
+
+
+
+
+
+
+
+/*
   val q4=
     """
       |SELECT DISTINCT
@@ -78,9 +127,9 @@ val q2=
       |    A1.object='http://localhost/vocabulary/bench/Article'
       |    AND
       |    A2.object='http://localhost/vocabulary/bench/Article'
-      |    AND N1.object<>N2.object
+      |    AND N1.object<N2.object
     """.stripMargin
-
+*/
 
   val q5=
     """
@@ -262,29 +311,20 @@ val q6=
 
   val q9=
     """
-      |SELECT DISTINCT predicate
-      |FROM
+      |SELECT DISTINCT Predicate FROM
       |    (
       |        --#START_UNION#
-      |        SELECT
-      |            RT.subject,
-      |            T.predicate
-      |        FROM
-      |            type RT
-      |            JOIN SingleStmtTable AS T ON RT.subject=T.object
+      |        SELECT RT.Subject, T.Predicate FROM type RT
+      |            JOIN SingleStmtTable T ON RT.Subject=T.Object
       |        WHERE
       |            RT.object='http://xmlns.com/foaf/0.1/Person'
       |        --#END_UNION#
       |        UNION
       |        --#START_UNION#
-      |        SELECT
-      |            RT.subject,
-      |            T.predicate
-      |        FROM
-      |            type RT
-      |            JOIN SingleStmtTable AS T ON RT.subject=T.subject
+      |        SELECT RT.Subject, T.Predicate FROM type RT
+      |            JOIN SingleStmtTable T ON T.Subject=RT.Subject
       |        WHERE
-      |            RT.object='http://xmlns.com/foaf/0.1/Person'
+      |            RT.Object='http://xmlns.com/foaf/0.1/Person'
       |        --#END_UNION#
       |    ) AS L (subject,predicate) where L.predicate not like 'http://www.w3.org/1999/02/22-rdf-syntax-ns#_%'
     """.stripMargin
@@ -294,12 +334,12 @@ val q6=
   val q10=
     """
       |SELECT
-      |    L.subject AS subject, L.predicate AS predicate
+      |  DISTINCT L.subject AS subject, L.predicate AS predicate
       |FROM
       |(
-      |SELECT A.subject, "dc:#Creator" As predicate  FROM Creator A WHERE  A.object='http://localhost/persons/Paul_Erdoes'
+      |SELECT A.subject, "dc:#Creator" As predicate  FROM creator A WHERE  A.object='http://localhost/persons/Paul_Erdoes'
       |UNION
-      |SELECT E.subject , "dc:#Editor" As predicate  FROM Editorv E  WHERE  E.object='http://localhost/persons/Paul_Erdoes'
+      |SELECT E.subject , "dc:#Editor" As predicate  FROM editorv E  WHERE  E.object='http://localhost/persons/Paul_Erdoes'
       |) AS L
     """.stripMargin
 

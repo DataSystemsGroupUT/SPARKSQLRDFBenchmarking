@@ -2,10 +2,14 @@
   <library name="sbt: org.jodd:jodd-core:3.5.2:jar">
     <CLASSES>
       <root url="jar://$USER_HOME$/.ivy2/cache/org.jodd/jodd-core/jars/jodd-core-3.5.2.jar!/" />
+      <root url="jar://$USER_HOME$/.cache/coursier/v1/https/repo1.maven.org/maven2/org/jodd/jodd-core/3.5.2/jodd-core-3.5.2.jar!/" />
     </CLASSES>
-    <JAVADOC />
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.cache/coursier/v1/https/repo1.maven.org/maven2/org/jodd/jodd-core/3.5.2/jodd-core-3.5.2-javadoc.jar!/" />
+    </JAVADOC>
     <SOURCES>
       <root url="jar://$USER_HOME$/.ivy2/cache/org.jodd/jodd-core/srcs/jodd-core-3.5.2-sources.jar!/" />
+      <root url="jar://$USER_HOME$/.cache/coursier/v1/https/repo1.maven.org/maven2/org/jodd/jodd-core/3.5.2/jodd-core-3.5.2-sources.jar!/" />
     </SOURCES>
   </library>
 </component>
