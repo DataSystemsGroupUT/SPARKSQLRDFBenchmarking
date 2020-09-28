@@ -20,23 +20,12 @@
       <path>
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
         <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="BRANCH:v2" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </select>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cd24d5df-29e4-4040-96f4-5e44dea52d97" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/ee/ut/cs/bigdata/sp2bench/RDFBenchMain.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/ee/ut/cs/bigdata/sp2bench/RDFBenchMain.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/ee/ut/cs/bigdata/sp2bench/csv/Tests.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/ee/ut/cs/bigdata/sp2bench/csv/Tests.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/ee/ut/cs/bigdata/sp2bench/csv/WPTTables2.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/ee/ut/cs/bigdata/sp2bench/csv/WPTTables2.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/ee/ut/cs/bigdata/sp2bench/queries/WPTQueries.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/ee/ut/cs/bigdata/sp2bench/queries/WPTQueries.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/.history" beforeDir="false" afterPath="$PROJECT_DIR$/target/.history" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/rdfbenchmarkingproject_2.12-0.1.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/rdfbenchmarkingproject_2.12-0.1.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/streams/compile/compileIncSetup/$global/streams/inc_compile_2.12.zip" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/compile/compileIncSetup/$global/streams/inc_compile_2.12.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/streams/compile/compileIncremental/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/compile/compileIncremental/$global/streams/export" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/streams/compile/packageBin/$global/streams/inputs" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/compile/packageBin/$global/streams/inputs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../logs/250M/csv/WPT/250.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../logs/250M/csv/WPT/250.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -240,7 +229,7 @@
       <workItem from="1601038212859" duration="6140000" />
       <workItem from="1601131356619" duration="12078000" />
       <workItem from="1601229027563" duration="7113000" />
-      <workItem from="1601313150089" duration="514000" />
+      <workItem from="1601313150089" duration="1839000" />
     </task>
     <servers />
   </component>
@@ -256,17 +245,6 @@
               <option name="CUSTOM_BOOLEAN_PROPERTIES">
                 <map>
                   <entry key="Show.Git.Branches" value="true" />
-                </map>
-              </option>
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="v2" />
-                      </list>
-                    </value>
-                  </entry>
                 </map>
               </option>
             </State>
