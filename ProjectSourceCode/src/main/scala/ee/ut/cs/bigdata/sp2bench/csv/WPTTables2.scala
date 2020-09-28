@@ -67,6 +67,9 @@ object WPTTables2 {
     for (query <- queries) {
       //run query and calculate the run time
       val starttime = System.nanoTime()
+
+      // Timeout
+
       val df = spark.sql(query)
       df.take(100).foreach(println)
       val endtime = System.nanoTime()

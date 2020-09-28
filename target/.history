@@ -1,0 +1,10 @@
+run
+compile
+run
+last Compile
+run
+bgRun
+run RDFBenchMain
+runMain RDFBenchMain
+run
+package

@@ -49,3 +49,6 @@ compile
 package
 compile
 package
+run
+compile
+package

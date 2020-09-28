@@ -3,8 +3,8 @@ package ee.ut.cs.bigdata.sp2bench.queries
 class WPTQueries {
 
 
-val q1=
-        """
+  val q1 =
+    """
     	|SELECT issued as year
     	|FROM WPT
     	|WHERE
@@ -12,8 +12,8 @@ val q1=
   	""".stripMargin
 
 
-val q2=
-        """
+  val q2 =
+    """
     	|SELECT
     	|	Subject AS inproc,
     	|	creator AS author,
@@ -41,9 +41,8 @@ val q2=
   	""".stripMargin
 
 
-
-val q3=
-        """
+  val q3 =
+    """
     	|SELECT Distinct Subject AS article
     	|FROM WPT
     	|WHERE
@@ -52,8 +51,8 @@ val q3=
         """.stripMargin
 
 
-val q4=
-        """
+  val q4 =
+    """
     	|SELECT DISTINCT
     	|	WPT2.name AS name1,
     	|	WPT4.name AS name2
@@ -68,9 +67,8 @@ val q4=
         """.stripMargin
 
 
-
-val q5=
-        """
+  val q5 =
+    """
     	|SELECT DISTINCT
     	|	Pe1.Subject AS person,
     	|	Pe1.name AS name
@@ -87,12 +85,8 @@ val q5=
         """.stripMargin
 
 
-
-
-
-
-val q6=
-        """
+  val q6 =
+    """
     	|SELECT
     	|	P.issued  AS yr,
     	|	A.name  AS name,
@@ -115,8 +109,8 @@ val q6=
         """.stripMargin
 
 
-val q8=
-        """
+  val q8 =
+    """
     	|SELECT DISTINCT name
     	|FROM (
     	|(
@@ -150,8 +144,8 @@ val q8=
         """.stripMargin
 
 
-val q10=
-        """
+  val q10 =
+    """
   	|SELECT
   	|	P.Subject   AS subject,
   	|	'dc:creator' AS predicate
@@ -172,8 +166,8 @@ val q10=
         """.stripMargin
 
 
-val q11=
-        """
+  val q11 =
+    """
     	|SELECT seeAlso
     	|FROM
     	|WPT
