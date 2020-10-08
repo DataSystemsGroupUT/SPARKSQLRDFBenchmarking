@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1425605320542
+Build-Jdk: 1.7.0_21
+Built-By: jhyde
+Bundle-Description: Type-safe access to Java system properties
+Bundle-DocURL: http://www.hydromatic.net
+Bundle-License: http://www.apache.org/licenses/LICENSE-2.0.txt
+Bundle-ManifestVersion: 2
+Bundle-Name: eigenbase-properties
+Bundle-SymbolicName: net.hydromatic.eigenbase-properties
+Bundle-Vendor: Julian Hyde
+Bundle-Version: 1.1.5
+Created-By: Apache Maven Bundle Plugin
+Export-Package: org.eigenbase.util.property;version="1.1.5"
+Tool: Bnd-2.1.0.20130426-122213

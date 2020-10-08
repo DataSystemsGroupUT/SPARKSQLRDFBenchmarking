@@ -1,0 +1,83 @@
+Manifest-Version: 1.0
+Bundle-License: http://www.apache.org/licenses/LICENSE-2.0.txt
+Bundle-SymbolicName: org.apache.commons.crypto
+Archiver-Version: Plexus Archiver
+Built-By: sdp
+Bnd-LastModified: 1469495955883
+Implementation-Vendor-Id: org.apache
+Specification-Title: Apache Commons Crypto
+Bundle-DocURL: http://commons.apache.org/proper/commons-crypto/
+Include-Resource: {org/apache/commons/crypto/component.properties=src/
+ main/resources/org/apache/commons/crypto/component.properties}
+Import-Package: com.sun.jna,com.sun.jna.ptr,javax.crypto,javax.crypto.
+ spec
+Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.7))"
+Main-Class: org.apache.commons.crypto.Crypto
+Export-Package: org.apache.commons.crypto;version="1.0.0",org.apache.c
+ ommons.crypto.cipher;version="1.0.0",org.apache.commons.crypto.jna;ve
+ rsion="1.0.0",org.apache.commons.crypto.native.Linux;version="1.0.0",
+ org.apache.commons.crypto.native.Linux.x86;version="1.0.0",org.apache
+ .commons.crypto.native.Linux.x86_64;version="1.0.0",org.apache.common
+ s.crypto.native.Mac;version="1.0.0",org.apache.commons.crypto.native.
+ Mac.x86_64;version="1.0.0",org.apache.commons.crypto.native.Windows;v
+ ersion="1.0.0",org.apache.commons.crypto.native.Windows.x86;version="
+ 1.0.0",org.apache.commons.crypto.native.Windows.x86_64;version="1.0.0
+ ",org.apache.commons.crypto.random;version="1.0.0",org.apache.commons
+ .crypto.stream;version="1.0.0",org.apache.commons.crypto.stream.input
+ ;version="1.0.0",org.apache.commons.crypto.stream.output;version="1.0
+ .0",org.apache.commons.crypto.utils;version="1.0.0"
+Bundle-Name: Apache Commons Crypto
+Implementation-Title: Apache Commons Crypto
+Bundle-Description: Apache Commons Crypto is a cryptographic library o
+ ptimized with AES-NI (Advanced EncryptionStandard New Instructions). 
+ It provides Java API for both cipher level and Java stream level.Deve
+ lopers can use it to implement high performance AES encryption/decryp
+ tion with the minimumcode and effort. Please note that Crypto doesn't
+  implement the cryptographic algorithm such asAES directly. It wraps 
+ to Openssl or JCE which implement the algorithms.Features--------1. C
+ ipher API for low level cryptographic operations.2. Java stream API (
+ CryptoInputStream/CryptoOutputStream) for high level stream encyrptio
+ n/decryption.3. Both optimized with high performance AES encryption/d
+ ecryption. (1400 MB/s - 1700 MB/s throughput in modern Xeon processor
+ s).4. JNI-based implementation to achieve comparable performance to t
+ he native C++ version based on OpenSsl.5. Portable across various ope
+ rating systems (currently only Linux/MacOSX/Windows);   Apache Common
+ s Crypto loads the library according to your machine environment (it 
+ checks system properties, `os.name` and `os.arch`).6. Simple usage. A
+ dd the commons-crypto-(version).jar file to your classpath.Export res
+ trictions-------------------This distribution includes cryptographic 
+ software.The country in which you currently reside may have restricti
+ onson the import, possession, use, and/or re-export to another countr
+ y,of encryption software. BEFORE using any encryption software,please
+  check your country's laws, regulations and policiesconcerning the im
+ port, possession, or use, and re-export ofencryption software, to see
+  if this is permitted.See <http://www.wassenaar.org/> for more inform
+ ation.The U.S. Government Department of Commerce, Bureau of Industry 
+ and Security (BIS),has classified this software as Export Commodity C
+ ontrol Number (ECCN) 5D002.C.1,which includes information security so
+ ftware using or performingcryptographic functions with asymmetric alg
+ orithms.The form and manner of this Apache Software Foundation distri
+ bution makesit eligible for export under the License ExceptionENC Tec
+ hnology Software Unrestricted (TSU) exception(see the BIS Export Admi
+ nistration Regulations, Section 740.13)for both object code and sourc
+ e code.The following provides more details on the included cryptograp
+ hic software:* Commons Crypto use [Java Cryptography Extension](http:
+ //docs.oracle.com/javase/8/docs/technotes/guides/security/crypto/Cryp
+ toSpec.html) provided by Java* Commons Crypto link to and use [OpenSS
+ L](https://www.openssl.org/) ciphers
+Implementation-Version: 1.0.0
+Specification-Vendor: The Apache Software Foundation
+Bundle-ManifestVersion: 2
+Bundle-Vendor: The Apache Software Foundation
+Tool: Bnd-3.0.0.201509101326
+Implementation-Vendor: The Apache Software Foundation
+Bundle-Version: 1.0.0
+X-Compile-Target-JDK: 1.7
+Implementation-Build: CRYPTO-1.0.0@r782ca06a1f9a292756fbad9eb9841e685c
+ d34af1; 2016-07-26 09:19:11+0800
+X-Compile-Source-JDK: 1.7
+Created-By: Apache Maven Bundle Plugin
+Build-Jdk: 1.8.0_51
+Implementation-URL: http://commons.apache.org/proper/commons-crypto/
+Specification-Version: 1.0.0
+

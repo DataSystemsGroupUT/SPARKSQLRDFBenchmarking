@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Implementation-Title: Apache Parquet Hadoop
+Implementation-Version: 1.10.1
+Archiver-Version: Plexus Archiver
+Built-By: blue
+Specification-Vendor: The Apache Software Foundation
+Specification-Title: Apache Parquet Hadoop
+Implementation-Vendor-Id: org.apache.parquet
+Implementation-Vendor: The Apache Software Foundation
+git-SHA-1: a89df8f9932b6ef6633d06069e50c9b7970bebd1
+Created-By: Apache Maven 3.3.9
+Build-Jdk: 1.8.0_161
+Specification-Version: 1.10.1
+

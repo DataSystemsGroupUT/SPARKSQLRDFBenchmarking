@@ -56,8 +56,6 @@
 [0m[[0m[0mdebug[0m] [0m[0m	  /home/hadoop/RDFBenchMarking/ProjectSourceCode/target/scala-2.12/classes/ee/ut/cs/bigdata/sp2bench/csv/VerticalTables2$.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	ee/ut/cs/bigdata/sp2bench/hive/ExtVPTables.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	  /home/hadoop/RDFBenchMarking/ProjectSourceCode/target/scala-2.12/classes/ee/ut/cs/bigdata/sp2bench/hive/ExtVPTables.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	ee/ut/cs/bigdata/sp2bench/RDFBenchMain.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	  /home/hadoop/RDFBenchMarking/ProjectSourceCode/target/scala-2.12/classes/ee/ut/cs/bigdata/sp2bench/RDFBenchMain.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	ee/ut/cs/bigdata/sp2bench/hive/VerticalTablesPartition$.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	  /home/hadoop/RDFBenchMarking/ProjectSourceCode/target/scala-2.12/classes/ee/ut/cs/bigdata/sp2bench/hive/VerticalTablesPartition$.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	ee/ut/cs/bigdata/sp2bench/parquet/WPTTables2$.class[0m
@@ -212,8 +210,6 @@
 [0m[[0m[0mdebug[0m] [0m[0m	  /home/hadoop/RDFBenchMarking/ProjectSourceCode/target/scala-2.12/classes/ee/ut/cs/bigdata/sp2bench/orc/WPTTables2.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	ee/ut/cs/bigdata/sp2bench/parquet/ExtVPTablesPartition$.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	  /home/hadoop/RDFBenchMarking/ProjectSourceCode/target/scala-2.12/classes/ee/ut/cs/bigdata/sp2bench/parquet/ExtVPTablesPartition$.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	ee/ut/cs/bigdata/sp2bench/RDFBenchMain$.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	  /home/hadoop/RDFBenchMarking/ProjectSourceCode/target/scala-2.12/classes/ee/ut/cs/bigdata/sp2bench/RDFBenchMain$.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	ee/ut/cs/bigdata/sp2bench/csv/WPTTablesPartition$.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	  /home/hadoop/RDFBenchMarking/ProjectSourceCode/target/scala-2.12/classes/ee/ut/cs/bigdata/sp2bench/csv/WPTTablesPartition$.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	ee/ut/cs/bigdata/sp2bench/parquet/ExtVPTables.class[0m

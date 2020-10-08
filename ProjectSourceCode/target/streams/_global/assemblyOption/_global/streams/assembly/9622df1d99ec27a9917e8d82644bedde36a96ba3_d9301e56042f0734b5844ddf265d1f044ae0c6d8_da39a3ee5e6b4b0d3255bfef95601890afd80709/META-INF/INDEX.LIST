@@ -1,0 +1,17 @@
+JarIndex-Version: 1.0
+
+arrow-memory-0.10.0.jar
+META-INF
+META-INF/maven
+META-INF/maven/org.apache.arrow
+META-INF/maven/org.apache.arrow/arrow-memory
+io
+io/netty
+io/netty/buffer
+org
+org/apache
+org/apache/arrow
+org/apache/arrow/memory
+org/apache/arrow/memory/util
+git.properties
+

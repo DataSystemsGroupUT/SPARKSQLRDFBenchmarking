@@ -1,0 +1,4 @@
+org.apache.calcite.avatica.remote.Driver
+org.apache.calcite.jdbc.Driver
+org.apache.derby.jdbc.AutoloadedDriver
+org.postgresql.Driver

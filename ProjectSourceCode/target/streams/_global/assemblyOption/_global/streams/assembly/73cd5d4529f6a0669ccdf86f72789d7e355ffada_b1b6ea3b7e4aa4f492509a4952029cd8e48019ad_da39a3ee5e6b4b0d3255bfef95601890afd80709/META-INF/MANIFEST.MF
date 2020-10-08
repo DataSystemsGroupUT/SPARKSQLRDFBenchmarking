@@ -1,0 +1,38 @@
+Manifest-Version: 1.0
+Export-Package: org.apache.commons.io;version="1.4.9999",org.apache.co
+ mmons.io.comparator;version="1.4.9999",org.apache.commons.io.filefilt
+ er;version="1.4.9999",org.apache.commons.io.input;version="1.4.9999",
+ org.apache.commons.io.output;version="1.4.9999",org.apache.commons.io
+ ;version="2.4",org.apache.commons.io.comparator;version="2.4",org.apa
+ che.commons.io.filefilter;version="2.4",org.apache.commons.io.input;v
+ ersion="2.4",org.apache.commons.io.output;version="2.4",org.apache.co
+ mmons.io.monitor;version="2.4"
+Implementation-Title: Commons IO
+Built-By: ggregory
+Tool: Bnd-1.50.0
+Implementation-Vendor: The Apache Software Foundation
+Implementation-Vendor-Id: org.apache
+Specification-Title: Commons IO
+Bundle-License: http://www.apache.org/licenses/LICENSE-2.0.txt
+Bundle-SymbolicName: org.apache.commons.io
+X-Compile-Target-JDK: 1.6
+Implementation-Version: 2.4
+Specification-Vendor: The Apache Software Foundation
+Bundle-Name: Commons IO
+Created-By: Apache Maven Bundle Plugin
+X-Compile-Source-JDK: 1.6
+Bundle-Vendor: The Apache Software Foundation
+Build-Jdk: 1.6.0_31
+Bundle-Version: 2.4.0
+Bnd-LastModified: 1339539506978
+Bundle-ManifestVersion: 2
+Bundle-Description: The Commons IO library contains utility classes, s
+ tream implementations, file filters, file comparators, endian transfo
+ rmation classes, and much more.
+Bundle-DocURL: http://commons.apache.org/io/
+Implementation-Build: tags/2.4-RC2@r1349569; 2012-06-12 18:18:20-0400
+Specification-Version: 2.4
+Include-Resource: META-INF/LICENSE.txt=LICENSE.txt,META-INF/NOTICE.txt
+ =NOTICE.txt
+Archiver-Version: Plexus Archiver
+

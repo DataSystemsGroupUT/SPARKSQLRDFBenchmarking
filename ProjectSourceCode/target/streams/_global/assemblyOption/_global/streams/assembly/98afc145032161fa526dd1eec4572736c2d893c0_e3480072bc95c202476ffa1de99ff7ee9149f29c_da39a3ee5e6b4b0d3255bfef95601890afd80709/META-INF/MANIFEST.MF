@@ -1,0 +1,42 @@
+Manifest-Version: 1.0
+Export-Package: org.codehaus.jackson.xc;uses:="org.codehaus.jackson.ma
+ p.annotate,org.codehaus.jackson.annotate,org.codehaus.jackson.node,or
+ g.codehaus.jackson.map,org.codehaus.jackson.map.introspect,org.codeha
+ us.jackson.map.jsontype,org.codehaus.jackson.map.util,org.codehaus.ja
+ ckson.map.jsontype.impl,org.codehaus.jackson.schema,org.codehaus.jack
+ son.map.ser.std,org.codehaus.jackson.map.type,javax.xml.bind.annotati
+ on.adapters,org.codehaus.jackson.type,javax.activation,org.codehaus.j
+ ackson.util,javax.xml.bind.annotation,org.codehaus.jackson.map.deser.
+ std,org.codehaus.jackson,javax.xml.bind";version="1.9.13"
+Implementation-Title: XML Compatibility extensions for Jackson data bi
+ nding
+Implementation-Version: 1.9.13
+Built-By: tsaloranta
+Tool: Bnd-unknown version
+Bundle-Name: XML Compatibility extensions for Jackson data binding
+Created-By: 1.7.0_10-ea (Oracle Corporation)
+Bundle-RequiredExecutionEnvironment: J2SE-1.5, JavaSE-1.6
+DynamicImport-Package: org.w3c.dom ,javax.xml.namespace, javax.xml.par
+ sers, javax.xml.transform 
+Bundle-Vendor: http://fasterxml.com
+Implementation-Vendor: http://fasterxml.com
+Bundle-Version: 1.9.13
+Bnd-LastModified: 1373857389622
+Bundle-ManifestVersion: 2
+Bundle-License: http://www.apache.org/licenses/LICENSE-2.0.txt
+Import-Package: javax.activation,javax.xml.bind,javax.xml.bind.annotat
+ ion,javax.xml.bind.annotation.adapters,org.codehaus.jackson;version="
+ 1.9.13",org.codehaus.jackson.annotate;version="1.9.13",org.codehaus.j
+ ackson.map;version="1.9.13",org.codehaus.jackson.map.annotate;version
+ ="1.9.13",org.codehaus.jackson.map.deser;version="1.9.13",org.codehau
+ s.jackson.map.deser.std;version="1.9.13",org.codehaus.jackson.map.int
+ rospect;version="1.9.13",org.codehaus.jackson.map.jsontype;version="1
+ .9.13",org.codehaus.jackson.map.jsontype.impl;version="1.9.13",org.co
+ dehaus.jackson.map.ser;version="1.9.13",org.codehaus.jackson.map.ser.
+ std;version="1.9.13",org.codehaus.jackson.map.type;version="1.9.13",o
+ rg.codehaus.jackson.map.util;version="1.9.13",org.codehaus.jackson.no
+ de;version="1.9.13",org.codehaus.jackson.schema;version="1.9.13",org.
+ codehaus.jackson.type;version="1.9.13",org.codehaus.jackson.util;vers
+ ion="1.9.13"
+Bundle-SymbolicName: jackson-xc
+

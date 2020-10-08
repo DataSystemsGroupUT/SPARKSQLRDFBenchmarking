@@ -1,87 +1,69 @@
 package ee.ut.cs.bigdata.sp2bench.queries
 
 class PTQueries {
-
-
-
-val q1=
-  """
-    |SELECT
-    |    D.issued AS yr
-    |FROM
-    |    Venue V
-    |    JOIN Document D   ON D.document=V.Venue
-    |    JOIN VenueType VT ON VT.document=V.Venue
-    |WHERE
-    |    VT.type='http://localhost/vocabulary/bench/Journal'
-    |    AND D.title='Journal 1 (1940)'
+  val q1 =
+    """
+      |SELECT
+      |    D.issued AS yr
+      |FROM
+      |    Venue V
+      |    JOIN Document D   ON D.document=V.Venue
+      |    JOIN VenueType VT ON VT.document=V.Venue
+      |WHERE
+      |    VT.type='http://localhost/vocabulary/bench/Journal'
+      |    AND D.title='Journal 1 (1940)'
   """.stripMargin
 
-
-
-
-val q2=
-"""
-  |SELECT
-  |    D1.document  AS inproc,
-  |    Pe.name      AS author,
-  |    D1.booktitle AS booktitle,
-  |    D1.title     AS title,
-  |    V.title     AS proc,
-  |    DSA.seeAlso  AS ee,
-  |    P.pages      AS page,
-  |    DH.homepage  AS url,
-  |    D1.issued    AS yr,
-  |    AB.txt       AS abstract
-  |FROM
-  |    Document D1
-  |    JOIN Publication P          ON P.publication=D1.document
-  |    JOIN PublicationType PT     ON P.publication=PT.publication
-  |    JOIN Author A               ON P.publication=A.document
-  |    JOIN Person Pe              ON Pe.person=A.person
-  |    JOIN Document_seeAlso DSA   ON DSA.document=D1.document
-  |    JOIN Document_homepage DH   ON DH.document=D1.document
-  |
-  |     JOIN Venue V                ON P.venue=V.Venue
-  |
-  |    --JOIN Document D2            ON D2.ID=V.fk_document
-  |
-  |    LEFT OUTER JOIN Abstract AB ON AB.publication=P.publication
-  |WHERE
-  |    PT.type='http://localhost/vocabulary/bench/Inproceedings'
-  |    AND D1.booktitle IS NOT NULL
-  |    AND D1.title IS NOT NULL
-  |    AND P.pages IS NOT NULL
-  |    AND D1.issued IS NOT NULL
-  |ORDER BY yr
+  val q2 =
+    """
+      |SELECT
+      |    D1.document  AS inproc,
+      |    Pe.name      AS author,
+      |    D1.booktitle AS booktitle,
+      |    D1.title     AS title,
+      |    V.title     AS proc,
+      |    DSA.seeAlso  AS ee,
+      |    P.pages      AS page,
+      |    DH.homepage  AS url,
+      |    D1.issued    AS yr,
+      |    AB.txt       AS abstract
+      |FROM
+      |    Document D1
+      |    JOIN Publication P          ON P.publication=D1.document
+      |    JOIN PublicationType PT     ON P.publication=PT.publication
+      |    JOIN Author A               ON P.publication=A.document
+      |    JOIN Person Pe              ON Pe.person=A.person
+      |    JOIN Document_seeAlso DSA   ON DSA.document=D1.document
+      |    JOIN Document_homepage DH   ON DH.document=D1.document
+      |
+      |     JOIN Venue V                ON P.venue=V.Venue
+      |
+      |    --JOIN Document D2            ON D2.ID=V.fk_document
+      |
+      |    LEFT OUTER JOIN Abstract AB ON AB.publication=P.publication
+      |WHERE
+      |    PT.type='http://localhost/vocabulary/bench/Inproceedings'
+      |    AND D1.booktitle IS NOT NULL
+      |    AND D1.title IS NOT NULL
+      |    AND P.pages IS NOT NULL
+      |    AND D1.issued IS NOT NULL
+      |ORDER BY yr
 """.stripMargin
 
-
-
-
-
-
-  val q3=
-  """
-    | SELECT
-    |    D.document AS article
-    |FROM
-    |    Publication P
-    |    JOIN Document D         ON D.document=P.publication
-    |    JOIN PublicationType PT ON P.publication=PT.publication
-    |WHERE
-    |    PT.type='http://localhost/vocabulary/bench/Article'
-    |    AND P.pages IS NOT NULL
+  val q3 =
+    """
+      | SELECT
+      |    D.document AS article
+      |FROM
+      |    Publication P
+      |    JOIN Document D         ON D.document=P.publication
+      |    JOIN PublicationType PT ON P.publication=PT.publication
+      |WHERE
+      |    PT.type='http://localhost/vocabulary/bench/Article'
+      |    AND P.pages IS NOT NULL
   """.stripMargin
 
-
-
-
-
-
-
-
-  val q4=
+  val q4 =
     """
       |SELECT DISTINCT
       |    Pe1.name AS name1,
@@ -104,12 +86,7 @@ val q2=
       |    AND Pe1.name<Pe2.name
     """.stripMargin
 
-
-
-
-
-
-  val q5=
+  val q5 =
     """
       |SELECT DISTINCT
       |    Pe1.person AS person,
@@ -129,38 +106,32 @@ val q2=
       |    AND Pe1.name=Pe2.name
     """.stripMargin
 
+  val q6 =
 
-
-
-
-val q6=
-
-  """
-    |SELECT
-    |    D.issued   AS yr,
-    |    Pe.name    AS name,
-    |    D.document AS document
-    |FROM
-    |    Publication P
-    |    JOIN Document D ON D.document=P.publication
-    |    JOIN Author A   ON P.publication=A.document
-    |    JOIN Person Pe  ON Pe.person=A.person
-    |WHERE
-    |    NOT EXISTS (
-    |        SELECT *
-    |        FROM
-    |            Publication P2
-    |            JOIN Document D2 ON D2.document=P2.publication
-    |            JOIN Author A2   ON P2.publication=A2.document
-    |        WHERE
-    |            A.person=A2.person
-    |            AND D2.issued<D.issued
-    |    ) AND D.issued IS NOT NULL
+    """
+      |SELECT
+      |    D.issued   AS yr,
+      |    Pe.name    AS name,
+      |    D.document AS document
+      |FROM
+      |    Publication P
+      |    JOIN Document D ON D.document=P.publication
+      |    JOIN Author A   ON P.publication=A.document
+      |    JOIN Person Pe  ON Pe.person=A.person
+      |WHERE
+      |    NOT EXISTS (
+      |        SELECT *
+      |        FROM
+      |            Publication P2
+      |            JOIN Document D2 ON D2.document=P2.publication
+      |            JOIN Author A2   ON P2.publication=A2.document
+      |        WHERE
+      |            A.person=A2.person
+      |            AND D2.issued<D.issued
+      |    ) AND D.issued IS NOT NULL
   """.stripMargin
 
-
-
-  val q7=
+  val q7 =
 
     """
       |SELECT DISTINCT
@@ -179,10 +150,7 @@ val q6=
       |    )
     """.stripMargin
 
-
-
-
-  val q8=
+  val q8 =
     """
       |SELECT DISTINCT name
       |FROM (
@@ -216,13 +184,10 @@ val q6=
     """.stripMargin
 
 
-
-
   //Q9 NA
 
 
-
-  val q10=
+  val q10 =
     """
       |SELECT
       |    D.document   AS subject,
@@ -249,11 +214,9 @@ val q6=
     """.stripMargin
 
 
-
-
   //Q11     //OFFSET not supported by Spark-SQL
 
-  val q11=
+  val q11 =
     """
       | SELECT
       |    DSA.seeAlso
@@ -264,10 +227,4 @@ val q6=
       |ORDER BY DSA.seeAlso
       |LIMIT 10
     """.stripMargin
-
-
-
-
-
-
 }

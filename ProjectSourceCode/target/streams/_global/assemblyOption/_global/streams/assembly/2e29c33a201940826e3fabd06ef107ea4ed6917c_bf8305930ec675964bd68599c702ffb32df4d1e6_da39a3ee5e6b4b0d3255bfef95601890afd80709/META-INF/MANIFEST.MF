@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Implementation-Title: aircompressor
+Implementation-Version: 0.10
+Archiver-Version: Plexus Archiver
+Built-By: martint
+Specification-Title: aircompressor
+Implementation-Vendor-Id: io.airlift
+Build-Time: 2018-04-27T10:23:16-0700
+Git-Commit-Id: 7e230d91aff4d8bd5dbb2177e4595226b4edc2e8
+Created-By: Apache Maven 3.5.0
+Build-Jdk: 1.8.0_162
+Specification-Version: 0.10
+

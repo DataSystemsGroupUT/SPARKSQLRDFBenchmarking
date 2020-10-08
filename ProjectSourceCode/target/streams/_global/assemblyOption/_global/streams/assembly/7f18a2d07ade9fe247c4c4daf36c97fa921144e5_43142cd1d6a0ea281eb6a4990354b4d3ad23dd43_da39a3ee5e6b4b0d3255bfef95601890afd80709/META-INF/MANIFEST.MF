@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: Netty/All-in-One
+Implementation-Version: 4.1.17.Final
+Built-By: norman
+Implementation-Vendor-Id: io.netty
+Created-By: Apache Maven 3.5.2
+Build-Jdk: 1.8.0_152
+Implementation-URL: http://netty.io/netty-all/
+Implementation-Vendor: The Netty Project
+

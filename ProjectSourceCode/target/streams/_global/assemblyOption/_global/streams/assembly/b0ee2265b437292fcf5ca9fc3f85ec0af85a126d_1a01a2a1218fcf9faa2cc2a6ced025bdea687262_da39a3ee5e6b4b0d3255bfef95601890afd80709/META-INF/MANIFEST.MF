@@ -1,0 +1,31 @@
+Manifest-Version: 1.0
+Created-By: 1.5.0_16 (Apple Inc.)
+Import-Package: javax.xml.namespace,javax.xml.parsers,javax.xml.stream
+ ,javax.xml.stream.events,javax.xml.stream.util,javax.xml.transform,ja
+ vax.xml.transform.dom,javax.xml.transform.stream,org.codehaus.jettiso
+ n;version=1.1,org.codehaus.jettison.badgerfish;version=1.1,org.codeha
+ us.jettison.json;version=1.1,org.codehaus.jettison.mapped;version=1.1
+ ,org.codehaus.jettison.util;version=1.1,org.w3c.dom
+Include-Resource: src/main/resources
+Bnd-LastModified: 1240246251757
+Export-Package: org.codehaus.jettison.util;version=1.1,org.codehaus.je
+ ttison.mapped;uses:="org.codehaus.jettison.util,org.codehaus.jettison
+ ,org.codehaus.jettison.json,javax.xml.namespace,javax.xml.stream";ver
+ sion=1.1,org.codehaus.jettison;uses:="javax.xml.stream.events,org.cod
+ ehaus.jettison.json,javax.xml.namespace,org.w3c.dom,javax.xml.transfo
+ rm,javax.xml.transform.dom,org.codehaus.jettison.util,javax.xml.parse
+ rs,javax.xml.transform.stream,javax.xml.stream.util,javax.xml.stream"
+ ;version=1.1,org.codehaus.jettison.json;version=1.1,org.codehaus.jett
+ ison.badgerfish;uses:="org.codehaus.jettison.util,org.codehaus.jettis
+ on,org.codehaus.jettison.json,javax.xml.namespace,javax.xml.stream";v
+ ersion=1.1
+Bundle-Version: 1.1
+Bundle-Name: jettison
+Bundle-Description: A StAX implementation for JSON.
+Private-Package: !*
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: org.codehaus.jettison.jettison
+Implementation-Title: Jettison
+Tool: Bnd-0.0.160
+Implementation-Version: 1.1
+

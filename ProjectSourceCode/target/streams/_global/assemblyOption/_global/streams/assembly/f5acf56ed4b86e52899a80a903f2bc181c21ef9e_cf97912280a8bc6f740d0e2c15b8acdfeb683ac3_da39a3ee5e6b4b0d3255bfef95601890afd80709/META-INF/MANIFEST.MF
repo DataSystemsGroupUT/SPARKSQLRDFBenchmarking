@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Created-By: Apache Maven 3.5.3
+Built-By: lemire
+Build-Jdk: 11.0.1
+Class-Path: lib/shims-0.7.45.jar
+Multi-Release: true
+

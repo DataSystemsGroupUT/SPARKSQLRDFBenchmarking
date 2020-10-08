@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Implementation-Title: Arrow Memory
+Implementation-Version: 0.10.0
+Archiver-Version: Plexus Archiver
+Built-By: 
+Specification-Vendor: The Apache Software Foundation
+Specification-Title: Arrow Memory
+Implementation-Vendor-Id: org.apache.arrow
+url: http://arrow.apache.org/
+Implementation-Vendor: The Apache Software Foundation
+Extension-Name: org.apache.arrow
+Created-By: Apache Maven 3.5.2
+Build-Jdk: 1.8.0_172
+Specification-Version: 0.10
+Implementation-URL: http://arrow.apache.org/arrow-memory/
+

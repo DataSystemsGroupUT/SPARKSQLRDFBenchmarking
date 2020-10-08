@@ -1,0 +1,111 @@
+Manifest-Version: 1.0
+Bundle-Description: Janino is a super-small, super-fast Java compiler.
+Bundle-License: https://raw.githubusercontent.com/janino-compiler/jani
+ no/master/LICENSE
+Bundle-SymbolicName: org.codehaus.janino.commons-compiler;singleton:=t
+ rue
+Built-By: Arno
+Bnd-LastModified: 1535008548676
+Bundle-ManifestVersion: 2
+Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.6))"
+Tool: Bnd-2.4.1.201501161923
+Export-Package: org.codehaus.commons.compiler;version="3.0.9",org.code
+ haus.commons.compiler.samples;version="3.0.9"
+Bundle-Name: commons-compiler
+Bundle-Version: 3.0.9
+Created-By: Apache Maven Bundle Plugin
+Build-Jdk: 1.8.0_45
+
+Name: org/codehaus/commons/compiler/package-info.class
+SHA-256-Digest: 3XYptDyXMTFe+t37kLPNQp2yQWTSa3lK/67W/y8NWGM=
+
+Name: org/codehaus/commons/compiler/ICookable.class
+SHA-256-Digest: b5XjDkv35f+QGJEbhpFGwOyyN7wzSsMJXSS6EQ0KJWI=
+
+Name: org/codehaus/commons/compiler/samples/ScriptDemo.class
+SHA-256-Digest: kjDrW30ChJMFf5hFp8mwSbWDyy5QNsThjwUhEGOCahM=
+
+Name: org/codehaus/commons/compiler/Sandbox.class
+SHA-256-Digest: gotCPE1BY892/IH3+aqaeVX2/++i6J6Uk6L3e5KW6WM=
+
+Name: org/codehaus/commons/compiler/Sandbox$1.class
+SHA-256-Digest: YHjx8mhd0fZA8vEmDVRoS/GvkMdHICLI+WI/1h3Lpaw=
+
+Name: org/codehaus/commons/compiler/CompileException.class
+SHA-256-Digest: 2G+1vtk2dIi3HhFzvMJSQrjuHKJSRYoFGJjUo9YGDXQ=
+
+Name: org/codehaus/commons/compiler/WarningHandler.class
+SHA-256-Digest: +r7GQRDP+hqNjGKht9FfzrkaZHo4Nf+c3qpg/PEviR0=
+
+Name: org/codehaus/commons/compiler/CompilerFactoryFactory.class
+SHA-256-Digest: pkJ+ZnVQXNq4rvekJig3LBWD/GvfwhJDMJ4y9VJo8Dk=
+
+Name: org/codehaus/commons/compiler/AbstractCompilerFactory.class
+SHA-256-Digest: vR+slnPV5eGY+m4wCThl4nrL9EmGRuqVOTgYyzr01jE=
+
+Name: org/codehaus/commons/compiler/Cookable.class
+SHA-256-Digest: wCDqxIyX1x0wgcQy2ANcNq0zfVFsVY8EKS+5HlEDzzU=
+
+Name: org/codehaus/commons/nullanalysis/NotNull.class
+SHA-256-Digest: mEJu6//sdv9hL415HZhTzQVWdppBW6MBGnI+8rsadWw=
+
+Name: org/codehaus/commons/compiler/AbstractJavaSourceClassLoader$Prot
+ ectionDomainFactory.class
+SHA-256-Digest: 2O86F4SrEK5RcWsmMhoF8q6NkZKEVn1Ocxoj1PT1Y0M=
+
+Name: org/codehaus/commons/compiler/samples/package-info.class
+SHA-256-Digest: K9gaN4vCwPZCD0QPaSvxmwVKsSjQ/dPrH54W5CTMMPk=
+
+Name: org/codehaus/commons/compiler/ISimpleCompiler.class
+SHA-256-Digest: 0cBR/t4aRCaFDjqLDy3FyX/ha+g+AjZmzNsHQDWG7os=
+
+Name: org/codehaus/commons/compiler/IScriptEvaluator.class
+SHA-256-Digest: PB8bArR2EsKN1ISPaT2TZoz86tu1gFvlyfjK2X/6vbI=
+
+Name: META-INF/maven/org.codehaus.janino/commons-compiler/pom.properti
+ es
+SHA-256-Digest: iuRpvA0ci2PK4QBj0WWc+Tl24TOXXH8bhp6qiKS4/vE=
+
+Name: org/codehaus/commons/compiler/IClassBodyEvaluator.class
+SHA-256-Digest: FDNSG1q/l7JZYVCxZpMl+1Ioo6sGkgakEANZlp8xkwY=
+
+Name: org/codehaus/commons/nullanalysis/NotNullByDefault.class
+SHA-256-Digest: K2BuoJdtpqc/jVsq3zx+ShsSN/5ERxj3VzYx/h+xXeU=
+
+Name: org/codehaus/commons/compiler/LocatedException.class
+SHA-256-Digest: kBzCkgAPAiUFVKCuRmeHTiCSb3IF8F5wuQBnvGHzwj0=
+
+Name: org/codehaus/commons/compiler/samples/ClassBodyDemo.class
+SHA-256-Digest: zFYk+2g0DlnN8wJ8ZQLWog+IJfZ+cq+zU7lvp3un3Fs=
+
+Name: META-INF/maven/org.codehaus.janino/commons-compiler/pom.xml
+SHA-256-Digest: y/ZwLFWUr5T+6qF1qy4MP+scb/GRvJDAhBmZyR5ppWY=
+
+Name: org/codehaus/commons/compiler/samples/DemoBase.class
+SHA-256-Digest: ZgLtMbcMTy71eAkHrcL5tYmPKdw/hbrmqB9/QcvEoxE=
+
+Name: org/codehaus/commons/compiler/ICompilerFactory.class
+SHA-256-Digest: MUiC0ZIVmAHceEUww4T+ji+EHSM/o8QESsdFnQwNr9Q=
+
+Name: org/codehaus/commons/compiler/IExpressionEvaluator.class
+SHA-256-Digest: shOQNG+DGQKYFgN7Vu/JasoputD59fcMzoVi+yeNO90=
+
+Name: org/codehaus/commons/compiler/Location.class
+SHA-256-Digest: d10tou36Sxfm2M7JhKKCHF/Abo9D8I8iZHsSuLXxDD8=
+
+Name: org/codehaus/commons/nullanalysis/Nullable.class
+SHA-256-Digest: aHA9OXTb6JOhxblBUr0eFrk4G2fsAOfdCbYKwxJN6j4=
+
+Name: org/codehaus/commons/compiler/samples/ExpressionDemo.class
+SHA-256-Digest: nh03z7iCNycGgFq5H3XyPIJb3aH6DoaK38a5F/oxJM8=
+
+Name: org/codehaus/commons/compiler/AbstractJavaSourceClassLoader.clas
+ s
+SHA-256-Digest: NUuhU6cyENYlM8d9Y+oKM0wHdK+876QkbyLjQVuY1ZI=
+
+Name: org/codehaus/commons/compiler/samples/ShippingCost.class
+SHA-256-Digest: f8FA5LxdwHomQ53hbX5KHVDq06Flao3/N6NhA6hApJ8=
+
+Name: org/codehaus/commons/compiler/ErrorHandler.class
+SHA-256-Digest: jYJHiMwwZsDSc/3klBMNllC/EBI81zN685pTiS1qBs4=
+

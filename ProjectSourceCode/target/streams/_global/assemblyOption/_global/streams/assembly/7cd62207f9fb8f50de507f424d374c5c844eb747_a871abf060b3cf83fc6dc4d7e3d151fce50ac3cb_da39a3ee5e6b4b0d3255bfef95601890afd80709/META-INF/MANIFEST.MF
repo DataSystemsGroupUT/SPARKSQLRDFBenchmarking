@@ -1,0 +1,20 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1376468723922
+Build-Jdk: 1.7.0_25
+Built-By: elecharny
+Bundle-Description: Utilities shared across this top level project
+Bundle-DocURL: http://www.apache.org/
+Bundle-License: http://www.apache.org/licenses/LICENSE-2.0.txt
+Bundle-ManifestVersion: 2
+Bundle-Name: Apache Directory LDAP API Utilities
+Bundle-SymbolicName: org.apache.directory.api.util
+Bundle-Vendor: The Apache Software Foundation
+Bundle-Version: 1.0.0.M20
+Created-By: Apache Maven Bundle Plugin
+Export-Package: org.apache.directory.api.util;uses:="org.apache.director
+ y.api.i18n,javax.net.ssl,javax.net,javax.naming,org.slf4j";version="1.0
+ .0.M20",org.apache.directory.api.util.exception;uses:="org.apache.direc
+ tory.api.i18n";version="1.0.0.M20"
+Import-Package: javax.naming,javax.net,javax.net.ssl,org.apache.director
+ y.api.i18n;version="[1.0,2)",org.slf4j;version="[1.7,2)"
+Tool: Bnd-1.50.0

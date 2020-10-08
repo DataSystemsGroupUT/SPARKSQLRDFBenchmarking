@@ -1,0 +1,40 @@
+Manifest-Version: 1.0
+Export-Package: javolution.util;uses:="javolution.context,javax.realti
+ me,javolution.lang,javolution.xml,javolution.text",javolution.xml.str
+ eam;uses:="javolution.text,javax.realtime,javolution.xml.sax,javoluti
+ on.lang,javolution.util,javolution.context,javolution.io",javolution.
+ xml;uses:="javolution.util,javolution.text,javolution.lang,javolution
+ .xml.stream,javolution.xml.sax,javolution.context",javolution.io;uses
+ :="javolution.text,javolution.lang",javolution.text;uses:="javolution
+ .util,javolution.lang,javolution.context,javolution.xml,javolution.io
+ ,javax.realtime",javolution.testing;uses:="javolution.text,javolution
+ .lang,javolution.context,javolution.util",javolution.xml.sax;uses:="j
+ avolution.text,org.xml.sax,javolution.lang,javolution.xml.stream",jav
+ olution.lang;uses:="javolution.context,javolution.xml.stream,javoluti
+ on.xml,javolution.util,javolution.text",javolution.context;uses:="jav
+ olution.lang,javax.realtime,javolution.xml,javolution.util,javolution
+ .text,javolution.xml.stream",javolution.xml.ws;uses:="javolution.xml.
+ stream,javolution.xml,javolution.io,javolution.text",javax.realtime
+Built-By: Parents
+Tool: Bnd-0.0.357
+Bundle-Name: Javolution
+Created-By: Apache Maven Bundle Plugin
+Bundle-Vendor: Javolution
+Build-Jdk: 1.6.0_17
+Bundle-Version: 5.5.1
+Bnd-LastModified: 1272957625812
+Bundle-ManifestVersion: 2
+Bundle-License: http://javolution.org/LICENSE.txt
+Bundle-Description: Javolution - Java Solution for Real-Time and Embed
+ ded Systems.        This project uses template classes to generates j
+ ava code for various versions        of the Java run-time (e.g. J2ME,
+  1.4, GCJ, 1.5). The default maven compilation        builds OSGI bun
+ dle for Java 1.5+ (parameterized classes).        For others targets 
+ the ant script should be used directly (e.g. "ant j2me").
+Bundle-DocURL: http://javolution.org
+Bundle-SymbolicName: javolution
+Import-Package: javax.realtime,javolution.context,javolution.io,javolu
+ tion.lang,javolution.testing,javolution.text,javolution.util,javoluti
+ on.xml,javolution.xml.sax,javolution.xml.stream,javolution.xml.ws,org
+ .xml.sax
+

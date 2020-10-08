@@ -3,8 +3,8 @@ name := "RDFBenchmarkingProject"
 version := "0.1"
 
 scalaVersion := "2.12.8"
-mainClass in (Compile, run) := Some("ee.ut.cs.bigdata.sp2bench.RDFBenchMain")
-//Compile/mainClass := Some("RDFBenchMain")
+//mainClass in (Compile, run) := Some("ee.ut.cs.bigdata.sp2bench.RDFBenchMain")
+Compile/mainClass := Some("RDFBenchMain")
 
 libraryDependencies += "org.apache.spark" %% "spark-core" % "2.4.2"
 libraryDependencies += "org.apache.spark" %% "spark-sql" % "2.4.2"

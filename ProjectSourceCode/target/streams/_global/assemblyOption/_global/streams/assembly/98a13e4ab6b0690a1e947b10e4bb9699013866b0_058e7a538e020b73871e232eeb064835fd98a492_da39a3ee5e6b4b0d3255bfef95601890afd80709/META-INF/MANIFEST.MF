@@ -1,0 +1,34 @@
+Manifest-Version: 1.0
+Ant-Version: Apache Ant 1.6.5
+Created-By: 20.2-b06 (Sun Microsystems Inc.)
+Built-By: MADAMS
+Maven-Version: 1.1
+Specification-Title: Java Data Objects
+Specification-Version: 3.0
+Specification-Vendor: Oracle, Inc.
+Implementation-Title: javax.jdo
+Implementation-Version: 3.0.1
+Implementation-Vendor: Apache Software Foundation
+Bundle-ManifestVersion: 2
+Bundle-Name: Java Data Objects
+Bundle-Vendor: Apache Software Foundation
+Bundle-License: http://www.apache.org/licenses/LICENSE-2.0.html
+Bundle-SymbolicName: javax.jdo
+Bundle-Version: 3.0.1
+Export-Package: javax.jdo;version="3.0.1",javax.jdo.annotations;versio
+ n="3.0.1",javax.jdo.datastore;version="3.0.1",javax.jdo.identity;vers
+ ion="3.0.1",javax.jdo.listener;version="3.0.1",javax.jdo.spi;version=
+ "3.0.1",javax.jdo.metadata;version="3.0.1"
+Import-Package: javax.rmi,javax.xml.parsers,org.w3c.dom,org.xml.sax,ja
+ vax.transaction;resolution:=optional,javax.persistence;version="[1.0.
+ 0,2.0.0)";resolution:="optional",javax.naming;resolution:=optional
+
+Name: javax/jdo
+Extension-name: javax.jdo
+Specification-Title: Java Data Objects (JDO) API
+Specification-Vendor: Apache Software Foundation
+Specification-Version: 3.0.1
+Implementation-Title: javax.jdo
+Implementation-Vendor: Apache Software Foundation
+Implementation-Version: 3.0.1
+

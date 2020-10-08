@@ -1,2 +1,2 @@
-[0m[[0m[0mdebug[0m] [0m[0mAcquiring lock on file /home/jc/Desktop/mnt/ut.cluster.1.master/hadoop/RDFBenchMarking/ProjectSourceCode/project/target/.sbt-compilation-infos/projectsourcecode-compile/.sbt-idea-lock ...[0m
-[0m[[0m[0mdebug[0m] [0m[0mReleasing lock on file /home/jc/Desktop/mnt/ut.cluster.1.master/hadoop/RDFBenchMarking/ProjectSourceCode/project/target/.sbt-compilation-infos/projectsourcecode-compile/.sbt-idea-lock.[0m
+[0m[[0m[33mwarn[0m] [0m[0mthere were 9 feature warnings; re-run with -feature for details[0m
+[0m[[0m[33mwarn[0m] [0m[0mone warning found[0m

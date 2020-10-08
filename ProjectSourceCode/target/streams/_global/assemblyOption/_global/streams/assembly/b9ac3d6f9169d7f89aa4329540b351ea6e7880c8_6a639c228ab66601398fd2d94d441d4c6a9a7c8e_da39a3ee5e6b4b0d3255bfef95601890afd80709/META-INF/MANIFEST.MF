@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Implementation-Title: ORC Shims
+Implementation-Version: 1.5.5
+Archiver-Version: Plexus Archiver
+Built-By: omalley
+Specification-Vendor: The Apache Software Foundation
+Specification-Title: ORC Shims
+Implementation-Vendor-Id: org.apache.orc
+Implementation-Vendor: The Apache Software Foundation
+Created-By: Apache Maven 3.6.0
+Build-Jdk: 1.8.0_202
+Specification-Version: 1.5
+Implementation-URL: http://orc.apache.org/orc-shims
+

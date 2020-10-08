@@ -1,0 +1,15 @@
+// ------------------------------------------------------------------
+// Transitive dependencies of this project determined from the
+// maven pom organized by organization.
+// ------------------------------------------------------------------
+
+Arrow Format
+
+
+From: 'an unknown organization'
+  - FlatBuffers Java API (https://github.com/vy/flatbuffers) com.vlkan:flatbuffers:jar:1.2.0-3f79e055
+    License: Apache License (v2.0)  (http://www.apache.org/licenses/LICENSE-2.0)
+
+
+
+

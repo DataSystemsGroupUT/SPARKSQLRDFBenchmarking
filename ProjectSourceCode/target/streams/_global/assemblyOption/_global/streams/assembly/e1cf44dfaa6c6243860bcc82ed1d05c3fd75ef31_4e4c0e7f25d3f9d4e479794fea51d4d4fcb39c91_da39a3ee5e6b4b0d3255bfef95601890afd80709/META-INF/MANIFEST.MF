@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Implementation-Title: chill
+Implementation-Version: 0.9.3
+Specification-Vendor: com.twitter
+Specification-Title: chill
+Implementation-Vendor-Id: com.twitter
+Specification-Version: 0.9.3
+Implementation-Vendor: com.twitter
+

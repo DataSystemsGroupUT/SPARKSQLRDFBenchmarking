@@ -1,0 +1,20 @@
+Manifest-Version: 1.0
+Ant-Version: Apache Ant 1.9.6
+Bnd-LastModified: 1501735758885
+Bundle-ManifestVersion: 2
+Bundle-Name: lz4-java
+Bundle-SymbolicName: lz4-java
+Bundle-Version: 0
+Created-By: 1.7.0_95 (Oracle Corporation)
+DSTAMP: 20170802
+Export-Package: net.jpountz.lz4;uses:="net.jpountz.util,net.jpountz.xxha
+ sh",net.jpountz.util;uses:="sun.misc",net.jpountz.util.darwin.x86_64,ne
+ t.jpountz.util.linux.aarch64,net.jpountz.util.linux.amd64,net.jpountz.u
+ til.linux.i386,net.jpountz.util.linux.ppc64le,net.jpountz.util.linux.s3
+ 90x,net.jpountz.util.win32.amd64,net.jpountz.xxhash;uses:="net.jpountz.
+ util"
+Import-Package: sun.misc;resolution:=optional
+Originally-Created-By: 1.7.0_95-b00 (Oracle Corporation)
+TODAY: August 2 2017
+Tool: Bnd-1.50.0
+TSTAMP: 2249

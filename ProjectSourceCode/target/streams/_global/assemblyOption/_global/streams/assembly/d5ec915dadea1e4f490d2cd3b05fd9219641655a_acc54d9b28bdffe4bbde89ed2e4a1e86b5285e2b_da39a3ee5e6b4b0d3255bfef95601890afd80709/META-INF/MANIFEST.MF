@@ -1,0 +1,19 @@
+Manifest-Version: 1.0
+Implementation-Title: HttpComponents Apache HttpCore
+Implementation-Version: 4.4.10
+Specification-Vendor: The Apache Software Foundation
+Built-By: oleg
+Created-By: Apache Maven 3.3.9
+Implementation-URL: http://hc.apache.org/httpcomponents-core-ga
+url: http://hc.apache.org/httpcomponents-core-ga
+X-Compile-Source-JDK: 1.6
+Implementation-Vendor: The Apache Software Foundation
+Automatic-Module-Name: org.apache.httpcomponents.httpcore
+Implementation-Vendor-Id: org.apache
+Build-Jdk: 1.7.0_75
+Specification-Title: HttpComponents Apache HttpCore
+Implementation-Build: ${scmBranch}@r${buildNumber}; 2018-06-26 18:36:0
+ 3+0000
+Specification-Version: 4.4.10
+X-Compile-Target-JDK: 1.6
+

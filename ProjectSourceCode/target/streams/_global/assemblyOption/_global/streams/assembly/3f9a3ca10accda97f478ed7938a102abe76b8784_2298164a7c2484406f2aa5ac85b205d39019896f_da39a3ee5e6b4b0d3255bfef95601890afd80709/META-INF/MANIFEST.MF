@@ -1,0 +1,45 @@
+Manifest-Version: 1.0
+Archiver-Version: Plexus Archiver
+Created-By: Apache Maven Bundle Plugin
+Built-By: sebb
+Build-Jdk: 1.6.0_29
+Implementation-Build: tags/NET_3_1_RC2@r1244108; 2012-02-14 17:45:12+0
+ 000
+Implementation-Title: Commons Net
+Implementation-Vendor: The Apache Software Foundation
+Implementation-Vendor-Id: org.apache
+Implementation-Version: 3.1
+Specification-Title: Commons Net
+Specification-Vendor: The Apache Software Foundation
+Specification-Version: 3.1
+X-Compile-Source-JDK: 1.5
+X-Compile-Target-JDK: 1.5
+Export-Package: org.apache.commons.net.finger;version="3.1",org.apache
+ .commons.net.imap;version="3.1",org.apache.commons.net.echo;version="
+ 3.1",org.apache.commons.net.ntp;version="3.1",org.apache.commons.net.
+ io;version="3.1",org.apache.commons.net.discard;version="3.1",org.apa
+ che.commons.net.ftp;version="3.1",org.apache.commons.net.smtp;version
+ ="3.1",org.apache.commons.net;version="3.1",org.apache.commons.net.po
+ p3;version="3.1",org.apache.commons.net.util;version="3.1",org.apache
+ .commons.net.telnet;version="3.1",org.apache.commons.net.whois;versio
+ n="3.1",org.apache.commons.net.chargen;version="3.1",org.apache.commo
+ ns.net.nntp;version="3.1",org.apache.commons.net.bsd;version="3.1",or
+ g.apache.commons.net.ftp.parser;version="3.1",org.apache.commons.net.
+ daytime;version="3.1",org.apache.commons.net.time;version="3.1",org.a
+ pache.commons.net.tftp;version="3.1"
+Tool: Bnd-1.43.0
+Bundle-Name: Commons Net
+Bundle-Vendor: The Apache Software Foundation
+Bundle-Version: 3.1.0
+Bnd-LastModified: 1329241523937
+Bundle-ManifestVersion: 2
+Bundle-License: http://www.apache.org/licenses/LICENSE-2.0.txt
+Bundle-Description: Apache Commons Net library contains a collection o
+ f network utilities and protocol implementations.Supported protocols 
+ include: Echo, Finger, FTP, NNTP, NTP, POP3(S), SMTP(S), Telnet, Whois
+Import-Package: javax.crypto,javax.crypto.spec,javax.net,javax.net.ssl
+Bundle-DocURL: http://commons.apache.org/net/
+Include-Resource: META-INF/LICENSE.txt=LICENSE.txt,META-INF/NOTICE.txt
+ =NOTICE.txt
+Bundle-SymbolicName: org.apache.commons.net
+

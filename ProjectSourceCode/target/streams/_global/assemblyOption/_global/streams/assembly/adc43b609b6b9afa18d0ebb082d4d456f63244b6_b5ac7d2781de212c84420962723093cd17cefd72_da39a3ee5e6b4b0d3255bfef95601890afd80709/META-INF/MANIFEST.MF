@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Implementation-Vendor: The Apache Software Foundation
+Implementation-Title: Apache Parquet Hadoop Bundle (Incubating)
+git-SHA-1: 6aa21f8776625b5fa6b18059cfebe7549f2e00cb
+Implementation-Version: 1.6.0
+Implementation-Vendor-Id: com.twitter
+Built-By: alexlevenson
+Build-Jdk: 1.7.0_45
+Specification-Vendor: The Apache Software Foundation
+Specification-Title: Apache Parquet Hadoop Bundle (Incubating)
+Created-By: Apache Maven 3.2.5
+Specification-Version: 1.6.0
+Archiver-Version: Plexus Archiver
+

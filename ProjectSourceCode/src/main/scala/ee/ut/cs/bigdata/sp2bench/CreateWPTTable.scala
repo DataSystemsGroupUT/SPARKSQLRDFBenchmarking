@@ -26,14 +26,14 @@ object CreateWPTTable {
 
     import spark.implicits._
     spark.conf.set("spark.sql.crossJoin.enabled", "true")
-        
-    val ds=args(0)		 		// value = {"100K", "100M", "500M, or "1B"} 
-    val path=s"hdfs://172.17.77.48:9000/user/hadoop/RDFBench/SP2B/$ds"
-                     
+
+    val ds = args(0) // value = {"100K", "100M", "500M, or "1B"}
+    val path = s"hdfs://172.17.77.48:9000/user/hadoop/RDFBench/SP2B/$ds"
+
     //read tables from HDFS
     val RDFDF = spark.read.format("csv").option("header", "true").option("inferSchema", "true").load(s"$path/CSV/ST/SingleStmtTable.csv").toDF()
     RDFDF.createOrReplaceTempView("triples")
-    println("Table is read")       
+    println("Table is read")
 
     var wptTable = spark.sql(
       """
@@ -248,15 +248,13 @@ object CreateWPTTable {
         |
       """.stripMargin)
 
- 
     wptTable.write.format("csv").option("header", "true").save(s"$path/CSV/WPT/" + "WidePropertyTable.csv")
-    println("Saved CSV WPT") 
-    wptTable.write.parquet(s"$path/Parquet/WPT/"+ "WidePropertyTable.parquet")
-    println("Saved Parquet WPT") 
+    println("Saved CSV WPT")
+    wptTable.write.parquet(s"$path/Parquet/WPT/" + "WidePropertyTable.parquet")
+    println("Saved Parquet WPT")
     wptTable.write.orc(s"$path/ORC/WPT/" + "WidePropertyTable.orc")
-    println("Saved ORC WPT") 
+    println("Saved ORC WPT")
     wptTable.write.format("avro").save(s"$path/Avro/WPT/" + "WidePropertyTable.avro")
-    println("Saved Avro WPT") 
-
+    println("Saved Avro WPT")
   }
-} 
+}

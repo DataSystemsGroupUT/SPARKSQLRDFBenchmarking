@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ScalaCompilerConfiguration">
-    <profile name="sbt 1" modules="RDFBenchmarkingProject,rdfbenchamrkingproject-master_5757" />
+    <profile name="sbt 1" modules="rdfbenchamrkingproject-master_5757">
+      <option name="postfixOps" value="true" />
+    </profile>
+    <profile name="sbt 2" modules="RDFBenchmarkingProject" />
   </component>
 </project>

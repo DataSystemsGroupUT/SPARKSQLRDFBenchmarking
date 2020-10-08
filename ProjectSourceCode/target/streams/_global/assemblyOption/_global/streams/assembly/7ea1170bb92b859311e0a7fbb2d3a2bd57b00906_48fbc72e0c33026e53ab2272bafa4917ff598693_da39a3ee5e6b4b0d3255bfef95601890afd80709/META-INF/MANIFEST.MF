@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Implementation-Vendor: The Apache Software Foundation
+Implementation-Title: Calcite Core
+Implementation-Version: 1.2.0-incubating
+Implementation-Vendor-Id: org.apache.calcite
+Built-By: jhyde
+Build-Jdk: 1.7.0_21
+Specification-Vendor: The Apache Software Foundation
+Specification-Title: Calcite Core
+Created-By: Apache Maven 3.2.1
+Specification-Version: 1.2.0-incubating
+Archiver-Version: Plexus Archiver
+

@@ -1,0 +1,42 @@
+Manifest-Version: 1.0
+Export-Package: org.apache.commons.collections;version="3.2.2",org.apa
+ che.commons.collections.bag;version="3.2.2",org.apache.commons.collec
+ tions.bidimap;version="3.2.2",org.apache.commons.collections.buffer;v
+ ersion="3.2.2",org.apache.commons.collections.collection;version="3.2
+ .2",org.apache.commons.collections.comparators;version="3.2.2",org.ap
+ ache.commons.collections.functors;version="3.2.2",org.apache.commons.
+ collections.iterators;version="3.2.2",org.apache.commons.collections.
+ keyvalue;version="3.2.2",org.apache.commons.collections.list;version=
+ "3.2.2",org.apache.commons.collections.map;version="3.2.2",org.apache
+ .commons.collections.set;version="3.2.2"
+Implementation-Title: Apache Commons Collections
+Built-By: tn
+Tool: Bnd-2.3.0.201405100607
+Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.3))"
+Implementation-Vendor: The Apache Software Foundation
+Implementation-Vendor-Id: org.apache
+Specification-Title: Apache Commons Collections
+Bundle-License: http://www.apache.org/licenses/LICENSE-2.0.txt
+Bundle-SymbolicName: org.apache.commons.collections
+X-Compile-Target-JDK: 1.3
+Implementation-Version: 3.2.2
+Specification-Vendor: The Apache Software Foundation
+Bundle-Name: Apache Commons Collections
+Created-By: Apache Maven Bundle Plugin
+Implementation-URL: http://commons.apache.org/collections/
+X-Compile-Source-JDK: 1.3
+Bundle-Vendor: The Apache Software Foundation
+Build-Jdk: 1.7.0_79
+Bundle-Version: 3.2.2
+Bnd-LastModified: 1447369808027
+Bundle-ManifestVersion: 2
+Bundle-Description: Types that extend and augment the Java Collections
+  Framework.
+Bundle-DocURL: http://commons.apache.org/collections/
+Include-Resource: META-INF/NOTICE.txt=NOTICE.txt,META-INF/LICENSE.txt=
+ LICENSE.txt
+Specification-Version: 3.2.2
+Implementation-Build: tags/COLLECTIONS_3_2_2_RC3@r1714131; 2015-11-13 
+ 00:09:45+0100
+Archiver-Version: Plexus Archiver
+

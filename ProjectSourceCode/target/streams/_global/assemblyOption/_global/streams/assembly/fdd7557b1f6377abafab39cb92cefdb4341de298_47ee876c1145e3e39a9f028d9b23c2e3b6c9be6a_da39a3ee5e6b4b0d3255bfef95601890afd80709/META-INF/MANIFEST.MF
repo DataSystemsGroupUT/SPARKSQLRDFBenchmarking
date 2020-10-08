@@ -1,0 +1,35 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1486236614512
+Build-Jdk: 1.7.0_79
+Built-By: tatu
+Bundle-Description: AnnotationIntrospectors that use Paranamer (http://p
+ aranamer.codehaus.org)to introspect names of constructor (and factory m
+ ethod) parameters.
+Bundle-DocURL: https://github.com/FasterXML/jackson-modules-base
+Bundle-License: http://www.apache.org/licenses/LICENSE-2.0.txt
+Bundle-ManifestVersion: 2
+Bundle-Name: Jackson module: Paranamer
+Bundle-SymbolicName: com.fasterxml.jackson.module.jackson-module-paranam
+ er
+Bundle-Vendor: FasterXML
+Bundle-Version: 2.7.9
+Created-By: Apache Maven Bundle Plugin
+Export-Package: com.fasterxml.jackson.module.paranamer;version="2.7.9"
+Implementation-Build-Date: 2017-02-04 19:29:28+0000
+Implementation-Title: Jackson module: Paranamer
+Implementation-Vendor: FasterXML
+Implementation-Vendor-Id: com.fasterxml.jackson.module
+Implementation-Version: 2.7.9
+Import-Package: com.fasterxml.jackson.core;version="[2.7,3)",com.fasterx
+ ml.jackson.core.util;version="[2.7,3)",com.fasterxml.jackson.databind;v
+ ersion="[2.7,3)",com.fasterxml.jackson.databind.introspect;version="[2.
+ 7,3)",com.fasterxml.jackson.databind.module;version="[2.7,3)",javax.inj
+ ect
+Private-Package: com.thoughtworks.paranamer
+Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.7))"
+Specification-Title: Jackson module: Paranamer
+Specification-Vendor: FasterXML
+Specification-Version: 2.7.9
+Tool: Bnd-2.3.0.201405100607
+X-Compile-Source-JDK: 1.7
+X-Compile-Target-JDK: 1.7

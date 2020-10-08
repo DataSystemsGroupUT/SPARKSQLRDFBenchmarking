@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Implementation-Title: json4s-core
+Implementation-Version: 3.5.3
+Built-By: user
+Specification-Vendor: org.json4s
+Specification-Title: json4s-core
+Implementation-Vendor-Id: org.json4s
+Specification-Version: 3.5.3
+Implementation-URL: https://github.com/json4s/json4s
+Created-By: Simple Build Tool
+Build-Jdk: 1.8.0_131
+Implementation-Vendor: org.json4s
+

@@ -1,0 +1,48 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1494183151437
+Build-Jdk: 1.7.0_79
+Built-By: sacharya
+Bundle-Description: Avro core components
+Bundle-DocURL: http://www.apache.org/
+Bundle-License: http://www.apache.org/licenses/LICENSE-2.0.txt
+Bundle-ManifestVersion: 2
+Bundle-Name: Apache Avro
+Bundle-SymbolicName: avro
+Bundle-Vendor: The Apache Software Foundation
+Bundle-Version: 1.8.2
+Created-By: Apache Maven Bundle Plugin
+Export-Package: org.apache.avro;version="1.8.2";uses:="org.apache.avro.g
+ eneric,org.codehaus.jackson",org.apache.avro.data;version="1.8.2";uses:
+ ="org.apache.avro,org.apache.avro.generic,org.apache.avro.io,org.codeha
+ us.jackson,org.joda.time",org.apache.avro.file;version="1.8.2";uses:="o
+ rg.apache.avro,org.apache.avro.io",org.apache.avro.generic;version="1.8
+ .2";uses:="org.apache.avro,org.apache.avro.data,org.apache.avro.io",org
+ .apache.avro.io;version="1.8.2";uses:="org.apache.avro,org.apache.avro.
+ io.parsing,org.apache.avro.util,org.codehaus.jackson",org.apache.avro.i
+ o.parsing;version="1.8.2";uses:="org.apache.avro,org.apache.avro.io,org
+ .codehaus.jackson",org.apache.avro.message;version="1.8.2";uses:="org.a
+ pache.avro,org.apache.avro.generic",org.apache.avro.reflect;version="1.
+ 8.2";uses:="org.apache.avro,org.apache.avro.io,org.apache.avro.specific
+ ",org.apache.avro.specific;version="1.8.2";uses:="org.apache.avro,org.a
+ pache.avro.data,org.apache.avro.generic,org.apache.avro.io",org.apache.
+ avro.util;version="1.8.2",org.apache.avro.util.internal;version="1.8.2"
+ ;uses:="org.apache.avro,org.codehaus.jackson"
+Implementation-Title: Apache Avro
+Implementation-Vendor: The Apache Software Foundation
+Implementation-Vendor-Id: org.apache.avro
+Implementation-Version: 1.8.2
+Import-Package: com.thoughtworks.paranamer;version="[2.7,3)",org.codehau
+ s.jackson;version="[1.9,2)",org.codehaus.jackson.io;version="[1.9,2)",o
+ rg.codehaus.jackson.map;version="[1.9,2)",org.codehaus.jackson.node;ver
+ sion="[1.9,2)",org.codehaus.jackson.util;version="[1.9,2)",org.xerial.s
+ nappy;resolution:=optional;version="[1.1,2)",com.google.common.cache,co
+ m.google.common.collect,com.google.common.primitives,org.apache.commons
+ .compress.compressors.bzip2;version="[1.8,2)",org.apache.commons.compre
+ ss.compressors.xz;version="[1.8,2)",org.apache.commons.compress.utils;v
+ ersion="[1.8,2)",org.joda.time;version="[2.7,3)";resolution:=optional,o
+ rg.slf4j;version="[1.7,2)",sun.misc
+Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.6))"
+Specification-Title: Apache Avro
+Specification-Vendor: The Apache Software Foundation
+Specification-Version: 1.8.2
+Tool: Bnd-2.3.0.201405100607

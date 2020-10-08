@@ -1,0 +1,27 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1382528906863
+Build-Jdk: 1.7.0_45
+Built-By: wwadge
+Bundle-Description: Lightweight connection pool.
+Bundle-DocURL: http://jolbox.com
+Bundle-License: http://www.apache.org/licenses/LICENSE-2.0.html
+Bundle-ManifestVersion: 2
+Bundle-Name: BoneCP :: Core Library
+Bundle-SymbolicName: com.jolbox.bonecp
+Bundle-Vendor: JolBox
+Bundle-Version: 0.8.0.RELEASE
+Created-By: Apache Maven Bundle Plugin
+DynamicImport-Package: *
+Export-Package: com.jolbox.bonecp;uses:="com.jolbox.bonecp.hooks,com.goo
+ gle.common.util.concurrent,com.google.common.base,com.jolbox.bonecp.pro
+ xy,javax.management,org.slf4j,javax.sql,javax.xml.parsers,org.w3c.dom,c
+ om.google.common.cache,javax.naming,javax.naming.spi,com.google.common.
+ collect";version="0.8.0.RELEASE",com.jolbox.bonecp.hooks;uses:="com.jol
+ box.bonecp,org.slf4j";version="0.8.0.RELEASE",com.jolbox.bonecp.proxy;v
+ ersion="0.8.0.RELEASE"
+Import-Package: com.google.common.base;version="[15.0,16)",com.google.co
+ mmon.cache;version="[15.0,16)",com.google.common.collect;version="[15.0
+ ,16)",com.google.common.util.concurrent;version="[15.0,16)",javax.manag
+ ement,javax.naming,javax.naming.spi,javax.sql,javax.xml.parsers,org.slf
+ 4j;version="[1.7,2)",org.w3c.dom
+Tool: Bnd-1.50.0

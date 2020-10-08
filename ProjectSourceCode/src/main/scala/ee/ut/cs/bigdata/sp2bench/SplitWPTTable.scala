@@ -7,10 +7,8 @@ import org.apache.spark.sql.SparkSession
 import org.apache.spark.sql.{Column, SaveMode, SparkSession}
 import org.apache.spark.{SparkConf, SparkContext}
 
-
 object SplitWPTTable {
   def main(args: Array[String]): Unit = {
-
     val conf = new SparkConf()
     Logger.getLogger("org").setLevel(Level.OFF)
     Logger.getLogger("akka").setLevel(Level.OFF)
@@ -24,13 +22,11 @@ object SplitWPTTable {
     println("Spark Session is created!")
 
     import spark.implicits._
-    val ds=args(0)				//value = {"100M", "500M, or "1B"}
-
-
-    val path=s"hdfs://172.17.77.48:9000/user/hadoop/RDFBench/SP2B/$ds/WPT"
+    val ds = args(0) //value = {"100M", "500M, or "1B"}
+    val path = s"hdfs://172.17.77.48:9000/user/hadoop/RDFBench/SP2B/$ds/WPT"
 
     //read tables from HDFS
-    val RDFDFWPT= spark.read.format("csv").option("header", "true").option("inferSchema", "true").load(s"$path/CSV/WidePropertyTable.csv").toDF()
+    val RDFDFWPT = spark.read.format("csv").option("header", "true").option("inferSchema", "true").load(s"$path/CSV/WidePropertyTable.csv").toDF()
     println("WPT table is read!")
 
     val wptType = RDFDFWPT.select("Subject", "type")
@@ -55,11 +51,12 @@ object SplitWPTTable {
     val wptEditor = RDFDFWPT.select("Subject", "editor")
     val wptPublisher = RDFDFWPT.select("Subject", "publisher")
     val wptReferences = RDFDFWPT.select("Subject", "references")
-    val wptCdrom = RDFDFWPT.select("Subject", "cdrom") 
+    val wptCdrom = RDFDFWPT.select("Subject", "cdrom")
+    println("All selected!")
 
     //remove WPT from path for 100M
-    wptType.write.format("csv").option("header", "true").mode(SaveMode.Overwrite).save(s"$path/CSV/WidePropertyTable" + "Type" + ".csv")  
-    wptName.write.format("csv").option("header", "true").mode(SaveMode.Overwrite).save(s"$path/CSV/WidePropertyTable" + "Name" + ".csv") 
+    wptType.write.format("csv").option("header", "true").mode(SaveMode.Overwrite).save(s"$path/CSV/WidePropertyTable" + "Type" + ".csv")
+    wptName.write.format("csv").option("header", "true").mode(SaveMode.Overwrite).save(s"$path/CSV/WidePropertyTable" + "Name" + ".csv")
     wptTitle.write.format("csv").option("header", "true").mode(SaveMode.Overwrite).save(s"$path/CSV/WidePropertyTable" + "Title" + ".csv")
     wptIssued.write.format("csv").option("header", "true").mode(SaveMode.Overwrite).save(s"$path/CSV/WidePropertyTable" + "Issued" + ".csv")
     wptCreator.write.format("csv").option("header", "true").mode(SaveMode.Overwrite).save(s"$path/CSV/WidePropertyTable" + "Creator" + ".csv")
@@ -83,9 +80,8 @@ object SplitWPTTable {
     wptCdrom.write.format("csv").option("header", "true").mode(SaveMode.Overwrite).save(s"$path/CSV/WidePropertyTable" + "Cdrom" + ".csv")
     println("CSV WPT tables saved!")
 
-
-    wptType.write.parquet(s"$path/Parquet/WidePropertyTable" + "Type" + ".parquet")  
-    wptName.write.parquet(s"$path/Parquet/WidePropertyTable" + "Name" + ".parquet") 
+    wptType.write.parquet(s"$path/Parquet/WidePropertyTable" + "Type" + ".parquet")
+    wptName.write.parquet(s"$path/Parquet/WidePropertyTable" + "Name" + ".parquet")
     wptTitle.write.parquet(s"$path/Parquet/WidePropertyTable" + "Title" + ".parquet")
     wptIssued.write.parquet(s"$path/Parquet/WidePropertyTable" + "Issued" + ".parquet")
     wptCreator.write.parquet(s"$path/Parquet/WidePropertyTable" + "Creator" + ".parquet")
@@ -99,7 +95,7 @@ object SplitWPTTable {
     wptSeries.write.parquet(s"$path/Parquet/WidePropertyTable" + "Series" + ".parquet")
     wptNumber.write.parquet(s"$path/Parquet/WidePropertyTable" + "Number" + ".parquet")
     wptNote.write.parquet(s"$path/Parquet/WidePropertyTable" + "Note" + ".parquet")
-    wptVolume .write.parquet(s"$path/Parquet/WidePropertyTable" + "Volume" + ".parquet")
+    wptVolume.write.parquet(s"$path/Parquet/WidePropertyTable" + "Volume" + ".parquet")
     wptSubClassOf.write.parquet(s"$path/Parquet/WidePropertyTable" + "SubClassOf" + ".parquet")
     wptMonth.write.parquet(s"$path/Parquet/WidePropertyTable" + "Month" + ".parquet")
     wptIsbn.write.parquet(s"$path/Parquet/WidePropertyTable" + "Isbn" + ".parquet")
@@ -109,8 +105,8 @@ object SplitWPTTable {
     wptCdrom.write.parquet(s"$path/Parquet/WidePropertyTable" + "Cdrom" + ".parquet")
     println("Parquet WPT tables saved!")
 
-    wptType.write.orc(s"$path/ORC/WidePropertyTable" + "Type" + ".orc")  
-    wptName.write.orc(s"$path/ORC/WidePropertyTable" + "Name" + ".orc") 
+    wptType.write.orc(s"$path/ORC/WidePropertyTable" + "Type" + ".orc")
+    wptName.write.orc(s"$path/ORC/WidePropertyTable" + "Name" + ".orc")
     wptTitle.write.orc(s"$path/ORC/WidePropertyTable" + "Title" + ".orc")
     wptIssued.write.orc(s"$path/ORC/WidePropertyTable" + "Issued" + ".orc")
     wptCreator.write.orc(s"$path/ORC/WidePropertyTable" + "Creator" + ".orc")
@@ -124,7 +120,7 @@ object SplitWPTTable {
     wptSeries.write.orc(s"$path/ORC/WidePropertyTable" + "Series" + ".orc")
     wptNumber.write.orc(s"$path/ORC/WidePropertyTable" + "Number" + ".orc")
     wptNote.write.orc(s"$path/ORC/WidePropertyTable" + "Note" + ".orc")
-    wptVolume .write.orc(s"$path/ORC/WidePropertyTable" + "Volume" + ".orc")
+    wptVolume.write.orc(s"$path/ORC/WidePropertyTable" + "Volume" + ".orc")
     wptSubClassOf.write.orc(s"$path/ORC/WidePropertyTable" + "SubClassOf" + ".orc")
     wptMonth.write.orc(s"$path/ORC/WidePropertyTable" + "Month" + ".orc")
     wptIsbn.write.orc(s"$path/ORC/WidePropertyTable" + "Isbn" + ".orc")
@@ -134,8 +130,8 @@ object SplitWPTTable {
     wptCdrom.write.orc(s"$path/ORC/WidePropertyTable" + "Cdrom" + ".orc")
     println("ORC WPT tables saved!")
 
-    wptType.write.format("avro").save(s"$path/Avro/WidePropertyTable" + "Type" + ".avro")  
-    wptName.write.format("avro").save(s"$path/Avro/WidePropertyTable" + "Name" + ".avro") 
+    wptType.write.format("avro").save(s"$path/Avro/WidePropertyTable" + "Type" + ".avro")
+    wptName.write.format("avro").save(s"$path/Avro/WidePropertyTable" + "Name" + ".avro")
     wptTitle.write.format("avro").save(s"$path/Avro/WidePropertyTable" + "Title" + ".avro")
     wptIssued.write.format("avro").save(s"$path/Avro/WidePropertyTable" + "Issued" + ".avro")
     wptCreator.write.format("avro").save(s"$path/Avro/WidePropertyTable" + "Creator" + ".avro")
@@ -149,7 +145,7 @@ object SplitWPTTable {
     wptSeries.write.format("avro").save(s"$path/Avro/WidePropertyTable" + "Series" + ".avro")
     wptNumber.write.format("avro").save(s"$path/Avro/WidePropertyTable" + "Number" + ".avro")
     wptNote.write.format("avro").save(s"$path/Avro/WidePropertyTable" + "Note" + ".avro")
-    wptVolume .write.format("avro").save(s"$path/Avro/WidePropertyTable" + "Volume" + ".avro")
+    wptVolume.write.format("avro").save(s"$path/Avro/WidePropertyTable" + "Volume" + ".avro")
     wptSubClassOf.write.format("avro").save(s"$path/Avro/WidePropertyTable" + "SubClassOf" + ".avro")
     wptMonth.write.format("avro").save(s"$path/Avro/WidePropertyTable" + "Month" + ".avro")
     wptIsbn.write.format("avro").save(s"$path/Avro/WidePropertyTable" + "Isbn" + ".avro")
@@ -157,8 +153,7 @@ object SplitWPTTable {
     wptPublisher.write.format("avro").save(s"$path/Avro/WidePropertyTable" + "Publisher" + ".avro")
     wptReferences.write.format("avro").save(s"$path/Avro/WidePropertyTable" + "References" + ".avro")
     wptCdrom.write.format("avro").save(s"$path/Avro/WidePropertyTable" + "Cdrom" + ".avro")
-    println("Avro WPT tables saved!")    
-   
+    println("Avro WPT tables saved!")
   }
 }
 
@@ -168,4 +163,3 @@ object SplitWPTTable {
     val RDFDF = spark.read.format("csv").option("header", "true").option("inferSchema", "true").load(filePathCSV).toDF()
     RDFDF.write.format("avro").save(filePathAVRO)
 */
-

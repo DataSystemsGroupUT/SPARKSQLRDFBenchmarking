@@ -1,0 +1,57 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1494183197748
+Build-Jdk: 1.7.0_79
+Built-By: sacharya
+Bundle-Description: Avro inter-process communication components
+Bundle-DocURL: http://www.apache.org/
+Bundle-License: http://www.apache.org/licenses/LICENSE-2.0.txt
+Bundle-ManifestVersion: 2
+Bundle-Name: Apache Avro IPC
+Bundle-SymbolicName: avro-ipc
+Bundle-Vendor: The Apache Software Foundation
+Bundle-Version: 1.8.2
+Created-By: Apache Maven Bundle Plugin
+Export-Package: org.apache.avro.ipc;version="1.8.2";uses:="javax.securit
+ y.auth.callback,javax.security.sasl,javax.servlet,javax.servlet.http,or
+ g.apache.avro,org.apache.avro.data,org.apache.avro.io,org.apache.avro.m
+ essage,org.apache.avro.specific,org.jboss.netty.buffer,org.jboss.netty.
+ channel,org.jboss.netty.handler.codec.frame,org.jboss.netty.handler.cod
+ ec.oneone,org.jboss.netty.handler.execution,org.mortbay.jetty",org.apac
+ he.avro.ipc.generic;version="1.8.2";uses:="org.apache.avro,org.apache.a
+ vro.generic,org.apache.avro.io,org.apache.avro.ipc",org.apache.avro.ipc
+ .reflect;version="1.8.2";uses:="org.apache.avro,org.apache.avro.io,org.
+ apache.avro.ipc,org.apache.avro.ipc.specific,org.apache.avro.reflect",o
+ rg.apache.avro.ipc.specific;version="1.8.2";uses:="org.apache.avro,org.
+ apache.avro.io,org.apache.avro.ipc,org.apache.avro.ipc.generic,org.apac
+ he.avro.specific",org.apache.avro.ipc.stats;version="1.8.2";uses:="java
+ x.servlet,javax.servlet.http,org.apache.avro.ipc,org.mortbay.jetty.serv
+ let,org.mortbay.resource",org.apache.avro.ipc.stats.templates;version="
+ 1.8.2"
+Implementation-Title: Apache Avro IPC
+Implementation-Vendor: The Apache Software Foundation
+Implementation-Vendor-Id: org.apache.avro
+Implementation-Version: 1.8.2
+Import-Package: org.apache.avro;version="1.8.2",org.apache.avro.data;ver
+ sion="1.8.2",org.apache.avro.generic;version="1.8.2",org.apache.avro.io
+ ;version="1.8.2",org.apache.avro.message;version="1.8.2",org.apache.avr
+ o.reflect;version="1.8.2",org.apache.avro.specific;version="1.8.2",org.
+ apache.avro.util;version="1.8.2",org.jboss.netty.bootstrap;version="[3.
+ 5,4)",org.jboss.netty.buffer;version="[3.5,4)",org.jboss.netty.channel;
+ version="[3.5,4)",org.jboss.netty.channel.group;version="[3.5,4)",org.j
+ boss.netty.channel.socket.nio;version="[3.5,4)",org.jboss.netty.handler
+ .codec.frame;version="[3.5,4)",org.jboss.netty.handler.codec.oneone;ver
+ sion="[3.5,4)",org.jboss.netty.handler.execution;version="[3.5,4)",java
+ x.servlet;resolution:=optional;version="[2.5,3)",javax.servlet.http;res
+ olution:=optional;version="[2.5,3)",org.mortbay.jetty;resolution:=optio
+ nal;version="[6.1,7)",org.mortbay.jetty.nio;resolution:=optional;versio
+ n="[6.1,7)",org.mortbay.jetty.servlet;resolution:=optional;version="[6.
+ 1,7)",org.mortbay.resource;resolution:=optional;version="[6.1,7)",org.a
+ pache.velocity;resolution:=optional,org.apache.velocity.app;resolution:
+ =optional,org.apache.velocity.context;resolution:=optional,org.apache.v
+ elocity.exception;resolution:=optional,javax.security.auth.callback,jav
+ ax.security.sasl,org.slf4j;version="[1.7,2)"
+Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.6))"
+Specification-Title: Apache Avro IPC
+Specification-Vendor: The Apache Software Foundation
+Specification-Version: 1.8.2
+Tool: Bnd-2.3.0.201405100607

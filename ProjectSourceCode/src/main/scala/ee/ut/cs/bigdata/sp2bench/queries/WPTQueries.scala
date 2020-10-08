@@ -1,8 +1,6 @@
 package ee.ut.cs.bigdata.sp2bench.queries
 
 class WPTQueries {
-
-
   val q1 =
     """
     	|SELECT issued as year
@@ -142,7 +140,6 @@ class WPTQueries {
     	|    	AND NOT Pe2.name='Paul Erdoes'
     	|)) AS dist
         """.stripMargin
-
 
   val q10 =
     """

@@ -1,0 +1,22 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1376491850217
+Build-Jdk: 1.7.0_25
+Built-By: elecharny
+Bundle-Description: Internationalization of errors and other messages
+Bundle-DocURL: http://www.apache.org/
+Bundle-License: http://www.apache.org/licenses/LICENSE-2.0.txt
+Bundle-ManifestVersion: 2
+Bundle-Name: ApacheDS I18n
+Bundle-SymbolicName: org.apache.directory.server.i18n
+Bundle-Vendor: The Apache Software Foundation
+Bundle-Version: 2.0.0.M15
+Created-By: Apache Maven Bundle Plugin
+Export-Package: org.apache.directory.server.i18n;version="2.0.0.M15"
+Implementation-Title: ApacheDS I18n
+Implementation-Vendor: The Apache Software Foundation
+Implementation-Vendor-Id: org.apache.directory.server
+Implementation-Version: 2.0.0-M15
+Specification-Title: ApacheDS I18n
+Specification-Vendor: The Apache Software Foundation
+Specification-Version: 2.0.0-M15
+Tool: Bnd-1.50.0

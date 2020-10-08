@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Implementation-Vendor: The Apache Software Foundation
+Implementation-Title: Apache Avro Mapred API
+Implementation-Version: 1.8.2
+Implementation-Vendor-Id: org.apache.avro
+Built-By: sacharya
+Build-Jdk: 1.7.0_79
+Specification-Vendor: The Apache Software Foundation
+Specification-Title: Apache Avro Mapred API
+Created-By: Apache Maven 3.3.3
+Specification-Version: 1.8.2
+Archiver-Version: Plexus Archiver
+

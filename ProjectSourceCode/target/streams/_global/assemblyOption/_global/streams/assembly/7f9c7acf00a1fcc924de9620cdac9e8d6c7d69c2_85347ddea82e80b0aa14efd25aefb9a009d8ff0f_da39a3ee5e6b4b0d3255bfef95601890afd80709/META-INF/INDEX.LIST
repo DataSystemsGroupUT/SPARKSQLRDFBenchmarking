@@ -1,0 +1,13 @@
+JarIndex-Version: 1.0
+
+arrow-format-0.10.0.jar
+META-INF
+META-INF/maven
+META-INF/maven/org.apache.arrow
+META-INF/maven/org.apache.arrow/arrow-format
+org
+org/apache
+org/apache/arrow
+org/apache/arrow/flatbuf
+git.properties
+

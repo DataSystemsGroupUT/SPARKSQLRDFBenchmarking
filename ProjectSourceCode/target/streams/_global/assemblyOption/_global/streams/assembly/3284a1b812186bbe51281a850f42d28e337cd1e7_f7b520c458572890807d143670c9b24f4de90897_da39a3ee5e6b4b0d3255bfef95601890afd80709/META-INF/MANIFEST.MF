@@ -1,0 +1,28 @@
+Manifest-Version: 1.0
+Implementation-Title: org.joda.time
+Bundle-License: Apache 2.0
+Package: org.joda.time
+Bundle-SymbolicName: joda-time
+Implementation-Version: 2.9.9
+Archiver-Version: Plexus Archiver
+Built-By: stephen
+Specification-Vendor: Joda.org
+Bundle-ManifestVersion: 2
+Specification-Title: Joda-Time
+Implementation-Vendor-Id: org.joda
+Bundle-Vendor: Joda.org
+Bundle-DocURL: http://www.joda.org/joda-time/
+Time-Zone-Database-Version: 2017b
+Implementation-Vendor: Joda.org
+Export-Package: org.joda.time;version=2.9.9,org.joda.time.base;version
+ =2.9.9,org.joda.time.chrono;version=2.9.9,org.joda.time.convert;versi
+ on=2.9.9,org.joda.time.field;version=2.9.9,org.joda.time.format;versi
+ on=2.9.9,org.joda.time.tz;version=2.9.9
+Bundle-Name: Joda-Time
+Bundle-Version: 2.9.9
+Extension-Name: joda-time
+Created-By: Apache Maven 3.2.5
+Build-Jdk: 1.8.0_112
+Specification-Version: 2.9
+Implementation-URL: http://www.joda.org/joda-time/
+

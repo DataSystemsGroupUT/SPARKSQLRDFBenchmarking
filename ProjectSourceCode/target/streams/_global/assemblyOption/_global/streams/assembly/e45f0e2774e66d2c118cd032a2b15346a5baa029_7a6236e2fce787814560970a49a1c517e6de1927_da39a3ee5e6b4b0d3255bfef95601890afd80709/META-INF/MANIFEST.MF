@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Archiver-Version: Plexus Archiver
+Created-By: Apache Maven
+Built-By: marmbrus
+Build-Jdk: 1.7.0_45
+Specification-Title: Hive Query Language
+Specification-Version: 1.2.1.spark2
+Specification-Vendor: The Apache Software Foundation
+Implementation-Title: Hive Query Language
+Implementation-Version: 1.2.1.spark2
+Implementation-Vendor-Id: org.spark-project.hive
+Implementation-Vendor: The Apache Software Foundation
+
