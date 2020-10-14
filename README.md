@@ -39,8 +39,10 @@ In this phase, we repeated the phase#2 experimetns, but this time we extended ou
 ### Project Authors
  - [Mohamed Ragab](https://bigdata.cs.ut.ee/mohamed-ragab)
  - [Riccardo Tommasini](https://rictomm.me/)
+ - [Feras Awaysheh]()
  - [Sherif Sakr](http://kodu.ut.ee/~sakr/)
- - [Sadiq Eyvazov]() 
+ - [Sadiq Eyvazov]()
+ - [Carlos Ramos]()
 
 
 ### Publications
