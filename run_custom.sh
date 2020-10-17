@@ -1,9 +1,9 @@
 #!/bin/bash
 
-SCHEMA=ExtVPTables2
-FORMAT=orc
+SCHEMA=ExtVPTables
+FORMAT=csv
 DS=250M
-PARTITION=horizontal # subject | horizontal | predicate
+PARTITION=Horizontal # Subject | Horizontal | Predicate
 
 RDF_BENCHMARK_CLASS="ee.ut.cs.bigdata.sp2bench.$FORMAT.$SCHEMA"
 RDF_BENCHMARK_JAR="/home/hadoop/RDFBenchMarking/ProjectSourceCode/target/scala-2.12/rdfbenchmarkingproject_2.12-0.1.jar"

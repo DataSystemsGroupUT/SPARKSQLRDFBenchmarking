@@ -23,251 +23,76 @@
       <path>
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
         <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:v2" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cd24d5df-29e4-4040-96f4-5e44dea52d97" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/modules/RDFBenchmarkingProject-build.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/RDFBenchmarkingProject-build.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sbt.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sbt.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/scala_compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/scala_compiler.xml" afterDir="false" />
+    <list default="true" id="cd24d5df-29e4-4040-96f4-5e44dea52d97" name="Default Changelist" comment="Partition code cleanup">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.sbt" beforeDir="false" afterPath="$PROJECT_DIR$/build.sbt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nohup.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/build.properties" beforeDir="false" afterPath="$PROJECT_DIR$/project/build.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/project/target/config-classes/$e2dd73adeefc3dd3299c.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/.sbt-compilation-infos/projectsourcecode-compile/.sbt-idea-lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/.sbt-compilation-infos/projectsourcecode-test/.sbt-idea-lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$58c194b904b846b9ce13.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$69159b0542fafa9868e6.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$74967f1d0d7a2ca2fc86.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$8d5730b2ac03292c297a.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$960e2a644205ed4071d5.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$a139f000c58eb402f97a.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$bc4c8c5fce66433ec3e6.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$c8a5d94cbcb666e0347e.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$dba623c37f33094b57e1.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/default/projectsourcecode-build/scala_2.12/sbt_1.0/0.1.0-SNAPSHOT/resolved.xml.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/default/projectsourcecode-build/scala_2.12/sbt_1.0/0.1.0-SNAPSHOT/resolved.xml.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/default/rdfbenchmarkingproject-build/scala_2.12/sbt_1.0/0.1.0-SNAPSHOT/resolved.xml.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-projectsourcecode-build-compile-internal.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-projectsourcecode-build-compile.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-projectsourcecode-build-optional.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-projectsourcecode-build-plugin.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-projectsourcecode-build-pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-projectsourcecode-build-provided.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-projectsourcecode-build-runtime-internal.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-projectsourcecode-build-runtime.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-projectsourcecode-build-scala-tool.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-projectsourcecode-build-test-internal.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-projectsourcecode-build-test.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-rdfbenchamrkingproject-master-build-compile-internal.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-rdfbenchamrkingproject-master-build-compile.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-rdfbenchamrkingproject-master-build-optional.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-rdfbenchamrkingproject-master-build-plugin.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-rdfbenchamrkingproject-master-build-pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-rdfbenchamrkingproject-master-build-provided.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-rdfbenchamrkingproject-master-build-runtime-internal.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-rdfbenchamrkingproject-master-build-runtime.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-rdfbenchamrkingproject-master-build-scala-tool.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-rdfbenchamrkingproject-master-build-test-internal.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-rdfbenchamrkingproject-master-build-test.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-rdfbenchmarkingproject-build-compile-internal.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-rdfbenchmarkingproject-build-compile.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-rdfbenchmarkingproject-build-optional.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-rdfbenchmarkingproject-build-plugin.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-rdfbenchmarkingproject-build-pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-rdfbenchmarkingproject-build-provided.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-rdfbenchmarkingproject-build-runtime-internal.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-rdfbenchmarkingproject-build-runtime.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-rdfbenchmarkingproject-build-scala-tool.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-rdfbenchmarkingproject-build-test-internal.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-rdfbenchmarkingproject-build-test.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/ivy-report.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/ivy-report.xsl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/active.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$1b9fced95331691cdcdb.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$2276b0f125294041b40a.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$4dcef3394ead4a887465.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$7501311790b233153972.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$a7245c51066caf41c833.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$af54fd01eec26fb5b419.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$bc637b51312d7137031e.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$bcfaa1a88c381f4ec12a.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$f00db90f9b388523ff88.cache" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/update/update_cache_2.12/inputs" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/update/update_cache_2.12/inputs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/update/update_cache_2.12/output" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/update/update_cache_2.12/output" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/streams/$global/$global/$global/streams/out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.12/input_dsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.12/output_dsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/streams/$global/ivyConfiguration/$global/streams/out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/streams/$global/ivySbt/$global/streams/out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/streams/$global/projectDescriptors/$global/streams/out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/update_cache_2.12/inputs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/update_cache_2.12/output" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/project/target/streams/_global/_global/csrLogger/_global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/_global/_global/csrLogger/_global/streams/out" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/target/streams/_global/dependencyPositions/_global/streams/update_cache_2.12/input_dsp" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/_global/dependencyPositions/_global/streams/update_cache_2.12/input_dsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/target/streams/_global/dependencyPositions/_global/streams/update_cache_2.12/output_dsp" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/_global/dependencyPositions/_global/streams/update_cache_2.12/output_dsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/target/streams/_global/update/_global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/_global/update/_global/streams/out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/streams/compile/$global/$global/discoveredMainClasses/data" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/project/target/streams/compile/_global/_global/compileBinaryFileInputs/previous" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/compile/_global/_global/compileBinaryFileInputs/previous" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/target/streams/compile/_global/_global/compileOutputs/previous" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/compile/_global/_global/compileOutputs/previous" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/target/streams/compile/_global/_global/dependencyClasspathFiles/previous" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/compile/_global/_global/dependencyClasspathFiles/previous" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/streams/compile/compile/$global/streams/out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/streams/compile/compileIncremental/$global/streams/export" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/streams/compile/compileIncremental/$global/streams/out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/streams/compile/copyResources/$global/streams/copy-resources" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/streams/compile/copyResources/$global/streams/out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/streams/compile/dependencyClasspath/$global/streams/export" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/project/target/streams/compile/dependencyClasspath/_global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/compile/dependencyClasspath/_global/streams/export" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/streams/compile/exportedProducts/$global/streams/export" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/project/target/streams/compile/exportedProducts/_global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/compile/exportedProducts/_global/streams/export" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/streams/compile/externalDependencyClasspath/$global/streams/export" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/project/target/streams/compile/externalDependencyClasspath/_global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/compile/externalDependencyClasspath/_global/streams/export" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/streams/compile/internalDependencyClasspath/$global/streams/export" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/streams/compile/managedClasspath/$global/streams/export" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/project/target/streams/compile/managedClasspath/_global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/compile/managedClasspath/_global/streams/export" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/streams/compile/unmanagedClasspath/$global/streams/export" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/streams/compile/unmanagedJars/$global/streams/export" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/streams/runtime/dependencyClasspath/$global/streams/export" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/project/target/streams/runtime/dependencyClasspath/_global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/runtime/dependencyClasspath/_global/streams/export" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/streams/runtime/exportedProducts/$global/streams/export" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/project/target/streams/runtime/exportedProducts/_global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/runtime/exportedProducts/_global/streams/export" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/streams/runtime/externalDependencyClasspath/$global/streams/export" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/project/target/streams/runtime/externalDependencyClasspath/_global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/runtime/externalDependencyClasspath/_global/streams/export" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/streams/runtime/fullClasspath/$global/streams/export" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/project/target/streams/runtime/fullClasspath/_global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/runtime/fullClasspath/_global/streams/export" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/streams/runtime/internalDependencyClasspath/$global/streams/export" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/project/target/streams/runtime/internalDependencyClasspath/_global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/runtime/internalDependencyClasspath/_global/streams/export" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/streams/runtime/managedClasspath/$global/streams/export" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/project/target/streams/runtime/managedClasspath/_global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/runtime/managedClasspath/_global/streams/export" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/streams/runtime/unmanagedClasspath/$global/streams/export" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/streams/runtime/unmanagedJars/$global/streams/export" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/run_queries.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/ee/ut/cs/bigdata/sp2bench/CreateWPTTable.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/ee/ut/cs/bigdata/sp2bench/CreateWPTTable.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/ee/ut/cs/bigdata/sp2bench/RDFBenchMain.scala" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/ee/ut/cs/bigdata/sp2bench/SplitWPTTable.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/ee/ut/cs/bigdata/sp2bench/SplitWPTTable.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/scala/ee/ut/cs/bigdata/sp2bench/avro/ExtVPTables.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/ee/ut/cs/bigdata/sp2bench/avro/ExtVPTables.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/ee/ut/cs/bigdata/sp2bench/avro/ExtVPTables2.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/ee/ut/cs/bigdata/sp2bench/avro/ExtVPTables2.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/ee/ut/cs/bigdata/sp2bench/avro/WPTTables2.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/ee/ut/cs/bigdata/sp2bench/avro/WPTTables2.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/ee/ut/cs/bigdata/sp2bench/csv/ExtVPTables2.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/ee/ut/cs/bigdata/sp2bench/csv/ExtVPTables2.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/ee/ut/cs/bigdata/sp2bench/csv/SingleStatementTable.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/ee/ut/cs/bigdata/sp2bench/csv/SingleStatementTable.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/ee/ut/cs/bigdata/sp2bench/csv/Tests.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/ee/ut/cs/bigdata/sp2bench/csv/Tests.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/ee/ut/cs/bigdata/sp2bench/csv/VerticalTables2.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/ee/ut/cs/bigdata/sp2bench/csv/VerticalTables2.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/ee/ut/cs/bigdata/sp2bench/avro/ExtVPTablesPartition.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/ee/ut/cs/bigdata/sp2bench/avro/ExtVPTablesPartition.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/ee/ut/cs/bigdata/sp2bench/avro/WPTTables.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/ee/ut/cs/bigdata/sp2bench/avro/WPTTables.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/ee/ut/cs/bigdata/sp2bench/avro/WPTTablesPartition.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/ee/ut/cs/bigdata/sp2bench/avro/WPTTablesPartition.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/ee/ut/cs/bigdata/sp2bench/csv/ExtVPTables.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/ee/ut/cs/bigdata/sp2bench/csv/ExtVPTables.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/ee/ut/cs/bigdata/sp2bench/csv/ExtVPTablesPartition.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/ee/ut/cs/bigdata/sp2bench/csv/ExtVPTablesPartition.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/ee/ut/cs/bigdata/sp2bench/csv/VerticalTables.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/ee/ut/cs/bigdata/sp2bench/csv/VerticalTables.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/ee/ut/cs/bigdata/sp2bench/csv/VerticalTablesPartition.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/ee/ut/cs/bigdata/sp2bench/csv/VerticalTablesPartition.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/scala/ee/ut/cs/bigdata/sp2bench/csv/WPTTables.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/ee/ut/cs/bigdata/sp2bench/csv/WPTTables.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/ee/ut/cs/bigdata/sp2bench/csv/WPTTables2.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/ee/ut/cs/bigdata/sp2bench/csv/WPTTables2.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/scala/ee/ut/cs/bigdata/sp2bench/csv/WPTTablesPartition.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/ee/ut/cs/bigdata/sp2bench/csv/WPTTablesPartition.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/ee/ut/cs/bigdata/sp2bench/hive/PropertyTables.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/ee/ut/cs/bigdata/sp2bench/hive/PropertyTables.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/ee/ut/cs/bigdata/sp2bench/hive/VerticalTablesPartition.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/ee/ut/cs/bigdata/sp2bench/hive/VerticalTablesPartition.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/ee/ut/cs/bigdata/sp2bench/hive/WPTTables2.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/ee/ut/cs/bigdata/sp2bench/hive/WPTTables2.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/ee/ut/cs/bigdata/sp2bench/orc/ExtVPTables2.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/ee/ut/cs/bigdata/sp2bench/orc/ExtVPTables2.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/ee/ut/cs/bigdata/sp2bench/orc/WPTTables2.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/ee/ut/cs/bigdata/sp2bench/orc/WPTTables2.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/ee/ut/cs/bigdata/sp2bench/parquet/ExtVPTables2.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/ee/ut/cs/bigdata/sp2bench/parquet/ExtVPTables2.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/ee/ut/cs/bigdata/sp2bench/parquet/WPTTables2.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/ee/ut/cs/bigdata/sp2bench/parquet/WPTTables2.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/ee/ut/cs/bigdata/sp2bench/orc/ExtVPTablesPartition.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/ee/ut/cs/bigdata/sp2bench/orc/ExtVPTablesPartition.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/ee/ut/cs/bigdata/sp2bench/orc/WPTTablesPartition.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/ee/ut/cs/bigdata/sp2bench/orc/WPTTablesPartition.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/ee/ut/cs/bigdata/sp2bench/parquet/ExtVPTablesPartition.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/ee/ut/cs/bigdata/sp2bench/parquet/ExtVPTablesPartition.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/scala/ee/ut/cs/bigdata/sp2bench/parquet/WPTTablesPartition.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/ee/ut/cs/bigdata/sp2bench/parquet/WPTTablesPartition.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/ee/ut/cs/bigdata/sp2bench/queries/PTQueries.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/ee/ut/cs/bigdata/sp2bench/queries/PTQueries.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/ee/ut/cs/bigdata/sp2bench/queries/WPTQueries.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/ee/ut/cs/bigdata/sp2bench/queries/WPTQueries.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/.history" beforeDir="false" afterPath="$PROJECT_DIR$/target/.history" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/scala-2.12/rdfbenchmarkingproject_2.12-0.1.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/rdfbenchmarkingproject_2.12-0.1.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/update/update_cache_2.12/inputs" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/update/update_cache_2.12/inputs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/update/update_cache_2.12/output" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/update/update_cache_2.12/output" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/streams/_global/_global/checkBuildSources/_global/inputFileStamps/previous" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/_global/_global/checkBuildSources/_global/inputFileStamps/previous" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/streams/_global/_global/csrLogger/_global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/_global/_global/csrLogger/_global/streams/out" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/streams/_global/dependencyPositions/_global/streams/update_cache_2.12/output_dsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/_global/dependencyPositions/_global/streams/update_cache_2.12/output_dsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/streams/_global/update/_global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/_global/update/_global/streams/out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/streams/_global/updateClassifiers/_global/streams/update_cache_2.12/output" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/_global/updateClassifiers/_global/streams/update_cache_2.12/output" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/streams/compile/$global/$global/discoveredMainClasses/data" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/compile/$global/$global/discoveredMainClasses/data" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/streams/compile/_global/_global/compileBinaryFileInputs/previous" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/compile/_global/_global/compileBinaryFileInputs/previous" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/streams/compile/_global/_global/compileOutputs/previous" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/compile/_global/_global/compileOutputs/previous" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/streams/compile/_global/_global/compileSourceFileInputs/previous" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/compile/_global/_global/compileSourceFileInputs/previous" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/streams/compile/_global/_global/dependencyClasspathFiles/previous" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/compile/_global/_global/dependencyClasspathFiles/previous" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/streams/compile/compile/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/compile/compile/$global/streams/out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/streams/compile/compile/_global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/compile/compile/_global/streams/out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/streams/compile/compileIncSetup/$global/streams/inc_compile_2.12.zip" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/compile/compileIncSetup/$global/streams/inc_compile_2.12.zip" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/streams/compile/compileIncSetup/_global/streams/inc_compile_2.12.zip" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/compile/compileIncSetup/_global/streams/inc_compile_2.12.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/streams/compile/compileIncremental/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/compile/compileIncremental/$global/streams/export" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/streams/compile/compileIncremental/_global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/compile/compileIncremental/_global/streams/export" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/streams/compile/compileIncremental/_global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/compile/compileIncremental/_global/streams/out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/streams/compile/dependencyClasspath/_global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/compile/dependencyClasspath/_global/streams/export" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/streams/compile/exportedProducts/_global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/compile/exportedProducts/_global/streams/export" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/streams/compile/externalDependencyClasspath/_global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/compile/externalDependencyClasspath/_global/streams/export" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/streams/compile/managedClasspath/_global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/compile/managedClasspath/_global/streams/export" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/streams/compile/packageBin/$global/streams/inputs" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/compile/packageBin/$global/streams/inputs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/streams/compile/packageBin/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/compile/packageBin/$global/streams/out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/streams/compile/runMain/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/compile/runMain/$global/streams/out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/streams/runtime/exportedProducts/_global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/runtime/exportedProducts/_global/streams/export" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/streams/runtime/externalDependencyClasspath/_global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/runtime/externalDependencyClasspath/_global/streams/export" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/streams/runtime/managedClasspath/_global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/runtime/managedClasspath/_global/streams/export" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/streams/test/_global/_global/compileBinaryFileInputs/previous" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/test/_global/_global/compileBinaryFileInputs/previous" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/streams/test/_global/_global/compileOutputs/previous" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/test/_global/_global/compileOutputs/previous" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/streams/test/_global/_global/dependencyClasspathFiles/previous" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/test/_global/_global/dependencyClasspathFiles/previous" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/streams/test/dependencyClasspath/_global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/test/dependencyClasspath/_global/streams/export" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/streams/test/exportedProducts/_global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/test/exportedProducts/_global/streams/export" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/streams/test/externalDependencyClasspath/_global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/test/externalDependencyClasspath/_global/streams/export" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/streams/test/fullClasspath/_global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/test/fullClasspath/_global/streams/export" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/streams/test/internalDependencyClasspath/_global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/test/internalDependencyClasspath/_global/streams/export" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/streams/test/managedClasspath/_global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/test/managedClasspath/_global/streams/export" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../logs/250M/csv/WPT/250.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../logs_NP_250M/avro/ExtVP/100M.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../logs_NP_250M/avro/PT/100M.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../logs_NP_250M/avro/VP/100M.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../logs_NP_250M/avro/WPT/100M.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../logs_NP_250M/csv/ExtVP/100M.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../logs_NP_250M/csv/PT/100M.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../logs_NP_250M/csv/VP/100M.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../logs_NP_250M/hive/ExtVP/100M.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../logs_NP_250M/hive/PT/100M.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../logs_NP_250M/hive/VP/100M.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../logs_NP_250M/hive/WPT/100M.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../logs_NP_250M/orc/ExtVP/100M.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../logs_NP_250M/orc/PT/100M.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../logs_NP_250M/orc/VP/100M.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../logs_NP_250M/orc/WPT/100M.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../logs_NP_250M/parquet/ExtVP/100M.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../logs_NP_250M/parquet/PT/100M.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../logs_NP_250M/parquet/VP/100M.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../logs_NP_250M/parquet/WPT/100M.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../target/.history" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../target/scala-2.12/rdfbenchmarking_2.12-0.1.0-SNAPSHOT.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../target/scala-2.12/update/update_cache_2.12/inputs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../target/scala-2.12/update/update_cache_2.12/output" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../target/streams/_global/_global/_global/streams/out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../target/streams/_global/_global/checkBuildSources/_global/inputFileStamps/previous" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../target/streams/_global/_global/checkBuildSources/_global/streams/out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../target/streams/_global/csrConfiguration/_global/streams/out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../target/streams/_global/csrProject/_global/streams/out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../target/streams/_global/dependencyPositions/_global/streams/update_cache_2.12/input_dsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../target/streams/_global/dependencyPositions/_global/streams/update_cache_2.12/output_dsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../target/streams/_global/ivyConfiguration/_global/streams/out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../target/streams/_global/ivySbt/_global/streams/out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../target/streams/_global/moduleSettings/_global/streams/out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../target/streams/_global/projectDescriptors/_global/streams/out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../target/streams/_global/scalaCompilerBridgeScope/_global/streams/out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../target/streams/_global/update/_global/streams/out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../target/streams/compile/_global/_global/compileBinaryFileInputs/previous" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../target/streams/compile/_global/_global/compileOutputs/previous" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../target/streams/compile/_global/_global/compileSourceFileInputs/previous" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../target/streams/compile/_global/_global/dependencyClasspathFiles/previous" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../target/streams/compile/_global/_global/discoveredMainClasses/data" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../target/streams/compile/_global/_global/managedSourcePaths/previous" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../target/streams/compile/bgRun/_global/streams/out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../target/streams/compile/compile/_global/streams/out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../target/streams/compile/compileIncremental/_global/streams/export" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../target/streams/compile/compileIncremental/_global/streams/out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../target/streams/compile/copyResources/_global/streams/copy-resources" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../target/streams/compile/copyResources/_global/streams/out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../target/streams/compile/dependencyClasspath/_global/streams/export" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../target/streams/compile/exportedProductJars/_global/streams/export" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../target/streams/compile/exportedProducts/_global/streams/export" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../target/streams/compile/externalDependencyClasspath/_global/streams/export" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../target/streams/compile/internalDependencyClasspath/_global/streams/export" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../target/streams/compile/mainClass/_global/streams/out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../target/streams/compile/managedClasspath/_global/streams/export" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../target/streams/compile/packageBin/_global/streams/inputs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../target/streams/compile/packageBin/_global/streams/out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../target/streams/compile/packageBin/_global/streams/output" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../target/streams/compile/runMain/_global/streams/out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../target/streams/compile/unmanagedClasspath/_global/streams/export" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../target/streams/compile/unmanagedJars/_global/streams/export" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../target/streams/runtime/dependencyClasspathAsJars/_global/streams/export" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../target/streams/runtime/exportedProductJars/_global/streams/export" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../target/streams/runtime/externalDependencyClasspath/_global/streams/export" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../target/streams/runtime/fullClasspathAsJars/_global/streams/export" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../target/streams/runtime/internalDependencyAsJars/_global/streams/export" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../target/streams/runtime/managedClasspath/_global/streams/export" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../target/streams/runtime/unmanagedClasspath/_global/streams/export" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../target/streams/runtime/unmanagedJars/_global/streams/export" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/compile/packageBin/_global/streams/inputs" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/compile/packageBin/_global/streams/inputs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../logs/250M/csv/WPT/250M.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../plots/performance/4_avg.dat" beforeDir="false" afterPath="$PROJECT_DIR$/../plots/performance/4_avg.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../plots/performance/4_val.dat" beforeDir="false" afterPath="$PROJECT_DIR$/../plots/performance/4_val.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../plots/performance/plots.plot" beforeDir="false" afterPath="$PROJECT_DIR$/../plots/performance/plots.plot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../plots/performance/plots_bw.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../plots/queries/plot.gp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../plots/queries/plot_extvp.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../plots/queries/plot_extvp.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../plots/queries/plot_wpt.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../plots/queries/plot_wpt.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../run_custom.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../run_custom.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../run_partition.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../run_partition.sh" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -408,17 +233,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Single10MHive" type="CompoundRunConfigurationType">
       <toRun name="SingleStatementTable5th" type="Application" />
       <toRun name="SingleStatementTable4th" type="Application" />
@@ -508,7 +322,12 @@
       <workItem from="1602090569284" duration="1944000" />
       <workItem from="1602105395713" duration="5752000" />
       <workItem from="1602141189554" duration="4502000" />
-      <workItem from="1602164839034" duration="5723000" />
+      <workItem from="1602164839034" duration="5724000" />
+      <workItem from="1602235024780" duration="28000" />
+      <workItem from="1602235233631" duration="19791000" />
+      <workItem from="1602268596876" duration="1715000" />
+      <workItem from="1602278622238" duration="3891000" />
+      <workItem from="1602925707507" duration="997000" />
     </task>
     <servers />
   </component>
@@ -526,12 +345,27 @@
                   <entry key="Show.Git.Branches" value="true" />
                 </map>
               </option>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="v2" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
             </State>
           </value>
         </entry>
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Partition code cleanup" />
+    <option name="LAST_COMMIT_MESSAGE" value="Partition code cleanup" />
   </component>
   <component name="WindowStateProjectService">
     <state x="847" y="445" width="216" height="245" key="#Notifications" timestamp="1601038506992">
@@ -598,9 +432,10 @@
       <screen x="0" y="0" width="1920" height="1200" />
     </state>
     <state width="1282" height="397" key="GridCell.Tab.1.right/0.0.1920.1200@0.0.1920.1200" timestamp="1601236490992" />
-    <state x="255" y="337" width="566" height="512" key="find.popup" timestamp="1602165266754">
-      <screen x="0" y="0" width="1920" height="1200" />
+    <state x="0" y="0" width="1920" height="1080" key="find.popup" timestamp="1602241393448">
+      <screen x="0" y="0" width="1920" height="1080" />
     </state>
+    <state x="0" y="0" width="1920" height="1080" key="find.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1602241393448" />
     <state x="255" y="337" width="566" height="512" key="find.popup/0.0.1920.1200@0.0.1920.1200" timestamp="1602165266754" />
     <state x="297" y="248" key="run.anything.popup" timestamp="1602105635465">
       <screen x="0" y="0" width="1920" height="1080" />
@@ -608,9 +443,10 @@
     <state x="297" y="248" key="run.anything.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1602105635465" />
     <state x="297" y="275" key="run.anything.popup/0.0.1920.1200@0.0.1920.1200" timestamp="1601375064984" />
     <state x="396" y="330" key="run.anything.popup/0.0.2560.1440@0.0.2560.1440" timestamp="1601385308421" />
-    <state x="623" y="276" width="672" height="678" key="search.everywhere.popup" timestamp="1601989352502">
-      <screen x="0" y="0" width="1920" height="1200" />
+    <state x="623" y="248" width="672" height="611" key="search.everywhere.popup" timestamp="1602926477071">
+      <screen x="0" y="0" width="1920" height="1080" />
     </state>
+    <state x="623" y="248" width="672" height="611" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1602926477071" />
     <state x="623" y="276" width="672" height="678" key="search.everywhere.popup/0.0.1920.1200@0.0.1920.1200" timestamp="1601989352502" />
   </component>
 </project>

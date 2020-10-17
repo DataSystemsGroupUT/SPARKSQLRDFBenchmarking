@@ -10,7 +10,7 @@ import org.apache.spark.{SparkConf, SparkContext}
 
 object WPTTablesPartition {
   def main(args: Array[String]): Unit = {
-    println("Partitioning WPT 2!!")
+    println("Partitioning WPT 3!!")
 
     val conf = new SparkConf()
     Logger.getLogger("org").setLevel(Level.OFF)

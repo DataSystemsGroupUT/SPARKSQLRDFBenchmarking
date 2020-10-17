@@ -9,6 +9,7 @@ import org.apache.spark.{SparkConf, SparkContext}
 
 object WPTTablesPartition {
   def main(args: Array[String]): Unit = {
+    println("parque")
 
     val conf = new SparkConf()
     Logger.getLogger("org").setLevel(Level.OFF)
@@ -42,9 +43,16 @@ object WPTTablesPartition {
 
       RDFDFWPT.repartition(84).write.option("header", "true").format("parquet").mode(SaveMode.Overwrite).save(s"$path/WPTHorizontal.parquet")
       println("Parquet WPT partitioned and saved! Horizontal partitioning!")
-    }
+    } else if (partitionType == "predicate") {
+      println("predicando")
+      val RDFDFWPT = spark.read.format("parquet").load(s"$path/WidePropertyTable.parquet").toDF()
+      println("Table is read!")
 
-    else if (partitionType == "predicate") {
+      RDFDFWPT.repartition(84, $"Subject").write.option("header", "true").format("parquet").mode(SaveMode.Overwrite).save(s"$path/WPTSubject.parquet")
+      println("Parquet WPT partitioned and saved! Subject based partitioning!")
+
+      RDFDFWPT.repartition(84).write.option("header", "true").format("parquet").mode(SaveMode.Overwrite).save(s"$path/WPTHorizontal.parquet")
+      println("Parquet WPT partitioned and saved! Horizontal partitioning!")
 
       // read splitted WPT tables
       val wptType = spark.read.format("parquet").load(s"$path/WidePropertyTableType.parquet").toDF()
