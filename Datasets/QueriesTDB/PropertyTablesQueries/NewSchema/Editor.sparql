@@ -1,0 +1,4 @@
+SELECT DISTINCT ?document ?person
+       WHERE {
+           ?document <http://swrc.ontoware.org/ontology#editor> ?person.
+       }

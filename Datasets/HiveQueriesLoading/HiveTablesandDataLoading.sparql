@@ -1,0 +1,247 @@
+--/////////////////////////////////////////////////////CREATION/////////////////////////////////////
+
+
+
+--SingleStmtTable
+
+
+CREATE TABLE IF NOT EXISTS  rdfbench10m.singlestmttable  (subject STRING, predicate STRING, object STRING) ROW FORMAT DELIMITED FIELDS TERMINATED BY ',' STORED AS TEXTFILE tblproperties("skip.header.line.count"="1");
+
+
+
+--VerticalTables
+
+
+
+CREATE TABLE IF NOT EXISTS  rdfbench10m.abstractv   (subject STRING, object STRING) ROW FORMAT DELIMITED FIELDS TERMINATED BY ',' STORED AS TEXTFILE 
+tblproperties("skip.header.line.count"="1")
+;
+
+
+CREATE TABLE IF NOT EXISTS  rdfbench10m.booktitle   (subject STRING, object STRING) ROW FORMAT DELIMITED FIELDS TERMINATED BY ',' STORED AS TEXTFILE 
+tblproperties("skip.header.line.count"="1")
+;
+
+
+CREATE TABLE IF NOT EXISTS  rdfbench10m.creator  (subject STRING, object STRING) ROW FORMAT DELIMITED FIELDS TERMINATED BY ',' STORED AS TEXTFILE 
+tblproperties("skip.header.line.count"="1")
+;
+
+CREATE TABLE IF NOT EXISTS  rdfbench10m.editorv  (subject STRING, object STRING) ROW FORMAT DELIMITED FIELDS TERMINATED BY ',' STORED AS TEXTFILE 
+tblproperties("skip.header.line.count"="1")
+;
+
+CREATE TABLE IF NOT EXISTS  rdfbench10m.homepage  (subject STRING, object STRING) ROW FORMAT DELIMITED FIELDS TERMINATED BY ',' STORED AS TEXTFILE 
+tblproperties("skip.header.line.count"="1")
+;
+
+
+CREATE TABLE IF NOT EXISTS  rdfbench10m.journal   (subject STRING, object STRING) ROW FORMAT DELIMITED FIELDS TERMINATED BY ',' STORED AS TEXTFILE 
+tblproperties("skip.header.line.count"="1")
+;
+
+
+CREATE TABLE IF NOT EXISTS  rdfbench10m.issued   (subject STRING, object STRING) ROW FORMAT DELIMITED FIELDS TERMINATED BY ',' STORED AS TEXTFILE 
+tblproperties("skip.header.line.count"="1")
+;
+
+
+CREATE TABLE IF NOT EXISTS  rdfbench10m.name   (subject STRING, object STRING) ROW FORMAT DELIMITED FIELDS TERMINATED BY ',' STORED AS TEXTFILE 
+tblproperties("skip.header.line.count"="1")
+;
+
+
+
+CREATE TABLE IF NOT EXISTS  rdfbench10m.pages   (subject STRING, object STRING) ROW FORMAT DELIMITED FIELDS TERMINATED BY ',' STORED AS TEXTFILE 
+tblproperties("skip.header.line.count"="1")
+;
+
+
+CREATE TABLE IF NOT EXISTS  rdfbench10m.partof   (subject STRING, object STRING) ROW FORMAT DELIMITED FIELDS TERMINATED BY ',' STORED AS TEXTFILE 
+tblproperties("skip.header.line.count"="1")
+;
+
+
+CREATE TABLE IF NOT EXISTS  rdfbench10m.subclassof   (subject STRING, object STRING) ROW FORMAT DELIMITED FIELDS TERMINATED BY ',' STORED AS TEXTFILE 
+tblproperties("skip.header.line.count"="1")
+;
+
+CREATE TABLE IF NOT EXISTS  rdfbench10m.title   (subject STRING, object STRING) ROW FORMAT DELIMITED FIELDS TERMINATED BY ',' STORED AS TEXTFILE 
+tblproperties("skip.header.line.count"="1")
+;
+
+CREATE TABLE IF NOT EXISTS  rdfbench10m.type   (subject STRING, object STRING) ROW FORMAT DELIMITED FIELDS TERMINATED BY ',' STORED AS TEXTFILE 
+tblproperties("skip.header.line.count"="1")
+;
+
+
+
+CREATE TABLE IF NOT EXISTS  rdfbench10m.seealso  (subject STRING, object STRING) ROW FORMAT DELIMITED FIELDS TERMINATED BY ',' STORED AS TEXTFILE 
+tblproperties("skip.header.line.count"="1")
+;
+
+CREATE TABLE IF NOT EXISTS  rdfbench10m.referencesv  (subject STRING, object STRING) ROW FORMAT DELIMITED FIELDS TERMINATED BY ',' STORED AS TEXTFILE 
+tblproperties("skip.header.line.count"="1")
+;
+
+
+
+
+
+--PT 
+
+
+CREATE TABLE IF NOT EXISTS rdfbench100k.reference
+(document STRING, cited STRING) ROW FORMAT DELIMITED FIELDS TERMINATED BY ',' STORED AS TEXTFILE 
+tblproperties("skip.header.line.count"="1");
+
+
+CREATE TABLE IF NOT EXISTS rdfbench100k.publication_cdrom
+(publication STRING, cdrom STRING) ROW FORMAT DELIMITED FIELDS TERMINATED BY ',' STORED AS TEXTFILE 
+tblproperties("skip.header.line.count"="1")
+;
+
+
+CREATE TABLE IF NOT EXISTS rdfbench100k.publicationtype
+(publication STRING, type STRING) ROW FORMAT DELIMITED FIELDS TERMINATED BY ',' STORED AS TEXTFILE 
+tblproperties("skip.header.line.count"="1")
+;
+
+
+CREATE TABLE IF NOT EXISTS rdfbench100k.person
+(person STRING, name STRING) ROW FORMAT DELIMITED FIELDS TERMINATED BY ',' STORED AS TEXTFILE 
+tblproperties("skip.header.line.count"="1")
+;
+
+CREATE TABLE IF NOT EXISTS rdfbench100k.editor
+(document STRING, person STRING) ROW FORMAT DELIMITED FIELDS TERMINATED BY ',' STORED AS TEXTFILE 
+tblproperties("skip.header.line.count"="1")
+;
+
+CREATE TABLE IF NOT EXISTS  rdfbench100k.publication  
+(publication String, pages String, note String, chapter String, venue String) ROW FORMAT DELIMITED FIELDS TERMINATED BY ',' STORED AS TEXTFILE 
+tblproperties("skip.header.line.count"="1")
+;
+
+CREATE TABLE IF NOT EXISTS rdfbench100k.document_seealso
+(document STRING, seealso STRING) ROW FORMAT DELIMITED FIELDS TERMINATED BY ',' STORED AS TEXTFILE 
+tblproperties("skip.header.line.count"="1")
+;
+
+CREATE TABLE IF NOT EXISTS rdfbench100k.document_homepage
+(document STRING, homepage STRING) ROW FORMAT DELIMITED FIELDS TERMINATED BY ',' STORED AS TEXTFILE 
+tblproperties("skip.header.line.count"="1")
+;
+
+CREATE TABLE IF NOT EXISTS rdfbench100k.abstract
+(publication STRING,  txt STRING) ROW FORMAT DELIMITED FIELDS TERMINATED BY ',' STORED AS TEXTFILE 
+tblproperties("skip.header.line.count"="1")
+;
+
+
+CREATE TABLE IF NOT EXISTS rdfbench100k.document
+(document STRING, title	STRING, volume STRING, 	isbn	 STRING, month STRING, 	number STRING, 	series STRING, 	issued	STRING, booktitle STRING, publisher STRING) ROW FORMAT DELIMITED FIELDS TERMINATED BY ',' STORED AS TEXTFILE 
+tblproperties("skip.header.line.count"="1")
+;
+
+
+CREATE TABLE IF NOT EXISTS rdfbench100k.author
+(person STRING,  document STRING) ROW FORMAT DELIMITED FIELDS TERMINATED BY ',' STORED AS TEXTFILE 
+tblproperties("skip.header.line.count"="1")
+;
+
+
+ 	
+CREATE TABLE IF NOT EXISTS rdfbench100k.VenueType
+(document STRING, type STRING) ROW FORMAT DELIMITED FIELDS TERMINATED BY ',' STORED AS TEXTFILE  
+tblproperties("skip.header.line.count"="1");
+
+
+ 	
+CREATE TABLE IF NOT EXISTS rdfbench100k.Venue
+(venue STRING, title STRING) ROW FORMAT DELIMITED FIELDS TERMINATED BY ',' STORED AS TEXTFILE  
+tblproperties("skip.header.line.count"="1");
+
+
+
+
+
+
+
+--////////////////////////////////////////////////////DATA LOADING/////////////////////////////////////////////
+
+
+--SingleTable
+
+LOAD DATA LOCAL INPATH '/home/centos/RDFBenchCluster/100K/CSV/SingleStmtTable/SingleStmtTable.csv' INTO TABLE rdfbench1m.singlestmttable;
+
+
+
+
+
+
+--Vertical Tables
+
+LOAD DATA INPATH 'hdfs://quickstart:8020/user/cloudera/RDFBench/SP2B/10M/CSV/VerticalTables/abstract.csv' INTO TABLE rdfbench10m.abstractv;
+
+LOAD DATA INPATH 'hdfs://quickstart:8020/user/cloudera/RDFBench/SP2B/10M/CSV/VerticalTables/booktitle.csv' INTO TABLE rdfbench10m.booktitle;
+
+LOAD DATA INPATH 'hdfs://quickstart:8020/user/cloudera/RDFBench/SP2B/10M/CSV/VerticalTables/creator.csv' INTO TABLE rdfbench10m.creator;
+
+LOAD DATA INPATH 'hdfs://quickstart:8020/user/cloudera/RDFBench/SP2B/10M/CSV/VerticalTables/editor.csv' INTO TABLE rdfbench10m.editorv;
+
+LOAD DATA INPATH 'hdfs://quickstart:8020/user/cloudera/RDFBench/SP2B/10M/CSV/VerticalTables/homepage.csv' INTO TABLE rdfbench10m.homepage;
+
+LOAD DATA INPATH 'hdfs://quickstart:8020/user/cloudera/RDFBench/SP2B/10M/CSV/VerticalTables/injournal.csv' INTO TABLE rdfbench10m.journal;
+
+LOAD DATA INPATH 'hdfs://quickstart:8020/user/cloudera/RDFBench/SP2B/10M/CSV/VerticalTables/issued.csv' INTO TABLE rdfbench10m.issued;
+
+LOAD DATA INPATH 'hdfs://quickstart:8020/user/cloudera/RDFBench/SP2B/10M/CSV/VerticalTables/name.csv' INTO TABLE rdfbench10m.name;
+
+LOAD DATA INPATH 'hdfs://quickstart:8020/user/cloudera/RDFBench/SP2B/10M/CSV/VerticalTables/pages.csv' INTO TABLE rdfbench10m.pages;
+
+LOAD DATA INPATH 'hdfs://quickstart:8020/user/cloudera/RDFBench/SP2B/10M/CSV/VerticalTables/partof.csv' INTO TABLE rdfbench10m.partof;
+
+LOAD DATA INPATH 'hdfs://quickstart:8020/user/cloudera/RDFBench/SP2B/10M/CSV/VerticalTables/references.csv' INTO TABLE rdfbench10m.referencesv;
+
+LOAD DATA INPATH 'hdfs://quickstart:8020/user/cloudera/RDFBench/SP2B/10M/CSV/VerticalTables/seealso.csv' INTO TABLE rdfbench10m.seealso;
+
+LOAD DATA INPATH 'hdfs://quickstart:8020/user/cloudera/RDFBench/SP2B/10M/CSV/VerticalTables/subclassof.csv' INTO TABLE rdfbench10m.subclassof;
+
+LOAD DATA INPATH 'hdfs://quickstart:8020/user/cloudera/RDFBench/SP2B/10M/CSV/VerticalTables/title.csv' INTO TABLE rdfbench10m.title;
+
+LOAD DATA INPATH 'hdfs://quickstart:8020/user/cloudera/RDFBench/SP2B/10M/CSV/VerticalTables/type.csv' INTO TABLE rdfbench10m.type;
+
+
+
+--property tables
+
+
+
+LOAD DATA INPATH 'hdfs://quickstart:8020/user/cloudera/RDFBench/SP2B/10M/CSV/PropertyTables/Abstract.csv' INTO TABLE rdfbench1m.Abstract;
+
+LOAD DATA INPATH 'hdfs://quickstart:8020/user/cloudera/RDFBench/SP2B/10M/CSV/PropertyTables/Author.csv' INTO TABLE rdfbench1m.Author;
+
+LOAD DATA INPATH 'hdfs://quickstart:8020/user/cloudera/RDFBench/SP2B/10M/CSV/PropertyTables/Document.csv' INTO TABLE rdfbench1m.Document;
+
+LOAD DATA INPATH 'hdfs://quickstart:8020/user/cloudera/RDFBench/SP2B/10M/CSV/PropertyTables/Document_homepage.csv' INTO TABLE rdfbench1m.Document_homepage;
+
+LOAD DATA INPATH 'hdfs://quickstart:8020/user/cloudera/RDFBench/SP2B/10M/CSV/PropertyTables/Document_seeAlso.csv' INTO TABLE rdfbench1m.Document_seealso;
+
+LOAD DATA INPATH 'hdfs://quickstart:8020/user/cloudera/RDFBench/SP2B/10M/CSV/PropertyTables/Editor.csv' INTO TABLE rdfbench1m.Editor;
+
+LOAD DATA INPATH 'hdfs://quickstart:8020/user/cloudera/RDFBench/SP2B/10M/CSV/PropertyTables/Person.csv' INTO TABLE rdfbench1m.Person;
+
+LOAD DATA INPATH 'hdfs://quickstart:8020/user/cloudera/RDFBench/SP2B/10M/CSV/PropertyTables/Publication.csv' INTO TABLE rdfbench1m.Publication;
+
+LOAD DATA INPATH 'hdfs://quickstart:8020/user/cloudera/RDFBench/SP2B/10M/CSV/PropertyTables/Publication_cdrom.csv' INTO TABLE rdfbench1m.Publication_cdrom;
+
+LOAD DATA INPATH 'hdfs://quickstart:8020/user/cloudera/RDFBench/SP2B/10M/CSV/PropertyTables/PublicationType.csv' INTO TABLE rdfbench1m.PublicationType;
+
+LOAD DATA INPATH 'hdfs://quickstart:8020/user/cloudera/RDFBench/SP2B/10M/CSV/PropertyTables/Reference.csv' INTO TABLE rdfbench1m.References;
+
+LOAD DATA INPATH 'hdfs://quickstart:8020/user/cloudera/RDFBench/SP2B/10M/CSV/PropertyTables/Venue.csv' INTO TABLE rdfbench1m.Venue;
+
+LOAD DATA INPATH 'hdfs://quickstart:8020/user/cloudera/RDFBench/SP2B/10M/CSV/PropertyTables/VenueType.csv' INTO TABLE rdfbench1m.VenueType;
+
+

@@ -1,0 +1,9 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX bench:<http://localhost/vocabulary/bench/>
+SELECT ?subject ?title   ?homepage  ?creator
+WHERE {
+  ?subject rdf:type bench:Www.
+  OPTIONAL{?subject <http://purl.org/dc/elements/1.1/title> ?title.}
+  OPTIONAL{?subject <http://xmlns.com/foaf/0.1/homepage> ?homepage.}
+  OPTIONAL{?subject <http://purl.org/dc/elements/1.1/creator> ?creator.}
+}

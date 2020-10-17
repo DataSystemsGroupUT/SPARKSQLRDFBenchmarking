@@ -1,0 +1,4 @@
+SELECT DISTINCT ?document ?homepage
+       WHERE {
+           ?document <http://xmlns.com/foaf/0.1/homepage> ?homepage.
+       }

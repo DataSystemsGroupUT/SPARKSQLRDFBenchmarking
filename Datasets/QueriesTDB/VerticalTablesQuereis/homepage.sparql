@@ -1,0 +1,4 @@
+SELECT DISTINCT ?subject ?object
+       WHERE {
+           ?subject <http://xmlns.com/foaf/0.1/homepage> ?object.
+       }

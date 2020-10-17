@@ -28,72 +28,7 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cd24d5df-29e4-4040-96f4-5e44dea52d97" name="Default Changelist" comment="Partition code cleanup">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/active.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$1b9fced95331691cdcdb.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$2276b0f125294041b40a.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$4dcef3394ead4a887465.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$7501311790b233153972.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$a7245c51066caf41c833.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$af54fd01eec26fb5b419.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$bc637b51312d7137031e.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$bcfaa1a88c381f4ec12a.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$f00db90f9b388523ff88.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/update/update_cache_2.12/inputs" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/update/update_cache_2.12/inputs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/update/update_cache_2.12/output" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/update/update_cache_2.12/output" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/streams/_global/_global/csrLogger/_global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/_global/_global/csrLogger/_global/streams/out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/streams/_global/dependencyPositions/_global/streams/update_cache_2.12/input_dsp" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/_global/dependencyPositions/_global/streams/update_cache_2.12/input_dsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/streams/_global/dependencyPositions/_global/streams/update_cache_2.12/output_dsp" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/_global/dependencyPositions/_global/streams/update_cache_2.12/output_dsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/streams/_global/update/_global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/_global/update/_global/streams/out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/streams/compile/_global/_global/compileBinaryFileInputs/previous" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/compile/_global/_global/compileBinaryFileInputs/previous" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/streams/compile/_global/_global/compileOutputs/previous" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/compile/_global/_global/compileOutputs/previous" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/streams/compile/_global/_global/dependencyClasspathFiles/previous" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/compile/_global/_global/dependencyClasspathFiles/previous" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/streams/compile/dependencyClasspath/_global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/compile/dependencyClasspath/_global/streams/export" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/streams/compile/exportedProducts/_global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/compile/exportedProducts/_global/streams/export" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/streams/compile/externalDependencyClasspath/_global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/compile/externalDependencyClasspath/_global/streams/export" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/streams/compile/managedClasspath/_global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/compile/managedClasspath/_global/streams/export" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/streams/runtime/dependencyClasspath/_global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/runtime/dependencyClasspath/_global/streams/export" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/streams/runtime/exportedProducts/_global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/runtime/exportedProducts/_global/streams/export" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/streams/runtime/externalDependencyClasspath/_global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/runtime/externalDependencyClasspath/_global/streams/export" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/streams/runtime/fullClasspath/_global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/runtime/fullClasspath/_global/streams/export" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/streams/runtime/internalDependencyClasspath/_global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/runtime/internalDependencyClasspath/_global/streams/export" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/streams/runtime/managedClasspath/_global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/runtime/managedClasspath/_global/streams/export" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/ee/ut/cs/bigdata/sp2bench/avro/ExtVPTables.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/ee/ut/cs/bigdata/sp2bench/avro/ExtVPTables.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/ee/ut/cs/bigdata/sp2bench/avro/ExtVPTablesPartition.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/ee/ut/cs/bigdata/sp2bench/avro/ExtVPTablesPartition.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/ee/ut/cs/bigdata/sp2bench/avro/WPTTables.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/ee/ut/cs/bigdata/sp2bench/avro/WPTTables.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/ee/ut/cs/bigdata/sp2bench/avro/WPTTablesPartition.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/ee/ut/cs/bigdata/sp2bench/avro/WPTTablesPartition.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/ee/ut/cs/bigdata/sp2bench/csv/ExtVPTables.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/ee/ut/cs/bigdata/sp2bench/csv/ExtVPTables.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/ee/ut/cs/bigdata/sp2bench/csv/ExtVPTablesPartition.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/ee/ut/cs/bigdata/sp2bench/csv/ExtVPTablesPartition.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/ee/ut/cs/bigdata/sp2bench/csv/VerticalTables.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/ee/ut/cs/bigdata/sp2bench/csv/VerticalTables.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/ee/ut/cs/bigdata/sp2bench/csv/VerticalTablesPartition.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/ee/ut/cs/bigdata/sp2bench/csv/VerticalTablesPartition.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/ee/ut/cs/bigdata/sp2bench/csv/WPTTables.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/ee/ut/cs/bigdata/sp2bench/csv/WPTTables.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/ee/ut/cs/bigdata/sp2bench/csv/WPTTablesPartition.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/ee/ut/cs/bigdata/sp2bench/csv/WPTTablesPartition.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/ee/ut/cs/bigdata/sp2bench/orc/ExtVPTablesPartition.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/ee/ut/cs/bigdata/sp2bench/orc/ExtVPTablesPartition.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/ee/ut/cs/bigdata/sp2bench/orc/WPTTablesPartition.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/ee/ut/cs/bigdata/sp2bench/orc/WPTTablesPartition.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/ee/ut/cs/bigdata/sp2bench/parquet/ExtVPTablesPartition.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/ee/ut/cs/bigdata/sp2bench/parquet/ExtVPTablesPartition.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/ee/ut/cs/bigdata/sp2bench/parquet/WPTTablesPartition.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/ee/ut/cs/bigdata/sp2bench/parquet/WPTTablesPartition.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/.history" beforeDir="false" afterPath="$PROJECT_DIR$/target/.history" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/rdfbenchmarkingproject_2.12-0.1.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/rdfbenchmarkingproject_2.12-0.1.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/streams/_global/_global/checkBuildSources/_global/inputFileStamps/previous" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/_global/_global/checkBuildSources/_global/inputFileStamps/previous" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/streams/_global/_global/csrLogger/_global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/_global/_global/csrLogger/_global/streams/out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/streams/_global/dependencyPositions/_global/streams/update_cache_2.12/output_dsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/_global/dependencyPositions/_global/streams/update_cache_2.12/output_dsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/streams/_global/update/_global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/_global/update/_global/streams/out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/streams/compile/_global/_global/compileSourceFileInputs/previous" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/compile/_global/_global/compileSourceFileInputs/previous" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/streams/compile/compileIncSetup/_global/streams/inc_compile_2.12.zip" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/compile/compileIncSetup/_global/streams/inc_compile_2.12.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/streams/compile/compileIncremental/_global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/compile/compileIncremental/_global/streams/export" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/streams/compile/packageBin/_global/streams/inputs" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/compile/packageBin/_global/streams/inputs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../logs/250M/csv/WPT/250M.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../plots/performance/4_avg.dat" beforeDir="false" afterPath="$PROJECT_DIR$/../plots/performance/4_avg.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../plots/performance/4_val.dat" beforeDir="false" afterPath="$PROJECT_DIR$/../plots/performance/4_val.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../plots/performance/plots.plot" beforeDir="false" afterPath="$PROJECT_DIR$/../plots/performance/plots.plot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../plots/performance/plots_bw.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../plots/queries/plot.gp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../plots/queries/plot_extvp.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../plots/queries/plot_extvp.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../plots/queries/plot_wpt.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../plots/queries/plot_wpt.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../run_custom.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../run_custom.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../run_partition.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../run_partition.sh" afterDir="false" />
-    </list>
+    <list default="true" id="cd24d5df-29e4-4040-96f4-5e44dea52d97" name="Default Changelist" comment="Partition code cleanup" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -327,8 +262,16 @@
       <workItem from="1602235233631" duration="19791000" />
       <workItem from="1602268596876" duration="1715000" />
       <workItem from="1602278622238" duration="3891000" />
-      <workItem from="1602925707507" duration="997000" />
+      <workItem from="1602925707507" duration="1789000" />
     </task>
+    <task id="LOCAL-00001" summary="Partition code cleanup">
+      <created>1602926770573</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1602926770573</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -432,6 +375,10 @@
       <screen x="0" y="0" width="1920" height="1200" />
     </state>
     <state width="1282" height="397" key="GridCell.Tab.1.right/0.0.1920.1200@0.0.1920.1200" timestamp="1601236490992" />
+    <state x="142" y="197" width="802" height="544" key="Vcs.Push.Dialog.v2" timestamp="1602926783237">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="142" y="197" width="802" height="544" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1602926783237" />
     <state x="0" y="0" width="1920" height="1080" key="find.popup" timestamp="1602241393448">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>

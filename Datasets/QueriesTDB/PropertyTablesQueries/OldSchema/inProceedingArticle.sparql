@@ -1,0 +1,16 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX bench:<http://localhost/vocabulary/bench/>
+
+SELECT ?subject ?title  ?booktitle ?homepage ?issued ?pages ?seeAlso ?partOf ?creator ?abstract
+WHERE {
+  ?subject rdf:type bench:Inproceedings.
+  OPTIONAL{?subject <http://purl.org/dc/elements/1.1/title> ?title.}
+  OPTIONAL{?subject <http://www.w3.org/2000/01/rdf-schema#seeAlso> ?seeAlso.}
+  OPTIONAL{?subject <http://purl.org/dc/terms/issued> ?issued.}
+  OPTIONAL{?subject <http://localhost/vocabulary/bench/booktitle> ?booktitle.}
+  OPTIONAL{?subject <http://swrc.ontoware.org/ontology#pages> ?pages.}
+  OPTIONAL{?subject <http://xmlns.com/foaf/0.1/homepage> ?homepage.}
+  OPTIONAL{?subject <http://purl.org/dc/elements/1.1/creator> ?creator.}
+  OPTIONAL{?subject <http://purl.org/dc/terms/partOf> ?partOf.}
+  OPTIONAL{?subject bench:abstract ?abstract}
+}

@@ -1,0 +1,4 @@
+SELECT DISTINCT ?publication ?txt
+       WHERE {
+           ?publication <http://localhost/vocabulary/bench/abstract> ?txt.
+       }
