@@ -21,3 +21,20 @@
 <p align="center">
 <img src="results/plots/performance/WPT_PT/Q8.png" alt="spark" >
 </p>
+
+
+* **ExtVP/VP**
+
+* Q4
+
+<p align="center">
+<img src="results/plots/performance/ExtVP_VP/Q4.png" alt="spark" >
+</p>
+
+
+* Q9
+
+<p align="center">
+<img src="results/plots/performance/ExtVP_VP/Q9.png" alt="spark" >
+</p>
+
