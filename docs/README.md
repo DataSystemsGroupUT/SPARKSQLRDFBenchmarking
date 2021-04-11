@@ -158,6 +158,11 @@ Phase#1 of this project has been accepted at QuWeDa@ISWC conference in Auckland,
 Phase#2 of this project has been accepted at Semantic Big Data (SBD 2020)@In conjunction with ACM SIGMOD 2020 in Portland, OR, USA [PDF](https://dl.acm.org/doi/10.1145/3391274.3393632):
 
 	 Mohamed Ragab, Riccardo Tommasini, Sadiq Eyvazov and Sherif Sakr, Towards making sense of Spark-SQL performance for processing vast distributed RDF datasets, In Proceedings of The International Workshop on Semantic Big Data (SBD ’20).
+	 
+
+Phase#3 of this project has been accepted at 23rd International Workshop on Design, Optimization, Languages and Analytical Processing of Big Data (DOLAP 2021)@EDBT/ICT conference joint in Nicosia,Cyprus March 23 – 26, 2021 [PDF](http://ceur-ws.org/Vol-2840/paper11.pdf):
+
+	 Mohamed Ragab, Riccardo Tommasini, Feras Awaysheh and Juan Carlos Ramos. An In-depth Comparison of Large-scale RDF Relational Schema Optimizations Using Spark-SQL(DOLAP ’21).	 
     
 ### Licence
 ----
