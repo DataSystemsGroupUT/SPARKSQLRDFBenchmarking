@@ -54,5 +54,12 @@ Phase#1 of this project has been accepted at QuWeDa@ISWC conference in Auckland,
 Phase#2 of this project has been accepted at Semantic Big Data (SBD 2020)@In conjunction with ACM SIGMOD 2020 in Portland, OR, USA [PDF](https://dl.acm.org/doi/10.1145/3391274.3393632):
 
 	 Mohamed Ragab, Riccardo Tommasini, Sadiq Eyvazov and Sherif Sakr, Towards making sense of Spark-SQL performance for processing vast distributed RDF datasets, In Proceedings of The International Workshop on Semantic Big Data (SBD ’20).
+	
+
+
+Phase#3 of this project has been accepted at 23rd International Workshop on Design, Optimization, Languages and Analytical Processing of Big Data (DOLAP 2021)@EDBT/ICT conference joint in Nicosia,Cyprus March 23 – 26, 2021 [PDF](http://ceur-ws.org/Vol-2840/paper11.pdf):
+
+	 Mohamed Ragab, Riccardo Tommasini, Feras Awaysheh and Juan Carlos Ramos. An In-depth Comparison of Large-scale RDF Relational Schema Optimizations Using Spark-SQL(DOLAP ’21).
 	 
+
  <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Spark-SQLRDF Benchmarking</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://datasystemsgrouput.github.io/SPARKSQLRDFBenchmarking/" property="cc:attributionName" rel="cc:attributionURL">DataSystemsGroup</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
