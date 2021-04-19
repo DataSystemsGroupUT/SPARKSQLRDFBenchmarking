@@ -110,15 +110,14 @@ This figure shows the summary of our experiments configurations. It guides the r
 
 ### Source Code
 -----
-- [Centralized(Single machine experiments)](https://github.com/DataSystemsGroupUT/SPARKSQLRDFBenchmarking/tree/master/ProjectSourceCode%5BCenteralized%5D/src/main/scala/ee/ut/cs/bigdata/sp2bench) 
-- [Distributed(Spark Cluster experiments)](https://github.com/DataSystemsGroupUT/SPARKSQLRDFBenchmarking/tree/master/ProjectSourceCode%5BDistributed%5D/src/main/scala/ee/ut/cs/bigdata/sp2bench)
+- [Source Code](https://github.com/DataSystemsGroupUT/SPARKSQLRDFBenchmarking/tree/master/ProjectSourceCode) 
+
 
 ### Experiments Running
 -----
-We used the Spark.time function by passing the spark.sql(query) query execution function as a parameter. The output of this function is the running time of evaluating the SQL query into the Spark environment using the Spark session interface. All queries are evaluated for all schemas and partitioned horizontally (HP), or over subject and predicate (SBP, PBP respectively), and on top of all the diﬀerent storage backends Hive, and the HDFS fle formats.
+We used the ```Spark.time``` function by passing the spark.sql(query) query execution function as a parameter. The output of this function is the running time of evaluating the SQL query into the Spark environment using the Spark session interface. All queries are evaluated for all schemas and partitioned horizontally (HP), or over subject and predicate (SBP, PBP respectively), and on top of all the diﬀerent storage backends Hive, and the HDFS file formats.
 
-For each storage backend, partitioning method, and a relational schema, we run the experiments for all queries fve times (excluding the frst cold start run time, to avoid the warm-up bias, and computed an average of the other four
-run times).
+For each storage backend, partitioning method, and a relational schema, we run the experiments for all queries five times (excluding the frst cold start run time, to avoid the warm-up bias, and computed an average of the other four run times).
 
 ### Scripts
 -----
@@ -145,8 +144,10 @@ In the directory of [Scirpts](https://github.com/DataSystemsGroupUT/SPARKSQLRDFB
 ### Project Authors
  - [Mohamed Ragab](https://bigdata.cs.ut.ee/mohamed-ragab)
  - [Riccardo Tommasini](https://rictomm.me/)
+ - [Feras Awaysheh](https://bigdata.cs.ut.ee/feras-m-awaysheh)
  - [Sherif Sakr](http://kodu.ut.ee/~sakr/)
- - [Sadiq Eyvazov]() 
+ - [Sadiq Eyvazov](#)
+ - [Carlos Ramos](#)
 
 
 ### Publications
