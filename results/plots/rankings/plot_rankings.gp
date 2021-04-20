@@ -1,4 +1,4 @@
-set terminal pdf font "Arial,14"
+set terminal pdf font "Arial,17"
 
 set key outside bottom center horizontal width 5 spacing 1
 set ylabel "Rank Score"
@@ -9,8 +9,8 @@ set yrange [0:1]
 set style data histogram
 set style histogram cluster gap 2
 set style fill solid border
-set boxwidth 0.9
-set xtic scale 0
+set boxwidth 1
+# set xtic scale 1
 
 # Storage Backends
 
