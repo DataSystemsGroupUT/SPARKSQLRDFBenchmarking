@@ -1,4 +1,4 @@
-### Descriptive and Diagnostic Analysis
+### Descriptive and Diagnostic Analysis (SP2Bench Scenario)
 
 #### Query Performance Analysis
 
