@@ -39,7 +39,7 @@ In the following, we focus our analysis on the longest running queries, as they 
 
 ### Diagnostic Analysis:
 
-Moving to the diagnostic analysis, we try to explain the previous observations by analyzing the query complexity (Shown in the table [here]()) and using our knowledge about Spark and the experimental dimensions, i.e. relational schema, partitioning techniques, storage backends. We try to provide diagnostic analysis concerning these dimensions rather than investigating each single query result.  
+Moving to the diagnostic analysis, we try to explain the previous observations by analyzing the query complexity (Shown in the table [here](https://datasystemsgrouput.github.io/SPARKSQLRDFBenchmarking/images/queryAnalysis.png)) and using our knowledge about Spark and the experimental dimensions, i.e. relational schema, partitioning techniques, storage backends. We try to provide diagnostic analysis concerning these dimensions rather than investigating each single query result.  
 
 #### Why RDF relational Schema $X$ outperforms another Schema $Y$?
 
