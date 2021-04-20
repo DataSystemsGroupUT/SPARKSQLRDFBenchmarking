@@ -2,7 +2,7 @@
 
 #### Query Performance Analysis
 
-SP2Bench Querie Averge runtime figures can be seen in this [link]().
+SP2Bench Querie Averge runtime figures can be seen in this [link](https://datasystemsgrouput.github.io/SPARKSQLRDFBenchmarking/DistributedExperiments_Long_Short_RunningTime_Queries.html).
 
 ##### Short , medium, and long running queries:
  
