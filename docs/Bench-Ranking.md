@@ -57,6 +57,17 @@ A motivation scenario was triggered by analyzing these results, showing no concl
 The experiment results over different settings also show no decisive configuration setting over the assessed dimensions (i.e., relational schema, partitioning technique, and storage backend), making the practitioner selecting setup a complex task.
 
 
+### Bench-Ranking Criteria
+
+Motivated by the limitations of descriptive and diagnostic analyses, we advocate for indicators such as applying **ranking** techniques for these dimensions.
+
+#### Individual Ranking Criteria:
+
+In these regards, ranking criteria, e.g., the one proposed in [akhter2018empirical](dx.doi.org/10.1007/978-3-030-03667-6_1) for various RDF partitioning techniques, helps provide a high-level view of the performance of a particular dimension across queries. Thus, we have extended the proposed ranking techniques to schemas and storage. The following equation shows a generalized formula for calculating ranking scores.
+
+
+
+
 
 
 
