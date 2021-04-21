@@ -61,6 +61,6 @@ The experiment results over different settings also show no decisive configurati
 
 Motivated by the limitations of descriptive and diagnostic analyses, we advocate for indicators such as applying **ranking** techniques for these dimensions.
 
-
-
+* [Individual Ranking Criteria](IndividualRankingCriteria.md)
+* [Combined Ranking Criteria](CombinedRankingCriteria.md)
 
