@@ -66,6 +66,9 @@ Motivated by the limitations of descriptive and diagnostic analyses, we advocate
 In these regards, ranking criteria, e.g., the one proposed in [akhter2018empirical](https://www.springerprofessional.de/en/an-empirical-evaluation-of-rdf-graph-partitioning-techniques/16257484) for various RDF partitioning techniques, helps provide a high-level view of the performance of a particular dimension across queries. Thus, we have extended the proposed ranking techniques to schemas and storage. The following equation shows a generalized formula for calculating ranking scores.
 
 
+<a href="https://www.codecogs.com/eqnedit.php?latex=R=\sum_{r=1}^{d}\frac{O_{dim}(r)*(d-r)}{Q(d-1)},&space;0<&space;R&space;\leq&space;1" target="_blank"><img src="https://latex.codecogs.com/gif.latex?R=\sum_{r=1}^{d}\frac{O_{dim}(r)*(d-r)}{Q(d-1)},&space;0<&space;R&space;\leq&space;1" title="R=\sum_{r=1}^{d}\frac{O_{dim}(r)*(d-r)}{Q(d-1)}, 0< R \leq 1" /></a>
+
+
 
 
 
