@@ -182,6 +182,20 @@ The **Average (AVG)** criterion leverages an *arithmetic* interpretation of the 
 
 <div style="text-align:center">  <img src="https://latex.codecogs.com/gif.latex?AVG={\frac&space;{1}{3}}*(R_{f}&plus;R_{p}&plus;R_{s})" title="AVG={\frac {1}{3}}*(R_{f}+R_{p}+R_{s})" /> </div>
 
+#### Weighted Average
+
+The **Weighted Average (WAvg)** criterion also leverages an *arithmetic* interpretation of the rankings of our three experimental dimensions. However, it assumes that each dimension contributes differently to the performance. Thus, it requires assigning weights to each individual rank according to its impact in the experiments, e.g., we have 5 different storage backends, 3 partitioning techniques, and 3 relational schemas). (see the following equation)
+
+<div style="text-align:center">  <img src="https://latex.codecogs.com/gif.latex?AVG={\frac&space;{1}{3}}*(R_{f}&plus;R_{p}&plus;R_{s})" title="AVG={\frac {1}{3}}*(R_{f}+R_{p}+R_{s})" /> </div>
+
+#### The *Triangle Area* Ranking (Rta) 
+
+This criterion leverages a geometric interpretation of the rankings of our three experimental dimensions. 
+It looks at the triangle subsumed by each ranking criterion (**R_s**, **R_p**, and **R_f**). The **trade-offs** ranking dimensions are presented by the triangle sides. The criterion aims at *maximizing* the area of this triangle (i.e., the <font color="blue">blue</font> triangle) the closer to the ideal (outer red triangle), the better it scores. In other words, the bigger the area of this triangle covers, the better the performance of the three ranking dimensions altogether.
+
+
+<div style="text-align:center">  <img src="https://user-images.githubusercontent.com/39013653/115556319-3c584780-a2b9-11eb-8f87-2bf962ea0e0c.png" width="400"/> </div>
+
 
 
 
