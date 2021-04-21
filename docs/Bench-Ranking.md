@@ -167,9 +167,9 @@ Figures show that separate ranking criteria only optimize one dimension, maximiz
 
 
 <p float="left">
-  <img src="images/Rs1.png" width="100" />
-  <img src="images/Rf1.png" width="100" /> 
-  <img src="images/Rp1.png" width="100" />
+  <img src="images/Rs1.png" width="300" />
+  <img src="images/Rf1.png" width="300" /> 
+  <img src="images/Rp1.png" width="300" />
 </p>
 
 
