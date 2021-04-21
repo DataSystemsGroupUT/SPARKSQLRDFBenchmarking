@@ -76,5 +76,7 @@ In the above equation, $R$ defines the *Rank Score* of the ranked dimension (i.e
 
 <div style="text-align:center"> <img src="images/RankScoresCalculation.png" width="500" height="250" /> </div>
 
-In the above example, each Rank Score (**R**) value for a dimension is calculated using the above equation 
+In the above example, each Rank Score (**R**) value for a dimension is calculated using the Equation (1). Let's take an example, of calcuating R value for the **ST** relational schema. 
+<img src="https://latex.codecogs.com/gif.latex?R_s(ST)=\sum_{r=1}^{3}\frac{O_{dim}(r)*(3-r)}{11*(3-1)}&space;=\frac{1*(3-1)&plus;3*(3-2)&plus;7*(3-3)}{22}=~0.23" title="R_s(ST)=\sum_{r=1}^{3}\frac{O_{dim}(r)*(3-r)}{11*(3-1)} =\frac{1*(3-1)+3*(3-2)+7*(3-3)}{22}=~0.23" />
+
 
