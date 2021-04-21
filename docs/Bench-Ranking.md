@@ -63,7 +63,7 @@ Motivated by the limitations of descriptive and diagnostic analyses, we advocate
 
 #### Individual Ranking Criteria:
 
-In these regards, ranking criteria, e.g., the one proposed in [akhter2018empirical](dx.doi.org/10.1007/978-3-030-03667-6_1) for various RDF partitioning techniques, helps provide a high-level view of the performance of a particular dimension across queries. Thus, we have extended the proposed ranking techniques to schemas and storage. The following equation shows a generalized formula for calculating ranking scores.
+In these regards, ranking criteria, e.g., the one proposed in [akhter2018empirical](https://www.springerprofessional.de/en/an-empirical-evaluation-of-rdf-graph-partitioning-techniques/16257484) for various RDF partitioning techniques, helps provide a high-level view of the performance of a particular dimension across queries. Thus, we have extended the proposed ranking techniques to schemas and storage. The following equation shows a generalized formula for calculating ranking scores.
 
 
 
