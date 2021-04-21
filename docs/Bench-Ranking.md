@@ -193,8 +193,18 @@ The **Weighted Average (WAvg)** criterion also leverages an *arithmetic* interpr
 This criterion leverages a geometric interpretation of the rankings of our three experimental dimensions. 
 It looks at the triangle subsumed by each ranking criterion (**R_s**, **R_p**, and **R_f**). The **trade-offs** ranking dimensions are presented by the triangle sides. The criterion aims at *maximizing* the area of this triangle (i.e., the <font color="blue">blue</font> triangle) the closer to the ideal (outer red triangle), the better it scores. In other words, the bigger the area of this triangle covers, the better the performance of the three ranking dimensions altogether.
 
-
 <div style="text-align:center">  <img src="https://user-images.githubusercontent.com/39013653/115556319-3c584780-a2b9-11eb-8f87-2bf962ea0e0c.png" width="400"/> </div>
+
+The following formula computes the actual triangle area. Simply, it sums up the triangle area of the three triangle **A**, **B**, and **C** by two of its sides which are the rank scores of each dimension, i.e **R_s**, **R_p**, or **R_f** (dashed triangle sides), and the angle between both of them (i.e **120** in this case). Then, this triangle area is normalized dividing it by the area of the optimal <font color="red">**red**</font> triangle **D** triangle.  
+    
+<img src="https://latex.codecogs.com/gif.latex?Triangle&space;Area&space;(Rta)=\frac{1}{2}\sin(120)&space;(R_f*R_p&plus;R_s*R_p&plus;R_f*R_s)" title="Triangle Area (Rta)=\frac{1}{2}\sin(120) (R_f*R_p+R_s*R_p+R_f*R_s)" />
+
+For example, the actual area of the blue triangle of the figure above is calculated as follows:
+
+<img src="https://latex.codecogs.com/gif.latex?Rta&space;=\frac{1}{2}\sin(120)&space;(0.75*0.771&plus;0.73*0.77&plus;0.75*0.73)&space;=&space;0.73" title="Rta =\frac{1}{2}\sin(120) (0.75*0.771+0.73*0.77+0.75*0.73) = 0.73" />
+
+
+
 
 
 
