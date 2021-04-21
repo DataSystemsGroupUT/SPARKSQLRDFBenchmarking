@@ -8,3 +8,14 @@ A rank set **R** is an ordered set of elements ordered by a ranking score. A ran
 
 This problem is well-known in **Information Retrieval** (IR) applications, where several metrics, e.g., *Precision* and *Recall*, are used to validate the ranking. Nevertheless, the main difference between *IR* and bench-ranking is the lack of ground truth. The most reasonable solution is to employ multiple ranking criteria and compare the prescriptions with the actual experimental results. 
 However, this approach falls back to the problem relates to **ranking consensus**. Ranking consensus is different from combined ranking. The former is related to choosing between two preference sets, and the latter is about designing a ranking metric that considers multiple dimensions.
+
+
+In this regards, **Bench-ranking** proposes to measure the following:
+
+- (i) The ranking **confidence**:by checking how accurate a ranking criterion of its **top-ranked** configurations according to the actual query positioning of those configurations. 
+- (ii) The ranking **coherence**, that is the **level of agreement** between two ranking sets using different ranking criteria or across different experiments.
+
+
+To measure the confidence, we propose the following approach described by the following equation:
+
+<img src="https://latex.codecogs.com/gif.latex?\begin{equation}\label{eq:cirteriaaccuracyformula}&space;A(\mathcal{R}^{k})=1-\sum&space;_{i=0}^{Q}\sum&space;_{j=0}^{k}&space;\frac{\bar{A}(i,j)}{Q*k},~~~&space;\bar{A}(i,j)=\begin{cases}&space;1&space;&&space;\mathcal{R}^k[j]&space;\in&space;\mathcal{Q}i_h^{i}\\&space;0&space;&&space;otherwise&space;\end{cases}&space;\end{equation}" title="\begin{equation}\label{eq:cirteriaaccuracyformula} A(\mathcal{R}^{k})=1-\sum _{i=0}^{Q}\sum _{j=0}^{k} \frac{\bar{A}(i,j)}{Q*k},~~~ \bar{A}(i,j)=\begin{cases} 1 & \mathcal{R}^k[j] \in \mathcal{Q}i_h^{i}\\ 0 & otherwise \end{cases} \end{equation}" />
