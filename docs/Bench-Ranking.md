@@ -16,7 +16,7 @@ Here, we reflect on the gap of performance analysis in existing works that use B
 In particular, we narrow down by discussing the problem of performance analysis alongside a well-known decision-making framework from **Gartner** shown below.
 
 
-<img src="https://github.com/DataSystemsGroupUT/SPARKSQLRDFBenchmarking/blob/master/docs/images/Gartner.JPG" />
+<div style="text-align:center"> <img src="https://github.com/DataSystemsGroupUT/SPARKSQLRDFBenchmarking/blob/master/docs/images/Gartner.JPG" /> </div>
 
 
 #### Descriptive analysis:
@@ -36,7 +36,7 @@ This level reduces the need for human intervention even further by making the in
 Regard benchmarking, the prescriptive analysis provides the criteria for selecting the best possible approach given. 
 
 
-<img src="https://github.com/DataSystemsGroupUT/SPARKSQLRDFBenchmarking/blob/master/docs/images/AnalyticsLevels.png" />
+<div style="text-align:center"> <img src="https://github.com/DataSystemsGroupUT/SPARKSQLRDFBenchmarking/blob/master/docs/images/AnalyticsLevels.png" /> </div>
 
 
 
