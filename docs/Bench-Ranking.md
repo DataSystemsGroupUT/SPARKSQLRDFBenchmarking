@@ -202,11 +202,3 @@ The following formula computes the actual triangle area. Simply, it sums up the 
 For example, the actual area of the blue triangle of the figure above is calculated as follows:
 
 <img src="https://latex.codecogs.com/gif.latex?Rta&space;=\frac{1}{2}\sin(120)&space;(0.75*0.771&plus;0.73*0.77&plus;0.75*0.73)&space;=&space;0.73" title="Rta =\frac{1}{2}\sin(120) (0.75*0.771+0.73*0.77+0.75*0.73) = 0.73" />
-
-
-
-
-
-
-
-
