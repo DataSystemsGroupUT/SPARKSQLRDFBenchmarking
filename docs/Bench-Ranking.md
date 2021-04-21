@@ -84,9 +84,10 @@ Similarly, VT, and PT schemata are ranked using the above equation, but accordin
 
 **Note:** When we apply the generalized ranking formula in Equation (1), we get three rankings for our three mentioned experimental dimensions (Relational Schemata; Partitioning, and Storage Backends), namely, **"R_s"** , **"R_p"**, and **"R_f"** accordingly. 
 
+
 ##### Individual Ranking Criteria (R_s, R_p, and R_f) challenges:
 
-Applying  the  ranking  criteria  independently for each dimension supports explanations of the results [5]. Nevertheless,we observed that ranking prescriptions  are incoherent across dimensions. The mostreasonable explanation is that these *mono-dimensional* ranking criteria can not capturea general view, leading to decisive trade-offs.
+Applying  the  ranking  criteria  independently for each dimension supports explanations of the results [5]. Nevertheless,we observed that ranking prescriptions  are incoherent across dimensions. The most reasonable explanation is that these *mono-dimensional* ranking criteria can not capturea general view, leading to decisive trade-offs.
 
 ###### Example that shows the trade-offs among our problem experimental dimensions:
 
@@ -157,5 +158,29 @@ Indeed, for each dimension and across scalable datasets, we can mark the best pe
 - Last but not least, we can mark roughly that **ORC(3)** followed by **Parquet(4)** are the best storage backends.
 
 
+**Nevertheless**, ranking over one dimension and ignoring the others ends up with selecting different configurations. For instance, ranking over **R_s**, i.e.,relational schema; **R_p**, i.e., partitioning technique, or **R_f**, i.e., the storage backend, end up selecting different combinations of schema, partitioning and storage backends.
+
+
+In the following figure, we show the separate ranking criteria wrt the geometrical representation of the ranking criteria dimensions. The "Blue triangles" in the plots represent the actual optimization achieved by each ranking criteria. 
+
+Figures show that separate ranking criteria only optimize one dimension, maximizing the corresponding rank, while other dimensions can have non-optimal rank scores. 
+
+
+<p float="left">
+  <img src="images/Rs1.png" width="100" />
+  <img src="images/Rf1.png" width="100" /> 
+  <img src="images/Rp1.png" width="100" />
+</p>
+
+
+
+
+
+
+
+
+In contrast, combined ranking criteria ($AVG$ ranking example, Figure~\ref{fig:avgrank}) optimizes all the dimensions together. %Indeed, the areas in these ranking criteria are in total non-optimal. 
+%\todo{Figures~\ref{fig:4}}
+These ranking techniques try to optimize the dimensions' trade-offs as much as possible by combining them (i.e. averaging, weighted averaging, or maximizing the optimized area). %Thus, they result in better-optimized areas of the three dimensions all together.
 
 
