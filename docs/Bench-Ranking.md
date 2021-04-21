@@ -61,6 +61,10 @@ The experiment results over different settings also show no decisive configurati
 
 Motivated by the limitations of descriptive and diagnostic analyses, we advocate for indicators such as applying **ranking** techniques for these dimensions.
 
-* [Individual Ranking Criteria](IndividualRankingCriteria.md)
+* [Individual Ranking Criteria](IndividualRankingCriteria.md) 
+
+Genralized Ranking criteria inspiered by ranking partitioning techniques proposed by [akhter2018empirical](https://www.springerprofessional.de/en/an-empirical-evaluation-of-rdf-graph-partitioning-techniques/16257484). We extend this partitoning ranking to cover other two dimensions, mamely, the RDF Relational schemata,and Storage backends. This ranking criteria is optmizing one dimension at a time. 
+
 * [Combined Ranking Criteria](CombinedRankingCriteria.md)
 
+To identify which configuration is the best performing, we need to optimize along all the dimensions simultaneously. In practice, this means designing a multi-dimensional (i.e combined) ranking criteria. To this extent, we propose **three** alternative techniques that aim at combining the ranking dimensions into a single unified ranking criterion. These criteria, are **Averge (AVG)**, **Weighted Average (WAvg)**, and **Maxmized Triangle Area (Rta)** (for all dimensions, each dimesion as a side in the triangle).
