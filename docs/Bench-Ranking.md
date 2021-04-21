@@ -16,7 +16,7 @@ Here, we reflect on the gap of performance analysis in existing works that use B
 In particular, we narrow down by discussing the problem of performance analysis alongside a well-known decision-making framework from **Gartner** shown below.
 
 
-<div style="text-align:center"> <img src="images/Gartner.JPG" /> </div>
+<div style="text-align:center"> <img src="images/Gartner.JPG" width="500" height="250" /> </div>
 
 
 #### Descriptive analysis:
@@ -36,7 +36,7 @@ This level reduces the need for human intervention even further by making the in
 Regard benchmarking, the prescriptive analysis provides the criteria for selecting the best possible approach given. 
 
 
-<div style="text-align:center"> <img src="images/AnalyticsLevels.png" /> </div>
+<div style="text-align:center"> <img src="images/AnalyticsLevels.png"  width="400" height="250" /> </div>
 
 
 
@@ -65,6 +65,8 @@ Motivated by the limitations of descriptive and diagnostic analyses, we advocate
 
 In these regards, ranking criteria, e.g., the one proposed in [akhter2018empirical](https://www.springerprofessional.de/en/an-empirical-evaluation-of-rdf-graph-partitioning-techniques/16257484) for various RDF partitioning techniques, helps provide a high-level view of the performance of a particular dimension across queries. Thus, we have extended the proposed ranking techniques to schemas and storage. The following equation shows a generalized formula for calculating ranking scores.
 
+- Equation (1)
+
 <img src="https://latex.codecogs.com/gif.latex?R=\sum_{r=1}^{d}\frac{O_{dim}(r)*(d-r)}{Q(d-1)},&space;0<&space;R&space;\leq&space;1" title="R=\sum_{r=1}^{d}\frac{O_{dim}(r)*(d-r)}{Q(d-1)}, 0< R \leq 1" />
 
 
@@ -72,7 +74,7 @@ In the above equation, $R$ defines the *Rank Score* of the ranked dimension (i.e
 
 ##### Example of Calulating Rank Scores for the different dimensions:
 
+<div style="text-align:center"> <img src="images/RankScoresCalculation.png" width="500" height="250" /> </div>
 
-<div style="text-align:center"> <img src="images/RankScoresCalculation.png" /> </div>
-
+In the above example, each Rank Score (**R**) value for a dimension is calculated using the above equation 
 
