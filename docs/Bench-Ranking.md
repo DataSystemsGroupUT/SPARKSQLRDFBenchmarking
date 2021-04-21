@@ -165,7 +165,6 @@ In the following figure, we show the separate ranking criteria wrt the geometric
 
 Figures show that separate ranking criteria only optimize one dimension, maximizing the corresponding rank, while other dimensions can have non-optimal rank scores. 
 
-
 <p float="left">
   <img src="images/Rs1.png" width="300" />
   <img src="images/Rf1.png" width="300" /> 
@@ -173,14 +172,17 @@ Figures show that separate ranking criteria only optimize one dimension, maximiz
 </p>
 
 
+#### Combined Ranking Criteria:
+
+To identify which configuration is the best, we need to optimize along all the dimensions simultaneously. In practice, this means designing a multi-dimensional ranking. To this extent, we propose **three** alternative techniques that aim at combining the ranking dimensions into a single unified ranking criterion.
+
+##### Average
+
+The **Average (AVG)** criterion leverages an *arithmetic* interpretation of the rankings of our three experimental dimensions. In practice, it aims at maximising their sum and by computing the arithmetic mean of the three rankings (**R_s**, **R_p**, and **R_f**), see the folowing equation.
+
+<div style="text-align:center">  <img src="https://latex.codecogs.com/gif.latex?AVG={\frac&space;{1}{3}}*(R_{f}&plus;R_{p}&plus;R_{s})" title="AVG={\frac {1}{3}}*(R_{f}+R_{p}+R_{s})" /> </div>
 
 
 
-
-
-
-In contrast, combined ranking criteria ($AVG$ ranking example, Figure~\ref{fig:avgrank}) optimizes all the dimensions together. %Indeed, the areas in these ranking criteria are in total non-optimal. 
-%\todo{Figures~\ref{fig:4}}
-These ranking techniques try to optimize the dimensions' trade-offs as much as possible by combining them (i.e. averaging, weighted averaging, or maximizing the optimized area). %Thus, they result in better-optimized areas of the three dimensions all together.
 
 
