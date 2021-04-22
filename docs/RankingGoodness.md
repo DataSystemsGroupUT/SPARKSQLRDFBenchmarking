@@ -2,19 +2,21 @@
 
 A ranking criterion aims at identifying the configurations that have the overall best results. In practice, We can consider a ranking criterion **"good"** if it does not suggest a low-performing configuration. In other words, we are not interested to be the best at any particular query as long as we are never the worst. Herein, we discuss how can we measure such **goodness**, i.e., **how to evaluate the ranking measure?**.
 
-### Def1: Rank Set
+##### Def1: Rank Set
 A rank set **R** is an ordered set of elements ordered by a ranking score. A rank index **ri** is the index of a ranked element **i** within a ranking set R , i.e., R|r_i|=i. We denote with
 **R^k** the left most subset of R of length **k**, and we denote with **R_x** the rank set calculated according to the Rank score **R_x**. 
 
 This problem is well-known in **Information Retrieval** (IR) applications, where several metrics, e.g., *Precision* and *Recall*, are used to validate the ranking. Nevertheless, the main difference between *IR* and bench-ranking is the lack of ground truth. The most reasonable solution is to employ multiple ranking criteria and compare the prescriptions with the actual experimental results. 
 However, this approach falls back to the problem relates to **ranking consensus**. Ranking consensus is different from combined ranking. The former is related to choosing between two preference sets, and the latter is about designing a ranking metric that considers multiple dimensions.
 
-
+#### Goodness Criteria:
 In this regards, **Bench-ranking** proposes to measure the following:
 
 - The ranking **confidence**:by checking how accurate a ranking criterion of its **top-ranked** configurations according to the actual query positioning of those configurations. 
 - The ranking **coherence**, that is the **level of agreement** between two ranking sets using different ranking criteria or across different experiments.
 
+
+### Confidnce
 
 To measure the **confidence**, we propose the following approach described by the following equation:
 
@@ -404,3 +406,14 @@ Table below shows the "confidence" ratios calcuated for all the ranking criteria
   </tr>
 </tbody>
 </table>
+
+
+#### coherence Measure:
+To measure the coherence of each ranking criterion, we opt for **Kendall index**, which counts the number of pairwise disagreements between two rank sets: the larger the distance, the more dissimilar the rank sets are. Notably, we assume that rank sets have the same number of elements. Kendall’s distance between two rank sets R_1 and R_2, where P represent the set of unique pairs of distinct elements in the two sets can be calculated using the following equation:
+
+
+<img src="https://latex.codecogs.com/gif.latex?\begin{equation}\label{eq:kendall}&space;K\left(\mathcal{R}1,&space;\mathcal{R}2\right)=\sum_{\{i,&space;j\}&space;\in&space;P}\frac{\bar{K}_{i,&space;j}\left(\mathcal{R}1,&space;\mathcal{R}2\right)}{\mid&space;P&space;\mid}&space;\end{equation}&space;\\&space;\\&space;\bar{K}_{i,&space;j}\left(\mathcal{R}1,&space;\mathcal{R}2\right&space;)=&space;\begin{cases}&space;0&space;&&space;\mathcal{R}1[r^1_i]=&space;\mathcal{R}2[r^2_i]=&space;i&space;~\wedge&space;\mathcal{R}1[r^1_j]=&space;\mathcal{R}2[r^2_j]=&space;j&space;~\wedge&space;r^1_i-r^1_j&space;=&space;r^2_i&space;-&space;r^2_j\\&space;1&space;&&space;\text{otherwise}&space;\end{cases}\" title="\begin{equation}\label{eq:kendall} K\left(\mathcal{R}1, \mathcal{R}2\right)=\sum_{\{i, j\} \in P}\frac{\bar{K}_{i, j}\left(\mathcal{R}1, \mathcal{R}2\right)}{\mid P \mid} \end{equation} \\ \\ \bar{K}_{i, j}\left(\mathcal{R}1, \mathcal{R}2\right )= \begin{cases} 0 & \mathcal{R}1[r^1_i]= \mathcal{R}2[r^2_i]= i ~\wedge \mathcal{R}1[r^1_j]= \mathcal{R}2[r^2_j]= j ~\wedge r^1_i-r^1_j = r^2_i - r^2_j\\ 1 & \text{otherwise} \end{cases}\" />
+
+For instance, the Kendall's index (**K**) between **R_s (Top-3)** for **100M** and **250M** is 0.33 (See table above of best_ranked_configuration for the individual criteria in the page).
+
+
