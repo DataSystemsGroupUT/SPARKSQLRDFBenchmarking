@@ -13,10 +13,10 @@ However, this approach falls back to the problem relates to **ranking consensus*
 In this regards, **Bench-ranking** proposes to measure the following:
 
 - The ranking **confidence**:by checking how accurate a ranking criterion of its **top-ranked** configurations according to the actual query positioning of those configurations. 
-- The ranking **coherence**, that is the **level of agreement** between two ranking sets using different ranking criteria or across different experiments.
+- The ranking **coherence**, that is the **level of agreement** between two ranking sets using different ranking criteria or across different experiments. The invariant in our case is the Scale (across different dataset sizes from 100-to-250, 250-500,100-500M datsets).
 
 
-### Confidnce
+### 1- The Confidnce Measure
 
 To measure the **confidence**, we propose the following approach described by the following equation:
 
@@ -25,7 +25,7 @@ To measure the **confidence**, we propose the following approach described by th
 Given the **top-k** subset of the ranking set R we count how many times its elements occur in the bottom-h subset of the ranking set Q_h(i), which corresponds to the ranking set obtained by using the execution time of query **Q_i** as ranking criterion, for each query. In other words, we look at the rank of the top-ranked configurations (by a ranking criteria R), and make sure by the above formula that they are not in the bottm-h query positions/ranked configurations. This is computed for all queries in the benchmark. the intuition is the ranking top ranked configuration shouldn't appear as worst performing for the queries.
 
 
-
+**Table of best 3 configuration ranked by the criteria Rf,Rp, and Rs (individual criteria), across our experimental datasets**
 <table class="tg">
 <thead>
   <tr>
@@ -75,8 +75,11 @@ Given the **top-k** subset of the ranking set R we count how many times its elem
 </tbody>
 </table>
 
-Example: For instance, let's consider the **R_s** rank and the **100M** dataset evaluation. The top-3 ranked configurations (see the table above) are R_s (Top-3)={b.iii.2,b.iii.1, **b.iii.4**}} that overlaps only with the **bottom-3** ranked configurations query Q4, i.e., Q4_(bottom-3)={b.iii.3,b.iii.4,a.iii.2}. Thus, A(R_s [3])=1- (1/(11*3))=0.969.
+**Example:** 
 
+For instance, let's consider the **R_s** rank and the **100M** dataset evaluation. The top-3 ranked configurations (see the table above) are R_s (Top-3)={b.iii.2,b.iii.1, **b.iii.4**}} that overlaps only with the **bottom-3** ranked configurations query Q4, i.e., Q4_(bottom-3)={b.iii.3,b.iii.4,a.iii.2}. Thus, A(R_s [3])=1- (1/(11*3))=0.969.
+
+**Example on one of the datsets (100M):**
 
 Table below shows the "confidence" ratios calcuated for all the ranking criteria (i.e, [individual](IndividualRankingCriteria.md) **R_f, R_s,R_p**, and [combined](CombinedRankingCriteria.md) **AVG, WAvg, Rta**). The table show the top-3 ranked configurations for each criteria, alongside all the the benchmark queris ranking of these configurations. The column **"rank > 22"** checks whehther these configurations opted by each criteria are not worst than the **22** bottom-ranked configurations according to the queries. Notably, this **22** is arbitraily used, but we can use any number *restricting** or *relaxing* the confidence calculation in the formula. In these [sheets](https://docs.google.com/spreadsheets/d/1cff9-IVtg4d113TSkdGOBVCmOt6NCOdrorqFhK04g5E/edit?usp=sharing), you can find other examples of calculating the confidence with different **h-bottom** values other than *22* example.
 
@@ -408,7 +411,7 @@ Table below shows the "confidence" ratios calcuated for all the ranking criteria
 </table>
 
 
-#### coherence Measure:
+#### 2- The Coherence Measure:
 To measure the coherence of each ranking criterion, we opt for **Kendall index**, which counts the number of pairwise disagreements between two rank sets: the larger the distance, the more dissimilar the rank sets are. Notably, we assume that rank sets have the same number of elements. Kendall’s distance between two rank sets R_1 and R_2, where P represent the set of unique pairs of distinct elements in the two sets can be calculated using the following equation:
 
 
