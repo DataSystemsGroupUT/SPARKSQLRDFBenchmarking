@@ -30,15 +30,7 @@ Applying  the  ranking  criteria  independently for each dimension supports expl
 
 The following table shows  the  best three-ranked configuration combinations. The ”best-ranked” means the configuration combination that shows the highest rank  score according to each ranking criterion (R_s, R_p, and R_f). Looking at the table, we observe that ranking over one of the dimensions provides a better insight  for the decision maker.
 
-<style type="text/css">
-.tg  {border-collapse:collapse;border-spacing:0;}
-.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
-  overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
-  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg .tg-c3ow{border-color:inherit;text-align:center;vertical-align:top}
-.tg .tg-rvyq{border-color:inherit;font-style:italic;font-weight:bold;text-align:center;vertical-align:top}
-</style>
+
 <table class="tg">
 <thead>
   <tr>
