@@ -466,3 +466,4 @@ Table below shows the **K** index as per Equation (2) in this page. All the crit
 </table>
 
 
+**Note** All the scripts for calculating the Kendall's index can be found in the [scripts]() in this repo, and attached with the calculations [sheet](https://docs.google.com/spreadsheets/d/1cff9-IVtg4d113TSkdGOBVCmOt6NCOdrorqFhK04g5E/edit?usp=sharing).
