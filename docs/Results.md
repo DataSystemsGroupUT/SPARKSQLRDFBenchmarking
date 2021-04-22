@@ -19,7 +19,7 @@
       * ([Combined "Bench-Ranking"](CombinedRankingCriteria.md)):
         * Find and download the combined-Ranking criteria results from this [link](https://docs.google.com/spreadsheets/d/1cff9-IVtg4d113TSkdGOBVCmOt6NCOdrorqFhK04g5E/edit?usp=sharing).
        * Bench-Ranking (i.e Ranking criteria) goodness results:
-         * In this [link](https://docs.google.com/spreadsheets/d/1cff9-IVtg4d113TSkdGOBVCmOt6NCOdrorqFhK04g5E/edit?usp=sharing), we keep the ranking goodness metrics (i.e, coherence using Kendall's index, as well as the confidence of each ranking). 
+         * In this [link](https://docs.google.com/spreadsheets/d/1cff9-IVtg4d113TSkdGOBVCmOt6NCOdrorqFhK04g5E/edit?usp=sharing), we keep the ranking goodness metrics/measures and results for the ranking criteria. 
     * **Phase#4** results (Schema Advancments Benchmarking):
       * [Relational Schemata Optimizattion VS BaseLine Schemata Results](OptimizedVsBaselinComparsions.md)  
       
