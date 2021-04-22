@@ -76,7 +76,7 @@ Given the **top-k** subset of the ranking set R we count how many times its elem
 Example: For instance, let's consider the **R_s** rank and the **100M** dataset evaluation. The top-3 ranked configurations (see the table above) are R_s (Top-3)={b.iii.2,b.iii.1, **b.iii.4**}} that overlaps only with the **bottom-3** ranked configurations query Q4, i.e., Q4_(bottom-3)={b.iii.3,b.iii.4,a.iii.2}. Thus, A(R_s [3])=1- (1/(11*3))=0.969.
 
 
-Table below shows the "confidence" ratios calcuated for all the ranking criteria (i.e, [individual]() R_f, R_s,R_p, and [combined]() AVG, WAvg, Rta). The table show the top-3 ranked configurations for each criteria, alongside all the the benchmark queris ranking of these configurations. The column **"Top ranked > 22"** checks whehther these configurations opted by each criteria are not worst than the **22** bottom-ranked configurations according to the queries. Notably, this **22** is arbitraily used, but we can use any number *restricting** or *relaxing* the confidence calculation in the formula. In these [sheets](https://docs.google.com/spreadsheets/d/1cff9-IVtg4d113TSkdGOBVCmOt6NCOdrorqFhK04g5E/edit?usp=sharing), you can find other examples of calculating the confidence with different **h-bottom** values other than *22* example.
+Table below shows the "confidence" ratios calcuated for all the ranking criteria (i.e, [individual](IndividualRankingCriteria.md) **R_f, R_s,R_p**, and [combined](CombinedRankingCriteria.md) **AVG, WAvg, Rta**). The table show the top-3 ranked configurations for each criteria, alongside all the the benchmark queris ranking of these configurations. The column **"rank > 22"** checks whehther these configurations opted by each criteria are not worst than the **22** bottom-ranked configurations according to the queries. Notably, this **22** is arbitraily used, but we can use any number *restricting** or *relaxing* the confidence calculation in the formula. In these [sheets](https://docs.google.com/spreadsheets/d/1cff9-IVtg4d113TSkdGOBVCmOt6NCOdrorqFhK04g5E/edit?usp=sharing), you can find other examples of calculating the confidence with different **h-bottom** values other than *22* example.
 
 
 
@@ -84,8 +84,8 @@ Table below shows the "confidence" ratios calcuated for all the ranking criteria
 <thead>
   <tr>
     <th class="tg-7btt" colspan="12">Confidence of each Ranking Criteria</th>
-    <th class="tg-fymr" rowspan="3">Top_Ranked &gt; 22</th>
-    <th class="tg-fymr" rowspan="3">Confidence</th>
+    <th class="tg-fymr" rowspan="3">rank &gt; 22</th>
+    <th class="tg-fymr" rowspan="3">A(R)</th>
   </tr>
   <tr>
     <td class="tg-fymr">100M</td>
