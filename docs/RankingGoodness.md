@@ -417,6 +417,52 @@ To measure the coherence of each ranking criterion, we opt for **Kendall index**
 
 <img src="https://latex.codecogs.com/gif.latex?\begin{equation}\label{eq:kendall}&space;K\left(\mathcal{R}1,&space;\mathcal{R}2\right)=\sum_{\{i,&space;j\}&space;\in&space;P}\frac{\bar{K}_{i,&space;j}\left(\mathcal{R}1,&space;\mathcal{R}2\right)}{\mid&space;P&space;\mid}&space;\end{equation}&space;\\&space;\\&space;\bar{K}_{i,&space;j}\left(\mathcal{R}1,&space;\mathcal{R}2\right&space;)=&space;\begin{cases}&space;0&space;&&space;\mathcal{R}1[r^1_i]=&space;\mathcal{R}2[r^2_i]=&space;i&space;~\wedge&space;\mathcal{R}1[r^1_j]=&space;\mathcal{R}2[r^2_j]=&space;j&space;~\wedge&space;r^1_i-r^1_j&space;=&space;r^2_i&space;-&space;r^2_j\\&space;1&space;&&space;\text{otherwise}&space;\end{cases}\" title="\begin{equation}\label{eq:kendall} K\left(\mathcal{R}1, \mathcal{R}2\right)=\sum_{\{i, j\} \in P}\frac{\bar{K}_{i, j}\left(\mathcal{R}1, \mathcal{R}2\right)}{\mid P \mid} \end{equation} \\ \\ \bar{K}_{i, j}\left(\mathcal{R}1, \mathcal{R}2\right )= \begin{cases} 0 & \mathcal{R}1[r^1_i]= \mathcal{R}2[r^2_i]= i ~\wedge \mathcal{R}1[r^1_j]= \mathcal{R}2[r^2_j]= j ~\wedge r^1_i-r^1_j = r^2_i - r^2_j\\ 1 & \text{otherwise} \end{cases}\" />
 
-For instance, the Kendall's index (**K**) between **R_s (Top-3)** for **100M** and **250M** is 0.33 (See table above of best_ranked_configuration for the individual criteria in the page).
+For instance, the Kendall's index (**K**) between **R_s (Top-3)** for **100M** and **250M** is **0.33** (See table above of best_ranked_configuration for the individual criteria in the page). Indeed, there was only one disagreement out of three configurations observations (i.e, the cofiguration **b.ii.1** in the 250M dataset ranked better than **b.iii.2**).
+
+Table below shows the **K** index as per Equation (2) in this page. All the criteria show a good coherence across different scales of the datasets (the lower the better). Indeed, scaling the datasets up, we realize small distances (i.e. indicating low changes in the ranking ordinals) for both individual and combined ranking criteria. Intuitively, if across scalability, the opted ranking criterion has high Kendall's index (i.e., high disagreement of the same ranking), it indicates the **inappropriateness** for ranking to describe the performance.
+
+
+<table class="tg">
+<thead>
+  <tr>
+    <th class="tg-7btt">Dataset_i VS. Dataset_j</th>
+    <th class="tg-rvyq">R_f</th>
+    <th class="tg-rvyq">R_s</th>
+    <th class="tg-rvyq">R_p</th>
+    <th class="tg-rvyq">AVG</th>
+    <th class="tg-rvyq">WAvg</th>
+    <th class="tg-rvyq">R_ta</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-rvyq">100M vs 250M</td>
+    <td class="tg-c3ow">0.17</td>
+    <td class="tg-c3ow">0.07</td>
+    <td class="tg-c3ow">0.17</td>
+    <td class="tg-c3ow">0.18</td>
+    <td class="tg-c3ow">0.18</td>
+    <td class="tg-c3ow">0.17</td>
+  </tr>
+  <tr>
+    <td class="tg-rvyq">100M vs 500M</td>
+    <td class="tg-c3ow">0.17</td>
+    <td class="tg-c3ow">0.07</td>
+    <td class="tg-c3ow">0.28</td>
+    <td class="tg-c3ow">0.19</td>
+    <td class="tg-c3ow">0.20</td>
+    <td class="tg-c3ow">0.19</td>
+  </tr>
+  <tr>
+    <td class="tg-rvyq">250M vs 500M</td>
+    <td class="tg-c3ow">0.17</td>
+    <td class="tg-c3ow">0.09</td>
+    <td class="tg-c3ow">0.21</td>
+    <td class="tg-c3ow">0.17</td>
+    <td class="tg-c3ow">0.17</td>
+    <td class="tg-c3ow">0.15</td>
+  </tr>
+</tbody>
+</table>
 
 
