@@ -23,4 +23,7 @@ To measure the **confidence**, we propose the following approach described by th
 Given the **top-k** subset of the ranking set R we count how many times its elements occur in the bottom-h subset of the ranking set Q_h(i), which corresponds to the ranking set obtained by using the execution time of query Q_i as ranking criterion, for each query. In other words, we look at the rank of the top-ranked configurations (by a ranking criteria R), and make sure by the above formula that they are not in the bottm-h query positions/ranked configurations. This is computed for all queries in the benchmark.
 
 **Example:**
-For instance, let's consider the **R_s** rank and the **100M** dataset evaluation. The top-3 ranked configurations are R_s (Top-3)={b.iii.2,b.iii.1, **b.iii.4**}} that overlaps only with the bottom-3 ranked configurations query Q4, i.e., Q4_(bottom-3)={b.iii.3,**b.iii.4**,a.iii.2}. Thus, $A(R_s [3])=1/(11*3)$.
+For instance, let's consider the **R_s** rank and the **100M** dataset evaluation. The top-3 ranked configurations are R_s (Top-3)={b.iii.2,b.iii.1, **b.iii.4**}} that overlaps only with the *bottom-3* ranked configurations query Q4, i.e., Q4_(bottom-3)={b.iii.3,**b.iii.4**,a.iii.2}. Thus, **A(R_s [3])=1/(11*3)**.
+
+
+
