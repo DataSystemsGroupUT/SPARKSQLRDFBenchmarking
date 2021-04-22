@@ -1,6 +1,7 @@
 ### Results
 -----
-  * [Centralized Experiments](ResultsCenteralized.md)
+  * Centralized Expeiments results (single machine, smaller datsets)
+    * [Centralized Experiments](ResultsCenteralized.md)
   
   * Distributed Experiments
     * Descriptive Analytics:
@@ -14,8 +15,11 @@
         * [Relational Schema Ranking Scores](SchemaRanking.md)
         * [Partitioning Techs. Ranking Scores](PartitioningRanking.md)
         * [Storage Backends Ranking Scores](StorageRanking.md)
-      * ([Combined "Bench-Ranking"]()):
+        * We keep all the intermediary **ranking tables** and logs calculations of all the above ranking plots of the dimensions in this [link](https://docs.google.com/spreadsheets/d/1cff9-IVtg4d113TSkdGOBVCmOt6NCOdrorqFhK04g5E/edit?usp=sharing).
+      * ([Combined "Bench-Ranking"](CombinedRankingCriteria.md)):
         * Find and download the combined-Ranking criteria results from this [link](https://docs.google.com/spreadsheets/d/1cff9-IVtg4d113TSkdGOBVCmOt6NCOdrorqFhK04g5E/edit?usp=sharing).
+       * Bench-Ranking (i.e Ranking criteria) goodness results:
+         * In this [link](https://docs.google.com/spreadsheets/d/1cff9-IVtg4d113TSkdGOBVCmOt6NCOdrorqFhK04g5E/edit?usp=sharing), we keep the ranking goodness metrics (i.e, coherence using Kendall's index, as well as the confidence of each ranking). 
     * **Phase#4** results (Schema Advancments Benchmarking):
       * [Relational Schemata Optimizattion VS BaseLine Schemata Results](OptimizedVsBaselinComparsions.md)  
       
