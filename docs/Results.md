@@ -20,7 +20,7 @@
         * Find and download the combined-Ranking criteria results from this [link](https://docs.google.com/spreadsheets/d/1cff9-IVtg4d113TSkdGOBVCmOt6NCOdrorqFhK04g5E/edit?usp=sharing).
        * For the geomtric representation(i.e.,"Triangle Area") of the experiments three dimensions (schema;partitoning;storage), we keep examples of the top-ranked configurations according to all the proposed ranking criteria in this online-sheet [here](https://docs.google.com/spreadsheets/d/18QeAl6wYp8FgloX3Ia-xM2hBWR7qRXiB3AHSf5zTMyc/edit?usp=sharing). 
        * [Bench-Ranking goodness](RankingGoodness.md) results:
-         * In this [link](https://docs.google.com/spreadsheets/d/1cff9-IVtg4d113TSkdGOBVCmOt6NCOdrorqFhK04g5E/edit?usp=sharing), we keep the ranking goodness metrics/measures and results for the ranking criteria.
+         * In this [link](https://docs.google.com/spreadsheets/d/1cff9-IVtg4d113TSkdGOBVCmOt6NCOdrorqFhK04g5E/edit?usp=sharing), we keep the ranking goodness metrics/measures (coherence, and confidence) and results for all the ranking criteria and across datasets.
     * **Phase#4** results (Schema Advancments Benchmarking):
       * [Relational Schemata Optimizattion VS BaseLine Schemata Results](OptimizedVsBaselinComparsions.md)  
       
