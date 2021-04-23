@@ -4,8 +4,6 @@
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3870891.svg)](https://doi.org/10.5281/zenodo.3870891)
 
 
-
-
 In this Project, we present a systematic comparison of there relevant RDF relational schemas, i.e., Single Statement Table, Property Tables or Vertically-Partitioned Tables queried using Apache Spark.
 
 We evaluate the performance Spark SQL querying engine for processing SPARQL queries using three different storage back-ends, namely, Postgres SQL, Hive, and HDFS. For the latter one, we compare four different data formats (CSV, ORC, Avro, and Parquet).
@@ -19,6 +17,7 @@ The results of our experiments show many interesting insights about the impact o
 -----
 <p align="center"><img src="docs/images/SparkSQLRDFBenchPhases.jpg" alt="spark"> </p>
 
+
 #### Phase#1
 In the frst phase of our work, we presented a systematic analysis of the performance of Spark-SQL query engine (mainly
 the execution time) for answering SPARQL queries over RDF repositories on a centralized single-machine. In particular, we have
@@ -27,8 +26,10 @@ performed our experiments considering: (i) alternative relational schemas for RD
 #### Phase#2
 In the second phase of our project, we conducted the same settings and configurations but differently in a distributed deployments with partitioning the data. In particular, we conducted our experiments in a Spark cluster of four machines. and we worked on a larger RDF dataset of 100M dataset. Notably, we don't use PostgreSQL anymore in this phase experiments.
 
-#### Phase#3
-In this phase also we conduct the phase#2 experimetns but with way larger datsets (100M, 500M, and 1B) triples. moreover, differently from the previous phase, we apply different ranking and combined ranking criteria to quantitively and effectively help practioners to choose the best configuration combinations in such complex solution space of different dimensions (schema, partitioning, and storage).
+#### Phase#3 ([<span style="color:red"> Bench-Ranking </span>](https://github.com/DataSystemsGroupUT/SPARKSQLRDFBenchmarking/blob/master/docs/Bench-Ranking.md))
+In this phase, we also conduct the phase#2 experimetns but with way larger datsets (**100M**, **250M**, and **500M**) triples. moreover, differently from the previous phase, we apply different ranking and combined ranking criteria ([<span style="color:red">**Bench-Ranking**</span>](https://github.com/DataSystemsGroupUT/SPARKSQLRDFBenchmarking/blob/master/docs/Bench-Ranking.md)) to quantitively and effectively help practioners to choose the best configuration combinations in such complex solution space of different dimensions (schema, partitioning, and storage).
+
+* **Note** Phase#3 **Bench-Ranking** results and figures are updated and can be found in the results section [link](https://github.com/DataSystemsGroupUT/SPARKSQLRDFBenchmarking/blob/master/docs/Bench-Ranking.md)
 
 
 #### Phase#4 
@@ -36,13 +37,14 @@ In this phase, we repeated the phase#2 experimetns, but this time we extended ou
 * **Note** Phase#4 results and figures are updated and can be found in the results section [link](https://datasystemsgrouput.github.io/SPARKSQLRDFBenchmarking/OptimizedVsBaselinComparsions.html)
 
 
+
 ### Project Authors
  - [Mohamed Ragab](https://bigdata.cs.ut.ee/mohamed-ragab)
  - [Riccardo Tommasini](https://rictomm.me/)
- - [Feras Awaysheh]()
+ - [Feras Awaysheh](https://bigdata.cs.ut.ee/feras-m-awaysheh)
  - [Sherif Sakr](http://kodu.ut.ee/~sakr/)
- - [Sadiq Eyvazov]()
- - [Carlos Ramos]()
+ - [Sadiq Eyvazov](#)
+ - [Carlos Ramos](#)
 
 
 ### Publications
