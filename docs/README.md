@@ -20,10 +20,10 @@ performed our experiments considering: (i) alternative relational schemas for RD
 #### Phase#2
 In the second phase of our project, we conducted the same settings and configurations but differently in a distributed deployments with partitioning the data. In particular, we conducted our experiments in a Spark cluster of four machines. and we worked on a larger RDF dataset of 100M dataset. Notably, we don't use PostgreSQL anymore in this phase experiments.
 
-#### Phase#3 ([<span style="color:red"> Bench-Ranking </span>](https://github.com/DataSystemsGroupUT/SPARKSQLRDFBenchmarking/blob/master/docs/Bench-Ranking))
-In this phase, we also conduct the phase#2 experimetns but with way larger datsets (**100M**, **250M**, and **500M**) triples. moreover, differently from the previous phase, we apply different ranking and combined ranking criteria ([<span style="color:red">**Bench-Ranking**</span>](https://github.com/DataSystemsGroupUT/SPARKSQLRDFBenchmarking/blob/master/docs/Bench-Ranking.md)) to quantitively and effectively help practioners to choose the best configuration combinations in such complex solution space of different dimensions (schema, partitioning, and storage).
+#### Phase#3 ([<span style="color:red"> Bench-Ranking </span>](https://datasystemsgrouput.github.io/SPARKSQLRDFBenchmarking/Bench-Ranking))
+In this phase, we also conduct the phase#2 experimetns but with way larger datsets (**100M**, **250M**, and **500M**) triples. moreover, differently from the previous phase, we apply different ranking and combined ranking criteria ([<span style="color:red">**Bench-Ranking**</span>](https://datasystemsgrouput.github.io/SPARKSQLRDFBenchmarking/Bench-Ranking)) to quantitively and effectively help practioners to choose the best configuration combinations in such complex solution space of different dimensions (schema, partitioning, and storage).
 
-* **Note** Phase#3 **Bench-Ranking** results and figures are updated and can be found in the results section [link](https://github.com/DataSystemsGroupUT/SPARKSQLRDFBenchmarking/blob/master/docs/Bench-Ranking.md)
+* **Note** Phase#3 **Bench-Ranking** results and figures are updated and can be found in the results section [link](https://datasystemsgrouput.github.io/SPARKSQLRDFBenchmarking/Bench-Ranking)
 
 
 #### Phase#4 
