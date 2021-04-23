@@ -42,7 +42,7 @@ Regard benchmarking, the prescriptive analysis provides the criteria for selecti
 
 ### Motivating Example:
 
-[Descriptive Analyis](https://github.com/DataSystemsGroupUT/SPARKSQLRDFBenchmarking/blob/master/docs/DescriptiveAnlaytics.md) present fine-grain observations about the query performance as well as stating which dimentsion is winning (i.e outperforming the others). 
+[Descriptive Analyis](DescriptiveAnlaytics.md) present fine-grain observations about the query performance as well as stating which dimentsion is winning (i.e outperforming the others). 
 This level was followed by the some diagnosis that describe why this happened (e.g, why VT is in general the best performing relational schema). 
 However, these descriptive and diagnostic analyises can't give final answers as we contrdictions indeed occur. Therefore, decision at this level is tricky.
 
