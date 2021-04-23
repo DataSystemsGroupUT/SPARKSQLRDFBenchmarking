@@ -31,13 +31,9 @@ In this phase, we repeated the phase#2 experimetns, but this time we extended ou
 * **Note** Phase#4 results and figures are updated and can be found in the results section [link](https://datasystemsgrouput.github.io/SPARKSQLRDFBenchmarking/OptimizedVsBaselinComparsions.html)
 
 
-## Spark-SQL
------
-Spark-SQL is one of the most popular high-level libraries of Apache Spark targeted for processing structured datasets using the DataFrames data abstraction, and optimized by means of the Catalyst query optimizer.
-
 ## RDF Relational schemas
 -----
-We present a systematic comparison of three relevant RDF relational schemas such as _Single Statement Table_, _Property Tables_, and _Vertically-Partitioned Tables_  queried using Apache Spark. 
+In order to process RDF graphs on top of a relational big dataframework, e.g Spark-SQL. RDF graphs have to represented in relational layouts (i.e relational schema). To this end, we employ the most popular relational schemas in the literiature for representing RDF graphs in atabular relational layouts. We present a systematic comparison of these three relevant RDF relational schemas, namely _Single Statement Table_ (ST), _Property Tables_ (PT), and _Vertically-Partitioned Tables_ (VT). Moreover, in phase#4 of this project, we investigated the performance of other two relational schemata advancements that extend the core mentioned relational schemata, namely Wide Property Tables-WPT (extending the PT schema), and Extended Vertically-Partitioned-ExtVP (extending the VT schema). 
 
 
 **Single Statement Table** requires  storing RDF datasets in a single triples table of three columns that represent the three components of the RDF triple, i.e., Subject, Predicate, and Object.
@@ -65,6 +61,12 @@ a join partner) that do not contribute to any join in the query. This extension 
 
 <p align="center"><img src="images/extvp.png" alt="spark"></p>
 
+
+## Apache Spark-SQL
+-----
+Spark-SQL is one of the most popular high-level libraries of Apache Spark targeted for processing structured datasets using the DataFrames data abstraction, and optimized by means of the Catalyst query optimizer. In this project, we use Spark-SQL for processing and querying large RDF datasets. In this context, SPARQL queries are mapped to SQL queries and optimized over the "Catalyst" Optimizer. 
+
+
 ### Storage Backends
 -----
 We evaluate the performance of SparkSQL querying engine for processing SPARQL queries using two different storage backends, namely, _Hive_, and _HDFS_. For the latter one, we compare four different data formats (_CSV_, _ORC_, _Avro_, and _Parquet_). 
@@ -90,9 +92,10 @@ We used the same approach to load the data into the tables of the Apache Hive da
 
 ### Datasets
 -----
-SP2Bench Benchmark is scalable benchmark, whichj means it comprise a data generator that enables generatring arbitrarly large RDF datasets. For our First Phase of this project (Centralized Experiments), we generated datasets with the sizes [100K, 1M, and 10M] triples. While, for the second phase (Distributed experiments), we scale up to datasets with the sizes [100M, 500M, and 1B] triples.
+The SP2Bench Benchmark is scalable benchmark, whichj means it comprise a data generator that enables generatring arbitrarly large RDF datasets. For our First Phase of this project (Centralized Experiments), we generated datasets with the sizes [100K, 1M, and 10M] triples. While, for the second phase (Distributed experiments), we scale up to larger datasets with the sizes [100M, 250M, and 500M] triples.
 
-For reproducability, We put here 100K triples dataset along side with their relational schema conversions in different file formats. you can find these datasets [here](https://github.com/DataSystemsGroupUT/SPARKSQLRDFBenchmarking/tree/master/Datasets). 
+- For **reproducability**, We put here **100K** triples dataset alongside their relational schema conversions in different file formats. you can find these datasets [here](https://github.com/DataSystemsGroupUT/SPARKSQLRDFBenchmarking/tree/master/Datasets).
+
 
 
 ### SP2Bench Queries
