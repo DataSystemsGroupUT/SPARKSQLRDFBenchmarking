@@ -95,12 +95,15 @@ We used the same approach to load the data into the tables of the Apache Hive da
 The SP2Bench Benchmark is scalable benchmark, whichj means it comprise a data generator that enables generatring arbitrarly large RDF datasets. For our First Phase of this project (Centralized Experiments), we generated datasets with the sizes [100K, 1M, and 10M] triples. While, for the second phase (Distributed experiments), we scale up to larger datasets with the sizes [100M, 250M, and 500M] triples.
 
 - For **reproducability**, We put here **100K** triples dataset alongside their relational schema conversions in different file formats. you can find these datasets [here](https://github.com/DataSystemsGroupUT/SPARKSQLRDFBenchmarking/tree/master/Datasets).
+- 
 
 
 
 ### SP2Bench Queries
 -----
 Sp2Bench  _SPARQL_ queries and their _SQL_ translations for ST,VT, and PT relational schemas (that we will use in our experiments, compliant with the SparkSQL) can be found [here](http://dbis.informatik.uni-freiburg.de/index.php?project=SP2B/translations.html)
+
+- SQL translations of the SP2Bench for all the relational schemata (core [ST,VT,PT], and optimized [WPT, ExtVP]) can find here in our repo source code-[Queries](https://github.com/DataSystemsGroupUT/SPARKSQLRDFBenchmarking/tree/master/ProjectSourceCode/src/main/scala/ee/ut/cs/bigdata/sp2bench/queries). 
 
 - **Query Analysis:**  the following table shows the Sp2Bench queries analysis, i.e in terms of Number of Joins, Selections, Filters, and Projections.
 
