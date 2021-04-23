@@ -49,7 +49,7 @@ In order to process RDF graphs on top of a relational big dataframework, e.g Spa
 <p align="center"><img src="images/pt1.png" alt="spark"></p>
 
 
-For our new extension of the Phase #2 of this paper, we include two other Relational schemata to our experiemtns (The Wide Property Table ["WPT"], and the Extended Vertical Tables ["ExtVP"]).
+For our new extension of the **Phase#4** of this project, we include two other Relational schemata to our experiemtns (The Wide Property Table ["WPT"], and the Extended Vertical Tables ["ExtVP"]).
 
 **Wide Property Table** extends the PT schema for optimizing star-shaped SPARQL queries. WPT aims at representing the whole RDF dataset into a single unified table. Such table uses all RDF properties in the dataset as columns.
 
@@ -95,8 +95,8 @@ We used the same approach to load the data into the tables of the Apache Hive da
 The SP2Bench Benchmark is scalable benchmark, whichj means it comprise a data generator that enables generatring arbitrarly large RDF datasets. For our First Phase of this project (Centralized Experiments), we generated datasets with the sizes [100K, 1M, and 10M] triples. While, for the second phase (Distributed experiments), we scale up to larger datasets with the sizes [100M, 250M, and 500M] triples.
 
 - For **reproducability**, We put here **100K** triples dataset alongside their relational schema conversions in different file formats. you can find these datasets [here](https://github.com/DataSystemsGroupUT/SPARKSQLRDFBenchmarking/tree/master/Datasets).
-- 
 
+- You can use the SP2Bench generator (Download from [here](http://dbis.informatik.uni-freiburg.de/index.php?project=SP2B/download.php)) for generating larger datasets. 
 
 
 ### SP2Bench Queries
@@ -105,7 +105,7 @@ Sp2Bench  _SPARQL_ queries and their _SQL_ translations for ST,VT, and PT relati
 
 - SQL translations of the SP2Bench for all the relational schemata (core [ST,VT,PT], and optimized [WPT, ExtVP]) can find here in our repo source code-[Queries](https://github.com/DataSystemsGroupUT/SPARKSQLRDFBenchmarking/tree/master/ProjectSourceCode/src/main/scala/ee/ut/cs/bigdata/sp2bench/queries). 
 
-- **Query Analysis:**  the following table shows the Sp2Bench queries analysis, i.e in terms of Number of Joins, Selections, Filters, and Projections.
+- **Query Complexity Analysis:**  the following table shows the Sp2Bench queries complexity analysis, i.e in terms of Number of **Joins**, **Selections**(Filters), and **Projections**.
 
 <p align="center"><img src="images/queryAnalysis.png" alt="spark"></p>
 
@@ -113,42 +113,53 @@ Sp2Bench  _SPARQL_ queries and their _SQL_ translations for ST,VT, and PT relati
 ### Experiments Architecture
 -----
 This figure shows the summary of our experiments configurations. It guides the reader through the naming process, i.e.,
-(Schema.PartitioniningTechnique.Storage_Backend). For instance, (__a.ii.4__) corresponds to Single ST schema, SBP partitioning, and Parquet backend.
+(Schema.PartitioniningTechnique.Storage_Backend). For instance, (__a.ii.4__) corresponds to **Single ST schema**, **SBP** partitioning, and **Parquet** backend.
 
 <p align="center"><img src="images/experiments.JPG" alt="spark"></p>
 
 ### Source Code
 -----
-- [Source Code](https://github.com/DataSystemsGroupUT/SPARKSQLRDFBenchmarking/tree/master/ProjectSourceCode) 
+- You can find the source code of all expeiments in [Source Code](https://github.com/DataSystemsGroupUT/SPARKSQLRDFBenchmarking/tree/master/ProjectSourceCode) 
 
 
 ### Experiments Running
 -----
 We used the ```Spark.time``` function by passing the spark.sql(query) query execution function as a parameter. The output of this function is the running time of evaluating the SQL query into the Spark environment using the Spark session interface. All queries are evaluated for all schemas and partitioned horizontally (HP), or over subject and predicate (SBP, PBP respectively), and on top of all the diﬀerent storage backends Hive, and the HDFS file formats.
 
-For each storage backend, partitioning method, and a relational schema, we run the experiments for all queries five times (excluding the frst cold start run time, to avoid the warm-up bias, and computed an average of the other four run times).
+For each storage backend, partitioning method, and a relational schema, we run the experiments for all queries _five_ times (excluding the _first_ cold start run time, to avoid the _warm-up_ bias, and computed an average of the other four run times).
 
 ### Scripts
 -----
 In the directory of [Scirpts](https://github.com/DataSystemsGroupUT/SPARKSQLRDFBenchmarking/tree/master/Scripts), we share full scripts we used in our benchmaking experiments to make all computations and analysis as well as plotting all the figures over the logs of the experiments.
 
+- "Bench-Ranking" experiments' scripts calculations (ranking tables generation, ranking scores computations, and Ranking goodness measures) can also be found in the above link.
+
 ### Results
 -----
-* [Centralized Experiments](ResultsCenteralized.md)
+ * Centralized Expeiments results (single machine, smaller datsets)
+    * [Centralized Experiments](ResultsCenteralized.md)
   
   * Distributed Experiments
-    * [Execution Runtimes](DistributedExperiments.md)
-    * [Execution Runtimes with Categorizing Figures Long/Short Running Queries](DistributedExperiments_Long_Short_RunningTime_Queries.md)
-    * [Relational Schema Ranking Scores](SchemaRanking.md)
-    * [Partitioning Techs. Ranking Scores](PartitioningRanking.md)
-    * [Storage Backends Ranking Scores](StorageRanking.md)
-    * [Best and Worst Configuration Cominataion (Schema, Storage, Partitioning) '100M' ](QueryPerformanceforConfigs.md)
-    * [Download The Results Sheets For all the datsets](https://github.com/DataSystemsGroupUT/SPARKSQLRDFBenchmarking/tree/master/results)
+    * Descriptive Analytics:
+      * [Execution Runtimes](DistributedExperiments.md)
+      * [Execution Runtimes with Categorizing Figures Long/Short Running Queries](DistributedExperiments_Long_Short_RunningTime_Queries.md)
+      * [Best and Worst Configuration Cominataion (Schema, Storage, Partitioning)](QueryPerformanceforConfigs.md)
+    * Diagnostic Analytics:
+      * [Diagnostic Analyisis of the results (answering the "why?" question)](DescriptiveAnlaytics.md#diagnostic-analysis)  
+    * Prescriptive analysis 
+      * ([Individual "Bench-Ranking"](IndividualRankingCriteria.md)):
+        * [Relational Schema Ranking Scores](SchemaRanking.md)
+        * [Partitioning Techs. Ranking Scores](PartitioningRanking.md)
+        * [Storage Backends Ranking Scores](StorageRanking.md)
+        * We keep all the intermediary **ranking tables** and logs calculations of all the above ranking plots of the dimensions in this [link](https://docs.google.com/spreadsheets/d/1cff9-IVtg4d113TSkdGOBVCmOt6NCOdrorqFhK04g5E/edit?usp=sharing).
+      * ([Combined "Bench-Ranking"](CombinedRankingCriteria.md)):
+        * Find and download the combined-Ranking criteria results from this [link](https://docs.google.com/spreadsheets/d/1cff9-IVtg4d113TSkdGOBVCmOt6NCOdrorqFhK04g5E/edit?usp=sharing).
+       * For the geomtric representation(i.e.,"Triangle Area") of the experiments three dimensions (schema;partitoning;storage), we keep examples of the top-ranked configurations according to all the proposed ranking criteria in this online-sheet [here](https://docs.google.com/spreadsheets/d/18QeAl6wYp8FgloX3Ia-xM2hBWR7qRXiB3AHSf5zTMyc/edit?usp=sharing). 
+       * [Bench-Ranking goodness](RankingGoodness.md) results:
+         * In this [link](https://docs.google.com/spreadsheets/d/1cff9-IVtg4d113TSkdGOBVCmOt6NCOdrorqFhK04g5E/edit?usp=sharing), we keep the ranking goodness metrics/measures (coherence, and confidence) and results for all the ranking criteria and across datasets.
+    * **Phase#4** results (Schema Advancments Benchmarking):
+      * [Relational Schemata Optimizattion VS BaseLine Schemata Results](OptimizedVsBaselinComparsions.md)  
   
-  
-    
-
-
 
 ### Project Authors
  - [Mohamed Ragab](https://bigdata.cs.ut.ee/mohamed-ragab)
