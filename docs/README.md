@@ -96,7 +96,9 @@ The SP2Bench Benchmark is scalable benchmark, whichj means it comprise a data ge
 
 - For **reproducability**, We put here **100K** triples dataset alongside their relational schema conversions in different file formats. you can find these datasets [here](https://github.com/DataSystemsGroupUT/SPARKSQLRDFBenchmarking/tree/master/Datasets).
 
-- You can use the SP2Bench generator (Download from [here](http://dbis.informatik.uni-freiburg.de/index.php?project=SP2B/download.php)) for generating larger datasets. 
+- We couldn't upload the **100M** datsets. Indeed it's quite larg dataset with for all the schema (ST,VT, PT, WPT, ExtVP,..) and for all the storage file formats.  
+- Alternatively, you can use the SP2Bench generator (Download from [here](http://dbis.informatik.uni-freiburg.de/index.php?project=SP2B/download.php)) for generating larger datasets. We keep spark project for converting the datasets into various file formats (i.e from CSV into Parquet, ORC, Avro,..) and storing them directly to HDFS.
+- We keep this project also with the partitioning of the datasets with Spark into different partitioning techniques (Horizontally partitionied, Subject, and Predicate-based partitioning).  
 
 
 ### SP2Bench Queries
