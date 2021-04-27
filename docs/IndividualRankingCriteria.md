@@ -1,6 +1,21 @@
-### Individual Ranking Criteria:
+## Individual Ranking Criteria:
 
 In these regards, ranking criteria, e.g., the one proposed in [akhter2018empirical](https://www.springerprofessional.de/en/an-empirical-evaluation-of-rdf-graph-partitioning-techniques/16257484) for various RDF partitioning techniques, helps provide a high-level view of the performance of a particular dimension across queries. Thus, we have extended the proposed ranking techniques to schemas and storage. The following equation shows a generalized formula for calculating ranking scores.
+
+### Table of Contents:
+<ul>
+  <li><a href="#exampleRS">Calculating Individual Ranking Criteria Scrores Example</a></li>
+    <ul>
+        <li><a href="#exampleRS">Ranking by the Schema Dimention (R_S)</a></li>
+        <li><a href="#exampleRS">Ranking by the Partitioning Dimention (R_P)</a></li>
+        <li><a href="#exampleRS">Ranking by the Storage Dimention (R_F)</a></li>
+    </ul>
+  <li><a href="#challenges">Individual Ranking Criteria Challenges (Dimensions Trade-offs)</a></li>
+      <ul>
+        <li><a href="#exampletradeoff">Example of Individual Dimensions Treade-offs</a></li>
+        </ul>
+</ul>
+
 
 - **Equation (1)**
 
@@ -9,7 +24,7 @@ In these regards, ranking criteria, e.g., the one proposed in [akhter2018empiric
 
 In the above equation, $R$ defines the *Rank Score* of the ranked dimension (i.e., **relational schema**, **partitioning technique**, or **storage backend**). Such that, d represents the total number of variants in the ranked dimension, O_dim(r) denotes the occurrences of the dimension being placed at the rank r (1st,2nd,..), While Q in the formula, represents the total number of query executions, as we have 11 query executions in our SP2Bench benchmark (i.e. Q=11).  
 
-#### Example of Calulating Rank Scores for the different dimensions:
+<h4 id="exampleRS"> Example of Calulating Rank Scores for the different dimensions:</h4>
 
 <div style="text-align:center"> <img src="images/RankScoresCalculation.png" width="500" height="250" /> </div>
 
@@ -22,11 +37,11 @@ Similarly, VT, and PT schemata are ranked using the above equation, but accordin
 **Note:** When we apply the generalized ranking formula in Equation (1), we get three rankings for our three mentioned experimental dimensions (Relational Schemata; Partitioning, and Storage Backends), namely, **"R_s"** , **"R_p"**, and **"R_f"** accordingly. 
 
 
-#### Individual Ranking Criteria (R_s, R_p, and R_f) challenges:
+<h4 id="challenges"> Individual Ranking Criteria (R_s, R_p, and R_f) challenges: </h4>
 
 Applying  the  ranking  criteria  independently for each dimension supports explanations of the results [5]. Nevertheless,we observed that ranking prescriptions  are incoherent across dimensions. The most reasonable explanation is that these *mono-dimensional* ranking criteria can not capturea general view, leading to decisive trade-offs.
 
-##### Example that shows the trade-offs among our problem experimental dimensions:
+<h4 id="exampletradeoff"> Example that shows the trade-offs among our problem experimental dimensions: </h4>
 
 The following table shows  the  best three-ranked configuration combinations. The ”best-ranked” means the configuration combination that shows the highest rank  score according to each ranking criterion (R_s, R_p, and R_f). Looking at the table, we observe that ranking over one of the dimensions provides a better insight  for the decision maker.
 
