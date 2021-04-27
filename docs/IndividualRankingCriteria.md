@@ -117,7 +117,7 @@ Figures show that separate ranking criteria only optimize one dimension, maximiz
 
 
 <ul>
-  <li style="display:inline;"><a href="#exampleRS">Previous: Bench-Ranking Page</a></li>
+  <li style="display:inline;"><a href="#exampleRS" style="display:inline-block; margin-right:10px;">Previous: Bench-Ranking Page</a></li>
   <li style="display:inline;"><a href="#challenges">Next: Combined Ranking Criteria</a></li>
 </ul>
   
