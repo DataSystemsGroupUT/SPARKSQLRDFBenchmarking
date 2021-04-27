@@ -12,8 +12,8 @@
   <li><a href="#motivating"> Motivating Example</a></li>
   <li><a href="#criteria"> Bench-Ranking Criteria</a></li>
       <ul>
-        <li><a href="#desc">Individual Ranking Criteria</a></li>
-        <li><a href="#diag"></a>Combined Ranking Criteria</a></li>
+        <li><a href="#criteria">Individual Ranking Criteria</a></li>
+        <li><a href="#criteria">Combined Ranking Criteria</a></li>
     </ul>
 </ul>
 
