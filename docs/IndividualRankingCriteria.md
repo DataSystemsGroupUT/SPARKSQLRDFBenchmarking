@@ -118,7 +118,7 @@ Figures show that separate ranking criteria only optimize one dimension, maximiz
 
 
 <ul>
-  <li style="display:inline;"><a href="#exampleRS" style="padding: 0px 10px; word-wrap: normal; display: inline-block;   font: bold 11px Arial;  background-color: #EEEEEE;  color: #333333;   border-top: 1px solid #CCCCCC;  border-right: 1px solid #333333;  border-bottom: 1px solid #333333;  border-left: 1px solid #CCCCCC;"> Previous: Bench-Ranking Page</a></li>
+  <li style="display:inline;"><a href="#exampleRS" style="padding: 0px 10px; word-wrap: normal; display: inline-block;   font: bold 11px Arial;  background-color: #EEEEEE;     border-top: 1px solid #CCCCCC;  border-right: 1px solid #333333;  border-bottom: 1px solid #333333;  border-left: 1px solid #CCCCCC;"> Previous: Bench-Ranking Page</a></li>
   <li style="display:inline;"><a href="#challenges">Next: Combined Ranking Criteria</a></li>
 </ul>
   
