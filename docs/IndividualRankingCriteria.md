@@ -114,3 +114,13 @@ Figures show that separate ranking criteria only optimize one dimension, maximiz
   <img src="images/Rf1.png" width="300" /> 
   <img src="images/Rp1.png" width="300" />
 </p>
+
+
+
+<ul>
+<li style="display: inline;"> <a h>Click Me!</a> </li>
+<li style="display: inline;"> <a h>Click Me!</a> </li>
+</ul>
+  
+
+
