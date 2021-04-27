@@ -2,9 +2,9 @@
 
 ### Table of contents:
 <ul>
-  <li><a href=""> Gartner's Analysis Framework</a></li>
-  <li><a href=""> Motivating Example</a></li>
-  <li><a href=""> Bench-Ranking Criteria</a></li>
+  <li><a href="#gartner"> Gartner's Analysis Framework</a></li>
+  <li><a href="#motivating"> Motivating Example</a></li>
+  <li><a href="#criteria"> Bench-Ranking Criteria</a></li>
 </ul>
 
 
@@ -18,7 +18,7 @@ We validated our proposals with a case-study on Apache Spark-SQL that includes s
 Selecting the best configuration combination out of this complex solution space is not an easy task. 
 The proposed ranking criteria provide an accurate yet simple way that supports the practitioners in this task even in the existence of dimensions' trade-offs.
 
-### Gartner's Analysis Framework:
+<h3 id="gartner"> Gartner's Analysis Framework:</h3>
 
 Here, we reflect on the gap of performance analysis in existing works that use Big Data frameworks for RDF processing. 
 In particular, we narrow down by discussing the problem of performance analysis alongside a well-known decision-making framework from **Gartner** shown below.
@@ -48,7 +48,7 @@ Regard benchmarking, the prescriptive analysis provides the criteria for selecti
 
 
 
-### Motivating Example:
+<h3 id="motivating">Motivating Example:</h3>
 
 [Descriptive Analyis](DescriptiveAnlaytics.md) present fine-grain observations about the query performance as well as stating which dimentsion is winning (i.e outperforming the others). 
 This level was followed by the some diagnosis that describe why this happened (e.g, why VT is in general the best performing relational schema). 
@@ -65,7 +65,7 @@ A motivation scenario was triggered by analyzing these results, showing no concl
 The experiment results over different settings also show no decisive configuration setting over the assessed dimensions (i.e., relational schema, partitioning technique, and storage backend), making the practitioner selecting setup a complex task.
 
 
-### Bench-Ranking Criteria
+<h3 id="criteria"> Bench-Ranking Criteria </h3>
 
 Motivated by the limitations of descriptive and diagnostic analyses, we advocate for indicators such as applying **ranking** techniques for these dimensions.
 
