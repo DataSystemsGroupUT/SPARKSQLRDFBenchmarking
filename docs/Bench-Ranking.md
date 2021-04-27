@@ -14,6 +14,7 @@
       <ul>
         <li><a href="#criteria">Individual Ranking Criteria</a></li>
         <li><a href="#criteria">Combined Ranking Criteria</a></li>
+        <li><a href="#goodness">Measuring Ranking Goodness</a></li>
     </ul>
 </ul>
 
@@ -88,6 +89,6 @@ Genralized Ranking criteria inspiered by ranking partitioning techniques propose
 
 To identify which configuration is the best performing, we need to optimize along all the dimensions simultaneously. In practice, this means designing a multi-dimensional (i.e combined) ranking criteria. To this extent, we propose **three** alternative techniques that aim at combining the ranking dimensions into a single unified ranking criterion. These criteria, are **Averge (AVG)**, **Weighted Average (WAvg)**, and **Maxmized Triangle Area (Rta)** (for all dimensions, each dimesion as a side in the triangle).
 
-#### How to assess the opted ranking criteria ("Bench-Ranking Goodness"):
+<h4 id="goodness"> How to assess the opted ranking criteria ("Bench-Ranking Goodness"):</h4>
 
 A ranking criterion aims at identifying the configurations that have the overall best results. In practice, We can consider a ranking criterion **"good"** if it does not suggest a low-performing configuration. In other words, we are not interested to be the best at any particular query as long as we are never the worst. Herein, we discuss how can we measure such **goodness**, i.e., **how to evaluate the ranking measure?**. [Ranking Goodness Details and Measures](RankingGoodness.md).
