@@ -1,5 +1,17 @@
 ## Bench-Ranking: First Step Towards Prescriptive Analyses of Spark-SQL Distributed RDF Data Processing
 
+### Intro.
+Leveraging Big Data (BD) processing frameworks like ApacheSpark-SQL to process large-scale RDF datasets holds a great interest inoptimizing  the  query  performance. 
+Modern  BD  services  are  yet;  complicated  data  systems,  where  tuning  the  configurations  notably  affectsthe performance. 
+Benchmarking different frameworks and configurationsprovides the community with best practices towards selecting the mostsuitable configurations. 
+However, most of these benchmarking efforts areclassified  as  *descriptive*,  *diagnostic*,  or  *predictive*  analytics.  
+There is still lack of **prescriptive** and **quantitative** analytics in benchmarking BD applications and systems. **Bench-ranking** takes the first steps in filling this timely research gap. 
+In particular, we show the value of prescriptive ranking criteria for evaluating RDF processing systems based on Big Data frameworks.
+We validated our proposals with a case-study on Apache Spark-SQL that includes several varying dimensions, i.e. three relational schemata, three partitioning techniques, and five storage backends. 
+Selecting the best configuration combination out of this complex solution space is not an easy task. 
+The proposed ranking criteria provide an accurate yet simple way that supports the practitioners in this task even in the existence of dimensions' trade-offs.
+
+
 ### Table of contents:
 <ul>
   <li><a href="#gartner"> Gartner's Analysis Framework</a></li>
@@ -19,15 +31,7 @@
 </ul>
 
 
-Leveraging Big Data (BD) processing frameworks like ApacheSpark-SQL to process large-scale RDF datasets holds a great interest inoptimizing  the  query  performance. 
-Modern  BD  services  are  yet;  complicated  data  systems,  where  tuning  the  configurations  notably  affectsthe performance. 
-Benchmarking different frameworks and configurationsprovides the community with best practices towards selecting the mostsuitable configurations. 
-However, most of these benchmarking efforts areclassified  as  *descriptive*,  *diagnostic*,  or  *predictive*  analytics.  
-There is still lack of **prescriptive** and **quantitative** analytics in benchmarking BD applications and systems. **Bench-ranking** takes the first steps in filling this timely research gap. 
-In particular, we show the value of prescriptive ranking criteria for evaluating RDF processing systems based on Big Data frameworks.
-We validated our proposals with a case-study on Apache Spark-SQL that includes several varying dimensions, i.e. three relational schemata, three partitioning techniques, and five storage backends. 
-Selecting the best configuration combination out of this complex solution space is not an easy task. 
-The proposed ranking criteria provide an accurate yet simple way that supports the practitioners in this task even in the existence of dimensions' trade-offs.
+
 
 <h3 id="gartner"> Gartner's Analysis Framework:</h3>
 
