@@ -3,8 +3,18 @@
 ### Table of contents:
 <ul>
   <li><a href="#gartner"> Gartner's Analysis Framework</a></li>
+    <ul>
+        <li><a href="#desc">Descriptive Analysis</a></li>
+        <li><a href="#diag">Diagnosti Analysis</a></li>
+        <li><a href="#pred">Predictive Analysis</a></li>
+        <li><a href="#pres">Prescriptive Analysis</a></li>
+    </ul>
   <li><a href="#motivating"> Motivating Example</a></li>
   <li><a href="#criteria"> Bench-Ranking Criteria</a></li>
+      <ul>
+        <li><a href="#desc">Individual Ranking Criteria</a></li>
+        <li><a href="#diag"></a>Combined Ranking Criteria</a></li>
+    </ul>
 </ul>
 
 
@@ -27,19 +37,19 @@ In particular, we narrow down by discussing the problem of performance analysis 
 <div style="text-align:center"> <img src="images/Gartner.JPG" width="500" height="250" /> </div>
 
 
-#### Descriptive analysis:
+<h4 id="desc"> Descriptive analysis: </h4>
 This level of analysis allows answering factual questions, e.g., *'what happened?'*. This kind of analysis extrapolates *fine-grain* observations that describe a phenomenon through different metrics that could capture its relevant dimensions. 
 However, all the work to transform such observations into insights is a subject of the decision maker.
 
-#### Diagnostic analysis:
+<h4 id="diag">  Diagnostic analysis:</h4>
 This level reduces the amount of human intervention by combining the observed data with the *domain knowledge* and, thus, enabling answering explanatory questions like **'why it happened?'**. 
 At this level, factual knowledge is contextualized to produce a diagnosis. Typically, diagnostic analysis requires an exploratory phase on existing data and data enrichment. 
 
-#### Predictive analysis:
+<h4 id="pred">  Predictive analysis:</h4>
 This level aims to forecast future results, and explain drivers of the observed phenomena using machine learning or data mining techniques. 
 
 
-#### Prescriptive analysis:
+<h4 id="pres"> Prescriptive analysis:</h4>
 This level reduces the need for human intervention even further by making the insight actionable. In practice, the prescriptive analysis relies on *statistical* and *mathematical* models that aid in answering the question of **'what should be done?'**. 
 Regard benchmarking, the prescriptive analysis provides the criteria for selecting the best possible approach given. 
 
