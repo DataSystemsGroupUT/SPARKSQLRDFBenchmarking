@@ -61,6 +61,13 @@ Regard benchmarking, the prescriptive analysis provides the criteria for selecti
 
 <div style="text-align:center"> <img src="images/AnalyticsLevels.png"  width="400" height="250" /> </div>
 
+In other words, when we mention the process of decsion making, it is higly related with the data analyisis. The data analyisis really depends on what **time** this analyisis is avaiable in. Thus, the availiabiilty of data analyisis and its time factor is important in decsison making process.
+
+- For example, when we have some measurements that already happended in the past, now we are in the **descriptive analysis** level. 
+- If we employ the Domain Knoweledge (**DK**) aiming to find explanations for the oservations found from the past desciptive analytics, now we are in the **diagnostic analysis** level.
+- When we employ forecasting and ML models in order to expect what is likely to happen after time (**t**) in the future, we are digging into the level of **predictive analysis**.
+- For the future, if we decided based on statsical and mathematical models what should we do regarding the phenomena, we are in the **Prescriptive Analytics**.
+
 
 
 <h3 id="motivating">Motivating Example:</h3>
