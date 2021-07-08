@@ -122,7 +122,7 @@ object VerticalTables {
     vpPricevaliduntil.createOrReplaceTempView("priceValidUntil")
     vpValidFrom.createOrReplaceTempView("validFrom")
     vpserialNumber.createOrReplaceTempView("serialNumber")
-    vpeligibleQuantity.createOrReplaceTempView("vpeligibleQuantity")
+    vpeligibleQuantity.createOrReplaceTempView("eligibleQuantity")
 
 
     //create file to write the query run time results
