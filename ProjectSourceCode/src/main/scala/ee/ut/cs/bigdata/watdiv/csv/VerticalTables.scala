@@ -22,7 +22,7 @@ object VerticalTables {
       .appName("RDFBench CSV VT")
       .getOrCreate()
     val ds = args(0) // value = {"100M", "500M, or "1B"}
-    val path = s"hdfs://172.17.77.48:9000/user/hadoop/RDFBench/WATDIV/$ds/"
+    val path = s"hdfs://172.17.77.48:9000/user/hadoop/RDFBench/WATDIV/VP/$ds/"
 
     //read tables from HDFS
 
