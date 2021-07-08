@@ -22,14 +22,14 @@ object PropertyTables {
       .appName("RDFBench CSV PT")
       .getOrCreate()
     val ds = args(0) //value = {"100M", "500M, or "1B"}
-    val path = s"hdfs://172.17.77.48:9000/user/hadoop/RDFBench/SP2B/$ds/PT/CSV"
+    val path = s"hdfs://172.17.77.48:9000/user/hadoop/RDFBench/WATDIV/$ds/PT/CSV"
 
     //read tables from HDFS
 
     // PUT DFs of PT Here
 
     //create file to write the query run time results    
-    val fos = new FileOutputStream(new File(s"/home/hadoop/RDFBenchMarking/logs2/$ds/csv/PT/$ds.txt"), true)
+    val fos = new FileOutputStream(new File(s"/home/hadoop/RDFBenchMarking/logs/$ds/csv/PT/$ds.txt"), true)
 
     val queries = List(new PTQueries q1,
       new PTQueries q2,
@@ -53,11 +53,11 @@ object PropertyTables {
     var count = 1
     for (query <- queries) {
       //run query and calculate the run time
-      val starttime = System.nanoTime()
+      val startTime = System.nanoTime()
       val df = spark.sql(query)
       df.take(100).foreach(println)
-      val endtime = System.nanoTime()
-      val result = (endtime - starttime).toDouble / 1000000000
+      val endTime = System.nanoTime()
+      val result = (endTime - startTime).toDouble / 1000000000
 
       //write the result into the log file
       if (count != queries.size) {
