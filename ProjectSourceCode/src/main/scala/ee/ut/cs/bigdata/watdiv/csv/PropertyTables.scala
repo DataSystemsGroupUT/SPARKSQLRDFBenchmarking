@@ -22,7 +22,7 @@ object PropertyTables {
       .appName("RDFBench CSV PT")
       .getOrCreate()
     val ds = args(0) //value = {"100M", "500M, or "1B"}
-    val path = s"hdfs://172.17.77.48:9000/user/hadoop/RDFBench/WATDIV/$ds/PT/CSV/"
+    val path = s"hdfs://172.17.77.48:9000/user/hadoop/RDFBench/WATDIV/$ds/PT/csv/"
 
     //read tables from HDFS
 
