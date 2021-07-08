@@ -35,7 +35,7 @@ object SingleStatementTable {
       .csv(s"$path/ST$ds.csv")
       .toDF()
 
-    RDFDF.createOrReplaceTempView("SingleStmtTable")
+    RDFDF.createOrReplaceTempView("Triples")
 
     //create file to write the query run time results
     val fos = new FileOutputStream(new File(s"/home/hadoop/RDFBenchMarking/logs/$ds/csv/ST/$ds$partitionType.txt"), true)
