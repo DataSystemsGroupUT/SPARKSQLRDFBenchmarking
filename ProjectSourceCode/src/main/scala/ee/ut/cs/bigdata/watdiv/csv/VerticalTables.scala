@@ -69,7 +69,7 @@ object VerticalTables {
     val vpPricevaliduntil = spark.read.option("header", true).csv(path+ "CSV/" + "priceValidUntil.csv")
     val vpValidFrom = spark.read.option("header", true).csv(path+ "CSV/" + "validFrom.csv")
     val vpserialNumber = spark.read.option("header", true).csv(path+ "CSV/" + "serialNumber.csv")
-//    val vpeligibleQuantity = spark.read.option("header", true).csv(path+ "CSV/" + "eligibleQuantity.csv")
+    val vpeligibleQuantity = spark.read.option("header", true).csv(path+ "CSV/" + "eligibleQuantity.csv")
     val vppublisher = spark.read.option("header", true).csv(path+ "CSV/" + "publisher.csv")
     val vpartist = spark.read.option("header", true).csv(path+ "CSV/" + "artist.csv")
     val vpfamilyName = spark.read.option("header", true).csv(path+ "CSV/" + "familyName.csv")
@@ -122,6 +122,7 @@ object VerticalTables {
     vpPricevaliduntil.createOrReplaceTempView("priceValidUntil")
     vpValidFrom.createOrReplaceTempView("validFrom")
     vpserialNumber.createOrReplaceTempView("serialNumber")
+    vpeligibleQuantity.createOrReplaceTempView("vpeligibleQuantity")
 
 
     //create file to write the query run time results
