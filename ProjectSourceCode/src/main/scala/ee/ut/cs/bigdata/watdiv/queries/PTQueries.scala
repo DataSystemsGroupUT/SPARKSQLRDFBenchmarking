@@ -69,7 +69,7 @@ class PTQueries {
 
   val q5 =
     """
-      |SELECT Product.product, Website.website Product.title, Product.caption, Product.description, Website.url, Website.hits
+      |SELECT Product.product, Website.website, Product.title, Product.caption, Product.description, Website.url, Website.hits
       |FROM Product
       |JOIN HasGenre ON  HasGenre.product = Product.product
       |JOIN Website ON Product.homepage= Website.website
