@@ -21,18 +21,18 @@ object SingleStatementTable {
       .builder()
       .appName("RDFBench CSV ST")
       .getOrCreate()
-    spark.conf.set("spark.sql.crossJoin.enabled", "true")
+    //spark.conf.set("spark.sql.crossJoin.enabled", "true")
 
     val ds = args(0) // value = {"100M", "500M, or "1B"}
     var partitionType = args(1) // value = {"Horizontal", "Subject", or "Predicate"}
-    val path = s"hdfs://172.17.77.48:9000/user/hadoop/RDFBench/SP2B/$ds/CSV/ST"
+    val path = s"hdfs://172.17.77.48:9000/user/hadoop/RDFBench/WATDIV/$ds/ST/CSV"
 
     //read tables from HDFS
     val RDFDF = spark
       .read
       .option("header", "true")
       .option("inferSchema", "true")
-      .csv(s"$path/SingleStmtTable$partitionType.csv")
+      .csv(s"$path/ST$ds.csv")
       .toDF()
 
     RDFDF.createOrReplaceTempView("SingleStmtTable")
@@ -64,11 +64,11 @@ object SingleStatementTable {
     var count = 1
     for (query <- queries) {
       //run query and calculate the run time
-      val starttime = System.nanoTime()
+      val startTime = System.nanoTime()
       val df = spark.sql(query)
       df.take(100).foreach(println)
-      val endtime = System.nanoTime()
-      val result = (endtime - starttime).toDouble / 1000000000
+      val endTime = System.nanoTime()
+      val result = (endTime - startTime).toDouble / 1000000000
 
       //write the result into the log file
       if (count != queries.size) {
