@@ -24,8 +24,10 @@ object SingleStatementTable {
     //spark.conf.set("spark.sql.crossJoin.enabled", "true")
 
     val ds = args(0) // value = {"100M", "500M, or "1B"}
+    var format= args(2)
     var partitionType = args(1) // value = {"Horizontal", "Subject", or "Predicate"}
-    val path = s"hdfs://172.17.77.48:9000/user/hadoop/RDFBench/WATDIV/$ds/ST/CSV"
+
+    val path = s"hdfs://172.17.77.48:9000/user/hadoop/RDFBench/WATDIV/$ds/ST/$format"
 
     //read tables from HDFS
     val RDFDF = spark
