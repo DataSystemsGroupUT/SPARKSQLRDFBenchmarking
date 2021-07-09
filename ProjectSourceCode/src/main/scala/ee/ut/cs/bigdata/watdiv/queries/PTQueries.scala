@@ -87,7 +87,7 @@ class PTQueries {
       |JOIN PurchaseFor ON Product.product = PurchaseFor.product
       |JOIN MakesPurchase ON PurchaseFor.purchase = MakesPurchase.purchase
       |JOIN Purchase  ON Purchase.purchase = MakesPurchase.purchase
-      |WHERE HasGenre.subgenre="http://db.uwaterloo.ca/~galuc/wsdbm/SubGenre126"
+      |WHERE HasGenre.subgenre="http://db.uwaterloo.ca/~galuc/wsdbm/SubGenre70"
       |AND Product.contentSize != ''
       |AND Product.contentRating != ''
       |AND Purchase.purchaseDate !=''
@@ -125,7 +125,7 @@ class PTQueries {
     """
       |SELECT  Subscribes.user, Likes.product, Product.caption
       |FROM Subscribes
-      |JOIN  Likes ON Likes.user = Subscribes.user AND Subscribes.website="http://db.uwaterloo.ca/~galuc/wsdbm/Website30"
+      |JOIN  Likes ON Likes.user = Subscribes.user AND Subscribes.website="http://db.uwaterloo.ca/~galuc/wsdbm/Website342"
       |JOIN  Product ON Likes.product=Product.product
       |WHERE Product.caption !=''
     """.stripMargin
@@ -133,7 +133,7 @@ class PTQueries {
 
   val q10 =
     """
-      |SELECT User.user, City.parentcountry
+      |SELECT User.user, City.parentCountry
       |FROM City
       |JOIN User ON user.nationality=City.parentcountry
       |JOIN Likes ON User.user=Likes.user
@@ -146,7 +146,8 @@ class PTQueries {
     """
       |SELECT Likes.product, Subscribes.user
       |FROM Subscribes
-      |JOIN  Likes ON Likes.user = Subscribes.user AND Subscribes.website="http://db.uwaterloo.ca/~galuc/wsdbm/Website34"
+      |JOIN  Likes ON Likes.user = Subscribes.user
+      |AND Subscribes.website="http://db.uwaterloo.ca/~galuc/wsdbm/Website34"
     """.stripMargin
 
 
@@ -164,7 +165,7 @@ class PTQueries {
     """
       |SELECT User.user, User.jobTitle, City.parentCountry
       |FROM  User
-      |JOIN  City ON User.nationality=City.parentcountry
+      |JOIN  City ON User.nationality=City.parentCountry
       |WHERE City.city="http://db.uwaterloo.ca/~galuc/wsdbm/City112"
       |AND User.jobTitle !=''
     """.stripMargin

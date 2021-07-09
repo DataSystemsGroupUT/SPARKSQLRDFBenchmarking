@@ -97,7 +97,7 @@ class VTQueries {
 
   val q5 =
     """
-      |SELECT tab0.v1 AS v1 , tab7.v0 AS v0 , tab4.v5 AS v5 , tab6.v7 AS v7 , tab5.v6 AS v6 , tab3.v4 AS v4 , tab2.v3 AS v3 , tab1.v2 AS v2
+      |SELECT tab0.v1 AS v1 , tab7.v0 AS v0 , tab4.v5 AS v5 , tab6.v7 AS v7 , tab5.v6 AS v6 , tab3.v4 AS v4 , tab1.v2 AS v2
       |FROM    (SELECT subject AS v0 FROM hasGenre WHERE object = "http://db.uwaterloo.ca/~galuc/wsdbm/SubGenre100") tab7
       | JOIN    (SELECT subject AS v0 , object AS v4	 FROM caption	) tab3
       | ON(tab7.v0=tab3.v0)

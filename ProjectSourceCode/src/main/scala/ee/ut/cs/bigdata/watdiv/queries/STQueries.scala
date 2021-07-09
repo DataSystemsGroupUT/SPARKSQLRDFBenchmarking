@@ -182,7 +182,7 @@ class STQueries {
 
   val q8 =
     """
-      |SELECT T1.Object, T2.Object, T3.Object, T4.Object, T5.Object
+      |SELECT T1.Object, T2.Object, T3.Object, T4.Object, T5.Object, T6.Object
       |FROM Triples T1
       |INNER JOIN Triples T2 ON T1.Object=T2.Subject
       |INNER JOIN Triples T3 ON T2.Subject=T3.Subject
@@ -202,7 +202,6 @@ class STQueries {
 
 
   // Linear (L)
-
 
   val q9 =
     """
