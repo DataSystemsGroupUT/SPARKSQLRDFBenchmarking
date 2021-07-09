@@ -27,6 +27,8 @@ object SingleStatementTable {
     var partitionType = args(1) // value = {"Horizontal", "Subject", or "Predicate"}
     val path = s"hdfs://172.17.77.48:9000/user/hadoop/RDFBench/WATDIV/$ds/ST/Parquet"
 
+    println(">>>>")
+
     //read tables from HDFS
     val RDFDF = spark.read.format("parquet").load(s"$path/ST$ds.parquet").toDF()
 
@@ -54,8 +56,8 @@ object SingleStatementTable {
 //      new STQueries q15,
       new STQueries q16,
 //      new STQueries q17,
-      new STQueries q18,
-      new STQueries q19,
+//      new STQueries q18,
+//      new STQueries q19,
       new STQueries q20)
 
     var count = 1
