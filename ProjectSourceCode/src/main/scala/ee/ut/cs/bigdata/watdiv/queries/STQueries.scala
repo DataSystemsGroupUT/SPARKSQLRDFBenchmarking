@@ -314,7 +314,7 @@ class STQueries {
       |INNER JOIN Triples T3 ON T2.Subject=T3.Subject
       |INNER JOIN Triples T4 ON T3.Subject=T4.Subject
       |WHERE T1.Predicate="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
-      |AND   T1.Object="http://db.uwaterloo.ca/~galuc/wsdbm/ProductCategory9"
+      |AND   T1.Object="http://db.uwaterloo.ca/~galuc/wsdbm/ProductCategory13"
       |AND   T2.Predicate="http://schema.org/caption"
       |AND   T3.Predicate="http://db.uwaterloo.ca/~galuc/wsdbm/hasGenre"
       |AND   T4.Predicate="http://schema.org/publisher"
