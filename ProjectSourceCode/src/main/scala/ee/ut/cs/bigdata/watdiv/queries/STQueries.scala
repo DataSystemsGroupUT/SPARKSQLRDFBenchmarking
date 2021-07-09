@@ -306,7 +306,7 @@ class STQueries {
     """.stripMargin
 
 
-  val q16 =
+  val q16_1 =
     """
       |SELECT T1.Subject, T2.Object, T3.Object,T4.Object
       |FROM Triples T1
@@ -314,11 +314,72 @@ class STQueries {
       |INNER JOIN Triples T3 ON T2.Subject=T3.Subject
       |INNER JOIN Triples T4 ON T3.Subject=T4.Subject
       |WHERE T1.Predicate="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
-      |AND   T1.Object="http://db.uwaterloo.ca/~galuc/wsdbm/ProductCategory13"
+      |AND   T1.Object="http://db.uwaterloo.ca/~galuc/wsdbm/ProductCategory1"
       |AND   T2.Predicate="http://schema.org/caption"
       |AND   T3.Predicate="http://db.uwaterloo.ca/~galuc/wsdbm/hasGenre"
       |AND   T4.Predicate="http://schema.org/publisher"
     """.stripMargin
+
+    val q16_2 =
+    """
+      |SELECT T1.Subject, T2.Object, T3.Object,T4.Object
+      |FROM Triples T1
+      |INNER JOIN Triples T2 ON T1.Subject=T2.Subject
+      |INNER JOIN Triples T3 ON T2.Subject=T3.Subject
+      |INNER JOIN Triples T4 ON T3.Subject=T4.Subject
+      |WHERE T1.Predicate="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+      |AND   T1.Object="http://db.uwaterloo.ca/~galuc/wsdbm/ProductCategory6"
+      |AND   T2.Predicate="http://schema.org/caption"
+      |AND   T3.Predicate="http://db.uwaterloo.ca/~galuc/wsdbm/hasGenre"
+      |AND   T4.Predicate="http://schema.org/publisher"
+    """.stripMargin
+
+
+    val q16_3 =
+    """
+      |SELECT T1.Subject, T2.Object, T3.Object,T4.Object
+      |FROM Triples T1
+      |INNER JOIN Triples T2 ON T1.Subject=T2.Subject
+      |INNER JOIN Triples T3 ON T2.Subject=T3.Subject
+      |INNER JOIN Triples T4 ON T3.Subject=T4.Subject
+      |WHERE T1.Predicate="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+      |AND   T1.Object="http://db.uwaterloo.ca/~galuc/wsdbm/ProductCategory12"
+      |AND   T2.Predicate="http://schema.org/caption"
+      |AND   T3.Predicate="http://db.uwaterloo.ca/~galuc/wsdbm/hasGenre"
+      |AND   T4.Predicate="http://schema.org/publisher"
+    """.stripMargin
+
+
+    val q16_4 =
+    """
+      |SELECT T1.Subject, T2.Object, T3.Object,T4.Object
+      |FROM Triples T1
+      |INNER JOIN Triples T2 ON T1.Subject=T2.Subject
+      |INNER JOIN Triples T3 ON T2.Subject=T3.Subject
+      |INNER JOIN Triples T4 ON T3.Subject=T4.Subject
+      |WHERE T1.Predicate="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+      |AND   T1.Object="http://db.uwaterloo.ca/~galuc/wsdbm/ProductCategory11"
+      |AND   T2.Predicate="http://schema.org/caption"
+      |AND   T3.Predicate="http://db.uwaterloo.ca/~galuc/wsdbm/hasGenre"
+      |AND   T4.Predicate="http://schema.org/publisher"
+    """.stripMargin
+
+
+  val q16_5 =
+    """
+      |SELECT T1.Subject, T2.Object, T3.Object,T4.Object
+      |FROM Triples T1
+      |INNER JOIN Triples T2 ON T1.Subject=T2.Subject
+      |INNER JOIN Triples T3 ON T2.Subject=T3.Subject
+      |INNER JOIN Triples T4 ON T3.Subject=T4.Subject
+      |WHERE T1.Predicate="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+      |AND   T1.Object="http://db.uwaterloo.ca/~galuc/wsdbm/ProductCategory8"
+      |AND   T2.Predicate="http://schema.org/caption"
+      |AND   T3.Predicate="http://db.uwaterloo.ca/~galuc/wsdbm/hasGenre"
+      |AND   T4.Predicate="http://schema.org/publisher"
+    """.stripMargin
+
+
 
 
   val q17 =
