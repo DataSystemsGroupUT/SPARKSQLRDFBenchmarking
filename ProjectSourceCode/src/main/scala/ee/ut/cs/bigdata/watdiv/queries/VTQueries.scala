@@ -226,7 +226,8 @@ class VTQueries {
   val q13 =
     """
       |SELECT tab0.v1 AS v1 , tab2.v0 AS v0 , tab1.v3 AS v3
-      |FROM   (SELECT object AS v3 FROM parentCountry WHERE subject = 'http://db.uwaterloo.ca/~galuc/wsdbm/City40') tab1
+      |FROM   (SELECT object AS v3 FROM parentCountry
+      |WHERE subject = 'http://db.uwaterloo.ca/~galuc/wsdbm/City40') tab1
       |JOIN   (SELECT subject AS v0 , object AS v3
       |FROM nationality) tab2
       |ON(tab1.v3=tab2.v3)
@@ -306,7 +307,7 @@ class VTQueries {
       |SELECT tab0.v0 AS v0 , tab3.v4 AS v4 , tab2.v3 AS v3 , tab1.v2 AS v2
       |FROM    (SELECT subject AS v0
       |FROM type
-      |WHERE object = 'http://db.uwaterloo.ca/~galuc/wsdbm/ProductCategory1'
+      |WHERE object = 'http://db.uwaterloo.ca/~galuc/wsdbm/ProductCategory4'
       |) tab0
       |JOIN    (SELECT subject AS v0 , object AS v4
       |FROM publisher
@@ -356,7 +357,7 @@ class VTQueries {
 	) tab3
  JOIN    (SELECT subject AS v0
 	 FROM type
-	 WHERE object = 'http://db.uwaterloo.ca/~galuc/wsdbm/ProductCategory7'
+	 WHERE object = 'http://db.uwaterloo.ca/~galuc/wsdbm/ProductCategory3'
 	) tab0
  ON(tab3.v0=tab0.v0)
  JOIN    (SELECT subject AS v0 , object AS v3
