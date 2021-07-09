@@ -19,13 +19,13 @@ object SingleStatementTable {
 
     val spark = SparkSession
       .builder()
-      .appName("RDFBench CSV ST")
+      .appName("RDFBench ORC ST")
       .getOrCreate()
     //spark.conf.set("spark.sql.crossJoin.enabled", "true")
 
     val ds = args(0) // value = {"100M", "500M, or "1B"}
     var partitionType = args(1) // value = {"Horizontal", "Subject", or "Predicate"}
-    val path = s"hdfs://172.17.77.48:9000/user/hadoop/RDFBench/WATDIV/$ds/ST/CSV"
+    val path = s"hdfs://172.17.77.48:9000/user/hadoop/RDFBench/WATDIV/$ds/ST/ORC"
 
     //read tables from HDFS
     val RDFDF = spark.read.format("orc").load(s"$path/ST$ds.orc").toDF()
@@ -33,7 +33,7 @@ object SingleStatementTable {
     RDFDF.createOrReplaceTempView("Triples")
 
     //create file to write the query run time results
-    val fos = new FileOutputStream(new File(s"/home/hadoop/RDFBenchMarking/logs/$ds/csv/ST/$ds$partitionType.txt"), true)
+    val fos = new FileOutputStream(new File(s"/home/hadoop/RDFBenchMarking/logs/$ds/orc/ST/$ds$partitionType.txt"), true)
 
     val queries = List(
       new STQueries q1,
@@ -79,7 +79,7 @@ object SingleStatementTable {
       count += 1
     }
 
-    println("All Queries are Done - CSV - ST!")
+    println("All Queries are Done - ORC - ST!")
 
   }
 } 

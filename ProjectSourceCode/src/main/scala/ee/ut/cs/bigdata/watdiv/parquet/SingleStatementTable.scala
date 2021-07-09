@@ -19,7 +19,7 @@ object SingleStatementTable {
 
     val spark = SparkSession
       .builder()
-      .appName("RDFBench CSV ST")
+      .appName("RDFBench Parquet ST")
       .getOrCreate()
     //spark.conf.set("spark.sql.crossJoin.enabled", "true")
 
@@ -79,7 +79,7 @@ object SingleStatementTable {
       count += 1
     }
 
-    println("All Queries are Done - CSV - ST!")
+    println("All Queries are Done - Parquet - ST!")
 
   }
 } 

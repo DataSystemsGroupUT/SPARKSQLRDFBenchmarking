@@ -19,7 +19,7 @@ object PropertyTables {
 
     val spark = SparkSession
       .builder()
-      .appName("RDFBench CSV PT")
+      .appName("RDFBench ORC PT")
       .getOrCreate()
     val ds = args(0) //value = {"100M", "500M, or "1B"}
     val path = s"hdfs://172.17.77.48:9000/user/hadoop/RDFBench/WATDIV/$ds/PT/ORC/"

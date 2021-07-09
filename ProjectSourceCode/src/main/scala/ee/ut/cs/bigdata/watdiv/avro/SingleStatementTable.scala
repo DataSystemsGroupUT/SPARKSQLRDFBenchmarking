@@ -19,7 +19,7 @@ object SingleStatementTable {
 
     val spark = SparkSession
       .builder()
-      .appName("RDFBench CSV ST")
+      .appName("RDFBench Avro ST")
       .getOrCreate()
     //spark.conf.set("spark.sql.crossJoin.enabled", "true")
 
@@ -33,7 +33,7 @@ object SingleStatementTable {
     RDFDF.createOrReplaceTempView("Triples")
 
     //create file to write the query run time results
-    val fos = new FileOutputStream(new File(s"/home/hadoop/RDFBenchMarking/logs/$ds/csv/ST/$ds$partitionType.txt"), true)
+    val fos = new FileOutputStream(new File(s"/home/hadoop/RDFBenchMarking/logs/$ds/avro/ST/$ds$partitionType.txt"), true)
 
     val queries = List(
       new STQueries q1,
@@ -79,7 +79,7 @@ object SingleStatementTable {
       count += 1
     }
 
-    println("All Queries are Done - CSV - ST!")
+    println("All Queries are Done - Avro - ST!")
 
   }
 } 
