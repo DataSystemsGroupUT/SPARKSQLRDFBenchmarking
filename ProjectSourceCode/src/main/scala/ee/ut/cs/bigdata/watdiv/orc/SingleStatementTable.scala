@@ -1,4 +1,4 @@
-package ee.ut.cs.bigdata.watdiv.csv
+package ee.ut.cs.bigdata.watdiv.orc
 
 import ee.ut.cs.bigdata.watdiv.queries.STQueries
 import org.apache.log4j.{Level, Logger}
@@ -28,12 +28,7 @@ object SingleStatementTable {
     val path = s"hdfs://172.17.77.48:9000/user/hadoop/RDFBench/WATDIV/$ds/ST/CSV"
 
     //read tables from HDFS
-    val RDFDF = spark
-      .read
-      .option("header", "true")
-      .option("inferSchema", "true")
-      .csv(s"$path/ST$ds.csv")
-      .toDF()
+    val RDFDF = spark.read.format("orc").load(s"$path/ST$ds.orc").toDF()
 
     RDFDF.createOrReplaceTempView("Triples")
 

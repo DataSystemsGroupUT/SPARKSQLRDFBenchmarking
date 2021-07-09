@@ -1,4 +1,4 @@
-package ee.ut.cs.bigdata.watdiv.csv
+package ee.ut.cs.bigdata.watdiv.parquet
 
 import ee.ut.cs.bigdata.watdiv.queries.STQueries
 import org.apache.log4j.{Level, Logger}
@@ -25,20 +25,15 @@ object SingleStatementTable {
 
     val ds = args(0) // value = {"100M", "500M, or "1B"}
     var partitionType = args(1) // value = {"Horizontal", "Subject", or "Predicate"}
-    val path = s"hdfs://172.17.77.48:9000/user/hadoop/RDFBench/WATDIV/$ds/ST/CSV"
+    val path = s"hdfs://172.17.77.48:9000/user/hadoop/RDFBench/WATDIV/$ds/ST/Parquet"
 
     //read tables from HDFS
-    val RDFDF = spark
-      .read
-      .option("header", "true")
-      .option("inferSchema", "true")
-      .csv(s"$path/ST$ds.csv")
-      .toDF()
+    val RDFDF = spark.read.format("parquet").load(s"$path/ST$ds.parquet").toDF()
 
     RDFDF.createOrReplaceTempView("Triples")
 
     //create file to write the query run time results
-    val fos = new FileOutputStream(new File(s"/home/hadoop/RDFBenchMarking/logs/$ds/csv/ST/$ds$partitionType.txt"), true)
+    val fos = new FileOutputStream(new File(s"/home/hadoop/RDFBenchMarking/logs/$ds/parquet/ST/$ds$partitionType.txt"), true)
 
     val queries = List(
       new STQueries q1,
