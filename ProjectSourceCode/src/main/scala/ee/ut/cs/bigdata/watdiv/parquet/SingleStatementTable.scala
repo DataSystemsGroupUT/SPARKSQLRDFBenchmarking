@@ -54,7 +54,7 @@ object SingleStatementTable {
 //      new STQueries q13,
 //      new STQueries q14,
 //      new STQueries q15,
-      new STQueries q16_1,
+      new STQueries q16,
       new STQueries q16_2,
       new STQueries q16_3,
       new STQueries q16_4,

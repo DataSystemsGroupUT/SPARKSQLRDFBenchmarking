@@ -306,7 +306,7 @@ class STQueries {
     """.stripMargin
 
 
-  val q16_1 =
+  val q16 =
     """
       |SELECT T1.Subject, T2.Object, T3.Object,T4.Object
       |FROM Triples T1
