@@ -27,7 +27,6 @@ object SingleStatementTable {
     var partitionType = args(1) // value = {"Horizontal", "Subject", or "Predicate"}
     val path = s"hdfs://172.17.77.48:9000/user/hadoop/RDFBench/WATDIV/$ds/ST/Parquet"
 
-    println(">>>>")
 
     //read tables from HDFS
     val RDFDF = spark.read.format("parquet").load(s"$path/ST$ds.parquet").toDF()
@@ -37,32 +36,27 @@ object SingleStatementTable {
     //create file to write the query run time results
     val fos = new FileOutputStream(new File(s"/home/hadoop/RDFBenchMarking/logs/$ds/parquet/ST/$ds$partitionType.txt"), true)
 
-    println(">>>>")
     val queries = List(
-//      new STQueries q1,
-//      new STQueries q2,
-//      new STQueries q3,
-//      new STQueries q4,
-//      new STQueries q5,
-//      new STQueries q6,
-//      new STQueries q7,
-//      new STQueries q8,
-//      new STQueries q9,
-//      new STQueries q10,
-//      new STQueries q11,
-//      new STQueries q12,
-//      new STQueries q13,
-//      new STQueries q14,
-//      new STQueries q15,
+      new STQueries q1,
+      new STQueries q2,
+      new STQueries q3,
+      new STQueries q4,
+      new STQueries q5,
+      new STQueries q6,
+      new STQueries q7,
+      new STQueries q8,
+      new STQueries q9,
+      new STQueries q10,
+      new STQueries q11,
+      new STQueries q12,
+      new STQueries q13,
+      new STQueries q14,
+      new STQueries q15,
       new STQueries q16,
-      new STQueries q16_2,
-      new STQueries q16_3,
-      new STQueries q16_4,
-      new STQueries q16_5,
-//      new STQueries q17,
-//      new STQueries q18,
-//      new STQueries q19,
-//      new STQueries q20
+      new STQueries q17,
+      new STQueries q18,
+      new STQueries q19,
+      new STQueries q20
     )
 
     var count = 1
