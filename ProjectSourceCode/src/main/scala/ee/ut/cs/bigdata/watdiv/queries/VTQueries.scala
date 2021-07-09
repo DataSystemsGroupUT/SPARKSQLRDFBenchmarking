@@ -89,7 +89,7 @@ class VTQueries {
       | ON(tab2.v3=tab3.v3)
       | JOIN    (SELECT object AS v0 , subject AS v3	 FROM hasGenre	) tab4
       | ON(tab3.v3=tab4.v3)
-      | JOIN    (SELECT subject AS v0 FROM tag WHERE object = 'http://db.uwaterloo.ca/~galuc/wsdbm/Topic76'	) tab0
+      | JOIN    (SELECT subject AS v0 FROM tag WHERE object = 'http://db.uwaterloo.ca/~galuc/wsdbm/Topic49'	) tab0
       | ON(tab4.v0=tab0.v0) JOIN    (SELECT subject AS v0 , object AS v2	 FROM type	) tab1
       | ON(tab0.v0=tab1.v0)
     """.stripMargin
@@ -98,7 +98,7 @@ class VTQueries {
   val q5 =
     """
       |SELECT tab0.v1 AS v1 , tab7.v0 AS v0 , tab4.v5 AS v5 , tab6.v7 AS v7 , tab5.v6 AS v6 , tab3.v4 AS v4 , tab1.v2 AS v2
-      |FROM    (SELECT subject AS v0 FROM hasGenre WHERE object = "http://db.uwaterloo.ca/~galuc/wsdbm/SubGenre100") tab7
+      |FROM    (SELECT subject AS v0 FROM hasGenre WHERE object = "http://db.uwaterloo.ca/~galuc/wsdbm/SubGenre117") tab7
       | JOIN    (SELECT subject AS v0 , object AS v4	 FROM caption	) tab3
       | ON(tab7.v0=tab3.v0)
       | JOIN    (SELECT object AS v1 , subject AS v0 FROM homepage	) tab0
@@ -122,7 +122,7 @@ class VTQueries {
       |SELECT tab0.v1 AS v1 , tab2.v0 AS v0 , tab5.v5 AS v5 , tab3.v4 AS v4 , tab4.v6 AS v6 , tab1.v2 AS v2
       |FROM    (SELECT subject AS v0
       |FROM hasGenre
-      |WHERE object = 'http://db.uwaterloo.ca/~galuc/wsdbm/SubGenre70'
+      |WHERE object = 'http://db.uwaterloo.ca/~galuc/wsdbm/SubGenre111'
       |) tab2
       |JOIN    (SELECT subject AS v0 , object AS v2
       |FROM contentSize
@@ -156,7 +156,7 @@ class VTQueries {
       |ON(tab5.v1=tab6.v1)
       |JOIN    (SELECT object AS v1 , subject AS v0 FROM homepage ) tab0
       |ON(tab6.v1=tab0.v1)
-      |JOIN    (SELECT subject AS v0 FROM tag WHERE object = 'http://db.uwaterloo.ca/~galuc/wsdbm/Topic231'	) tab2
+      |JOIN    (SELECT subject AS v0 FROM tag WHERE object = 'http://db.uwaterloo.ca/~galuc/wsdbm/Topic122'	) tab2
       |ON(tab0.v0=tab2.v0) JOIN    (SELECT subject AS v0 , object AS v8 FROM contentSize	) tab4
       |ON(tab2.v0=tab4.v0) JOIN    (SELECT subject AS v0 , object AS v4	 FROM description	) tab3
       |ON(tab4.v0=tab3.v0) JOIN    (SELECT object AS v0 , subject AS v2	 FROM includes	) tab1
@@ -167,7 +167,7 @@ class VTQueries {
   val q8 =
     """
       |SELECT tab0.v1 AS v1 , tab1.v0 AS v0 , tab4.v5 AS v5 , tab5.v6 AS v6 , tab3.v4 AS v4 , tab2.v3 AS v3
-      |FROM    (SELECT object AS v0 FROM offers WHERE subject = 'http://db.uwaterloo.ca/~galuc/wsdbm/Retailer113' ) tab1
+      |FROM    (SELECT object AS v0 FROM offers WHERE subject = 'http://db.uwaterloo.ca/~galuc/wsdbm/Retailer9885' ) tab1
       |JOIN    (SELECT subject AS v0 , object AS v4 FROM validThrough	) tab3
       |ON(tab1.v0=tab3.v0)
       |JOIN    (SELECT object AS v1 , subject AS v0 FROM includes ) tab0
@@ -188,7 +188,7 @@ class VTQueries {
     """
       |SELECT tab0.v0 AS v0 , tab1.v3 AS v3 , tab2.v2 AS v2
       |FROM    (SELECT subject AS v0 FROM subscribes
-      |WHERE object = 'http://db.uwaterloo.ca/~galuc/wsdbm/Website342') tab0
+      |WHERE object = 'http://db.uwaterloo.ca/~galuc/wsdbm/Website7355') tab0
       |JOIN    (SELECT subject AS v0 , object AS v2 FROM likes ) tab2 ON(tab0.v0=tab2.v0)
       |JOIN    (SELECT object AS v3 , subject AS v2 FROM caption) tab1 ON(tab2.v2=tab1.v2)
     """.stripMargin
@@ -197,7 +197,7 @@ class VTQueries {
   val q10 =
     """
       |SELECT tab0.v1 AS v1 , tab2.v2 AS v2
-      |FROM    (SELECT object AS v1 FROM parentCountry WHERE subject = 'http://db.uwaterloo.ca/~galuc/wsdbm/City39') tab0
+      |FROM    (SELECT object AS v1 FROM parentCountry WHERE subject = 'http://db.uwaterloo.ca/~galuc/wsdbm/City70') tab0
       |JOIN    (SELECT object AS v1 , subject AS v2 FROM nationality) tab2
       |ON(tab0.v1=tab2.v1)
       |JOIN    (SELECT subject AS v2 FROM likes WHERE object = 'http://db.uwaterloo.ca/~galuc/wsdbm/Product0') tab1
@@ -210,7 +210,7 @@ class VTQueries {
       |SELECT tab1.v1 AS v1 , tab0.v0 AS v0
       |FROM
       |(SELECT subject AS v0 FROM subscribes
-      |WHERE object = 'http://db.uwaterloo.ca/~galuc/wsdbm/Website221') tab0  JOIN
+      |WHERE object = 'http://db.uwaterloo.ca/~galuc/wsdbm/Website43164') tab0  JOIN
       |(SELECT object AS v1 , subject AS v0 FROM likes) tab1 ON(tab0.v0=tab1.v0)
     """.stripMargin
 
@@ -218,7 +218,7 @@ class VTQueries {
   val q12 =
     """
       |SELECT tab0.v0 AS v0 , tab1.v2 AS v2
-      |FROM   (SELECT subject AS v0  FROM tag  WHERE object = 'http://db.uwaterloo.ca/~galuc/wsdbm/Topic248') tab0
+      |FROM   (SELECT subject AS v0  FROM tag  WHERE object = 'http://db.uwaterloo.ca/~galuc/wsdbm/Topic142') tab0
       | JOIN  (SELECT subject AS v0 , object AS v2 FROM caption) tab1 ON(tab0.v0=tab1.v0)
     """.stripMargin
 
@@ -226,7 +226,7 @@ class VTQueries {
   val q13 =
     """
       |SELECT tab0.v1 AS v1 , tab2.v0 AS v0 , tab1.v3 AS v3
-      |FROM   (SELECT object AS v3 FROM parentCountry WHERE subject = 'http://db.uwaterloo.ca/~galuc/wsdbm/City233') tab1
+      |FROM   (SELECT object AS v3 FROM parentCountry WHERE subject = 'http://db.uwaterloo.ca/~galuc/wsdbm/City40') tab1
       |JOIN   (SELECT subject AS v0 , object AS v3
       |FROM nationality) tab2
       |ON(tab1.v3=tab2.v3)
@@ -243,7 +243,7 @@ class VTQueries {
       |SELECT tab0.v1 AS v1 , tab1.v0 AS v0 , tab6.v7 AS v7 , tab4.v5 AS v5 , tab3.v4 AS v4 , tab5.v6 AS v6 , tab2.v3 AS v3 , tab8.v9 AS v9 , tab7.v8 AS v8
       |FROM    (SELECT object AS v0
       |FROM offers
-      |WHERE subject = 'http://db.uwaterloo.ca/~galuc/wsdbm/Retailer107'
+      |WHERE subject = 'http://db.uwaterloo.ca/~galuc/wsdbm/Retailer8535'
       |) tab1
       |JOIN    (SELECT subject AS v0 , object AS v9
       |FROM priceValidUntil
@@ -283,7 +283,7 @@ class VTQueries {
       |SELECT tab0.v1 AS v1 , tab1.v0 AS v0 , tab2.v3 AS v3
       |FROM    (SELECT subject AS v0
       |FROM nationality
-      |WHERE object = 'http://db.uwaterloo.ca/~galuc/wsdbm/Country21'
+      |WHERE object = 'http://db.uwaterloo.ca/~galuc/wsdbm/Country4'
       |) tab1
       |JOIN    (SELECT subject AS v0
       |FROM type
@@ -306,7 +306,7 @@ class VTQueries {
       |SELECT tab0.v0 AS v0 , tab3.v4 AS v4 , tab2.v3 AS v3 , tab1.v2 AS v2
       |FROM    (SELECT subject AS v0
       |FROM type
-      |WHERE object = 'http://db.uwaterloo.ca/~galuc/wsdbm/ProductCategory4'
+      |WHERE object = 'http://db.uwaterloo.ca/~galuc/wsdbm/ProductCategory1'
       |) tab0
       |JOIN    (SELECT subject AS v0 , object AS v4
       |FROM publisher
@@ -356,7 +356,7 @@ class VTQueries {
 	) tab3
  JOIN    (SELECT subject AS v0
 	 FROM type
-	 WHERE object = 'http://db.uwaterloo.ca/~galuc/wsdbm/ProductCategory2'
+	 WHERE object = 'http://db.uwaterloo.ca/~galuc/wsdbm/ProductCategory7'
 	) tab0
  ON(tab3.v0=tab0.v0)
  JOIN    (SELECT subject AS v0 , object AS v3
@@ -377,7 +377,7 @@ class VTQueries {
       |SELECT tab0.v1 AS v1 , tab2.v0 AS v0 , tab1.v2 AS v2
       |FROM    (SELECT subject AS v0
       |FROM hasGenre
-      |WHERE object = 'http://db.uwaterloo.ca/~galuc/wsdbm/SubGenre72') tab2
+      |WHERE object = 'http://db.uwaterloo.ca/~galuc/wsdbm/SubGenre130') tab2
       |JOIN    (SELECT object AS v1 , subject AS v0
       |FROM conductor
       |) tab0
@@ -394,7 +394,7 @@ class VTQueries {
       |SELECT tab0.v1 AS v1 , tab2.v0 AS v0 , tab1.v2 AS v2
       |FROM    (SELECT object AS v0
       |FROM likes
-      |WHERE subject = "http://db.uwaterloo.ca/~galuc/wsdbm/User5641"
+      |WHERE subject = "http://db.uwaterloo.ca/~galuc/wsdbm/User54768"
       |) tab2
       |JOIN    (SELECT subject AS v0 , object AS v2
       |FROM text

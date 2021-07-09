@@ -129,9 +129,9 @@ object VerticalTables {
     val fos = new FileOutputStream(new File(s"/home/hadoop/RDFBenchMarking/logs/$ds/parquet/VP/$ds.txt"), true)
 
     val queries = List(
-      new VTQueries q1,
-      new VTQueries q2,
-      new VTQueries q3,
+//      new VTQueries q1,
+//      new VTQueries q2,
+//      new VTQueries q3,
       new VTQueries q4,
       new VTQueries q5,
       new VTQueries q6,
