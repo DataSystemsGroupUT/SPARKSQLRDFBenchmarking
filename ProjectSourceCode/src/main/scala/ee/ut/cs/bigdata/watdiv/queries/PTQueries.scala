@@ -194,7 +194,7 @@ class PTQueries {
       |JOIN Role ON User.user=Role.user
       |WHERE User.nationality="http://db.uwaterloo.ca/~galuc/wsdbm/Country4"
       |AND Role.role="http://db.uwaterloo.ca/~galuc/wsdbm/Role2"
-      |AND User.genderIS NOT NULL
+      |AND User.gender IS NOT NULL
     """.stripMargin
 
 
