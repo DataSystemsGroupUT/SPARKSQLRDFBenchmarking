@@ -10,8 +10,6 @@ class PTQueries {
       |JOIN HasReview ON Product1.product =HasReview.product
       |JOIN Review ON HasReview.review = Review.review
       |JOIN User ON Review.reviewer=User.user
-      |
-      |
       |JOIN Product AS Product2
       |JOIN Actor ON Product2.product=Actor.product AND Actor.actor=User.user
       |JOIN Language ON Product2.product = Language.product
@@ -48,10 +46,10 @@ class PTQueries {
       |FROM User
       |JOIN Likes On Likes.user=User.user
       |JOIN FriendOf ON User.user=FriendOf.user1
-      |WHERE User.age !=''
-      |AND User.gender !=''
-      |AND User.givenName !=''
-      |AND User.location !=''
+      |WHERE User.age IS NOT NULL
+      |AND User.gender IS NOT NULL
+      |AND User.givenName IS NOT NULL
+      |AND User.location IS NOT NULL
   """.stripMargin
 
   // Snow-Flake (F)
@@ -64,7 +62,7 @@ class PTQueries {
       |JOIN HasGenre ON HasGenre.product = Product.product
       |JOIN Genre ON HasGenre.subgenre=Genre.subgenre
       |WHERE Genre.topic="http://db.uwaterloo.ca/~galuc/wsdbm/Topic8"
-      |AND Product.keywords !=""
+      |AND Product.keywords IS NOT NULL
       |AND Product.productCategory="http://db.uwaterloo.ca/~galuc/wsdbm/ProductCategory2"
     """.stripMargin
 
@@ -75,8 +73,8 @@ class PTQueries {
       |JOIN HasGenre ON  HasGenre.product = Product.product
       |JOIN Website ON Product.homepage= Website.website
       |WHERE HasGenre.subgenre="http://db.uwaterloo.ca/~galuc/wsdbm/SubGenre117"
-      |AND Product.caption != ''
-      |AND Product.description !=''
+      |AND Product.caption IS NOT NULL
+      |AND Product.description IS NOT NULL
     """.stripMargin
 
   val q6 =
@@ -89,9 +87,9 @@ class PTQueries {
       |JOIN MakesPurchase ON PurchaseFor.purchase = MakesPurchase.purchase
       |JOIN Purchase  ON Purchase.purchase = MakesPurchase.purchase
       |WHERE HasGenre.subgenre="http://db.uwaterloo.ca/~galuc/wsdbm/SubGenre111"
-      |AND Product.contentSize != ''
-      |AND Product.contentRating != ''
-      |AND Purchase.purchaseDate !=''
+      |AND Product.contentSize IS NOT NULL
+      |AND Product.contentRating IS NOT NULL
+      |AND Purchase.purchaseDate IS NOT NULL
   """.stripMargin
 
   val q7 =
@@ -105,8 +103,8 @@ class PTQueries {
       |JOIN Likes ON Likes.product=Product.product
       |WHERE Tag.topic="http://db.uwaterloo.ca/~galuc/wsdbm/Topic122"
       |AND Website.language="http://db.uwaterloo.ca/~galuc/wsdbm/Language0"
-      |AND Product.contentSize != ''
-      |AND Product.description !=''
+      |AND Product.contentSize IS NOT NULL
+      |AND Product.description IS NOT NULL
     """.stripMargin
 
   val q8 =
@@ -128,7 +126,7 @@ class PTQueries {
       |FROM Subscribes
       |JOIN  Likes ON Likes.user = Subscribes.user AND Subscribes.website="http://db.uwaterloo.ca/~galuc/wsdbm/Website7355"
       |JOIN  Product ON Likes.product=Product.product
-      |WHERE Product.caption !=''
+      |WHERE Product.caption IS NOT NULL
     """.stripMargin
 
 
@@ -158,7 +156,7 @@ class PTQueries {
       |FROM Product
       |JOIN Tag ON Product.product=Tag.product
       |WHERE Tag.topic="http://db.uwaterloo.ca/~galuc/wsdbm/Topic142"
-      |AND Product.caption !=""
+      |AND Product.caption IS NOT NULL
     """.stripMargin
 
 
@@ -168,7 +166,7 @@ class PTQueries {
       |FROM  User
       |JOIN  City ON User.nationality=City.parentCountry
       |WHERE City.city="http://db.uwaterloo.ca/~galuc/wsdbm/City40"
-      |AND User.jobTitle !=''
+      |AND User.jobTitle IS NOT NULL
     """.stripMargin
 
 
@@ -184,8 +182,8 @@ class PTQueries {
       |JOIN Includes ON Includes.offer=Offer.offer
       |JOIN EligibilityRegion ON Offer.offer=EligibilityRegion.offer
       |WHERE Offers.retailer="http://db.uwaterloo.ca/~galuc/wsdbm/Retailer8535"
-      |AND Offer.validFrom !=''
-      |AND Offer.priceValidUntil !=''
+      |AND Offer.validFrom IS NOT NULL
+      |AND Offer.priceValidUntil IS NOT NULL
     """.stripMargin
 
 
@@ -196,7 +194,7 @@ class PTQueries {
       |JOIN Role ON User.user=Role.user
       |WHERE User.nationality="http://db.uwaterloo.ca/~galuc/wsdbm/Country4"
       |AND Role.role="http://db.uwaterloo.ca/~galuc/wsdbm/Role2"
-      |AND User.gender!=''
+      |AND User.genderIS NOT NULL
     """.stripMargin
 
 
@@ -206,8 +204,8 @@ class PTQueries {
       |FROM Product
       |JOIN HasGenre ON Product.product = HasGenre.product
       |WHERE  Product.productCategory="http://db.uwaterloo.ca/~galuc/wsdbm/ProductCategory4"
-      |AND Product.caption !=''
-      |AND Product.publisher !=''
+      |AND Product.caption IS NOT NULL
+      |AND Product.publisher IS NOT NULL
     """.stripMargin
 
 
@@ -228,8 +226,8 @@ class PTQueries {
       |JOIN Language On Language.product= Product.product
       |WHERE Product.productCategory="http://db.uwaterloo.ca/~galuc/wsdbm/ProductCategory3"
       |AND Language.language="http://db.uwaterloo.ca/~galuc/wsdbm/Language0"
-      |AND Product.description !=''
-      |AND Product.keywords !=''
+      |AND Product.description IS NOT NULL
+      |AND Product.keywords IS NOT NULL
     """.stripMargin
 
 
@@ -239,7 +237,7 @@ class PTQueries {
       |FROM Product
       |JOIN HasGenre On HasGenre.product = Product.product
       |WHERE HasGenre.subgenre="http://db.uwaterloo.ca/~galuc/wsdbm/SubGenre130"
-      |AND Product.conductor !=''
+      |AND Product.conductor IS NOT NULL
     """.stripMargin
 
 
@@ -249,6 +247,6 @@ class PTQueries {
       |FROM Product
       |JOIN Likes ON Likes.product = Product.product
       |WHERE Likes.user="http://db.uwaterloo.ca/~galuc/wsdbm/User54768"
-      |AND Product.text !=''
+      |AND Product.text IS NOT NULL
     """.stripMargin
 }
