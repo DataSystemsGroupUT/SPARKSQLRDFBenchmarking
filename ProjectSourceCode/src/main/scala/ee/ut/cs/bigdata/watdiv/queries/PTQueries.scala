@@ -15,7 +15,7 @@ class PTQueries {
       |JOIN Product AS Product2
       |JOIN Actor ON Product2.product=Actor.product AND Actor.actor=User.user
       |JOIN Language ON Product2.product = Language.product
-      |WHERE Product1.contentRating !=''
+      |WHERE Product1.contentRating IS NOT NULL
       |AND Review.title IS NOT NULL
       |AND Product1.text IS NOT NULL
       |AND Product1.caption IS NOT NULL
@@ -36,10 +36,10 @@ class PTQueries {
       |JOIN PurchaseFor ON PurchaseFor.product = Includes.product AND PurchaseFor.purchase=Purchase.purchase
       |JOIN User ON MakesPurchase.user=User.user
       |WHERE  EligibilityRegion.country="http://db.uwaterloo.ca/~galuc/wsdbm/Country3"
-      |AND Retailer.legalName !=''
-      |AND User.homepage !=''
-      |AND User.jobTitle !=''
-      |AND Review.totalVotes !=''
+      |AND Retailer.legalName IS NOT NULL
+      |AND User.homepage IS NOT NULL
+      |AND User.jobTitle IS NOT NULL
+      |AND Review.totalVotes IS NOT NULL
 """.stripMargin
 
   val q3 =
