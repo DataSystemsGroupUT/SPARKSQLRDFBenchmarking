@@ -83,7 +83,7 @@ class VTQueries {
     """
       |SELECT tab4.v0 AS v0 , tab3.v5 AS v5 , tab2.v4 AS v4 , tab5.v3 AS v3 , tab1.v2 AS v2
       | FROM    (SELECT subject AS v3  FROM type WHERE object = 'http://db.uwaterloo.ca/~galuc/wsdbm/ProductCategory2'	) tab5
-      | JOIN    (SELECT object AS v4 , subject AS v3 FROM trailer	) tab2
+      | JOIN    (SELECT trailer.trailer AS v4 , trailer.product AS v3 FROM trailer	) tab2
       | ON(tab5.v3=tab2.v3)
       | JOIN    (SELECT object AS v5 , subject AS v3	 FROM keywords	) tab3
       | ON(tab2.v3=tab3.v3)
