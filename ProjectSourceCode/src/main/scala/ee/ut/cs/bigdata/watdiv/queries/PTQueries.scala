@@ -16,10 +16,11 @@ class PTQueries {
       |JOIN Actor ON Product2.product=Actor.product AND Actor.actor=User.user
       |JOIN Language ON Product2.product = Language.product
       |WHERE Product1.contentRating !=''
-      |AND Review.title != ''
-      |AND Product1.text !=''
-      |AND Product1.caption !=''
+      |AND Review.title IS NOT NULL
+      |AND Product1.text IS NOT NULL
+      |AND Product1.caption IS NOT NULL
   """.stripMargin
+
 
   val q2 =
     """
