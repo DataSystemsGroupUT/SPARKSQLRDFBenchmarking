@@ -45,12 +45,23 @@ class PTQueries {
       |SELECT  User.user
       |FROM User
       |JOIN Likes On Likes.user=User.user
-      |JOIN FriendOf ON Likes.user=FriendOf.user1
+      |JOIN FriendOf ON User.user=FriendOf.user1
       |WHERE User.age IS NOT NULL
       |AND User.gender IS NOT NULL
       |AND User.givenName IS NOT NULL
       |AND User.location IS NOT NULL
   """.stripMargin
+
+  val test_1=
+    """
+      |SELECT COUNT(*) FROM User
+      |""".stripMargin
+
+  val test_2=
+    """
+      |SELECT COUNT(DISTINCT *) FROM user
+      |""".stripMargin
+
 
   // Snow-Flake (F)
 

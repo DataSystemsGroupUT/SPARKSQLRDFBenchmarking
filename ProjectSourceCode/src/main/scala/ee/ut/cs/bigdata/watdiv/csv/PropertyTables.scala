@@ -83,6 +83,8 @@ object PropertyTables {
     val queries = List(
 //      new PTQueries q1,
 //      new PTQueries q2,
+      new PTQueries test_1,
+      new PTQueries test_2,
       new PTQueries q3,
       new PTQueries q4,
       new PTQueries q5,
