@@ -45,7 +45,7 @@ class PTQueries {
       |SELECT  User.user
       |FROM User
       |JOIN Likes On Likes.user=User.user
-      |JOIN FriendOf ON User.user=FriendOf.user1
+      |JOIN FriendOf ON Likes.user=FriendOf.user1
       |WHERE User.age IS NOT NULL
       |AND User.gender IS NOT NULL
       |AND User.givenName IS NOT NULL
