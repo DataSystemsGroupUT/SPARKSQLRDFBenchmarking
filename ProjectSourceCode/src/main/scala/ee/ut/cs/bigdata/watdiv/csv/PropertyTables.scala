@@ -80,8 +80,9 @@ object PropertyTables {
     //create file to write the query run time results    
     val fos = new FileOutputStream(new File(s"/home/hadoop/RDFBenchMarking/logs/$ds/csv/PT/$ds.txt"), true)
 
-    val queries = List(new PTQueries q1,
-      new PTQueries q2,
+    val queries = List(
+//      new PTQueries q1,
+//      new PTQueries q2,
       new PTQueries q3,
       new PTQueries q4,
       new PTQueries q5,
