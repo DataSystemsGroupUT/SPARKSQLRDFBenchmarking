@@ -54,12 +54,12 @@ class PTQueries {
 
   val test_1=
     """
-      |SELECT COUNT(*) FROM User
+      |SELECT * FROM User
       |""".stripMargin
 
   val test_2=
     """
-      |SELECT COUNT(DISTINCT *) FROM user
+      |SELECT DISTINCT * FROM user
       |""".stripMargin
 
 
