@@ -293,7 +293,7 @@ class VTQueries {
       |JOIN    (SELECT object AS v1 , subject AS v0
       |FROM Location
       |) tab0
-      |ON(tab3.v0=tab0.v0)
+      |ON (tab3.v0=tab0.v0)
       |JOIN    (SELECT subject AS v0 , object AS v3
       |FROM gender
       |) tab2
