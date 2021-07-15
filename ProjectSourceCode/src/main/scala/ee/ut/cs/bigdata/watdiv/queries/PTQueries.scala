@@ -3,20 +3,32 @@ package ee.ut.cs.bigdata.watdiv.queries
 class PTQueries {
   //Complex
 
+//  val q1 =
+//    """
+//      |SELECT Product1.product, Review.review, User.user, Product2.product
+//      |FROM Product AS Product1
+//      |JOIN HasReview ON Product1.product =HasReview.product
+//      |JOIN Review ON HasReview.review = Review.review
+//      |JOIN User ON Review.reviewer=User.user
+//      |JOIN Actor ON Actor.actor=User.user
+//      |JOIN Product AS Product2 ON Product2.product=Actor.product
+//      |JOIN Language ON Product2.product = Language.product
+//      |WHERE Product1.contentRating IS NOT NULL
+//      |AND Review.title IS NOT NULL
+//      |AND Product1.text IS NOT NULL
+//      |AND Product1.caption IS NOT NULL
+//  """.stripMargin
+//
   val q1 =
     """
-      |SELECT Product1.product, Review.review, User.user, Product2.product
-      |FROM Product AS Product1
-      |JOIN HasReview ON Product1.product =HasReview.product
-      |JOIN Review ON HasReview.review = Review.review
-      |JOIN User ON Review.reviewer=User.user
-      |JOIN Actor ON Actor.actor=User.user
-      |JOIN Product AS Product2 ON Product2.product=Actor.product
-      |JOIN Language ON Product2.product = Language.product
-      |WHERE Product1.contentRating IS NOT NULL
-      |AND Review.title IS NOT NULL
-      |AND Product1.text IS NOT NULL
-      |AND Product1.caption IS NOT NULL
+      |SELECT *
+      |FROM Product
+  """.stripMargin
+
+    val q1_1 =
+    """
+      |SELECT DISTINCT *
+      |FROM Product
   """.stripMargin
 
 

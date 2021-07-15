@@ -26,8 +26,8 @@ object PropertyTables {
 
     //read tables from HDFS
 
-    val User_DF = spark.read.format("avro").load(path + "User.avro")
     val Product_DF = spark.read.format("avro").load(path + "Product.avro")
+    val User_DF = spark.read.format("avro").load(path + "User.avro")
     val Offer_DF = spark.read.format("avro").load(path + "Offer.avro")
     val City_DF = spark.read.format("avro").load(path + "City.avro")
     val Review_DF = spark.read.format("avro").load(path + "Review.avro")
