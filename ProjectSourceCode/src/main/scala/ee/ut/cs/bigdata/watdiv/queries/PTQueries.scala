@@ -10,8 +10,8 @@ class PTQueries {
       |JOIN HasReview ON Product1.product =HasReview.product
       |JOIN Review ON HasReview.review = Review.review
       |JOIN User ON Review.reviewer=User.user
-      |JOIN Product AS Product2
-      |JOIN Actor ON Product2.product=Actor.product AND Actor.actor=User.user
+      |JOIN Actor ON Actor.actor=User.user
+      |JOIN Product AS Product2 ON Product2.product=Actor.product
       |JOIN Language ON Product2.product = Language.product
       |WHERE Product1.contentRating IS NOT NULL
       |AND Review.title IS NOT NULL
@@ -52,15 +52,6 @@ class PTQueries {
       |AND User.location IS NOT NULL
   """.stripMargin
 
-  val test_1=
-    """
-      |SELECT * FROM User
-      |""".stripMargin
-
-  val test_2=
-    """
-      |SELECT DISTINCT * FROM user
-      |""".stripMargin
 
 
   // Snow-Flake (F)

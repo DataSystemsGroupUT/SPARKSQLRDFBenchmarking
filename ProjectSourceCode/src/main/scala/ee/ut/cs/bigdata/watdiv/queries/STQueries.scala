@@ -79,6 +79,8 @@ class STQueries {
 
 
 
+
+
    val q4 =
     """
       |SELECT T1.Subject, T1.Object, T3.Subject, T5.Object, T6.Object

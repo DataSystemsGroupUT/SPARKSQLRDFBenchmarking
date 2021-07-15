@@ -75,7 +75,6 @@ class VTQueries {
   """.stripMargin
 
 
-
   // Snow-Flake (F)
 
 

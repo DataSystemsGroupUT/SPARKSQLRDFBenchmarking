@@ -81,10 +81,8 @@ object PropertyTables {
     val fos = new FileOutputStream(new File(s"/home/hadoop/RDFBenchMarking/logs/$ds/csv/PT/$ds.txt"), true)
 
     val queries = List(
-//      new PTQueries q1,
-//      new PTQueries q2,
-      new PTQueries test_1,
-      new PTQueries test_2,
+      new PTQueries q1,
+      new PTQueries q2,
       new PTQueries q3,
       new PTQueries q4,
       new PTQueries q5,
