@@ -36,26 +36,26 @@ object SingleStatementTable {
     val fos = new FileOutputStream(new File(s"/home/hadoop/RDFBenchMarking/logs/$ds/avro/ST/$ds$partitionType.txt"), true)
 
     val queries = List(
-      new STQueries q1,
-      new STQueries q2,
-      new STQueries q3,
-      new STQueries q4,
-      new STQueries q5,
-      new STQueries q6,
-      new STQueries q7,
-      new STQueries q8,
-      new STQueries q9,
-      new STQueries q10,
-      new STQueries q11,
-      new STQueries q12,
-      new STQueries q13,
-      new STQueries q14,
-      new STQueries q15,
-      new STQueries q16,
-      new STQueries q17,
-      new STQueries q18,
-      new STQueries q19,
-      new STQueries q20)
+      new STQueries c1,
+      new STQueries c2,
+      new STQueries c3,
+      new STQueries f1,
+      new STQueries f2,
+      new STQueries f3,
+      new STQueries f4,
+      new STQueries f4,
+      new STQueries l1,
+      new STQueries l2,
+      new STQueries l3,
+      new STQueries l4,
+      new STQueries l5,
+      new STQueries s1,
+      new STQueries s2,
+      new STQueries s3,
+      new STQueries s4,
+      new STQueries s5,
+      new STQueries s6,
+      new STQueries s7)
 
     var count = 1
     for (query <- queries) {

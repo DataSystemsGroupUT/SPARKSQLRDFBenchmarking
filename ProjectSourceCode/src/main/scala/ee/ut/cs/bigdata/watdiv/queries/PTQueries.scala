@@ -3,36 +3,24 @@ package ee.ut.cs.bigdata.watdiv.queries
 class PTQueries {
   //Complex
 
-//  val q1 =
-//    """
-//      |SELECT Product1.product, Review.review, User.user, Product2.product
-//      |FROM Product AS Product1
-//      |JOIN HasReview ON Product1.product =HasReview.product
-//      |JOIN Review ON HasReview.review = Review.review
-//      |JOIN User ON Review.reviewer=User.user
-//      |JOIN Actor ON Actor.actor=User.user
-//      |JOIN Product AS Product2 ON Product2.product=Actor.product
-//      |JOIN Language ON Product2.product = Language.product
-//      |WHERE Product1.contentRating IS NOT NULL
-//      |AND Review.title IS NOT NULL
-//      |AND Product1.text IS NOT NULL
-//      |AND Product1.caption IS NOT NULL
-//  """.stripMargin
-//
-  val q1 =
+  val c1 =
     """
-      |SELECT *
-      |FROM Product
-  """.stripMargin
-
-    val q1_1 =
-    """
-      |SELECT DISTINCT *
-      |FROM Product
+      |SELECT Product1.product, Review.review, User.user, Product2.product
+      |FROM Product AS Product1
+      |JOIN HasReview ON Product1.product =HasReview.product
+      |JOIN Review ON HasReview.review = Review.review
+      |JOIN User ON Review.reviewer=User.user
+      |JOIN Actor ON Actor.actor=User.user
+      |JOIN Product AS Product2 ON Product2.product=Actor.product
+      |JOIN Language ON Product2.product = Language.product
+      |WHERE Product1.contentRating IS NOT NULL
+      |AND Review.title IS NOT NULL
+      |AND Product1.text IS NOT NULL
+      |AND Product1.caption IS NOT NULL
   """.stripMargin
 
 
-  val q2 =
+  val c2 =
     """
       |SELECT Retailer.retailer, Includes.product, MakesPurchase.user, Review.review
       |FROM Retailer
@@ -52,7 +40,7 @@ class PTQueries {
       |AND Review.totalVotes IS NOT NULL
 """.stripMargin
 
-  val q3 =
+  val c3 =
     """
       |SELECT  User.user
       |FROM User
@@ -68,7 +56,7 @@ class PTQueries {
 
   // Snow-Flake (F)
 
-  val q4 =
+  val f1 =
     """
       |SELECT Genre.subgenre, Genre.genre, Product.product, Trailer.trailer, Product.keywords
       |FROM Product
@@ -80,7 +68,7 @@ class PTQueries {
       |AND Product.productCategory="http://db.uwaterloo.ca/~galuc/wsdbm/ProductCategory2"
     """.stripMargin
 
-  val q5 =
+  val f2 =
     """
       |SELECT Product.product, Website.website, Product.title, Product.caption, Product.description, Website.url, Website.hits
       |FROM Product
@@ -91,7 +79,7 @@ class PTQueries {
       |AND Product.description IS NOT NULL
     """.stripMargin
 
-  val q6 =
+  val f3 =
 
     """
       |SELECT Product.product, Product.contentRating, Product.contentSize, MakesPurchase.user, Purchase.purchase, Purchase.purchaseDate
@@ -106,7 +94,7 @@ class PTQueries {
       |AND Purchase.purchaseDate IS NOT NULL
   """.stripMargin
 
-  val q7 =
+  val f4 =
 
     """
       |SELECT Product.product, Product.homepage, Includes.offer, Product.description, Website.url, Website.hits, Likes.user, Product.contentSize
@@ -121,7 +109,7 @@ class PTQueries {
       |AND Product.description IS NOT NULL
     """.stripMargin
 
-  val q8 =
+  val f5 =
     """
       |SELECT Offer.offer, Product.product, Offer.price, Offer.validThrough, Product.title, Product.productCategory
       |FROM Offer
@@ -134,7 +122,7 @@ class PTQueries {
   // Linear (L)
 
 
-  val q9 =
+  val l1 =
     """
       |SELECT  Subscribes.user, Likes.product, Product.caption
       |FROM Subscribes
@@ -144,7 +132,7 @@ class PTQueries {
     """.stripMargin
 
 
-  val q10 =
+  val l2 =
     """
       |SELECT User.user, City.parentCountry
       |FROM City
@@ -155,7 +143,7 @@ class PTQueries {
     """.stripMargin
 
 
-  val q11 =
+  val l3 =
     """
       |SELECT Likes.product, Subscribes.user
       |FROM Subscribes
@@ -164,7 +152,7 @@ class PTQueries {
     """.stripMargin
 
 
-  val q12 =
+  val l4 =
     """
       |SELECT Product.product, Product.caption
       |FROM Product
@@ -174,7 +162,7 @@ class PTQueries {
     """.stripMargin
 
 
-  val q13 =
+  val l5 =
     """
       |SELECT User.user, User.jobTitle, City.parentCountry
       |FROM  User
@@ -187,7 +175,7 @@ class PTQueries {
   //Star (S)
 
 
-  val q14 =
+  val s1 =
     """
       |SELECT Offer.offer, Includes.product, Offer.price, Offer.serialnumber, Offer.validFrom,
       |Offer.validThrough, Offer.eligibleQuantity, EligibilityRegion.country, Offer.priceValidUntil
@@ -201,7 +189,7 @@ class PTQueries {
     """.stripMargin
 
 
-  val q15 =
+  val s2 =
     """
       |SELECT User.user, user.location, User.gender
       |FROM User
@@ -212,7 +200,7 @@ class PTQueries {
     """.stripMargin
 
 
-  val q16 =
+  val s3 =
     """
       |SELECT Product.product, Product.caption, HasGenre.subgenre, Product.publisher
       |FROM Product
@@ -223,7 +211,7 @@ class PTQueries {
     """.stripMargin
 
 
-  val q17 =
+  val s4 =
     """
       |SELECT User.user, Product.product, User.familyName
       |FROM User
@@ -233,7 +221,7 @@ class PTQueries {
     """.stripMargin
 
 
-  val q18 =
+  val s5 =
     """
       |SELECT Product.product, Product.description, Product.keywords
       |FROM Product
@@ -245,7 +233,7 @@ class PTQueries {
     """.stripMargin
 
 
-  val q19 =
+  val s6 =
     """
       |SELECT  Product.product, Product.conductor, Product.productCategory
       |FROM Product
@@ -255,7 +243,7 @@ class PTQueries {
     """.stripMargin
 
 
-  val q20 =
+  val s7 =
     """
       |SELECT Product.product, Product.productCategory, Product.text
       |FROM Product

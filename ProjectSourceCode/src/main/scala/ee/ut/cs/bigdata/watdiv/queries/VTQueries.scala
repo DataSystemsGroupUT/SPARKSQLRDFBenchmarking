@@ -4,7 +4,7 @@ class VTQueries {
 
   //Complex
 
-  val q1 =
+  val c1 =
     """
       |SELECT tab0.v1 AS v1 , tab0.v0 AS v0 , tab6.v7 AS v7 , tab4.v5 AS v5 , tab5.v6 AS v6 , tab3.v4 AS v4 , tab2.v3 AS v3 , tab7.v8 AS v8 , tab1.v2 AS v2
       |FROM    (SELECT object AS v1 , subject AS v0  FROM caption) tab0
@@ -26,7 +26,7 @@ class VTQueries {
   """.stripMargin
 
 
-  val q2 =
+  val c2 =
     """
       |SELECT tab1.v0 AS v0 , tab3.v3 AS v3, tab6.v4 AS v4 , tab8.v8 AS v8
       |FROM    (SELECT subject AS v2 FROM eligibleRegion WHERE object = 'http://db.uwaterloo.ca/~galuc/wsdbm/Country3') tab2
@@ -55,7 +55,7 @@ class VTQueries {
 """.stripMargin
 
 
-  val q3 =
+  val c3 =
     """
       |SELECT tab2.v0 AS v0
       |FROM    (SELECT subject AS v0 , object AS v3 FROM Location) tab2
@@ -78,7 +78,7 @@ class VTQueries {
   // Snow-Flake (F)
 
 
-  val q4 =
+  val f1 =
     """
       |SELECT tab4.v0 AS v0 , tab3.v5 AS v5 , tab2.v4 AS v4 , tab5.v3 AS v3 , tab1.v2 AS v2
       | FROM    (SELECT subject AS v3  FROM type WHERE object = 'http://db.uwaterloo.ca/~galuc/wsdbm/ProductCategory2'	) tab5
@@ -94,7 +94,7 @@ class VTQueries {
     """.stripMargin
 
 
-  val q5 =
+  val f2 =
     """
       |SELECT tab0.v1 AS v1 , tab7.v0 AS v0 , tab4.v5 AS v5 , tab6.v7 AS v7 , tab5.v6 AS v6 , tab3.v4 AS v4 , tab1.v2 AS v2
       |FROM    (SELECT subject AS v0 FROM hasGenre WHERE object = "http://db.uwaterloo.ca/~galuc/wsdbm/SubGenre117") tab7
@@ -116,7 +116,7 @@ class VTQueries {
     """.stripMargin
 
 
-  val q6 =
+  val f3 =
     """
       |SELECT tab0.v1 AS v1 , tab2.v0 AS v0 , tab5.v5 AS v5 , tab3.v4 AS v4 , tab4.v6 AS v6 , tab1.v2 AS v2
       |FROM    (SELECT subject AS v0
@@ -146,7 +146,7 @@ class VTQueries {
       """.stripMargin
 
 
-  val q7 =
+  val f4 =
     """
       |SELECT tab7.v1 AS v1 , tab0.v0 AS v0 , tab8.v7 AS v7 , tab5.v5 AS v5 , tab3.v4 AS v4 , tab6.v6 AS v6 , tab1.v2 AS v2 , tab4.v8 AS v8
       |FROM    (SELECT subject AS v1	 FROM language WHERE object = 'http://db.uwaterloo.ca/~galuc/wsdbm/Language0'	) tab7
@@ -163,7 +163,7 @@ class VTQueries {
       |ON(tab1.v0=tab8.v0)
     """.stripMargin
 
-  val q8 =
+  val f5 =
     """
       |SELECT tab0.v1 AS v1 , tab1.v0 AS v0 , tab4.v5 AS v5 , tab5.v6 AS v6 , tab3.v4 AS v4 , tab2.v3 AS v3
       |FROM    (SELECT object AS v0 FROM offers WHERE subject = 'http://db.uwaterloo.ca/~galuc/wsdbm/Retailer9885' ) tab1
@@ -183,7 +183,7 @@ class VTQueries {
   // Linear (L)
 
 
-  val q9 =
+  val l1 =
     """
       |SELECT tab0.v0 AS v0 , tab1.v3 AS v3 , tab2.v2 AS v2
       |FROM    (SELECT subject AS v0 FROM subscribes
@@ -193,7 +193,7 @@ class VTQueries {
     """.stripMargin
 
 
-  val q10 =
+  val l2 =
     """
       |SELECT tab0.v1 AS v1 , tab2.v2 AS v2
       |FROM    (SELECT object AS v1 FROM parentCountry WHERE subject = 'http://db.uwaterloo.ca/~galuc/wsdbm/City70') tab0
@@ -204,7 +204,7 @@ class VTQueries {
     """.stripMargin
 
 
-  val q11 =
+  val l3 =
     """
       |SELECT tab1.v1 AS v1 , tab0.v0 AS v0
       |FROM
@@ -214,7 +214,7 @@ class VTQueries {
     """.stripMargin
 
 
-  val q12 =
+  val l4 =
     """
       |SELECT tab0.v0 AS v0 , tab1.v2 AS v2
       |FROM   (SELECT subject AS v0  FROM tag  WHERE object = 'http://db.uwaterloo.ca/~galuc/wsdbm/Topic142') tab0
@@ -222,7 +222,7 @@ class VTQueries {
     """.stripMargin
 
 
-  val q13 =
+  val l5 =
     """
       |SELECT tab0.v1 AS v1 , tab2.v0 AS v0 , tab1.v3 AS v3
       |FROM   (SELECT object AS v3 FROM parentCountry
@@ -238,7 +238,7 @@ class VTQueries {
   //Star (S)
 
 
-  val q14 =
+  val s1 =
     """
       |SELECT tab0.v1 AS v1 , tab1.v0 AS v0 , tab6.v7 AS v7 , tab4.v5 AS v5 , tab3.v4 AS v4 , tab5.v6 AS v6 , tab2.v3 AS v3 , tab8.v9 AS v9 , tab7.v8 AS v8
       |FROM    (SELECT object AS v0
@@ -278,7 +278,7 @@ class VTQueries {
     """.stripMargin
 
 
-  val q15 =
+  val s2 =
     """
       |SELECT tab0.v1 AS v1 , tab1.v0 AS v0 , tab2.v3 AS v3
       |FROM    (SELECT subject AS v0
@@ -301,7 +301,7 @@ class VTQueries {
     """.stripMargin
 
 
-  val q16 =
+  val s3 =
     """
       |SELECT tab0.v0 AS v0 , tab3.v4 AS v4 , tab2.v3 AS v3 , tab1.v2 AS v2
       |FROM    (SELECT subject AS v0
@@ -323,7 +323,7 @@ class VTQueries {
     """.stripMargin
 
 
-  val q17 =
+  val s4 =
     """
       |SELECT tab3.v0 AS v0 , tab2.v3 AS v3 , tab1.v2 AS v2
       |FROM    (SELECT subject AS v0
@@ -346,33 +346,22 @@ class VTQueries {
     """.stripMargin
 
 
-  val q18 =
+  val s5 =
     """
       |SELECT tab3.v0 AS v0 , tab2.v3 AS v3 , tab1.v2 AS v2
- FROM    (SELECT subject AS v0
-	 FROM language
-
-	 WHERE object = 'http://db.uwaterloo.ca/~galuc/wsdbm/Language0'
-	) tab3
- JOIN    (SELECT subject AS v0
-	 FROM type
-	 WHERE object = 'http://db.uwaterloo.ca/~galuc/wsdbm/ProductCategory3'
-	) tab0
- ON(tab3.v0=tab0.v0)
- JOIN    (SELECT subject AS v0 , object AS v3
-	 FROM keywords
-
-	) tab2
- ON(tab0.v0=tab2.v0)
- JOIN    (SELECT subject AS v0 , object AS v2
-	 FROM description
-
-	) tab1
- ON(tab2.v0=tab1.v0)
+      |FROM    (SELECT subject AS v0 FROM language
+      |WHERE object = 'http://db.uwaterloo.ca/~galuc/wsdbm/Language0') tab3
+      |JOIN    (SELECT subject AS v0 FROM type
+      |WHERE object = 'http://db.uwaterloo.ca/~galuc/wsdbm/ProductCategory3') tab0
+      |ON(tab3.v0=tab0.v0)
+      |JOIN    (SELECT subject AS v0 , object AS v3	 FROM keywords	) tab2
+      |ON(tab0.v0=tab2.v0)
+      |JOIN    (SELECT subject AS v0 , object AS v2 FROM description) tab1
+      | ON(tab2.v0=tab1.v0)
     """.stripMargin
 
 
-  val q19 =
+  val s6 =
     """
       |SELECT tab0.v1 AS v1 , tab2.v0 AS v0 , tab1.v2 AS v2
       |FROM    (SELECT subject AS v0
@@ -389,7 +378,7 @@ class VTQueries {
     """.stripMargin
 
 
-  val q20 =
+  val s7 =
     """
       |SELECT tab0.v1 AS v1 , tab2.v0 AS v0 , tab1.v2 AS v2
       |FROM    (SELECT object AS v0

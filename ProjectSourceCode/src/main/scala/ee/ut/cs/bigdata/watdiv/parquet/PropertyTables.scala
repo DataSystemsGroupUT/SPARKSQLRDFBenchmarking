@@ -80,26 +80,26 @@ object PropertyTables {
     //create file to write the query run time results    
     val fos = new FileOutputStream(new File(s"/home/hadoop/RDFBenchMarking/logs/$ds/parquet/PT/$ds.txt"), true)
 
-    val queries = List(new PTQueries q1,
-      new PTQueries q2,
-      new PTQueries q3,
-      new PTQueries q4,
-      new PTQueries q5,
-      new PTQueries q6,
-      new PTQueries q7,
-      new PTQueries q8,
-      new PTQueries q9,
-      new PTQueries q10,
-      new PTQueries q11,
-      new PTQueries q12,
-      new PTQueries q13,
-      new PTQueries q14,
-      new PTQueries q15,
-      new PTQueries q16,
-      new PTQueries q17,
-      new PTQueries q18,
-      new PTQueries q19,
-      new PTQueries q20)
+    val queries = List(new PTQueries c1,
+      new PTQueries c2,
+      new PTQueries c3,
+      new PTQueries f1,
+      new PTQueries f2,
+      new PTQueries f3,
+      new PTQueries f4,
+      new PTQueries f5,
+      new PTQueries l1,
+      new PTQueries l2,
+      new PTQueries l3,
+      new PTQueries l4,
+      new PTQueries l5,
+      new PTQueries s1,
+      new PTQueries s2,
+      new PTQueries s3,
+      new PTQueries s4,
+      new PTQueries s5,
+      new PTQueries s6,
+      new PTQueries s7)
 
     var count = 1
     for (query <- queries) {

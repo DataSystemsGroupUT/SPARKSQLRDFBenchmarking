@@ -131,26 +131,26 @@ object VerticalTables {
     val fos = new FileOutputStream(new File(s"/home/hadoop/RDFBenchMarking/logs/$ds/orc/VP/$ds.txt"), true)
 
     val queries = List(
-      new VTQueries q1,
-      new VTQueries q2,
-      new VTQueries q3,
-      new VTQueries q4,
-      new VTQueries q5,
-      new VTQueries q6,
-      new VTQueries q7,
-      new VTQueries q8,
-      new VTQueries q9,
-      new VTQueries q10,
-      new VTQueries q11,
-      new VTQueries q12,
-      new VTQueries q13,
-      new VTQueries q14,
-      new VTQueries q15,
-      new VTQueries q16,
-      new VTQueries q17,
-      new VTQueries q18,
-      new VTQueries q19,
-      new VTQueries q20)
+      new VTQueries c1,
+      new VTQueries c2,
+      new VTQueries c3,
+      new VTQueries f1,
+      new VTQueries f2,
+      new VTQueries f3,
+      new VTQueries f4,
+      new VTQueries f5,
+      new VTQueries l1,
+      new VTQueries l2,
+      new VTQueries l3,
+      new VTQueries l4,
+      new VTQueries l5,
+      new VTQueries s1,
+      new VTQueries s2,
+      new VTQueries s3,
+      new VTQueries s4,
+      new VTQueries s5,
+      new VTQueries s6,
+      new VTQueries s7)
 
     var count = 1
     for (query <- queries) {

@@ -5,7 +5,7 @@ class STQueries {
 
   //Complex
 
-  val q1 =
+  val c1 =
     """
       |SELECT T1.Subject, T4.Object, T6.Object , T7.Subject
       |FROM Triples T1
@@ -29,7 +29,7 @@ class STQueries {
   """.stripMargin
 
 
-  val q2 =
+  val c2 =
     """
       |SELECT T1.Object, T4.Object, T6.Subject , T9.Object
       |FROM Triples T1
@@ -58,7 +58,7 @@ class STQueries {
 """.stripMargin
 
 
-  val q3 =
+  val c3 =
     """
       |SELECT T1.Subject
       |FROM Triples T1
@@ -78,10 +78,10 @@ class STQueries {
   """.stripMargin
 
 
+  // Snow-Flake (F)
 
 
-
-   val q4 =
+   val f1 =
     """
       |SELECT T1.Subject, T1.Object, T3.Subject, T5.Object, T6.Object
       |FROM Triples T1
@@ -103,7 +103,7 @@ class STQueries {
     """.stripMargin
 
 
-  val q5 =
+  val f2 =
     """
       |SELECT T1.Subject, T1.Object, T2.Object, T4.Object, T6.Object, T7.Object, T8.Object
       |FROM Triples T1
@@ -128,7 +128,7 @@ class STQueries {
     """.stripMargin
 
 
-  val q6 =
+  val f3 =
 
     """
       |SELECT T1.Subject, T1.Object, T2.Object, T4.Object, T5.Object,T6.Object
@@ -150,7 +150,7 @@ class STQueries {
   """.stripMargin
 
 
-  val q7 =
+  val f4 =
 
     """
       |SELECT T1.Subject, T2.Object, T3.Object, T4.Subject, T5.Object, T6.Object, T7.Object, T9.Object
@@ -179,7 +179,7 @@ class STQueries {
     """.stripMargin
 
 
-  val q8 =
+  val f5 =
     """
       |SELECT T1.Object, T2.Object, T3.Object, T4.Object, T5.Object, T6.Object
       |FROM Triples T1
@@ -202,7 +202,7 @@ class STQueries {
 
   // Linear (L)
 
-  val q9 =
+  val l1 =
     """
       |SELECT T1.Subject,T3.Subject,T3.Object
       |FROM Triples T1
@@ -214,7 +214,7 @@ class STQueries {
     """.stripMargin
 
 
-  val q10 =
+  val l2 =
     """
       |SELECT T1.Subject,T3.Subject
       |FROM Triples T1
@@ -228,7 +228,7 @@ class STQueries {
     """.stripMargin
 
 
-  val q11 =
+  val l3 =
     """
       |SELECT T1.Subject, T2.Object
       |FROM Triples T1
@@ -239,7 +239,7 @@ class STQueries {
     """.stripMargin
 
 
-  val q12 =
+  val l4 =
     """
       |SELECT T1.Subject, T2.Object
       |FROM Triples T1
@@ -250,7 +250,7 @@ class STQueries {
       |""".stripMargin
 
 
-  val q13 =
+  val l5 =
     """
       |SELECT  T1.Subject, T1.Object,  T2.Object
       |FROM Triples T1
@@ -266,7 +266,7 @@ class STQueries {
   //Star (S)
 
 
-  val q14 =
+  val s1 =
     """
       |SELECT T1.Subject, T1.Object , T3.Object, T4.Object, T5.Object, T6.Object,T7.Object,T8.Object,T9.Object
       |FROM Triples T1
@@ -292,7 +292,7 @@ class STQueries {
     """.stripMargin
 
 
-  val q15 =
+  val s2 =
     """
       |SELECT T1.Subject, T1.Object, T3.Object
       |FROM Triples T1
@@ -308,7 +308,7 @@ class STQueries {
     """.stripMargin
 
 
-  val q16 =
+  val s3 =
     """
       |SELECT T1.Subject, T2.Object, T3.Object,T4.Object
       |FROM Triples T1
@@ -323,7 +323,7 @@ class STQueries {
     """.stripMargin
 
 
-  val q17 =
+  val s4 =
     """
       |SELECT T1.Subject, T2.Object, T3.Subject
       |FROM Triples T1
@@ -341,7 +341,7 @@ class STQueries {
     """.stripMargin
 
 
-  val q18 =
+  val s5 =
     """
       |SELECT T1.Subject, T2.Object, T3.Object
       |FROM Triples T1
@@ -358,7 +358,7 @@ class STQueries {
     """.stripMargin
 
 
-  val q19 =
+  val s6 =
     """
       |SELECT T1.Subject,T1.Object,T2.Object
       |FROM Triples T1
@@ -372,7 +372,7 @@ class STQueries {
     """.stripMargin
 
 
-  val q20 =
+  val s7 =
     """
       |SELECT T1.Subject, T1.Object, T2.Object
       |FROM Triples T1
