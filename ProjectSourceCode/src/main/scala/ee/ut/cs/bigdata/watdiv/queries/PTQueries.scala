@@ -191,7 +191,7 @@ class PTQueries {
 
   val s2 =
     """
-      |SELECT User.user, user.location, User.gender
+      |SELECT DISTINCT User.user, user.location, User.gender
       |FROM User
       |JOIN Role ON User.user=Role.user
       |WHERE User.nationality="http://db.uwaterloo.ca/~galuc/wsdbm/Country4"
