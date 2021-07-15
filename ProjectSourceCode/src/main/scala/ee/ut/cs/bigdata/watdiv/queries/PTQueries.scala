@@ -197,6 +197,7 @@ class PTQueries {
       |WHERE User.nationality="http://db.uwaterloo.ca/~galuc/wsdbm/Country4"
       |AND Role.role="http://db.uwaterloo.ca/~galuc/wsdbm/Role2"
       |AND User.gender IS NOT NULL
+      |AND User.location IS NOT NULL
     """.stripMargin
 
 
