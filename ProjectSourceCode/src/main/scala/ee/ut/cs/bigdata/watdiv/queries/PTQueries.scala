@@ -219,6 +219,7 @@ class PTQueries {
       |JOIN Product ON Product.artist=User.user
       |WHERE User.age="http://db.uwaterloo.ca/~galuc/wsdbm/AgeGroup5"
       |AND User.nationality="http://db.uwaterloo.ca/~galuc/wsdbm/Country1"
+      |AND user.familyName IS NOT NULL
     """.stripMargin
 
 
