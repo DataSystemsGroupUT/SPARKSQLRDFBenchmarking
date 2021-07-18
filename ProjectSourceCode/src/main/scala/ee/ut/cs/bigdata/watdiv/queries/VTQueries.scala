@@ -119,29 +119,16 @@ class VTQueries {
   val f3 =
     """
       |SELECT tab0.v1 AS v1 , tab2.v0 AS v0 , tab5.v5 AS v5 , tab3.v4 AS v4 , tab4.v6 AS v6 , tab1.v2 AS v2
-      |FROM    (SELECT subject AS v0
-      |FROM hasGenre
-      |WHERE object = 'http://db.uwaterloo.ca/~galuc/wsdbm/SubGenre111'
-      |) tab2
-      |JOIN    (SELECT subject AS v0 , object AS v2
-      |FROM contentSize
-      |) tab1
+      |FROM    (SELECT subject AS v0 FROM hasGenre WHERE object = 'http://db.uwaterloo.ca/~galuc/wsdbm/SubGenre111') tab2
+      |JOIN    (SELECT subject AS v0 , object AS v2 FROM contentSize) tab1
       |ON(tab2.v0=tab1.v0)
-      |JOIN    (SELECT object AS v1 , subject AS v0
-      |FROM contentRating
-      |) tab0
+      |JOIN    (SELECT object AS v1 , subject AS v0 FROM contentRating) tab0
       |ON(tab1.v0=tab0.v0)
-      |JOIN    (SELECT object AS v0 , subject AS v5
-      |FROM purchaseFor
-      |) tab5
+      |JOIN    (SELECT object AS v0 , subject AS v5 FROM purchaseFor) tab5
       |ON(tab0.v0=tab5.v0)
-      |JOIN    (SELECT subject AS v5 , object AS v6
-      |FROM purchaseDate
-      |) tab4
+      |JOIN    (SELECT subject AS v5 , object AS v6 FROM purchaseDate) tab4
       |ON(tab5.v5=tab4.v5)
-      |JOIN    (SELECT object AS v5 , subject AS v4
-      |FROM makesPurchase
-      |) tab3
+      |JOIN    (SELECT object AS v5 , subject AS v4 FROM makesPurchase) tab3
       |ON(tab4.v5=tab3.v5)
       """.stripMargin
 
