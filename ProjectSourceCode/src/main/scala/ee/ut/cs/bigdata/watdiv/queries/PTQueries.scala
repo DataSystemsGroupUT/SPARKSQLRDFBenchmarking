@@ -5,7 +5,7 @@ class PTQueries {
 
   val c1 =
     """
-      |SELECT DISTINCT Product1.product, Review.review, User.user, Product2.product
+      |SELECT Product1.product, Review.review, User.user, Product2.product
       |FROM Product AS Product1
       |JOIN HasReview ON Product1.product =HasReview.product
       |JOIN Review ON HasReview.review = Review.review
