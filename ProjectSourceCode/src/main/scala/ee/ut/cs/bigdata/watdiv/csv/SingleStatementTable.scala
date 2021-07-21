@@ -48,7 +48,7 @@ object SingleStatementTable {
       new STQueries f2,
       new STQueries f3,
       new STQueries f4,
-      new STQueries f4,
+      new STQueries f5,
       new STQueries l1,
       new STQueries l2,
       new STQueries l3,

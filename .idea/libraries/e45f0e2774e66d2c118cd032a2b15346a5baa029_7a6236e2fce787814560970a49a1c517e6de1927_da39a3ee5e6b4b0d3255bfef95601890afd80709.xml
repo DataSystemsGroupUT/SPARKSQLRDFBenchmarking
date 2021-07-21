@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="e45f0e2774e66d2c118cd032a2b15346a5baa029_7a6236e2fce787814560970a49a1c517e6de1927_da39a3ee5e6b4b0d3255bfef95601890afd80709">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/ProjectSourceCode/target/streams/_global/assemblyOption/_global/streams/assembly/e45f0e2774e66d2c118cd032a2b15346a5baa029_7a6236e2fce787814560970a49a1c517e6de1927_da39a3ee5e6b4b0d3255bfef95601890afd80709/reflectasm-1.07-shaded.jar!/" />
+      <root url="jar://$PROJECT_DIR$/ProjectSourceCode/target/streams/_global/assemblyOption/_global/streams/assembly/e45f0e2774e66d2c118cd032a2b15346a5baa029_7a6236e2fce787814560970a49a1c517e6de1927_da39a3ee5e6b4b0d3255bfef95601890afd80709/minlog-1.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/ProjectSourceCode/target/streams/_global/assemblyOption/_global/streams/assembly/e45f0e2774e66d2c118cd032a2b15346a5baa029_7a6236e2fce787814560970a49a1c517e6de1927_da39a3ee5e6b4b0d3255bfef95601890afd80709/objenesis-1.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
