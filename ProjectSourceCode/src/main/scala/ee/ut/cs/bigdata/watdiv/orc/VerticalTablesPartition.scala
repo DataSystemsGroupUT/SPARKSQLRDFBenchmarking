@@ -33,7 +33,6 @@ object VerticalTablesPartition {
     //read tables from HDFS
 
     val vpTabl_subscribes = spark.read.format("orc").load(path + "VHDFS/ORC/subscribes.orc")
-    /*
     val vpTabl_likes = spark.read.format("orc").load(path + "VHDFS/ORC/likes.orc")
     val vpSubscribes = spark.read.format("orc").load(path + "VHDFS/ORC/" + "subscribes.orc")
     val vpLikes = spark.read.format("orc").load(path + "VHDFS/ORC/" + "likes.orc")
@@ -83,8 +82,6 @@ object VerticalTablesPartition {
     val vpfamilyName = spark.read.format("orc").load(path + "VHDFS/ORC/" + "familyName.orc")
     val vpConductor = spark.read.format("orc").load(path + "VHDFS/ORC/" + "conductor.orc")
 
-     */
-
     println("WatDiv VP Tables Read!")
 
 
@@ -92,7 +89,6 @@ object VerticalTablesPartition {
     if (partitionType == "subject") {
 
       vpTabl_subscribes.repartition(84).write.option("header", "true").format("orc").mode(SaveMode.Overwrite).save(path + "Subject/ORC/subscribes.orc")
-      /*
       vpTabl_likes.repartition(84, $"Subject").write.option("header", "true").format("orc").mode(SaveMode.Overwrite).save(path + "Subject/ORC/likes.orc")
       vpSubscribes.repartition(84, $"Subject").write.option("header", "true").format("orc").mode(SaveMode.Overwrite).save(path + "Subject/ORC/" + "subscribes.orc")
       vpLikes.repartition(84, $"Subject").write.option("header", "true").format("orc").mode(SaveMode.Overwrite).save(path + "Subject/ORC/" + "likes.orc")
@@ -142,15 +138,12 @@ object VerticalTablesPartition {
       vpfamilyName.repartition(84, $"Subject").write.option("header", "true").format("orc").mode(SaveMode.Overwrite).save(path + "Subject/ORC/" + "familyName.orc")
       vpConductor.repartition(84, $"Subject").write.option("header", "true").format("orc").mode(SaveMode.Overwrite).save(path + "Subject/ORC/" + "conductor.orc")
 
-       */
-
       println("ORC VT partitioned and saved! Subject based Partitioning")
     }
 
     else if (partitionType == "horizontal") {
 
       vpTabl_subscribes.repartition(84).write.option("header", "true").format("orc").mode(SaveMode.Overwrite).save(path + "Horizontal/ORC/subscribes.orc")
-      /*
       vpTabl_likes.repartition(84).write.option("header", "true").format("orc").mode(SaveMode.Overwrite).save(path + "Horizontal/ORC/likes.orc")
       vpSubscribes.repartition(84).write.option("header", "true").format("orc").mode(SaveMode.Overwrite).save(path + "Horizontal/ORC/" + "subscribes.orc")
       vpLikes.repartition(84).write.option("header", "true").format("orc").mode(SaveMode.Overwrite).save(path + "Horizontal/ORC/" + "likes.orc")
@@ -199,8 +192,6 @@ object VerticalTablesPartition {
       vpartist.repartition(84).write.option("header", "true").format("orc").mode(SaveMode.Overwrite).save(path + "Horizontal/ORC/" + "artist.orc")
       vpfamilyName.repartition(84).write.option("header", "true").format("orc").mode(SaveMode.Overwrite).save(path + "Horizontal/ORC/" + "familyName.orc")
       vpConductor.repartition(84).write.option("header", "true").format("orc").mode(SaveMode.Overwrite).save(path + "Horizontal/ORC/" + "conductor.orc")
-
-       */
 
       println("ORC VT partitioned and saved! Horizontal partitioning")
 

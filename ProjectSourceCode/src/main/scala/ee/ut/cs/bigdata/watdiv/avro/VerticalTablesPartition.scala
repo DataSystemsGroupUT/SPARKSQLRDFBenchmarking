@@ -31,7 +31,6 @@ object VerticalTablesPartition {
     //read tables from HDFS
 
     val vpTabl_subscribes = spark.read.format("avro").load(path + "VHDFS/Avro/subscribes.avro")
-    /*
     val vpTabl_likes = spark.read.format("avro").load(path + "VHDFS/Avro/likes.avro")
     val vpSubscribes = spark.read.format("avro").load(path + "VHDFS/Avro/" + "subscribes.avro")
     val vpLikes = spark.read.format("avro").load(path + "VHDFS/Avro/" + "likes.avro")
@@ -81,7 +80,6 @@ object VerticalTablesPartition {
     val vpfamilyName = spark.read.format("avro").load(path + "VHDFS/Avro/" + "familyName.avro")
     val vpConductor = spark.read.format("avro").load(path + "VHDFS/Avro/" + "conductor.avro")
 
-     */
 
     println("WatDiv VP Tables Read!")
 
@@ -89,7 +87,6 @@ object VerticalTablesPartition {
     if (partitionType == "subject") {
 
       vpTabl_subscribes.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path + "Subject/Avro/subscribes.avro")
-      /*
       vpTabl_likes.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path + "Subject/Avro/likes.avro")
       vpSubscribes.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path + "Subject/Avro/" + "subscribes.avro")
       vpLikes.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path + "Subject/Avro/" + "likes.avro")
@@ -139,7 +136,6 @@ object VerticalTablesPartition {
       vpfamilyName.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path + "Subject/Avro/" + "familyName.avro")
       vpConductor.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path + "Subject/Avro/" + "conductor.avro")
 
-       */
 
       println("Avro VT partitioned and saved! Subject based partitioning!")
     }
@@ -147,7 +143,6 @@ object VerticalTablesPartition {
 
     else if (partitionType == "horizontal") {
       vpTabl_subscribes.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path + "Horizontal/Avro/subscribes.avro")
-      /*
       vpTabl_likes.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path + "Horizontal/Avro/likes.avro")
       vpSubscribes.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path + "Horizontal/Avro/" + "subscribes.avro")
       vpLikes.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path + "Horizontal/Avro/" + "likes.avro")
@@ -196,8 +191,6 @@ object VerticalTablesPartition {
       vpartist.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path + "Horizontal/Avro/" + "artist.avro")
       vpfamilyName.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path + "Horizontal/Avro/" + "familyName.avro")
       vpConductor.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path + "Horizontal/Avro/" + "conductor.avro")
-
-       */
 
       println("Avro VT partitioned and saved! Horizontal partitioning!")
 

@@ -30,7 +30,6 @@ object VerticalTablesPartition {
 
     //read tables from HDFS
     val vpTabl_subscribes = spark.read.format("parquet").load(path + "VHDFS/Parquet/subscribes.parquet")
-    /*
     val vpTabl_likes = spark.read.format("parquet").load(path + "VHDFS/Parquet/likes.parquet")
     val vpSubscribes = spark.read.format("parquet").load(path + "VHDFS/Parquet/" + "subscribes.parquet")
     val vpLikes = spark.read.format("parquet").load(path + "VHDFS/Parquet/" + "likes.parquet")
@@ -80,15 +79,12 @@ object VerticalTablesPartition {
     val vpfamilyName = spark.read.format("parquet").load(path + "VHDFS/Parquet/" + "familyName.parquet")
     val vpConductor = spark.read.format("parquet").load(path + "VHDFS/Parquet/" + "conductor.parquet")
 
-     */
-
 
     println("WatDiv VP Tables Read!")
 
     //partition and save on HDFS
     if (partitionType == "subject") {
       vpTabl_subscribes.repartition($"Subject").write.option("header", "true").format("parquet").mode(SaveMode.Overwrite).save(path + "Subject/Parquet/subscribes.parquet")
-      /*
       vpTabl_likes.repartition($"Subject").write.option("header", "true").format("parquet").mode(SaveMode.Overwrite).save(path + "Subject/Parquet/likes.parquet")
       vpSubscribes.repartition($"Subject").write.option("header", "true").format("parquet").mode(SaveMode.Overwrite).save(path + "Subject/Parquet/" + "subscribes.parquet")
       vpLikes.repartition($"Subject").write.option("header", "true").format("parquet").mode(SaveMode.Overwrite).save(path + "Subject/Parquet/" + "likes.parquet")
@@ -137,7 +133,7 @@ object VerticalTablesPartition {
       vpartist.repartition($"Subject").write.option("header", "true").format("parquet").mode(SaveMode.Overwrite).save(path + "Subject/Parquet/" + "artist.parquet")
       vpfamilyName.repartition($"Subject").write.option("header", "true").format("parquet").mode(SaveMode.Overwrite).save(path + "Subject/Parquet/" + "familyName.parquet")
       vpConductor.repartition($"Subject").write.option("header", "true").format("parquet").mode(SaveMode.Overwrite).save(path + "Subject/Parquet/" + "conductor.parquet")
-      */
+
       println("Parquet VT partitioned and saved! Subject based Partitioning!")
 
 
@@ -145,7 +141,7 @@ object VerticalTablesPartition {
 
     else if (partitionType == "horizontal") {
       vpTabl_subscribes.repartition(84).write.option("header", "true").format("parquet").mode(SaveMode.Overwrite).save(path + "Horizontal/Parquet/subscribes.parquet")
-      /*
+
       vpTabl_likes.repartition(84).write.option("header", "true").format("parquet").mode(SaveMode.Overwrite).save(path + "Horizontal/Parquet/likes.parquet")
       vpSubscribes.repartition(84).write.option("header", "true").format("parquet").mode(SaveMode.Overwrite).save(path + "Horizontal/Parquet/" + "subscribes.parquet")
       vpLikes.repartition(84).write.option("header", "true").format("parquet").mode(SaveMode.Overwrite).save(path + "Horizontal/Parquet/" + "likes.parquet")
@@ -195,7 +191,6 @@ object VerticalTablesPartition {
       vpfamilyName.repartition(84).write.option("header", "true").format("parquet").mode(SaveMode.Overwrite).save(path + "Horizontal/Parquet/" + "familyName.parquet")
       vpConductor.repartition(84).write.option("header", "true").format("parquet").mode(SaveMode.Overwrite).save(path + "Horizontal/Parquet/" + "conductor.parquet")
 
-       */
 
       println("Parquet VT partitioned and saved! Horizontal partitioning!")
     }
