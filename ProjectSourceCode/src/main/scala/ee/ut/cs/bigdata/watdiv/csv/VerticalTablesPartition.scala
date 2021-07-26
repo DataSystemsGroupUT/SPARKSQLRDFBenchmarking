@@ -29,7 +29,7 @@ object VerticalTablesPartition {
     //read tables from HDFS
 
     val vpTabl_subscribes = spark.read.option("header", true).csv(path + "VHDFS/CSV/subscribes.csv").toDF()
-    val vpTabl_likes = spark.read.option("header", true).csv(path + "VHDFS/CSV/likes.csv").toDF()
+    /*val vpTabl_likes = spark.read.option("header", true).csv(path + "VHDFS/CSV/likes.csv").toDF()
     val vpSubscribes = spark.read.option("header", true).csv(path + "VHDFS/CSV/" + "subscribes.csv").toDF()
     val vpLikes = spark.read.option("header", true).csv(path + "VHDFS/CSV/" + "likes.csv").toDF()
     val vpCaption = spark.read.option("header", true).csv(path + "VHDFS/CSV/" + "caption.csv").toDF()
@@ -78,13 +78,15 @@ object VerticalTablesPartition {
     val vpfamilyName = spark.read.option("header", true).csv(path + "VHDFS/CSV/" + "familyName.csv").toDF()
     val vpConductor = spark.read.option("header", true).csv(path + "VHDFS/CSV/" + "conductor.csv").toDF()
 
+     */
+
 
     import spark.implicits._
 
     //partition and save on HDFS
     if (partitionType == "subject") {
       vpTabl_subscribes.repartition(84, $"Subject").write.option("header", true).format("csv").mode(SaveMode.Overwrite).save(path + "Subject/CSV/subscribes.csv")
-      vpTabl_likes.repartition(84, $"Subject").write.option("header", true).format("csv").mode(SaveMode.Overwrite).save(path + "Subject/CSV/likes.csv")
+      /*vpTabl_likes.repartition(84, $"Subject").write.option("header", true).format("csv").mode(SaveMode.Overwrite).save(path + "Subject/CSV/likes.csv")
       vpSubscribes.repartition(84, $"Subject").write.option("header", true).format("csv").mode(SaveMode.Overwrite).save(path + "Subject/CSV/" + "subscribes.csv")
       vpLikes.repartition(84, $"Subject").write.option("header", true).format("csv").mode(SaveMode.Overwrite).save(path + "Subject/CSV/" + "likes.csv")
       vpCaption.repartition(84, $"Subject").write.option("header", true).format("csv").mode(SaveMode.Overwrite).save(path + "Subject/CSV/" + "caption.csv")
@@ -132,13 +134,15 @@ object VerticalTablesPartition {
       vpartist.repartition(84, $"Subject").write.option("header", true).format("csv").mode(SaveMode.Overwrite).save(path + "Subject/CSV/" + "artist.csv")
       vpfamilyName.repartition(84, $"Subject").write.option("header", true).format("csv").mode(SaveMode.Overwrite).save(path + "Subject/CSV/" + "familyName.csv")
       vpConductor.repartition(84, $"Subject").write.option("header", true).format("csv").mode(SaveMode.Overwrite).save(path + "Subject/CSV/" + "conductor.csv")
+
+       */
     }
 
 
     else if (partitionType == "horizontal") {
 
       vpTabl_subscribes.repartition(84).write.option("header", true).format("csv").mode(SaveMode.Overwrite).save(path + "Predicate/CSV/subscribes.csv")
-      vpTabl_likes.repartition(84).write.option("header", true).format("csv").mode(SaveMode.Overwrite).save(path + "Predicate/CSV/likes.csv")
+      /*vpTabl_likes.repartition(84).write.option("header", true).format("csv").mode(SaveMode.Overwrite).save(path + "Predicate/CSV/likes.csv")
       vpSubscribes.repartition(84).write.option("header", true).format("csv").mode(SaveMode.Overwrite).save(path + "Predicate/CSV/" + "subscribes.csv")
       vpLikes.repartition(84).write.option("header", true).format("csv").mode(SaveMode.Overwrite).save(path + "Predicate/CSV/" + "likes.csv")
       vpCaption.repartition(84).write.option("header", true).format("csv").mode(SaveMode.Overwrite).save(path + "Predicate/CSV/" + "caption.csv")
@@ -186,6 +190,8 @@ object VerticalTablesPartition {
       vpartist.repartition(84).write.option("header", true).format("csv").mode(SaveMode.Overwrite).save(path + "Predicate/CSV/" + "artist.csv")
       vpfamilyName.repartition(84).write.option("header", true).format("csv").mode(SaveMode.Overwrite).save(path + "Predicate/CSV/" + "familyName.csv")
       vpConductor.repartition(84).write.option("header", true).format("csv").mode(SaveMode.Overwrite).save(path + "Predicate/CSV/" + "conductor.csv")
+
+       */
 
     }
 
