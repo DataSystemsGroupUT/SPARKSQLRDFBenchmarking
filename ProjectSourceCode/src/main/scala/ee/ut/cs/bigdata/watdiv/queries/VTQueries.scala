@@ -89,7 +89,8 @@ class VTQueries {
       | JOIN    (SELECT object AS v0 , subject AS v3	 FROM hasGenre	) tab4
       | ON(tab3.v3=tab4.v3)
       | JOIN    (SELECT subject AS v0 FROM tag WHERE object = 'http://db.uwaterloo.ca/~galuc/wsdbm/Topic8'	) tab0
-      | ON(tab4.v0=tab0.v0) JOIN    (SELECT subject AS v0 , object AS v2	 FROM type	) tab1
+      | ON(tab4.v0=tab0.v0)
+      | JOIN    (SELECT subject AS v0 , object AS v2	 FROM type	) tab1
       | ON(tab0.v0=tab1.v0)
     """.stripMargin
 

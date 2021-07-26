@@ -126,7 +126,8 @@ class PTQueries {
     """
       |SELECT  Subscribes.user, Likes.product, Product.caption
       |FROM Subscribes
-      |JOIN  Likes ON Likes.user = Subscribes.user AND Subscribes.website="http://db.uwaterloo.ca/~galuc/wsdbm/Website7355"
+      |JOIN  Likes ON Likes.user = Subscribes.user
+      |AND Subscribes.website="http://db.uwaterloo.ca/~galuc/wsdbm/Website7355"
       |JOIN  Product ON Likes.product=Product.product
       |WHERE Product.caption IS NOT NULL
     """.stripMargin
