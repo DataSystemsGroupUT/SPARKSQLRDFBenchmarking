@@ -7,7 +7,7 @@ import org.apache.spark.sql.SparkSession
 import org.apache.spark.sql.{Column, SaveMode, SparkSession}
 import org.apache.spark.{SparkConf, SparkContext}
 
-object VerticalTablesParittion {
+object VerticalTablesPartition {
   def main(args: Array[String]): Unit = {
 
     val conf = new SparkConf()

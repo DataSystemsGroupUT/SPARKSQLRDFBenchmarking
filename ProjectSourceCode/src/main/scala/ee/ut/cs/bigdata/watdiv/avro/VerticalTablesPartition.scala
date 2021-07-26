@@ -27,7 +27,7 @@ object VerticalTablesPartition {
     val path = s"hdfs://172.17.77.48:9000/user/hadoop/RDFBench/WATDIV/$ds/VP/"
 
 
-     println("Start Watdiv VP Partitioning ORC...")
+    println("Start Watdiv VP Partitioning Avro...")
     //read tables from HDFS
 
     val vpTabl_subscribes = spark.read.format("avro").load(path + "VHDFS/Avro/subscribes.avro")
@@ -83,7 +83,7 @@ object VerticalTablesPartition {
 
      */
 
-println("WatDiv VP Tables Read!")
+    println("WatDiv VP Tables Read!")
 
     //partition and save on HDFS
     if (partitionType == "subject") {
