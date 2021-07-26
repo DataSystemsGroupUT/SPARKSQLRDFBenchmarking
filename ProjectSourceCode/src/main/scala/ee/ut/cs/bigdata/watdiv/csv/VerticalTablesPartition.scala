@@ -19,19 +19,17 @@ object VerticalTablesPartition {
       .appName("RDFBench Predicate/CSV VT Partitioned")
       .getOrCreate()
 
-    import spark.implicits._
-
     val ds = args(0) // data size
     val partitionType = args(1).toLowerCase // horizontal, predicate or subject
 
     val path = s"hdfs://172.17.77.48:9000/user/hadoop/RDFBench/WATDIV/$ds/VP/"
 
 
-    print("Start Watdiv VP Partitioning...")
+    println("Start Watdiv VP Partitioning...")
     //read tables from HDFS
 
     val vpTabl_subscribes = spark.read.option("header", true).csv(path + "VHDFS/CSV/subscribes.csv").toDF()
-    /*val vpTabl_likes = spark.read.option("header", true).csv(path + "VHDFS/CSV/likes.csv").toDF()
+    val vpTabl_likes = spark.read.option("header", true).csv(path + "VHDFS/CSV/likes.csv").toDF()
     val vpSubscribes = spark.read.option("header", true).csv(path + "VHDFS/CSV/" + "subscribes.csv").toDF()
     val vpLikes = spark.read.option("header", true).csv(path + "VHDFS/CSV/" + "likes.csv").toDF()
     val vpCaption = spark.read.option("header", true).csv(path + "VHDFS/CSV/" + "caption.csv").toDF()
@@ -80,18 +78,14 @@ object VerticalTablesPartition {
     val vpfamilyName = spark.read.option("header", true).csv(path + "VHDFS/CSV/" + "familyName.csv").toDF()
     val vpConductor = spark.read.option("header", true).csv(path + "VHDFS/CSV/" + "conductor.csv").toDF()
 
-
-
-     */
-
-
     println("WatDiv VP Tables Read!")
+
     import spark.implicits._
 
     //partition and save on HDFS
     if (partitionType == "subject") {
       vpTabl_subscribes.repartition(84, $"Subject").write.option("header", true).format("csv").mode(SaveMode.Overwrite).save(path + "Subject/CSV/subscribes.csv")
-      /*vpTabl_likes.repartition(84, $"Subject").write.option("header", true).format("csv").mode(SaveMode.Overwrite).save(path + "Subject/CSV/likes.csv")
+      vpTabl_likes.repartition(84, $"Subject").write.option("header", true).format("csv").mode(SaveMode.Overwrite).save(path + "Subject/CSV/likes.csv")
       vpSubscribes.repartition(84, $"Subject").write.option("header", true).format("csv").mode(SaveMode.Overwrite).save(path + "Subject/CSV/" + "subscribes.csv")
       vpLikes.repartition(84, $"Subject").write.option("header", true).format("csv").mode(SaveMode.Overwrite).save(path + "Subject/CSV/" + "likes.csv")
       vpCaption.repartition(84, $"Subject").write.option("header", true).format("csv").mode(SaveMode.Overwrite).save(path + "Subject/CSV/" + "caption.csv")
@@ -141,65 +135,62 @@ object VerticalTablesPartition {
       vpConductor.repartition(84, $"Subject").write.option("header", true).format("csv").mode(SaveMode.Overwrite).save(path + "Subject/CSV/" + "conductor.csv")
 
 
-       */
-
-       println("CSV VT partitioned and saved! Subject!")
+      println("CSV VT partitioned and saved! Subject!")
     }
 
 
     else if (partitionType == "horizontal") {
 
-      vpTabl_subscribes.repartition(84).write.option("header", true).format("csv").mode(SaveMode.Overwrite).save(path + "Predicate/CSV/subscribes.csv")
-      /*vpTabl_likes.repartition(84).write.option("header", true).format("csv").mode(SaveMode.Overwrite).save(path + "Predicate/CSV/likes.csv")
-      vpSubscribes.repartition(84).write.option("header", true).format("csv").mode(SaveMode.Overwrite).save(path + "Predicate/CSV/" + "subscribes.csv")
-      vpLikes.repartition(84).write.option("header", true).format("csv").mode(SaveMode.Overwrite).save(path + "Predicate/CSV/" + "likes.csv")
-      vpCaption.repartition(84).write.option("header", true).format("csv").mode(SaveMode.Overwrite).save(path + "Predicate/CSV/" + "caption.csv")
-      vpParentCount.repartition(84).write.option("header", true).format("csv").mode(SaveMode.Overwrite).save(path + "Predicate/CSV/" + "parentCountry.csv")
-      vpNationality.repartition(84).write.option("header", true).format("csv").mode(SaveMode.Overwrite).save(path + "Predicate/CSV/" + "nationality.csv")
-      vpjobTitle.repartition(84).write.option("header", true).format("csv").mode(SaveMode.Overwrite).save(path + "Predicate/CSV/" + "jobTitle.csv")
-      vpText.repartition(84).write.option("header", true).format("csv").mode(SaveMode.Overwrite).save(path + "Predicate/CSV/" + "text.csv")
-      vpcontentRating.repartition(84).write.option("header", true).format("csv").mode(SaveMode.Overwrite).save(path + "Predicate/CSV/" + "contentRating.csv")
-      vpcontentSize.repartition(84).write.option("header", true).format("csv").mode(SaveMode.Overwrite).save(path + "Predicate/CSV/" + "contentSize.csv")
-      vphasReview.repartition(84).write.option("header", true).format("csv").mode(SaveMode.Overwrite).save(path + "Predicate/CSV/" + "hasReview.csv")
-      vpTitle.repartition(84).write.option("header", true).format("csv").mode(SaveMode.Overwrite).save(path + "Predicate/CSV/" + "og_title.csv")
-      vpRevTitle.repartition(84).write.option("header", true).format("csv").mode(SaveMode.Overwrite).save(path + "Predicate/CSV/" + "rev_title.csv")
-      vpreviewer.repartition(84).write.option("header", true).format("csv").mode(SaveMode.Overwrite).save(path + "Predicate/CSV/" + "reviewer.csv")
-      vpActor.repartition(84).write.option("header", true).format("csv").mode(SaveMode.Overwrite).save(path + "Predicate/CSV/" + "actor.csv")
-      vpLanguage.repartition(84).write.option("header", true).format("csv").mode(SaveMode.Overwrite).save(path + "Predicate/CSV/" + "language.csv")
-      vpLocation.repartition(84).write.option("header", true).format("csv").mode(SaveMode.Overwrite).save(path + "Predicate/CSV/" + "Location.csv")
-      vpAge.repartition(84).write.option("header", true).format("csv").mode(SaveMode.Overwrite).save(path + "Predicate/CSV/" + "age.csv")
-      vpGender.repartition(84).write.option("header", true).format("csv").mode(SaveMode.Overwrite).save(path + "Predicate/CSV/" + "gender.csv")
-      vpgivenName.repartition(84).write.option("header", true).format("csv").mode(SaveMode.Overwrite).save(path + "Predicate/CSV/" + "givenName.csv")
-      vpfriendOf.repartition(84).write.option("header", true).format("csv").mode(SaveMode.Overwrite).save(path + "Predicate/CSV/" + "friendOf.csv")
-      vpLegalName.repartition(84).write.option("header", true).format("csv").mode(SaveMode.Overwrite).save(path + "Predicate/CSV/" + "legalName.csv")
-      vpoffers.repartition(84).write.option("header", true).format("csv").mode(SaveMode.Overwrite).save(path + "Predicate/CSV/" + "offers.csv")
-      vpeligibleRegion.repartition(84).write.option("header", true).format("csv").mode(SaveMode.Overwrite).save(path + "Predicate/CSV/" + "eligibleRegion.csv")
-      vpincludes.repartition(84).write.option("header", true).format("csv").mode(SaveMode.Overwrite).save(path + "Predicate/CSV/" + "includes.csv")
-      vphomepage.repartition(84).write.option("header", true).format("csv").mode(SaveMode.Overwrite).save(path + "Predicate/CSV/" + "homepage.csv")
-      vpmakesPurchase.repartition(84).write.option("header", true).format("csv").mode(SaveMode.Overwrite).save(path + "Predicate/CSV/" + "makesPurchase.csv")
-      vppurchaseFor.repartition(84).write.option("header", true).format("csv").mode(SaveMode.Overwrite).save(path + "Predicate/CSV/" + "purchaseFor.csv")
-      vppurchaseDate.repartition(84).write.option("header", true).format("csv").mode(SaveMode.Overwrite).save(path + "Predicate/CSV/" + "purchaseDate.csv")
-      vptotalVotes.repartition(84).write.option("header", true).format("csv").mode(SaveMode.Overwrite).save(path + "Predicate/CSV/" + "totalVotes.csv")
-      vptag.repartition(84).write.option("header", true).format("csv").mode(SaveMode.Overwrite).save(path + "Predicate/CSV/" + "tag.csv")
-      vptype.repartition(84).write.option("header", true).format("csv").mode(SaveMode.Overwrite).save(path + "Predicate/CSV/" + "type.csv")
-      vptrailer.repartition(84).write.option("header", true).format("csv").mode(SaveMode.Overwrite).save(path + "Predicate/CSV/" + "trailer.csv")
-      vpkeywords.repartition(84).write.option("header", true).format("csv").mode(SaveMode.Overwrite).save(path + "Predicate/CSV/" + "keywords.csv")
-      vphasGenre.repartition(84).write.option("header", true).format("csv").mode(SaveMode.Overwrite).save(path + "Predicate/CSV/" + "hasGenre.csv")
-      vpdescription.repartition(84).write.option("header", true).format("csv").mode(SaveMode.Overwrite).save(path + "Predicate/CSV/" + "description.csv")
-      vpurl.repartition(84).write.option("header", true).format("csv").mode(SaveMode.Overwrite).save(path + "Predicate/CSV/" + "url.csv")
-      vphits.repartition(84).write.option("header", true).format("csv").mode(SaveMode.Overwrite).save(path + "Predicate/CSV/" + "hits.csv")
-      vpprice.repartition(84).write.option("header", true).format("csv").mode(SaveMode.Overwrite).save(path + "Predicate/CSV/" + "price.csv")
-      vpvalidThrough.repartition(84).write.option("header", true).format("csv").mode(SaveMode.Overwrite).save(path + "Predicate/CSV/" + "validThrough.csv")
-      vpPricevaliduntil.repartition(84).write.option("header", true).format("csv").mode(SaveMode.Overwrite).save(path + "Predicate/CSV/" + "priceValidUntil.csv")
-      vpValidFrom.repartition(84).write.option("header", true).format("csv").mode(SaveMode.Overwrite).save(path + "Predicate/CSV/" + "validFrom.csv")
-      vpserialNumber.repartition(84).write.option("header", true).format("csv").mode(SaveMode.Overwrite).save(path + "Predicate/CSV/" + "serialNumber.csv")
-      vpeligibleQuantity.repartition(84).write.option("header", true).format("csv").mode(SaveMode.Overwrite).save(path + "Predicate/CSV/" + "eligibleQuantity.csv")
-      vppublisher.repartition(84).write.option("header", true).format("csv").mode(SaveMode.Overwrite).save(path + "Predicate/CSV/" + "publisher.csv")
-      vpartist.repartition(84).write.option("header", true).format("csv").mode(SaveMode.Overwrite).save(path + "Predicate/CSV/" + "artist.csv")
-      vpfamilyName.repartition(84).write.option("header", true).format("csv").mode(SaveMode.Overwrite).save(path + "Predicate/CSV/" + "familyName.csv")
-      vpConductor.repartition(84).write.option("header", true).format("csv").mode(SaveMode.Overwrite).save(path + "Predicate/CSV/" + "conductor.csv")
+      vpTabl_subscribes.repartition(84).write.option("header", true).format("csv").mode(SaveMode.Overwrite).save(path + "Horizontal/CSV/subscribes.csv")
+      vpTabl_likes.repartition(84).write.option("header", true).format("csv").mode(SaveMode.Overwrite).save(path + "Horizontal/CSV/likes.csv")
+      vpSubscribes.repartition(84).write.option("header", true).format("csv").mode(SaveMode.Overwrite).save(path + "Horizontal/CSV/" + "subscribes.csv")
+      vpLikes.repartition(84).write.option("header", true).format("csv").mode(SaveMode.Overwrite).save(path + "Horizontal/CSV/" + "likes.csv")
+      vpCaption.repartition(84).write.option("header", true).format("csv").mode(SaveMode.Overwrite).save(path + "Horizontal/CSV/" + "caption.csv")
+      vpParentCount.repartition(84).write.option("header", true).format("csv").mode(SaveMode.Overwrite).save(path + "Horizontal/CSV/" + "parentCountry.csv")
+      vpNationality.repartition(84).write.option("header", true).format("csv").mode(SaveMode.Overwrite).save(path + "Horizontal/CSV/" + "nationality.csv")
+      vpjobTitle.repartition(84).write.option("header", true).format("csv").mode(SaveMode.Overwrite).save(path + "Horizontal/CSV/" + "jobTitle.csv")
+      vpText.repartition(84).write.option("header", true).format("csv").mode(SaveMode.Overwrite).save(path + "Horizontal/CSV/" + "text.csv")
+      vpcontentRating.repartition(84).write.option("header", true).format("csv").mode(SaveMode.Overwrite).save(path + "Horizontal/CSV/" + "contentRating.csv")
+      vpcontentSize.repartition(84).write.option("header", true).format("csv").mode(SaveMode.Overwrite).save(path + "Horizontal/CSV/" + "contentSize.csv")
+      vphasReview.repartition(84).write.option("header", true).format("csv").mode(SaveMode.Overwrite).save(path + "Horizontal/CSV/" + "hasReview.csv")
+      vpTitle.repartition(84).write.option("header", true).format("csv").mode(SaveMode.Overwrite).save(path + "Horizontal/CSV/" + "og_title.csv")
+      vpRevTitle.repartition(84).write.option("header", true).format("csv").mode(SaveMode.Overwrite).save(path + "Horizontal/CSV/" + "rev_title.csv")
+      vpreviewer.repartition(84).write.option("header", true).format("csv").mode(SaveMode.Overwrite).save(path + "Horizontal/CSV/" + "reviewer.csv")
+      vpActor.repartition(84).write.option("header", true).format("csv").mode(SaveMode.Overwrite).save(path + "Horizontal/CSV/" + "actor.csv")
+      vpLanguage.repartition(84).write.option("header", true).format("csv").mode(SaveMode.Overwrite).save(path + "Horizontal/CSV/" + "language.csv")
+      vpLocation.repartition(84).write.option("header", true).format("csv").mode(SaveMode.Overwrite).save(path + "Horizontal/CSV/" + "Location.csv")
+      vpAge.repartition(84).write.option("header", true).format("csv").mode(SaveMode.Overwrite).save(path + "Horizontal/CSV/" + "age.csv")
+      vpGender.repartition(84).write.option("header", true).format("csv").mode(SaveMode.Overwrite).save(path + "Horizontal/CSV/" + "gender.csv")
+      vpgivenName.repartition(84).write.option("header", true).format("csv").mode(SaveMode.Overwrite).save(path + "Horizontal/CSV/" + "givenName.csv")
+      vpfriendOf.repartition(84).write.option("header", true).format("csv").mode(SaveMode.Overwrite).save(path + "Horizontal/CSV/" + "friendOf.csv")
+      vpLegalName.repartition(84).write.option("header", true).format("csv").mode(SaveMode.Overwrite).save(path + "Horizontal/CSV/" + "legalName.csv")
+      vpoffers.repartition(84).write.option("header", true).format("csv").mode(SaveMode.Overwrite).save(path + "Horizontal/CSV/" + "offers.csv")
+      vpeligibleRegion.repartition(84).write.option("header", true).format("csv").mode(SaveMode.Overwrite).save(path + "Horizontal/CSV/" + "eligibleRegion.csv")
+      vpincludes.repartition(84).write.option("header", true).format("csv").mode(SaveMode.Overwrite).save(path + "Horizontal/CSV/" + "includes.csv")
+      vphomepage.repartition(84).write.option("header", true).format("csv").mode(SaveMode.Overwrite).save(path + "Horizontal/CSV/" + "homepage.csv")
+      vpmakesPurchase.repartition(84).write.option("header", true).format("csv").mode(SaveMode.Overwrite).save(path + "Horizontal/CSV/" + "makesPurchase.csv")
+      vppurchaseFor.repartition(84).write.option("header", true).format("csv").mode(SaveMode.Overwrite).save(path + "Horizontal/CSV/" + "purchaseFor.csv")
+      vppurchaseDate.repartition(84).write.option("header", true).format("csv").mode(SaveMode.Overwrite).save(path + "Horizontal/CSV/" + "purchaseDate.csv")
+      vptotalVotes.repartition(84).write.option("header", true).format("csv").mode(SaveMode.Overwrite).save(path + "Horizontal/CSV/" + "totalVotes.csv")
+      vptag.repartition(84).write.option("header", true).format("csv").mode(SaveMode.Overwrite).save(path + "Horizontal/CSV/" + "tag.csv")
+      vptype.repartition(84).write.option("header", true).format("csv").mode(SaveMode.Overwrite).save(path + "Horizontal/CSV/" + "type.csv")
+      vptrailer.repartition(84).write.option("header", true).format("csv").mode(SaveMode.Overwrite).save(path + "Horizontal/CSV/" + "trailer.csv")
+      vpkeywords.repartition(84).write.option("header", true).format("csv").mode(SaveMode.Overwrite).save(path + "Horizontal/CSV/" + "keywords.csv")
+      vphasGenre.repartition(84).write.option("header", true).format("csv").mode(SaveMode.Overwrite).save(path + "Horizontal/CSV/" + "hasGenre.csv")
+      vpdescription.repartition(84).write.option("header", true).format("csv").mode(SaveMode.Overwrite).save(path + "Horizontal/CSV/" + "description.csv")
+      vpurl.repartition(84).write.option("header", true).format("csv").mode(SaveMode.Overwrite).save(path + "Horizontal/CSV/" + "url.csv")
+      vphits.repartition(84).write.option("header", true).format("csv").mode(SaveMode.Overwrite).save(path + "Horizontal/CSV/" + "hits.csv")
+      vpprice.repartition(84).write.option("header", true).format("csv").mode(SaveMode.Overwrite).save(path + "Horizontal/CSV/" + "price.csv")
+      vpvalidThrough.repartition(84).write.option("header", true).format("csv").mode(SaveMode.Overwrite).save(path + "Horizontal/CSV/" + "validThrough.csv")
+      vpPricevaliduntil.repartition(84).write.option("header", true).format("csv").mode(SaveMode.Overwrite).save(path + "Horizontal/CSV/" + "priceValidUntil.csv")
+      vpValidFrom.repartition(84).write.option("header", true).format("csv").mode(SaveMode.Overwrite).save(path + "Horizontal/CSV/" + "validFrom.csv")
+      vpserialNumber.repartition(84).write.option("header", true).format("csv").mode(SaveMode.Overwrite).save(path + "Horizontal/CSV/" + "serialNumber.csv")
+      vpeligibleQuantity.repartition(84).write.option("header", true).format("csv").mode(SaveMode.Overwrite).save(path + "Horizontal/CSV/" + "eligibleQuantity.csv")
+      vppublisher.repartition(84).write.option("header", true).format("csv").mode(SaveMode.Overwrite).save(path + "Horizontal/CSV/" + "publisher.csv")
+      vpartist.repartition(84).write.option("header", true).format("csv").mode(SaveMode.Overwrite).save(path + "Horizontal/CSV/" + "artist.csv")
+      vpfamilyName.repartition(84).write.option("header", true).format("csv").mode(SaveMode.Overwrite).save(path + "Horizontal/CSV/" + "familyName.csv")
+      vpConductor.repartition(84).write.option("header", true).format("csv").mode(SaveMode.Overwrite).save(path + "Horizontal/CSV/" + "conductor.csv")
 
-       */
       println("CSV VT partitioned and saved! Horizontal!")
 
     }

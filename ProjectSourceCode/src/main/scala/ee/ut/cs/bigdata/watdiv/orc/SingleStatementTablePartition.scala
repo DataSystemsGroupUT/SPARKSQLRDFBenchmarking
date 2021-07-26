@@ -23,27 +23,27 @@ object SingleStatementTablePartition {
 	      
      val ds=args(0)						// data size
      var partitionType=args(1).toLowerCase  	// horizontal, predicate or subject    
-     val path=s"hdfs://172.17.77.48:9000/user/hadoop/RDFBench/WATDIV/$ds/ST/ORC"
+     val path=s"hdfs://172.17.77.48:9000/user/hadoop/RDFBench/WATDIV/$ds/ST"
 
      //read table from HDFS
-     val RDFDF = spark.read.format("orc").load(s"$path/SingleStmtTable").toDF()
+     val RDFDF = spark.read.format("orc").load(s"$path/VHDFS/ORC/ST100M.orc").toDF()
 
      //partition and save on HDFS
      if(partitionType == "subject")
      {
-       RDFDF.repartition(84, $"Subject").write.option("header", "true").format("orc").mode(SaveMode.Overwrite).save(s"$path/SingleStmtTableSubject.orc")
+       RDFDF.repartition(84, $"Subject").write.option("header", "true").format("orc").mode(SaveMode.Overwrite).save(s"$path/Subject/ORC/ST100M.orc")
        println("ORC ST partitioned and saved! Subject based partitioning")
      }
 
      else if (partitionType == "predicate")
      {
-       RDFDF.repartition(84, $"Predicate").write.option("header", "true").format("orc").mode(SaveMode.Overwrite).save(s"$path/SingleStmtTablePredicate.orc")
+       RDFDF.repartition(84, $"Predicate").write.option("header", "true").format("orc").mode(SaveMode.Overwrite).save(s"$path/Predicate/ORC/ST100M.orc")
        println("ORC ST partitioned and saved! Predicate based partitioning")
      }
 
      else if (partitionType == "horizontal")
      {
-       RDFDF.repartition(84).write.option("header", "true").format("orc").mode(SaveMode.Overwrite).save(s"$path/SingleStmtTableHorizontal.orc")
+       RDFDF.repartition(84).write.option("header", "true").format("orc").mode(SaveMode.Overwrite).save(s"$path/Horizontal/ORC/ST100M.orc")
        println("ORC ST partitioned and saved! Horizontal partitioning")
      }         
 
