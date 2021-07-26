@@ -36,19 +36,19 @@ object SingleStatementTablePartition {
    //partition and save on HDFS
    if(partitionType == "subject")
    {
-//     RDFDF.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(s"$path/Subject/CSV/ST100M.csv")
+     RDFDF.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(s"$path/Subject/CSV/ST100M.csv")
      println("CSV ST partitioned and saved! Subject!")
    }
 
    else if (partitionType == "predicate")
    {
-//     RDFDF.repartition(84, $"Predicate").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(s"$path/Predicate/CSV/ST100M.csv")
+     RDFDF.repartition(84, $"Predicate").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(s"$path/Predicate/CSV/ST100M.csv")
      println("CSV ST partitioned and saved! Predicate!")
    }
 
    else if (partitionType == "horizontal")
    {
-//     RDFDF.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(s"$path/Horizontal/CSV/ST100M.csv")
+     RDFDF.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(s"$path/Horizontal/CSV/ST100M.csv")
      println("CSV ST partitioned and saved! Horizontal!")
    }
          
