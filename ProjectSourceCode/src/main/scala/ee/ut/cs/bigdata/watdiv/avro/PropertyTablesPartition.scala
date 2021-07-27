@@ -124,7 +124,7 @@ object PropertyTablesPartition {
     else if (partitionType.toLowerCase == "predicate") {
 
 
-
+      /*
       val retailerName = Retailer_DF.select("retailer", "name").toDF()
       val retailerLegalName = Retailer_DF.select("retailer", "legalName").toDF()
       val retailerOpeningHours = Retailer_DF.select("retailer", "openingHours").toDF()
@@ -147,10 +147,10 @@ object PropertyTablesPartition {
       retailerFaxNumber.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path + "Predicate/Avro/retailerFaxNumber.avro")
       retailerAggregateRating.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path + "Predicate/Avro/retailerAggregateRating.avro")
 
-      /*
+
+
       val purchaseDate = Purchase_DF.select("purchase", "purchaseDate").toDF()
-      val purchasePrice = Purchase_DF.select("purchase", "price").toDF()
-      val purchasePurchaseFor = Purchase_DF.select("purchase", "purchaseFor").toDF()
+      val purchasePrice = Purchase_DF.select("purchase", "price").to purchasePurchaseFor = Purchase_DF.select("purchase", "purchaseFor").toDF()
 
       purchaseDate.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path + "Predicate/Avro/purchaseDate.avro")
       purchasePrice.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path + "Predicate/Avro/purchasePrice.avro")
@@ -168,13 +168,7 @@ object PropertyTablesPartition {
       reviewTitle.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path + "Predicate/Avro/reviewTitle.avro")
       reviewTotalVotes.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path + "Predicate/Avro/reviewTotalVotes.avro")
 
-      val websiteLanguage = Website_DF.select("website", "language").toDF()
-      val websiteHits = Website_DF.select("website", "hits").toDF()
-      val websiteUrl = Website_DF.select("website", "url").toDF()
 
-      websiteLanguage.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path + "Predicate/Avro/websiteLanguage.avro")
-      websiteHits.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path + "Predicate/Avro/websiteHits.avro")
-      websiteUrl.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path + "Predicate/Avro/websiteUrl.avro")
 
       val SubgenreGenre = Genre_DF.select("subgenre", "genre").toDF()
       val SubgenreTopic = Genre_DF.select("subgenre", "topic").toDF()
@@ -290,6 +284,33 @@ object PropertyTablesPartition {
       userJobTitle.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path + "Predicate/Avro/userJobTitle.avro")
 
        */
+
+
+      val websiteLanguage = Website_DF.select("website", "language").toDF()
+      val websiteHits = Website_DF.select("website", "hits").toDF()
+      val websiteUrl = Website_DF.select("website", "url").toDF()
+
+      websiteLanguage.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path + "Predicate/Avro/websiteLanguage.avro")
+      websiteHits.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path + "Predicate/Avro/websiteHits.avro")
+      websiteUrl.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path + "Predicate/Avro/websiteUrl.avro")
+
+
+
+
+      val WebsitePro1 = spark.read.format("avro").load(path + "Predicate/Avro/websiteLanguage.avro").toDF()
+      val WebsitePro2 = spark.read.format("avro").load(path + "Predicate/Avro/websiteHits.avro").toDF()
+      val WebsitePro3 = spark.read.format("avro").load(path + "Predicate/Avro/websiteUrl.avro").toDF()
+
+
+      val website_join1 = WebsitePro1.join(WebsitePro2, WebsitePro1("website") === WebsitePro2("website")).drop(WebsitePro2("website"))
+      val website_join2 = website_join1.join(WebsitePro3, website_join1("website") === WebsitePro3("website")).drop(WebsitePro3("website"))
+
+
+      println("Original count" + Website_DF.count())
+      "Original schema" + Website_DF.printSchema()
+
+      println(website_join2.toDF().count())
+      website_join2.toDF().printSchema()
 
 
       println("Avro PT partitioned and saved! Predicate based partitioning!")
