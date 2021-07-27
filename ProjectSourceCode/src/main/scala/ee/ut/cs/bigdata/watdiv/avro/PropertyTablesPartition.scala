@@ -132,7 +132,7 @@ object PropertyTablesPartition {
       purchasePrice.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path + "Predicate/Avro/purchasePrice.avro")
       purchasePurchaseFor.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path + "Predicate/Avro/purchasePurchaseFor.avro")
 
-
+      /*
       val reviewReviewer = Review_DF.select("review", "reviewer").toDF()
       val reviewRating = Review_DF.select("review", "rating").toDF()
       val reviewText = Review_DF.select("review", "text").toDF()
@@ -288,6 +288,8 @@ object PropertyTablesPartition {
       userTelephone.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path + "Predicate/Avro/userTelephone.avro")
       userHomepage.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path + "Predicate/Avro/userHomepage.avro")
       userJobTitle.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path + "Predicate/Avro/userJobTitle.avro")
+
+       */
 
 
       println("Avro PT partitioned and saved! Predicate based partitioning!")
