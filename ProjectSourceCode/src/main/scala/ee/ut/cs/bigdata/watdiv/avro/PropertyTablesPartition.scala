@@ -124,6 +124,30 @@ object PropertyTablesPartition {
     else if (partitionType.toLowerCase == "predicate") {
 
 
+
+      val retailerName = Retailer_DF.select("retailer", "name").toDF()
+      val retailerLegalName = Retailer_DF.select("retailer", "legalName").toDF()
+      val retailerOpeningHours = Retailer_DF.select("retailer", "openingHours").toDF()
+      val retailerDescription = Retailer_DF.select("retailer", "description").toDF()
+      val retailerContactPoint = Retailer_DF.select("retailer", "contactPoint").toDF()
+      val retailerTelephone = Retailer_DF.select("retailer", "telephone").toDF()
+      val retailerEmail = Retailer_DF.select("retailer", "email").toDF()
+      val retailerPaymentAccepted = Retailer_DF.select("retailer", "paymentAccepted").toDF()
+      val retailerFaxNumber = Retailer_DF.select("retailer", "faxNumber").toDF()
+      val retailerAggregateRating = Retailer_DF.select("retailer", "aggregateRating").toDF()
+
+      retailerName.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path + "Predicate/Avro/retailerName.avro")
+      retailerLegalName.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path + "Predicate/Avro/retailerLegalName.avro")
+      retailerOpeningHours.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path + "Predicate/Avro/retailerOpeningHours.avro")
+      retailerDescription.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path + "Predicate/Avro/retailerDescription.avro")
+      retailerContactPoint.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path + "Predicate/Avro/retailerContactPoint.avro")
+      retailerTelephone.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path + "Predicate/Avro/retailerTelephone.avro")
+      retailerEmail.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path + "Predicate/Avro/retailerEmail.avro")
+      retailerPaymentAccepted.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path + "Predicate/Avro/retailerPaymentAccepted.avro")
+      retailerFaxNumber.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path + "Predicate/Avro/retailerFaxNumber.avro")
+      retailerAggregateRating.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path + "Predicate/Avro/retailerAggregateRating.avro")
+
+      /*
       val purchaseDate = Purchase_DF.select("purchase", "purchaseDate").toDF()
       val purchasePrice = Purchase_DF.select("purchase", "price").toDF()
       val purchasePurchaseFor = Purchase_DF.select("purchase", "purchaseFor").toDF()
@@ -132,7 +156,6 @@ object PropertyTablesPartition {
       purchasePrice.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path + "Predicate/Avro/purchasePrice.avro")
       purchasePurchaseFor.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path + "Predicate/Avro/purchasePurchaseFor.avro")
 
-      /*
       val reviewReviewer = Review_DF.select("review", "reviewer").toDF()
       val reviewRating = Review_DF.select("review", "rating").toDF()
       val reviewText = Review_DF.select("review", "text").toDF()
@@ -172,29 +195,6 @@ object PropertyTablesPartition {
       offerPrice.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path + "Predicate/Avro/offerPrice.avro")
       offerSerialNumber.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path + "Predicate/Avro/offerSerialNumber.avro")
       offerPriceValidUntil.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path + "Predicate/Avro/offerPriceValidUntil.avro")
-
-
-      val retailerName = Retailer_DF.select("retailer", "name").toDF()
-      val retailerLegalName = Retailer_DF.select("retailer", "legalName").toDF()
-      val retailerOpeningHours = Retailer_DF.select("retailer", "openingHours").toDF()
-      val retailerDescription = Retailer_DF.select("retailer", "description").toDF()
-      val retailerContactPoint = Retailer_DF.select("retailer", "contactPoint").toDF()
-      val retailerTelephone = Retailer_DF.select("retailer", "telephone").toDF()
-      val retailerEmail = Retailer_DF.select("retailer", "email").toDF()
-      val retailerPaymentAccepted = Retailer_DF.select("retailer", "paymentAccepted").toDF()
-      val retailerFaxNumber = Retailer_DF.select("retailer", "faxNumber").toDF()
-      val retailerAggregateRating = Retailer_DF.select("retailer", "aggregateRating").toDF()
-
-      retailerName.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path + "Predicate/Avro/retailerName.avro")
-      retailerLegalName.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path + "Predicate/Avro/retailerLegalName.avro")
-      retailerOpeningHours.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path + "Predicate/Avro/retailerOpeningHours.avro")
-      retailerDescription.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path + "Predicate/Avro/retailerDescription.avro")
-      retailerContactPoint.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path + "Predicate/Avro/retailerContactPoint.avro")
-      retailerTelephone.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path + "Predicate/Avro/retailerTelephone.avro")
-      retailerEmail.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path + "Predicate/Avro/retailerEmail.avro")
-      retailerPaymentAccepted.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path + "Predicate/Avro/retailerPaymentAccepted.avro")
-      retailerFaxNumber.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path + "Predicate/Avro/retailerFaxNumber.avro")
-      retailerAggregateRating.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path + "Predicate/Avro/retailerAggregateRating.avro")
 
 
       val productProductCategory = Product_DF.select("product", "productcategory").toDF()
