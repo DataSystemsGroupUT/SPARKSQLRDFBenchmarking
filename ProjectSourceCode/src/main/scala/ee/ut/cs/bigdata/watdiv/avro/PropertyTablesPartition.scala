@@ -59,7 +59,6 @@ object PropertyTablesPartition {
     //partition and save on HDFS
     if (partitionType.toLowerCase == "subject") {
       Retailer_DF.repartition(84, $"retailer").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path + "Subject/Avro/Retailer.avro")
-      /*
       Product_DF.repartition(84, $"product").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path + "Subject/Avro/Product.avro")
       User_DF.repartition(84, $"user").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path + "Subject/Avro/User.avro")
       Offer_DF.repartition(84, $"offer").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path + "Subject/Avro/Offer.avro")
@@ -83,8 +82,6 @@ object PropertyTablesPartition {
       FriendOf_DF.repartition(84, $"user1").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path + "Subject/Avro/FriendOf.avro")
       Actor_DF.repartition(84, $"product").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path + "Subject/Avro/Actor.avro")
       PurchaseFor_DF.repartition(84, $"purchase").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path + "Subject/Avro/PurchaseFor.avro")
-
-       */
 
       println("AVRO PT partitioned and saved! Subject based Partitioning!")
 
@@ -257,6 +254,20 @@ object PropertyTablesPartition {
       productPrintColumn.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path + "Predicate/Avro/productPrintColumn.avro")
       productNumberOfPages.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path + "Predicate/Avro/productNumberOfPages.avro")
 
+
+       */
+
+
+      val websiteLanguage = Website_DF.select("website", "language").toDF()
+      val websiteHits = Website_DF.select("website", "hits").toDF()
+      val websiteUrl = Website_DF.select("website", "url").toDF()
+
+      websiteLanguage.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path + "Predicate/Avro/websiteLanguage.avro")
+      websiteHits.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path + "Predicate/Avro/websiteHits.avro")
+      websiteUrl.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path + "Predicate/Avro/websiteUrl.avro")
+
+
+
       val userUserId = User_DF.select("user", "userId").toDF()
       val userGivenName = User_DF.select("user", "givenName").toDF()
       val userFamilyName = User_DF.select("user", "familyName").toDF()
@@ -283,19 +294,42 @@ object PropertyTablesPartition {
       userHomepage.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path + "Predicate/Avro/userHomepage.avro")
       userJobTitle.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path + "Predicate/Avro/userJobTitle.avro")
 
-       */
+
+      val userProp1 = spark.read.format("avro").load(path + "Predicate/Avro/userUserId.avro")
+      val userProp2 = spark.read.format("avro").load(path + "Predicate/Avro/userGivenName.avro")
+      val userProp3 = spark.read.format("avro").load(path + "Predicate/Avro/userFamilyName.avro")
+      val userProp4 = spark.read.format("avro").load(path + "Predicate/Avro/userEmail.avro")
+      val userProp5 = spark.read.format("avro").load(path + "Predicate/Avro/userLocation.avro")
+      val userProp6 = spark.read.format("avro").load(path + "Predicate/Avro/userGender.avro")
+      val userProp7 = spark.read.format("avro").load(path + "Predicate/Avro/userBirthDate.avro")
+      val userProp8 = spark.read.format("avro").load(path + "Predicate/Avro/userAge.avro")
+      val userProp9 = spark.read.format("avro").load(path + "Predicate/Avro/userNationality.avro")
+      val userProp10 = spark.read.format("avro").load(path + "Predicate/Avro/userTelephone.avro")
+      val userProp11 = spark.read.format("avro").load(path + "Predicate/Avro/userHomepage.avro")
+      val userProp12 = spark.read.format("avro").load(path + "Predicate/Avro/userJobTitle.avro")
 
 
-      val websiteLanguage = Website_DF.select("website", "language").toDF()
-      val websiteHits = Website_DF.select("website", "hits").toDF()
-      val websiteUrl = Website_DF.select("website", "url").toDF()
+      val user_join1 = userProp1.join(userProp2, userProp1("user") === userProp2("user")).drop(userProp2("user"))
+      val user_join2 = user_join1.join(userProp3, user_join1("user") === userProp3("user")).drop(userProp3("user"))
+      val user_join3 = user_join2.join(userProp4, user_join2("user") === userProp4("user")).drop(userProp4("user"))
+      val user_join4 = user_join3.join(userProp5, user_join3("user") === userProp5("user")).drop(userProp5("user"))
+      val user_join5 = user_join4.join(userProp6, user_join4("user") === userProp6("user")).drop(userProp6("user"))
+      val user_join6 = user_join5.join(userProp7, user_join5("user") === userProp7("user")).drop(userProp7("user"))
+      val user_join7 = user_join6.join(userProp8, user_join6("user") === userProp8("user")).drop(userProp8("user"))
+      val user_join8 = user_join7.join(userProp9, user_join7("user") === userProp9("user")).drop(userProp9("user"))
+      val user_join9 = user_join8.join(userProp10, user_join8("user") === userProp10("user")).drop(userProp10("user"))
+      val user_join10 = user_join9.join(userProp11, user_join9("user") === userProp11("user")).drop(userProp11("user"))
+      val user_join11 = user_join10.join(userProp12, user_join10("user") === userProp12("user")).drop(userProp12("user"))
 
-      websiteLanguage.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path + "Predicate/Avro/websiteLanguage.avro")
-      websiteHits.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path + "Predicate/Avro/websiteHits.avro")
-      websiteUrl.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path + "Predicate/Avro/websiteUrl.avro")
+
+      println("Original count" + User_DF.count())
+      User_DF.printSchema()
+
+      println(user_join11.toDF().count())
+      user_join11.toDF().printSchema()
 
 
-
+      /*
 
       val WebsitePro1 = spark.read.format("avro").load(path + "Predicate/Avro/websiteLanguage.avro").toDF()
       val WebsitePro2 = spark.read.format("avro").load(path + "Predicate/Avro/websiteHits.avro").toDF()
@@ -312,6 +346,7 @@ object PropertyTablesPartition {
       println(website_join2.toDF().count())
       website_join2.toDF().printSchema()
 
+       */
 
       println("Avro PT partitioned and saved! Predicate based partitioning!")
 
