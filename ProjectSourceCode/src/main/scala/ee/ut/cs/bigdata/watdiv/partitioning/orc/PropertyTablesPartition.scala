@@ -129,6 +129,7 @@ object PropertyTablesPartition {
       purchasePurchaseFor.repartition(84).write.option("header", "true").format("orc").mode(SaveMode.Overwrite).save(path + "Predicate/ORC/purchasePurchaseFor.orc")
 
 
+      /*
       val reviewReviewer = Review_DF.select("review", "reviewer").toDF()
       val reviewRating = Review_DF.select("review", "rating").toDF()
       val reviewText = Review_DF.select("review", "text").toDF()
@@ -286,6 +287,8 @@ object PropertyTablesPartition {
       retailerPaymentAccepted.repartition(84).write.option("header", "true").format("orc").mode(SaveMode.Overwrite).save(path + "Predicate/ORC/retailerPaymentAccepted.orc")
       retailerFaxNumber.repartition(84).write.option("header", "true").format("orc").mode(SaveMode.Overwrite).save(path + "Predicate/ORC/retailerFaxNumber.orc")
       retailerAggregateRating.repartition(84).write.option("header", "true").format("orc").mode(SaveMode.Overwrite).save(path + "Predicate/ORC/retailerAggregateRating.orc")
+
+       */
 
 
 
