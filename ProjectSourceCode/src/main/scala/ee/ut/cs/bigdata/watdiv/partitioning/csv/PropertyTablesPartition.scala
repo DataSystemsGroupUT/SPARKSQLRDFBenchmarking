@@ -128,7 +128,7 @@ object PropertyTablesPartition {
       purchasePrice.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path + "Predicate/CSV/purchasePrice.csv")
       purchasePurchaseFor.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path + "Predicate/CSV/purchasePurchaseFor.csv")
 
-      /*
+
       val reviewReviewer = Review_DF.select("review", "reviewer").toDF()
       val reviewRating = Review_DF.select("review", "rating").toDF()
       val reviewText = Review_DF.select("review", "text").toDF()
@@ -287,7 +287,7 @@ object PropertyTablesPartition {
       retailerFaxNumber.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path + "Predicate/CSV/retailerFaxNumber.csv")
       retailerAggregateRating.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path + "Predicate/CSV/retailerAggregateRating.csv")
 
-       */
+
 
 
       println("CSV PT partitioned and saved! Predicate based partitioning!")
