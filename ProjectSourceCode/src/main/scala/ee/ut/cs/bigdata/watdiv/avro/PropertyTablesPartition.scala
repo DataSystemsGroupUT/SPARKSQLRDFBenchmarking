@@ -120,14 +120,10 @@ object PropertyTablesPartition {
 
     else if (partitionType.toLowerCase == "predicate") {
 
-
       /*
-
-
-
-
       val purchaseDate = Purchase_DF.select("purchase", "purchaseDate").toDF()
-      val purchasePrice = Purchase_DF.select("purchase", "price").to purchasePurchaseFor = Purchase_DF.select("purchase", "purchaseFor").toDF()
+      val purchasePrice = Purchase_DF.select("purchase", "price").toDF()
+      val purchasePurchaseFor = Purchase_DF.select("purchase", "purchaseFor").toDF()
 
       purchaseDate.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path + "Predicate/Avro/purchaseDate.avro")
       purchasePrice.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path + "Predicate/Avro/purchasePrice.avro")
@@ -343,30 +339,6 @@ object PropertyTablesPartition {
       productPrintColumn.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path + "Predicate/Avro/productPrintColumn.avro")
       productNumberOfPages.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path + "Predicate/Avro/productNumberOfPages.avro")
 
-       */
-
-
-      val SubgenreGenre = Genre_DF.select("subgenre", "genre").toDF()
-      val SubgenreTopic = Genre_DF.select("subgenre", "topic").toDF()
-
-      SubgenreGenre.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path + "Predicate/Avro/SubgenreGenre.avro")
-      SubgenreTopic.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path + "Predicate/Avro/SubgenreTopic.avro")
-
-      val subgenreProp1 = spark.read.format("avro").load(path + "Predicate/Avro/SubgenreGenre.avro")
-      val subgenreProp2 = spark.read.format("avro").load(path + "Predicate/Avro/SubgenreTopic.avro")
-
-
-      val subgenre_join1 = subgenreProp1.join(subgenreProp2, subgenreProp1("subgenre") === subgenreProp2("subgenre")).drop(subgenreProp2("subgenre"))
-
-
-      println("Original count: " + Genre_DF.count())
-      Genre_DF.printSchema()
-
-      println(subgenre_join1.toDF().count())
-      subgenre_join1.toDF().printSchema()
-
-      println("************************************")
-
 
       val retailerName = Retailer_DF.select("retailer", "name").toDF()
       val retailerLegalName = Retailer_DF.select("retailer", "legalName").toDF()
@@ -389,6 +361,59 @@ object PropertyTablesPartition {
       retailerPaymentAccepted.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path + "Predicate/Avro/retailerPaymentAccepted.avro")
       retailerFaxNumber.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path + "Predicate/Avro/retailerFaxNumber.avro")
       retailerAggregateRating.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path + "Predicate/Avro/retailerAggregateRating.avro")
+
+       */
+
+
+      val purchaseDate = Purchase_DF.select("purchase", "purchaseDate").toDF()
+      val purchasePrice = Purchase_DF.select("purchase", "price").toDF()
+      val purchasePurchaseFor = Purchase_DF.select("purchase", "purchaseFor").toDF()
+
+      purchaseDate.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path + "Predicate/Avro/purchaseDate.avro")
+      purchasePrice.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path + "Predicate/Avro/purchasePrice.avro")
+      purchasePurchaseFor.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path + "Predicate/Avro/purchasePurchaseFor.avro")
+
+      val purchaseProp1 = spark.read.format("avro").load(path + "Predicate/Avro/purchaseDate.avro")
+      val purchaseProp2 = spark.read.format("avro").load(path + "Predicate/Avro/purchasePrice.avro")
+      val purchaseProp3 = spark.read.format("avro").load(path + "Predicate/Avro/purchasePurchaseFor.avro")
+
+
+      val purchase_join1 = purchaseProp1.join(purchaseProp2, purchaseProp1("purchase") === purchaseProp2("purchase")).drop(purchaseProp2("purchase"))
+      val purchase_join2 = purchase_join1.join(purchaseProp3, purchase_join1("purchase") === purchaseProp3("purchase")).drop(purchaseProp3("purchase"))
+
+      println("Original count: " + Purchase_DF.count())
+      Purchase_DF.printSchema()
+
+      println(purchase_join2.toDF().count())
+      purchase_join2.toDF().printSchema()
+
+
+
+      /*
+
+      // Subgenre
+
+      val subgenreProp1 = spark.read.format("avro").load(path + "Predicate/Avro/SubgenreGenre.avro")
+      val subgenreProp2 = spark.read.format("avro").load(path + "Predicate/Avro/SubgenreTopic.avro")
+
+
+      val subgenre_join1 = subgenreProp1.join(subgenreProp2, subgenreProp1("subgenre") === subgenreProp2("subgenre")).drop(subgenreProp2("subgenre"))
+
+
+      println("Original count: " + Genre_DF.count())
+      Genre_DF.printSchema()
+
+      println(subgenre_join1.toDF().count())
+      subgenre_join1.toDF().printSchema()
+
+
+
+      println("************************************")
+      */
+
+
+      /*
+      //Retailer
 
       val retailerProp1 = spark.read.format("avro").load(path + "Predicate/Avro/retailerName.avro")
       val retailerProp2 = spark.read.format("avro").load(path + "Predicate/Avro/retailerLegalName.avro")
@@ -420,20 +445,11 @@ object PropertyTablesPartition {
 
       println("************************************")
 
+       */
 
-      val offerValidThrough = Offer_DF.select("offer", "validThrough").toDF()
-      val offerELigibleQuantity = Offer_DF.select("offer", "eligibleQuantity").toDF()
-      val offerValidFrom = Offer_DF.select("offer", "validFrom").toDF()
-      val offerPrice = Offer_DF.select("offer", "price").toDF()
-      val offerSerialNumber = Offer_DF.select("offer", "serialNumber").toDF()
-      val offerPriceValidUntil = Offer_DF.select("offer", "priceValidUntil").toDF()
 
-      offerValidThrough.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path + "Predicate/Avro/offerValidThrough.avro")
-      offerELigibleQuantity.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path + "Predicate/Avro/offerELigibleQuantity.avro")
-      offerValidFrom.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path + "Predicate/Avro/offerValidFrom.avro")
-      offerPrice.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path + "Predicate/Avro/offerPrice.avro")
-      offerSerialNumber.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path + "Predicate/Avro/offerSerialNumber.avro")
-      offerPriceValidUntil.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path + "Predicate/Avro/offerPriceValidUntil.avro")
+      /*
+      // Offer
 
       val offerProp1 = spark.read.format("avro").load(path + "Predicate/Avro/offerValidThrough.avro")
       val offerProp2 = spark.read.format("avro").load(path + "Predicate/Avro/offerELigibleQuantity.avro")
@@ -458,18 +474,11 @@ object PropertyTablesPartition {
 
       println("************************************")
 
+       */
 
-      val reviewReviewer = Review_DF.select("review", "reviewer").toDF()
-      val reviewRating = Review_DF.select("review", "rating").toDF()
-      val reviewText = Review_DF.select("review", "text").toDF()
-      val reviewTitle = Review_DF.select("review", "title").toDF()
-      val reviewTotalVotes = Review_DF.select("review", "totalVotes").toDF()
 
-      reviewReviewer.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path + "Predicate/Avro/reviewReviewer.avro")
-      reviewRating.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path + "Predicate/Avro/reviewRating.avro")
-      reviewText.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path + "Predicate/Avro/reviewText.avro")
-      reviewTitle.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path + "Predicate/Avro/reviewTitle.avro")
-      reviewTotalVotes.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path + "Predicate/Avro/reviewTotalVotes.avro")
+      /*
+      //Review
 
       val reviewProp1 = spark.read.format("avro").load(path + "Predicate/Avro/reviewReviewer.avro")
       val reviewProp2 = spark.read.format("avro").load(path + "Predicate/Avro/reviewRating.avro")
@@ -490,11 +499,7 @@ object PropertyTablesPartition {
 
       println("************************************")
 
-
-
-
-
-
+       */
 
 
       /*
@@ -533,9 +538,6 @@ object PropertyTablesPartition {
       val productProp30=spark.read.format("avro").load(path + "Predicate/Avro/productPrintEdition.avro")
       val productProp31=spark.read.format("avro").load(path + "Predicate/Avro/productPrintColumn.avro")
       val productProp32=spark.read.format("avro").load(path + "Predicate/Avro/productNumberOfPages.avro")
-
-
-
 
       val product_join1 = productProp1.join(productProp2, productProp1("product") === productProp2("product")).drop(productProp2("product"))
       val product_join2 = product_join1.join(productProp3, product_join1("product") === productProp3("product")).drop(productProp3("product"))
@@ -622,7 +624,6 @@ object PropertyTablesPartition {
       val WebsitePro1 = spark.read.format("avro").load(path + "Predicate/Avro/websiteLanguage.avro").toDF()
       val WebsitePro2 = spark.read.format("avro").load(path + "Predicate/Avro/websiteHits.avro").toDF()
       val WebsitePro3 = spark.read.format("avro").load(path + "Predicate/Avro/websiteUrl.avro").toDF()
-
 
       val website_join1 = WebsitePro1.join(WebsitePro2, WebsitePro1("website") === WebsitePro2("website")).drop(WebsitePro2("website"))
       val website_join2 = website_join1.join(WebsitePro3, website_join1("website") === WebsitePro3("website")).drop(WebsitePro3("website"))
