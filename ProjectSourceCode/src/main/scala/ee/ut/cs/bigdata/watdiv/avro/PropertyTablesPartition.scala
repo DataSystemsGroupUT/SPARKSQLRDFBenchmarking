@@ -528,7 +528,7 @@ object PropertyTablesPartition {
       val productProp31=spark.read.format("avro").load(path + "Predicate/Avro/productPrintColumn.avro")
       val productProp32=spark.read.format("avro").load(path + "Predicate/Avro/productNumberOfPages.avro")
 
-      val product_join1 = productProp1.join(productProp2, productProp1("product") === productProp2("product")).drop(productProp2("product"))
+      val product_join1 = productProp1.distinct().join(productProp2.distinct(), productProp1("product") === productProp2("product")).drop(productProp2("product"))
       val product_join2 = product_join1.distinct().join(productProp3, product_join1("product") === productProp3("product")).drop(productProp3("product"))
       val product_join3 = product_join2.distinct().join(productProp4, product_join2("product") === productProp4("product")).drop(productProp4("product"))
       val product_join4 = product_join3.distinct().join(productProp5, product_join3("product") === productProp5("product")).drop(productProp5("product"))
