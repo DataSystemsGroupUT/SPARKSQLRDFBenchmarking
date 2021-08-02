@@ -83,7 +83,7 @@ object PropertyTablesPartition {
       Actor_DF.repartition(84, $"product").write.option("header", "true").format("orc").mode(SaveMode.Overwrite).save(path + "Subject/ORC/Actor.orc")
       PurchaseFor_DF.repartition(84, $"purchase").write.option("header", "true").format("orc").mode(SaveMode.Overwrite).save(path + "Subject/ORC/PurchaseFor.orc")
 
-      println("AVRO PT partitioned and saved! Subject based Partitioning!")
+      println("ORC PT partitioned and saved! Subject based Partitioning!")
 
     }
 
@@ -115,7 +115,7 @@ object PropertyTablesPartition {
       PurchaseFor_DF.repartition(84).write.option("header", "true").format("orc").mode(SaveMode.Overwrite).save(path + "Horizontal/ORC/PurchaseFor.orc")
 
 
-      println("AVRO PT partitioned and saved! Horizontal partitioning!")
+      println("ORC PT partitioned and saved! Horizontal partitioning!")
     }
 
     else if (partitionType.toLowerCase == "predicate") {
