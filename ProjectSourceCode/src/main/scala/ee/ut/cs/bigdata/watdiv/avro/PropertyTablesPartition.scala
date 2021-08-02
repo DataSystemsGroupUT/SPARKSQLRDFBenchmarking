@@ -142,7 +142,6 @@ object PropertyTablesPartition {
       reviewTotalVotes.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path + "Predicate/Avro/reviewTotalVotes.avro")
 
 
-
       val SubgenreGenre = Genre_DF.select("subgenre", "genre").toDF()
       val SubgenreTopic = Genre_DF.select("subgenre", "topic").toDF()
 
@@ -365,13 +364,9 @@ object PropertyTablesPartition {
        */
 
 
-      val purchaseDate = Purchase_DF.select("purchase", "purchaseDate").toDF()
-      val purchasePrice = Purchase_DF.select("purchase", "price").toDF()
-      val purchasePurchaseFor = Purchase_DF.select("purchase", "purchaseFor").toDF()
 
-      purchaseDate.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path + "Predicate/Avro/purchaseDate.avro")
-      purchasePrice.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path + "Predicate/Avro/purchasePrice.avro")
-      purchasePurchaseFor.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path + "Predicate/Avro/purchasePurchaseFor.avro")
+      /*
+      //Purchase
 
       val purchaseProp1 = spark.read.format("avro").load(path + "Predicate/Avro/purchaseDate.avro")
       val purchaseProp2 = spark.read.format("avro").load(path + "Predicate/Avro/purchasePrice.avro")
@@ -387,15 +382,16 @@ object PropertyTablesPartition {
       println(purchase_join2.toDF().count())
       purchase_join2.toDF().printSchema()
 
+       */
 
 
-      /*
+
+
 
       // Subgenre
 
       val subgenreProp1 = spark.read.format("avro").load(path + "Predicate/Avro/SubgenreGenre.avro")
       val subgenreProp2 = spark.read.format("avro").load(path + "Predicate/Avro/SubgenreTopic.avro")
-
 
       val subgenre_join1 = subgenreProp1.join(subgenreProp2, subgenreProp1("subgenre") === subgenreProp2("subgenre")).drop(subgenreProp2("subgenre"))
 
@@ -409,7 +405,7 @@ object PropertyTablesPartition {
 
 
       println("************************************")
-      */
+
 
 
       /*
