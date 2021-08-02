@@ -384,8 +384,8 @@ object PropertyTablesPartition {
        */
 
 
+      /*
       // Subgenre
-
 
       val subgenreProp1 = spark.read.format("avro").load(path + "Predicate/Avro/SubgenreGenre.avro")
       val subgenreProp2 = spark.read.format("avro").load(path + "Predicate/Avro/SubgenreTopic.avro")
@@ -399,12 +399,7 @@ object PropertyTablesPartition {
       subgenre_join1.toDF().printSchema()
       println("************************************")
 
-
-
-
-
-
-
+       */
 
       /*
       //Retailer
@@ -496,7 +491,7 @@ object PropertyTablesPartition {
        */
 
 
-      /*
+
 
        // Product
 
@@ -534,36 +529,36 @@ object PropertyTablesPartition {
       val productProp32=spark.read.format("avro").load(path + "Predicate/Avro/productNumberOfPages.avro")
 
       val product_join1 = productProp1.join(productProp2, productProp1("product") === productProp2("product")).drop(productProp2("product"))
-      val product_join2 = product_join1.join(productProp3, product_join1("product") === productProp3("product")).drop(productProp3("product"))
-      val product_join3 = product_join2.join(productProp4, product_join2("product") === productProp4("product")).drop(productProp4("product"))
-      val product_join4 = product_join3.join(productProp5, product_join3("product") === productProp5("product")).drop(productProp5("product"))
-      val product_join5 = product_join4.join(productProp6, product_join4("product") === productProp6("product")).drop(productProp6("product"))
-      val product_join6 = product_join5.join(productProp7, product_join5("product") === productProp7("product")).drop(productProp7("product"))
-      val product_join7 = product_join6.join(productProp8, product_join6("product") === productProp8("product")).drop(productProp8("product"))
-      val product_join8 = product_join7.join(productProp9, product_join7("product") === productProp9("product")).drop(productProp9("product"))
-      val product_join9 = product_join8.join(productProp10, product_join8("product") === productProp10("product")).drop(productProp10("product"))
-      val product_join10 = product_join9.join(productProp11, product_join9("product") === productProp11("product")).drop(productProp11("product"))
-      val product_join11 = product_join10.join(productProp12, product_join10("product") === productProp12("product")).drop(productProp12("product"))
-      val product_join12 = product_join11.join(productProp13, product_join11("product") === productProp13("product")).drop(productProp13("product"))
-      val product_join13 = product_join12.join(productProp14, product_join12("product") === productProp14("product")).drop(productProp14("product"))
-      val product_join14 = product_join13.join(productProp15, product_join13("product") === productProp15("product")).drop(productProp15("product"))
-      val product_join15 = product_join14.join(productProp16, product_join14("product") === productProp16("product")).drop(productProp16("product"))
-      val product_join16 = product_join15.join(productProp17, product_join15("product") === productProp17("product")).drop(productProp17("product"))
-      val product_join17 = product_join16.join(productProp18, product_join16("product") === productProp18("product")).drop(productProp18("product"))
-      val product_join18 = product_join17.join(productProp19, product_join17("product") === productProp19("product")).drop(productProp19("product"))
-      val product_join19 = product_join18.join(productProp20, product_join18("product") === productProp20("product")).drop(productProp20("product"))
-      val product_join20 = product_join19.join(productProp21, product_join19("product") === productProp21("product")).drop(productProp21("product"))
-      val product_join21 = product_join20.join(productProp22, product_join20("product") === productProp22("product")).drop(productProp22("product"))
-      val product_join22 = product_join21.join(productProp23, product_join21("product") === productProp23("product")).drop(productProp23("product"))
-      val product_join23 = product_join22.join(productProp24, product_join22("product") === productProp24("product")).drop(productProp24("product"))
-      val product_join24 = product_join23.join(productProp25, product_join23("product") === productProp25("product")).drop(productProp25("product"))
-      val product_join25 = product_join24.join(productProp26, product_join24("product") === productProp26("product")).drop(productProp26("product"))
-      val product_join26 = product_join25.join(productProp27, product_join25("product") === productProp27("product")).drop(productProp27("product"))
-      val product_join27 = product_join26.join(productProp28, product_join26("product") === productProp28("product")).drop(productProp28("product"))
-      val product_join28 = product_join27.join(productProp29, product_join27("product") === productProp29("product")).drop(productProp29("product"))
-      val product_join29 = product_join28.join(productProp30, product_join28("product") === productProp30("product")).drop(productProp30("product"))
-      val product_join30 = product_join29.join(productProp31, product_join29("product") === productProp31("product")).drop(productProp31("product"))
-      val product_join31 = product_join30.join(productProp32, product_join30("product") === productProp32("product")).drop(productProp32("product"))
+      val product_join2 = product_join1.distinct().join(productProp3, product_join1("product") === productProp3("product")).drop(productProp3("product"))
+      val product_join3 = product_join2.distinct().join(productProp4, product_join2("product") === productProp4("product")).drop(productProp4("product"))
+      val product_join4 = product_join3.distinct().join(productProp5, product_join3("product") === productProp5("product")).drop(productProp5("product"))
+      val product_join5 = product_join4.distinct().join(productProp6, product_join4("product") === productProp6("product")).drop(productProp6("product"))
+      val product_join6 = product_join5.distinct().join(productProp7, product_join5("product") === productProp7("product")).drop(productProp7("product"))
+      val product_join7 = product_join6.distinct().join(productProp8, product_join6("product") === productProp8("product")).drop(productProp8("product"))
+      val product_join8 = product_join7.distinct().join(productProp9, product_join7("product") === productProp9("product")).drop(productProp9("product"))
+      val product_join9 = product_join8.distinct().join(productProp10, product_join8("product") === productProp10("product")).drop(productProp10("product"))
+      val product_join10 = product_join9.distinct().join(productProp11, product_join9("product") === productProp11("product")).drop(productProp11("product"))
+      val product_join11 = product_join10.distinct().join(productProp12, product_join10("product") === productProp12("product")).drop(productProp12("product"))
+      val product_join12 = product_join11.distinct().join(productProp13, product_join11("product") === productProp13("product")).drop(productProp13("product"))
+      val product_join13 = product_join12.distinct().join(productProp14, product_join12("product") === productProp14("product")).drop(productProp14("product"))
+      val product_join14 = product_join13.distinct().join(productProp15, product_join13("product") === productProp15("product")).drop(productProp15("product"))
+      val product_join15 = product_join14.distinct().join(productProp16, product_join14("product") === productProp16("product")).drop(productProp16("product"))
+      val product_join16 = product_join15.distinct().join(productProp17, product_join15("product") === productProp17("product")).drop(productProp17("product"))
+      val product_join17 = product_join16.distinct().join(productProp18, product_join16("product") === productProp18("product")).drop(productProp18("product"))
+      val product_join18 = product_join17.distinct().join(productProp19, product_join17("product") === productProp19("product")).drop(productProp19("product"))
+      val product_join19 = product_join18.distinct().join(productProp20, product_join18("product") === productProp20("product")).drop(productProp20("product"))
+      val product_join20 = product_join19.distinct().join(productProp21, product_join19("product") === productProp21("product")).drop(productProp21("product"))
+      val product_join21 = product_join20.distinct().join(productProp22, product_join20("product") === productProp22("product")).drop(productProp22("product"))
+      val product_join22 = product_join21.distinct().join(productProp23, product_join21("product") === productProp23("product")).drop(productProp23("product"))
+      val product_join23 = product_join22.distinct().join(productProp24, product_join22("product") === productProp24("product")).drop(productProp24("product"))
+      val product_join24 = product_join23.distinct().join(productProp25, product_join23("product") === productProp25("product")).drop(productProp25("product"))
+      val product_join25 = product_join24.distinct().join(productProp26, product_join24("product") === productProp26("product")).drop(productProp26("product"))
+      val product_join26 = product_join25.distinct().join(productProp27, product_join25("product") === productProp27("product")).drop(productProp27("product"))
+      val product_join27 = product_join26.distinct().join(productProp28, product_join26("product") === productProp28("product")).drop(productProp28("product"))
+      val product_join28 = product_join27.distinct().join(productProp29, product_join27("product") === productProp29("product")).drop(productProp29("product"))
+      val product_join29 = product_join28.distinct().join(productProp30, product_join28("product") === productProp30("product")).drop(productProp30("product"))
+      val product_join30 = product_join29.distinct().join(productProp31, product_join29("product") === productProp31("product")).drop(productProp31("product"))
+      val product_join31 = product_join30.distinct().join(productProp32, product_join30("product") === productProp32("product")).drop(productProp32("product"))
 
       println("Original count: " + Product_DF.count())
       Product_DF.printSchema()
@@ -571,7 +566,7 @@ object PropertyTablesPartition {
       println(product_join31.toDF().count())
       product_join31.toDF().printSchema()
 
-       */
+
 
 
       /*
