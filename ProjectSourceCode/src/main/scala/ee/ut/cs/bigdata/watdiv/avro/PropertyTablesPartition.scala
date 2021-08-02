@@ -390,21 +390,33 @@ object PropertyTablesPartition {
 
       // Subgenre
 
+
       val subgenreProp1 = spark.read.format("avro").load(path + "Predicate/Avro/SubgenreGenre.avro")
       val subgenreProp2 = spark.read.format("avro").load(path + "Predicate/Avro/SubgenreTopic.avro")
 
+      subgenreProp1.show(5,false)
+      subgenreProp2.show(5,false)
+
+
       val subgenre_join1 = subgenreProp1.join(subgenreProp2, subgenreProp1("subgenre") === subgenreProp2("subgenre")).drop(subgenreProp2("subgenre"))
+
+      subgenre_join1.show(false)
+
+
 
 
       println("Original count: " + Genre_DF.count())
       Genre_DF.printSchema()
 
       println(subgenre_join1.toDF().count())
+      println(subgenre_join1.toDF().distinct().count())
       subgenre_join1.toDF().printSchema()
+println("************************************")
 
 
 
-      println("************************************")
+
+
 
 
 
