@@ -128,8 +128,6 @@ object PropertyTablesPartition {
       purchasePrice.repartition(84).write.option("header", "true").format("parquet").mode(SaveMode.Overwrite).save(path + "Predicate/Parquet/purchasePrice.parquet")
       purchasePurchaseFor.repartition(84).write.option("header", "true").format("parquet").mode(SaveMode.Overwrite).save(path + "Predicate/Parquet/purchasePurchaseFor.parquet")
 
-      /*
-
       val reviewReviewer = Review_DF.select("review", "reviewer").toDF()
       val reviewRating = Review_DF.select("review", "rating").toDF()
       val reviewText = Review_DF.select("review", "text").toDF()
@@ -288,7 +286,7 @@ object PropertyTablesPartition {
       retailerFaxNumber.repartition(84).write.option("header", "true").format("parquet").mode(SaveMode.Overwrite).save(path + "Predicate/Parquet/retailerFaxNumber.parquet")
       retailerAggregateRating.repartition(84).write.option("header", "true").format("parquet").mode(SaveMode.Overwrite).save(path + "Predicate/Parquet/retailerAggregateRating.parquet")
 
-       */
+
 
 
       println("Parquet PT partitioned and saved! Predicate based partitioning!")
