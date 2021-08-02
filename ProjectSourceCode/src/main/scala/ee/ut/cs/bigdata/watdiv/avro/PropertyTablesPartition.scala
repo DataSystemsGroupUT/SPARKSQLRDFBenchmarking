@@ -563,7 +563,7 @@ object PropertyTablesPartition {
       println("Original count: " + Product_DF.count())
       Product_DF.printSchema()
 
-      println(product_join31.toDF().count())
+      println(product_join31.distinct().toDF().count())
       product_join31.toDF().printSchema()
 
 
