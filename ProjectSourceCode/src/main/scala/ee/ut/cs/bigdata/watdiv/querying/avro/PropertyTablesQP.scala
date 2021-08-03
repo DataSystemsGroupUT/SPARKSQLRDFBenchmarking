@@ -32,28 +32,18 @@ object PropertyTablesQP {
     if (partitionType == "Predicate") {
 
 
-      FileSystem.get(sc.hadoopConfiguration).listStatus(new Path(s"$path/$partitionType/Avro")).groupBy(file=>file.getPath().getName().split("(?=\\p{Upper})")(0)).foreach {
+      FileSystem.get(sc.hadoopConfiguration).listStatus(new Path(s"$path/$partitionType/Avro")).groupBy(file => file.getPath().getName().split("(?=\\p{Upper})")(0)).foreach {
 
-//        file =>
-//          println(file.getPath().getName().split("(?=\\p{Upper})")(0))
-//
-
-
-//          val ptTable = spark.read.format("avro").load(file.getPath().toString)
-//          ptTable.createOrReplaceTempView(file.getPath.getName.split("(?=\\p{Upper})")(0))
-
-        x=>x._2.foreach{
-          f=>println(f.getPath.getName)
-        }
-        println()
-
+        filestatus =>
+          filestatus._2.foreach {
+            f =>
+              val ptTable = spark.read.format("avro").load(f.getPath().toString)
+              println(ptTable.count())
+          }
       }
 
 
 
-
-
-      /*
       //Purchase
 
       val purchaseProp1 = spark.read.format("avro").load(path + "Predicate/Avro/purchaseDate.avro")
@@ -64,6 +54,8 @@ object PropertyTablesQP {
       val purchase_join1 = purchaseProp1.join(purchaseProp2, purchaseProp1("purchase") === purchaseProp2("purchase")).drop(purchaseProp2("purchase"))
       val purchase_join2 = purchase_join1.join(purchaseProp3, purchase_join1("purchase") === purchaseProp3("purchase")).drop(purchaseProp3("purchase"))
 
+      purchase_join2.createOrReplaceTempView("Purchase")
+
 
       // Subgenre
 
@@ -72,9 +64,9 @@ object PropertyTablesQP {
 
       val subgenre_join1 = subgenreProp1.join(subgenreProp2, subgenreProp1("subgenre") === subgenreProp2("subgenre")).drop(subgenreProp2("subgenre")).distinct()
 
+      subgenre_join1.createOrReplaceTempView("SubGenre")
 
       //Retailer
-
       val retailerProp1 = spark.read.format("avro").load(path + "Predicate/Avro/retailerName.avro")
       val retailerProp2 = spark.read.format("avro").load(path + "Predicate/Avro/retailerLegalName.avro")
       val retailerProp3 = spark.read.format("avro").load(path + "Predicate/Avro/retailerOpeningHours.avro")
@@ -86,7 +78,6 @@ object PropertyTablesQP {
       val retailerProp9 = spark.read.format("avro").load(path + "Predicate/Avro/retailerFaxNumber.avro")
       val retailerProp10 = spark.read.format("avro").load(path + "Predicate/Avro/retailerAggregateRating.avro")
 
-
       val retailer_join1 = retailerProp1.join(retailerProp2, retailerProp1("retailer") === retailerProp2("retailer")).drop(retailerProp2("retailer"))
       val retailer_join2 = retailer_join1.join(retailerProp3, retailer_join1("retailer") === retailerProp3("retailer")).drop(retailerProp3("retailer"))
       val retailer_join3 = retailer_join2.join(retailerProp4, retailer_join2("retailer") === retailerProp4("retailer")).drop(retailerProp4("retailer"))
@@ -97,9 +88,9 @@ object PropertyTablesQP {
       val retailer_join8 = retailer_join7.join(retailerProp9, retailer_join7("retailer") === retailerProp9("retailer")).drop(retailerProp9("retailer"))
       val retailer_join9 = retailer_join8.join(retailerProp10, retailer_join8("retailer") === retailerProp10("retailer")).drop(retailerProp10("retailer"))
 
+      retailer_join9.createOrReplaceTempView("Retailer")
 
       // Offer
-
       val offerProp1 = spark.read.format("avro").load(path + "Predicate/Avro/offerValidThrough.avro")
       val offerProp2 = spark.read.format("avro").load(path + "Predicate/Avro/offerELigibleQuantity.avro")
       val offerProp3 = spark.read.format("avro").load(path + "Predicate/Avro/offerValidFrom.avro")
@@ -107,17 +98,15 @@ object PropertyTablesQP {
       val offerProp5 = spark.read.format("avro").load(path + "Predicate/Avro/offerSerialNumber.avro")
       val offerProp6 = spark.read.format("avro").load(path + "Predicate/Avro/offerPriceValidUntil.avro")
 
-
       val offer_join1 = offerProp1.join(offerProp2, offerProp1("offer") === offerProp2("offer")).drop(offerProp2("offer"))
       val offer_join2 = offer_join1.join(offerProp3, offer_join1("offer") === offerProp3("offer")).drop(offerProp3("offer"))
       val offer_join3 = offer_join2.join(offerProp4, offer_join2("offer") === offerProp4("offer")).drop(offerProp4("offer"))
       val offer_join4 = offer_join3.join(offerProp5, offer_join3("offer") === offerProp5("offer")).drop(offerProp5("offer"))
       val offer_join5 = offer_join4.join(offerProp6, offer_join4("offer") === offerProp6("offer")).drop(offerProp6("offer"))
 
-
+      offer_join5.createOrReplaceTempView("Offer")
 
       //Review
-
       val reviewProp1 = spark.read.format("avro").load(path + "Predicate/Avro/reviewReviewer.avro")
       val reviewProp2 = spark.read.format("avro").load(path + "Predicate/Avro/reviewRating.avro")
       val reviewProp3 = spark.read.format("avro").load(path + "Predicate/Avro/reviewText.avro")
@@ -129,9 +118,10 @@ object PropertyTablesQP {
       val review_join3 = review_join2.join(reviewProp4, review_join2("review") === reviewProp4("review")).drop(reviewProp4("review"))
       val review_join4 = review_join3.join(reviewProp5, review_join3("review") === reviewProp5("review")).drop(reviewProp5("review"))
 
+      review_join4.createOrReplaceTempView("Review")
+
 
       // Product
-
       val productProp1 = spark.read.format("avro").load(path + "Predicate/Avro/productProductCategory.avro")
       val productProp2 = spark.read.format("avro").load(path + "Predicate/Avro/productContentRating.avro")
       val productProp3 = spark.read.format("avro").load(path + "Predicate/Avro/productTitle.avro")
@@ -197,11 +187,9 @@ object PropertyTablesQP {
       val product_join30 = product_join29.distinct().join(productProp31, product_join29("product") === productProp31("product")).drop(productProp31("product"))
       val product_join31 = product_join30.distinct().join(productProp32, product_join30("product") === productProp32("product")).drop(productProp32("product")).distinct()
 
-
-
+      product_join31.createOrReplaceTempView("Product")
 
       //User
-
       val userProp1 = spark.read.format("avro").load(path + "Predicate/Avro/userUserId.avro")
       val userProp2 = spark.read.format("avro").load(path + "Predicate/Avro/userGivenName.avro")
       val userProp3 = spark.read.format("avro").load(path + "Predicate/Avro/userFamilyName.avro")
@@ -227,10 +215,9 @@ object PropertyTablesQP {
       val user_join10 = user_join9.join(userProp11, user_join9("user") === userProp11("user")).drop(userProp11("user"))
       val user_join11 = user_join10.join(userProp12, user_join10("user") === userProp12("user")).drop(userProp12("user"))
 
-
+      user_join11.createOrReplaceTempView("User")
 
       //Website
-
       val WebsitePro1 = spark.read.format("avro").load(path + "Predicate/Avro/websiteLanguage.avro").toDF()
       val WebsitePro2 = spark.read.format("avro").load(path + "Predicate/Avro/websiteHits.avro").toDF()
       val WebsitePro3 = spark.read.format("avro").load(path + "Predicate/Avro/websiteUrl.avro").toDF()
@@ -238,9 +225,43 @@ object PropertyTablesQP {
       val website_join1 = WebsitePro1.join(WebsitePro2, WebsitePro1("website") === WebsitePro2("website")).drop(WebsitePro2("website"))
       val website_join2 = website_join1.join(WebsitePro3, website_join1("website") === WebsitePro3("website")).drop(WebsitePro3("website"))
 
-       */
+      website_join2.createOrReplaceTempView("Website")
 
 
+      val City_DF = spark.read.format("avro").load(path + "Horizontal/Avro/City.avro")
+      val Role_DF = spark.read.format("avro").load(path + "Horizontal/Avro/Role.avro")
+      val Trailer_DF = spark.read.format("avro").load(path + "Horizontal/Avro/Trailer.avro")
+      val Language_DF = spark.read.format("avro").load(path + "Horizontal/Avro/Language.avro")
+      val Likes_DF = spark.read.format("avro").load(path + "Horizontal/Avro/Likes.avro")
+      val Subscribes_DF = spark.read.format("avro").load(path + "Horizontal/Avro/Subscribes.avro")
+      val EligibilityRegion_DF = spark.read.format("avro").load(path + "Horizontal/Avro/EligibilityRegion.avro")
+      val HasGenre_DF = spark.read.format("avro").load(path + "Horizontal/Avro/HasGenre.avro")
+      val MakesPurchase_DF = spark.read.format("avro").load(path + "Horizontal/Avro/MakesPurchase.avro")
+      val Tag_DF = spark.read.format("avro").load(path + "Horizontal/Avro/Tag.avro")
+      val Includes_DF = spark.read.format("avro").load(path + "Horizontal/Avro/Includes.avro")
+      val Offers_DF = spark.read.format("avro").load(path + "Horizontal/Avro/Offers.avro")
+      val HasReview_DF = spark.read.format("avro").load(path + "Horizontal/Avro/HasReview.avro")
+      val FriendOf_DF = spark.read.format("avro").load(path + "Horizontal/Avro/FriendOf.avro")
+      val Actor_DF = spark.read.format("avro").load(path + "Horizontal/Avro/Actor.avro")
+      val PurchaseFor_DF = spark.read.format("avro").load(path + "Horizontal/Avro/PurchaseFor.avro")
+
+
+      City_DF.createOrReplaceTempView("City")
+      Role_DF.createOrReplaceTempView("Role")
+      Trailer_DF.createOrReplaceTempView("Trailer")
+      Actor_DF.createOrReplaceTempView("Actor")
+      Language_DF.createOrReplaceTempView("Language")
+      Likes_DF.createOrReplaceTempView("Likes")
+      Subscribes_DF.createOrReplaceTempView("Subscribes")
+      EligibilityRegion_DF.createOrReplaceTempView("EligibilityRegion")
+      HasGenre_DF.createOrReplaceTempView("HasGenre")
+      MakesPurchase_DF.createOrReplaceTempView("MakesPurchase")
+      Tag_DF.createOrReplaceTempView("Tag")
+      Includes_DF.createOrReplaceTempView("Includes")
+      Offers_DF.createOrReplaceTempView("Offers")
+      HasReview_DF.createOrReplaceTempView("HasReview")
+      FriendOf_DF.createOrReplaceTempView("FriendOf")
+      PurchaseFor_DF.createOrReplaceTempView("PurchaseFor")
 
 
     }
