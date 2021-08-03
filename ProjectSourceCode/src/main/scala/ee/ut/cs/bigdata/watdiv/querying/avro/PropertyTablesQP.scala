@@ -66,7 +66,7 @@ object PropertyTablesQP {
 
       val subgenre_join1 = subgenreProp1.join(subgenreProp2, subgenreProp1("subgenre") === subgenreProp2("subgenre")).drop(subgenreProp2("subgenre")).distinct()
 
-      subgenre_join1.createOrReplaceTempView("SubGenre")
+      subgenre_join1.createOrReplaceTempView("Genre")
 
       //Retailer
       val retailerProp1 = spark.read.format("avro").load(path + "Predicate/Avro/retailerName.avro")
