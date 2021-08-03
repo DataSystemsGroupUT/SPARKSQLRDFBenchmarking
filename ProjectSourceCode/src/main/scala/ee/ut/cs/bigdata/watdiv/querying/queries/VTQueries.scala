@@ -15,7 +15,7 @@ class VTQueries {
       |JOIN    (SELECT subject AS v0 , object AS v4 FROM hasReview) tab3
       |ON(tab2.v0=tab3.v0)
       |JOIN    (SELECT object AS v5 , subject AS v4
-      |FROM revTitle) tab4
+      |FROM rev_Title) tab4
       |ON(tab3.v4=tab4.v4)
       |JOIN    (SELECT object AS v6 , subject AS v4 FROM reviewer) tab5
       |ON(tab4.v4=tab5.v4)
