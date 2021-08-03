@@ -110,7 +110,7 @@ class VTQueries {
       | JOIN    (SELECT subject AS v0 , object AS v5
       | FROM description	) tab4
       | ON(tab0.v0=tab4.v0)
-      | JOIN    (SELECT subject AS v0 , object AS v2 FROM title ) tab1
+      | JOIN    (SELECT subject AS v0 , object AS v2 FROM og_title ) tab1
       | ON(tab4.v0=tab1.v0)
       | JOIN    (SELECT subject AS v0 , object AS v3 FROM type) tab2
       | ON(tab1.v0=tab2.v0)
@@ -159,7 +159,7 @@ class VTQueries {
       |ON(tab1.v0=tab3.v0)
       |JOIN    (SELECT object AS v1 , subject AS v0 FROM includes ) tab0
       |ON(tab3.v0=tab0.v0)
-      |JOIN    (SELECT subject AS v1 , object AS v5 FROM title) tab4
+      |JOIN    (SELECT subject AS v1 , object AS v5 FROM og_title) tab4
       |ON(tab0.v1=tab4.v1)
       |JOIN    (SELECT subject AS v1 , object AS v6 FROM type	) tab5
       |ON(tab4.v1=tab5.v1)
