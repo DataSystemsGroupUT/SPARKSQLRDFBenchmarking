@@ -31,6 +31,13 @@ object PropertyTablesQP {
 
     if (partitionType == "Predicate") {
 
+      FileSystem.get(sc.hadoopConfiguration).listStatus(new Path(s"$path/$partitionType/Avro")).foreach {
+
+        file=> println(file.getPath().getName().split("(?=\\p{Upper})")(0))
+      }
+
+
+      /*
       //Purchase
 
       val purchaseProp1 = spark.read.format("avro").load(path + "Predicate/Avro/purchaseDate.avro")
@@ -215,17 +222,17 @@ object PropertyTablesQP {
       val website_join1 = WebsitePro1.join(WebsitePro2, WebsitePro1("website") === WebsitePro2("website")).drop(WebsitePro2("website"))
       val website_join2 = website_join1.join(WebsitePro3, website_join1("website") === WebsitePro3("website")).drop(WebsitePro3("website"))
 
+       */
+
 
     }
 
     else {
       FileSystem.get(sc.hadoopConfiguration).listStatus(new Path(s"$path/$partitionType/Avro")).foreach {
         x =>
-          println(x.getPath() + ":::" + x.getPath().getName())
           val ptTable = spark.read.format("avro").load(x.getPath().toString)
           ptTable.createOrReplaceTempView(x.getPath().getName().substring(0, x.getPath().getName().lastIndexOf('.')))
       }
-
     }
 
 
