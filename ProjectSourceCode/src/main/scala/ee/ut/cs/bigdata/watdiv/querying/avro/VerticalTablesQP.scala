@@ -4,7 +4,7 @@ import ee.ut.cs.bigdata.watdiv.querying.queries.VTQueries
 import org.apache.log4j.{Level, Logger}
 import org.apache.spark.sql.SparkSession
 import org.apache.spark.{SparkConf, SparkContext}
-import  org.apache.hadoop.fs.{FileSystem,Path}
+import org.apache.hadoop.fs.{FileSystem, Path}
 import java.io.{File, FileOutputStream}
 
 object VerticalTablesQP {
@@ -18,17 +18,20 @@ object VerticalTablesQP {
     sc.setLogLevel("ERROR")
 
     val spark = SparkSession
-    .builder()
-    .appName("RDFBench Avro VT")
-    .getOrCreate()
+      .builder()
+      .appName("RDFBench Avro VT")
+      .getOrCreate()
     val ds = args(0) // value = {"100M", "500M, or "1B"}
+    var partitionType = args(1) // value = {"Horizontal", "Subject", or "Predicate"}
+
     val path = s"hdfs://172.17.77.48:9000/user/hadoop/RDFBench/WATDIV/$ds/VP/"
 
 
-    FileSystem.get(sc.hadoopConfiguration ).listStatus(new Path(s"$path")).foreach{
-//      x => println(x.getPath().getName())
-      x=> val vpTable = spark.read.format("avro").load(x.getPath().getName())
-          vpTable.createOrReplaceTempView(x.getPath().getName().drop(4))
+    FileSystem.get(sc.hadoopConfiguration).listStatus(new Path(s"$path/$partitionType/Avro")).foreach {
+      //      x => println(x.getPath().getName())
+      x =>
+        val vpTable = spark.read.format("avro").load(x.getPath().getName())
+        vpTable.createOrReplaceTempView(x.getPath().getName().drop(4))
     }
 
 
