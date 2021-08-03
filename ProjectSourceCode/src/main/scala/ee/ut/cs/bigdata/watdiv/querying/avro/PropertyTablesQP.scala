@@ -31,7 +31,7 @@ object PropertyTablesQP {
 
     if (partitionType == "Predicate") {
 
-      FileSystem.get(sc.hadoopConfiguration).listStatus(new Path(s"$path/$partitionType/Avro")).filter(file =>file.getPath.getName.matches(file.getPath.getName().split("(?=\\p{Upper})")(0))).foreach {
+      FileSystem.get(sc.hadoopConfiguration).listStatus(new Path(s"$path/$partitionType/Avro")).filter(file =>file.getPath.getName.startsWith(file.getPath.getName().split("(?=\\p{Upper})")(0))).foreach {
 
         file =>
           println(file.getPath().getName().split("(?=\\p{Upper})")(0))
