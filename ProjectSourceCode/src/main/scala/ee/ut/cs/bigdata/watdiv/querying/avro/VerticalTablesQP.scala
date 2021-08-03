@@ -34,7 +34,7 @@ object VerticalTablesQP {
 
         val vpTable = spark.read.format("avro").load(x.getPath().toString)
         println(vpTable.count())
-        vpTable.createOrReplaceTempView(x.getPath().getName().drop(4))
+        vpTable.createOrReplaceTempView(x.getPath().getName().substring(0, x.getPath().getName().lastIndexOf('.')))
     }
 
 
