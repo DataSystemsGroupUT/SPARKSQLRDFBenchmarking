@@ -27,13 +27,12 @@ object SingleStatementTableQP {
     var partitionType = args(1) // value = {"Horizontal", "Subject", or "Predicate"}
     val path = s"hdfs://172.17.77.48:9000/user/hadoop/RDFBench/WATDIV/$ds/ST"
 
-
     val ST_DF = spark.read.format("avro").load(s"$path/$partitionType/Avro/ST$ds.avro").toDF()
 
     ST_DF.createOrReplaceTempView("Triples")
 
     //create file to write the query run time results
-    val fos = new FileOutputStream(new File(s"/home/hadoop/RDFBenchMarking/logs/$ds/avro/ST/$ds$partitionType.txt"), true)
+    val fos = new FileOutputStream(new File(s"/home/hadoop/RDFBenchMarking/logs/$ds/avro/ST/$partitionType.txt"), true)
 
     val queries = List(
       new STQueries c1,
@@ -43,7 +42,7 @@ object SingleStatementTableQP {
       new STQueries f2,
       new STQueries f3,
       new STQueries f4,
-      new STQueries f4,
+      new STQueries f5,
       new STQueries l1,
       new STQueries l2,
       new STQueries l3,
