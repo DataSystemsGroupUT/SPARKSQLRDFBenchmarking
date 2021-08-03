@@ -31,16 +31,26 @@ object PropertyTablesQP {
 
     if (partitionType == "Predicate") {
 
-      FileSystem.get(sc.hadoopConfiguration).listStatus(new Path(s"$path/$partitionType/Avro")).filter(file =>file.getPath.getName.startsWith(file.getPath.getName().split("(?=\\p{Upper})")(0))).foreach {
 
-        file =>
-          println(file.getPath().getName().split("(?=\\p{Upper})")(0))
-          println()
+      FileSystem.get(sc.hadoopConfiguration).listStatus(new Path(s"$path/$partitionType/Avro")).groupBy(file=>file.getPath().getName().split("(?=\\p{Upper})")(0)).foreach {
+
+//        file =>
+//          println(file.getPath().getName().split("(?=\\p{Upper})")(0))
+//
+
 
 //          val ptTable = spark.read.format("avro").load(file.getPath().toString)
 //          ptTable.createOrReplaceTempView(file.getPath.getName.split("(?=\\p{Upper})")(0))
 
+        x=>x._2.foreach{
+          f=>println(f.getPath.getName)
+        }
+        println()
+
       }
+
+
+
 
 
       /*
@@ -229,6 +239,8 @@ object PropertyTablesQP {
       val website_join2 = website_join1.join(WebsitePro3, website_join1("website") === WebsitePro3("website")).drop(WebsitePro3("website"))
 
        */
+
+
 
 
     }
