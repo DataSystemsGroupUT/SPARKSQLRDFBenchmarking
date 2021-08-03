@@ -25,7 +25,13 @@ object VerticalTablesQP {
     val path = s"hdfs://172.17.77.48:9000/user/hadoop/RDFBench/WATDIV/$ds/VP/"
 
 
-    FileSystem.get(sc.hadoopConfiguration ).listStatus(new Path(s"$path")).foreach(x => println(x.getPath().getName()))
+    FileSystem.get(sc.hadoopConfiguration ).listStatus(new Path(s"$path")).foreach{
+//      x => println(x.getPath().getName())
+      x=> val vpTable = spark.read.format("avro").load(x.getPath().getName())
+          vpTable.createOrReplaceTempView(x.getPath().getName().drop(4))
+    }
+
+
 
 
 
@@ -132,6 +138,7 @@ object VerticalTablesQP {
     vpValidFrom.createOrReplaceTempView("validFrom")
     vpserialNumber.createOrReplaceTempView("serialNumber")
     vpeligibleQuantity.createOrReplaceTempView("eligibleQuantity")
+    */
 
 
     //create file to write the query run time results
@@ -182,7 +189,7 @@ object VerticalTablesQP {
       count += 1
     }
 
-     */
+
     println("All Queries are Done - Avro - VP!")
 
   }
