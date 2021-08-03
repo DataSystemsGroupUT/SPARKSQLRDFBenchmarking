@@ -28,12 +28,13 @@ object VerticalTablesQP {
 
 
     FileSystem.get(sc.hadoopConfiguration).listStatus(new Path(s"$path/$partitionType/Avro")).foreach {
-      //      x => println(x.getPath().getName())
       x =>
         val vpTable = spark.read.format("avro").load(x.getPath().getName())
         vpTable.createOrReplaceTempView(x.getPath().getName().drop(4))
     }
 
+
+    spark.catalog.listTables("default").show()
 
 
 
