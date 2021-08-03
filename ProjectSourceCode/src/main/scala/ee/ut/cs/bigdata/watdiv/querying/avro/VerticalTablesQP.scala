@@ -27,6 +27,7 @@ object VerticalTablesQP {
     val path = s"hdfs://172.17.77.48:9000/user/hadoop/RDFBench/WATDIV/$ds/VP/"
 
 
+    println("VP Querying!")
     FileSystem.get(sc.hadoopConfiguration).listStatus(new Path(s"$path/$partitionType/Avro")).foreach {
       x =>
         println(x.getPath + x.getPath.getName)
@@ -39,7 +40,7 @@ object VerticalTablesQP {
     }
 
 
-    spark.catalog.listTables("default").show()
+    //spark.catalog.listTables("default").show()
 
 
 
