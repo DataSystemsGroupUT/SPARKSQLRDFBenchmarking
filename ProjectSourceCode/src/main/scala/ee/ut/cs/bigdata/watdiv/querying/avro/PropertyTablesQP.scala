@@ -31,9 +31,15 @@ object PropertyTablesQP {
 
     if (partitionType == "Predicate") {
 
-      FileSystem.get(sc.hadoopConfiguration).listStatus(new Path(s"$path/$partitionType/Avro")).foreach {
+      FileSystem.get(sc.hadoopConfiguration).listStatus(new Path(s"$path/$partitionType/Avro")).filter(file =>file.getPath.getName.matches(file.getPath.getName().split("(?=\\p{Upper})")(0))).foreach {
 
-        file=> println(file.getPath().getName().split("(?=\\p{Upper})")(0))
+        file =>
+          println(file.getPath().getName().split("(?=\\p{Upper})")(0))
+          println()
+
+//          val ptTable = spark.read.format("avro").load(file.getPath().toString)
+//          ptTable.createOrReplaceTempView(file.getPath.getName.split("(?=\\p{Upper})")(0))
+
       }
 
 
