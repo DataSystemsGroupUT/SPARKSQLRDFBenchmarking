@@ -32,6 +32,7 @@ object PropertyTablesQP {
     if (partitionType == "Predicate") {
 
 
+      /*
       FileSystem.get(sc.hadoopConfiguration).listStatus(new Path(s"$path/$partitionType/Avro")).groupBy(file => file.getPath().getName().split("(?=\\p{Upper})")(0)).foreach {
 
         filestatus =>
@@ -42,6 +43,7 @@ object PropertyTablesQP {
           }
       }
 
+       */
 
 
       //Purchase
