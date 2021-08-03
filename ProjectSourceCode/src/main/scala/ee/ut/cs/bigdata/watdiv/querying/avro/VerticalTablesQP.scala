@@ -4,6 +4,7 @@ import ee.ut.cs.bigdata.watdiv.querying.queries.VTQueries
 import org.apache.log4j.{Level, Logger}
 import org.apache.spark.sql.SparkSession
 import org.apache.spark.{SparkConf, SparkContext}
+import  org.apache.hadoop.fs.{FileSystem,Path}
 
 import java.io.{File, FileOutputStream}
 
@@ -18,11 +19,18 @@ object VerticalTablesQP {
     sc.setLogLevel("ERROR")
 
     val spark = SparkSession
-      .builder()
-      .appName("RDFBench Avro VT")
-      .getOrCreate()
+    .builder()
+    .appName("RDFBench Avro VT")
+    .getOrCreate()
     val ds = args(0) // value = {"100M", "500M, or "1B"}
     val path = s"hdfs://172.17.77.48:9000/user/hadoop/RDFBench/WATDIV/$ds/VP/"
+
+
+    FileSystem.get( sc.hadoopConfiguration ).listStatus( new Path("$path")).foreach( x => println(x.getPath ))
+
+
+
+    /*
 
     //read tables from HDFS
 
@@ -174,6 +182,8 @@ object VerticalTablesQP {
       }
       count += 1
     }
+
+     */
     println("All Queries are Done - Avro - VP!")
 
   }
