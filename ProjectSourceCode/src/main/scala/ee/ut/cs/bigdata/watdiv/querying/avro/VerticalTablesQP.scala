@@ -5,7 +5,6 @@ import org.apache.log4j.{Level, Logger}
 import org.apache.spark.sql.SparkSession
 import org.apache.spark.{SparkConf, SparkContext}
 import  org.apache.hadoop.fs.{FileSystem,Path}
-
 import java.io.{File, FileOutputStream}
 
 object VerticalTablesQP {
@@ -26,7 +25,7 @@ object VerticalTablesQP {
     val path = s"hdfs://172.17.77.48:9000/user/hadoop/RDFBench/WATDIV/$ds/VP/"
 
 
-    FileSystem.get( sc.hadoopConfiguration ).listStatus( new Path("$path")).foreach( x => println(x.getPath ))
+    FileSystem.get(sc.hadoopConfiguration ).listStatus(new Path(s"$path")).foreach(x => println(x.getPath ))
 
 
 
