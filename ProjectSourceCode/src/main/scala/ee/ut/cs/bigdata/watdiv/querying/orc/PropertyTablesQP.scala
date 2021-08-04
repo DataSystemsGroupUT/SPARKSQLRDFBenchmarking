@@ -278,7 +278,7 @@ object PropertyTablesQP {
 
 
     //create file to write the query run time results    
-    val fos = new FileOutputStream(new File(s"/home/hadoop/RDFBenchMarking/logs/$ds/orc/PT/$ds.txt"), true)
+    val fos = new FileOutputStream(new File(s"/home/hadoop/RDFBenchMarking/logs/$ds/orc/PT/$partitionType.txt"), true)
 
     val queries = List(
       new PTQueries c1,
