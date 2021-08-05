@@ -84,7 +84,6 @@ object VerticalTablesQP {
       count += 1
     }
 
-
     println("All Queries are Done - Parquet - VP!")
 
   }

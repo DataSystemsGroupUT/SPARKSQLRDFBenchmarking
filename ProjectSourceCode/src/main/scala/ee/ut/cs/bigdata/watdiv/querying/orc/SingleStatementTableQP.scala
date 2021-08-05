@@ -27,6 +27,8 @@ object SingleStatementTableQP {
     var partitionType = args(1) // value = {"Horizontal", "Subject", or "Predicate"}
     val path = s"hdfs://172.17.77.48:9000/user/hadoop/RDFBench/WATDIV/$ds/ST"
 
+    println("ST Querying!")
+
     val ST_DF = spark.read.format("orc").load(s"$path/$partitionType/ORC/ST$ds.orc").toDF()
 
     ST_DF.createOrReplaceTempView("Triples")

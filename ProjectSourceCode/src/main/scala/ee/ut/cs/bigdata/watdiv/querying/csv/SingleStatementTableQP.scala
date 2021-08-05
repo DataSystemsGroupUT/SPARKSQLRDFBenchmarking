@@ -27,6 +27,8 @@ object SingleStatementTableQP {
     var partitionType = args(1) // value = {"Horizontal", "Subject", or "Predicate"}
     val path = s"hdfs://172.17.77.48:9000/user/hadoop/RDFBench/WATDIV/$ds/ST"
 
+    println("ST Querying!")
+
     val ST_DF = spark.read.option("header", true).csv(s"$path/$partitionType/CSV/ST$ds.csv").toDF()
 
     ST_DF.createOrReplaceTempView("Triples")
