@@ -289,7 +289,7 @@ object PropertyTablesQP {
       new PTQueries f3,
       new PTQueries f4,
       new PTQueries f5,
-      //new PTQueries l1,
+      new PTQueries l1,
       new PTQueries l2,
       new PTQueries l3,
       new PTQueries l4,
