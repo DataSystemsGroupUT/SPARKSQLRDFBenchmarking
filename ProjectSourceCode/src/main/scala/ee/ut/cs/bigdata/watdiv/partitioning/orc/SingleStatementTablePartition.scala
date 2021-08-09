@@ -31,19 +31,19 @@ object SingleStatementTablePartition {
      //partition and save on HDFS
      if(partitionType == "subject")
      {
-       RDFDF.repartition(84, $"Subject").write.option("header", "true").format("orc").mode(SaveMode.Overwrite).save(s"$path/Subject/ORC/ST100M.orc")
+       RDFDF.repartition(84, $"Subject").write.option("header", "true").format("orc").mode(SaveMode.Overwrite).save(s"$path/Subject/ORC/ST$ds.orc")
        println("ORC ST partitioned and saved! Subject based partitioning")
      }
 
      else if (partitionType == "predicate")
      {
-       RDFDF.repartition(84, $"Predicate").write.option("header", "true").format("orc").mode(SaveMode.Overwrite).save(s"$path/Predicate/ORC/ST100M.orc")
+       RDFDF.repartition(84, $"Predicate").write.option("header", "true").format("orc").mode(SaveMode.Overwrite).save(s"$path/Predicate/ORC/ST$ds.orc")
        println("ORC ST partitioned and saved! Predicate based partitioning")
      }
 
      else if (partitionType == "horizontal")
      {
-       RDFDF.repartition(84).write.option("header", "true").format("orc").mode(SaveMode.Overwrite).save(s"$path/Horizontal/ORC/ST100M.orc")
+       RDFDF.repartition(84).write.option("header", "true").format("orc").mode(SaveMode.Overwrite).save(s"$path/Horizontal/ORC/ST$ds.orc")
        println("ORC ST partitioned and saved! Horizontal partitioning")
      }         
 

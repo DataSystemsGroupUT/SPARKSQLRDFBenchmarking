@@ -32,19 +32,19 @@ object SingleStatementTablePartition {
     //partition and save on HDFS
     if(partitionType == "subject")
     {
-     RDFDF.repartition(84, $"Subject").write.option("header", "true").format("parquet").mode(SaveMode.Overwrite).save(s"$path/Subject/Parquet/ST100M.parquet")
+     RDFDF.repartition(84, $"Subject").write.option("header", "true").format("parquet").mode(SaveMode.Overwrite).save(s"$path/Subject/Parquet/ST$ds.parquet")
      println("Parquet ST partitioned and saved! Subject based Partitioning!")
     }
 
     else if (partitionType == "predicate")
     {
-      RDFDF.repartition(84, $"Predicate").write.option("header", "true").format("parquet").mode(SaveMode.Overwrite).save(s"$path/Predicate/Parquet/ST100M.parquet")
+      RDFDF.repartition(84, $"Predicate").write.option("header", "true").format("parquet").mode(SaveMode.Overwrite).save(s"$path/Predicate/Parquet/ST$ds.parquet")
       println("Parquet ST partitioned and saved! Predicate based Partitioning!")
     }
 
     else if (partitionType == "horizontal")
     {
-      RDFDF.repartition(84).write.option("header", "true").format("parquet").mode(SaveMode.Overwrite).save(s"$path/Horizontal/Parquet/ST100M.parquet")
+      RDFDF.repartition(84).write.option("header", "true").format("parquet").mode(SaveMode.Overwrite).save(s"$path/Horizontal/Parquet/ST$ds.parquet")
       println("Parquet ST partitioned and saved! Horizontal partitioning!")
     }
          
