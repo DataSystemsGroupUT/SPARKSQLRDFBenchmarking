@@ -26,7 +26,7 @@ object SingleStatementTablePartition {
      val path= s"hdfs://172.17.77.48:9000/user/hadoop/RDFBench/WATDIV/$ds/ST"
 
      //read original table
-     val RDFDF = spark.read.format("avro").load(s"$path/VHDFS/Avro/ST100M.avro").toDF()
+     val RDFDF = spark.read.format("avro").load(s"$path/VHDFS/Avro/ST$ds.avro").toDF()
 
      //partition and save on HDFS
      if(partitionType == "subject")

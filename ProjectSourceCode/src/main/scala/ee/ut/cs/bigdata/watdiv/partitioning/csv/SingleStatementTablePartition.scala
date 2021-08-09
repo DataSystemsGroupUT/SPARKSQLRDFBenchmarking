@@ -29,7 +29,7 @@ object SingleStatementTablePartition {
     println("WatDiv ST Partitioning ")
 
    //read original table
-   val RDFDF = spark.read.format("csv").option("header", "true").option("inferSchema", "true").load(s"$path/VHDFS/CSV/ST100M.csv").toDF()
+   val RDFDF = spark.read.format("csv").option("header", "true").option("inferSchema", "true").load(s"$path/VHDFS/CSV/ST$ds.csv").toDF()
 
     println("ST Table is read!")
 

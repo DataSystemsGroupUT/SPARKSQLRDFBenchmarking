@@ -26,7 +26,7 @@ object SingleStatementTablePartition {
     val path=s"hdfs://172.17.77.48:9000/user/hadoop/RDFBench/WATDIV/$ds/ST"
 
     //read table from HDFS
-    val RDFDF = spark.read.format("parquet").load(s"$path/VHDFS/Parquet/ST100M.parquet").toDF()
+    val RDFDF = spark.read.format("parquet").load(s"$path/VHDFS/Parquet/ST$ds.parquet").toDF()
     println("Original table loaded!")
 
     //partition and save on HDFS
