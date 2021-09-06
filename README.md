@@ -15,7 +15,7 @@ The results of our experiments show many interesting insights about the impact o
 
 ### Project Phases
 -----
-<p align="center"><img src="docs/images/SparkSQLRDFBenchPhases.jpg" alt="spark"> </p>
+<p align="center"><img src="docs/images/SparkSQLRDFBenchPhases.png" alt="spark"> </p>
 
 
 #### Phase#1
