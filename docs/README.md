@@ -9,7 +9,7 @@ In this Project, we present a systematic comparison of the relevant RDF relation
 
 ### Project Phases
 -----
-<p align="center"><img src="images/SparkSQLRDFBenchPhases.jpg" alt="spark"> </p>
+<p align="center"><img src="images/SparkSQLRDFBenchPhases.jpeg" alt="spark"> </p>
 
 
 #### Phase#1
