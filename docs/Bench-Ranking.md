@@ -24,8 +24,8 @@ The proposed ranking criteria provide an accurate yet simple way that supports t
   <li><a href="#motivating"> Motivating Example</a></li>
   <li><a href="#criteria"> Bench-Ranking Criteria</a></li>
       <ul>
-        <li><a href="#criteria">Individual Ranking Criteria</a></li>
-        <li><a href="#criteria">Combined Ranking Criteria</a></li>
+        <li><a href="#criteria">Single-Dimensional Ranking Criteria</a></li>
+        <li><a href="#criteria">Multi-Dimensional Ranking Criteria</a></li>
         <li><a href="#goodness">Measuring Ranking Goodness</a></li>
     </ul>
 </ul>
@@ -39,7 +39,7 @@ Here, we reflect on the gap of performance analysis in existing works that use B
 In particular, we narrow down by discussing the problem of performance analysis alongside a well-known decision-making framework from **Gartner** shown below.
 
 
-<div style="text-align:center"> <img src="images/Gartner.JPG" width="500" height="250" /> </div>
+<div style="text-align:center"> <img src="images/mygartner.png" width="500" height="250" /> </div>
 
 
 <h4 id="desc"> Descriptive analysis: </h4>
@@ -92,25 +92,23 @@ The experiment results over different settings also show no decisive configurati
 Motivated by the limitations of descriptive and diagnostic analyses, we advocate for indicators such as applying **ranking** techniques for these dimensions.
 
 #### Proposed Ranking Criteria
-* [Individual Ranking Criteria](IndividualRankingCriteria.md) 
+* [Single-Dimensional Ranking Criteria](IndividualRankingCriteria.md) 
 
-Genralized Ranking criteria inspiered by ranking partitioning techniques proposed by [akhter2018empirical](https://www.springerprofessional.de/en/an-empirical-evaluation-of-rdf-graph-partitioning-techniques/16257484). We extend this partitoning ranking to cover other two dimensions, mamely, the RDF Relational schemata,and Storage backends. This ranking criteria is optmizing one dimension at a time. 
+Genralized Ranking criteria inspiered by ranking partitioning techniques proposed by [akhter2018empirical](https://www.springerprofessional.de/en/an-empirical-evaluation-of-rdf-graph-partitioning-techniques/16257484). We extend this partitoning ranking to cover other two dimensions, mamely, the **RDF Relational schemata**,and **Storage backends**.  
 
-* [Combined Ranking Criteria](CombinedRankingCriteria.md)
+* [Multi-Dimensional Ranking Criteria](MultiDimensionalRankingCriteria.md)
 
-To identify which configuration is the best performing, we need to optimize along all the dimensions simultaneously. In practice, this means designing a multi-dimensional (i.e combined) ranking criteria. To this extent, we propose **three** alternative techniques that aim at combining the ranking dimensions into a single unified ranking criterion. These criteria, are **Averge (AVG)**, **Weighted Average (WAvg)**, and **Maxmized Triangle Area (Rta)** (for all dimensions, each dimesion as a side in the triangle).
+Experiments show that the single-dimensional ranking criteria are optmizing one dimension at a time. Indeed, they ignore dimension's tradeoffs. To identify which configuration is the best performing, we need to optimize along all the dimensions simultaneously. In practice, this means designing a multi-dimensional ranking criteria. This intuition leads to extend the Bench-ranking into a multiobjective optimization problem in order to optimize all the dimensions at the same time.
 
 <h4 id="goodness"> How to assess the opted ranking criteria ("Bench-Ranking Goodness"):</h4>
 
 A ranking criterion aims at identifying the configurations that have the overall best results. In practice, We can consider a ranking criterion **"good"** if it does not suggest a low-performing configuration. In other words, we are not interested to be the best at any particular query as long as we are never the worst. Herein, we discuss how can we measure such **goodness**, i.e., **how to evaluate the ranking measure?**. [Ranking Goodness Details and Measures](RankingGoodness.md).
 
 
-
-
 <ul>
   <li style="display:inline;"><a href="https://datasystemsgrouput.github.io/SPARKSQLRDFBenchmarking/IndividualRankingCriteria.html" style=" margin-right: 50px ;padding: 0px 20px; word-wrap: normal; display: inline-block;   font: bold 11px Arial;  background-color: #EEEEEE;  border-top: 1px solid #CCCCCC;  border-right: 1px solid #333333;  border-bottom: 1px solid #333333;  border-left: 1px solid #CCCCCC;">Individual Ranking Criteria</a></li>
   
- <li style="display:inline;"><a href="https://datasystemsgrouput.github.io/SPARKSQLRDFBenchmarking/CombinedRankingCriteria.html"  style="padding: 0px 20px; word-wrap: normal; display: inline-block;   font: bold 11px Arial;  background-color: #EEEEEE;  border-top: 1px solid #CCCCCC;  border-right: 1px solid #333333;  border-bottom: 1px solid #333333;  border-left: 1px solid #CCCCCC;">Combined Ranking Criteria</a></li>
+ <li style="display:inline;"><a href="https://datasystemsgrouput.github.io/SPARKSQLRDFBenchmarking/MultiDimensionalRankingCriteria.html"  style="padding: 0px 20px; word-wrap: normal; display: inline-block;   font: bold 11px Arial;  background-color: #EEEEEE;  border-top: 1px solid #CCCCCC;  border-right: 1px solid #333333;  border-bottom: 1px solid #333333;  border-left: 1px solid #CCCCCC;">Combined Ranking Criteria</a></li>
 </ul>
   
 
