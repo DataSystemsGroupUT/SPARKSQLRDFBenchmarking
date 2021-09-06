@@ -15,17 +15,14 @@ The single-diemsnional ranking criteria give better explaininations than descrip
 
 In our experiments, we adopt the standard Pareto front optimization techniques to consider all the experimental dimension altogether. The Pareto front framework conducts
 the MO optimization over several dimensions in order to find the best possible parameter configurations for the learning outcome of the highest performance. In particular, we utilized the Non-dominated Sorting Genetic Algorithm (NSGA-II) as one of the most popular Pareto front algorithms in order to find the best configuration combinations in our complex experimental
-solution space.
-
-* Furthermore, MO optimization techniques can handle any arbitrary number of dimensions and objective functions.
+solution space. Furthermore, MO optimization techniques can handle any arbitrary number of dimensions and objective functions.
 
 
 ### Multi-Dimensional Ranking Criteria in Paractice
 
 In our experiments, we calculate the Pareto fronts for our Bench-Ranking problem in two ways.
 
-The first way, which we call (ParetoQ), applied NSGA-II algorithm considering the rank sets obtained by sorting w.r.t
-each query result individually (see Table IV). The algorithm aims at minimizing the query runtimes globally. 
+The first way, which we call (ParetoQ), applied NSGA-II algorithm considering the rank sets obtained by sorting w.r.t each query result individually (see Table IV). The algorithm aims at minimizing the query runtimes globally. 
 
 The second way, called (ParetoAgg.), operates on the single-dimensional ranking criteria, i.e., Rs, Rp, and Rf . In this case, the algorithm aims at maximizing the performance of the three ranks altogether. Notably, for both implementations of the algorithm, the search space is given in the form of configurations’ query runtimes (configurations query positions, see Table IV), or in configurations’ rank scores (Rs, Rf , Rp) in the aggregated form of Pareto, instead of generating a search space.
 
