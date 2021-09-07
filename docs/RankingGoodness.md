@@ -100,10 +100,9 @@ For instance, let's consider the **R_s** rank and the **100M** dataset evaluatio
 
 
 
-To get a visualized intuition behind the conformance, The following figure shows the level of conformance of the top-ranked three configurations. 
+To get a visualized intuition behind the conformance, The following figure shows the level of conformance of the top-ranked three configurations for the single-dimensional as well as pareto ranking criteria. 
 
 <img src="images/conformancechart.png" alt="conformance" >
-
 
 
 **Example on one of the datsets (100M):**
@@ -456,8 +455,11 @@ The following table shows the conformance of each ranking criterion **top-3** co
 
 All the selected ranking criteria perform very well for all the datasets. However, the single-dimensional criteria Rf , Rp, and Rs have lower conformance than the one based on Pareto. For instance, in the 100M, 250M, and 500M datasets, ParetoAgg. has a conformance of 79%, 100%, and 82%, respectively. The same pattern repeats with the ParetoQ version (with 85%,
 100%, and 97%, respectively). In contrast, single-dimensional ranking criteria have relatively lower conformance of 58%, 82%, and 70% for Rf , 61%, 70%, and 58% for Rp, and 70%,
-79%, and 79% for Rs, accordingly. The main reason behind these results is that single-dimensional criteria do not consider trade-offs across experimental dimensions, ultimately selecting the configuration that may under-perform in some queries. Meanwhile, Pareto-based ranking considers those trade-offs while optimizing all the dimensions simultaneously.
+79%, and 79% for Rs, accordingly. 
 
+The Conformance Figure shown above also depicts the level of conformance in green color, for the top-3 ranked configuration combinations. We can see that the level of conformance in the pareto raking criteria (multi-dimensional) is higher than the Rf, Rp, Rs single-dimensinal ranking criteria.  
+
+The main reason behind these results is that single-dimensional criteria do not consider trade-offs across experimental dimensions, ultimately selecting the configuration that may under-perform in some queries. Meanwhile, Pareto-based ranking considers those trade-offs while optimizing all the dimensions simultaneously.
 
 
 <h4 id="coherence">  2- The Coherence Measure: </h4>
@@ -490,9 +492,11 @@ Please note the swaps of colors, it starts as blue, red, blue,..., however with 
     <th class="tg-rvyq">R_f</th>
     <th class="tg-rvyq">R_s</th>
     <th class="tg-rvyq">R_p</th>
-    <th class="tg-rvyq">AVG</th>
+    <th class="tg-rvyq">Pareto_Agg</th>
+    <th class="tg-rvyq">Pareto_Q</th>
+<!--     <th class="tg-rvyq">AVG</th>
     <th class="tg-rvyq">WAvg</th>
-    <th class="tg-rvyq">R_ta</th>
+    <th class="tg-rvyq">R_ta</th> -->
   </tr>
 </thead>
 <tbody>
@@ -534,7 +538,7 @@ Please note the swaps of colors, it starts as blue, red, blue,..., however with 
 <ul>
   <li style="display:inline;"><a href="https://datasystemsgrouput.github.io/SPARKSQLRDFBenchmarking/IndividualRankingCriteria.html" style=" margin-right: 50px ;padding: 0px 20px; word-wrap: normal; display: inline-block;   font: bold 11px Arial;  background-color: #EEEEEE;  border-top: 1px solid #CCCCCC;  border-right: 1px solid #333333;  border-bottom: 1px solid #333333;  border-left: 1px solid #CCCCCC;">Single-Dimensional Ranking Criteria</a></li>
   
- <li style="display:inline;"><a href="https://datasystemsgrouput.github.io/SPARKSQLRDFBenchmarking/CombinedRankingCriteria.html"  style="padding: 0px 20px; word-wrap: normal; display: inline-block;   font: bold 11px Arial;  background-color: #EEEEEE;  border-top: 1px solid #CCCCCC;  border-right: 1px solid #333333;  border-bottom: 1px solid #333333;  border-left: 1px solid #CCCCCC;">Combined Ranking Criteria</a></li>
+ <li style="display:inline;"><a href="https://datasystemsgrouput.github.io/SPARKSQLRDFBenchmarking/MultiDimensionalRankingCriteria.html"  style="padding: 0px 20px; word-wrap: normal; display: inline-block;   font: bold 11px Arial;  background-color: #EEEEEE;  border-top: 1px solid #CCCCCC;  border-right: 1px solid #333333;  border-bottom: 1px solid #333333;  border-left: 1px solid #CCCCCC;">Multi-Dim. Ranking Criteria</a></li>
 </ul>
   
 
