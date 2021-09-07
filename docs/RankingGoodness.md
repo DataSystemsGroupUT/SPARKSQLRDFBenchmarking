@@ -723,13 +723,13 @@ Table below shows the "confidence" ratios calcuated for all the ranking criteria
 The following table shows the conformance of each ranking criterion **top-3** configurations not being worse than the worst the 17 ranked configurations (i.e., better than the 17 ones, half of the distri-bution) according to the queries’ ranked sets.
 
 
-|            | 100M | 250M  | 500M |
+|Ranking Criterion  | 100M | 250M  | 500M |
 |------------|------|-------|------|
-| R_f        | 58\% |  82\% | 70\% |
-| R_p        | 61\% |  70\% | 58\% |
-| R_s        | 70\% |  79\% | 79\% |
-| Pareto_Agg | 79\% | 100\% | 82\% |
-| Pareto_{Q} | 85\% | 100\% | 97\% |
+| R_f        | 58% |  82% | 70% |
+| R_p        | 61% |  70% | 58% |
+| R_s        | 70% |  79% | 79% |
+| Pareto_Agg | 79% | 100% | 82% |
+| Pareto_{Q} | 85% | 100% | 97% |
 
 
 All the selected ranking criteria perform very well for all the datasets. However, the single-dimensional criteria Rf , Rp, and Rs have lower conformance than the one based on Pareto. For instance, in the 100M, 250M, and 500M datasets, ParetoAgg. has a conformance of 79%, 100%, and 82%, respectively. The same pattern repeats with the ParetoQ version (with 85%,
