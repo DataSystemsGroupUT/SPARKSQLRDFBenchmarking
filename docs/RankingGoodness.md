@@ -23,8 +23,12 @@ A ranking criterion aims at identifying the configurations that have the overall
 This problem is well-known in **Information Retrieval** (IR) applications, where several metrics, e.g., *Precision* and *Recall*, are used to validate the ranking. Nevertheless, the main difference between *IR* and bench-ranking is the lack of ground truth. The most reasonable solution is to employ multiple ranking criteria and compare the prescriptions with the actual experimental results. 
 However, this approach falls back to the problem relates to **ranking consensus**. Ranking consensus is different from combined ranking. The former is related to choosing between two preference sets, and the latter is about designing a ranking metric that considers multiple dimensions.
 
+
 ##### Def1: Rank Set
 A rank set **R** is an ordered set of elements ordered by a ranking score. A rank index **ri** is the index of a ranked element **i** within a ranking set R , i.e., R|r_i|=i. We denote with **R^k** the left most subset of R of length **k**, and we denote with **R_x** the rank set calculated according to the Rank score **R_x**. 
+
+
+
 
 
 <h3 id="goodcri"> Goodness Criteria: </h3>
@@ -431,6 +435,17 @@ Table below shows the "confidence" ratios calcuated for all the ranking criteria
 </table>
 
 
+
+**Note that:** the above results show the conformance for the configurations considering the Hive backend as a 5th stroage backend. However, for consistency we ommitted Hive from the calculations and kept only the HDFS file formats (CSV, Avro, ORC, and Parquet). Thus, we have new calculations and the configurations become 36 instead of 45 (i.e., by excluding configurations that include Hive as a storage backend).
+
+
+The following table shows the conformance of each ranking criterion **top-3** configurations not being worse than the worst the 17 ranked configurations (i.e., better than the 17 ones, half of the distri-bution) according to the queries’ ranked sets.
+
+
+
+
+
+
 <h4 id="coherence">  2- The Coherence Measure: </h4>
 To measure the coherence of each ranking criterion, we opt for **Kendall index**, which counts the number of pairwise disagreements between two rank sets: the larger the distance, the more dissimilar the rank sets are. Notably, we assume that rank sets have the same number of elements. Kendall’s distance between two rank sets R_1 and R_2, where P represent the set of unique pairs of distinct elements in the two sets can be calculated using the following equation:
 
@@ -445,11 +460,13 @@ Table below shows the **K** index as per Equation (2) in this page. All the crit
 
 
 
-To give the intuituion behind the coherence metric by showing the top-10 ranked configuration for the same ranking criterion(R_p) (i.e., <img src="https://latex.codecogs.com/gif.latex?R^{10} " /> R10)
+To give the intuituion behind the coherence metric by showing the top-10 ranked configuration for the same ranking criterion(R_p) (i.e., <img src="https://latex.codecogs.com/gif.latex?R^{10} " />)
 and across three different data scales. We can see examples of pairwise disagreements that occur by scaling from 100M to 250M, and also from 100M to the 500M dataset. For instance, in (100M -to-250M ), b.ii.3 was at the 10th rank in 100M, while being swapped to be at the 1st position in the 250M, and the 1st ranked configuration (a.ii.3) in the 100M swapped to be at the 8th rank in the 250M. Similar kind of disagreements are shown in the (100M-to-500M) scale-up transition.
 
 
 <img src="images/coherence.jpeg" alt="coherence" >
+
+Please note the swaps of colors, it starts as blue, red, blue,..., however with moving to larger data scales, color disagreements already occur there with the mentioned swaps.
 
 
 <table class="tg">

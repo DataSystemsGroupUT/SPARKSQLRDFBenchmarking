@@ -24,6 +24,7 @@ The proposed ranking criteria provide an accurate yet simple way that supports t
   <li><a href="#motivating"> Motivating Example</a></li>
   <li><a href="#criteria"> Bench-Ranking Criteria</a></li>
       <ul>
+         <li><a href="#defs"> Prelimenary Definitions </a></li>
         <li><a href="#criteria">Single-Dimensional Ranking Criteria</a></li>
         <li><a href="#criteria">Multi-Dimensional Ranking Criteria</a></li>
         <li><a href="#goodness">Measuring Ranking Goodness</a></li>
@@ -90,6 +91,42 @@ The experiment results over different settings also show no decisive configurati
 <h3 id="criteria"> Bench-Ranking Criteria </h3>
 
 Motivated by the limitations of descriptive and diagnostic analyses, we advocate for indicators such as applying **ranking** techniques for these dimensions.
+
+
+<h3 id="defs"> Prelimenary Definitions: </h3>
+
+
+
+Definition 1 (**Ranking Score**): The ranking score **R** is a numerical value that represents the performance of an element in a set. Given two elements **i** and **j**, and **Ri**, **Rj** their ranking score, we say that **i** has a higher rank than **j** (i.e., **i** outperforms **j**) iff **Ri> Rj**.
+
+For isntance, we  will  use  a  simple  running  example,  based  on our  motivating  scenario,  i.e.,  we  consider  a  set  of  three configurations [a.i.1,b.ii.2,c.iii.3],  and  a  query (Q1) of  the SP2B benchmark.  A valid ranking score can be the time required for  execution Q1 by  each  of  the  selected  configurations  (in milliseconds)  are  equal  to 30, 50,  and 40,  respectively.  The association  with  each  configuration  with  its  ranking  score happens according to the query evaluation (runtimes). We can generalize this by introducing the notion of**ranking function**.
+
+
+Definition 2 (**ranking function**): Let **E** is the input list of elements to be ranked, the ranking function **fR** is a function **E→ R** that associatesa ranking score to every element in **E** .
+
+ 
+Considering the ranking scores above, the configuration set E can  be  sorted  to  produce  the  sorted  set R=[a.i.1,  c.iii.3,b.ii.2].  Intuitively,  the  lower  the  execution  time,  the  better. More formally, we denote R as a **rank set**.
+
+Definition  3 (**Rank Set**) :A rank  set R is  an  ordered  set  of  element sordered by a ranking score. The rank index **ri** is the index of a ranked elementiwithin a ranking setR, i.e., R[ri]=i. Wed enote with <img src="https://latex.codecogs.com/gif.latex?R^{k} " />  the left most (top-ranked) subset of R of length k,  and  we  denote  with Rx the  rank  set  calculated  accordingto the Rank score Rx.
+
+
+** Example:
+
+The below table shows an example the actual query ranks  of  the configurations  according  to  query  runtimes for the 100M dataset,  e.g., **a.i.1** is  at the **29th** rank for running **Q1**.
+
+
+| Conf.   | Q1   | Q2   | ... | Q10  | Q11  |
+|---------|------|------|-----|------|------|
+|  a.i.1  | 29th | 28th | ... | 19th | 25th |
+|  a.i.2  | 33th | 36th | ... | 30th | 32th |
+|   ...   |  ... |  ... | ... |  ... |  ... |
+| b.iii.4 | 11th | 35th | ... |  5th |  8th |
+|   ...   |  ... |  ... | ... |  ... |  ... |
+| c.iii.4 | 36th | 33th | ... | 36th | 36th |
+
+
+
+
 
 #### Proposed Ranking Criteria
 * [Single-Dimensional Ranking Criteria](IndividualRankingCriteria.md) 
