@@ -94,6 +94,17 @@ We used the same approach to load the data into the tables of the Apache Hive da
 -----
 The SP2Bench Benchmark is scalable benchmark, whichj means it comprise a data generator that enables generatring arbitrarly large RDF datasets. For our First Phase of this project (Centralized Experiments), we generated datasets with the sizes [100K, 1M, and 10M] triples. While, for the second phase (Distributed experiments), we scale up to larger datasets with the sizes [100M, 250M, and 500M] triples.
 
+
+
+|      | ST   |      |       |         | VP     |        |        |         | PT     |       |       |         |
+|------|------|------|-------|---------|--------|--------|--------|---------|--------|-------|-------|---------|
+|      | CSV  | Avro | ORC   | Parquet | CSV    | Avro   | ORC    | Parquet | CSV    | Avro  | ORC   | Parquet |
+| 100M | 13GB | ~2GB | 1.3GB | 1.7GB   | ~8.3GB | ~1.7GB | ~1.5GB | ~1.6GB  | ~6.8GB | 1.6GB | 1.4GB | 1.4GB   |
+| 250M | 31GB | ~5GB | 3.2GB | ~4GB    | 21GB   | ~4.2GB | ~3.8GB | 4GB     | 36GB   | 6.2GB | 5.5GB | 5.8GB   |
+| 500M | 60GB | 11GB | 6.3GB | ~8GB    | 41GB   | 8.3GB  | 7.3GB  | 7.8GB   | 33GB   | 7.5GB | 6.5GB | 7GB     |
+
+
+
 - For **reproducability**, We put here **100K** triples dataset alongside their relational schema conversions in different file formats. you can find these datasets [here](https://github.com/DataSystemsGroupUT/SPARKSQLRDFBenchmarking/tree/master/Datasets).
 
 - We couldn't upload the **100M** datsets. Indeed it's quite larg dataset with for all the schema (ST,VT, PT, WPT, ExtVP,..) and for all the storage file formats.  
