@@ -30,16 +30,9 @@ The second way, called (ParetoAgg.), operates on the single-dimensional ranking 
 
 The following table shows the Pareto fronts for both approaches, i.e., non-dominated solutions, which correspond to the overall optimal configurations for the 100M, 250M, and 500M triples datasets.
 
- |**ST**| | | |**VP**| | | |**PT**| | | 
-:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:
- |CSV|Avro|ORC|Parquet|CSV|Avro|ORC|Parquet|CSV|Avro|ORC|Parquet
-100M|13GB|~2GB|1.3GB|1.7GB|~8.3GB|~1.7GB|~1.5GB|~1.6GB|~6.8GB|1.6GB|1.4GB|1.4GB
-250M|31GB|~5GB|3.2GB|~4GB|21GB|~4.2GB|~3.8GB|4GB|36GB|6.2GB|5.5GB|5.8GB
-500M|60GB|11GB|6.3GB|~8GB|41GB|8.3GB|7.3GB|7.8GB|33GB|7.5GB|6.5GB|7GB
 
 
-
-|            |  500M  |        |         |         |         |         |        |         |        |        |        |       |         |       |        |         |
+|        500M    |    |        |         |         |         |         |        |         |        |        |        |       |         |       |        |         |
 |------------|:------:|:------:|:-------:|:-------:|:-------:|:-------:|:------:|:-------:|:------:|:------:|:------:|:-----:|:-------:|:-----:|:------:|:-------:|
 | Pareto_Agg | c.ii.4 | b.ii.4 | b.iii.1 | b.iii.3 | b.iii.4 | b.ii.3  | a.ii.3 | a.iii.3 | b.i.4  | -      | -      | -     | -       | -     | -      | -       |
 | Pareto_Q   | b.ii.3 | b.ii.4 | b.iii.3 | b.iii.4 | b.i.3   | b.iii.1 | b.i.4  | b.ii.1  | c.ii.4 | c.ii.3 | a.ii.3 | c.i.3 | a.iii.3 | c.i.2 | c.ii.2 | c.iii.4 |
