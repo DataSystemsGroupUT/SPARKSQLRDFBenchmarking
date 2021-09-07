@@ -449,7 +449,7 @@ To give the intuituion behind the coherence metric by showing the top-10 ranked 
 and across three different data scales. We can see examples of pairwise disagreements that occur by scaling from 100M to 250M, and also from 100M to the 500M dataset. For instance, in (100M -to-250M ), b.ii.3 was at the 10th rank in 100M, while being swapped to be at the 1st position in the 250M, and the 1st ranked configuration (a.ii.3) in the 100M swapped to be at the 8th rank in the 250M. Similar kind of disagreements are shown in the (100M-to-500M) scale-up transition.
 
 
-<img src="images/coherence.png" alt="coherence" >
+<img src="images/coherence.jpeg" alt="coherence" >
 
 
 <table class="tg">
