@@ -28,7 +28,13 @@ The second way, called (ParetoAgg.), operates on the single-dimensional ranking 
 
 ### Pareto Results
 
-Table VII shows the Pareto fronts for both approaches, i.e., non-dominated solutions, which correspond to the overall optimal configurations for the 100M, 250M, and 500M triples datasets.
+The following table shows the Pareto fronts for both approaches, i.e., non-dominated solutions, which correspond to the overall optimal configurations for the 100M, 250M, and 500M triples datasets.
+
+
+|            |  500M  |        |         |         |         |         |        |         |        |        |        |       |         |       |        |         |
+|------------|:------:|:------:|:-------:|:-------:|:-------:|:-------:|:------:|:-------:|:------:|:------:|:------:|:-----:|:-------:|:-----:|:------:|:-------:|
+| Pareto_Agg | c.ii.4 | b.ii.4 | b.iii.1 | b.iii.3 | b.iii.4 | b.ii.3  | a.ii.3 | a.iii.3 | b.i.4  | -      | -      | -     | -       | -     | -      | -       |
+| Pareto_Q   | b.ii.3 | b.ii.4 | b.iii.3 | b.iii.4 | b.i.3   | b.iii.1 | b.i.4  | b.ii.1  | c.ii.4 | c.ii.3 | a.ii.3 | c.i.3 | a.iii.3 | c.i.2 | c.ii.2 | c.iii.4 |
 
 
 
