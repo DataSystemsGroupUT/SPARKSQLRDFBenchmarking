@@ -28,9 +28,6 @@ However, this approach falls back to the problem relates to **ranking consensus*
 A rank set **R** is an ordered set of elements ordered by a ranking score. A rank index **ri** is the index of a ranked element **i** within a ranking set R , i.e., R|r_i|=i. We denote with **R^k** the left most subset of R of length **k**, and we denote with **R_x** the rank set calculated according to the Rank score **R_x**. 
 
 
-
-
-
 <h3 id="goodcri"> Goodness Criteria: </h3>
 In this regards, **Bench-ranking** proposes to measure the following:
 
@@ -47,7 +44,7 @@ To measure the **confidence**, we propose the following approach described by th
 Given the **top-k** subset of the ranking set R we count how many times its elements occur in the bottom-h subset of the ranking set Q_h(i), which corresponds to the ranking set obtained by using the execution time of query **Q_i** as ranking criterion, for each query. In other words, we look at the rank of the top-ranked configurations (by a ranking criteria R), and make sure by the above formula that they are not in the bottm-h query positions/ranked configurations. This is computed for all queries in the benchmark. the intuition is the ranking top ranked configuration shouldn't appear as worst performing for the queries.
 
 
-**Table of best 3 configuration ranked by the criteria Rf,Rp, and Rs (individual criteria), across our experimental datasets**
+**Table of best 3 configuration ranked by the criteria Rf,Rp, and Rs (single-dimensional criteria), across our experimental datasets**
 <table class="tg">
 <thead>
   <tr>
@@ -100,6 +97,12 @@ Given the **top-k** subset of the ranking set R we count how many times its elem
 <h5 id="exampleconfidence"> Examples of the confidence Calculations</h5>
 
 For instance, let's consider the **R_s** rank and the **100M** dataset evaluation. The top-3 ranked configurations (see the table above) are R_s (Top-3)={b.iii.2,b.iii.1, **b.iii.4**}} that overlaps only with the **bottom-3** ranked configurations query Q4, i.e., Q4_(bottom-3)={b.iii.3,b.iii.4,a.iii.2}. Thus, A(R_s [3])=1- (1/(11*3))=0.969.
+
+
+
+To get a visualized intuition behind the conformance, The following figure shows the level of conformance of the top-ranked three configurations. 
+
+<img src="images/conformancechart.png" alt="conformance" >
 
 
 
@@ -529,7 +532,7 @@ Please note the swaps of colors, it starts as blue, red, blue,..., however with 
 
 
 <ul>
-  <li style="display:inline;"><a href="https://datasystemsgrouput.github.io/SPARKSQLRDFBenchmarking/IndividualRankingCriteria.html" style=" margin-right: 50px ;padding: 0px 20px; word-wrap: normal; display: inline-block;   font: bold 11px Arial;  background-color: #EEEEEE;  border-top: 1px solid #CCCCCC;  border-right: 1px solid #333333;  border-bottom: 1px solid #333333;  border-left: 1px solid #CCCCCC;">Individual Ranking Criteria</a></li>
+  <li style="display:inline;"><a href="https://datasystemsgrouput.github.io/SPARKSQLRDFBenchmarking/IndividualRankingCriteria.html" style=" margin-right: 50px ;padding: 0px 20px; word-wrap: normal; display: inline-block;   font: bold 11px Arial;  background-color: #EEEEEE;  border-top: 1px solid #CCCCCC;  border-right: 1px solid #333333;  border-bottom: 1px solid #333333;  border-left: 1px solid #CCCCCC;">Single-Dimensional Ranking Criteria</a></li>
   
  <li style="display:inline;"><a href="https://datasystemsgrouput.github.io/SPARKSQLRDFBenchmarking/CombinedRankingCriteria.html"  style="padding: 0px 20px; word-wrap: normal; display: inline-block;   font: bold 11px Arial;  background-color: #EEEEEE;  border-top: 1px solid #CCCCCC;  border-right: 1px solid #333333;  border-bottom: 1px solid #333333;  border-left: 1px solid #CCCCCC;">Combined Ranking Criteria</a></li>
 </ul>
