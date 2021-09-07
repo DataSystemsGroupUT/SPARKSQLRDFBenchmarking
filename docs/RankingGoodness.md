@@ -111,7 +111,7 @@ Table below shows the "confidence" ratios calcuated for all the ranking criteria
 
 
 
-<table class="tg">
+<!-- <table class="tg">
 <thead>
   <tr>
     <th class="tg-7btt" colspan="12">Confidence of each Ranking Criteria</th>
@@ -434,7 +434,286 @@ Table below shows the "confidence" ratios calcuated for all the ranking criteria
     <td class="tg-c3ow"><span style="font-weight:normal;color:#000;background-color:#FFF">2</span></td>
   </tr>
 </tbody>
+</table> -->
+
+
+
+<table class="tg">
+<thead>
+  <tr>
+    <th class="tg-7btt" colspan="12">Confidence of each Ranking Criteria</th>
+    <th class="tg-fymr" rowspan="3">rank &gt; 17</th>
+    <th class="tg-fymr" rowspan="3">A(R)</th>
+  </tr>
+  <tr>
+    <td class="tg-fymr">100M</td>
+    <td class="tg-fymr"><span style="font-weight:bold;background-color:#FFF">Q1</span></td>
+    <td class="tg-fymr"><span style="font-weight:bold;color:#000;background-color:#FFF">Q2</span></td>
+    <td class="tg-fymr"><span style="font-weight:bold;color:#000;background-color:#FFF">Q3</span></td>
+    <td class="tg-fymr"><span style="font-weight:bold;background-color:#FFF">Q4</span></td>
+    <td class="tg-fymr"><span style="font-weight:bold;background-color:#FFF">Q5</span></td>
+    <td class="tg-fymr"><span style="font-weight:bold;background-color:#FFF">Q6</span></td>
+    <td class="tg-fymr"><span style="font-weight:bold;background-color:#FFF">Q7</span></td>
+    <td class="tg-fymr"><span style="font-weight:bold;background-color:#FFF">Q8</span></td>
+    <td class="tg-fymr"><span style="font-weight:bold;background-color:#FFF">Q9</span></td>
+    <td class="tg-fymr"><span style="font-weight:bold;background-color:#FFF">Q10</span></td>
+    <td class="tg-fymr"><span style="font-weight:bold;background-color:#FFF">Q11</span></td>
+  </tr>
+  <tr>
+    <td class="tg-rvyq" colspan="12"><span style="background-color:#6D9EEB">Rf</span></td>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-f8tv">a.iii.3</td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">29</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">20</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">32</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">26</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">27</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">30</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">18</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">41</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">20</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">22</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">11</span></td>
+    <td class="tg-c3ow"><span style="font-weight:normal;color:#000;background-color:#FFF">6</span></td>
+    <td class="tg-c3ow" rowspan="3"><span style="font-weight:400;font-style:normal">0.64</span></td>
+  </tr>
+  <tr>
+    <td class="tg-f8tv">a.ii.3</td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">26</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">14</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">18</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">1</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">17</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">25</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">17</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">17</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">5</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">9</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">16</span></td>
+    <td class="tg-c3ow"><span style="font-weight:normal;color:#000;background-color:#FFF">2</span></td>
+  </tr>
+  <tr>
+    <td class="tg-f8tv"><span style="background-color:#FFF">c.ii.3</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">15</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">15</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">1</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">9</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">5</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">1</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">31</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">3</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">31</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">27</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">26</span></td>
+    <td class="tg-c3ow"><span style="font-weight:normal;color:#000;background-color:#FFF">4</span></td>
+  </tr>
+  <tr>
+    <td class="tg-8bgf" colspan="12"><span style="font-weight:bold;background-color:#6D9EEB">Rp</span></td>
+    <td class="tg-c3ow" colspan="2"></td>
+  </tr>
+  <tr>
+    <td class="tg-f8tv">a.ii.3</td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">26</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">14</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">18</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">1</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">17</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">25</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">17</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">17</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">5</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">9</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">16</span></td>
+    <td class="tg-c3ow"><span style="font-weight:normal;color:#000;background-color:#FFF">2</span></td>
+    <td class="tg-c3ow" rowspan="3">0.61</td>
+  </tr>
+  <tr>
+    <td class="tg-f8tv">a.ii.5</td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">27</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">24</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">26</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">2</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">13</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">27</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">16</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">24</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">7</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">14</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">19</span></td>
+    <td class="tg-c3ow"><span style="font-weight:normal;color:#000;background-color:#FFF">5</span></td>
+  </tr>
+  <tr>
+    <td class="tg-f8tv">a.ii.4</td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">23</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">23</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">24</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">4</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">24</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">26</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">19</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">23</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">8</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">13</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">21</span></td>
+    <td class="tg-c3ow"><span style="font-weight:normal;color:#000;background-color:#FFF">6</span></td>
+  </tr>
+  <tr>
+    <td class="tg-8bgf" colspan="12"><span style="font-weight:bold;background-color:#6D9EEB">Rs</span></td>
+    <td class="tg-c3ow" colspan="2"></td>
+  </tr>
+  <tr>
+    <td class="tg-f8tv">b.iii.2</td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">5</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">22</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">29</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">32</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">18</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">19</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">11</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">19</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">25</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">17</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">15</span></td>
+    <td class="tg-c3ow"><span style="font-weight:normal;color:#000;background-color:#FFF">3</span></td>
+    <td class="tg-c3ow" rowspan="3">0.73</td>
+  </tr>
+  <tr>
+    <td class="tg-f8tv">b.iii.1</td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">18</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">17</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">17</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">41</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">9</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">18</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">12</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">30</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">14</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">12</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">9</span></td>
+    <td class="tg-c3ow"><span style="font-weight:normal;color:#000;background-color:#FFF">2</span></td>
+  </tr>
+  <tr>
+    <td class="tg-f8tv">b.iii.4</td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">12</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">6</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">23</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">44</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">23</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">22</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">14</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">36</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">4</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">7</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">10</span></td>
+    <td class="tg-c3ow"><span style="font-weight:normal;color:#000;background-color:#FFF">4</span></td>
+  </tr>
+  <tr>
+    <td class="tg-8bgf" colspan="12"><span style="font-weight:bold;background-color:#6D9EEB">Pareto_agg</span></td>
+    <td class="tg-c3ow" colspan="2"></td>
+  </tr>
+  <tr>
+    <td class="tg-f8tv"><span style="background-color:#FFF">b.ii.4</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">9</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">10</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">12</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">27</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">2</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">7</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">6</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">18</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">1</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">8</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">2</span></td>
+    <td class="tg-c3ow"><span style="font-weight:normal;color:#000;background-color:#FFF">1</span></td>
+    <td class="tg-c3ow" rowspan="3">0.88</td>
+  </tr>
+  <tr>
+    <td class="tg-f8tv">a.ii.3</td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">26</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">14</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">18</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">1</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">17</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">25</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">17</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">17</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">5</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">9</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">16</span></td>
+    <td class="tg-c3ow"><span style="font-weight:normal;color:#000;background-color:#FFF">2</span></td>
+  </tr>
+  <tr>
+    <td class="tg-f8tv">b.ii.5</td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">16</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">2</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">10</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">28</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">14</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">14</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">7</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">16</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">2</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">6</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">4</span></td>
+    <td class="tg-c3ow"><span style="font-weight:normal;color:#000;background-color:#FFF">1</span></td>
+  </tr>
+  <tr>
+    <td class="tg-8bgf" colspan="12"><span style="font-weight:bold;background-color:#6D9EEB">Pareto_Q</span></td>
+    <td class="tg-c3ow" colspan="2"></td>
+  </tr>
+  <tr>
+    <td class="tg-f8tv">a.ii.3</td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">26</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">14</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">18</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">1</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">17</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">25</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">17</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">17</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">5</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">9</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">16</span></td>
+    <td class="tg-c3ow"><span style="font-weight:normal;color:#000;background-color:#FFF">2</span></td>
+    <td class="tg-c3ow" rowspan="3">0.79</td>
+  </tr>
+  <tr>
+    <td class="tg-f8tv">b.ii.4</td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">9</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">10</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">12</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">27</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">2</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">7</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">6</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">18</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">1</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">8</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">2</span></td>
+    <td class="tg-c3ow"><span style="font-weight:normal;color:#000;background-color:#FFF">1</span></td>
+  </tr>
+  <tr>
+    <td class="tg-f8tv"><span style="background-color:#FFF">c.ii.3</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">15</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">15</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">1</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">9</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">5</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">1</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">31</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">3</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">31</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">27</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">26</span></td>
+    <td class="tg-c3ow"><span style="font-weight:normal;color:#000;background-color:#FFF">4</span></td>
+  </tr>
+  
+</tbody>
 </table>
+
 
 
 
@@ -577,8 +856,7 @@ Please note the swaps of colors, it starts as blue, red, blue,..., however with 
 </table>
 
 
-The above table shows the results where the reading key is the lower, the better( i.e., high Kendall’s index means high disagreement across rank set).
-All the ranking criteria show high coherence across different scales of the datasets. Indeed, scaling the datasets does not excessively impact the rank sets’ order in all the ranking
+The above table shows the results where the reading key is the lower, the better( i.e., high Kendall’s index means high disagreement across rank set). All the ranking criteria show high coherence across different scales of the datasets. Indeed, scaling the datasets does not excessively impact the rank sets’ order in all the ranking
 criteria.
 
 
