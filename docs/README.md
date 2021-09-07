@@ -96,7 +96,7 @@ The SP2Bench Benchmark is scalable benchmark, whichj means it comprise a data ge
 
 
 
-|      | ST   |      |       |         | VP     |        |        |         | PT     |       |       |         |
+|      | ST                            | VP                                 | PT                               |
 |------|------|------|-------|---------|--------|--------|--------|---------|--------|-------|-------|---------|
 |      | CSV  | Avro | ORC   | Parquet | CSV    | Avro   | ORC    | Parquet | CSV    | Avro  | ORC   | Parquet |
 | 100M | 13GB | ~2GB | 1.3GB | 1.7GB   | ~8.3GB | ~1.7GB | ~1.5GB | ~1.6GB  | ~6.8GB | 1.6GB | 1.4GB | 1.4GB   |
