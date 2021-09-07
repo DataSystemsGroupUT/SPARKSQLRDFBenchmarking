@@ -441,7 +441,7 @@ Table below shows the "confidence" ratios calcuated for all the ranking criteria
 <table class="tg">
 <thead>
   <tr>
-    <th class="tg-7btt" colspan="12">Confidence of each Ranking Criteria</th>
+    <th class="tg-7btt" colspan="12">Conformance of each Ranking Criteria</th>
     <th class="tg-fymr" rowspan="3">rank &gt; 17</th>
     <th class="tg-fymr" rowspan="3">A(R)</th>
   </tr>
@@ -466,48 +466,48 @@ Table below shows the "confidence" ratios calcuated for all the ranking criteria
 <tbody>
   <tr>
     <td class="tg-f8tv">a.iii.3</td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">29</span></td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">20</span></td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">32</span></td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">26</span></td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">27</span></td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">30</span></td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">18</span></td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">41</span></td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">20</span></td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">22</span></td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">11</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">24</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">17</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">25</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">21</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">21</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">23</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">14</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">33</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">16</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">17</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">9</span></td>
     <td class="tg-c3ow"><span style="font-weight:normal;color:#000;background-color:#FFF">6</span></td>
     <td class="tg-c3ow" rowspan="3"><span style="font-weight:400;font-style:normal">0.64</span></td>
   </tr>
   <tr>
     <td class="tg-f8tv">a.ii.3</td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">26</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">22</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">11</span></td>
     <td class="tg-c6of"><span style="font-weight:normal;color:#000">14</span></td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">18</span></td>
     <td class="tg-c6of"><span style="font-weight:normal;color:#000">1</span></td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">17</span></td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">25</span></td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">17</span></td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">17</span></td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">5</span></td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">9</span></td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">16</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">13</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">20</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">13</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">13</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">4</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">7</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">14</span></td>
     <td class="tg-c3ow"><span style="font-weight:normal;color:#000;background-color:#FFF">2</span></td>
   </tr>
   <tr>
     <td class="tg-f8tv"><span style="background-color:#FFF">a.i.3</span></td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">15</span></td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">15</span></td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">1</span></td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">9</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">23</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">25</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">21</span></td>
     <td class="tg-c6of"><span style="font-weight:normal;color:#000">5</span></td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">1</span></td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">31</span></td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">3</span></td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">31</span></td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">27</span></td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">26</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">19</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">24</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">16</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">20</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">8</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">12</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">15</span></td>
     <td class="tg-c3ow"><span style="font-weight:normal;color:#000;background-color:#FFF">4</span></td>
   </tr>
   <tr>
@@ -516,48 +516,48 @@ Table below shows the "confidence" ratios calcuated for all the ranking criteria
   </tr>
   <tr>
     <td class="tg-f8tv">a.ii.3</td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">26</span></td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">14</span></td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">18</span></td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">1</span></td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">17</span></td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">25</span></td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">17</span></td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">17</span></td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">5</span></td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">9</span></td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">16</span></td>
+<td class="tg-c6of"><span style="font-weight:normal;color:#000">22</span></td>
+<td class="tg-c6of"><span style="font-weight:normal;color:#000">11</span></td>
+<td class="tg-c6of"><span style="font-weight:normal;color:#000">14</span></td>
+<td class="tg-c6of"><span style="font-weight:normal;color:#000">1</span></td>
+<td class="tg-c6of"><span style="font-weight:normal;color:#000">13</span></td>
+<td class="tg-c6of"><span style="font-weight:normal;color:#000">20</span></td>
+<td class="tg-c6of"><span style="font-weight:normal;color:#000">13</span></td>
+<td class="tg-c6of"><span style="font-weight:normal;color:#000">13</span></td>
+<td class="tg-c6of"><span style="font-weight:normal;color:#000">4</span></td>
+<td class="tg-c6of"><span style="font-weight:normal;color:#000">7</span></td>
+<td class="tg-c6of"><span style="font-weight:normal;color:#000">14</span></td>
     <td class="tg-c3ow"><span style="font-weight:normal;color:#000;background-color:#FFF">2</span></td>
     <td class="tg-c3ow" rowspan="3">0.61</td>
   </tr>
   <tr>
     <td class="tg-f8tv">a.ii.4</td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">27</span></td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">24</span></td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">26</span></td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">2</span></td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">13</span></td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">27</span></td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">16</span></td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">24</span></td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">7</span></td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">14</span></td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">19</span></td>
+<td class="tg-c6of"><span style="font-weight:normal;color:#000">19</span></td>
+<td class="tg-c6of"><span style="font-weight:normal;color:#000">20</span></td>
+<td class="tg-c6of"><span style="font-weight:normal;color:#000">20</span></td>
+<td class="tg-c6of"><span style="font-weight:normal;color:#000">2</span></td>
+<td class="tg-c6of"><span style="font-weight:normal;color:#000">18</span></td>
+<td class="tg-c6of"><span style="font-weight:normal;color:#000">21</span></td>
+<td class="tg-c6of"><span style="font-weight:normal;color:#000">15</span></td>
+<td class="tg-c6of"><span style="font-weight:normal;color:#000">18</span></td>
+<td class="tg-c6of"><span style="font-weight:normal;color:#000">6</span></td>
+<td class="tg-c6of"><span style="font-weight:normal;color:#000">11</span></td>
+<td class="tg-c6of"><span style="font-weight:normal;color:#000">17</span></td>
     <td class="tg-c3ow"><span style="font-weight:normal;color:#000;background-color:#FFF">5</span></td>
   </tr>
   <tr>
     <td class="tg-f8tv">c.ii.2</td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">23</span></td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">23</span></td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">24</span></td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">4</span></td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">24</span></td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">26</span></td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">19</span></td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">23</span></td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">8</span></td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">13</span></td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">21</span></td>
+<td class="tg-c6of"><span style="font-weight:normal;color:#000">3</span></td>
+<td class="tg-c6of"><span style="font-weight:normal;color:#000">21</span></td>
+<td class="tg-c6of"><span style="font-weight:normal;color:#000">15</span></td>
+<td class="tg-c6of"><span style="font-weight:normal;color:#000">13</span></td>
+<td class="tg-c6of"><span style="font-weight:normal;color:#000">15</span></td>
+<td class="tg-c6of"><span style="font-weight:normal;color:#000">12</span></td>
+<td class="tg-c6of"><span style="font-weight:normal;color:#000">25</span></td>
+<td class="tg-c6of"><span style="font-weight:normal;color:#000">8</span></td>
+<td class="tg-c6of"><span style="font-weight:normal;color:#000">25</span></td>
+<td class="tg-c6of"><span style="font-weight:normal;color:#000">28</span></td>
+<td class="tg-c6of"><span style="font-weight:normal;color:#000">28</span></td>
     <td class="tg-c3ow"><span style="font-weight:normal;color:#000;background-color:#FFF">6</span></td>
   </tr>
   <tr>
@@ -566,48 +566,48 @@ Table below shows the "confidence" ratios calcuated for all the ranking criteria
   </tr>
   <tr>
     <td class="tg-f8tv">b.iii.2</td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">5</span></td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">22</span></td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">29</span></td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">32</span></td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">18</span></td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">19</span></td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">11</span></td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">19</span></td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">25</span></td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">17</span></td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">15</span></td>
+<td class="tg-c6of"><span style="font-weight:normal;color:#000">5</span></td>
+<td class="tg-c6of"><span style="font-weight:normal;color:#000">19</span></td>
+<td class="tg-c6of"><span style="font-weight:normal;color:#000">23</span></td>
+<td class="tg-c6of"><span style="font-weight:normal;color:#000">25</span></td>
+<td class="tg-c6of"><span style="font-weight:normal;color:#000">14</span></td>
+<td class="tg-c6of"><span style="font-weight:normal;color:#000">15</span></td>
+<td class="tg-c6of"><span style="font-weight:normal;color:#000">9</span></td>
+<td class="tg-c6of"><span style="font-weight:normal;color:#000">15</span></td>
+<td class="tg-c6of"><span style="font-weight:normal;color:#000">20</span></td>
+<td class="tg-c6of"><span style="font-weight:normal;color:#000">13</span></td>
+<td class="tg-c6of"><span style="font-weight:normal;color:#000">13</span></td>
     <td class="tg-c3ow"><span style="font-weight:normal;color:#000;background-color:#FFF">3</span></td>
     <td class="tg-c3ow" rowspan="3">0.73</td>
   </tr>
   <tr>
     <td class="tg-f8tv">b.iii.1</td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">18</span></td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">17</span></td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">17</span></td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">41</span></td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">9</span></td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">18</span></td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">12</span></td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">30</span></td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">14</span></td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">12</span></td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">9</span></td>
+<td class="tg-c6of"><span style="font-weight:normal;color:#000">16</span></td>
+<td class="tg-c6of"><span style="font-weight:normal;color:#000">14</span></td>
+<td class="tg-c6of"><span style="font-weight:normal;color:#000">13</span></td>
+<td class="tg-c6of"><span style="font-weight:normal;color:#000">33</span></td>
+<td class="tg-c6of"><span style="font-weight:normal;color:#000">7</span></td>
+<td class="tg-c6of"><span style="font-weight:normal;color:#000">14</span></td>
+<td class="tg-c6of"><span style="font-weight:normal;color:#000">10</span></td>
+<td class="tg-c6of"><span style="font-weight:normal;color:#000">23</span></td>
+<td class="tg-c6of"><span style="font-weight:normal;color:#000">10</span></td>
+<td class="tg-c6of"><span style="font-weight:normal;color:#000">10</span></td>
+<td class="tg-c6of"><span style="font-weight:normal;color:#000">7</span></td>
     <td class="tg-c3ow"><span style="font-weight:normal;color:#000;background-color:#FFF">2</span></td>
   </tr>
   <tr>
     <td class="tg-f8tv">b.iii.4</td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">12</span></td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">6</span></td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">23</span></td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">44</span></td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">23</span></td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">22</span></td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">14</span></td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">36</span></td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">4</span></td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">7</span></td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">10</span></td>
+<td class="tg-c6of"><span style="font-weight:normal;color:#000">11</span></td>
+<td class="tg-c6of"><span style="font-weight:normal;color:#000">4</span></td>
+<td class="tg-c6of"><span style="font-weight:normal;color:#000">19</span></td>
+<td class="tg-c6of"><span style="font-weight:normal;color:#000">35</span></td>
+<td class="tg-c6of"><span style="font-weight:normal;color:#000">17</span></td>
+<td class="tg-c6of"><span style="font-weight:normal;color:#000">18</span></td>
+<td class="tg-c6of"><span style="font-weight:normal;color:#000">11</span></td>
+<td class="tg-c6of"><span style="font-weight:normal;color:#000">29</span></td>
+<td class="tg-c6of"><span style="font-weight:normal;color:#000">3</span></td>
+<td class="tg-c6of"><span style="font-weight:normal;color:#000">5</span></td>
+<td class="tg-c6of"><span style="font-weight:normal;color:#000">8</span></td>
     <td class="tg-c3ow"><span style="font-weight:normal;color:#000;background-color:#FFF">4</span></td>
   </tr>
   <tr>
@@ -615,49 +615,48 @@ Table below shows the "confidence" ratios calcuated for all the ranking criteria
     <td class="tg-c3ow" colspan="2"></td>
   </tr>
   <tr>
-    <td class="tg-f8tv"><span style="background-color:#FFF">b.ii.4</span></td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">9</span></td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">10</span></td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">12</span></td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">27</span></td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">2</span></td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">7</span></td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">6</span></td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">18</span></td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">1</span></td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">8</span></td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">2</span></td>
+<td class="tg-f8tv"><span style="background-color:#FFF">9</span></td>
+<td class="tg-f8tv"><span style="background-color:#FFF">8</span></td>
+<td class="tg-f8tv"><span style="background-color:#FFF">9</span></td>
+<td class="tg-f8tv"><span style="background-color:#FFF">22</span></td>
+<td class="tg-f8tv"><span style="background-color:#FFF">1</span></td>
+<td class="tg-f8tv"><span style="background-color:#FFF">7</span></td>
+<td class="tg-f8tv"><span style="background-color:#FFF">5</span></td>
+<td class="tg-f8tv"><span style="background-color:#FFF">14</span></td>
+<td class="tg-f8tv"><span style="background-color:#FFF">1</span></td>
+<td class="tg-f8tv"><span style="background-color:#FFF">6</span></td>
+<td class="tg-f8tv"><span style="background-color:#FFF">2</span></td>
     <td class="tg-c3ow"><span style="font-weight:normal;color:#000;background-color:#FFF">1</span></td>
     <td class="tg-c3ow" rowspan="3">0.88</td>
   </tr>
   <tr>
     <td class="tg-f8tv">a.ii.3</td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">26</span></td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">14</span></td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">18</span></td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">1</span></td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">17</span></td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">25</span></td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">17</span></td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">17</span></td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">5</span></td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">9</span></td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">16</span></td>
+<td class="tg-f8tv"><span style="background-color:#FFF">22</span></td>
+<td class="tg-f8tv"><span style="background-color:#FFF">11</span></td>
+<td class="tg-f8tv"><span style="background-color:#FFF">14</span></td>
+<td class="tg-f8tv"><span style="background-color:#FFF">1</span></td>
+<td class="tg-f8tv"><span style="background-color:#FFF">13</span></td>
+<td class="tg-f8tv"><span style="background-color:#FFF">20</span></td>
+<td class="tg-f8tv"><span style="background-color:#FFF">13</span></td>
+<td class="tg-f8tv"><span style="background-color:#FFF">13</span></td>
+<td class="tg-f8tv"><span style="background-color:#FFF">4</span></td>
+<td class="tg-f8tv"><span style="background-color:#FFF">7</span></td>
+<td class="tg-f8tv"><span style="background-color:#FFF">14</span></td>
     <td class="tg-c3ow"><span style="font-weight:normal;color:#000;background-color:#FFF">2</span></td>
   </tr>
   <tr>
     <td class="tg-f8tv">c.ii.3</td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">16</span></td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">2</span></td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">10</span></td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">28</span></td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">14</span></td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">14</span></td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">7</span></td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">16</span></td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">2</span></td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">6</span></td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">4</span></td>
+<td class="tg-f8tv"><span style="background-color:#FFF">14</span></td>
+<td class="tg-f8tv"><span style="background-color:#FFF">12</span></td>
+<td class="tg-f8tv"><span style="background-color:#FFF">1</span></td>
+<td class="tg-f8tv"><span style="background-color:#FFF">7</span></td>
+<td class="tg-f8tv"><span style="background-color:#FFF">3</span></td>
+<td class="tg-f8tv"><span style="background-color:#FFF">1</span></td>
+<td class="tg-f8tv"><span style="background-color:#FFF">25</span></td>
+<td class="tg-f8tv"><span style="background-color:#FFF">3</span></td>
+<td class="tg-f8tv"><span style="background-color:#FFF">25</span></td>
+<td class="tg-f8tv"><span style="background-color:#FFF">21</span></td>
+<td class="tg-f8tv"><span style="background-color:#FFF">20</span></td>
     <td class="tg-c3ow"><span style="font-weight:normal;color:#000;background-color:#FFF">1</span></td>
   </tr>
   <tr>
@@ -666,48 +665,49 @@ Table below shows the "confidence" ratios calcuated for all the ranking criteria
   </tr>
   <tr>
     <td class="tg-f8tv">b.ii.4</td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">26</span></td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">14</span></td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">18</span></td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">1</span></td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">17</span></td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">25</span></td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">17</span></td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">17</span></td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">5</span></td>
     <td class="tg-c6of"><span style="font-weight:normal;color:#000">9</span></td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">16</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">8</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">9</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">22</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">1</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">7</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">5</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">14</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">1</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">6</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">2</span></td>
     <td class="tg-c3ow"><span style="font-weight:normal;color:#000;background-color:#FFF">2</span></td>
     <td class="tg-c3ow" rowspan="3">0.79</td>
   </tr>
   <tr>
     <td class="tg-f8tv">b.ii.3</td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">9</span></td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">10</span></td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">12</span></td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">27</span></td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">2</span></td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">7</span></td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">6</span></td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">18</span></td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">1</span></td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">8</span></td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">2</span></td>
+  <td class="tg-c6of"><span style="font-weight:normal;color:#000">12</span></td>
+  <td class="tg-c6of"><span style="font-weight:normal;color:#000">1</span></td>
+  <td class="tg-c6of"><span style="font-weight:normal;color:#000">7</span></td>
+  <td class="tg-c6of"><span style="font-weight:normal;color:#000">30</span></td>
+  <td class="tg-c6of"><span style="font-weight:normal;color:#000">6</span></td>
+  <td class="tg-c6of"><span style="font-weight:normal;color:#000">10</span></td>
+  <td class="tg-c6of"><span style="font-weight:normal;color:#000">6</span></td>
+  <td class="tg-c6of"><span style="font-weight:normal;color:#000">21</span></td>
+  <td class="tg-c6of"><span style="font-weight:normal;color:#000">2</span></td>
+  <td class="tg-c6of"><span style="font-weight:normal;color:#000">3</span></td>
+  <td class="tg-c6of"><span style="font-weight:normal;color:#000">4</span></td>
+
     <td class="tg-c3ow"><span style="font-weight:normal;color:#000;background-color:#FFF">1</span></td>
   </tr>
   <tr>
     <td class="tg-f8tv"><span style="background-color:#FFF">b.i.4</span></td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">15</span></td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">15</span></td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">1</span></td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">9</span></td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">5</span></td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">1</span></td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">31</span></td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">3</span></td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">31</span></td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">27</span></td>
-    <td class="tg-c6of"><span style="font-weight:normal;color:#000">26</span></td>
+<td class="tg-c6of"><span style="font-weight:normal;color:#000">10</span></td>
+<td class="tg-c6of"><span style="font-weight:normal;color:#000">2</span></td>
+<td class="tg-c6of"><span style="font-weight:normal;color:#000">12</span></td>
+<td class="tg-c6of"><span style="font-weight:normal;color:#000">24</span></td>
+<td class="tg-c6of"><span style="font-weight:normal;color:#000">2</span></td>
+<td class="tg-c6of"><span style="font-weight:normal;color:#000">9</span></td>
+<td class="tg-c6of"><span style="font-weight:normal;color:#000">3</span></td>
+<td class="tg-c6of"><span style="font-weight:normal;color:#000">28</span></td>
+<td class="tg-c6of"><span style="font-weight:normal;color:#000">7</span></td>
+<td class="tg-c6of"><span style="font-weight:normal;color:#000">4</span></td>
+<td class="tg-c6of"><span style="font-weight:normal;color:#000">3</span></td>
     <td class="tg-c3ow"><span style="font-weight:normal;color:#000;background-color:#FFF">4</span></td>
   </tr>
 
