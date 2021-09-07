@@ -6,7 +6,7 @@ A ranking criterion aims at identifying the configurations that have the overall
 <ul>
   <li><a href="#goodcri"> The Proposed Goodness Measures </a></li>
   <ul>
-    <li><a href="#confidence">  The Confidnce Measure  </a></li>
+    <li><a href="#confidence">  The Conformance Measure  </a></li>
     <ul>
       <li><a href="#exampleconfidence">  Examples of the Confidence measure </a></li>
     </ul>
@@ -24,8 +24,7 @@ This problem is well-known in **Information Retrieval** (IR) applications, where
 However, this approach falls back to the problem relates to **ranking consensus**. Ranking consensus is different from combined ranking. The former is related to choosing between two preference sets, and the latter is about designing a ranking metric that considers multiple dimensions.
 
 ##### Def1: Rank Set
-A rank set **R** is an ordered set of elements ordered by a ranking score. A rank index **ri** is the index of a ranked element **i** within a ranking set R , i.e., R|r_i|=i. We denote with
-**R^k** the left most subset of R of length **k**, and we denote with **R_x** the rank set calculated according to the Rank score **R_x**. 
+A rank set **R** is an ordered set of elements ordered by a ranking score. A rank index **ri** is the index of a ranked element **i** within a ranking set R , i.e., R|r_i|=i. We denote with **R^k** the left most subset of R of length **k**, and we denote with **R_x** the rank set calculated according to the Rank score **R_x**. 
 
 
 <h3 id="goodcri"> Goodness Criteria: </h3>
@@ -35,7 +34,7 @@ In this regards, **Bench-ranking** proposes to measure the following:
 - The ranking **coherence**, that is the **level of agreement** between two ranking sets using different ranking criteria or across different experiments. The invariant in our case is the Scale (across different dataset sizes from 100-to-250, 250-500,100-500M datsets).
 
 
-<h4 id="confidence">  1- The Confidnce Measure </h4>
+<h4 id="confidence">  1- The Conformance Measure </h4>
 
 To measure the **confidence**, we propose the following approach described by the following equation:
 
@@ -97,6 +96,8 @@ Given the **top-k** subset of the ranking set R we count how many times its elem
 <h5 id="exampleconfidence"> Examples of the confidence Calculations</h5>
 
 For instance, let's consider the **R_s** rank and the **100M** dataset evaluation. The top-3 ranked configurations (see the table above) are R_s (Top-3)={b.iii.2,b.iii.1, **b.iii.4**}} that overlaps only with the **bottom-3** ranked configurations query Q4, i.e., Q4_(bottom-3)={b.iii.3,b.iii.4,a.iii.2}. Thus, A(R_s [3])=1- (1/(11*3))=0.969.
+
+
 
 **Example on one of the datsets (100M):**
 
@@ -441,6 +442,14 @@ To measure the coherence of each ranking criterion, we opt for **Kendall index**
 For instance, the Kendall's index (**K**) between **R_s (Top-3)** for **100M** and **250M** is **0.33** (See table above of best_ranked_configuration for the individual criteria in the page). Indeed, there was only one disagreement out of three configurations observations (i.e, the cofiguration **b.ii.1** in the 250M dataset ranked better than **b.iii.2**).
 
 Table below shows the **K** index as per Equation (2) in this page. All the criteria show a good coherence across different scales of the datasets (the lower the better). Indeed, scaling the datasets up, we realize small distances (i.e. indicating low changes in the ranking ordinals) for both individual and combined ranking criteria. Intuitively, if across scalability, the opted ranking criterion has high Kendall's index (i.e., high disagreement of the same ranking), it indicates the **inappropriateness** for ranking to describe the performance.
+
+
+
+To give the intuituion behind the coherence metric by showing the top-10 ranked configuration for the same ranking criterion(R_p) (i.e., R10)
+and across three different data scales. We can see examples of pairwise disagreements that occur by scaling from 100M to 250M, and also from 100M to the 500M dataset. For instance, in (100M -to-250M ), b.ii.3 was at the 10th rank in 100M, while being swapped to be at the 1st position in the 250M, and the 1st ranked configuration (a.ii.3) in the 100M swapped to be at the 8th rank in the 250M. Similar kind of disagreements are shown in the (100M-to-500M) scale-up transition.
+
+
+<img src="images/coherence.png" alt="coherence" >
 
 
 <table class="tg">
