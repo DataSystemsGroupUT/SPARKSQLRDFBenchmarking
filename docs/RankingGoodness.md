@@ -485,18 +485,16 @@ and across three different data scales. We can see examples of pairwise disagree
 Please note the swaps of colors, it starts as blue, red, blue,..., however with moving to larger data scales, color disagreements already occur there with the mentioned swaps.
 
 
-<table class="tg">
+<!-- <table class="tg">
 <thead>
   <tr>
     <th class="tg-7btt">Dataset_i VS. Dataset_j</th>
     <th class="tg-rvyq">R_f</th>
     <th class="tg-rvyq">R_s</th>
     <th class="tg-rvyq">R_p</th>
-    <th class="tg-rvyq">Pareto_Agg</th>
-    <th class="tg-rvyq">Pareto_Q</th>
-<!--     <th class="tg-rvyq">AVG</th>
+    <th class="tg-rvyq">AVG</th>
     <th class="tg-rvyq">WAvg</th>
-    <th class="tg-rvyq">R_ta</th> -->
+    <th class="tg-rvyq">R_ta</th>
   </tr>
 </thead>
 <tbody>
@@ -529,6 +527,60 @@ Please note the swaps of colors, it starts as blue, red, blue,..., however with 
   </tr>
 </tbody>
 </table>
+ -->
+
+
+
+ <table class="tg">
+<thead>
+  <tr>
+    <th class="tg-7btt">Dataset_i VS. Dataset_j</th>
+    <th class="tg-rvyq">R_f</th>
+    <th class="tg-rvyq">R_s</th>
+    <th class="tg-rvyq">R_p</th>
+    <th class="tg-rvyq">Pareto_Agg</th>
+    <th class="tg-rvyq">Pareto_Q</th>
+<!--     <th class="tg-rvyq">AVG</th>
+    <th class="tg-rvyq">WAvg</th>
+    <th class="tg-rvyq">R_ta</th> -->
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-rvyq">100M vs 250M</td>
+    <td class="tg-c3ow">0.13</td>
+    <td class="tg-c3ow">0.18</td>
+    <td class="tg-c3ow">0.06</td>
+    <td class="tg-c3ow">0.19</td>
+    <td class="tg-c3ow">0.24</td>
+<!--     <td class="tg-c3ow">0.17</td> -->
+  </tr>
+  <tr>
+    <td class="tg-rvyq">100M vs 500M</td>
+    <td class="tg-c3ow">0.16</td>
+    <td class="tg-c3ow">0.29</td>
+    <td class="tg-c3ow">0.06</td>
+    <td class="tg-c3ow">0.19</td>
+    <td class="tg-c3ow">0.24</td>
+<!--     <td class="tg-c3ow">0.19</td> -->
+  </tr>
+  <tr>
+    <td class="tg-rvyq">250M vs 500M</td>
+    <td class="tg-c3ow">0.13</td>
+    <td class="tg-c3ow">0.19</td>
+    <td class="tg-c3ow">0.07</td>
+    <td class="tg-c3ow">0.13</td>
+    <td class="tg-c3ow">0.18</td>
+<!--     <td class="tg-c3ow">0.15</td> -->
+  </tr>
+</tbody>
+</table>
+
+
+The above table shows the results where the reading key is the lower, the better( i.e., high Kendall’s index means high disagreement across rank set).
+All the ranking criteria show high coherence across different scales of the datasets. Indeed, scaling the datasets does not excessively impact the rank sets’ order in all the ranking
+criteria.
+
 
 
 **Note** All the scripts for calculating the Kendall's index can be found in the [scripts](https://github.com/DataSystemsGroupUT/SPARKSQLRDFBenchmarking/tree/master/scripts) in this repo, and attached with the calculations [sheet](https://docs.google.com/spreadsheets/d/1cff9-IVtg4d113TSkdGOBVCmOt6NCOdrorqFhK04g5E/edit?usp=sharing).
