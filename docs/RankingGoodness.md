@@ -478,7 +478,7 @@ Table below shows the "confidence" ratios calcuated for all the ranking criteria
     <td class="tg-c6of"><span style="font-weight:normal;color:#000">17</span></td>
     <td class="tg-c6of"><span style="font-weight:normal;color:#000">9</span></td>
     <td class="tg-c3ow"><span style="font-weight:normal;color:#000;background-color:#FFF">6</span></td>
-    <td class="tg-c3ow" rowspan="3"><span style="font-weight:400;font-style:normal">0.64</span></td>
+    <td class="tg-c3ow" rowspan="3"><span style="font-weight:400;font-style:normal">0.42</span></td>
   </tr>
   <tr>
     <td class="tg-f8tv">a.ii.3</td>
@@ -516,19 +516,19 @@ Table below shows the "confidence" ratios calcuated for all the ranking criteria
   </tr>
   <tr>
     <td class="tg-f8tv">a.ii.3</td>
-<td class="tg-c6of"><span style="font-weight:normal;color:#000">22</span></td>
-<td class="tg-c6of"><span style="font-weight:normal;color:#000">11</span></td>
-<td class="tg-c6of"><span style="font-weight:normal;color:#000">14</span></td>
-<td class="tg-c6of"><span style="font-weight:normal;color:#000">1</span></td>
-<td class="tg-c6of"><span style="font-weight:normal;color:#000">13</span></td>
-<td class="tg-c6of"><span style="font-weight:normal;color:#000">20</span></td>
-<td class="tg-c6of"><span style="font-weight:normal;color:#000">13</span></td>
-<td class="tg-c6of"><span style="font-weight:normal;color:#000">13</span></td>
-<td class="tg-c6of"><span style="font-weight:normal;color:#000">4</span></td>
-<td class="tg-c6of"><span style="font-weight:normal;color:#000">7</span></td>
-<td class="tg-c6of"><span style="font-weight:normal;color:#000">14</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">22</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">11</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">14</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">1</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">13</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">20</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">13</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">13</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">4</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">7</span></td>
+    <td class="tg-c6of"><span style="font-weight:normal;color:#000">14</span></td>
     <td class="tg-c3ow"><span style="font-weight:normal;color:#000;background-color:#FFF">2</span></td>
-    <td class="tg-c3ow" rowspan="3">0.61</td>
+    <td class="tg-c3ow" rowspan="3">0.39</td>
   </tr>
   <tr>
     <td class="tg-f8tv">a.ii.4</td>
@@ -578,7 +578,7 @@ Table below shows the "confidence" ratios calcuated for all the ranking criteria
     <td class="tg-c6of"><span style="font-weight:normal;color:#000">13</span></td>
     <td class="tg-c6of"><span style="font-weight:normal;color:#000">13</span></td>
     <td class="tg-c3ow"><span style="font-weight:normal;color:#000;background-color:#FFF">3</span></td>
-    <td class="tg-c3ow" rowspan="3">0.73</td>
+    <td class="tg-c3ow" rowspan="3">0.30</td>
   </tr>
   <tr>
     <td class="tg-f8tv">b.iii.1</td>
@@ -615,6 +615,7 @@ Table below shows the "confidence" ratios calcuated for all the ranking criteria
     <td class="tg-c3ow" colspan="2"></td>
   </tr>
   <tr>
+    <td class="tg-f8tv">b.ii.4</td>
     <td class="tg-f8tv"><span style="background-color:#FFF">9</span></td>
     <td class="tg-f8tv"><span style="background-color:#FFF">8</span></td>
     <td class="tg-f8tv"><span style="background-color:#FFF">9</span></td>
@@ -626,8 +627,8 @@ Table below shows the "confidence" ratios calcuated for all the ranking criteria
     <td class="tg-f8tv"><span style="background-color:#FFF">1</span></td>
     <td class="tg-f8tv"><span style="background-color:#FFF">6</span></td>
     <td class="tg-f8tv"><span style="background-color:#FFF">2</span></td>
-    <td class="tg-c3ow"><span style="font-weight:normal;color:#000;background-color:#FFF">1</span></td>
-    <td class="tg-c3ow" rowspan="3">0.88</td>
+    <td class="tg-c3ow"><span style="font-weight:normal;color:#000;background-color:#FFF">6</span></td>
+    <td class="tg-c3ow" rowspan="3">0.21</td>
   </tr>
   <tr>
     <td class="tg-f8tv">a.ii.3</td>
@@ -657,7 +658,7 @@ Table below shows the "confidence" ratios calcuated for all the ranking criteria
     <td class="tg-f8tv"><span style="background-color:#FFF">25</span></td>
     <td class="tg-f8tv"><span style="background-color:#FFF">21</span></td>
     <td class="tg-f8tv"><span style="background-color:#FFF">20</span></td>
-    <td class="tg-c3ow"><span style="font-weight:normal;color:#000;background-color:#FFF">1</span></td>
+    <td class="tg-c3ow"><span style="font-weight:normal;color:#000;background-color:#FFF">5</span></td>
   </tr>
   <tr>
     <td class="tg-8bgf" colspan="12"><span style="font-weight:bold;background-color:#6D9EEB">Pareto_Q</span></td>
@@ -677,7 +678,7 @@ Table below shows the "confidence" ratios calcuated for all the ranking criteria
     <td class="tg-c6of"><span style="font-weight:normal;color:#000">6</span></td>
     <td class="tg-c6of"><span style="font-weight:normal;color:#000">2</span></td>
     <td class="tg-c3ow"><span style="font-weight:normal;color:#000;background-color:#FFF">2</span></td>
-    <td class="tg-c3ow" rowspan="3">0.79</td>
+    <td class="tg-c3ow" rowspan="3">0.15</td>
   </tr>
   <tr>
     <td class="tg-f8tv">b.ii.3</td>
@@ -692,7 +693,7 @@ Table below shows the "confidence" ratios calcuated for all the ranking criteria
     <td class="tg-c6of"><span style="font-weight:normal;color:#000">2</span></td>
     <td class="tg-c6of"><span style="font-weight:normal;color:#000">3</span></td>
     <td class="tg-c6of"><span style="font-weight:normal;color:#000">4</span></td>
-    <td class="tg-c3ow"><span style="font-weight:normal;color:#000;background-color:#FFF">1</span></td>
+    <td class="tg-c3ow"><span style="font-weight:normal;color:#000;background-color:#FFF">6</span></td>
   </tr>
   <tr>
     <td class="tg-f8tv"><span style="background-color:#FFF">b.i.4</span></td>
@@ -707,13 +708,14 @@ Table below shows the "confidence" ratios calcuated for all the ranking criteria
     <td class="tg-c6of"><span style="font-weight:normal;color:#000">7</span></td>
     <td class="tg-c6of"><span style="font-weight:normal;color:#000">4</span></td>
     <td class="tg-c6of"><span style="font-weight:normal;color:#000">3</span></td>
-    <td class="tg-c3ow"><span style="font-weight:normal;color:#000;background-color:#FFF">4</span></td>
+    <td class="tg-c3ow"><span style="font-weight:normal;color:#000;background-color:#FFF">5</span></td>
   </tr>
 
 </tbody>
 </table>
 
 
+** Note: the results are calculated by minusing the non-conformance shown in the table from the full percentage 100% of conformance (as will be shown in the table below for all the criteria and over all the datasets).
 
 
 **Note that:** the above results show the conformance for the configurations considering the Hive backend as a 5th stroage backend. However, for consistency we ommitted Hive from the calculations and kept only the HDFS file formats (CSV, Avro, ORC, and Parquet). Thus, we have new calculations and the configurations become 36 instead of 45 (i.e., by excluding configurations that include Hive as a storage backend).
@@ -734,6 +736,8 @@ The following table shows the conformance of each ranking criterion **top-3** co
 All the selected ranking criteria perform very well for all the datasets. However, the single-dimensional criteria Rf , Rp, and Rs have lower conformance than the one based on Pareto. For instance, in the 100M, 250M, and 500M datasets, ParetoAgg. has a conformance of 79%, 100%, and 82%, respectively. The same pattern repeats with the ParetoQ version (with 85%,
 100%, and 97%, respectively). In contrast, single-dimensional ranking criteria have relatively lower conformance of 58%, 82%, and 70% for Rf , 61%, 70%, and 58% for Rp, and 70%,
 79%, and 79% for Rs, accordingly. 
+
+
 
 The Conformance Figure shown above also depicts the level of conformance in green color, for the top-3 ranked configuration combinations. We can see that the level of conformance in the pareto raking criteria (multi-dimensional) is higher than the Rf, Rp, Rs single-dimensinal ranking criteria.  
 
