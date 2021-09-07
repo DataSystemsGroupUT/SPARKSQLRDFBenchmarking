@@ -715,7 +715,7 @@ Table below shows the "confidence" ratios calcuated for all the ranking criteria
 </table>
 
 
-** Note: the results are calculated by minusing the non-conformance shown in the table from the full percentage 100% of conformance (as will be shown in the table below for all the criteria and over all the datasets).
+** Note: the results are calculated by minusing the non-conformance shown in the table from the full percentage 100% of conformance (as will be shown in the table below for all the criteria and over all the datasets), as per equation of Conformance measure (equation 1 in this page).
 
 
 **Note that:** the above results show the conformance for the configurations considering the Hive backend as a 5th stroage backend. However, for consistency we ommitted Hive from the calculations and kept only the HDFS file formats (CSV, Avro, ORC, and Parquet). Thus, we have new calculations and the configurations become 36 instead of 45 (i.e., by excluding configurations that include Hive as a storage backend).
