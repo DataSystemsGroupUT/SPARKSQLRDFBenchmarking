@@ -1,14 +1,5 @@
 ## Multi-Dimensional Ranking Criteria
 
-<!-- 
-### Limitations of Single-Dimensional Ranking
-
-The single-diemsnional ranking criteria give better explaininations than descriptive and diagnostic analysis. Indeed, they provide clear insights towards the ranked dimension. The follwoing table shows the top-3 configuration combinations according to the single-dimensional ranking criteria. The table highlights the best performing dimension (marked
-by the green color across the same dimension, i.e., vertically). For example, ranking by schema we mark VT (b) as the best; ranking by partitioning we mark the SBP (ii). Finally, we can roughly mark ORC (3) followed by Parquet (4) are the best ones when ranking by format.
-
-However, ranking over one dimension and ignoring the others ends up with selecting different configurations. Figure 7 shows the single-dimensional ranking criteria w.r.t a simple geometrical representation that depicts the triangle subsumed by each ranking criterion (Rs, Rp, and Rf ). The triangle sides present the trade-offs ranking dimensions. The red triangles represent the full ranking optimization, i.e, full rank scores, Rx = 1. The blue triangles in the plots represent the actual ranking scores for the selected configurations. Single-dimensional ranking criteria maximize the score for only one dimension while ignoring the other two dimensions. For instance, ranking by schema dimension in Figure 7 (a) shows how schema is perfectly optimized while ignoring the other two sides (dimensions). The same effect of trade-offs is shown in Figure 7 (a), and (b).
- -->
-
 The single-diemsnional ranking criteria give better explaininations than descriptive and diagnostic analysis. Indeed, they provide clear insights towards the ranked dimension. However, ranking over one dimension and ignoring the others ends up with selecting different configurations. This intuition leads to extend the Bench-ranking into a multiobjective optimization problem in order to optimize all the dimensions at the same time.
 
 ### Bench-ranking as a MO optimization problem
@@ -48,7 +39,20 @@ The following table shows the Pareto fronts for both approaches, i.e., non-domin
 | Pareto_Agg | c.ii.4 | b.ii.4 | b.iii.1 | b.iii.3 | b.iii.4 | b.ii.3  | a.ii.3 | a.iii.3 | b.i.4  | -      | -      | -     | -       | -     | -      | -       |
 | Pareto_Q   | b.ii.3 | b.ii.4 | b.iii.3 | b.iii.4 | b.i.3   | b.iii.1 | b.i.4  | b.ii.1  | c.ii.4 | c.ii.3 | a.ii.3 | c.i.3 | a.iii.3 | c.i.2 | c.ii.2 | c.iii.4 |
 
+** Note that '-' means that those are the only solutions, no more.
 
+- Our experiments results inrestingly show that ParetoQ gives always non-dominated solutions more than the aggregated version (ParetoAgg). Also, results show (tables above) that ParetoQ and ParetoAgg. solutions conform to each other, i.e., configurations suggested by ParetoAgg. are almost included in ParetoQ. Indeed, only 2 solutions out of 13 in ParetoAgg are not shown up in QueryRankings of ParetoQ in the 100M, 2 out of 6 , 0 out of 9 in the 250M , and 500M datasets, respectively.
+
+
+### Pareto plots
+
+
+The below figures (a), (b), and (c) show the Pareto fronts (depicted by the green shaded areas) of the three dimensions of the Bench-ranking for ParetoAgg. Each point of those figures represents a solution of rank scores (i.e, configuration in our case).
+
+
+<p align="center"><img src="figures/DistributedExperiments/paretofigs/PAretoAgg100MNoHive" alt="pareto100" > </p>
+<p align="center"><img src="figures/DistributedExperiments/paretofigs/PAretoAgg250MNoHive" alt="pareto250" ></p>
+<p align="center"><img src="figures/DistributedExperiments/paretofigs/PAretoAgg500MNoHive" alt="pareto500"></p>
 
 
 
