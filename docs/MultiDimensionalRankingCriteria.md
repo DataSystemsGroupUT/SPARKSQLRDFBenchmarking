@@ -50,9 +50,9 @@ The following table shows the Pareto fronts for both approaches, i.e., non-domin
 The below figures (a), (b), and (c) show the Pareto fronts (depicted by the green shaded areas) of the three dimensions of the Bench-ranking for ParetoAgg. Each point of those figures represents a solution of rank scores (i.e, configuration in our case).
 
 
-<p align="center"><img src="figures/DistributedExperiments/paretofigs/PAretoAgg100MNoHive" alt="pareto100" > </p>
-<p align="center"><img src="figures/DistributedExperiments/paretofigs/PAretoAgg250MNoHive" alt="pareto250" ></p>
-<p align="center"><img src="figures/DistributedExperiments/paretofigs/PAretoAgg500MNoHive" alt="pareto500"></p>
+<p align="center"><img src="figures/DistributedExperiments/paretofigs/PAretoAgg100MNoHive.png" alt="pareto100" > </p>
+<p align="center"><img src="figures/DistributedExperiments/paretofigs/PAretoAgg250MNoHive.png" alt="pareto250" ></p>
+<p align="center"><img src="figures/DistributedExperiments/paretofigs/PAretoAgg500MNoHive.png" alt="pareto500"></p>
 
 
 
