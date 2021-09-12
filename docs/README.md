@@ -187,7 +187,7 @@ In the directory of [Scirpts](https://github.com/DataSystemsGroupUT/SPARKSQLRDFB
  - [Mohamed Ragab](https://bigdata.cs.ut.ee/mohamed-ragab)
  - [Riccardo Tommasini](https://rictomm.me/)
  - [Feras Awaysheh](https://bigdata.cs.ut.ee/feras-m-awaysheh)
- - [Sherif Sakr](http://kodu.ut.ee/~sakr/)
+ - [Sherif Sakr](https://bigdata.cs.ut.ee/prof-dr-sherif-sakr)
  - [Sadiq Eyvazov](#)
  - [Carlos Ramos](#)
 
