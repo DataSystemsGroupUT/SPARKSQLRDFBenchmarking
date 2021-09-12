@@ -18,10 +18,6 @@
         * We keep all the single-dimensional ranking for the above rankings for the results of the experiments that exlude **"Hive"** as a 5^th storage backend can be accessed from the above page links.
         * We keep all the intermediary **ranking tables** and logs calculations of all the above ranking plots of the dimensions in this [link](https://docs.google.com/spreadsheets/d/1cff9-IVtg4d113TSkdGOBVCmOt6NCOdrorqFhK04g5E/edit?usp=sharing).
 
-<!--       * ([Combined "Bench-Ranking"](CombinedRankingCriteria.md)):
-        * Find and download the combined-Ranking criteria results from this [link](https://docs.google.com/spreadsheets/d/1cff9-IVtg4d113TSkdGOBVCmOt6NCOdrorqFhK04g5E/edit?usp=sharing).
-       * For the geomtric representation(i.e.,"Triangle Area") of the experiments three dimensions (schema;partitoning;storage), we keep examples of the top-ranked configurations according to all the proposed ranking criteria in this online-sheet [here](https://docs.google.com/spreadsheets/d/18QeAl6wYp8FgloX3Ia-xM2hBWR7qRXiB3AHSf5zTMyc/edit?usp=sharing). -->
-
       * ([Multi-Dimensional "Bench-Ranking"](MultiDimensionalRankingCriteria.md)):
         * Find and download the multi-dim. Ranking criteria results from this [link](https://docs.google.com/spreadsheets/d/1cff9-IVtg4d113TSkdGOBVCmOt6NCOdrorqFhK04g5E/edit?usp=sharing).
 
@@ -35,4 +31,7 @@ Note, we upload all the experiments calculation sheets in this repo:
     
 - We also share all the [scirpts](https://github.com/DataSystemsGroupUT/SPARKSQLRDFBenchmarking/tree/master/Scripts) that we used in our benchmaking experiments to make all computations and analysis as well as plotting all the figures over the logs of the experiments.
 - Results sheets of these scripts calculations are also shared [here](https://github.com/DataSystemsGroupUT/SPARKSQLRDFBenchmarking/tree/master/results) in the reposiory.
+
+
+
 
