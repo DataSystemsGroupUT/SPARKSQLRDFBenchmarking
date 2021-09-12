@@ -1,9 +1,7 @@
 ### Figures of experiment results for Storage Backends
 ---
 
-These figures show the comparative representation of Storage backends (i.e. HDFS [CSV,AVRO, PARQUET, ORC], and HIVE) for 100M, 250M, and 500M respectively.
-
-*Please note that the following ranking figures include Hive as a 5^th storage backend. However, we have excluded Hive and for simpolicity kept only the HDFS storage file formats (CSV, AVro, ORC, and Parquet). Figures of ranking the storage dimension (excluding Hive) can be shown [here](https://datasystemsgrouput.github.io/SPARKSQLRDFBenchmarking/StorageRanking_NH).
+These figures show the comparative representation of Storage file formats (i.e. HDFS [CSV,AVRO, PARQUET, ORC]) for 100M, 250M, and 500M respectively.
 
 
 #### 100M Triples Storage BackendsRanking Scores
