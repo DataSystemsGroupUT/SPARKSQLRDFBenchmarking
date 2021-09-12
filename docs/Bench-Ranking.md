@@ -50,7 +50,7 @@ This level reduces the amount of human intervention by combining the observed da
 At this level, factual knowledge is contextualized to produce a diagnosis. Typically, diagnostic analysis requires an exploratory phase on existing data and data enrichment. 
 
 <h4 id="pred">  Predictive analysis:</h4>
-This level aims to forecast future results, and explain drivers of the observed phenomena using machine learning or data mining techniques. 
+This level aims to forecast future results, and explain drivers of the observed phenomena using machine learning or data mining techniques. This level of analysis is out of the scope of our project.
 
 
 <h4 id="pres"> Prescriptive analysis:</h4>
@@ -77,9 +77,9 @@ However, these descriptive and diagnostic analyises can't give final answers as 
 
 |      | Q1     | Q2      | Q3     | Q4     | Q5      | Q6     | Q7     | Q8      | Q9      | Q10     | Q11            |
 |------|--------|---------|--------|--------|---------|--------|--------|---------|---------|---------|----------------|
-| 100M | c.i.2  | b.ii.3  | c.ii.3 | a.ii.3 | c.i.5   | c.ii.3 | b.ii.1 | c.iii.4 | b.ii.4  | b.iii.3 |  b.i.3, b.ii.4 |
-| 250M | a.i.2  | b.ii.4  | c.ii.4 | a.ii.5 | b.ii.4  | c.ii.3 | b.ii.4 | c.iii.4 | b.iii.3 | b.iii.3 | b.ii.4         |
-| 500M | c.ii.2 | b.iii.4 | c.ii.3 | a.ii.3 | b.iii.3 | c.ii.3 | b.ii.4 | c.iii.4 | b.iii.4 | b.iii.3 | b.i.3, b.ii.5  |
+| 100M | c.i.2  | b.ii.3  | c.ii.3 | a.ii.3 | b.ii.4   | c.ii.3 | b.ii.1 | c.iii.4 | b.ii.4  | b.iii.3 |  b.i.3        |
+| 250M | c.ii.2  | b.ii.4  | c.ii.4 | c.ii.1 | b.ii.4  | c.ii.3 | b.ii.4 | c.iii.4 | b.iii.3 | b.iii.3 | b.ii.4         |
+| 500M | c.ii.2 | b.iii.4 | c.ii.3 | a.ii.3 | b.iii.3 | c.ii.3 | b.ii.4 | c.iii.4 | b.iii.4 | b.iii.3 | b.i.3           |
 
 For example, the table shown above represents the best configurations for each query and each dataset size. 
 A motivation scenario was triggered by analyzing these results, showing no conclusive dimensions to be the most suitable performer. 
@@ -95,20 +95,20 @@ Motivated by the limitations of descriptive and diagnostic analyses, we advocate
 
 
 
-Definition 1 (**Ranking Score**): The ranking score **R** is a numerical value that represents the performance of an element in a set. Given two elements **i** and **j**, and **Ri**, **Rj** their ranking score, we say that **i** has a higher rank than **j** (i.e., **i** outperforms **j**) iff **Ri> Rj**.
+**Definition 1**: (**Ranking Score**): The ranking score **R** is a numerical value that represents the performance of an element in a set. Given two elements **i** and **j**, and **Ri**, **Rj** their ranking score, we say that **i** has a higher rank than **j** (i.e., **i** outperforms **j**) iff **Ri> Rj**.
 
 For isntance, we  will  use  a  simple  running  example,  based  on our  motivating  scenario,  i.e.,  we  consider  a  set  of  three configurations [a.i.1,b.ii.2,c.iii.3],  and  a  query (Q1) of  the SP2B benchmark.  A valid ranking score can be the time required for  execution Q1 by  each  of  the  selected  configurations  (in milliseconds)  are  equal  to 30, 50,  and 40,  respectively.  The association  with  each  configuration  with  its  ranking  score happens according to the query evaluation (runtimes). We can generalize this by introducing the notion of**ranking function**.
 
 
-Definition 2 (**ranking function**): Let **E** is the input list of elements to be ranked, the ranking function **fR** is a function **E→ R** that associatesa ranking score to every element in **E** .
+**Definition 2**:(**ranking function**): Let **E** is the input list of elements to be ranked, the ranking function **fR** is a function **E→ R** that associatesa ranking score to every element in **E** .
 
  
-Considering the ranking scores above, the configuration set E can  be  sorted  to  produce  the  sorted  set R=[a.i.1,  c.iii.3,b.ii.2].  Intuitively,  the  lower  the  execution  time,  the  better. More formally, we denote R as a **rank set**.
+Considering the ranking scores above, the configuration set **E** can  be  sorted  to  produce  the  sorted  set R=[a.i.1,  c.iii.3,b.ii.2].  Intuitively,  the  lower  the  execution  time,  the  better. More formally, we denote R as a **rank set**.
 
-Definition  3 (**Rank Set**) :A rank  set R is  an  ordered  set  of  element sordered by a ranking score. The rank index **ri** is the index of a ranked elementiwithin a ranking setR, i.e., R[ri]=i. Wed enote with <img src="https://latex.codecogs.com/gif.latex?R^{k} " />  the left most (top-ranked) subset of R of length k,  and  we  denote  with Rx the  rank  set  calculated  accordingto the Rank score Rx.
+**Definition 3** (**Rank Set**) :A rank  set R is  an  ordered  set  of  element sordered by a ranking score. The rank index **ri** is the index of a ranked elementiwithin a ranking setR, i.e., R[ri]=i. Wed enote with <img src="https://latex.codecogs.com/gif.latex?R^{k} " />  the left most (top-ranked) subset of R of length k,  and  we  denote  with Rx the  rank  set  calculated  accordingto the Rank score **R_x**.
 
 
-** Example:
+* Example on the ranking functions (Ranking configurations according to Query runtimes):
 
 The below table shows an example the actual query ranks  of  the configurations  according  to  query  runtimes for the 100M dataset,  e.g., **a.i.1** is  at the **29th** rank for running **Q1**.
 
@@ -133,13 +133,15 @@ Genralized Ranking criteria inspiered by ranking partitioning techniques propose
 
 Experiments show that the single-dimensional ranking criteria are optmizing one dimension at a time. Indeed, they ignore dimension's tradeoffs. To identify which configuration is the best performing, we need to optimize along all the dimensions simultaneously. In practice, this means designing a multi-dimensional ranking criteria. This intuition leads to extend the Bench-ranking into a multiobjective optimization problem in order to optimize all the dimensions at the same time.
 
+* [Ranking Criteria 'Goodness'](RankingGoodness.md)
+
 <h4 id="goodness"> How to assess the opted ranking criteria ("Bench-Ranking Goodness"):</h4>
 
 A ranking criterion aims at identifying the configurations that have the overall best results. In practice, We can consider a ranking criterion **"good"** if it does not suggest a low-performing configuration. In other words, we are not interested to be the best at any particular query as long as we are never the worst. Herein, we discuss how can we measure such **goodness**, i.e., **how to evaluate the ranking measure?**. [Ranking Goodness Details and Measures](RankingGoodness.md).
 
 
 <ul>
-  <li style="display:inline;"><a href="https://datasystemsgrouput.github.io/SPARKSQLRDFBenchmarking/IndividualRankingCriteria.html" style=" margin-right: 50px ;padding: 0px 20px; word-wrap: normal; display: inline-block;   font: bold 11px Arial;  background-color: #EEEEEE;  border-top: 1px solid #CCCCCC;  border-right: 1px solid #333333;  border-bottom: 1px solid #333333;  border-left: 1px solid #CCCCCC;">Individual Ranking Criteria</a></li>
+  <li style="display:inline;"><a href="https://datasystemsgrouput.github.io/SPARKSQLRDFBenchmarking/IndividualRankingCriteria.html" style=" margin-right: 50px ;padding: 0px 20px; word-wrap: normal; display: inline-block;   font: bold 11px Arial;  background-color: #EEEEEE;  border-top: 1px solid #CCCCCC;  border-right: 1px solid #333333;  border-bottom: 1px solid #333333;  border-left: 1px solid #CCCCCC;">Single-Dimensional Ranking Criteria</a></li>
   
  <li style="display:inline;"><a href="https://datasystemsgrouput.github.io/SPARKSQLRDFBenchmarking/MultiDimensionalRankingCriteria.html"  style="padding: 0px 20px; word-wrap: normal; display: inline-block;   font: bold 11px Arial;  background-color: #EEEEEE;  border-top: 1px solid #CCCCCC;  border-right: 1px solid #333333;  border-bottom: 1px solid #333333;  border-left: 1px solid #CCCCCC;">Multi-dimensional Ranking Criteria</a></li>
 </ul>
