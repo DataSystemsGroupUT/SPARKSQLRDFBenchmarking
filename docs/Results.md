@@ -11,7 +11,7 @@
     * Diagnostic Analytics:
       * [Diagnostic Analyisis of the results (answering the "why?" question)](DescriptiveAnlaytics.md#diagnostic-analysis)  
     * Prescriptive analysis 
-      * ([Individual "Bench-Ranking"](IndividualRankingCriteria.md)):
+      * ([Single-Dimensional "Bench-Ranking"](IndividualRankingCriteria.md)):
         * [Relational Schema Ranking Scores](SchemaRanking.md)
         * [Partitioning Techs. Ranking Scores](PartitioningRanking.md)
         * [Storage Backends Ranking Scores](StorageRanking.md)

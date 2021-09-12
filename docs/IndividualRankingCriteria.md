@@ -36,9 +36,11 @@ Similarly, VT, and PT schemata are ranked using the above equation, but accordin
 
 **Note:** When we apply the generalized ranking formula in Equation (1), we get three rankings for our three mentioned experimental dimensions (Relational Schemata; Partitioning, and Storage Backends), namely, **"R_s"** , **"R_p"**, and **"R_f"** accordingly.
 
-Applying the above ranking function, we get rank scores for the three diemsnions. In particular, we pivot on one dimension options and get scores across the other two dimensions. Figures of ranking can be found [here](https://datasystemsgrouput.github.io/SPARKSQLRDFBenchmarking/Results), specifically under the (Single-dimensional “Bench-Ranking”). 
+* Applying the above ranking function for the three dimensions, we get **rank scores** for the three diemsnions. In particular, we pivot on a "single dimension" options/alternatives and get scores for those alternatives (Schema options are >>ST, VT, and PT), across the other two dimensions (partioning and storage if we rank schema). 
 
-* Please notice that Previously, we run experiments that include "Hive" as a 5th storage backend, Therefore, we put both pile of figures that include Hive and the ones that exclude it.
+* Figures of ranking can be found [here](https://datasystemsgrouput.github.io/SPARKSQLRDFBenchmarking/Results), specifically under the (Single-dimensional “Bench-Ranking”). 
+
+* Please notice that Previously, we run experiments that include "Hive" as a 5^th storage backend, Therefore, we put both pile of figures that include Hive and the ones that exclude it for the three datasets (100M, 250M, and 500M).
 
 
 
