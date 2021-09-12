@@ -9,7 +9,7 @@ In this Project, we present a systematic comparison of the relevant RDF relation
 
 ### Project Phases
 -----
-<p align="center"><img src="images/SparkSQLRDFBenchPhases.jpeg" alt="spark"> </p>
+<p align="center"><img src="images/SparkSQLRDFBenchPhases.jpeg" alt="phases"> </p>
 
 
 #### Phase#1
@@ -20,15 +20,17 @@ performed our experiments considering: (i) alternative relational schemas for RD
 #### Phase#2
 In the second phase of our project, we conducted the same settings and configurations but differently in a distributed deployments with partitioning the data. In particular, we conducted our experiments in a Spark cluster of four machines. and we worked on a larger RDF dataset of 100M dataset. Notably, we don't use PostgreSQL anymore in this phase experiments.
 
-#### Phase#3 ([<span style="color:red"> Bench-Ranking </span>](https://datasystemsgrouput.github.io/SPARKSQLRDFBenchmarking/Bench-Ranking))
-In this phase, we also conduct the phase#2 experimetns but with way larger datsets (**100M**, **250M**, and **500M**) triples. moreover, differently from the previous phase, we apply different ranking and combined ranking criteria ([<span style="color:red">**Bench-Ranking**</span>](https://datasystemsgrouput.github.io/SPARKSQLRDFBenchmarking/Bench-Ranking)) to quantitively and effectively help practioners to choose the best configuration combinations in such complex solution space of different dimensions (schema, partitioning, and storage).
+#### Phase#3 
+In this phase, we repeated the phase#2 experimetns, but this time we extended our compared relatonal experiments with new proposed relational schema representations (ExtVP, and WPT) from the State-of-the-art. Extended Vertically Partitioned Tables (ExtVP) and Wide Property Tables (WPT) are prominent optimizations that target specific workloads. Nevertheless, in a distributed context (with presenace of data pratitioning, and altenaritve storage backends) such improvements do not always outperform their baselines. Thus, we compare ExtVP with the baseline VT, and WPT with the baseline PT schema considering different partitoning techniques, and different file formats for storage.
+* **Note** Phase#4 results and figures are updated and can be found in the results section [link](https://datasystemsgrouput.github.io/SPARKSQLRDFBenchmarking/OptimizedVsBaselinComparsions.html)
+
+
+
+#### Phase#4 ([<span style="color:red"> Bench-Ranking </span>](https://datasystemsgrouput.github.io/SPARKSQLRDFBenchmarking/Bench-Ranking))
+In this phase, we also conduct the phase#2 experimetns but with way larger datset scales (**100M**, **250M**, and **500M**) triples. moreover, differently from the previous phase, we apply different ranking and combined ranking criteria ([<span style="color:red">**Bench-Ranking**</span>](https://datasystemsgrouput.github.io/SPARKSQLRDFBenchmarking/Bench-Ranking)) to quantitively and effectively help practioners to choose the best configuration combinations in such complex solution space of different dimensions (schema, partitioning, and storage).
 
 * **Note** Phase#3 **Bench-Ranking** results and figures are updated and can be found in the results section [link](https://datasystemsgrouput.github.io/SPARKSQLRDFBenchmarking/Bench-Ranking)
 
-
-#### Phase#4 
-In this phase, we repeated the phase#2 experimetns, but this time we extended our compared relatonal experiments with new proposed relational schema representations (ExtVP, and WPT) from the State-of-the-art. Extended Vertically Partitioned Tables (ExtVP) and Wide Property Tables (WPT) are prominent optimizations that target specific workloads. Nevertheless, in a distributed context (with presenace of data pratitioning, and altenaritve storage backends) such improvements do not always outperform their baselines. Thus, we compare ExtVP with the baseline VT, and WPT with the baseline PT schema considering different partitoning techniques, and different file formats for storage.
-* **Note** Phase#4 results and figures are updated and can be found in the results section [link](https://datasystemsgrouput.github.io/SPARKSQLRDFBenchmarking/OptimizedVsBaselinComparsions.html)
 
 
 ## RDF Relational schemas
@@ -64,7 +66,7 @@ a join partner) that do not contribute to any join in the query. This extension 
 
 ## Apache Spark-SQL
 -----
-Spark-SQL is one of the most popular high-level libraries of Apache Spark targeted for processing structured datasets using the DataFrames data abstraction, and optimized by means of the Catalyst query optimizer. In this project, we use Spark-SQL for processing and querying large RDF datasets. In this context, SPARQL queries are mapped to SQL queries and optimized over the "Catalyst" Optimizer. 
+For our experiments, we opted for the defacto big data (relational) engine, i.e. Apache Spark-SQL. It is one of the most popular high-level libraries of Apache Spark targeted for processing structured datasets using the DataFrames data abstraction, and optimized by means of the Catalyst query optimizer. In this project, we use Spark-SQL for processing and querying large RDF datasets. In this context, SPARQL queries are mapped to SQL queries and optimized over the "Catalyst" Optimizer. 
 
 
 ### Storage Backends
@@ -75,7 +77,7 @@ We evaluate the performance of SparkSQL querying engine for processing SPARQL qu
 -----
 In addition, we show the impact of using three different RDF-based partitioning techniques with our relational scenario which are _Subject-based_, _Predicate-based_, and _Horizontal partitioning_.
 
-<p align="center"><img src="images/parttechs.png" alt="spark"> </p>
+<p align="center"><img src="images/partitioning.png" alt="part_techs"> </p>
 
 - **Horizontal -Based Partitioning (HP)**: a technique that evenly partitions the data horizontally on the number of machines in the cluster. In particular, it partitions the relational tables we have according to (n) number of machines in the cluster.
 
@@ -90,10 +92,13 @@ _[SP2Bench Data Generator](http://dbis.informatik.uni-freiburg.de/index.php?proj
 
 We used the same approach to load the data into the tables of the Apache Hive data warehouse using a created database for our datasets. Data conversion to Hive files requires to enable the support for Hive in the Spark session configuration using the _enableHiveSupport_ function. Notably, we have used another approach for creating Hive tables and loading data into them. We use [HQL queries](https://github.com/DataSystemsGroupUT/SPARKSQLRDFBenchmarking/tree/master/Datasets/HiveQueriesLoading) rough the hive CLI to create tables and load data in the form of the three differnt Relational schemas.
 
+
+* Note that: we are on the process of replicating our work on the "WatDiv" benchmark dataset. 
+
+
 ### Datasets
 -----
 The SP2Bench Benchmark is scalable benchmark, whichj means it comprise a data generator that enables generatring arbitrarly large RDF datasets. For our First Phase of this project (Centralized Experiments), we generated datasets with the sizes [100K, 1M, and 10M] triples. While, for the second phase (Distributed experiments), we scale up to larger datasets with the sizes [100M, 250M, and 500M] triples.
-
 
 
 |      | ST   |      |       |         | VP     |        |        |         | PT     |       |       |         |
@@ -105,7 +110,7 @@ The SP2Bench Benchmark is scalable benchmark, whichj means it comprise a data ge
 
 
 
-- For **reproducability**, We put here **100K** triples dataset alongside their relational schema conversions in different file formats. you can find these datasets [here](https://github.com/DataSystemsGroupUT/SPARKSQLRDFBenchmarking/tree/master/Datasets).
+- For **reproducability**, We put here the **100K** triples dataset alongside their relational schema conversions in different file formats. you can find these datasets [here](https://github.com/DataSystemsGroupUT/SPARKSQLRDFBenchmarking/tree/master/Datasets).
 
 - We couldn't upload the **100M** datsets. Indeed it's quite larg dataset with for all the schema (ST,VT, PT, WPT, ExtVP,..) and for all the storage file formats.  
 - Alternatively, you can use the SP2Bench generator (Download from [here](http://dbis.informatik.uni-freiburg.de/index.php?project=SP2B/download.php)) for generating larger datasets. We keep spark project for converting the datasets into various file formats (i.e from CSV into Parquet, ORC, Avro,..) and storing them directly to HDFS.
@@ -149,7 +154,7 @@ In the directory of [Scirpts](https://github.com/DataSystemsGroupUT/SPARKSQLRDFB
 
 ### Results
 -----
- * Centralized Expeiments results (single machine, smaller datsets)
+  * Centralized Expeiments results (single machine, smaller datsets)
     * [Centralized Experiments](ResultsCenteralized.md)
   
   * Distributed Experiments
@@ -160,17 +165,21 @@ In the directory of [Scirpts](https://github.com/DataSystemsGroupUT/SPARKSQLRDFB
     * Diagnostic Analytics:
       * [Diagnostic Analyisis of the results (answering the "why?" question)](DescriptiveAnlaytics.md#diagnostic-analysis)  
     * Prescriptive analysis 
-      * ([Individual "Bench-Ranking"](IndividualRankingCriteria.md)):
+      * ([Single-Dimensional "Bench-Ranking"](IndividualRankingCriteria.md)):
         * [Relational Schema Ranking Scores](SchemaRanking.md)
         * [Partitioning Techs. Ranking Scores](PartitioningRanking.md)
         * [Storage Backends Ranking Scores](StorageRanking.md)
+        * We keep all the single-dimensional ranking for the above rankings for the results of the experiments that exlude **"Hive"** as a 5^th storage backend can be accessed from the above page links.
         * We keep all the intermediary **ranking tables** and logs calculations of all the above ranking plots of the dimensions in this [link](https://docs.google.com/spreadsheets/d/1cff9-IVtg4d113TSkdGOBVCmOt6NCOdrorqFhK04g5E/edit?usp=sharing).
-      * ([Combined "Bench-Ranking"](CombinedRankingCriteria.md)):
-        * Find and download the combined-Ranking criteria results from this [link](https://docs.google.com/spreadsheets/d/1cff9-IVtg4d113TSkdGOBVCmOt6NCOdrorqFhK04g5E/edit?usp=sharing).
-       * For the geomtric representation(i.e.,"Triangle Area") of the experiments three dimensions (schema;partitoning;storage), we keep examples of the top-ranked configurations according to all the proposed ranking criteria in this online-sheet [here](https://docs.google.com/spreadsheets/d/18QeAl6wYp8FgloX3Ia-xM2hBWR7qRXiB3AHSf5zTMyc/edit?usp=sharing). 
+
+      * ([Multi-Dimensional "Bench-Ranking"](MultiDimensionalRankingCriteria.md)):
+        * Find and download the multi-dim. Ranking criteria (Pareto front optimal) results from this [link](https://docs.google.com/spreadsheets/d/1cff9-IVtg4d113TSkdGOBVCmOt6NCOdrorqFhK04g5E/edit?usp=sharing).
+        * pareto optimal results (shown as tables for the mentioned dataset scales) can be shown (under pareto results section) [here](https://datasystemsgrouput.github.io/SPARKSQLRDFBenchmarking/MultiDimensionalRankingCriteria.html), also can be shwon as matblot 3d figures in the same webpage.
+
+
        * [Bench-Ranking goodness](RankingGoodness.md) results:
          * In this [link](https://docs.google.com/spreadsheets/d/1cff9-IVtg4d113TSkdGOBVCmOt6NCOdrorqFhK04g5E/edit?usp=sharing), we keep the ranking goodness metrics/measures (coherence, and confidence) and results for all the ranking criteria and across datasets.
-    * **Phase#4** results (Schema Advancments Benchmarking):
+    * **Phase#3** results (Schema Advancments Benchmarking):
       * [Relational Schemata Optimizattion VS BaseLine Schemata Results](OptimizedVsBaselinComparsions.md)  
   
 
