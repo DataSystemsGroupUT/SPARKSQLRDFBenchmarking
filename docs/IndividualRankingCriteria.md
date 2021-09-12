@@ -34,10 +34,15 @@ In the above example, each Rank Score (**R**) value for a dimension is calculate
 
 Similarly, VT, and PT schemata are ranked using the above equation, but according to their 1st, 2nd, and 3rd occurences, they have differnt Rank-Score values of 0.73, 0.55, respectively.
 
-**Note:** When we apply the generalized ranking formula in Equation (1), we get three rankings for our three mentioned experimental dimensions (Relational Schemata; Partitioning, and Storage Backends), namely, **"R_s"** , **"R_p"**, and **"R_f"** accordingly. 
+**Note:** When we apply the generalized ranking formula in Equation (1), we get three rankings for our three mentioned experimental dimensions (Relational Schemata; Partitioning, and Storage Backends), namely, **"R_s"** , **"R_p"**, and **"R_f"** accordingly.
+
+Applying the above ranking function, we get rank scores for the three diemsnions. In particular, we pivot on one dimension options and get scores across the other two dimensions. Figures of ranking can be found [here](https://datasystemsgrouput.github.io/SPARKSQLRDFBenchmarking/Results), specifically under the (Single-dimensional “Bench-Ranking”). 
+
+* Please notice that Previously, we run experiments that include "Hive" as a 5th storage backend, Therefore, we put both pile of figures that include Hive and the ones that exclude it.
 
 
-<h4 id="challenges"> Individual Ranking Criteria (R_s, R_p, and R_f) challenges: </h4>
+
+<h4 id="challenges"> Single-dimensional Ranking Criteria (R_s, R_p, and R_f) challenges: </h4>
 
 Applying  the  ranking  criteria  independently for each dimension supports explanations of the results [5]. Nevertheless,we observed that ranking prescriptions  are incoherent across dimensions. The most reasonable explanation is that these *mono-dimensional* ranking criteria can not capturea general view, leading to decisive trade-offs.
 

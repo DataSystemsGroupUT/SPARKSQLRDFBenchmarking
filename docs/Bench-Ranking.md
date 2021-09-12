@@ -33,11 +33,9 @@ The proposed ranking criteria provide an accurate yet simple way that supports t
 
 
 
-
 <h3 id="gartner"> Gartner's Analysis Framework:</h3>
 
-Here, we reflect on the gap of performance analysis in existing works that use Big Data frameworks for RDF processing. 
-In particular, we narrow down by discussing the problem of performance analysis alongside a well-known decision-making framework from **Gartner** shown below.
+Here, we reflect on the gap of performance analysis in existing works that use Big Data frameworks for RDF processing. In particular, we narrow down by discussing the problem of performance analysis alongside a well-known decision-making framework from **Gartner** shown below.
 
 
 <div style="text-align:center"> <img src="images/mygartner.png" width="500" height="250" /> </div>
