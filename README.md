@@ -43,7 +43,7 @@ In this phase, we repeated the phase#2 experimetns, but this time we extended ou
  - [Riccardo Tommasini](https://rictomm.me/)
  - [Feras Awaysheh](https://bigdata.cs.ut.ee/feras-m-awaysheh)
  - [Sherif Sakr](https://bigdata.cs.ut.ee/prof-dr-sherif-sakr)
- - [Sadiq Eyvazov](#)
+ - [Sadiq Eyvazov](http://github.com)
  - [Carlos Ramos](https://github.com/0x7b1)
 
 
