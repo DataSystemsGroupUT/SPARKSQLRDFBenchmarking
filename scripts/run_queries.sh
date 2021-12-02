@@ -28,7 +28,7 @@ for i in "${!sizes[@]}"; do
             --executor-cores 4 \
             --num-executors 19 \
             --deploy-mode client \
-            /home/hadoop/rdfbenchmarkingproject_2.12-0.1 ${sizes[$i]} ${partition[$p]}
+            /home/hadoop/rdfbenchmarkingproject_2.12-0.1.jar ${sizes[$i]} ${partition[$p]}
         done
       done
     done
