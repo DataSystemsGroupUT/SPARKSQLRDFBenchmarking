@@ -106,8 +106,12 @@
 [0m[[0m[0mdebug[0m] [0m[0m	  /Users/ragab/IdeaProjects/SPARKSQLRDFBenchmarking/ProjectSourceCode/target/scala-2.12/classes/ee/ut/cs/bigdata/watdiv/querying/orc/SingleStatementTableQP.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	ee/ut/cs/bigdata/watdiv/querying/parquet[0m
 [0m[[0m[0mdebug[0m] [0m[0m	  /Users/ragab/IdeaProjects/SPARKSQLRDFBenchmarking/ProjectSourceCode/target/scala-2.12/classes/ee/ut/cs/bigdata/watdiv/querying/parquet[0m
+[0m[[0m[0mdebug[0m] [0m[0m	ee/ut/cs/bigdata/watdiv/querying/parquet/WPTTable.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/ragab/IdeaProjects/SPARKSQLRDFBenchmarking/ProjectSourceCode/target/scala-2.12/classes/ee/ut/cs/bigdata/watdiv/querying/parquet/WPTTable.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	ee/ut/cs/bigdata/watdiv/querying/parquet/PropertyTablesQP$.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	  /Users/ragab/IdeaProjects/SPARKSQLRDFBenchmarking/ProjectSourceCode/target/scala-2.12/classes/ee/ut/cs/bigdata/watdiv/querying/parquet/PropertyTablesQP$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	ee/ut/cs/bigdata/watdiv/querying/parquet/WPTTable$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/ragab/IdeaProjects/SPARKSQLRDFBenchmarking/ProjectSourceCode/target/scala-2.12/classes/ee/ut/cs/bigdata/watdiv/querying/parquet/WPTTable$.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	ee/ut/cs/bigdata/watdiv/querying/parquet/VerticalTablesQP.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	  /Users/ragab/IdeaProjects/SPARKSQLRDFBenchmarking/ProjectSourceCode/target/scala-2.12/classes/ee/ut/cs/bigdata/watdiv/querying/parquet/VerticalTablesQP.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	ee/ut/cs/bigdata/watdiv/querying/parquet/VerticalTablesQP$.class[0m

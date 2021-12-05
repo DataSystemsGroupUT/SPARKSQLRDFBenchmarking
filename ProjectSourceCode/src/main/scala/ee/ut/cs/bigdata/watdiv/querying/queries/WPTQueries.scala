@@ -3,19 +3,19 @@ package ee.ut.cs.bigdata.watdiv.querying.queries
 class WPTQueries {
  //Complex
 
-  val q1 =
+  val c1 =
     """
 
   """.stripMargin
 
 
-  val q2 =
+  val c2 =
     """
 
 """.stripMargin
 
 
-  val q3 =
+  val c3 =
     """
 
   """.stripMargin
@@ -25,33 +25,33 @@ class WPTQueries {
   // Snow-Flake (F)
 
 
-  val q4 =
+  val f1 =
     """
 
     """.stripMargin
 
 
-  val q5 =
+  val f2 =
     """
 
     """.stripMargin
 
 
-  val q6 =
+  val f3 =
 
     """
 
   """.stripMargin
 
 
-  val q7 =
+  val f4 =
 
     """
 
     """.stripMargin
 
 
-  val q8 =
+  val f5 =
     """
 
     """.stripMargin
@@ -60,31 +60,31 @@ class WPTQueries {
   // Linear (L)
 
 
-  val q9 =
+  val l1 =
     """
 
     """.stripMargin
 
 
-  val q10 =
+  val l2 =
     """
 
     """.stripMargin
 
 
-  val q11 =
+  val l3 =
     """
 
     """.stripMargin
 
 
-  val q12 =
+  val l4 =
     """
 
     """.stripMargin
 
 
-  val q13 =
+  val l5 =
     """
 
     """.stripMargin
@@ -93,43 +93,46 @@ class WPTQueries {
   //Star (S)
 
 
-  val q14 =
+  val s1 =
     """
 
     """.stripMargin
 
 
-  val q15 =
+  val s2 =
     """
 
     """.stripMargin
 
 
-  val q16 =
+  val s3 =
+    """
+      | SELECT DISTINCT WPT.Subject, WPT.caption, WPT.hasGenr, WPT.publisher
+      | FROM WPT
+      | WHERE WPT.type="http://db.uwaterloo.ca/~galuc/wsdbm/ProductCategory4"
+      |""".stripMargin
+
+
+
+  val s4 =
     """
 
     """.stripMargin
 
 
-  val q17 =
+  val s5 =
     """
 
     """.stripMargin
 
 
-  val q18 =
+  val s6 =
     """
 
     """.stripMargin
 
 
-  val q19 =
-    """
-
-    """.stripMargin
-
-
-  val q20 =
+  val s7 =
     """
 
     """.stripMargin

@@ -30,7 +30,7 @@ object CreateWPTTable {
 //      .config("spark.yarn.executor.memoryOverhead", "4096")
       .getOrCreate()
 
-    println("Spark Session is created...")
+    println("Spark Session is created!")
 
     val ds = args(0) // value = {"100K", "100M", "500M, or "1B"}
     val path = s"hdfs://172.17.77.48:9000/user/hadoop/RDFBench/WATDIV/$ds"
@@ -1695,15 +1695,14 @@ object CreateWPTTable {
         |Full OUTER JOIN WPT4  ON WPTCombined2.Subject == WPT4.Subject
         |""".stripMargin)
 
-//    wptCombined3.write.parquet(s"$path/WPT/VHDFS/Parquet/" + "WidePropertyTable.parquet")
-//    println("Saved  wptCombined1  In  Parquet.")
+//    wptCombined3.coalesce(1).write.parquet(s"$path/WPT/VHDFS/Parquet/" + "WidePropertyTable.parquet")
+//    println("Saved  WPT  In  Parquet.")
 
+    wptCombined3.coalesce(1).write.format("csv").option("header", "true").save(s"$path/WPT/VHDFS/CSV/" + "WidePropertyTable.csv")
+    println("Saved  WPT In CSV.")
 
-//    wptCombined3.coalesce(1).write.format("csv").option("header", "true").save(s"$path/WPT/VHDFS/CSV/" + "WidePropertyTable.csv")
-//    println("Saved  WPT In CSV.")
-
-    wptCombined3.coalesce(1).write.orc(s"$path/WPT/VHDFS/ORC/" + "WidePropertyTable.orc")
-    println("Saved  WPT In  ORC.")
+//    wptCombined3.coalesce(1).write.orc(s"$path/WPT/VHDFS/ORC/" + "WidePropertyTable.orc")
+//    println("Saved  WPT In  ORC.")
 
 //    wptCombined3.coalesce(1).write.format("avro").save(s"$path/WPT/VHDFS/Avro/" + "WidePropertyTable.avro")
 //    println("Saved  WPT In  Avro.")
