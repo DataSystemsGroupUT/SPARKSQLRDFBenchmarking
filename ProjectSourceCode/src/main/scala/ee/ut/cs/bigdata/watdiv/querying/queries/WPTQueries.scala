@@ -1,7 +1,7 @@
 package ee.ut.cs.bigdata.watdiv.querying.queries
 
 class WPTQueries {
- //Complex
+  //Complex
 
   val c1 =
     """
@@ -107,11 +107,13 @@ class WPTQueries {
 
   val s3 =
     """
-      | SELECT DISTINCT WPT.Subject, WPT.caption, WPT.hasGenr, WPT.publisher
+      | SELECT DISTINCT WPT.Subject, WPT.caption, WPT.hasGenre, WPT.publisher
       | FROM WPT
       | WHERE WPT.type="http://db.uwaterloo.ca/~galuc/wsdbm/ProductCategory4"
+      | AND WPT.caption is not null
+      | AND WPT.hasGenre is not null
+      | AND WPT.publisher is not null
       |""".stripMargin
-
 
 
   val s4 =
@@ -128,12 +130,19 @@ class WPTQueries {
 
   val s6 =
     """
-
-    """.stripMargin
+      |SELECT DISTINCT WPT.Subject, WPT.conductor, WPT.type
+      |FROM WPT
+      |WHERE WPT.hasgenre="http://db.uwaterloo.ca/~galuc/wsdbm/SubGenre115"
+      |AND WPT.conductor is not null
+      |AND WPT.type  is not null
+      |""".stripMargin
 
 
   val s7 =
     """
+      |
+      |""".stripMargin
 
-    """.stripMargin
+
 }
+

@@ -10,7 +10,7 @@ object WPTTable {
 
   def main(args: Array[String]): Unit = {
 
-    println("Starting...")
+    println("Starting....")
     val conf = new SparkConf()
     Logger.getLogger("org").setLevel(Level.OFF)
     Logger.getLogger("akka").setLevel(Level.OFF)
@@ -52,11 +52,12 @@ object WPTTable {
 //      new WPTQueries l5,
 //      new WPTQueries s1,
 //      new WPTQueries s2,
-        new WPTQueries s3
+        new WPTQueries s3,
 //       ,
 //      new WPTQueries s4,
 //      new WPTQueries s5,
-//      new WPTQueries s6,
+      new WPTQueries s6
+       //      ,
 //      new WPTQueries s7
     )
 
@@ -66,6 +67,7 @@ object WPTTable {
       val startTime = System.nanoTime()
       val df_count = spark.sql(query).count()
       println(df_count)
+      spark.sql(query).show(1000,false)
       //df.take(100).foreach(println)
 //      val endTime = System.nanoTime()
 //      val result = (endTime - startTime).toDouble / 1000000000
