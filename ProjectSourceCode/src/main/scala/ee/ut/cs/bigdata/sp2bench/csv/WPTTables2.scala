@@ -53,33 +53,27 @@ object WPTTables2 {
       new WPTQueries q6,
       new WPTQueries q8,
       new WPTQueries q10,
-      new WPTQueries q11,
-    )
+      new WPTQueries q11)
 
     var count = 1
     for (query <- queries) {
-      // Run query and calculate the run time
+      //run query and calculate the run time
       val starttime = System.nanoTime()
-
       val df = spark.sql(query)
-//      //      df.take(10).foreach(println)
       df.take(100).foreach(println)
-//      println("-------> RECORDS", df.count())
-
       val endtime = System.nanoTime()
-      var result = ((endtime - starttime).toDouble / 1000000000).toString
-
-      println(s"Took $result sec")
+      val result = (endtime - starttime).toDouble / 1000000000
 
       //write the result into the log file
       if (count != queries.size) {
-        result += ","
+        Console.withOut(fos) {
+          print(result + ",")
+        }
+      } else {
+        Console.withOut(fos) {
+          println(result)
+        }
       }
-
-      Console.withOut(fos) {
-        print(result)
-      }
-
       count += 1
     }
 

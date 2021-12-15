@@ -39,24 +39,23 @@ object WPTTables2 {
     //create file to write the query run time results    
     val fos = new FileOutputStream(new File(s"/home/hadoop/RDFBenchMarking/logs2/$ds/avro/WPT/$ds.txt"), true)
 
-    val queries = List(new WPTQueries q1,
+    val queries = List(
+      new WPTQueries q1,
       new WPTQueries q2,
       new WPTQueries q3,
-//      new WPTQueries q4,
+      new WPTQueries q4,
       new WPTQueries q5,
       new WPTQueries q6,
       new WPTQueries q8,
       new WPTQueries q10,
-      new WPTQueries q11,
-    )
+      new WPTQueries q11)
 
     var count = 1
     for (query <- queries) {
       //run query and calculate the run time
       val starttime = System.nanoTime()
       val df = spark.sql(query)
-      println("-------> RECORDS", df.count())
-      //      df.take(100).foreach(println)
+      df.take(100).foreach(println)
       val endtime = System.nanoTime()
       val result = (endtime - starttime).toDouble / 1000000000
 
@@ -72,6 +71,7 @@ object WPTTables2 {
       }
       count += 1
     }
+
     println("All Queries are Done - Avro - WPT!")
 
   }

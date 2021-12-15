@@ -1833,13 +1833,14 @@ object CreateWPTTable {
 //
 //  }
 
-  def createWPTTableViaFlattening (sparkSession: SparkSession,path:String): Unit ={
+  def createWPTTableViaFlattening (sparkSession: SparkSession, dbpath:String, path:String): Unit ={
 
 
     val  spark:SparkSession = sparkSession
     val pathval:String=path
+    val watDivDBPath:String=dbpath
 
-    val wptDF = spark.read.format("parquet").load(pathval+"/wide_property_table").toDF()
+    val wptDF = spark.read.format("parquet").load(watDivDBPath+"wide_property_table").toDF()
 
     import org.apache.spark.sql.functions._
 
@@ -1907,10 +1908,14 @@ object CreateWPTTable {
 
     val finalFalt=spark.sql(
       """
-        |SELECT SDF.*, flattened1.http___purl_org_goodrelations_offers, flattened2.http___schema_org_actor, flattened3.http___purl_org_stuff_rev_hasReview, flattened4.http___schema_org_language,
-        |flattened5.http___www_w3_org_1999_02_22_rdf_syntax_ns_type, flattened6.http___schema_org_employee, flattened7.http___schema_org_award, flattened8.http___schema_org_editor,
-        |flattened9.http___schema_org_trailer, flattened10.http___db_uwaterloo_ca__galuc_wsdbm_makesPurchase, flattened11.http___db_uwaterloo_ca__galuc_wsdbm_hasGenre, flattened12.http___ogp_me_ns_tag,
-        |flattened13.http___schema_org_eligibleRegion, flattened14.http___db_uwaterloo_ca__galuc_wsdbm_follows, flattened15.http___schema_org_author, flattened16.http___db_uwaterloo_ca__galuc_wsdbm_likes,
+        |SELECT SDF.*, flattened1.http___purl_org_goodrelations_offers, flattened2.http___schema_org_actor,
+        |flattened3.http___purl_org_stuff_rev_hasReview, flattened4.http___schema_org_language,
+        |flattened5.http___www_w3_org_1999_02_22_rdf_syntax_ns_type, flattened6.http___schema_org_employee,
+        |flattened7.http___schema_org_award, flattened8.http___schema_org_editor,
+        |flattened9.http___schema_org_trailer, flattened10.http___db_uwaterloo_ca__galuc_wsdbm_makesPurchase,
+        |flattened11.http___db_uwaterloo_ca__galuc_wsdbm_hasGenre, flattened12.http___ogp_me_ns_tag,
+        |flattened13.http___schema_org_eligibleRegion, flattened14.http___db_uwaterloo_ca__galuc_wsdbm_follows,
+        |flattened15.http___schema_org_author, flattened16.http___db_uwaterloo_ca__galuc_wsdbm_likes,
         |flattened17.http___db_uwaterloo_ca__galuc_wsdbm_subscribes, flattened18.http___db_uwaterloo_ca__galuc_wsdbm_friendOf
         |FROM SDF
         |LEFT JOIN flattened1 ON   flattened1.s = SDF.s
@@ -1933,35 +1938,48 @@ object CreateWPTTable {
         |LEFT JOIN flattened18  ON  flattened18.s = SDF.s
         |""".stripMargin)
 
-//    println(finalFalt.count())
+    println("start writing the DF")
+
+    finalFalt.write.parquet(s"$path/WPT/VHDFS/Parquet/" + "WidePropertyTable.parquet")
+    println("Saved  WPT  In  Parquet.")
+
+    finalFalt.write.orc(s"$path/WPT/VHDFS/ORC/" + "WidePropertyTable.orc")
+    println("Saved  WPT In  ORC.")
+
+    finalFalt.write.format("avro").save(s"$path/WPT/VHDFS/Avro/" + "WidePropertyTable.avro")
+    println("Saved  WPT In  Avro.")
+
+    finalFalt.write.format("csv").option("header", "true").save(s"$pathval/WPT/VHDFS/CSV/" + "WidePropertyTable.csv")
+    println("Saved  WPT In CSV.")
 
 
-    finalFalt.createOrReplaceTempView("WPT")
+//    finalFalt.createOrReplaceTempView("WPT")
+
+//     println(finalFalt.count())
+
+// val s3 =
+//    """
+//      | SELECT DISTINCT WPT.s, WPT.http___schema_org_caption, WPT.http___db_uwaterloo_ca__galuc_wsdbm_hasGenre, WPT.http___schema_org_publisher
+//      | FROM WPT
+//      | WHERE WPT.http___www_w3_org_1999_02_22_rdf_syntax_ns_type="<http://db.uwaterloo.ca/~galuc/wsdbm/ProductCategory4>"
+//      | AND WPT.http___schema_org_caption is not null
+//      | AND WPT.http___db_uwaterloo_ca__galuc_wsdbm_hasGenre is not null
+//      | AND WPT.http___schema_org_publisher is not null
+//      |""".stripMargin
+//
+//  val s6 =
+//    """
+//      |SELECT DISTINCT WPT.s, WPT.http___purl_org_ontology_mo_conductor, WPT.http___www_w3_org_1999_02_22_rdf_syntax_ns_type
+//      |FROM WPT
+//      |WHERE WPT.http___db_uwaterloo_ca__galuc_wsdbm_hasGenre="<http://db.uwaterloo.ca/~galuc/wsdbm/SubGenre115>"
+//      |AND WPT.http___purl_org_ontology_mo_conductor is not null
+//      |AND WPT.http___www_w3_org_1999_02_22_rdf_syntax_ns_type  is not null
+//      |""".stripMargin
 
 
- val s3 =
-    """
-      | SELECT DISTINCT WPT.s, WPT.http___schema_org_caption, WPT.http___db_uwaterloo_ca__galuc_wsdbm_hasGenre, WPT.http___schema_org_publisher
-      | FROM WPT
-      | WHERE WPT.http___www_w3_org_1999_02_22_rdf_syntax_ns_type="<http://db.uwaterloo.ca/~galuc/wsdbm/ProductCategory4>"
-      | AND WPT.http___schema_org_caption is not null
-      | AND WPT.http___db_uwaterloo_ca__galuc_wsdbm_hasGenre is not null
-      | AND WPT.http___schema_org_publisher is not null
-      |""".stripMargin
-
-  val s6 =
-    """
-      |SELECT DISTINCT WPT.s, WPT.http___purl_org_ontology_mo_conductor, WPT.http___www_w3_org_1999_02_22_rdf_syntax_ns_type
-      |FROM WPT
-      |WHERE WPT.http___db_uwaterloo_ca__galuc_wsdbm_hasGenre="<http://db.uwaterloo.ca/~galuc/wsdbm/SubGenre115>"
-      |AND WPT.http___purl_org_ontology_mo_conductor is not null
-      |AND WPT.http___www_w3_org_1999_02_22_rdf_syntax_ns_type  is not null
-      |""".stripMargin
-
-
-    println(spark.sql(s3).count())
-
-    println(spark.sql(s6).count())
+//    println(spark.sql(s3).count())
+//
+//    println(spark.sql(s6).count())
 
 
 
@@ -2068,12 +2086,12 @@ object CreateWPTTable {
       .getOrCreate()
 
 
-    println("Spark Session is created!!!")
+    println("Spark Session is created")
 
-//    val ds = args(0) // value = {"100K)", "100M", "500M, or "1B"}
-//    val path = s"hdfs://172.17.77.48:9000/user/hadoop/RDFBench/WATDIV/$ds"
+     val ds = args(0) // value = {"100K)", "100M", "500M, or "1B"}
+     val path = s"hdfs://172.17.77.48:9000/user/hadoop/RDFBench/WATDIV/$ds"
 
-    createWPTTableViaFlattening(spark,"/user/hive/warehouse/watdiv.db")
+    createWPTTableViaFlattening(spark,"/user/hive/warehouse/watdiv.db/", path)
 
   }
 }

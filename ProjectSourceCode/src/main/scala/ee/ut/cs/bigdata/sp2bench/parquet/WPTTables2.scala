@@ -38,10 +38,11 @@ object WPTTables2 {
     //create file to write the query run time results    
     val fos = new FileOutputStream(new File(s"/home/hadoop/RDFBenchMarking/logs2/$ds/parquet/WPT/$ds.txt"), true)
 
-    val queries = List(new WPTQueries q1,
+  val queries = List(
+      new WPTQueries q1,
       new WPTQueries q2,
       new WPTQueries q3,
-//      new WPTQueries q4,
+      new WPTQueries q4,
       new WPTQueries q5,
       new WPTQueries q6,
       new WPTQueries q8,
@@ -69,6 +70,7 @@ object WPTTables2 {
       }
       count += 1
     }
+
     println("All Queries are Done - Parquet- WPT!")
 
   }
