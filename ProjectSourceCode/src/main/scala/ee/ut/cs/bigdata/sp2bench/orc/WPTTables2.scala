@@ -11,7 +11,7 @@ import org.apache.spark.storage.StorageLevel._
 
 object WPTTables2 {
   def main(args: Array[String]): Unit = {
-    println("ORC")
+    println("Starting ORC")
 
     val conf = new SparkConf()
     Logger.getLogger("org").setLevel(Level.OFF)

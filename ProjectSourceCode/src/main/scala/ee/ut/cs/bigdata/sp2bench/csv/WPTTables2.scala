@@ -11,7 +11,7 @@ import org.apache.spark.storage.StorageLevel._
 
 object WPTTables2 {
   def main(args: Array[String]): Unit = {
-    println("Started.. WPTTables2 - v15")
+    println("Starting CSV")
 
     val conf = new SparkConf()
     Logger.getLogger("org").setLevel(Level.OFF)
