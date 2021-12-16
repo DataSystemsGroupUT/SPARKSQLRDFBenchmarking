@@ -21,7 +21,7 @@ for i in "${!sizes[@]}"; do
       for p in "${!partition[@]}"; do
         for ((counter = 0; counter < n; counter++)); do
           spark-submit \
-            --class "ee.ut.cs.bigdata.watdiv.querying.${file_formats[$j]}.${classes[$k]}" \
+            --class "ee.ut.cs.bigdata.sp2bench.${file_formats[$j]}.${classes[$k]}" \
             --master yarn \
             --driver-memory 100G \
             --executor-memory 16G \
