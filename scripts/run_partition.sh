@@ -1,7 +1,7 @@
 #!/bin/bash
 
-BENCHMARK=watdiv
-SCHEMA=PropertyTablesPartition
+BENCHMARK=sp2bench
+SCHEMA=WPTTablesPartition
 FORMATS=(parquet avro csv orc)
 DS=100M
 PARTITION=Predicate # Subject | Horizontal | Predicate
@@ -10,7 +10,7 @@ RDF_BENCHMARK_JAR="/home/hadoop/SPARKSQLRDFBenchmarking/ProjectSourceCode/target
 
 for FORMAT in ${FORMATS[@]}; do
 
-  RDF_BENCHMARK_CLASS="ee.ut.cs.bigdata.$BENCHMARK.partitioning.$FORMAT.$SCHEMA"
+  RDF_BENCHMARK_CLASS="ee.ut.cs.bigdata.$BENCHMARK.$FORMAT.$SCHEMA"
   
   spark-submit \
     --class $RDF_BENCHMARK_CLASS \
