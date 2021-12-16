@@ -104,9 +104,9 @@ class WPTQueries {
       |AND WPT.SERIALNUMBER is not null
       |AND WPT.VALIDFROM is not null
       |AND WPT.VALIDTHROUGH is not null
-      |WPT.ELIGIBLEQUANTITY is not null
-      |WPT.ELIGIBLEREGION is not null
-      |WPT.PRICEVALIDUNTIL is not null
+      |AND WPT.ELIGIBLEQUANTITY is not null
+      |AND WPT.ELIGIBLEREGION is not null
+      |AND WPT.PRICEVALIDUNTIL is not null
       |""".stripMargin
 
 
