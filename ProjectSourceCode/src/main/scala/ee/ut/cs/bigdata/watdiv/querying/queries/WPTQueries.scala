@@ -98,7 +98,7 @@ class WPTQueries {
       |SELECT WPT.SUBJECT, WPT.INCLUDES, WPT.PRICE, WPT.SERIALNUMBER, WPT.VALIDFROM, WPT.VALIDTHROUGH,
       |WPT.ELIGIBLEQUANTITY, WPT.ELIGIBLEREGION, WPT.PRICEVALIDUNTIL
       |FROM WPT
-      |WHERE WPT.OFFERS='http://db.uwaterloo.ca/~galuc/wsdbm/Retailer107'
+      |WHERE WPT.OFFERS='http://db.uwaterloo.ca/~galuc/wsdbm/Retailer4'
       |AND WPT.INCLUDES  is not null
       |AND WPT.PRICE is not null
       |AND WPT.SERIALNUMBER is not null
