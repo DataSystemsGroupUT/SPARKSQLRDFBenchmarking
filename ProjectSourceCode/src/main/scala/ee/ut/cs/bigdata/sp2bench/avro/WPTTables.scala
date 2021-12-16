@@ -166,7 +166,8 @@ object WPTTables {
       println("Unzipped")
 
       result.createOrReplaceTempView("WPT")
-    } else {
+    }
+    else {
       val RDFDFWPT = spark.read.format("avro").load(s"$path/WPT$partitionType.avro").toDF()
       RDFDFWPT.createOrReplaceTempView("WPT")
     }
@@ -178,7 +179,7 @@ object WPTTables {
       new WPTQueries q1,
       new WPTQueries q2,
       new WPTQueries q3,
-      //      new WPTQueries q4,
+      new WPTQueries q4,
       new WPTQueries q5,
       new WPTQueries q6,
       new WPTQueries q8,

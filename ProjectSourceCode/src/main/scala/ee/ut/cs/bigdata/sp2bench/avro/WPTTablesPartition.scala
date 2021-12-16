@@ -36,14 +36,17 @@ object WPTTablesPartition {
 
       RDFDFWPT.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(s"$path/WPTSubject.avro")
       println("Avro WPT partitioned and saved! Subject based partitioning!")
-    } else if (partitionType == "horizontal") {
+    }
+
+    else if (partitionType == "horizontal") {
       //read tables from HDFS
       val RDFDFWPT = spark.read.format("avro").load(s"$path/WidePropertyTable.avro").toDF()
       println("Table is read!")
 
       RDFDFWPT.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(s"$path/WPTHorizontal.avro")
       println("Avro WPT partitioned and saved! Horizontal partitioning!")
-    } else if (partitionType == "predicate") {
+    }
+    else if (partitionType == "predicate") {
       // read splitted WPT tables
       val wptType = spark.read.format("avro").load(s"$path/WidePropertyTableType.avro").toDF()
       val wptName = spark.read.format("avro").load(s"$path/WidePropertyTableName.avro").toDF()
