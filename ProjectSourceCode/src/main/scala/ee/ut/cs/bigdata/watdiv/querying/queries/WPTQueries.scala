@@ -93,17 +93,30 @@ class WPTQueries {
   //Star (S)
 
 
-  val s1 =
+  val s1 = {
     """
-
-    """.stripMargin
+      |SELECT WPT.SUBJECT, WPT.INCLUDES, WPT.PRICE, WPT.SERIALNUMBER, WPT.VALIDFROM, WPT.VALIDTHROUGH, \
+      |WPT.ELIGIBLEQUANTITY, WPT.ELIGIBLEREGION, WPT.PRICEVALIDUNTIL
+      |FROM WPT
+      |WHERE WPT.OFFERS='http://db.uwaterloo.ca/~galuc/wsdbm/Retailer107'
+      |AND WPT.INCLUDES  is not null
+      |AND WPT.PRICE is not null
+      |AND WPT.SERIALNUMBER is not null
+      |AND WPT.VALIDFROM is not null
+      |AND WPT.VALIDTHROUGH is not null
+      |WPT.ELIGIBLEQUANTITY is not null
+      |WPT.ELIGIBLEREGION is not null
+      |WPT.PRICEVALIDUNTIL is not null
+      |""".stripMargin
 
 
   val s2 =
     """
-
-    """.stripMargin
-
+      |SELECT  WPT.Subject, WPT.Location, WPT.gender
+      |FROM WPT
+      |WHERE WPT.nationality="http://db.uwaterloo.ca/~galuc/wsdbm/Country4"
+      |AND WPT.type="http://db.uwaterloo.ca/~galuc/wsdbm/Role2"
+      |""".stripMargin
 
   val s3 =
     """
