@@ -37,7 +37,7 @@ object WPTTables2 {
 
 
     //create file to write the query run time results    
-    val fos = new FileOutputStream(new File(s"/home/hadoop/RDFBenchMarking/logs2/$ds/avro/WPT/$ds.txt"), true)
+    val fos = new FileOutputStream(new File(s"/home/hadoop/RDFBenchMarking/logs2/$ds/avro/WPT/$ds"+"VHDFS.txt"), true)
 
     val queries = List(
       new WPTQueries q1,

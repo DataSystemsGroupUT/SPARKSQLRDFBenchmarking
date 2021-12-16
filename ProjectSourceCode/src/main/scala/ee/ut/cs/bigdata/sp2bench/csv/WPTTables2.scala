@@ -42,7 +42,7 @@ object WPTTables2 {
     RDFDFWPT.createOrReplaceTempView("WPT")
 
     //create file to write the query run time results    
-    val fos = new FileOutputStream(new File(s"/home/hadoop/RDFBenchMarking/logs2/$ds/csv/WPT/$ds.txt"), true)
+    val fos = new FileOutputStream(new File(s"/home/hadoop/RDFBenchMarking/logs2/$ds/csv/WPT/$ds"+"VHDFS.txt"), true)
 
     val queries = List(
       new WPTQueries q1,
