@@ -112,15 +112,17 @@ class WPTQueries {
 
     val s2 =
       """
-        |SELECT  WPT.Subject, WPT.Location, WPT.gender
+        |SELECT  DISTINCT WPT.Subject, WPT.Location, WPT.gender
         |FROM WPT
         |WHERE WPT.nationality="http://db.uwaterloo.ca/~galuc/wsdbm/Country4"
         |AND WPT.type="http://db.uwaterloo.ca/~galuc/wsdbm/Role2"
+        |AND WPT.Location is not null
+        |AND WPT.gender is not null
         |""".stripMargin
 
     val s3 =
       """
-        | SELECT DISTINCT WPT.Subject, WPT.caption, WPT.hasGenre, WPT.publisher
+        | SELECT  WPT.Subject, WPT.caption, WPT.hasGenre, WPT.publisher
         | FROM WPT
         | WHERE WPT.type="http://db.uwaterloo.ca/~galuc/wsdbm/ProductCategory4"
         | AND WPT.caption is not null
