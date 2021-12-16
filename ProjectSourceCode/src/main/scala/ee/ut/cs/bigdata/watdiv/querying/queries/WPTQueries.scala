@@ -93,7 +93,7 @@ class WPTQueries {
   //Star (S)
 
 
-  val s1 = {
+  val s1 =
     """
       |SELECT WPT.SUBJECT, WPT.INCLUDES, WPT.PRICE, WPT.SERIALNUMBER, WPT.VALIDFROM, WPT.VALIDTHROUGH, \
       |WPT.ELIGIBLEQUANTITY, WPT.ELIGIBLEREGION, WPT.PRICEVALIDUNTIL
@@ -110,51 +110,51 @@ class WPTQueries {
       |""".stripMargin
 
 
-  val s2 =
-    """
-      |SELECT  WPT.Subject, WPT.Location, WPT.gender
-      |FROM WPT
-      |WHERE WPT.nationality="http://db.uwaterloo.ca/~galuc/wsdbm/Country4"
-      |AND WPT.type="http://db.uwaterloo.ca/~galuc/wsdbm/Role2"
-      |""".stripMargin
+    val s2 =
+      """
+        |SELECT  WPT.Subject, WPT.Location, WPT.gender
+        |FROM WPT
+        |WHERE WPT.nationality="http://db.uwaterloo.ca/~galuc/wsdbm/Country4"
+        |AND WPT.type="http://db.uwaterloo.ca/~galuc/wsdbm/Role2"
+        |""".stripMargin
 
-  val s3 =
-    """
-      | SELECT DISTINCT WPT.Subject, WPT.caption, WPT.hasGenre, WPT.publisher
-      | FROM WPT
-      | WHERE WPT.type="http://db.uwaterloo.ca/~galuc/wsdbm/ProductCategory4"
-      | AND WPT.caption is not null
-      | AND WPT.hasGenre is not null
-      | AND WPT.publisher is not null
-      |""".stripMargin
-
-
-  val s4 =
-    """
-
-    """.stripMargin
+    val s3 =
+      """
+        | SELECT DISTINCT WPT.Subject, WPT.caption, WPT.hasGenre, WPT.publisher
+        | FROM WPT
+        | WHERE WPT.type="http://db.uwaterloo.ca/~galuc/wsdbm/ProductCategory4"
+        | AND WPT.caption is not null
+        | AND WPT.hasGenre is not null
+        | AND WPT.publisher is not null
+        |""".stripMargin
 
 
-  val s5 =
-    """
+    val s4 =
+      """
 
     """.stripMargin
 
 
-  val s6 =
-    """
-      |SELECT DISTINCT WPT.Subject, WPT.conductor, WPT.type
-      |FROM WPT
-      |WHERE WPT.hasgenre="http://db.uwaterloo.ca/~galuc/wsdbm/SubGenre115"
-      |AND WPT.conductor is not null
-      |AND WPT.type  is not null
-      |""".stripMargin
+    val s5 =
+      """
+
+    """.stripMargin
 
 
-  val s7 =
-    """
-      |
-      |""".stripMargin
+    val s6 =
+      """
+        |SELECT DISTINCT WPT.Subject, WPT.conductor, WPT.type
+        |FROM WPT
+        |WHERE WPT.hasgenre="http://db.uwaterloo.ca/~galuc/wsdbm/SubGenre115"
+        |AND WPT.conductor is not null
+        |AND WPT.type  is not null
+        |""".stripMargin
+
+
+    val s7 =
+      """
+        |
+        |""".stripMargin
 
 
 }
