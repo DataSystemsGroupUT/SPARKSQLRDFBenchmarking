@@ -26,7 +26,7 @@ object SplitWPTTable {
     val path = s"hdfs://172.17.77.48:9000/user/hadoop/RDFBench/SP2B/$ds/WPT"
 
     //read tables from HDFS
-    val RDFDFWPT = spark.read.format("csv").option("header", "true").option("inferSchema", "true").load(s"$path/CSV/WidePropertyTable.csv").toDF()
+    val RDFDFWPT = spark.read.format("parquet").load(s"$path/Parquet/WidePropertyTable.parquet").toDF()
     println("WPT table is read!")
 
     val wptType = RDFDFWPT.select("Subject", "type")

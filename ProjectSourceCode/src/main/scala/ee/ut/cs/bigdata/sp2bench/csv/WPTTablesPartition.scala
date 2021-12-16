@@ -47,7 +47,9 @@ object WPTTablesPartition {
         .mode(SaveMode.Overwrite)
         .save(s"$path/WPTSubject.csv")
       println("CSV WPT partitioned and saved! Subject based partitioning!")
-    } else if (partitionType == "horizontal") {
+    }
+
+    else if (partitionType == "horizontal") {
       //read tables from HDFS
       val RDFDFWPT = spark.read
         .format("csv")
@@ -66,7 +68,8 @@ object WPTTablesPartition {
         .save(s"$path/WPTHorizontal.csv")
 
       println("CSV WPT partitioned and saved! Horizontal partitioning!")
-    } else if (partitionType == "predicate") {
+    }
+    else if (partitionType == "predicate") {
       println("Doing predicate")
       // read split WPT tables
       val wptType = spark.read.format("csv").option("header", "true").option("inferSchema", "true").load(s"$path/WidePropertyTableType.csv").toDF()
