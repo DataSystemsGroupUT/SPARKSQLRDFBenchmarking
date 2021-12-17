@@ -27,21 +27,9 @@ object ExtVPTables {
 
      //read tables from HDFS
 
-////C1
-//val SS_caption_hasReview = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/Parquet/SS/caption/hasReview.parquet")
-//val SS_contentRating_caption=spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/Parquet/SS/contentRating/caption.parquet")
-//val SS_text_caption=spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/Parquet/SS/text/caption.parquet")
-//val SS_hasReview_caption=spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/Parquet/hasReview/caption.parquet")
-////val SO_title_hasReview=spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/Parquet/") *********NOT FOUND in 10M **********
-////INSTEAD WE USE The following (VP	<rev__title>)
-//val VP_Rev_title=spark.read.format("parquet").load(s"$path/VP/VHDFS/Parquet/SS/rev_title.parquet")
-////val SS_reviewer_title=spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/Parquet/") *********NOT FOUND in 10M **********
-////INSTEAD WE USE The following <rev__reviewer>)
-//val VP_Reviewer=spark.read.format("parquet").load(s"$path/VP/VHDFS/Parquet/SS/reviewer.parquet")
-//val SS_actor_language=spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/Parquet/SS/actor/language.parquet")
-//val SS_language_actor=spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/Parquet/SS/language/actor.parquet")
 
-//C1 FOR 10M STRUCTURE
+
+//C1 FOR 10M STRUCTURE (WE NEED TO FIX THE PATH)
 val SS_caption_hasReview = spark.read.format("parquet").load(s"$path/ExtVP/Parquet/SS/caption/hasReview.parquet")
 val SS_contentRating_caption=spark.read.format("parquet").load(s"$path/ExtVP/Parquet/SS/contentRating/caption.parquet")
 val SS_text_caption=spark.read.format("parquet").load(s"$path/ExtVP/Parquet/SS/text/caption.parquet")
@@ -56,6 +44,22 @@ val SS_actor_language=spark.read.format("parquet").load(s"$path/ExtVP/Parquet/SS
 val SS_language_actor=spark.read.format("parquet").load(s"$path/ExtVP/Parquet/SS/language/actor.parquet")
 
 
+//C2 FOR 10M STRUCTURE
+val SO_eligibleRegion_offers = spark.read.format("parquet").load(s"$path/ExtVP/Parquet/SO/eligibleRegion/offers.parquet")
+val SS_offers_legalName = spark.read.format("parquet").load(s"$path/ExtVP/Parquet/SS/offers/legalName.parquet")
+val VP_LegalName=spark.read.format("parquet").load(s"$path/VP/Parquet/legalName.parquet")
+val OS_includes_hasReview = spark.read.format("parquet").load(s"$path/ExtVP/Parquet/OS/includes/hasReview.parquet")
+val OS_hasReview_totalVotes = spark.read.format("parquet").load(s"$path/ExtVP/Parquet/OS/hasReview/totalVotes.parquet")
+val SO_totalVotes_hasReview = spark.read.format("parquet").load(s"$path/ExtVP/Parquet/SO/totalVotes/hasReview.parquet")
+val OS_purchaseFor_hasReview = spark.read.format("parquet").load(s"$path/ExtVP/Parquet/OS/purchaseFor/hasReview.parquet")
+val SS_makesPurchase_homepage = spark.read.format("parquet").load(s"$path/ExtVP/Parquet/SS/makesPurchase/homepage.parquet")
+val SS_jobTitle_homepage = spark.read.format("parquet").load(s"$path/ExtVP/Parquet/SS/jobTitle/homepage.parquet")
+val SS_homepage_jobTitle = spark.read.format("parquet").load(s"$path/ExtVP/Parquet/SS/homepage/jobTitle.parquet")
+
+
+
+
+
   //C1
   SS_caption_hasReview.createOrReplaceTempView("SS_caption_hasReview")
   SS_contentRating_caption.createOrReplaceTempView("SS_contentRating_caption")
@@ -67,11 +71,23 @@ val SS_language_actor=spark.read.format("parquet").load(s"$path/ExtVP/Parquet/SS
   SS_language_actor.createOrReplaceTempView("SS_language_actor")
 
 
+    //C2
+   SO_eligibleRegion_offers.createOrReplaceTempView("SO_eligibleRegion_offers")
+   SS_offers_legalName.createOrReplaceTempView("SS_offers_legalName")
+   VP_LegalName.createOrReplaceTempView("VP_LegalName")
+   OS_includes_hasReview.createOrReplaceTempView("OS_includes_hasReview")
+   OS_hasReview_totalVotes.createOrReplaceTempView("OS_hasReview_totalVotes")
+   SO_totalVotes_hasReview.createOrReplaceTempView("SO_totalVotes_hasReview")
+   OS_purchaseFor_hasReview.createOrReplaceTempView("OS_purchaseFor_hasReview")
+   SS_makesPurchase_homepage.createOrReplaceTempView("SS_makesPurchase_homepage")
+   SS_jobTitle_homepage.createOrReplaceTempView("SS_jobTitle_homepage")
+   SS_homepage_jobTitle.createOrReplaceTempView("SS_homepage_jobTitle")
+
 
    //create file to write the query run time results
 //    val fos = new FileOutputStream(new File(s"/home/hadoop/RDFBenchMarking/logs2/$ds/orc/VP/$ds.txt"),true)
 
-    val queries = List(new ExtVPQueries c1_copy)
+    val queries = List(new ExtVPQueries c2)
 		     /*  new VTQueries q10) ,
 		       new VTQueries q3,
 		       new VTQueries q4,
