@@ -45,13 +45,13 @@ object ExtVPTables {
 val SS_caption_hasReview = spark.read.format("parquet").load(s"$path/ExtVP/Parquet/SS/caption/hasReview.parquet")
 val SS_contentRating_caption=spark.read.format("parquet").load(s"$path/ExtVP/Parquet/SS/contentRating/caption.parquet")
 val SS_text_caption=spark.read.format("parquet").load(s"$path/ExtVP/Parquet/SS/text/caption.parquet")
-val SS_hasReview_caption=spark.read.format("parquet").load(s"$path/ExtVP/Parquet/hasReview/caption.parquet")
+val SS_hasReview_caption=spark.read.format("parquet").load(s"$path/ExtVP/Parquet/SS/hasReview/caption.parquet")
 //val SO_title_hasReview=spark.read.format("parquet").load(s"$path/ExtVP/Parquet/") *********NOT FOUND in 10M **********
 //INSTEAD WE USE The following (VP	<rev__title>)
-val VP_Rev_title=spark.read.format("parquet").load(s"$path/VP/Parquet/SS/rev_title.parquet")
+val VP_Rev_title=spark.read.format("parquet").load(s"$path/VP/Parquet/rev_title.parquet")
 //val SS_reviewer_title=spark.read.format("parquet").load(s"$path/ExtVP/Parquet/") *********NOT FOUND in 10M **********
 //INSTEAD WE USE The following <rev__reviewer>)
-val VP_Reviewer=spark.read.format("parquet").load(s"$path/VP/Parquet/SS/reviewer.parquet")
+val VP_Reviewer=spark.read.format("parquet").load(s"$path/VP/Parquet/reviewer.parquet")
 val SS_actor_language=spark.read.format("parquet").load(s"$path/ExtVP/Parquet/SS/actor/language.parquet")
 val SS_language_actor=spark.read.format("parquet").load(s"$path/ExtVP/Parquet/SS/language/actor.parquet")
 
