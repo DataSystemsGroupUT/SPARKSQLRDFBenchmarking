@@ -56,7 +56,13 @@ val SS_makesPurchase_homepage = spark.read.format("parquet").load(s"$path/ExtVP/
 val SS_jobTitle_homepage = spark.read.format("parquet").load(s"$path/ExtVP/Parquet/SS/jobTitle/homepage.parquet")
 val SS_homepage_jobTitle = spark.read.format("parquet").load(s"$path/ExtVP/Parquet/SS/homepage/jobTitle.parquet")
 
-
+//C3 FOR 10M STRUCTURE
+val SS_Location_likes = spark.read.format("parquet").load(s"$path/ExtVP/Parquet/SS/Location/likes.parquet")
+val SS_age_likes = spark.read.format("parquet").load(s"$path/ExtVP/Parquet/SS/age/likes.parquet")
+val SS_gender_likes = spark.read.format("parquet").load(s"$path/ExtVP/Parquet/SS/gender/likes.parquet")
+val SS_givenName_likes = spark.read.format("parquet").load(s"$path/ExtVP/Parquet/SS/givenName/likes.parquet")
+val SS_likes_Location = spark.read.format("parquet").load(s"$path/ExtVP/Parquet/SS/likes/Location.parquet")
+val SS_friendOf_likes = spark.read.format("parquet").load(s"$path/ExtVP/Parquet/SS/friendOf/likes.parquet")
 
 
 
@@ -84,10 +90,19 @@ val SS_homepage_jobTitle = spark.read.format("parquet").load(s"$path/ExtVP/Parqu
    SS_homepage_jobTitle.createOrReplaceTempView("SS_homepage_jobTitle")
 
 
+    //C3
+    SS_Location_likes.createOrReplaceTempView("SS_Location_likes")
+    SS_age_likes.createOrReplaceTempView("SS_age_likes")
+    SS_gender_likes.createOrReplaceTempView("SS_gender_likes")
+    SS_givenName_likes.createOrReplaceTempView("SS_givenName_likes")
+    SS_likes_Location.createOrReplaceTempView("SS_likes_Location")
+    SS_friendOf_likes.createOrReplaceTempView("SS_friendOf_likes")
+
+
    //create file to write the query run time results
 //    val fos = new FileOutputStream(new File(s"/home/hadoop/RDFBenchMarking/logs2/$ds/orc/VP/$ds.txt"),true)
 
-    val queries = List(new ExtVPQueries c2)
+    val queries = List(new ExtVPQueries c3)
 		     /*  new VTQueries q10) ,
 		       new VTQueries q3,
 		       new VTQueries q4,

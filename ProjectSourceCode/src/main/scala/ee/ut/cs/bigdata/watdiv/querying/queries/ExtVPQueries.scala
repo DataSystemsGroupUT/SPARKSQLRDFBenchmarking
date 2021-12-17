@@ -76,11 +76,9 @@ val c2 =
       |SELECT tab0.v1 AS v1 , tab1.v0 AS v0 , tab4.v5 AS v5 , tab7.v7 AS v7 , tab5.v6 AS v6 , tab6.v4 AS v4 , tab9.v9 AS v9 , tab3.v3 AS v3 , tab8.v8 AS v8 , tab2.v2 AS v2
       |FROM    (SELECT subject AS v2
       |FROM SO_eligibleRegion_offers
-      |WHERE object = 'http://db.uwaterloo.ca/~galuc/wsdbm/Country3'
- ) tab2
- JOIN    (SELECT subject AS v0 , object AS v2
-  FROM SS_offers_legalName
- ) tab1
+      |WHERE object = 'http://db.uwaterloo.ca/~galuc/wsdbm/Country3') tab2
+      |JOIN    (SELECT subject AS v0 , object AS v2
+      |FROM SS_offers_legalName) tab1
  ON(tab2.v2=tab1.v2)
  JOIN    (SELECT object AS v1 , subject AS v0
   FROM VP_legalName
