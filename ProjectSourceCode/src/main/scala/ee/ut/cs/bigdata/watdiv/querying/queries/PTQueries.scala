@@ -39,7 +39,6 @@ class PTQueries {
       |AND User.jobTitle IS NOT NULL
       |AND Review.totalVotes IS NOT NULL
 """.stripMargin
-x
   val c3 =
     """
       |SELECT  User.user
