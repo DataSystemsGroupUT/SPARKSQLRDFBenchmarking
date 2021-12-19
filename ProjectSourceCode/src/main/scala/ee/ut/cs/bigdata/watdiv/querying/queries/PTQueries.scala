@@ -39,6 +39,10 @@ class PTQueries {
       |AND User.jobTitle IS NOT NULL
       |AND Review.totalVotes IS NOT NULL
 """.stripMargin
+<<<<<<< HEAD
+=======
+
+>>>>>>> parent of 3ab8715... Adding all s queries
   val c3 =
     """
       |SELECT  User.user
