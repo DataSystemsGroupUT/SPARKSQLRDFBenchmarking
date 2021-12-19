@@ -182,7 +182,7 @@ val c2 =
  FROM    (SELECT subject AS v0
 	 FROM SS_hasGenre_caption
 
-	 WHERE object = 'http://db.uwaterloo.ca/~galuc/wsdbm/SubGenre117'
+	 WHERE object = 'http://db.uwaterloo.ca/~galuc/wsdbm/SubGenre62'
 	) tab7
  JOIN    (SELECT object AS v1 , subject AS v0
 	 FROM SS_homepage_caption
