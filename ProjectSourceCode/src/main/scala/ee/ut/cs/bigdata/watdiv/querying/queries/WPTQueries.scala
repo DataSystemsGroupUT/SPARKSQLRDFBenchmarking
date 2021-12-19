@@ -133,6 +133,14 @@ class WPTQueries {
 
     val s4 =
       """
+         | SELECT DISTINCT WPT.SUBJECT, WPT.FAMILYNAME,WPT.ARTIST
+         | FROM WPT
+         | WHERE WPT.AGE = "http://xmlns.com/foaf/AgeGroup1"
+         | AND WPT.FAMILYNAME IS NOT NULL
+         | AND WPT.ARTIST IS NOT NULL
+         | AND WPT.NATIONALITY="http://db.uwaterloo.ca/~galuc/wsdbm/Country1"
+         |
+         |
 
     """.stripMargin
 
