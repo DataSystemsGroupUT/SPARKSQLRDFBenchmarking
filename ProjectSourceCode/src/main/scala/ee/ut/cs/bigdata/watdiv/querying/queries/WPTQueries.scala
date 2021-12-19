@@ -139,7 +139,12 @@ class WPTQueries {
 
     val s5 =
       """
-
+        |SELECT DISTINCT WPT.SUBJECT, WPT.DESCRIPTION, WPT.KEYWORDS
+        |FROM WPT
+        |WHERE WPT.TYPE="http://www.w3.org/1999/02/22-rdf-syntax-ns#/ProductCategory9"
+        |AND WPT.LANGUAGE="http://db.uwaterloo.ca/~galuc/wsdbm/Language0"
+        |AND WPT.DESCRIPTION IS NOT NULL
+        |AND WPT.KEYWORDS IS NOT NULL
     """.stripMargin
 
 
