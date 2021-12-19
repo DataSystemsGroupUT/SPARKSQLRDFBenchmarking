@@ -215,15 +215,82 @@ val c2 =
 	 FROM SO_hits_homepage
 	) tab6
  ON(tab5.v1=tab6.v1)
+ |""".stripMargin
+
+
+  val F3 =
+  """
+      |SELECT tab0.v1 AS v1 , tab2.v0 AS v0 , tab5.v5 AS v5 , tab4.v6 AS v6 , tab3.v4 AS v4 , tab1.v2 AS v2
+ FROM    (SELECT subject AS v0
+	 FROM SS_hasGenre_contentSize
+
+	 WHERE object = 'http://db.uwaterloo.ca/~galuc/wsdbm/SubGenre111'
+	) tab2
+ JOIN    (SELECT object AS v1 , subject AS v0
+	 FROM SS_contentRating_contentSize
+
+	) tab0
+ ON(tab2.v0=tab0.v0)
+ JOIN    (SELECT subject AS v0 , object AS v2
+	 FROM SS_contentSize_contentRating
+
+	) tab1
+ ON(tab0.v0=tab1.v0)
+ JOIN    (SELECT object AS v0 , subject AS v5
+	 FROM OS_purchaseFor_contentSize
+
+	) tab5
+ ON(tab1.v0=tab5.v0)
+ JOIN    (SELECT object AS v5 , subject AS v4
+	 FROM OS_makesPurchase_purchaseDate
+
+	) tab3
+ ON(tab5.v5=tab3.v5)
+ JOIN    (SELECT subject AS v5 , object AS v6
+	 FROM SO_purchaseDate_makesPurchase
+
+	) tab4
+ ON(tab3.v5=tab4.v5)
 
       |""".stripMargin
 
 
-  val F3 =
+   val F3_10M =
+  """
+      |SELECT tab0.v1 AS v1 , tab2.v0 AS v0 , tab5.v5 AS v5 , tab4.v6 AS v6 , tab3.v4 AS v4 , tab1.v2 AS v2
+ FROM    (SELECT subject AS v0
+	 FROM SS_hasGenre_contentSize
 
-    """
+	 WHERE object = 'http://db.uwaterloo.ca/~galuc/wsdbm/SubGenre111'
+	) tab2
+ JOIN    (SELECT object AS v1 , subject AS v0
+	 FROM SS_contentRating_contentSize
 
-  """.stripMargin
+	) tab0
+ ON(tab2.v0=tab0.v0)
+ JOIN    (SELECT subject AS v0 , object AS v2
+	 FROM SS_contentSize_contentRating
+
+	) tab1
+ ON(tab0.v0=tab1.v0)
+ JOIN    (SELECT object AS v0 , subject AS v5
+	 FROM OS_purchaseFor_contentSize
+
+	) tab5
+ ON(tab1.v0=tab5.v0)
+ JOIN    (SELECT object AS v5 , subject AS v4
+	 FROM OS_makesPurchase_purchaseDate
+
+	) tab3
+ ON(tab5.v5=tab3.v5)
+ JOIN    (SELECT subject AS v5 , object AS v6
+	 FROM VP_purchaseDate
+
+	) tab4
+ ON(tab3.v5=tab4.v5)
+
+      |""".stripMargin
+
 
 
   val F4 =

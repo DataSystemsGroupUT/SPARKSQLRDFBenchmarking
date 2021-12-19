@@ -83,6 +83,17 @@ val SS_type_caption = spark.read.format("parquet").load(s"$path/ExtVP/Parquet/SS
 val SO_url_homepage = spark.read.format("parquet").load(s"$path/ExtVP/Parquet/SO/url/homepage.parquet")
 val SO_hits_homepage = spark.read.format("parquet").load(s"$path/ExtVP/Parquet/SO/hits/homepage.parquet")
 
+
+//F3 FOR 10M STRUCTURE
+val SS_hasGenre_contentSize = spark.read.format("parquet").load(s"$path/ExtVP/Parquet/SS/hasGenre/contentSize.parquet")
+val SS_contentRating_contentSize = spark.read.format("parquet").load(s"$path/ExtVP/Parquet/SS/contentRating/contentSize.parquet")
+val SS_contentSize_contentRating = spark.read.format("parquet").load(s"$path/ExtVP/Parquet/SS/contentSize/contentRating.parquet")
+val OS_purchaseFor_contentSize = spark.read.format("parquet").load(s"$path/ExtVP/Parquet/OS/purchaseFor/contentSize.parquet")
+val OS_makesPurchase_purchaseDate = spark.read.format("parquet").load(s"$path/ExtVP/Parquet/OS/makesPurchase/purchaseDate.parquet")
+//val SO_purchaseDate_makesPurchase = spark.read.format("parquet").load(s"$path/ExtVP/Parquet/OS/makesPurchase/purchaseDate.parquet") // *********NOT FOUND in 10M **********
+//INSTEAD WE USE The following <VP_purchaseDate>)
+val VP_purchaseDate=spark.read.format("parquet").load(s"$path/VP/Parquet/purchaseDate.parquet")
+
   //C1
   SS_caption_hasReview.createOrReplaceTempView("SS_caption_hasReview")
   SS_contentRating_caption.createOrReplaceTempView("SS_contentRating_caption")
@@ -123,7 +134,7 @@ val SO_hits_homepage = spark.read.format("parquet").load(s"$path/ExtVP/Parquet/S
     SS_keywords_trailer.createOrReplaceTempView("SS_keywords_trailer")
     SS_trailer_keywords.createOrReplaceTempView("SS_trailer_keywords")
 
-
+    //F2
     SS_hasGenre_caption.createOrReplaceTempView("SS_hasGenre_caption")
     SS_homepage_caption.createOrReplaceTempView("SS_homepage_caption")
     SS_caption_homepage.createOrReplaceTempView("SS_caption_homepage")
@@ -132,6 +143,18 @@ val SO_hits_homepage = spark.read.format("parquet").load(s"$path/ExtVP/Parquet/S
     SS_type_caption.createOrReplaceTempView("SS_type_caption")
     SO_url_homepage.createOrReplaceTempView("SO_url_homepage")
     SO_hits_homepage.createOrReplaceTempView("SO_hits_homepage")
+
+
+    //F3
+    SS_hasGenre_contentSize.createOrReplaceTempView("SS_hasGenre_contentSize")
+    SS_contentRating_contentSize.createOrReplaceTempView("SS_contentRating_contentSize")
+    SS_contentSize_contentRating.createOrReplaceTempView("SS_contentSize_contentRating")
+    OS_purchaseFor_contentSize.createOrReplaceTempView("OS_purchaseFor_contentSize")
+    OS_makesPurchase_purchaseDate.createOrReplaceTempView("OS_makesPurchase_purchaseDate")
+    // SO_purchaseDate_makesPurchase.createOrReplaceTempView("SO_purchaseDate_makesPurchase") =
+    //INSTEAD WE USE The following <VP_purchaseDate>)
+    VP_purchaseDate.createOrReplaceTempView("VP_purchaseDate")
+
 
    //create file to write the query run time results
 //    val fos = new FileOutputStream(new File(s"/home/hadoop/RDFBenchMarking/logs2/$ds/orc/VP/$ds.txt"),true)
