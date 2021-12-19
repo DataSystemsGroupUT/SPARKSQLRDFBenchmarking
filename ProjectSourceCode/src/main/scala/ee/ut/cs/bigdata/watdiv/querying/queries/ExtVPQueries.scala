@@ -126,33 +126,23 @@ val c2 =
   val c3 =
     """
       |SELECT tab0.v1 AS v1 , tab2.v0 AS v0 , tab4.v5 AS v5 , tab5.v6 AS v6 , tab3.v4 AS v4 , tab2.v3 AS v3 , tab1.v2 AS v2
- FROM    (SELECT subject AS v0 , object AS v3
-  FROM SS_Location_likes
- ) tab2
- JOIN    (SELECT subject AS v0 , object AS v4
-  FROM SS_age_likes
- ) tab3
- ON(tab2.v0=tab3.v0)
- JOIN    (SELECT subject AS v0 , object AS v5
-  FROM SS_gender_likes
-
- ) tab4
- ON(tab3.v0=tab4.v0)
- JOIN    (SELECT subject AS v0 , object AS v6
-  FROM SS_givenName_likes
-
- ) tab5
- ON(tab4.v0=tab5.v0)
- JOIN    (SELECT object AS v1 , subject AS v0
-  FROM SS_likes_Location
-
- ) tab0
- ON(tab5.v0=tab0.v0)
- JOIN    (SELECT subject AS v0 , object AS v2
-  FROM SS_friendOf_likes
- ) tab1
- ON(tab0.v0=tab1.v0)
-
+      |FROM    (SELECT subject AS v0 , object AS v3
+      |FROM SS_Location_likes) tab2
+      |JOIN    (SELECT subject AS v0 , object AS v4
+      |FROM SS_age_likes) tab3
+      |ON(tab2.v0=tab3.v0)
+      |JOIN    (SELECT subject AS v0 , object AS v5
+      |FROM SS_gender_likes ) tab4
+      |ON(tab3.v0=tab4.v0)
+      |JOIN    (SELECT subject AS v0 , object AS v6
+      |FROM SS_givenName_likes) tab5
+      |ON(tab4.v0=tab5.v0)
+      |JOIN    (SELECT object AS v1 , subject AS v0
+      |FROM SS_likes_Location) tab0
+      |ON(tab5.v0=tab0.v0)
+      |JOIN    (SELECT subject AS v0 , object AS v2
+      |FROM SS_friendOf_likes) tab1
+      |ON(tab0.v0=tab1.v0)
       |""".stripMargin
 
 
@@ -162,8 +152,28 @@ val c2 =
 
   val F1 =
     """
-
-    """.stripMargin
+      |SELECT tab0.v0 AS v0 , tab3.v5 AS v5 , tab2.v4 AS v4 , tab4.v3 AS v3 , tab1.v2 AS v2
+      |FROM    (SELECT sub AS v0
+      |FROM SO_tag_hasGenre
+      |WHERE obj = 'http://db.uwaterloo.ca/~galuc/wsdbm/Topic47') tab0
+      |JOIN  (SELECT sub AS v0 , obj AS v2
+      |FROM SO_type_hasGenre) tab1
+      |ON(tab0.v0=tab1.v0)
+      |JOIN    (SELECT obj AS v0 , sub AS v3
+      |FROM SS_hasGenre_trailer
+      |) tab4
+      |ON(tab1.v0=tab4.v0)
+      |JOIN    (SELECT sub AS v3
+      |FROM SS_type_trailer
+      |WHERE obj = 'http://db.uwaterloo.ca/~galuc/wsdbm/ProductCategory2') tab5
+      |ON(tab4.v3=tab5.v3)
+      |JOIN    (SELECT obj AS v5 , sub AS v3
+      |FROM SS_keywords_trailer) tab3
+      |ON(tab5.v3=tab3.v3)
+      |JOIN (SELECT obj AS v4 , sub AS v3
+      |FROM SS_trailer_keywords) tab2
+      |ON(tab3.v3=tab2.v3)
+      |""".stripMargin
 
 
   val F2 =
