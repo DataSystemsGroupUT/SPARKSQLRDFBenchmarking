@@ -65,7 +65,7 @@ val SS_likes_Location = spark.read.format("parquet").load(s"$path/ExtVP/Parquet/
 val SS_friendOf_likes = spark.read.format("parquet").load(s"$path/ExtVP/Parquet/SS/friendOf/likes.parquet")
 
 
-//C3 FOR 10M STRUCTURE
+//F1 FOR 10M STRUCTURE
 val SO_tag_hasGenre = spark.read.format("parquet").load(s"$path/ExtVP/Parquet/SO/tag/hasGenre.parquet")
 val SO_type_hasGenre = spark.read.format("parquet").load(s"$path/ExtVP/Parquet/SO/type/hasGenre.parquet")
 val SS_hasGenre_trailer = spark.read.format("parquet").load(s"$path/ExtVP/Parquet/SS/hasGenre/trailer.parquet")
@@ -73,10 +73,15 @@ val SS_type_trailer = spark.read.format("parquet").load(s"$path/ExtVP/Parquet/SS
 val SS_keywords_trailer = spark.read.format("parquet").load(s"$path/ExtVP/Parquet/SS/keywords/trailer.parquet")
 val SS_trailer_keywords = spark.read.format("parquet").load(s"$path/ExtVP/Parquet/SS/trailer/keywords.parquet")
 
-
-
-
-
+//F2 FOR 10M STRUCTURE
+val SS_hasGenre_caption = spark.read.format("parquet").load(s"$path/ExtVP/Parquet/SS/hasGenre/caption.parquet")
+val SS_homepage_caption = spark.read.format("parquet").load(s"$path/ExtVP/Parquet/SS/homepage/caption.parquet")
+val SS_caption_homepage = spark.read.format("parquet").load(s"$path/ExtVP/Parquet/SS/caption/homepage.parquet")
+val SS_description_caption = spark.read.format("parquet").load(s"$path/ExtVP/Parquet/SS/description/caption.parquet")
+val SS_title_caption = spark.read.format("parquet").load(s"$path/ExtVP/Parquet/SS/title/caption.parquet")
+val SS_type_caption = spark.read.format("parquet").load(s"$path/ExtVP/Parquet/SS/type/caption.parquet")
+val SO_url_homepage = spark.read.format("parquet").load(s"$path/ExtVP/Parquet/SO/url/homepage.parquet")
+val SO_hits_homepage = spark.read.format("parquet").load(s"$path/ExtVP/Parquet/SO/hits/homepage.parquet")
 
   //C1
   SS_caption_hasReview.createOrReplaceTempView("SS_caption_hasReview")
@@ -110,6 +115,7 @@ val SS_trailer_keywords = spark.read.format("parquet").load(s"$path/ExtVP/Parque
     SS_likes_Location.createOrReplaceTempView("SS_likes_Location")
     SS_friendOf_likes.createOrReplaceTempView("SS_friendOf_likes")
 
+    //F1
     SO_tag_hasGenre.createOrReplaceTempView("SO_tag_hasGenre")
     SO_type_hasGenre.createOrReplaceTempView("SO_type_hasGenre")
     SS_hasGenre_trailer.createOrReplaceTempView("SS_hasGenre_trailer")
@@ -118,10 +124,19 @@ val SS_trailer_keywords = spark.read.format("parquet").load(s"$path/ExtVP/Parque
     SS_trailer_keywords.createOrReplaceTempView("SS_trailer_keywords")
 
 
+    SS_hasGenre_caption.createOrReplaceTempView("SS_hasGenre_caption")
+    SS_homepage_caption.createOrReplaceTempView("SS_homepage_caption")
+    SS_caption_homepage.createOrReplaceTempView("SS_caption_homepage")
+    SS_description_caption.createOrReplaceTempView("SS_description_caption")
+    SS_title_caption.createOrReplaceTempView("SS_title_caption")
+    SS_type_caption.createOrReplaceTempView("SS_type_caption")
+    SO_url_homepage.createOrReplaceTempView("SO_url_homepage")
+    SO_hits_homepage.createOrReplaceTempView("SO_hits_homepage")
+
    //create file to write the query run time results
 //    val fos = new FileOutputStream(new File(s"/home/hadoop/RDFBenchMarking/logs2/$ds/orc/VP/$ds.txt"),true)
 
-    val queries = List(new ExtVPQueries F1)
+    val queries = List(new ExtVPQueries F2)
 		     /*  new VTQueries q10) ,
 		       new VTQueries q3,
 		       new VTQueries q4,
