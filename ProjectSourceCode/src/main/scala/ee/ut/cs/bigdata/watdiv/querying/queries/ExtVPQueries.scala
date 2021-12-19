@@ -261,7 +261,7 @@ val c2 =
  FROM    (SELECT subject AS v0
 	 FROM SS_hasGenre_contentSize
 
-	 WHERE object = 'http://db.uwaterloo.ca/~galuc/wsdbm/SubGenre111'
+	 WHERE object = 'http://db.uwaterloo.ca/~galuc/wsdbm/SubGenre131'
 	) tab2
  JOIN    (SELECT object AS v1 , subject AS v0
 	 FROM SS_contentRating_contentSize
