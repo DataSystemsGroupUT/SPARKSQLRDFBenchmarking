@@ -406,7 +406,8 @@ class ExtVPQueries {
     """
       |SELECT tab1.v1 AS v1 , tab0.v0 AS v0
       |FROM    (SELECT subject AS v0
-      |FROM SS_subscribes_likes WHERE object = 'http://db.uwaterloo.ca/~galuc/wsdbm/Website34') tab0
+      |FROM SS_subscribes_likes
+      |WHERE object = 'http://db.uwaterloo.ca/~galuc/wsdbm/Website34') tab0
       |JOIN    (SELECT object AS v1 , subject AS v0
       |FROM SS_likes_subscribes) tab1
       |ON(tab0.v0=tab1.v0)
