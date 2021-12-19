@@ -122,7 +122,7 @@ class WPTQueries {
 
     val s3 =
       """
-        | SELECT  WPT.Subject, WPT.caption, WPT.hasGenre, WPT.publisher
+        | SELECT DISTINCT WPT.Subject, WPT.caption, WPT.hasGenre, WPT.publisher
         | FROM WPT
         | WHERE WPT.type="http://db.uwaterloo.ca/~galuc/wsdbm/ProductCategory4"
         | AND WPT.caption is not null
@@ -133,7 +133,12 @@ class WPTQueries {
 
     val s4 =
       """
-
+        | SELECT DISTINCT
+        | FROM WPT
+        | WHERE WPT.AGE="http://xmlns.com/foaf/AgeGroup1"
+        | AND WPT.FAMILYNAME IS NOT NULL
+        | AND WPT.ARTIST IS NOT NULL
+        | AND WPT.NATIONALITY="http://db.uwaterloo.ca/~galuc/wsdbm/Country1"
     """.stripMargin
 
 
