@@ -416,14 +416,35 @@ class ExtVPQueries {
 
   val L4 =
     """
-
-    """.stripMargin
+      |SELECT tab0.v0 AS v0 , tab1.v2 AS v2
+      |FROM    (SELECT subject AS v0
+      |FROM SS_tag_caption WHERE object = 'http://db.uwaterloo.ca/~galuc/wsdbm/Topic248') tab0
+      |JOIN    (SELECT subject AS v0 , object AS v2
+      |FROM SS_caption_tag) tab1
+      |ON(tab0.v0=tab1.v0)
+      |""".stripMargin
 
 
   val L5 =
     """
+    |SELECT tab0.v1 AS v1 , tab2.v0 AS v0 , tab1.v3 AS v3
+    |FROM    (SELECT object AS v3
+    |FROM VP_parentCountry
 
-    """.stripMargin
+	 WHERE subject = 'http://db.uwaterloo.ca/~galuc/wsdbm/City187'
+	) tab1
+ JOIN    (SELECT subject AS v0 , object AS v3
+	 FROM SS_nationality_jobTitle
+
+	) tab2
+ ON(tab1.v3=tab2.v3)
+ JOIN    (SELECT object AS v1 , subject AS v0
+	 FROM SS_jobTitle_nationality
+
+	) tab0
+ ON(tab2.v0=tab0.v0)
+
+      |""".stripMargin
 
 
   //Star (S)

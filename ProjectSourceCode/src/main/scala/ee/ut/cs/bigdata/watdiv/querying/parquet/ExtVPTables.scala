@@ -126,6 +126,14 @@ object ExtVPTables {
     //L3 FOR 10M STRUCTURE
     val SS_likes_subscribes = spark.read.format("parquet").load(s"$path/ExtVP/Parquet/SS/likes/subscribes.parquet")
 
+    //L4 FOR 10M STRUCTURE
+    val SS_tag_caption = spark.read.format("parquet").load(s"$path/ExtVP/Parquet/SS/tag/caption.parquet")
+    val SS_caption_tag = spark.read.format("parquet").load(s"$path/ExtVP/Parquet/SS/caption/tag.parquet")
+
+    //L5 FOR 10M STRUCTURE
+    val SS_nationality_jobTitle = spark.read.format("parquet").load(s"$path/ExtVP/Parquet/SS/nationality/jobTitle.parquet")
+    val SS_jobTitle_nationality = spark.read.format("parquet").load(s"$path/ExtVP/Parquet/SS/jobTitle/nationality.parquet")
+
     //C1
     SS_caption_hasReview.createOrReplaceTempView("SS_caption_hasReview")
     SS_contentRating_caption.createOrReplaceTempView("SS_contentRating_caption")
@@ -216,11 +224,20 @@ object ExtVPTables {
     //L3
      SS_likes_subscribes.createOrReplaceTempView("SS_likes_subscribes")
 
+    //L4
+    SS_tag_caption.createOrReplaceTempView("SS_tag_caption")
+    SS_caption_tag.createOrReplaceTempView("SS_caption_tag")
+
+    //L5
+    SS_nationality_jobTitle.createOrReplaceTempView("SS_nationality_jobTitle")
+    SS_jobTitle_nationality.createOrReplaceTempView("SS_jobTitle_nationality")
+
+
 
     //create file to write the query run time results
     //    val fos = new FileOutputStream(new File(s"/home/hadoop/RDFBenchMarking/logs2/$ds/orc/VP/$ds.txt"),true)
 
-    val queries = List(new ExtVPQueries L3)
+    val queries = List(new ExtVPQueries L4 , new ExtVPQueries L5)
     /*  new VTQueries q10) ,
       new VTQueries q3,
       new VTQueries q4,
@@ -260,3 +277,4 @@ object ExtVPTables {
 
   }
 }
+//L5
