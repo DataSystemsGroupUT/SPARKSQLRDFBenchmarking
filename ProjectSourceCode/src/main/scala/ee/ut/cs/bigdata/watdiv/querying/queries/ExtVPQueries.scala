@@ -375,8 +375,17 @@ class ExtVPQueries {
 
   val L1 =
     """
-
-    """.stripMargin
+      |SELECT tab0.v0 AS v0 , tab1.v3 AS v3 , tab2.v2 AS v2
+      |FROM    (SELECT subject AS v0
+      |FROM SS_subscribes_likes
+      |WHERE obj = 'http://db.uwaterloo.ca/~galuc/wsdbm/Website30') tab0
+      |JOIN    (SELECT subject AS v0 , obj AS v2
+      |FROM OS_likes_caption) tab2
+      |ON(tab0.v0=tab2.v0)
+      |JOIN    (SELECT obj AS v3 , subject AS v2
+      |FROM SO_caption_likes) tab1
+      |ON(tab2.v2=tab1.v2)
+      |""".stripMargin
 
 
   val L2 =

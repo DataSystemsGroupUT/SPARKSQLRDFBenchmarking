@@ -112,6 +112,12 @@ object ExtVPTables {
     val SS_price_validThrough = spark.read.format("parquet").load(s"$path/ExtVP/Parquet/SS/price/validThrough.parquet")
 
 
+    //L1 FOR 10M STRUCTURE
+    val SS_subscribes_likes = spark.read.format("parquet").load(s"$path/ExtVP/Parquet/SS/subscribes/likes.parquet")
+    val OS_likes_caption = spark.read.format("parquet").load(s"$path/ExtVP/Parquet/OS/likes/caption.parquet")
+    val SO_caption_likes = spark.read.format("parquet").load(s"$path/ExtVP/Parquet/SO/caption/likes.parquet")
+
+
     //C1
     SS_caption_hasReview.createOrReplaceTempView("SS_caption_hasReview")
     SS_contentRating_caption.createOrReplaceTempView("SS_contentRating_caption")
@@ -191,6 +197,11 @@ object ExtVPTables {
     SO_title_includes.createOrReplaceTempView("SO_title_includes")
     SO_type_includes.createOrReplaceTempView("SO_type_includes")
     SS_price_validThrough.createOrReplaceTempView("SS_price_validThrough")
+
+    //L1
+    SS_subscribes_likes.createOrReplaceTempView("SS_subscribes_likes")
+    OS_likes_caption.createOrReplaceTempView("OS_likes_caption")
+    SO_caption_likes.createOrReplaceTempView("SO_caption_likes")
 
 
     //create file to write the query run time results
