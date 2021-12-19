@@ -118,6 +118,12 @@ object ExtVPTables {
     val SO_caption_likes = spark.read.format("parquet").load(s"$path/ExtVP/Parquet/SO/caption/likes.parquet")
 
 
+    //L2 FOR 10M STRUCTURE
+    val SS_nationality_likes = spark.read.format("parquet").load(s"$path/ExtVP/Parquet/SS/nationality/likes.parquet")
+    val SS_likes_nationality = spark.read.format("parquet").load(s"$path/ExtVP/Parquet/SS/likes/nationality.parquet")
+    val VP_parentCountry = spark.read.format("parquet").load(s"$path/VP/Parquet/parentCountry.parquet")
+
+
     //C1
     SS_caption_hasReview.createOrReplaceTempView("SS_caption_hasReview")
     SS_contentRating_caption.createOrReplaceTempView("SS_contentRating_caption")
@@ -168,7 +174,6 @@ object ExtVPTables {
     SO_url_homepage.createOrReplaceTempView("SO_url_homepage")
     SO_hits_homepage.createOrReplaceTempView("SO_hits_homepage")
 
-
     //F3
     SS_hasGenre_contentSize.createOrReplaceTempView("SS_hasGenre_contentSize")
     SS_contentRating_contentSize.createOrReplaceTempView("SS_contentRating_contentSize")
@@ -178,8 +183,6 @@ object ExtVPTables {
     // SO_purchaseDate_makesPurchase.createOrReplaceTempView("SO_purchaseDate_makesPurchase") =
     //INSTEAD WE USE The following <VP_purchaseDate>)
     VP_purchaseDate.createOrReplaceTempView("VP_purchaseDate")
-
-
 
     //F4
     SO_language_homepage.createOrReplaceTempView("SO_language_homepage")
@@ -203,11 +206,16 @@ object ExtVPTables {
     OS_likes_caption.createOrReplaceTempView("OS_likes_caption")
     SO_caption_likes.createOrReplaceTempView("SO_caption_likes")
 
+    //L2
+    SS_nationality_likes.createOrReplaceTempView("SS_nationality_likes")
+    SS_likes_nationality.createOrReplaceTempView("SS_likes_nationality")
+    VP_parentCountry.createOrReplaceTempView("VP_parentCountry")
+
 
     //create file to write the query run time results
     //    val fos = new FileOutputStream(new File(s"/home/hadoop/RDFBenchMarking/logs2/$ds/orc/VP/$ds.txt"),true)
 
-    val queries = List(new ExtVPQueries F5)
+    val queries = List(new ExtVPQueries L1, new ExtVPQueries L2)
     /*  new VTQueries q10) ,
       new VTQueries q3,
       new VTQueries q4,
