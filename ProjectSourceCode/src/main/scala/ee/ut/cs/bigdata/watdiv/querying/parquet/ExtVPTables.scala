@@ -159,7 +159,7 @@ val VP_purchaseDate=spark.read.format("parquet").load(s"$path/VP/Parquet/purchas
    //create file to write the query run time results
 //    val fos = new FileOutputStream(new File(s"/home/hadoop/RDFBenchMarking/logs2/$ds/orc/VP/$ds.txt"),true)
 
-    val queries = List(new ExtVPQueries F2)
+    val queries = List(new ExtVPQueries F3_10M)
 		     /*  new VTQueries q10) ,
 		       new VTQueries q3,
 		       new VTQueries q4,
