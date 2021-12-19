@@ -366,8 +366,7 @@ class ExtVPQueries {
 	 FROM SS_price_validThrough
 	) tab2
  ON(tab0.v0=tab2.v0)
-
-      |""".stripMargin
+ |""".stripMargin
 
 
   // Linear (L)
@@ -378,11 +377,11 @@ class ExtVPQueries {
       |SELECT tab0.v0 AS v0 , tab1.v3 AS v3 , tab2.v2 AS v2
       |FROM    (SELECT subject AS v0
       |FROM SS_subscribes_likes
-      |WHERE obj = 'http://db.uwaterloo.ca/~galuc/wsdbm/Website30') tab0
-      |JOIN    (SELECT subject AS v0 , obj AS v2
+      |WHERE object = 'http://db.uwaterloo.ca/~galuc/wsdbm/Website30') tab0
+      |JOIN    (SELECT subject AS v0 , object AS v2
       |FROM OS_likes_caption) tab2
       |ON(tab0.v0=tab2.v0)
-      |JOIN    (SELECT obj AS v3 , subject AS v2
+      |JOIN    (SELECT object AS v3 , subject AS v2
       |FROM SO_caption_likes) tab1
       |ON(tab2.v2=tab1.v2)
       |""".stripMargin
@@ -391,22 +390,27 @@ class ExtVPQueries {
   val L2 =
     """
       |SELECT tab0.v1 AS v1 , tab2.v2 AS v2
-      |FROM    (SELECT obj AS v1
+      |FROM    (SELECT object AS v1
       |FROM VP_parentCountry
-      |WHERE sub = 'http://db.uwaterloo.ca/~galuc/wsdbm/City152' ) tab0
-      |JOIN    (SELECT obj AS v1 , sub AS v2
+      |WHERE subject = 'http://db.uwaterloo.ca/~galuc/wsdbm/City152' ) tab0
+      |JOIN    (SELECT object AS v1 , subject AS v2
       |FROM SS_nationality_likes) tab2
       |ON(tab0.v1=tab2.v1)
-      |JOIN    (SELECT sub AS v2 FROM SS_likes_nationality
-      |WHERE obj = 'http://db.uwaterloo.ca/~galuc/wsdbm/Product0') tab1
+      |JOIN    (SELECT subject AS v2 FROM SS_likes_nationality
+      |WHERE object = 'http://db.uwaterloo.ca/~galuc/wsdbm/Product0') tab1
       |ON(tab2.v2=tab1.v2)
       |""".stripMargin
 
 
   val L3 =
     """
-
-    """.stripMargin
+      |SELECT tab1.v1 AS v1 , tab0.v0 AS v0
+      |FROM    (SELECT subject AS v0
+      |FROM SS_subscribes_likes WHERE object = 'http://db.uwaterloo.ca/~galuc/wsdbm/Website34') tab0
+      |JOIN    (SELECT object AS v1 , subject AS v0
+      |FROM SS_likes_subscribes) tab1
+      |ON(tab0.v0=tab1.v0)
+      |""".stripMargin
 
 
   val L4 =
