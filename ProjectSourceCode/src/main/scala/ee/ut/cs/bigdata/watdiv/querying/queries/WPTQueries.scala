@@ -135,7 +135,7 @@ class WPTQueries {
       """
          | SELECT DISTINCT WPT.SUBJECT, WPT.FAMILYNAME,WPT.ARTIST
          | FROM WPT
-         | WHERE WPT.AGE = "http://xmlns.com/foaf/AgeGroup1"
+         | WHERE WPT.AGE = "http://db.uwaterloo.ca/~galuc/wsdbm/AgeGroup1"
          | AND WPT.FAMILYNAME IS NOT NULL
          | AND WPT.ARTIST IS NOT NULL
          | AND WPT.NATIONALITY="http://db.uwaterloo.ca/~galuc/wsdbm/Country1"
