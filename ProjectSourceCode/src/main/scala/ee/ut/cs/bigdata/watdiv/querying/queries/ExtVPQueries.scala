@@ -2,7 +2,7 @@ package ee.ut.cs.bigdata.watdiv.querying.queries
 
 class ExtVPQueries {
 
-//Complex
+  //Complex
 
   val c1 =
     """
@@ -36,7 +36,7 @@ class ExtVPQueries {
       |ON(tab6.v7=tab7.v7)
       |""".stripMargin
 
-//This One Works for the 10M Dataset (Some SS_SO_OS are not there!!)
+  //This One Works for the 10M Dataset (Some SS_SO_OS are not there!!)
   val c1_copy =
     """
       |SELECT tab0.v1 AS v1 , tab0.v0 AS v0 , tab6.v7 AS v7 , tab4.v5 AS v5 , tab5.v6 AS v6 , tab3.v4 AS v4 , tab2.v3 AS v3 , tab7.v8 AS v8 , tab1.v2 AS v2
@@ -70,8 +70,7 @@ class ExtVPQueries {
       |""".stripMargin
 
 
-
-val c2 =
+  val c2 =
     """
       |SELECT tab0.v1 AS v1 , tab1.v0 AS v0 , tab4.v5 AS v5 , tab7.v7 AS v7 , tab5.v6 AS v6 , tab6.v4 AS v4 , tab9.v9 AS v9 , tab3.v3 AS v3 , tab8.v8 AS v8 , tab2.v2 AS v2
       |FROM    (SELECT subject AS v2
@@ -215,11 +214,11 @@ val c2 =
 	 FROM SO_hits_homepage
 	) tab6
  ON(tab5.v1=tab6.v1)
- |""".stripMargin
+      |""".stripMargin
 
 
   val F3 =
-  """
+    """
       |SELECT tab0.v1 AS v1 , tab2.v0 AS v0 , tab5.v5 AS v5 , tab4.v6 AS v6 , tab3.v4 AS v4 , tab1.v2 AS v2
  FROM    (SELECT subject AS v0
 	 FROM SS_hasGenre_contentSize
@@ -255,8 +254,8 @@ val c2 =
       |""".stripMargin
 
 
-   val F3_10M =
-  """
+  val F3_10M =
+    """
       |SELECT tab0.v1 AS v1 , tab2.v0 AS v0 , tab5.v5 AS v5 , tab4.v6 AS v6 , tab3.v4 AS v4 , tab1.v2 AS v2
  FROM    (SELECT subject AS v0
 	 FROM SS_hasGenre_contentSize
@@ -292,12 +291,51 @@ val c2 =
       |""".stripMargin
 
 
-
   val F4 =
-
     """
+      |SELECT tab7.v1 AS v1 , tab0.v0 AS v0 , tab8.v7 AS v7 , tab5.v5 AS v5 , tab6.v6 AS v6 , tab3.v4 AS v4 , tab1.v2 AS v2 , tab4.v8 AS v8
+     FROM    (SELECT subject AS v1
+	 FROM SO_language_homepage
 
-    """.stripMargin
+	 WHERE object = 'http://db.uwaterloo.ca/~galuc/wsdbm/Language0'
+	) tab7
+ JOIN    (SELECT object AS v1 , subject AS v0
+	 FROM SS_homepage_contentSize
+
+	) tab0
+ ON(tab7.v1=tab0.v1)
+ JOIN    (SELECT subject AS v0
+	 FROM SS_tag_contentSize
+	 WHERE object = 'http://db.uwaterloo.ca/~galuc/wsdbm/Topic52'
+	) tab2
+ ON(tab0.v0=tab2.v0)
+ JOIN    (SELECT subject AS v0 , object AS v8
+	 FROM SS_contentSize_homepage
+
+	) tab4
+ ON(tab2.v0=tab4.v0)
+ JOIN    (SELECT subject AS v0 , object AS v4
+	 FROM SS_description_contentSize
+
+	) tab3
+ ON(tab4.v0=tab3.v0)
+ JOIN    (SELECT subject AS v1 , object AS v5
+	 FROM SO_url_homepage
+	) tab5
+ ON(tab0.v1=tab5.v1)
+ JOIN    (SELECT subject AS v1 , object AS v6
+	 FROM SO_hits_homepage
+	) tab6
+ ON(tab5.v1=tab6.v1)
+ JOIN    (SELECT object AS v0 , subject AS v2
+	 FROM OS_includes_contentSize
+	) tab1
+ ON(tab3.v0=tab1.v0)
+ JOIN    (SELECT object AS v0 , subject AS v7
+	 FROM OS_likes_contentSize
+	) tab8
+ ON(tab1.v0=tab8.v0)
+ |""".stripMargin
 
 
   val F5 =
