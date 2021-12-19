@@ -340,8 +340,34 @@ class ExtVPQueries {
 
   val F5 =
     """
+      |SELECT tab0.v1 AS v1 , tab1.v0 AS v0 , tab4.v5 AS v5 , tab5.v6 AS v6 , tab3.v4 AS v4 , tab2.v3 AS v3
+ FROM    (SELECT object AS v0
+	 FROM OS_offers_validThrough
+	 WHERE subject = 'http://db.uwaterloo.ca/~galuc/wsdbm/Retailer10'
+	) tab1
+ JOIN    (SELECT subject AS v0 , object AS v4
+	 FROM SO_validThrough_offers
 
-    """.stripMargin
+	) tab3
+ ON(tab1.v0=tab3.v0)
+ JOIN    (SELECT object AS v1 , subject AS v0
+	 FROM SS_includes_validThrough
+	) tab0
+ ON(tab3.v0=tab0.v0)
+ JOIN    (SELECT subject AS v1 , object AS v5
+	 FROM SO_title_includes
+	) tab4
+ ON(tab0.v1=tab4.v1)
+ JOIN    (SELECT subject AS v1 , object AS v6
+	 FROM SO_type_includes
+	) tab5
+ ON(tab4.v1=tab5.v1)
+ JOIN    (SELECT subject AS v0 , object AS v3
+	 FROM SS_price_validThrough
+	) tab2
+ ON(tab0.v0=tab2.v0)
+
+      |""".stripMargin
 
 
   // Linear (L)

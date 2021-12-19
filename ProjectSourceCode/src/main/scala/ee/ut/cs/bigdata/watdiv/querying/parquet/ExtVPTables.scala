@@ -103,6 +103,15 @@ object ExtVPTables {
     val OS_includes_contentSize = spark.read.format("parquet").load(s"$path/ExtVP/Parquet/OS/includes/contentSize.parquet")
     val OS_likes_contentSize = spark.read.format("parquet").load(s"$path/ExtVP/Parquet/OS/likes/contentSize.parquet")
 
+    //F5 FOR 10M STRUCTURE
+    val OS_offers_validThrough = spark.read.format("parquet").load(s"$path/ExtVP/Parquet/OS/offers/validThrough.parquet")
+    val SO_validThrough_offers = spark.read.format("parquet").load(s"$path/ExtVP/Parquet/SO/validThrough/offers.parquet")
+    val SS_includes_validThrough = spark.read.format("parquet").load(s"$path/ExtVP/Parquet/SS/includes/validThrough.parquet")
+    val SO_title_includes = spark.read.format("parquet").load(s"$path/ExtVP/Parquet/SO/title/includes.parquet")
+    val SO_type_includes = spark.read.format("parquet").load(s"$path/ExtVP/Parquet/SO/type/includes.parquet")
+    val SS_price_validThrough = spark.read.format("parquet").load(s"$path/ExtVP/Parquet/SS/price/validThrough.parquet")
+
+
     //C1
     SS_caption_hasReview.createOrReplaceTempView("SS_caption_hasReview")
     SS_contentRating_caption.createOrReplaceTempView("SS_contentRating_caption")
@@ -175,11 +184,19 @@ object ExtVPTables {
     OS_includes_contentSize.createOrReplaceTempView("OS_includes_contentSize")
     OS_likes_contentSize.createOrReplaceTempView("OS_likes_contentSize")
 
+    //F5
+    OS_offers_validThrough.createOrReplaceTempView("OS_offers_validThrough")
+    SO_validThrough_offers.createOrReplaceTempView("SO_validThrough_offers")
+    SS_includes_validThrough.createOrReplaceTempView("SS_includes_validThrough")
+    SO_title_includes.createOrReplaceTempView("SO_title_includes")
+    SO_type_includes.createOrReplaceTempView("SO_type_includes")
+    SS_price_validThrough.createOrReplaceTempView("SS_price_validThrough")
+
 
     //create file to write the query run time results
     //    val fos = new FileOutputStream(new File(s"/home/hadoop/RDFBenchMarking/logs2/$ds/orc/VP/$ds.txt"),true)
 
-    val queries = List(new ExtVPQueries F4)
+    val queries = List(new ExtVPQueries F5)
     /*  new VTQueries q10) ,
       new VTQueries q3,
       new VTQueries q4,
