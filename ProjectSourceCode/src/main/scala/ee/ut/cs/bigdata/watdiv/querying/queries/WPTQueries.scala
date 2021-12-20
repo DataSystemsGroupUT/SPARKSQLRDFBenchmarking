@@ -106,7 +106,7 @@ class WPTQueries {
       |ON S0.SUBJECT=S1.Offers
       |AND S0.OFFERS='http://db.uwaterloo.ca/~galuc/wsdbm/Retailer4'
       |WHERE
-      |AND S0.INCLUDES  is not null
+      |S0.INCLUDES  is not null
       |AND S0.PRICE is not null
       |AND S0.SERIALNUMBER is not null
       |AND S0.VALIDFROM is not null
