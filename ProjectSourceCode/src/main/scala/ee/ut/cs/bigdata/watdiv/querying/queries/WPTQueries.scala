@@ -168,11 +168,11 @@ class WPTQueries {
 
     val s7 =
       """
-        |SELECT DISTINCT WPT.SUBJECT, WPT.TYPE, WPT.TEXT
+        |SELECT DISTINCT WPT.SUBJECT, WPT.TYPE, WPT.sorg_text
         |FROM WPT
         |WHERE WPT.LIKES="http://db.uwaterloo.ca/~galuc/wsdbm/User828"
         |AND WPT.TYPE IS NOT NULL
-        |AND WPT.TEXT IS NOT NULL
+        |AND WPT.sorg_text IS NOT NULL
         |""".stripMargin
 
 
