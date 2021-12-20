@@ -11,7 +11,7 @@ import org.apache.spark.storage.StorageLevel._
 
 object WPTTables {
   def main(args: Array[String]): Unit = {
-    println("first partitioned")
+    println("Avro WPT Partitoned")
 
     val conf = new SparkConf()
     Logger.getLogger("org").setLevel(Level.OFF)
@@ -20,8 +20,8 @@ object WPTTables {
     sc.setLogLevel("ERROR")
 
     //new
-    val sqlContext = new org.apache.spark.sql.SQLContext(sc)
-    sqlContext.setConf("spark.sql.tungsten.enabled", "false")
+//    val sqlContext = new org.apache.spark.sql.SQLContext(sc)
+//    sqlContext.setConf("spark.sql.tungsten.enabled", "false")
 
 
     val spark = SparkSession
@@ -173,7 +173,7 @@ object WPTTables {
     }
 
     //create file to write the query run time results    
-    val fos = new FileOutputStream(new File(s"/home/hadoop/RDFBenchMarking/logs/$ds/avro/WPT/$ds$partitionType.txt"), true)
+    val fos = new FileOutputStream(new File(s"/home/hadoop/RDFBenchMarking/logs2/$ds/avro/WPT/$ds$partitionType.txt"), true)
 
     val queries = List(
       new WPTQueries q1,
