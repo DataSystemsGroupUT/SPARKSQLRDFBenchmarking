@@ -45,6 +45,7 @@ In this phase, we repeated the phase#2 experimetns, but this time we extended ou
  - [Sherif Sakr](https://bigdata.cs.ut.ee/prof-dr-sherif-sakr)
  - [Sadiq Eyvazov](http://github.com)
  - [Carlos Ramos](https://github.com/0x7b1)
+ - [Farid Valiyev](https://github.com/faridvaliyev1)
 
 
 ### Publications
