@@ -104,7 +104,7 @@ class WPTQueries {
       |FROM WPT S0
       |JOIN WPT S1
       |ON S1.SUBJECT=S0.Offers
-      |AND S1.Subject='http://db.uwaterloo.ca/~galuc/wsdbm/Retailer4'
+      |AND S0.Subject='http://db.uwaterloo.ca/~galuc/wsdbm/Retailer4'
       |WHERE
       |S1.INCLUDES  is not null
       |AND S1.PRICE is not null
