@@ -5,7 +5,11 @@ class WPTQueries {
 
   val c1 =
     """
-
+    |SELECT DISTINCT
+    |FROM WPT V0
+    |JOIN WPT V4
+    |ON V0.HASREVIEW IS NOT NULL
+    |AND
   """.stripMargin
 
 
@@ -95,18 +99,20 @@ class WPTQueries {
 
   val s1 =
     """
-      |SELECT WPT.OFFERS, WPT.INCLUDES, WPT.PRICE, WPT.SERIALNUMBER, WPT.VALIDFROM, WPT.VALIDTHROUGH,
-      |WPT.ELIGIBLEQUANTITY, WPT.ELIGIBLEREGION, WPT.PRICEVALIDUNTIL
-      |FROM WPT
-      |WHERE WPT.Subject='http://db.uwaterloo.ca/~galuc/wsdbm/Retailer4'
-      |AND WPT.INCLUDES  is not null
-      |AND WPT.PRICE is not null
-      |AND WPT.SERIALNUMBER is not null
-      |AND WPT.VALIDFROM is not null
-      |AND WPT.VALIDTHROUGH is not null
-      |AND WPT.ELIGIBLEQUANTITY is not null
-      |AND WPT.ELIGIBLEREGION is not null
-      |AND WPT.PRICEVALIDUNTIL is not null
+      |SELECT S0.SUBJECT, S1.SUBJECT, S0.PRICE, S0.SERIALNUMBER, S0.VALIDFROM, S0.VALIDTHROUGH,
+      |S0.ELIGIBLEQUANTITY, S0.ELIGIBLEREGION, S0.PRICEVALIDUNTIL
+      |FROM WPT S0
+      |JOIN WPT S1
+      |ON S0.SUBJECT=S1.OBJECT
+      |WHERE S1.OFFERS='http://db.uwaterloo.ca/~galuc/wsdbm/Retailer4'
+      |AND S0.INCLUDES  is not null
+      |AND S0.PRICE is not null
+      |AND S0.SERIALNUMBER is not null
+      |AND S0.VALIDFROM is not null
+      |AND S0.VALIDTHROUGH is not null
+      |AND S0.ELIGIBLEQUANTITY is not null
+      |AND S0.ELIGIBLEREGION is not null
+      |AND S0.PRICEVALIDUNTIL is not null
       |""".stripMargin
 
 
@@ -122,7 +128,7 @@ class WPTQueries {
 
     val s3 =
       """
-        | SELECT  WPT.Subject, WPT.caption, WPT.hasGenre, WPT.publisher
+        | SELECT DISTINCT WPT.Subject, WPT.caption, WPT.hasGenre, WPT.publisher
         | FROM WPT
         | WHERE WPT.type="http://db.uwaterloo.ca/~galuc/wsdbm/ProductCategory4"
         | AND WPT.caption is not null
