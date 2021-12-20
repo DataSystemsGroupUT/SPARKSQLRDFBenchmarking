@@ -103,7 +103,7 @@ class WPTQueries {
       |S0.ELIGIBLEQUANTITY, S0.ELIGIBLEREGION, S0.PRICEVALIDUNTIL
       |FROM WPT S0
       |JOIN WPT S1
-      |ON S0.SUBJECT=S1.OBJECT
+      |ON S0.SUBJECT=S1.INCLUDES
       |WHERE S1.OFFERS='http://db.uwaterloo.ca/~galuc/wsdbm/Retailer4'
       |AND S0.INCLUDES  is not null
       |AND S0.PRICE is not null
