@@ -133,13 +133,26 @@ class WPTQueries {
 
     val s4 =
       """
+         | SELECT DISTINCT WPT.SUBJECT, WPT.FAMILYNAME,WPT.ARTIST
+         | FROM WPT
+         | WHERE WPT.AGE = "http://db.uwaterloo.ca/~galuc/wsdbm/AgeGroup1"
+         | AND WPT.FAMILYNAME IS NOT NULL
+         | AND WPT.ARTIST IS NOT NULL
+         | AND WPT.NATIONALITY="http://db.uwaterloo.ca/~galuc/wsdbm/Country1"
+         |
+         |
 
     """.stripMargin
 
 
     val s5 =
       """
-
+        |SELECT DISTINCT WPT.SUBJECT, WPT.sorg_description, WPT.KEYWORDS
+        |FROM WPT
+        |WHERE WPT.TYPE="http://www.w3.org/1999/02/22-rdf-syntax-ns#/ProductCategory9"
+        |AND WPT.LANGUAGE="http://db.uwaterloo.ca/~galuc/wsdbm/Language0"
+        |AND WPT.sorg_description IS NOT NULL
+        |AND WPT.KEYWORDS IS NOT NULL
     """.stripMargin
 
 
@@ -155,9 +168,12 @@ class WPTQueries {
 
     val s7 =
       """
-        |
+        |SELECT DISTINCT WPT.SUBJECT, WPT.TYPE, WPT.sorg_text
+        |FROM WPT
+        |WHERE WPT.LIKES="http://db.uwaterloo.ca/~galuc/wsdbm/User828"
+        |AND WPT.TYPE IS NOT NULL
+        |AND WPT.sorg_text IS NOT NULL
         |""".stripMargin
 
 
 }
-
