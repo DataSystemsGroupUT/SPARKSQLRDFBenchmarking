@@ -99,21 +99,21 @@ class WPTQueries {
 
   val s1 =
     """
-      |SELECT S0.SUBJECT, S1.SUBJECT, S0.PRICE, S0.SERIALNUMBER, S0.VALIDFROM, S0.VALIDTHROUGH,
-      |S0.ELIGIBLEQUANTITY, S0.ELIGIBLEREGION, S0.PRICEVALIDUNTIL
+      |SELECT S1.SUBJECT, S0.SUBJECT, S1.PRICE, S1.SERIALNUMBER, S1.VALIDFROM, S1.VALIDTHROUGH,
+      |S1.ELIGIBLEQUANTITY, S1.ELIGIBLEREGION, S1.PRICEVALIDUNTIL
       |FROM WPT S0
       |JOIN WPT S1
-      |ON S0.SUBJECT=S1.Offers
-      |AND S1.OFFERS='http://db.uwaterloo.ca/~galuc/wsdbm/Retailer4'
+      |ON S1.SUBJECT=S0.Offers
+      |AND S1.Subject='http://db.uwaterloo.ca/~galuc/wsdbm/Retailer4'
       |WHERE
-      |S0.INCLUDES  is not null
-      |AND S0.PRICE is not null
-      |AND S0.SERIALNUMBER is not null
-      |AND S0.VALIDFROM is not null
-      |AND S0.VALIDTHROUGH is not null
-      |AND S0.ELIGIBLEQUANTITY is not null
-      |AND S0.ELIGIBLEREGION is not null
-      |AND S0.PRICEVALIDUNTIL is not null
+      |S1.INCLUDES  is not null
+      |AND S1.PRICE is not null
+      |AND S1.SERIALNUMBER is not null
+      |AND S1.VALIDFROM is not null
+      |AND S1.VALIDTHROUGH is not null
+      |AND S1.ELIGIBLEQUANTITY is not null
+      |AND S1.ELIGIBLEREGION is not null
+      |AND S1.PRICEVALIDUNTIL is not null
       |""".stripMargin
 
 
