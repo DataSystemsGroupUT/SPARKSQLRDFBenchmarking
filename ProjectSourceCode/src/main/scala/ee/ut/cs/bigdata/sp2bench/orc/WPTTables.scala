@@ -11,7 +11,7 @@ import org.apache.spark.storage.StorageLevel._
 
 object WPTTables {
   def main(args: Array[String]): Unit = {
-    
+    println("ORC WPT Partitioned")
     val conf = new SparkConf()
     Logger.getLogger("org").setLevel(Level.OFF)
     Logger.getLogger("akka").setLevel(Level.OFF)
@@ -170,7 +170,7 @@ object WPTTables {
     }
 
     //create file to write the query run time results    
-    val fos = new FileOutputStream(new File(s"/home/hadoop/RDFBenchMarking/logs/$ds/orc/WPT/$ds$partitionType.txt"),true)
+    val fos = new FileOutputStream(new File(s"/home/hadoop/RDFBenchMarking/logs2/$ds/orc/WPT/$ds$partitionType.txt"),true)
 
     val queries = List( new WPTQueries q1, 
 			new WPTQueries q2, 
@@ -200,7 +200,7 @@ object WPTTables {
        }
        count+=1   
     }  
-    println("All Queries are Done - Avro - WPT!") 
+    println("All Queries are Done - ORC - WPT!")
 
   }
 }
