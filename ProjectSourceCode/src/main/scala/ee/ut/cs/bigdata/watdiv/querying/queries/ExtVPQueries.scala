@@ -452,42 +452,137 @@ class ExtVPQueries {
 
   val S1 =
     """
-
-    """.stripMargin
+      |SELECT tab0.v1 AS v1 , tab1.v0 AS v0 , tab6.v7 AS v7 , tab4.v5 AS v5 , tab3.v4 AS v4 , tab5.v6 AS v6 , tab2.v3 AS v3 , tab8.v9 AS v9 , tab7.v8 AS v8
+      |FROM    (SELECT object AS v0
+      |FROM OS_offers_priceValidUntil
+      |WHERE subject = 'http://db.uwaterloo.ca/~galuc/wsdbm/Retailer8535') tab1
+      |JOIN    (SELECT subject AS v0 , object AS v5
+      |FROM SS_validFrom_priceValidUntil) tab4
+      |ON(tab1.v0=tab4.v0)
+      |JOIN    (SELECT subject AS v0 , object AS v9
+      |FROM SS_priceValidUntil_validFrom) tab8
+      |ON(tab4.v0=tab8.v0)
+      |JOIN    (SELECT subject AS v0 , object AS v6
+      |FROM SS_validThrough_priceValidUntil) tab5
+      |ON(tab8.v0=tab5.v0)
+      |JOIN    (SELECT object AS v1 , subject AS v0
+      |FROM SS_includes_priceValidUntil) tab0
+      |ON(tab5.v0=tab0.v0)
+      |JOIN    (SELECT subject AS v0 , object AS v3
+      |FROM SS_price_priceValidUntil) tab2
+      |ON(tab0.v0=tab2.v0)
+      |JOIN    (SELECT subject AS v0 , object AS v4
+      |FROM SS_serialNumber_priceValidUntil) tab3
+      |ON(tab2.v0=tab3.v0)
+      |JOIN    (SELECT subject AS v0 , object AS v7
+      |FROM SS_eligibleQuantity_priceValidUntil) tab6
+      |ON(tab3.v0=tab6.v0)
+      |JOIN    (SELECT subject AS v0 , object AS v8
+      |FROM SS_eligibleRegion_priceValidUntil) tab7
+      |ON(tab6.v0=tab7.v0)
+      |""".stripMargin
 
 
   val S2 =
     """
-
-    """.stripMargin
+      |SELECT tab0.v1 AS v1 , tab1.v0 AS v0 , tab2.v3 AS v3
+      |FROM    (SELECT subject AS v0
+      |FROM SS_nationality_Location
+      |WHERE object = 'http://db.uwaterloo.ca/~galuc/wsdbm/Country4') tab1
+      |JOIN    (SELECT subject AS v0
+      |FROM SS_type_nationality
+      |WHERE object = 'http://db.uwaterloo.ca/~galuc/wsdbm/Role2') tab3
+      |ON(tab1.v0=tab3.v0)
+      |JOIN    (SELECT object AS v1 , subject AS v0
+      |FROM SS_Location_nationality) tab0
+      |ON(tab3.v0=tab0.v0)
+      |JOIN    (SELECT subject AS v0 , object AS v3
+      |FROM SS_gender_nationality) tab2
+      |ON(tab0.v0=tab2.v0)
+      |""".stripMargin
 
 
   val S3 =
     """
-
-    """.stripMargin
+      |SELECT tab0.v0 AS v0 , tab3.v4 AS v4 , tab2.v3 AS v3 , tab1.v2 AS v2
+      |FROM    (SELECT subject AS v0
+      |FROM SS_type_publisher
+      |WHERE object = 'http://db.uwaterloo.ca/~galuc/wsdbm/ProductCategory1') tab0
+      |JOIN    (SELECT subject AS v0 , object AS v2
+      |FROM SS_caption_publisher) tab1
+      |ON(tab0.v0=tab1.v0)
+      |JOIN    (SELECT subject AS v0 , object AS v4
+      |FROM SS_publisher_caption) tab3
+      |ON(tab1.v0=tab3.v0)
+      |JOIN    (SELECT subject AS v0 , object AS v3
+      |FROM SSm_hasGenre_publisher) tab2
+      |ON(tab3.v0=tab2.v0)
+      |""".stripMargin
 
 
   val S4 =
     """
-
-    """.stripMargin
+      |SELECT tab3.v0 AS v0 , tab2.v3 AS v3 , tab1.v2 AS v2
+      |FROM    (SELECT subject AS v0
+      |FROM SO_nationality_artist
+      |WHERE object = 'http://db.uwaterloo.ca/~galuc/wsdbm/Country1') tab3
+      |JOIN    (SELECT subject AS v0
+      |FROM SO_age_artist
+      |WHERE object = 'http://db.uwaterloo.ca/~galuc/wsdbm/AgeGroup5') tab0
+      |ON(tab3.v0=tab0.v0)
+      |JOIN    (SELECT object AS v0 , subject AS v3
+      |FROM OS_artist_nationality) tab2
+      |ON(tab0.v0=tab2.v0)
+      |JOIN    (SELECT subject AS v0 , object AS v2
+      |FROM SO_familyName_artist) tab1
+      |ON(tab2.v0=tab1.v0)
+      |""".stripMargin
 
 
   val S5 =
     """
-
-    """.stripMargin
+      |SELECT tab3.v0 AS v0 , tab2.v3 AS v3 , tab1.v2 AS v2
+      |FROM    (SELECT subject AS v0
+      |FROM SS_language_keywords
+      |WHERE object = 'http://db.uwaterloo.ca/~galuc/wsdbm/Language0') tab3
+      |JOIN    (SELECT subject AS v0
+      |FROM SS_type_language
+      |WHERE object = 'http://db.uwaterloo.ca/~galuc/wsdbm/ProductCategory7') tab0
+      |ON(tab3.v0=tab0.v0)
+      |JOIN    (SELECT subject AS v0 , object AS v3
+      |FROM SS_keywords_language) tab2
+      |ON(tab0.v0=tab2.v0)
+      |JOIN    (SELECT subject AS v0 , object AS v2
+      |FROM SS_description_language) tab1
+      |ON(tab2.v0=tab1.v0)
+      |""".stripMargin
 
 
   val S6 =
     """
-
-    """.stripMargin
+      |SELECT tab0.v1 AS v1 , tab2.v0 AS v0 , tab1.v2 AS v2
+      |FROM    (SELECT subject AS v0
+      |FROM SS_hasGenre_conductor WHERE object = 'http://db.uwaterloo.ca/~galuc/wsdbm/SubGenre130') tab2
+      |JOIN    (SELECT object AS v1 , subject AS v0
+      |FROM VP_conductor) tab0
+      |ON(tab2.v0=tab0.v0)
+      |JOIN    (SELECT subject AS v0 , object AS v2
+      |FROM SS_type_conductor) tab1
+      |ON(tab0.v0=tab1.v0)
+      |""".stripMargin
 
 
   val S7 =
     """
-
-    """.stripMargin
+      |SELECT tab0.v1 AS v1 , tab2.v0 AS v0 , tab1.v2 AS v2
+      |FROM    (SELECT object AS v0
+      |FROM OS	wsdbm__likes/sorg__text
+      |WHERE subject = 'http://db.uwaterloo.ca/~galuc/wsdbm/User54768') tab2
+      |JOIN    (SELECT subject AS v0 , object AS v2
+      |FROM SO	sorg__text/wsdbm__likes) tab1
+      |ON(tab2.v0=tab1.v0)
+      |JOIN    (SELECT object AS v1 , subject AS v0
+      |FROM SS	rdf__type/sorg__text) tab0
+      |ON(tab1.v0=tab0.v0)
+      |""".stripMargin
 }
