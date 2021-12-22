@@ -63,7 +63,7 @@ object ExtVPTables2 {
      */
 
     //val vpTable27 = spark.read.format("parquet").load(s"$path/ST/Parquet/SingleStmtTable.parquet").toDF()
-    val vpTable27 = spark.read.format("csv").option("header", "true").option("inferSchema", "true").load(s"$path/ST/ST/SingleStmtTable.csv").toDF()
+    val vpTable27 = spark.read.format("csv").option("header", "true").option("inferSchema", "true").load(s"$path/ST/Parquet/SingleStmtTable.csv").toDF()
     val vpTable6 = spark.read.format("parquet").load(s"$path/VP/Parquet/type.parquet").toDF()
 
     vpTable1.createOrReplaceTempView("ExtVP_SS_Type_Issued")
