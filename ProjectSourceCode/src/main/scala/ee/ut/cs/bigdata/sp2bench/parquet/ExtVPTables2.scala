@@ -8,7 +8,7 @@ import org.apache.spark.{SparkConf, SparkContext}
 
 object ExtVPTables2 {
   def main(args: Array[String]): Unit = {
-    println("parq2")
+    println("ExtVP VHDFS Parquet")
 
     val conf = new SparkConf()
     Logger.getLogger("org").setLevel(Level.OFF)
@@ -59,11 +59,9 @@ object ExtVPTables2 {
     val vpTable28 = spark.read.format("parquet").load(s"$path/VP/Parquet/seeAlso.parquet").toDF()
     val vpTable29 = spark.read.format("parquet").load(s"$path/VP/Parquet/editor.parquet").toDF()
     val vpTable30 = spark.read.format("parquet").load(s"$path/ExtVP/Parquet/SS/type/name.parquet").toDF()
-    /*
-     */
 
-    //    val vpTable27 = spark.read.format("parquet").load(s"$path/ST/Parquet/SingleStmtTable.parquet").toDF()
-    val vpTable27 = spark.read.format("csv").option("header", "true").option("inferSchema", "true").load(s"$path/ST/ST/SingleStmtTable.csv").toDF()
+    val vpTable27 = spark.read.format("parquet").load(s"$path/ST/Parquet/SingleStmtTable.parquet").toDF()
+//    val vpTable27 = spark.read.format("csv").option("header", "true").option("inferSchema", "true").load(s"$path/ST/Parquet/SingleStmtTable.csv").toDF()
     val vpTable6 = spark.read.format("parquet").load(s"$path/VP/Parquet/type.parquet").toDF()
 
     vpTable1.createOrReplaceTempView("ExtVP_SS_Type_Issued")
@@ -110,7 +108,7 @@ object ExtVPTables2 {
       new ExtVPQueries q1,
       new ExtVPQueries q2,
       new ExtVPQueries q3,
-      //      new ExtVPQueries q4,
+      new ExtVPQueries q4,
       new ExtVPQueries q5,
       new ExtVPQueries q6,
       new ExtVPQueries q8,

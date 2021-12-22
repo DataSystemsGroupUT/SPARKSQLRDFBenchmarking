@@ -11,7 +11,7 @@ import org.apache.spark.storage.StorageLevel._
 
 object WPTTables {
   def main(args: Array[String]): Unit = {
-    println("Avro WPT Partitoned")
+    println("Avro WPT Partitioned!")
 
     val conf = new SparkConf()
     Logger.getLogger("org").setLevel(Level.OFF)
