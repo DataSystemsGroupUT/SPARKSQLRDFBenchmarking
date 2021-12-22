@@ -140,12 +140,14 @@ class WPTQueries {
 
     val s4 =
       """
-         | SELECT DISTINCT WPT.SUBJECT, WPT.FAMILYNAME,WPT.ARTIST
-         | FROM WPT
-         | WHERE WPT.AGE = "http://db.uwaterloo.ca/~galuc/wsdbm/AgeGroup1"
-         | AND WPT.FAMILYNAME IS NOT NULL
-         | AND WPT.ARTIST IS NOT NULL
-         | AND WPT.NATIONALITY="http://db.uwaterloo.ca/~galuc/wsdbm/Country1"
+         | SELECT DISTINCT SO.SUBJECT, S0.FAMILYNAME,WPT.ARTIST
+         | FROM WPT S0
+         | JOIN WPT S3
+         | ON S3.SUBJECT=S0.ARTIST
+         | WHERE S0.AGE = "http://db.uwaterloo.ca/~galuc/wsdbm/AgeGroup1"
+         | AND S0.FAMILYNAME IS NOT NULL
+         | AND S0.ARTIST IS NOT NULL
+         | AND S0.NATIONALITY="http://db.uwaterloo.ca/~galuc/wsdbm/Country1"
          |
          |
 
