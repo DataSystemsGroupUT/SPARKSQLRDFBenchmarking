@@ -8,7 +8,7 @@ import org.apache.spark.{SparkConf, SparkContext}
 
 object ExtVPTables2 {
   def main(args: Array[String]): Unit = {
-    println("orc2")
+    println("ExtVP VHDFS ORC")
 
     val conf = new SparkConf()
     Logger.getLogger("org").setLevel(Level.OFF)
@@ -109,7 +109,7 @@ object ExtVPTables2 {
       new ExtVPQueries q1,
       new ExtVPQueries q2,
       new ExtVPQueries q3,
-//      new ExtVPQueries q4,
+      new ExtVPQueries q4,
       new ExtVPQueries q5,
       new ExtVPQueries q6,
       new ExtVPQueries q8,
