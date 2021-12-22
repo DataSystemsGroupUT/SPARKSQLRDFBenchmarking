@@ -31,7 +31,7 @@ object ExtVPTables2 {
     //read tables from HDFS
 
     val vpTable6 = spark.read.format("orc").load(s"$path/VP/ORC/type.orc").toDF()
-    val vpTable27 = spark.read.format("csv").option("header", "true").option("inferSchema", "true").load(s"$path/ST/ST/SingleStmtTable.csv").toDF()
+    val vpTable27 = spark.read.format("csv").option("header", "true").option("inferSchema", "true").load(s"$path/ST/ORC/SingleStmtTable.csv").toDF()
     //    val vpTable27 = spark.read.format("orc").load(s"$path/ST/ORC/SingleStmtTable.orc").toDF()
 
     val vpTable1 = spark.read.format("orc").load(s"$path/ExtVP/ORC/SS/type/issued.orc").toDF()
