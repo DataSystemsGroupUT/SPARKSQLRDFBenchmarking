@@ -134,7 +134,7 @@ object ExtVPTables {
     //L5 FOR 10M STRUCTURE
     val SS_nationality_jobTitle = spark.read.format("parquet").load(s"$path/ExtVP/Parquet/SS/nationality/jobTitle.parquet")
     val SS_jobTitle_nationality = spark.read.format("parquet").load(s"$path/ExtVP/Parquet/SS/jobTitle/nationality.parquet")
-    */
+
 
 
     //S1
@@ -173,8 +173,10 @@ object ExtVPTables {
     val SS_keywords_language = spark.read.format("parquet").load(s"$path/ExtVP/Parquet/SS/keywords/language.parquet")
     val SS_description_language = spark.read.format("parquet").load(s"$path/ExtVP/Parquet/SS/description/language.parquet")
 
+     */
+
     //S6
-    val SS_hasGenre_conductor = spark.read.format("parquet").load(s"$path/ExtVP/Parquet/SS/language/keywords.parquet")
+    val SS_hasGenre_conductor = spark.read.format("parquet").load(s"$path/ExtVP/Parquet/SS/hasGenre/conductor.parquet")
     val VP_conductor = spark.read.format("parquet").load(s"$path/VP/Parquet/conductor.parquet")
     val SS_type_conductor = spark.read.format("parquet").load(s"$path/ExtVP/Parquet/SS/type/conductor.parquet")
 
