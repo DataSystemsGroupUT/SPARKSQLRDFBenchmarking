@@ -9,6 +9,7 @@ import org.apache.spark.{SparkConf, SparkContext}
 
 object ExtVPTables {
   def main(args: Array[String]): Unit = {
+    println("ExtVP Partitioned ORC")
 
     val conf = new SparkConf()
     Logger.getLogger("org").setLevel(Level.OFF)
@@ -33,13 +34,14 @@ object ExtVPTables {
     if(partitionType.toLowerCase == "predicate")
     {
     val vpTable6 = spark.read.format("orc").load(s"$path/VP/ORC/type.orc").toDF()
-    //val vpTable12 = spark.read.format("orc").load(s"$path/VP/ORC/creator.orc").toDF()
+    val vpTable12 = spark.read.format("orc").load(s"$path/VP/ORC/creator.orc").toDF()
     val vpTable27 = spark.read.format("orc").load(s"$path/ST/ORC/SingleStmtTable.orc").toDF()
-    //val vpTable29 = spark.read.format("orc").load(s"$path/VP/ORC/editor.orc").toDF()
-    //val vpTable9 = spark.read.format("orc").load(s"$path/VP/ORC/journal.orc").toDF()
+    val vpTable29 = spark.read.format("orc").load(s"$path/VP/ORC/editor.orc").toDF()
+
+      //val vpTable9 = spark.read.format("orc").load(s"$path/VP/ORC/journal.orc").toDF()
     //val vpTable11 = spark.read.format("orc").load(s"$path/VP/ORC/name.orc").toDF()
 
-/*
+
     val vpTable1 = spark.read.format("orc").load(s"$path/ExtVP/ORC/SS/type/issued.orc").toDF()
     val vpTable2 = spark.read.format("orc").load(s"$path/ExtVP/ORC/SS/title/issued.orc").toDF()
     val vpTable3 = spark.read.format("orc").load(s"$path/VP/ORC/issued.orc").toDF()
@@ -66,16 +68,16 @@ object ExtVPTables {
     val vpTable26 = spark.read.format("orc").load(s"$path/ExtVP/ORC/SS/creator/issued.orc").toDF()
     val vpTable28 = spark.read.format("orc").load(s"$path/VP/ORC/seeAlso.orc").toDF()
     val vpTable30 = spark.read.format("orc").load(s"$path/ExtVP/ORC/SS/type/name.orc").toDF()
-*/
+
 
     vpTable6.createOrReplaceTempView("VP_Type")
-    //vpTable12.createOrReplaceTempView("creator")
+    vpTable12.createOrReplaceTempView("creator")
     vpTable27.createOrReplaceTempView("Triples")
-    //vpTable29.createOrReplaceTempView("editorv")
-    //vpTable9.createOrReplaceTempView("journal")
-    //vpTable11.createOrReplaceTempView("name")
+    vpTable29.createOrReplaceTempView("editorv")
+    vpTable9.createOrReplaceTempView("journal")
+    vpTable11.createOrReplaceTempView("name")
 
-/*
+
 
     vpTable1.createOrReplaceTempView("ExtVP_SS_Type_Issued")    
     vpTable2.createOrReplaceTempView("ExtVP_SS_Title_Issued")
@@ -105,21 +107,18 @@ object ExtVPTables {
     vpTable26.createOrReplaceTempView("ExtVP_SS_Creator_Issued")
     vpTable28.createOrReplaceTempView("VP_SeeAlso")
     vpTable30.createOrReplaceTempView("ExtVP_SS_Type_Name")
-*/
+
     }
 
     else 
     {
 
     val vpTable6 = spark.read.format("orc").load(s"$path/VP/ORC/type$partitionType.orc").toDF()
-    //val vpTable12 = spark.read.format("orc").load(s"$path/VP/ORC/creator$partitionType.orc").toDF()
+    val vpTable12 = spark.read.format("orc").load(s"$path/VP/ORC/creator$partitionType.orc").toDF()
+
     val vpTable27 = spark.read.format("orc").load(s"$path/ST/ORC/SingleStmtTable$partitionType.orc").toDF()
-    //val vpTable29 = spark.read.format("orc").load(s"$path/VP/ORC/editor$partitionType.orc").toDF()
-    //val vpTable9 = spark.read.format("orc").load(s"$path/VP/ORC/journal$partitionType.orc").toDF()
-    //val vpTable11 = spark.read.format("orc").load(s"$path/VP/ORC/name$partitionType.orc").toDF()
+    val vpTable29 = spark.read.format("orc").load(s"$path/VP/ORC/editor$partitionType.orc").toDF()
 
-
-/*
     val vpTable1 = spark.read.format("orc").load(s"$path/ExtVP/ORC/SS/type/issued$partitionType.orc").toDF()
     val vpTable2 = spark.read.format("orc").load(s"$path/ExtVP/ORC/SS/title/issued$partitionType.orc").toDF()
     val vpTable3 = spark.read.format("orc").load(s"$path/VP/ORC/issued$partitionType.orc").toDF()
@@ -146,16 +145,16 @@ object ExtVPTables {
     val vpTable26 = spark.read.format("orc").load(s"$path/ExtVP/ORC/SS/creator/issued$partitionType.orc").toDF()
     val vpTable28 = spark.read.format("orc").load(s"$path/VP/ORC/seeAlso$partitionType.orc").toDF()
     val vpTable30 = spark.read.format("orc").load(s"$path/ExtVP/ORC/SS/type/name$partitionType.orc").toDF()
-*/
 
     vpTable6.createOrReplaceTempView("VP_Type")
-    //vpTable12.createOrReplaceTempView("creator")
+    vpTable12.createOrReplaceTempView("creator")
     vpTable27.createOrReplaceTempView("Triples")
-    //vpTable29.createOrReplaceTempView("editorv")
-    //vpTable9.createOrReplaceTempView("journal")
-    //vpTable11.createOrReplaceTempView("name")
+    vpTable29.createOrReplaceTempView("editorv")
 
-/*
+    vpTable9.createOrReplaceTempView("journal")
+    vpTable11.createOrReplaceTempView("name")
+
+
     vpTable1.createOrReplaceTempView("ExtVP_SS_Type_Issued")    
     vpTable2.createOrReplaceTempView("ExtVP_SS_Title_Issued")
     vpTable3.createOrReplaceTempView("VP_Issued")
@@ -164,9 +163,9 @@ object ExtVPTables {
 
     vpTable7.createOrReplaceTempView("ExtVP_SO_Name_Creator")
     vpTable8.createOrReplaceTempView("ExtVP_SS_Creator_Journal")
-    vpTable9.createOrReplaceTempView("VP_Journal")
+//    vpTable9.createOrReplaceTempView("VP_Journal")
     vpTable10.createOrReplaceTempView("ExtVP_SS_Type_Journal")
-    vpTable11.createOrReplaceTempView("VP_Name")
+//    vpTable11.createOrReplaceTempView("VP_Name")
 
     vpTable13.createOrReplaceTempView("VP_Abstract")
     vpTable14.createOrReplaceTempView("ExtVP_SS_Creator_PartOf")
@@ -184,15 +183,16 @@ object ExtVPTables {
     vpTable26.createOrReplaceTempView("ExtVP_SS_Creator_Issued")
     vpTable28.createOrReplaceTempView("VP_SeeAlso")
     vpTable30.createOrReplaceTempView("ExtVP_SS_Type_Name")
-*/
+
 
     }
 
 
     //create file to write the query run time results
-    val fos = new FileOutputStream(new File(s"/home/hadoop/RDFBenchMarking/logs/$ds/orc/ExtVP/$ds$partitionType.txt"),true)
+    val fos = new FileOutputStream(new File(s"/home/hadoop/RDFBenchMarking/logs2/$ds/orc/ExtVP/$ds$partitionType.txt"),true)
 //    val fos = new FileOutputStream(new File(s"/home/hadoop/RDFBenchMarking/logs/$ds/orc/VT/$ds$partitionType.txt"),true)
-    val queries = List(/*new ExtVPQueries q1,
+    val queries = List(
+           new ExtVPQueries q1,
 		       new ExtVPQueries q2,
 		       new ExtVPQueries q3,
 		       new ExtVPQueries q4,
@@ -201,10 +201,7 @@ object ExtVPTables {
 		       new ExtVPQueries q8,
 		       new ExtVPQueries q9,
 		       new ExtVPQueries q10,
-		       new ExtVPQueries q11*/
-		       //new VTQueries q4,
-		       new ExtVPQueries q9)
-		       //new VTQueries q10)
+		       new ExtVPQueries q11)
 
     println("Running queries")
 

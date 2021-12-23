@@ -9,7 +9,7 @@ import org.apache.spark.{SparkConf, SparkContext}
 
 object ExtVPTables {
   def main(args: Array[String]): Unit = {
-    println("ext")
+    println("ExtVP Partitioned CSV")
 
     val conf = new SparkConf()
     Logger.getLogger("org").setLevel(Level.OFF)
@@ -113,12 +113,12 @@ object ExtVPTables {
       vpTable26.createOrReplaceTempView("ExtVP_SS_Creator_Issued")
       vpTable28.createOrReplaceTempView("VP_SeeAlso")
       vpTable30.createOrReplaceTempView("ExtVP_SS_Type_Name")
-    } else {
-      println("VP_Name;")
+    }
+    else {
       val vpTable6 = spark.read.format("csv").option("header", "true").option("inferSchema", "true").load(s"$path/VP/CSV/type$partitionType.csv").toDF()
       val vpTable12 = spark.read.format("csv").option("header", "true").option("inferSchema", "true").load(s"$path/VP/CSV/creator$partitionType.csv").toDF()
-      //      val vpTable27 = spark.read.format("csv").option("header", "true").option("inferSchema", "true").load(s"$path/ST/CSV/SingleStmtTable$partitionType.csv").toDF()
-      val vpTable27 = spark.read.format("csv").option("header", "true").option("inferSchema", "true").load(s"$path/ST/ST/SingleStmtTable.csv").toDF()
+      val vpTable27 = spark.read.format("csv").option("header", "true").option("inferSchema", "true").load(s"$path/ST/CSV/SingleStmtTable$partitionType.csv").toDF()
+//      val vpTable27 = spark.read.format("csv").option("header", "true").option("inferSchema", "true").load(s"$path/ST/ST/SingleStmtTable.csv").toDF()
 
       val vpTable29 = spark.read.format("csv").option("header", "true").option("inferSchema", "true").load(s"$path/VP/CSV/editor$partitionType.csv").toDF()
       val vpTable9 = spark.read.format("csv").option("header", "true").option("inferSchema", "true").load(s"$path/VP/CSV/journal$partitionType.csv").toDF()
@@ -199,14 +199,14 @@ object ExtVPTables {
 
 
     //create file to write the query run time results
-    val fos = new FileOutputStream(new File(s"/home/hadoop/RDFBenchMarking/logs/$ds/csv/ExtVP/$ds$partitionType.txt"), true)
+    val fos = new FileOutputStream(new File(s"/home/hadoop/RDFBenchMarking/logs2/$ds/csv/ExtVP/$ds$partitionType.txt"), true)
     //    val fos = new FileOutputStream(new File(s"/home/hadoop/RDFBenchMarking/logs/$ds/csv/VT/$ds$partitionType.txt"),true)
 
     val queries = List(
       new ExtVPQueries q1,
       new ExtVPQueries q2,
       new ExtVPQueries q3,
-      //      new ExtVPQueries q4,
+      new ExtVPQueries q4,
       new ExtVPQueries q5,
       new ExtVPQueries q6,
       new ExtVPQueries q8,

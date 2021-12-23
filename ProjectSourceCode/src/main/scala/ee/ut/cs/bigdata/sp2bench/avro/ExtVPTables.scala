@@ -9,7 +9,7 @@ import org.apache.spark.{SparkConf, SparkContext}
 
 object ExtVPTables {
   def main(args: Array[String]): Unit = {
-    println("extvp--")
+   println("ExtVP Partitioned Avro")
 
     val conf = new SparkConf()
     Logger.getLogger("org").setLevel(Level.OFF)
@@ -35,8 +35,8 @@ object ExtVPTables {
 
       val vpTable6 = spark.read.format("avro").load(s"$path/VP/Avro/type.avro").toDF()
       val vpTable12 = spark.read.format("avro").load(s"$path/VP/Avro/creator.avro").toDF()
-      //      val vpTable27 = spark.read.format("avro").load(s"$path/ST/Avro/SingleStmtTable.avro").toDF()
-      val vpTable27 = spark.read.format("csv").option("header", "true").option("inferSchema", "true").load(s"$path/ST/ST/SingleStmtTable.csv").toDF()
+      val vpTable27 = spark.read.format("avro").load(s"$path/ST/Avro/SingleStmtTable.avro").toDF()
+      //val vpTable27 = spark.read.format("csv").option("header", "true").option("inferSchema", "true").load(s"$path/ST/ST/SingleStmtTable.csv").toDF()
 
       val vpTable29 = spark.read.format("avro").load(s"$path/VP/Avro/editor.avro").toDF()
       //      val vpTable9 = spark.read.format("avro").load(s"$path/VP/Avro/journal.avro").toDF()
@@ -110,7 +110,8 @@ object ExtVPTables {
       vpTable26.createOrReplaceTempView("ExtVP_SS_Creator_Issued")
       vpTable28.createOrReplaceTempView("VP_SeeAlso")
       vpTable30.createOrReplaceTempView("ExtVP_SS_Type_Name")
-    } else {
+    }
+    else {
 
       val vpTable6 = spark.read.format("avro").load(s"$path/VP/Avro/type$partitionType.avro").toDF()
       val vpTable12 = spark.read.format("avro").load(s"$path/VP/Avro/creator$partitionType.avro").toDF()
@@ -187,14 +188,14 @@ object ExtVPTables {
 
 
     //create file to write the query run time results
-    val fos = new FileOutputStream(new File(s"/home/hadoop/RDFBenchMarking/logs/$ds/avro/ExtVP/$ds$partitionType.txt"), true)
+    val fos = new FileOutputStream(new File(s"/home/hadoop/RDFBenchMarking/logs2/$ds/avro/ExtVP/$ds$partitionType.txt"), true)
 
     //   val fos = new FileOutputStream(new File(s"/home/hadoop/RDFBenchMarking/logs/$ds/avro/VT/$ds$partitionType.txt"),true)
     val queries = List(
       new ExtVPQueries q1,
       new ExtVPQueries q2,
       new ExtVPQueries q3,
-//      new ExtVPQueries q4,
+      new ExtVPQueries q4,
       new ExtVPQueries q5,
       new ExtVPQueries q6,
       new ExtVPQueries q8,

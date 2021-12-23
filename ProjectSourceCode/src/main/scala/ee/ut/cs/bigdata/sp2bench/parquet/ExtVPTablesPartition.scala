@@ -69,7 +69,7 @@ object ExtVPTablesPartition {
 
     //partition and save on HDFS
     if (partitionType == "subject") {
-      print("Partitioning Subject based: ")
+      print("Partitioning Subject based")
       vpTable9.repartition(84, $"Subject").write.option("header", "true").format("parquet").mode(SaveMode.Overwrite).save(s"$path/VP/Parquet/journalSubject.parquet")
       vpTable11.repartition(84, $"Subject").write.option("header", "true").format("parquet").mode(SaveMode.Overwrite).save(s"$path/VP/Parquet/nameSubject.parquet")
 
@@ -107,7 +107,7 @@ object ExtVPTablesPartition {
     }
 
     else if (partitionType == "horizontal") {
-      print("Partitioning Horizontally: ")
+      print("Partitioning Horizontally")
       vpTable9.repartition(84).write.option("header", "true").format("parquet").mode(SaveMode.Overwrite).save(s"$path/VP/Parquet/journalHorizontal.parquet")
       vpTable11.repartition(84).write.option("header", "true").format("parquet").mode(SaveMode.Overwrite).save(s"$path/VP/Parquet/nameHorizontal.parquet")
 

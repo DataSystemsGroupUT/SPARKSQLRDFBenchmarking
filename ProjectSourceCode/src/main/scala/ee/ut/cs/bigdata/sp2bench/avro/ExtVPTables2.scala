@@ -32,7 +32,6 @@ object ExtVPTables2 {
 
     val vpTable6 = spark.read.format("avro").load(s"$path/VP/Avro/type.avro").toDF()
     val vpTable27 = spark.read.format("avro").load(s"$path/ST/Avro/SingleStmtTable.avro").toDF()
-//    val vpTable27 = spark.read.format("avro").option("header", "true").option("inferSchema", "true").load(s"$path/ST/Avro/SingleStmtTable.avro").toDF()
 
     val vpTable1 = spark.read.format("avro").load(s"$path/ExtVP/Avro/SS/type/issued.avro").toDF()
     val vpTable2 = spark.read.format("avro").load(s"$path/ExtVP/Avro/SS/title/issued.avro").toDF()
