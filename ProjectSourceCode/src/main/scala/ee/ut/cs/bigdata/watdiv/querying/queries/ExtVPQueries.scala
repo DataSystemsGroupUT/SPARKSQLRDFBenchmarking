@@ -455,7 +455,7 @@ class ExtVPQueries {
       |SELECT tab0.v1 AS v1 , tab1.v0 AS v0 , tab6.v7 AS v7 , tab4.v5 AS v5 , tab3.v4 AS v4 , tab5.v6 AS v6 , tab2.v3 AS v3 , tab8.v9 AS v9 , tab7.v8 AS v8
       |FROM    (SELECT object AS v0
       |FROM OS_offers_priceValidUntil
-      |WHERE subject = 'http://db.uwaterloo.ca/~galuc/wsdbm/Retailer8535') tab1
+      |WHERE subject = 'http://db.uwaterloo.ca/~galuc/wsdbm/Retailer4') tab1
       |JOIN    (SELECT subject AS v0 , object AS v5
       |FROM SS_validFrom_priceValidUntil) tab4
       |ON(tab1.v0=tab4.v0)
@@ -488,7 +488,7 @@ class ExtVPQueries {
       |SELECT tab0.v1 AS v1 , tab1.v0 AS v0 , tab2.v3 AS v3
       |FROM    (SELECT subject AS v0
       |FROM SS_nationality_Location
-      |WHERE object = 'http://db.uwaterloo.ca/~galuc/wsdbm/Country4') tab1
+      |WHERE object = 'http://db.uwaterloo.ca/~galuc/wsdbm/Country3') tab1
       |JOIN    (SELECT subject AS v0
       |FROM SS_type_nationality
       |WHERE object = 'http://db.uwaterloo.ca/~galuc/wsdbm/Role2') tab3
@@ -507,7 +507,7 @@ class ExtVPQueries {
       |SELECT tab0.v0 AS v0 , tab3.v4 AS v4 , tab2.v3 AS v3 , tab1.v2 AS v2
       |FROM    (SELECT subject AS v0
       |FROM SS_type_publisher
-      |WHERE object = 'http://db.uwaterloo.ca/~galuc/wsdbm/ProductCategory1') tab0
+      |WHERE object = 'http://db.uwaterloo.ca/~galuc/wsdbm/ProductCategory4') tab0
       |JOIN    (SELECT subject AS v0 , object AS v2
       |FROM SS_caption_publisher) tab1
       |ON(tab0.v0=tab1.v0)
@@ -515,7 +515,7 @@ class ExtVPQueries {
       |FROM SS_publisher_caption) tab3
       |ON(tab1.v0=tab3.v0)
       |JOIN    (SELECT subject AS v0 , object AS v3
-      |FROM SSm_hasGenre_publisher) tab2
+      |FROM SS_hasGenre_publisher) tab2
       |ON(tab3.v0=tab2.v0)
       |""".stripMargin
 
@@ -528,7 +528,7 @@ class ExtVPQueries {
       |WHERE object = 'http://db.uwaterloo.ca/~galuc/wsdbm/Country1') tab3
       |JOIN    (SELECT subject AS v0
       |FROM SO_age_artist
-      |WHERE object = 'http://db.uwaterloo.ca/~galuc/wsdbm/AgeGroup5') tab0
+      |WHERE object = 'http://db.uwaterloo.ca/~galuc/wsdbm/AgeGroup1') tab0
       |ON(tab3.v0=tab0.v0)
       |JOIN    (SELECT object AS v0 , subject AS v3
       |FROM OS_artist_nationality) tab2
@@ -547,7 +547,7 @@ class ExtVPQueries {
       |WHERE object = 'http://db.uwaterloo.ca/~galuc/wsdbm/Language0') tab3
       |JOIN    (SELECT subject AS v0
       |FROM SS_type_language
-      |WHERE object = 'http://db.uwaterloo.ca/~galuc/wsdbm/ProductCategory7') tab0
+      |WHERE object = 'http://db.uwaterloo.ca/~galuc/wsdbm/ProductCategory2') tab0
       |ON(tab3.v0=tab0.v0)
       |JOIN    (SELECT subject AS v0 , object AS v3
       |FROM SS_keywords_language) tab2
@@ -562,7 +562,8 @@ class ExtVPQueries {
     """
       |SELECT tab0.v1 AS v1 , tab2.v0 AS v0 , tab1.v2 AS v2
       |FROM    (SELECT subject AS v0
-      |FROM SS_hasGenre_conductor WHERE object = 'http://db.uwaterloo.ca/~galuc/wsdbm/SubGenre130') tab2
+      |FROM SS_hasGenre_conductor
+      |WHERE object = 'http://db.uwaterloo.ca/~galuc/wsdbm/SubGenre115') tab2
       |JOIN    (SELECT object AS v1 , subject AS v0
       |FROM VP_conductor) tab0
       |ON(tab2.v0=tab0.v0)
@@ -576,13 +577,13 @@ class ExtVPQueries {
     """
       |SELECT tab0.v1 AS v1 , tab2.v0 AS v0 , tab1.v2 AS v2
       |FROM    (SELECT object AS v0
-      |FROM OS	wsdbm__likes/sorg__text
-      |WHERE subject = 'http://db.uwaterloo.ca/~galuc/wsdbm/User54768') tab2
+      |FROM OS_likes_text
+      |WHERE subject = 'http://db.uwaterloo.ca/~galuc/wsdbm/User100') tab2
       |JOIN    (SELECT subject AS v0 , object AS v2
-      |FROM SO	sorg__text/wsdbm__likes) tab1
+      |FROM SO_text_likes) tab1
       |ON(tab2.v0=tab1.v0)
       |JOIN    (SELECT object AS v1 , subject AS v0
-      |FROM SS	rdf__type/sorg__text) tab0
+      |FROM SS_type_text) tab0
       |ON(tab1.v0=tab0.v0)
       |""".stripMargin
 }

@@ -27,6 +27,7 @@ object ExtVPTables {
 
     //read tables from HDFS
 
+    /*
 
     //C1 FOR 10M STRUCTURE (WE NEED TO FIX THE PATH)
     val SS_caption_hasReview = spark.read.format("parquet").load(s"$path/ExtVP/Parquet/SS/caption/hasReview.parquet")
@@ -133,7 +134,58 @@ object ExtVPTables {
     //L5 FOR 10M STRUCTURE
     val SS_nationality_jobTitle = spark.read.format("parquet").load(s"$path/ExtVP/Parquet/SS/nationality/jobTitle.parquet")
     val SS_jobTitle_nationality = spark.read.format("parquet").load(s"$path/ExtVP/Parquet/SS/jobTitle/nationality.parquet")
+    */
 
+
+    //S1
+    val OS_offers_priceValidUntil = spark.read.format("parquet").load(s"$path/ExtVP/Parquet/OS/offers/priceValidUntil.parquet")
+    val SS_validFrom_priceValidUntil = spark.read.format("parquet").load(s"$path/ExtVP/Parquet/SS/validFrom/priceValidUntil.parquet")
+    val SS_priceValidUntil_validFrom = spark.read.format("parquet").load(s"$path/ExtVP/Parquet/SS/priceValidUntil/validFrom.parquet")
+    val SS_validThrough_priceValidUntil = spark.read.format("parquet").load(s"$path/ExtVP/Parquet/SS/validThrough/priceValidUntil.parquet")
+    val SS_includes_priceValidUntil = spark.read.format("parquet").load(s"$path/ExtVP/Parquet/SS/includes/priceValidUntil.parquet")
+    val SS_price_priceValidUntil = spark.read.format("parquet").load(s"$path/ExtVP/Parquet/SS/price/priceValidUntil.parquet")
+    val SS_serialNumber_priceValidUntil = spark.read.format("parquet").load(s"$path/ExtVP/Parquet/SS/serialNumber/priceValidUntil.parquet")
+    val SS_eligibleQuantity_priceValidUntil = spark.read.format("parquet").load(s"$path/ExtVP/Parquet/SS/eligibleQuantity/priceValidUntil.parquet")
+    val SS_eligibleRegion_priceValidUntil = spark.read.format("parquet").load(s"$path/ExtVP/Parquet/SS/eligibleRegion/priceValidUntil.parquet")
+
+    //S2
+    val SS_nationality_Location = spark.read.format("parquet").load(s"$path/ExtVP/Parquet/SS/nationality/Location.parquet")
+    val SS_type_nationality = spark.read.format("parquet").load(s"$path/ExtVP/Parquet/SS/type/Location.parquet")
+    val SS_Location_nationality = spark.read.format("parquet").load(s"$path/ExtVP/Parquet/SS/Location/nationality.parquet")
+    val SS_gender_nationality = spark.read.format("parquet").load(s"$path/ExtVP/Parquet/SS/gender/nationality.parquet")
+
+    //S3
+    val SS_type_publisher = spark.read.format("parquet").load(s"$path/ExtVP/Parquet/SS/type/publisher.parquet")
+    val SS_caption_publisher = spark.read.format("parquet").load(s"$path/ExtVP/Parquet/SS/caption/publisher.parquet")
+    val SS_publisher_caption = spark.read.format("parquet").load(s"$path/ExtVP/Parquet/SS/publisher/caption.parquet")
+    val SS_hasGenre_publisher = spark.read.format("parquet").load(s"$path/ExtVP/Parquet/SS/hasGenre/publisher.parquet")
+
+
+    //S4
+    val SO_nationality_artist = spark.read.format("parquet").load(s"$path/ExtVP/Parquet/SO/nationality/artist.parquet")
+    val SO_age_artist = spark.read.format("parquet").load(s"$path/ExtVP/Parquet/SO/age/artist.parquet")
+    val OS_artist_nationality = spark.read.format("parquet").load(s"$path/ExtVP/Parquet/OS/artist/nationality.parquet")
+    val SO_familyName_artist = spark.read.format("parquet").load(s"$path/ExtVP/Parquet/SO/familyName/artist.parquet")
+
+    //S5
+    val SS_language_keywords = spark.read.format("parquet").load(s"$path/ExtVP/Parquet/SS/language/keywords.parquet")
+    val SS_type_language = spark.read.format("parquet").load(s"$path/ExtVP/Parquet/SS/type/language.parquet")
+    val SS_keywords_language = spark.read.format("parquet").load(s"$path/ExtVP/Parquet/SS/keywords/language.parquet")
+    val SS_description_language = spark.read.format("parquet").load(s"$path/ExtVP/Parquet/SS/description/language.parquet")
+
+    //S6
+    val SS_hasGenre_conductor = spark.read.format("parquet").load(s"$path/ExtVP/Parquet/SS/language/keywords.parquet")
+    val VP_conductor = spark.read.format("parquet").load(s"$path/VP/Parquet/conductor.parquet")
+    val SS_type_conductor = spark.read.format("parquet").load(s"$path/ExtVP/Parquet/SS/type/conductor.parquet")
+
+
+    //S7
+    val OS_likes_text = spark.read.format("parquet").load(s"$path/ExtVP/Parquet/OS/likes/text.parquet")
+    val SO_text_likes = spark.read.format("parquet").load(s"$path/ExtVP/Parquet/SO/text/likes.parquet")
+    val SS_type_text = spark.read.format("parquet").load(s"$path/ExtVP/Parquet/SS/type/text.parquet")
+
+
+    /*
     //C1
     SS_caption_hasReview.createOrReplaceTempView("SS_caption_hasReview")
     SS_contentRating_caption.createOrReplaceTempView("SS_contentRating_caption")
@@ -231,13 +283,60 @@ object ExtVPTables {
     //L5
     SS_nationality_jobTitle.createOrReplaceTempView("SS_nationality_jobTitle")
     SS_jobTitle_nationality.createOrReplaceTempView("SS_jobTitle_nationality")
+    */
+
+    //S1
+    OS_offers_priceValidUntil.createOrReplaceTempView("OS_offers_priceValidUntil")
+    SS_validFrom_priceValidUntil.createOrReplaceTempView("SS_validFrom_priceValidUntil")
+    SS_priceValidUntil_validFrom.createOrReplaceTempView("SS_priceValidUntil_validFrom")
+    SS_validThrough_priceValidUntil.createOrReplaceTempView("SS_validThrough_priceValidUntil")
+    SS_includes_priceValidUntil.createOrReplaceTempView("SS_includes_priceValidUntil")
+    SS_price_priceValidUntil.createOrReplaceTempView("SS_price_priceValidUntil")
+    SS_serialNumber_priceValidUntil.createOrReplaceTempView("SS_serialNumber_priceValidUntil")
+    SS_eligibleQuantity_priceValidUntil.createOrReplaceTempView("SS_eligibleQuantity_priceValidUntil")
+    SS_eligibleRegion_priceValidUntil.createOrReplaceTempView("SS_eligibleRegion_priceValidUntil")
 
 
+    //S2
+    SS_nationality_Location.createOrReplaceTempView("SS_nationality_Location")
+    SS_type_nationality.createOrReplaceTempView("SS_type_nationality")
+    SS_Location_nationality.createOrReplaceTempView("SS_Location_nationality")
+    SS_gender_nationality.createOrReplaceTempView("SS_gender_nationality")
+
+
+    //S3
+    SS_type_publisher.createOrReplaceTempView("SS_type_publisher")
+    SS_caption_publisher.createOrReplaceTempView("SS_caption_publisher")
+    SS_publisher_caption.createOrReplaceTempView("SS_publisher_caption")
+    SS_hasGenre_publisher.createOrReplaceTempView("SS_hasGenre_publisher")
+
+    //S4
+    SO_nationality_artist.createOrReplaceTempView("SO_nationality_artist")
+    SO_age_artist.createOrReplaceTempView("SO_age_artist")
+    OS_artist_nationality.createOrReplaceTempView("OS_artist_nationality")
+    SO_familyName_artist.createOrReplaceTempView("SO_familyName_artist")
+
+
+    //S5
+    SS_language_keywords.createOrReplaceTempView("SS_language_keywords")
+    SS_type_language.createOrReplaceTempView("SS_type_language")
+    SS_keywords_language.createOrReplaceTempView("SS_keywords_language")
+    SS_description_language.createOrReplaceTempView("SS_description_language")
+
+    //S6
+    SS_hasGenre_conductor.createOrReplaceTempView("SS_hasGenre_conductor")
+    VP_conductor.createOrReplaceTempView("VP_conductor")
+    SS_type_conductor.createOrReplaceTempView("SS_type_conductor")
+
+    //S7
+    OS_likes_text.createOrReplaceTempView("OS_likes_text")
+    SO_text_likes.createOrReplaceTempView("SO_text_likes")
+    SS_type_text.createOrReplaceTempView("SS_type_text")
 
     //create file to write the query run time results
     //    val fos = new FileOutputStream(new File(s"/home/hadoop/RDFBenchMarking/logs2/$ds/orc/VP/$ds.txt"),true)
 
-    val queries = List(new ExtVPQueries L4 , new ExtVPQueries L5)
+    val queries = List(new ExtVPQueries S1 , new ExtVPQueries S2 , new ExtVPQueries S3  , new ExtVPQueries S4  , new ExtVPQueries S5  , new ExtVPQueries S6  , new ExtVPQueries S7)
     /*  new VTQueries q10) ,
       new VTQueries q3,
       new VTQueries q4,
