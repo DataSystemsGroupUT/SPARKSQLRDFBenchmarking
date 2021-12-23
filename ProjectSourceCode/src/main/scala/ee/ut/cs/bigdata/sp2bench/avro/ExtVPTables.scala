@@ -70,11 +70,7 @@ object ExtVPTables {
       val vpTable30 = spark.read.format("avro").load(s"$path/ExtVP/Avro/SS/type/name.avro").toDF()
 
       vpTable6.createOrReplaceTempView("VP_Type")
-      vpTable12.createOrReplaceTempView("creator")
       vpTable27.createOrReplaceTempView("Triples")
-      vpTable29.createOrReplaceTempView("editorv")
-      vpTable9.createOrReplaceTempView("journal")
-      vpTable11.createOrReplaceTempView("name")
 
 
       vpTable6.createOrReplaceTempView("VP_Type")

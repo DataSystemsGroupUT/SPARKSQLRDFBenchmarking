@@ -32,29 +32,18 @@ object ExtVPTables {
     println("Reading Tables...")
     //read tables from HDFS
     if (partitionType.toLowerCase == "predicate") {
-      val vpTable6 = spark.read.format("csv").option("header", "true").option("inferSchema", "true").load(s"$path/VP/CSV/type.csv").toDF()
-      val vpTable12 = spark.read.format("csv").option("header", "true").option("inferSchema", "true").load(s"$path/VP/CSV/creator.csv").toDF()
-
-      //    val vpTable27 = spark.read.format("csv").option("header", "true").option("inferSchema", "true").load(s"$path/ST/CSV/SingleStmtTable.csv").toDF() // NO VALID PATH
-      val vpTable27 = spark.read.format("csv").option("header", "true").option("inferSchema", "true").load(s"$path/ST/ST/SingleStmtTable.csv").toDF()
-
-      val vpTable29 = spark.read.format("csv").option("header", "true").option("inferSchema", "true").load(s"$path/VP/CSV/editor.csv").toDF()
-      val vpTable9 = spark.read.format("csv").option("header", "true").option("inferSchema", "true").load(s"$path/VP/CSV/journal.csv").toDF()
-      val vpTable11 = spark.read.format("csv").option("header", "true").option("inferSchema", "true").load(s"$path/VP/CSV/name.csv").toDF()
-
-
       val vpTable1 = spark.read.format("csv").option("header", "true").option("inferSchema", "true").load(s"$path/ExtVP/CSV/SS/type/issued.csv").toDF()
       val vpTable2 = spark.read.format("csv").option("header", "true").option("inferSchema", "true").load(s"$path/ExtVP/CSV/SS/title/issued.csv").toDF()
       val vpTable3 = spark.read.format("csv").option("header", "true").option("inferSchema", "true").load(s"$path/VP/CSV/issued.csv").toDF()
       val vpTable4 = spark.read.format("csv").option("header", "true").option("inferSchema", "true").load(s"$path/ExtVP/CSV/SS/type/pages.csv").toDF()
       val vpTable5 = spark.read.format("csv").option("header", "true").option("inferSchema", "true").load(s"$path/VP/CSV/pages.csv").toDF()
-
+      val vpTable6 = spark.read.format("csv").option("header", "true").option("inferSchema", "true").load(s"$path/VP/CSV/type.csv").toDF()
       val vpTable7 = spark.read.format("csv").option("header", "true").option("inferSchema", "true").load(s"$path/ExtVP/CSV/SO/name/creator.csv").toDF()
       val vpTable8 = spark.read.format("csv").option("header", "true").option("inferSchema", "true").load(s"$path/ExtVP/CSV/SS/creator/journal.csv").toDF()
-      //      val vpTable9 = spark.read.format("csv").option("header", "true").option("inferSchema", "true").load(s"$path/VP/CSV/journal.csv").toDF()
+      val vpTable9 = spark.read.format("csv").option("header", "true").option("inferSchema", "true").load(s"$path/VP/CSV/journal.csv").toDF()
       val vpTable10 = spark.read.format("csv").option("header", "true").option("inferSchema", "true").load(s"$path/ExtVP/CSV/SS/type/journal.csv").toDF()
-      //      val vpTable11 = spark.read.format("csv").option("header", "true").option("inferSchema", "true").load(s"$path/VP/CSV/name.csv").toDF()
-
+      val vpTable11 = spark.read.format("csv").option("header", "true").option("inferSchema", "true").load(s"$path/VP/CSV/name.csv").toDF()
+      val vpTable12 = spark.read.format("csv").option("header", "true").option("inferSchema", "true").load(s"$path/VP/CSV/creator.csv").toDF()
       val vpTable13 = spark.read.format("csv").option("header", "true").option("inferSchema", "true").load(s"$path/VP/CSV/abstract.csv").toDF()
       val vpTable14 = spark.read.format("csv").option("header", "true").option("inferSchema", "true").load(s"$path/ExtVP/CSV/SS/creator/partOf.csv").toDF()
       val vpTable15 = spark.read.format("csv").option("header", "true").option("inferSchema", "true").load(s"$path/ExtVP/CSV/SS/booktitle/seeAlso.csv").toDF()
@@ -69,34 +58,30 @@ object ExtVPTables {
       val vpTable24 = spark.read.format("csv").option("header", "true").option("inferSchema", "true").load(s"$path/VP/CSV/subClassOf.csv").toDF()
       val vpTable25 = spark.read.format("csv").option("header", "true").option("inferSchema", "true").load(s"$path/ExtVP/CSV/SS/issued/creator.csv").toDF()
       val vpTable26 = spark.read.format("csv").option("header", "true").option("inferSchema", "true").load(s"$path/ExtVP/CSV/SS/creator/issued.csv").toDF()
+      val vpTable27 = spark.read.format("csv").option("header", "true").option("inferSchema", "true").load(s"$path/ST/CSV/SingleStmtTable.csv").toDF()
       val vpTable28 = spark.read.format("csv").option("header", "true").option("inferSchema", "true").load(s"$path/VP/CSV/seeAlso.csv").toDF()
+      val vpTable29 = spark.read.format("csv").option("header", "true").option("inferSchema", "true").load(s"$path/VP/CSV/editor.csv").toDF()
       val vpTable30 = spark.read.format("csv").option("header", "true").option("inferSchema", "true").load(s"$path/ExtVP/CSV/SS/type/name.csv").toDF()
 
 
       vpTable6.createOrReplaceTempView("VP_Type")
-      vpTable12.createOrReplaceTempView("creator")
       vpTable27.createOrReplaceTempView("Triples")
-      vpTable29.createOrReplaceTempView("editorv")
-      vpTable9.createOrReplaceTempView("journal")
-      vpTable11.createOrReplaceTempView("name")
-
       vpTable6.createOrReplaceTempView("VP_Type")
       vpTable12.createOrReplaceTempView("VP_Creator")
       vpTable27.createOrReplaceTempView("Triples")
       vpTable29.createOrReplaceTempView("VP_Editor")
-
+      vpTable9.createOrReplaceTempView("VP_Journal")
+      vpTable11.createOrReplaceTempView("VP_Name")
       vpTable1.createOrReplaceTempView("ExtVP_SS_Type_Issued")
       vpTable2.createOrReplaceTempView("ExtVP_SS_Title_Issued")
       vpTable3.createOrReplaceTempView("VP_Issued")
       vpTable4.createOrReplaceTempView("ExtVP_SS_Type_Pages")
       vpTable5.createOrReplaceTempView("VP_Pages")
-
       vpTable7.createOrReplaceTempView("ExtVP_SO_Name_Creator")
       vpTable8.createOrReplaceTempView("ExtVP_SS_Creator_Journal")
       vpTable9.createOrReplaceTempView("VP_Journal")
       vpTable10.createOrReplaceTempView("ExtVP_SS_Type_Journal")
       vpTable11.createOrReplaceTempView("VP_Name")
-
       vpTable13.createOrReplaceTempView("VP_Abstract")
       vpTable14.createOrReplaceTempView("ExtVP_SS_Creator_PartOf")
       vpTable15.createOrReplaceTempView("ExtVP_SS_BookTitle_SeeAlso")
@@ -118,11 +103,8 @@ object ExtVPTables {
       val vpTable6 = spark.read.format("csv").option("header", "true").option("inferSchema", "true").load(s"$path/VP/CSV/type$partitionType.csv").toDF()
       val vpTable12 = spark.read.format("csv").option("header", "true").option("inferSchema", "true").load(s"$path/VP/CSV/creator$partitionType.csv").toDF()
       val vpTable27 = spark.read.format("csv").option("header", "true").option("inferSchema", "true").load(s"$path/ST/CSV/SingleStmtTable$partitionType.csv").toDF()
-//      val vpTable27 = spark.read.format("csv").option("header", "true").option("inferSchema", "true").load(s"$path/ST/ST/SingleStmtTable.csv").toDF()
 
       val vpTable29 = spark.read.format("csv").option("header", "true").option("inferSchema", "true").load(s"$path/VP/CSV/editor$partitionType.csv").toDF()
-      val vpTable9 = spark.read.format("csv").option("header", "true").option("inferSchema", "true").load(s"$path/VP/CSV/journal$partitionType.csv").toDF()
-      val vpTable11 = spark.read.format("csv").option("header", "true").option("inferSchema", "true").load(s"$path/VP/CSV/name$partitionType.csv").toDF()
 
       val vpTable1 = spark.read.format("csv").option("header", "true").option("inferSchema", "true").load(s"$path/ExtVP/CSV/SS/type/issued$partitionType.csv").toDF()
       val vpTable2 = spark.read.format("csv").option("header", "true").option("inferSchema", "true").load(s"$path/ExtVP/CSV/SS/title/issued$partitionType.csv").toDF()
@@ -132,9 +114,9 @@ object ExtVPTables {
 
       val vpTable7 = spark.read.format("csv").option("header", "true").option("inferSchema", "true").load(s"$path/ExtVP/CSV/SO/name/creator$partitionType.csv").toDF()
       val vpTable8 = spark.read.format("csv").option("header", "true").option("inferSchema", "true").load(s"$path/ExtVP/CSV/SS/creator/journal$partitionType.csv").toDF()
-      //      val vpTable9 = spark.read.format("csv").option("header", "true").option("inferSchema", "true").load(s"$path/VP/CSV/journal$partitionType.csv").toDF()
+      val vpTable9 = spark.read.format("csv").option("header", "true").option("inferSchema", "true").load(s"$path/VP/CSV/journal$partitionType.csv").toDF()
       val vpTable10 = spark.read.format("csv").option("header", "true").option("inferSchema", "true").load(s"$path/ExtVP/CSV/SS/type/journal$partitionType.csv").toDF()
-      //      val vpTable11 = spark.read.format("csv").option("header", "true").option("inferSchema", "true").load(s"$path/VP/CSV/name$partitionType.csv").toDF()
+      val vpTable11 = spark.read.format("csv").option("header", "true").option("inferSchema", "true").load(s"$path/VP/CSV/name$partitionType.csv").toDF()
 
       val vpTable13 = spark.read.format("csv").option("header", "true").option("inferSchema", "true").load(s"$path/VP/CSV/abstract$partitionType.csv").toDF()
       val vpTable14 = spark.read.format("csv").option("header", "true").option("inferSchema", "true").load(s"$path/ExtVP/CSV/SS/creator/partOf$partitionType.csv").toDF()
@@ -154,31 +136,25 @@ object ExtVPTables {
       val vpTable30 = spark.read.format("csv").option("header", "true").option("inferSchema", "true").load(s"$path/ExtVP/CSV/SS/type/name$partitionType.csv").toDF()
 
       vpTable6.createOrReplaceTempView("VP_Type")
-      vpTable12.createOrReplaceTempView("creator")
       vpTable27.createOrReplaceTempView("Triples")
-      vpTable29.createOrReplaceTempView("editorv")
-      //      vpTable9.createOrReplaceTempView("journal")
-      //      vpTable11.createOrReplaceTempView("name")
 
       vpTable6.createOrReplaceTempView("VP_Type")
       vpTable12.createOrReplaceTempView("VP_Creator")
       vpTable27.createOrReplaceTempView("Triples")
       vpTable29.createOrReplaceTempView("VP_Editor")
-      //      vpTable9.createOrReplaceTempView("VP_Journal")
-      //      vpTable11.createOrReplaceTempView("VP_Name")
+      vpTable9.createOrReplaceTempView("VP_Journal")
+      vpTable11.createOrReplaceTempView("VP_Name")
 
       vpTable1.createOrReplaceTempView("ExtVP_SS_Type_Issued")
       vpTable2.createOrReplaceTempView("ExtVP_SS_Title_Issued")
       vpTable3.createOrReplaceTempView("VP_Issued")
       vpTable4.createOrReplaceTempView("ExtVP_SS_Type_Pages")
       vpTable5.createOrReplaceTempView("VP_Pages")
-
       vpTable7.createOrReplaceTempView("ExtVP_SO_Name_Creator")
       vpTable8.createOrReplaceTempView("ExtVP_SS_Creator_Journal")
       vpTable9.createOrReplaceTempView("VP_Journal")
       vpTable10.createOrReplaceTempView("ExtVP_SS_Type_Journal")
       vpTable11.createOrReplaceTempView("VP_Name")
-
       vpTable13.createOrReplaceTempView("VP_Abstract")
       vpTable14.createOrReplaceTempView("ExtVP_SS_Creator_PartOf")
       vpTable15.createOrReplaceTempView("ExtVP_SS_BookTitle_SeeAlso")
