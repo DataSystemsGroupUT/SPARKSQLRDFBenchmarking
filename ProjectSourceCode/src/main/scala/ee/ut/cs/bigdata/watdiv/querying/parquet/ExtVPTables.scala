@@ -181,10 +181,13 @@ object ExtVPTables {
     val SS_type_conductor = spark.read.format("parquet").load(s"$path/ExtVP/Parquet/SS/type/conductor.parquet")
 
 
+    /*
     //S7
     val OS_likes_text = spark.read.format("parquet").load(s"$path/ExtVP/Parquet/OS/likes/text.parquet")
     val SO_text_likes = spark.read.format("parquet").load(s"$path/ExtVP/Parquet/SO/text/likes.parquet")
     val SS_type_text = spark.read.format("parquet").load(s"$path/ExtVP/Parquet/SS/type/text.parquet")
+
+     */
 
 
     /*
@@ -287,6 +290,7 @@ object ExtVPTables {
     SS_jobTitle_nationality.createOrReplaceTempView("SS_jobTitle_nationality")
     */
 
+    /*
     //S1
     OS_offers_priceValidUntil.createOrReplaceTempView("OS_offers_priceValidUntil")
     SS_validFrom_priceValidUntil.createOrReplaceTempView("SS_validFrom_priceValidUntil")
@@ -325,20 +329,25 @@ object ExtVPTables {
     SS_keywords_language.createOrReplaceTempView("SS_keywords_language")
     SS_description_language.createOrReplaceTempView("SS_description_language")
 
+     */
+
     //S6
     SS_hasGenre_conductor.createOrReplaceTempView("SS_hasGenre_conductor")
     VP_conductor.createOrReplaceTempView("VP_conductor")
     SS_type_conductor.createOrReplaceTempView("SS_type_conductor")
 
+    /*
     //S7
     OS_likes_text.createOrReplaceTempView("OS_likes_text")
     SO_text_likes.createOrReplaceTempView("SO_text_likes")
     SS_type_text.createOrReplaceTempView("SS_type_text")
 
+     */
+
     //create file to write the query run time results
     //    val fos = new FileOutputStream(new File(s"/home/hadoop/RDFBenchMarking/logs2/$ds/orc/VP/$ds.txt"),true)
 
-    val queries = List(new ExtVPQueries S1 , new ExtVPQueries S2 , new ExtVPQueries S3  , new ExtVPQueries S4  , new ExtVPQueries S5  , new ExtVPQueries S6  , new ExtVPQueries S7)
+    val queries = List(new ExtVPQueries S6)
     /*  new VTQueries q10) ,
       new VTQueries q3,
       new VTQueries q4,
