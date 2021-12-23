@@ -8,7 +8,7 @@ import org.apache.spark.{SparkConf, SparkContext}
 
 object ExtVPTablesPartition {
   def main(args: Array[String]): Unit = {
-    println("part")
+    println("Parquet Extvp partitioning")
 
     val conf = new SparkConf()
     Logger.getLogger("org").setLevel(Level.OFF)

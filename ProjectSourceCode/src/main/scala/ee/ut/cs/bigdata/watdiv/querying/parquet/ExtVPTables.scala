@@ -27,7 +27,6 @@ object ExtVPTables {
 
     //read tables from HDFS
 
-    /*
 
     //C1 FOR 10M STRUCTURE (WE NEED TO FIX THE PATH)
     val SS_caption_hasReview = spark.read.format("parquet").load(s"$path/ExtVP/Parquet/SS/caption/hasReview.parquet")
@@ -135,8 +134,6 @@ object ExtVPTables {
     val SS_nationality_jobTitle = spark.read.format("parquet").load(s"$path/ExtVP/Parquet/SS/nationality/jobTitle.parquet")
     val SS_jobTitle_nationality = spark.read.format("parquet").load(s"$path/ExtVP/Parquet/SS/jobTitle/nationality.parquet")
 
-
-
     //S1
     val OS_offers_priceValidUntil = spark.read.format("parquet").load(s"$path/ExtVP/Parquet/OS/offers/priceValidUntil.parquet")
     val SS_validFrom_priceValidUntil = spark.read.format("parquet").load(s"$path/ExtVP/Parquet/SS/validFrom/priceValidUntil.parquet")
@@ -160,7 +157,6 @@ object ExtVPTables {
     val SS_publisher_caption = spark.read.format("parquet").load(s"$path/ExtVP/Parquet/SS/publisher/caption.parquet")
     val SS_hasGenre_publisher = spark.read.format("parquet").load(s"$path/ExtVP/Parquet/SS/hasGenre/publisher.parquet")
 
-
     //S4
     val SO_nationality_artist = spark.read.format("parquet").load(s"$path/ExtVP/Parquet/SO/nationality/artist.parquet")
     val SO_age_artist = spark.read.format("parquet").load(s"$path/ExtVP/Parquet/SO/age/artist.parquet")
@@ -173,24 +169,20 @@ object ExtVPTables {
     val SS_keywords_language = spark.read.format("parquet").load(s"$path/ExtVP/Parquet/SS/keywords/language.parquet")
     val SS_description_language = spark.read.format("parquet").load(s"$path/ExtVP/Parquet/SS/description/language.parquet")
 
-     */
-
     //S6
     val SS_hasGenre_conductor = spark.read.format("parquet").load(s"$path/ExtVP/Parquet/SS/hasGenre/conductor.parquet")
     val VP_conductor = spark.read.format("parquet").load(s"$path/VP/Parquet/conductor.parquet")
     val SS_type_conductor = spark.read.format("parquet").load(s"$path/ExtVP/Parquet/SS/type/conductor.parquet")
 
-
-    /*
     //S7
     val OS_likes_text = spark.read.format("parquet").load(s"$path/ExtVP/Parquet/OS/likes/text.parquet")
     val SO_text_likes = spark.read.format("parquet").load(s"$path/ExtVP/Parquet/SO/text/likes.parquet")
     val SS_type_text = spark.read.format("parquet").load(s"$path/ExtVP/Parquet/SS/type/text.parquet")
 
-     */
 
 
-    /*
+
+
     //C1
     SS_caption_hasReview.createOrReplaceTempView("SS_caption_hasReview")
     SS_contentRating_caption.createOrReplaceTempView("SS_contentRating_caption")
@@ -288,9 +280,8 @@ object ExtVPTables {
     //L5
     SS_nationality_jobTitle.createOrReplaceTempView("SS_nationality_jobTitle")
     SS_jobTitle_nationality.createOrReplaceTempView("SS_jobTitle_nationality")
-    */
 
-    /*
+
     //S1
     OS_offers_priceValidUntil.createOrReplaceTempView("OS_offers_priceValidUntil")
     SS_validFrom_priceValidUntil.createOrReplaceTempView("SS_validFrom_priceValidUntil")
@@ -329,35 +320,29 @@ object ExtVPTables {
     SS_keywords_language.createOrReplaceTempView("SS_keywords_language")
     SS_description_language.createOrReplaceTempView("SS_description_language")
 
-     */
+
 
     //S6
     SS_hasGenre_conductor.createOrReplaceTempView("SS_hasGenre_conductor")
     VP_conductor.createOrReplaceTempView("VP_conductor")
     SS_type_conductor.createOrReplaceTempView("SS_type_conductor")
 
-    /*
+
     //S7
     OS_likes_text.createOrReplaceTempView("OS_likes_text")
     SO_text_likes.createOrReplaceTempView("SO_text_likes")
     SS_type_text.createOrReplaceTempView("SS_type_text")
 
-     */
+
 
     //create file to write the query run time results
     //    val fos = new FileOutputStream(new File(s"/home/hadoop/RDFBenchMarking/logs2/$ds/orc/VP/$ds.txt"),true)
 
-    val queries = List(new ExtVPQueries S6)
-    /*  new VTQueries q10) ,
-      new VTQueries q3,
-      new VTQueries q4,
-      new VTQueries q5,
-      new VTQueries q6,
-      new VTQueries q7,
-      new VTQueries q8,
-      new VTQueries q9,
-      new VTQueries q10,
-      new VTQueries q11) */
+    val queries = List(new ExtVPQueries C1, new ExtVPQueries C2, new ExtVPQueries C3,
+      new ExtVPQueries F1, new ExtVPQueries F2, new ExtVPQueries F3, new ExtVPQueries F4, new ExtVPQueries F5,
+      new ExtVPQueries L1, new ExtVPQueries L2, new ExtVPQueries L3,new ExtVPQueries L4, new ExtVPQueries L5,
+      new ExtVPQueries S1, new ExtVPQueries S2, new ExtVPQueries S3,new ExtVPQueries S4, new ExtVPQueries S5,new ExtVPQueries S6, new ExtVPQueries S7
+    )
 
 
     var count = 1
@@ -369,17 +354,6 @@ object ExtVPTables {
       //df.take(100).foreach(println)
       val endTime = System.nanoTime()
       val result = (endTime - startTime).toDouble / 1000000000
-
-      //      //write the result into the log file
-      //      if (count != queries.size) {
-      //        Console.withOut(fos) {
-      //          print(result + ",")
-      //        }
-      //      } else {
-      //        Console.withOut(fos) {
-      //          println(result)
-      //        }
-      //      }
       count += 1
     }
     println("All Queries are Done - Parquet - VP!")
@@ -387,4 +361,3 @@ object ExtVPTables {
 
   }
 }
-//L5

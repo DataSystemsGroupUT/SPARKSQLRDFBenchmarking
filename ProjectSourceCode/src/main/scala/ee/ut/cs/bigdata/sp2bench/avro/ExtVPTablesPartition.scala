@@ -8,7 +8,7 @@ import org.apache.spark.{SparkConf, SparkContext}
 
 object ExtVPTablesPartition {
   def main(args: Array[String]): Unit = {
-    println("avroextvp")
+    println("Avro Extvp partitioning")
 
     val conf = new SparkConf()
     Logger.getLogger("org").setLevel(Level.OFF)
@@ -39,8 +39,8 @@ object ExtVPTablesPartition {
     val vpTable12 = spark.read.format("avro").load(s"$path/VP/Avro/creator.avro").toDF()
     val vpTable28 = spark.read.format("avro").load(s"$path/VP/Avro/seeAlso.avro").toDF()
     val vpTable29 = spark.read.format("avro").load(s"$path/VP/Avro/editor.avro").toDF()
-    //    val vpTable27 = spark.read.format("avro").load(s"$path/ST/Avro/SingleStmtTable.avro").toDF()
-    val vpTable27 = spark.read.format("csv").option("header", "true").option("inferSchema", "true").load(s"$path/ST/ST/SingleStmtTable.csv").toDF()
+    val vpTable27 = spark.read.format("avro").load(s"$path/ST/Avro/SingleStmtTable.avro").toDF()
+//    val vpTable27 = spark.read.format("csv").option("header", "true").option("inferSchema", "true").load(s"$path/ST/ST/SingleStmtTable.csv").toDF()
 
     val vpTable1 = spark.read.format("avro").load(s"$path/ExtVP/Avro/SS/type/issued.avro").toDF()
     val vpTable2 = spark.read.format("avro").load(s"$path/ExtVP/Avro/SS/title/issued.avro").toDF()
@@ -109,7 +109,8 @@ object ExtVPTablesPartition {
       vpTable26.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(s"$path/ExtVP/Avro/SS/creator/issuedSubject.avro")
       vpTable30.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(s"$path/ExtVP/Avro/SS/type/nameSubject.avro")
       println("Avro ExtVP partitioned and saved! Subject!")
-    } else if (partitionType == "horizontal") {
+    }
+    else if (partitionType == "horizontal") {
       print("Partitioning Horizontally .. ")
       vpTable9.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(s"$path/VP/Avro/journalHorizontal.avro")
       vpTable11.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(s"$path/VP/Avro/nameHorizontal.avro")

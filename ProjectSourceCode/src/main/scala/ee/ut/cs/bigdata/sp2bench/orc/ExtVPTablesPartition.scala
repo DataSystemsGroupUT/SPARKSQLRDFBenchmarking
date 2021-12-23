@@ -8,7 +8,7 @@ import org.apache.spark.{SparkConf, SparkContext}
 
 object ExtVPTablesPartition {
   def main(args: Array[String]): Unit = {
-    println("extvp")
+    println("ORC Extvp partitioning")
 
     val conf = new SparkConf()
     Logger.getLogger("org").setLevel(Level.OFF)
@@ -36,8 +36,8 @@ object ExtVPTablesPartition {
     val vpTable6 = spark.read.format("orc").load(s"$path/VP/ORC/type.orc").toDF()
     val vpTable12 = spark.read.format("orc").load(s"$path/VP/ORC/creator.orc").toDF()
 
-    //    val vpTable27 = spark.read.format("orc").load(s"$path/ST/ORC/SingleStmtTable.orc").toDF()
-    val vpTable27 = spark.read.format("csv").option("header", "true").option("inferSchema", "true").load(s"$path/ST/ST/SingleStmtTable.csv").toDF()
+    val vpTable27 = spark.read.format("orc").load(s"$path/ST/ORC/SingleStmtTable.orc").toDF()
+//    val vpTable27 = spark.read.format("csv").option("header", "true").option("inferSchema", "true").load(s"$path/ST/ST/SingleStmtTable.csv").toDF()
 
     val vpTable28 = spark.read.format("orc").load(s"$path/VP/ORC/seeAlso.orc").toDF()
     val vpTable29 = spark.read.format("orc").load(s"$path/VP/ORC/editor.orc").toDF()
@@ -106,7 +106,8 @@ object ExtVPTablesPartition {
       vpTable30.repartition(84, $"Subject").write.option("header", "true").format("orc").mode(SaveMode.Overwrite).save(s"$path/ExtVP/ORC/SS/type/nameSubject.orc")
 
       println("ORC ExtVP partitioned and saved! Subject!")
-    } else if (partitionType == "horizontal") {
+    }
+    else if (partitionType == "horizontal") {
       print("Partitioning Horizontally: ")
 
       vpTable9.repartition(84).write.option("header", "true").format("orc").mode(SaveMode.Overwrite).save(s"$path/VP/ORC/journalHorizontal.orc")

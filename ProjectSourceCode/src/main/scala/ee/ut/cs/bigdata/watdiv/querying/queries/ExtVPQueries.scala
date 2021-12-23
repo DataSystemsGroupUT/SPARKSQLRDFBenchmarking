@@ -4,7 +4,7 @@ class ExtVPQueries {
 
   //Complex
 
-  val c1 =
+  val C1 =
     """
       |SELECT tab0.v1 AS v1 , tab0.v0 AS v0 , tab6.v7 AS v7 , tab4.v5 AS v5 , tab5.v6 AS v6 , tab3.v4 AS v4 , tab2.v3 AS v3 , tab7.v8 AS v8 , tab1.v2 AS v2
       |FROM    (SELECT obj AS v1 , subject AS v0
@@ -37,7 +37,7 @@ class ExtVPQueries {
       |""".stripMargin
 
   //This One Works for the 10M Dataset (Some SS_SO_OS are not there!!)
-  val c1_copy =
+  val C1_copy =
     """
       |SELECT tab0.v1 AS v1 , tab0.v0 AS v0 , tab6.v7 AS v7 , tab4.v5 AS v5 , tab5.v6 AS v6 , tab3.v4 AS v4 , tab2.v3 AS v3 , tab7.v8 AS v8 , tab1.v2 AS v2
       |FROM    (SELECT object AS v1 , subject AS v0
@@ -70,7 +70,7 @@ class ExtVPQueries {
       |""".stripMargin
 
 
-  val c2 =
+  val C2 =
     """
       |SELECT tab0.v1 AS v1 , tab1.v0 AS v0 , tab4.v5 AS v5 , tab7.v7 AS v7 , tab5.v6 AS v6 , tab6.v4 AS v4 , tab9.v9 AS v9 , tab3.v3 AS v3 , tab8.v8 AS v8 , tab2.v2 AS v2
       |FROM    (SELECT subject AS v2
@@ -122,7 +122,7 @@ class ExtVPQueries {
       |""".stripMargin
 
 
-  val c3 =
+  val C3 =
     """
       |SELECT tab0.v1 AS v1 , tab2.v0 AS v0 , tab4.v5 AS v5 , tab5.v6 AS v6 , tab3.v4 AS v4 , tab2.v3 AS v3 , tab1.v2 AS v2
       |FROM    (SELECT subject AS v0 , object AS v3
@@ -341,32 +341,25 @@ class ExtVPQueries {
   val F5 =
     """
       |SELECT tab0.v1 AS v1 , tab1.v0 AS v0 , tab4.v5 AS v5 , tab5.v6 AS v6 , tab3.v4 AS v4 , tab2.v3 AS v3
- FROM    (SELECT object AS v0
-	 FROM OS_offers_validThrough
-	 WHERE subject = 'http://db.uwaterloo.ca/~galuc/wsdbm/Retailer10'
-	) tab1
- JOIN    (SELECT subject AS v0 , object AS v4
-	 FROM SO_validThrough_offers
-
-	) tab3
- ON(tab1.v0=tab3.v0)
- JOIN    (SELECT object AS v1 , subject AS v0
-	 FROM SS_includes_validThrough
-	) tab0
- ON(tab3.v0=tab0.v0)
- JOIN    (SELECT subject AS v1 , object AS v5
-	 FROM SO_title_includes
-	) tab4
- ON(tab0.v1=tab4.v1)
- JOIN    (SELECT subject AS v1 , object AS v6
-	 FROM SO_type_includes
-	) tab5
- ON(tab4.v1=tab5.v1)
- JOIN    (SELECT subject AS v0 , object AS v3
-	 FROM SS_price_validThrough
-	) tab2
- ON(tab0.v0=tab2.v0)
- |""".stripMargin
+      |FROM    (SELECT object AS v0
+      |FROM OS_offers_validThrough
+      |WHERE subject = 'http://db.uwaterloo.ca/~galuc/wsdbm/Retailer10') tab1
+      |JOIN    (SELECT subject AS v0 , object AS v4
+      |FROM SO_validThrough_offers) tab3
+      |ON(tab1.v0=tab3.v0)
+      |JOIN    (SELECT object AS v1 , subject AS v0
+      |FROM SS_includes_validThrough) tab0
+      |ON(tab3.v0=tab0.v0)
+      |JOIN    (SELECT subject AS v1 , object AS v5
+      |FROM SO_title_includes) tab4
+      |ON(tab0.v1=tab4.v1)
+      |JOIN    (SELECT subject AS v1 , object AS v6
+      |FROM SO_type_includes) tab5
+      |ON(tab4.v1=tab5.v1)
+      |JOIN    (SELECT subject AS v0 , object AS v3
+      |FROM SS_price_validThrough) tab2
+      |ON(tab0.v0=tab2.v0)
+      |""".stripMargin
 
 
   // Linear (L)
@@ -430,21 +423,14 @@ class ExtVPQueries {
     |SELECT tab0.v1 AS v1 , tab2.v0 AS v0 , tab1.v3 AS v3
     |FROM    (SELECT object AS v3
     |FROM VP_parentCountry
-
-	 WHERE subject = 'http://db.uwaterloo.ca/~galuc/wsdbm/City187'
-	) tab1
- JOIN    (SELECT subject AS v0 , object AS v3
-	 FROM SS_nationality_jobTitle
-
-	) tab2
- ON(tab1.v3=tab2.v3)
- JOIN    (SELECT object AS v1 , subject AS v0
-	 FROM SS_jobTitle_nationality
-
-	) tab0
- ON(tab2.v0=tab0.v0)
-
-      |""".stripMargin
+    |WHERE subject = 'http://db.uwaterloo.ca/~galuc/wsdbm/City187') tab1
+    |JOIN    (SELECT subject AS v0 , object AS v3
+    |FROM SS_nationality_jobTitle) tab2
+    |ON(tab1.v3=tab2.v3)
+    |JOIN    (SELECT object AS v1 , subject AS v0
+    |FROM SS_jobTitle_nationality) tab0
+    |ON(tab2.v0=tab0.v0)
+ |""".stripMargin
 
 
   //Star (S)

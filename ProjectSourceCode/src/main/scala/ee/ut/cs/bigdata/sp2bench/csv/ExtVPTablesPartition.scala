@@ -8,7 +8,7 @@ import org.apache.spark.{SparkConf, SparkContext}
 
 object ExtVPTablesPartition {
   def main(args: Array[String]): Unit = {
-    println("Partitioning EXTVP 2")
+    println("CSV Extvp partitioning")
 
     val conf = new SparkConf()
     Logger.getLogger("org").setLevel(Level.OFF)
@@ -36,8 +36,8 @@ object ExtVPTablesPartition {
 
     val vpTable6 = spark.read.format("csv").option("header", "true").option("inferSchema", "true").load(s"$path/VP/CSV/type.csv").toDF()
     val vpTable12 = spark.read.format("csv").option("header", "true").option("inferSchema", "true").load(s"$path/VP/CSV/creator.csv").toDF()
-    //    val vpTable27 = spark.read.format("csv").option("header", "true").option("inferSchema", "true").load(s"$path/ST/CSV/SingleStmtTable.csv").toDF()
-    val vpTable27 = spark.read.format("csv").option("header", "true").option("inferSchema", "true").load(s"$path/ST/ST/SingleStmtTable.csv").toDF()
+    val vpTable27 = spark.read.format("csv").option("header", "true").option("inferSchema", "true").load(s"$path/ST/CSV/SingleStmtTable.csv").toDF()
+//    val vpTable27 = spark.read.format("csv").option("header", "true").option("inferSchema", "true").load(s"$path/ST/ST/SingleStmtTable.csv").toDF()
 
     val vpTable28 = spark.read.format("csv").option("header", "true").option("inferSchema", "true").load(s"$path/VP/CSV/seeAlso.csv").toDF()
     val vpTable29 = spark.read.format("csv").option("header", "true").option("inferSchema", "true").load(s"$path/VP/CSV/editor.csv").toDF()
@@ -104,7 +104,8 @@ object ExtVPTablesPartition {
       vpTable26.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(s"$path/ExtVP/CSV/SS/creator/issuedSubject.csv")
       vpTable30.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(s"$path/ExtVP/CSV/SS/type/nameSubject.csv")
       println("CSV ExtVP partitioned and saved! Subject!")
-    } else if (partitionType == "horizontal") {
+    }
+    else if (partitionType == "horizontal") {
       print("Partitioning Horizontally: ")
 
       vpTable9.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(s"$path/VP/CSV/journalHorizontal.csv")
