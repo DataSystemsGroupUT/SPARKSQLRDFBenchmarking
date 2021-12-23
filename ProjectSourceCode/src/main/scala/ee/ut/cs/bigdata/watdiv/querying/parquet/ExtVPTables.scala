@@ -10,7 +10,7 @@ import org.apache.spark.{SparkConf, SparkContext}
 object ExtVPTables {
   def main(args: Array[String]): Unit = {
 
-
+    println("EXTVP PARQUET")
     val conf = new SparkConf()
     Logger.getLogger("org").setLevel(Level.OFF)
     Logger.getLogger("akka").setLevel(Level.OFF)
