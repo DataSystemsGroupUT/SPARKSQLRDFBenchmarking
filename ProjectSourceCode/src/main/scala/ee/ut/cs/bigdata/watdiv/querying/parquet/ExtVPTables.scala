@@ -10,7 +10,7 @@ import org.apache.spark.{SparkConf, SparkContext}
 object ExtVPTables {
   def main(args: Array[String]): Unit = {
 
-    println("EXTVP PARQUET")
+    println("RDFBench WATDIV PARQUET ExtVP")
     val conf = new SparkConf()
     Logger.getLogger("org").setLevel(Level.OFF)
     Logger.getLogger("akka").setLevel(Level.OFF)
@@ -20,13 +20,12 @@ object ExtVPTables {
 
     val spark = SparkSession
       .builder()
-      .appName("RDFBench Parquet PT")
+      .appName("RDFBench WATDIV AVRO ExtVP")
       .getOrCreate()
     val ds = args(0) //value = {"100M", "500M, or "1B"}
     val path = s"hdfs://172.17.77.48:9000/user/hadoop/RDFBench/WATDIV/$ds/"
 
     //read tables from HDFS
-
 
     //C1 FOR 10M STRUCTURE (WE NEED TO FIX THE PATH)
     val SS_caption_hasReview = spark.read.format("parquet").load(s"$path/ExtVP/Parquet/SS/caption/hasReview.parquet")
@@ -180,9 +179,6 @@ object ExtVPTables {
     val SS_type_text = spark.read.format("parquet").load(s"$path/ExtVP/Parquet/SS/type/text.parquet")
 
 
-
-
-
     //C1
     SS_caption_hasReview.createOrReplaceTempView("SS_caption_hasReview")
     SS_contentRating_caption.createOrReplaceTempView("SS_contentRating_caption")
@@ -313,14 +309,11 @@ object ExtVPTables {
     OS_artist_nationality.createOrReplaceTempView("OS_artist_nationality")
     SO_familyName_artist.createOrReplaceTempView("SO_familyName_artist")
 
-
     //S5
     SS_language_keywords.createOrReplaceTempView("SS_language_keywords")
     SS_type_language.createOrReplaceTempView("SS_type_language")
     SS_keywords_language.createOrReplaceTempView("SS_keywords_language")
     SS_description_language.createOrReplaceTempView("SS_description_language")
-
-
 
     //S6
     SS_hasGenre_conductor.createOrReplaceTempView("SS_hasGenre_conductor")
@@ -334,11 +327,11 @@ object ExtVPTables {
     SS_type_text.createOrReplaceTempView("SS_type_text")
 
 
-
     //create file to write the query run time results
-    //    val fos = new FileOutputStream(new File(s"/home/hadoop/RDFBenchMarking/logs2/$ds/orc/VP/$ds.txt"),true)
+    val fos = new FileOutputStream(new File(s"/home/hadoop/RDFBenchMarking/logs/$ds/parquet/ExtVP/$ds.txt"),true)
 
-    val queries = List(new ExtVPQueries C1, new ExtVPQueries C2, new ExtVPQueries C3,
+    val queries = List(
+      new ExtVPQueries C1, new ExtVPQueries C2, new ExtVPQueries C3,
       new ExtVPQueries F1, new ExtVPQueries F2, new ExtVPQueries F3, new ExtVPQueries F4, new ExtVPQueries F5,
       new ExtVPQueries L1, new ExtVPQueries L2, new ExtVPQueries L3,new ExtVPQueries L4, new ExtVPQueries L5,
       new ExtVPQueries S1, new ExtVPQueries S2, new ExtVPQueries S3,new ExtVPQueries S4, new ExtVPQueries S5,new ExtVPQueries S6, new ExtVPQueries S7
@@ -357,7 +350,5 @@ object ExtVPTables {
       count += 1
     }
     println("All Queries are Done - Parquet - VP!")
-
-
   }
 }

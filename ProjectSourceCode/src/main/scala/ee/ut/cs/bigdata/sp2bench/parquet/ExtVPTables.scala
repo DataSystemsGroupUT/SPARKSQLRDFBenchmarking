@@ -111,7 +111,6 @@ object ExtVPTables {
 
     else 
     {
-
     val vpTable6 = spark.read.format("parquet").load(s"$path/VP/Parquet/type$partitionType.parquet").toDF()
     val vpTable12 = spark.read.format("parquet").load(s"$path/VP/Parquet/creator$partitionType.parquet").toDF()
     val vpTable27 = spark.read.format("parquet").load(s"$path/ST/Parquet/SingleStmtTable$partitionType.parquet").toDF()
