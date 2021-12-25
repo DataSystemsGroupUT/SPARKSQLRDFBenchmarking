@@ -35,9 +35,9 @@ object ExtVPTables {
     //val SO_title_hasReview=spark.read.format("parquet").load(s"$path/ExtVP/Parquet/") *********NOT FOUND in 10M **********
     //INSTEAD WE USE The following (VP	<rev__title>)
     val VP_Rev_title = spark.read.format("parquet").load(s"$path/VP/Parquet/rev_title.parquet")
-    //val SS_reviewer_title=spark.read.format("parquet").load(s"$path/ExtVP/Parquet/") *********NOT FOUND in 10M **********
+    val SS_reviewer_title=spark.read.format("parquet").load(s"$path/ExtVP/Parquet/SS/reviewer/rev_title.parquet")
     //INSTEAD WE USE The following <rev__reviewer>)
-    val VP_Reviewer = spark.read.format("parquet").load(s"$path/VP/Parquet/reviewer.parquet")
+//    val VP_Reviewer = spark.read.format("parquet").load(s"$path/VP/Parquet/reviewer.parquet")
     val SS_actor_language = spark.read.format("parquet").load(s"$path/ExtVP/Parquet/SS/actor/language.parquet")
     val SS_language_actor = spark.read.format("parquet").load(s"$path/ExtVP/Parquet/SS/language/actor.parquet")
 
@@ -185,7 +185,7 @@ object ExtVPTables {
     SS_text_caption.createOrReplaceTempView("SS_text_caption")
     SS_hasReview_caption.createOrReplaceTempView("SS_hasReview_caption")
     VP_Rev_title.createOrReplaceTempView("VP_Rev_title")
-    VP_Reviewer.createOrReplaceTempView("VP_Reviewer")
+    SS_reviewer_title.createOrReplaceTempView("SS_reviewer_title")
     SS_actor_language.createOrReplaceTempView("SS_actor_language")
     SS_language_actor.createOrReplaceTempView("SS_language_actor")
 
