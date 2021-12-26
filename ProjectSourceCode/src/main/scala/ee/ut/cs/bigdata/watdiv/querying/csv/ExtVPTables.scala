@@ -10,7 +10,7 @@ import org.apache.spark.{SparkConf, SparkContext}
 object ExtVPTables {
   def main(args: Array[String]): Unit = {
 
-    println("RDFBench WATDIV PARQUET ExtVP")
+    println("RDFBench WATDIV CSV ExtVP")
     val conf = new SparkConf()
     Logger.getLogger("org").setLevel(Level.OFF)
     Logger.getLogger("akka").setLevel(Level.OFF)
@@ -98,7 +98,7 @@ object ExtVPTables {
     val SS_homepage_contentSize = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/CSV/SS/homepage/contentSize.csv")
     val SS_tag_contentSize = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/CSV/SS/tag/contentSize.csv")
     val SS_contentSize_homepage = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/CSV/SS/contentSize/homepage.csv")
-    val SS_description_contentSize = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/CSV/SS/description/contentSize.csv")
+    val SS_description_contentSize = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/CSV/SS/sorg_description/contentSize.csv")
     val OS_includes_contentSize = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/CSV/OS/includes/contentSize.csv")
     val OS_likes_contentSize = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/CSV/OS/likes/contentSize.csv")
 
@@ -166,7 +166,7 @@ object ExtVPTables {
     val SS_language_keywords = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/CSV/SS/language/keywords.csv")
     val SS_type_language = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/CSV/SS/type/language.csv")
     val SS_keywords_language = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/CSV/SS/keywords/language.csv")
-    val SS_description_language = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/CSV/SS/description/language.csv")
+    val SS_description_language = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/CSV/SS/sorg_description/language.csv")
 
     //S6
     val SS_hasGenre_conductor = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/CSV/SS/hasGenre/conductor.csv")
