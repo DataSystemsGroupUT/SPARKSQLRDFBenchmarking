@@ -27,6 +27,7 @@ object ExtVPTables {
 
     //read tables from HDFS
 
+    /*
     //C1 FOR 10M STRUCTURE (WE NEED TO FIX THE PATH)
     val SS_caption_hasReview = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/CSV/SS/caption/hasReview.csv")
     val SS_contentRating_caption = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/CSV/SS/contentRating/caption.csv")
@@ -172,13 +173,14 @@ object ExtVPTables {
     val SS_hasGenre_conductor = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/CSV/SS/hasGenre/conductor.csv")
     val VP_conductor = spark.read.format("csv").option("header", true).load(s"$path/VP/CSV/conductor.csv")
     val SS_type_conductor = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/CSV/SS/type/conductor.csv")
+    */
 
     //S7
     val OS_likes_text = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/CSV/OS/likes/sorg_text.csv")
     val SO_text_likes = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/CSV/SO/sorg_text/likes.csv")
     val SS_type_text = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/CSV/SS/type/sorg_text.csv")
 
-
+/*
     //C1
     SS_caption_hasReview.createOrReplaceTempView("SS_caption_hasReview")
     SS_contentRating_caption.createOrReplaceTempView("SS_contentRating_caption")
@@ -322,6 +324,8 @@ object ExtVPTables {
     SS_type_conductor.createOrReplaceTempView("SS_type_conductor")
 
 
+ */
+
     //S7
     OS_likes_text.createOrReplaceTempView("OS_likes_text")
     SO_text_likes.createOrReplaceTempView("SO_text_likes")
@@ -332,10 +336,11 @@ object ExtVPTables {
 //    val fos = new FileOutputStream(new File(s"/home/hadoop/RDFBenchMarking/logs/$ds/csv/ExtVP/VHDFS$ds.txt"),true)
 
     val queries = List(
-      new ExtVPQueries C1, new ExtVPQueries C2, new ExtVPQueries C3,
-      new ExtVPQueries F1, new ExtVPQueries F2, new ExtVPQueries F3, new ExtVPQueries F4, new ExtVPQueries F5,
-      new ExtVPQueries L1, new ExtVPQueries L2, new ExtVPQueries L3,new ExtVPQueries L4, new ExtVPQueries L5,
-      new ExtVPQueries S1, new ExtVPQueries S2, new ExtVPQueries S3,new ExtVPQueries S4, new ExtVPQueries S5,new ExtVPQueries S6, new ExtVPQueries S7
+//      new ExtVPQueries C1, new ExtVPQueries C2, new ExtVPQueries C3,
+//      new ExtVPQueries F1, new ExtVPQueries F2, new ExtVPQueries F3, new ExtVPQueries F4, new ExtVPQueries F5,
+//      new ExtVPQueries L1, new ExtVPQueries L2, new ExtVPQueries L3,new ExtVPQueries L4, new ExtVPQueries L5,
+//      new ExtVPQueries S1, new ExtVPQueries S2, new ExtVPQueries S3,new ExtVPQueries S4, new ExtVPQueries S5,new ExtVPQueries S6,
+            new ExtVPQueries S7
     )
 
 
@@ -343,9 +348,10 @@ object ExtVPTables {
     for (query <- queries) {
       //run query and calculate the run time
       val startTime = System.nanoTime()
-      val df_count = spark.sql(query).count()
+      val df= spark.sql(query)
+      val df_count=df.count()
       println(df_count)
-      //df.take(100).foreach(println)
+      df.take(100).foreach(println)
       val endTime = System.nanoTime()
       val result = (endTime - startTime).toDouble / 1000000000
       count += 1

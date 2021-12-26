@@ -80,47 +80,31 @@ class ExtVPQueries {
       |WHERE object = 'http://db.uwaterloo.ca/~galuc/wsdbm/Country3') tab2
       |JOIN    (SELECT subject AS v0 , object AS v2
       |FROM SS_offers_legalName) tab1
- ON(tab2.v2=tab1.v2)
- JOIN    (SELECT object AS v1 , subject AS v0
-  FROM VP_legalName
-
- ) tab0
- ON(tab1.v0=tab0.v0)
- JOIN    (SELECT object AS v3 , subject AS v2
-  FROM OS_includes_hasReview
- ) tab3
- ON(tab1.v2=tab3.v2)
- JOIN    (SELECT subject AS v3 , object AS v8
-  FROM OS_hasReview_totalVotes
-
- ) tab8
- ON(tab3.v3=tab8.v3)
- JOIN    (SELECT object AS v9 , subject AS v8
-  FROM SO_totalVotes_hasReview
-
- ) tab9
- ON(tab8.v8=tab9.v8)
- JOIN    (SELECT subject AS v7 , object AS v3
-  FROM OS_purchaseFor_hasReview
-
- ) tab7
- ON(tab8.v3=tab7.v3)
- JOIN    (SELECT object AS v7 , subject AS v4
-  FROM SS_makesPurchase_homepage
-
- ) tab6
- ON(tab7.v7=tab6.v7)
- JOIN    (SELECT object AS v5 , subject AS v4
-  FROM SS_jobTitle_homepage
-
- ) tab4
- ON(tab6.v4=tab4.v4)
- JOIN    (SELECT object AS v6 , subject AS v4
-  FROM SS_homepage_jobTitle
-
-
- ) tab5
- ON(tab4.v4=tab5.v4)
+      |ON(tab2.v2=tab1.v2)
+      |JOIN    (SELECT object AS v1 , subject AS v0
+      |FROM VP_legalName) tab0
+      |ON(tab1.v0=tab0.v0)
+      |JOIN    (SELECT object AS v3 , subject AS v2
+      |FROM OS_includes_hasReview) tab3
+      |ON(tab1.v2=tab3.v2)
+      |JOIN    (SELECT subject AS v3 , object AS v8
+      |FROM OS_hasReview_totalVotes) tab8
+      |ON(tab3.v3=tab8.v3)
+      |JOIN    (SELECT object AS v9 , subject AS v8
+      |FROM SO_totalVotes_hasReview) tab9
+      |ON(tab8.v8=tab9.v8)
+      |JOIN    (SELECT subject AS v7 , object AS v3
+      |FROM OS_purchaseFor_hasReview) tab7
+      |ON(tab8.v3=tab7.v3)
+      |JOIN    (SELECT object AS v7 , subject AS v4
+      |FROM SS_makesPurchase_homepage) tab6
+      |ON(tab7.v7=tab6.v7)
+      |JOIN    (SELECT object AS v5 , subject AS v4
+      |FROM SS_jobTitle_homepage) tab4
+      |ON(tab6.v4=tab4.v4)
+      |JOIN    (SELECT object AS v6 , subject AS v4
+      |FROM SS_homepage_jobTitle) tab5
+      |ON(tab4.v4=tab5.v4)
       |""".stripMargin
 
 
