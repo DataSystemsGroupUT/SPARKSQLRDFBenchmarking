@@ -22,7 +22,7 @@ class ExtVPQueries {
       |FROM SS_hasReview_caption
       |) tab3 ON(tab1.v0=tab3.v0)
       |JOIN    (SELECT obj AS v5 , subject AS v4
-      |FROM VP_Rev_title) tab4
+      |FROM SO_title_hasReview) tab4
       |ON(tab3.v4=tab4.v4)
       |JOIN    (SELECT obj AS v6 , subject AS v4
       |FROM SS_reviewer_title) tab5
