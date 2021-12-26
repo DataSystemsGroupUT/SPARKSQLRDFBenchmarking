@@ -248,7 +248,7 @@ class ExtVPQueries {
 	) tab3
  ON(tab5.v5=tab3.v5)
  JOIN    (SELECT subject AS v5 , object AS v6
-	 FROM SO_purchaseDate_makesPurchase
+	 FROM VP_purchaseDate
 
 	) tab4
  ON(tab3.v5=tab4.v5)
