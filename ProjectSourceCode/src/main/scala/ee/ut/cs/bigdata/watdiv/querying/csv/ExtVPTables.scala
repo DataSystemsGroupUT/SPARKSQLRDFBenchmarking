@@ -75,7 +75,7 @@ object ExtVPTables {
     val SS_hasGenre_caption = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/CSV/SS/hasGenre/caption.csv")
     val SS_homepage_caption = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/CSV/SS/homepage/caption.csv")
     val SS_caption_homepage = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/CSV/SS/caption/homepage.csv")
-    val SS_description_caption = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/CSV/SS/description/caption.csv")
+    val SS_description_caption = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/CSV/SS/sorg_description/caption.csv")
     val SS_title_caption = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/CSV/SS/og_title/caption.csv")
     val SS_type_caption = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/CSV/SS/type/caption.csv")
     val SO_url_homepage = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/CSV/SO/url/homepage.csv")
