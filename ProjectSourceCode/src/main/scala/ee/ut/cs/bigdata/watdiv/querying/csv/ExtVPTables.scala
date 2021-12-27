@@ -28,155 +28,155 @@ object ExtVPTables {
     //read tables from HDFS
 
     //C1 FOR 10M STRUCTURE (WE NEED TO FIX THE PATH)
-    val SS_caption_hasReview = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/CSV/SS/caption/hasReview.csv")
-    val SS_contentRating_caption = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/CSV/SS/contentRating/caption.csv")
-    val SS_text_caption = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/CSV/SS/sorg_text/caption.csv")
-    val SS_hasReview_caption = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/CSV/SS/hasReview/caption.csv")
-    val SO_title_hasReview=spark.read.format("csv").option("header", true).load(s"$path/ExtVP/CSV/SO/rev_title/hasReview.csv")
+    val SS_caption_hasReview = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/VHDFS/CSV/SS/caption/hasReview.csv")
+    val SS_contentRating_caption = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/VHDFS/CSV/SS/contentRating/caption.csv")
+    val SS_text_caption = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/VHDFS/CSV/SS/sorg_text/caption.csv")
+    val SS_hasReview_caption = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/VHDFS/CSV/SS/hasReview/caption.csv")
+    val SO_title_hasReview=spark.read.format("csv").option("header", true).load(s"$path/ExtVP/VHDFS/CSV/SO/rev_title/hasReview.csv")
     //INSTEAD WE USE The following (VP	<rev__title>)
 //    val VP_Rev_title = spark.read.format("csv").option("header", true).load(s"$path/VP/CSV/rev_title.csv")
-    val SS_reviewer_title=spark.read.format("csv").option("header", true).load(s"$path/ExtVP/CSV/SS/reviewer/rev_title.csv")
+    val SS_reviewer_title=spark.read.format("csv").option("header", true).load(s"$path/ExtVP/VHDFS/CSV/SS/reviewer/rev_title.csv")
     //INSTEAD WE USE The following <rev__reviewer>)
 //    val VP_Reviewer = spark.read.format("csv").option("header", true).load(s"$path/VP/CSV/reviewer.csv")
-    val SS_actor_language = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/CSV/SS/actor/language.csv")
-    val SS_language_actor = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/CSV/SS/language/actor.csv")
+    val SS_actor_language = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/VHDFS/CSV/SS/actor/language.csv")
+    val SS_language_actor = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/VHDFS/CSV/SS/language/actor.csv")
 
 
     //C2 FOR 10M STRUCTURE
-    val SO_eligibleRegion_offers = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/CSV/SO/eligibleRegion/offers.csv")
-    val SS_offers_legalName = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/CSV/SS/offers/legalName.csv")
+    val SO_eligibleRegion_offers = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/VHDFS/CSV/SO/eligibleRegion/offers.csv")
+    val SS_offers_legalName = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/VHDFS/CSV/SS/offers/legalName.csv")
     val VP_LegalName = spark.read.format("csv").option("header", true).load(s"$path/VP/CSV/legalName.csv")
-    val OS_includes_hasReview = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/CSV/OS/includes/hasReview.csv")
-    val OS_hasReview_totalVotes = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/CSV/OS/hasReview/totalVotes.csv")
-    val SO_totalVotes_hasReview = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/CSV/SO/totalVotes/hasReview.csv")
-    val OS_purchaseFor_hasReview = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/CSV/OS/purchaseFor/hasReview.csv")
-    val SS_makesPurchase_homepage = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/CSV/SS/makesPurchase/homepage.csv")
-    val SS_jobTitle_homepage = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/CSV/SS/jobTitle/homepage.csv")
-    val SS_homepage_jobTitle = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/CSV/SS/homepage/jobTitle.csv")
+    val OS_includes_hasReview = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/VHDFS/CSV/OS/includes/hasReview.csv")
+    val OS_hasReview_totalVotes = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/VHDFS/CSV/OS/hasReview/totalVotes.csv")
+    val SO_totalVotes_hasReview = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/VHDFS/CSV/SO/totalVotes/hasReview.csv")
+    val OS_purchaseFor_hasReview = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/VHDFS/CSV/OS/purchaseFor/hasReview.csv")
+    val SS_makesPurchase_homepage = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/VHDFS/CSV/SS/makesPurchase/homepage.csv")
+    val SS_jobTitle_homepage = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/VHDFS/CSV/SS/jobTitle/homepage.csv")
+    val SS_homepage_jobTitle = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/VHDFS/CSV/SS/homepage/jobTitle.csv")
 
     //C3 FOR 10M STRUCTURE
-    val SS_Location_likes = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/CSV/SS/Location/likes.csv")
-    val SS_age_likes = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/CSV/SS/age/likes.csv")
-    val SS_gender_likes = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/CSV/SS/gender/likes.csv")
-    val SS_givenName_likes = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/CSV/SS/givenName/likes.csv")
-    val SS_likes_Location = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/CSV/SS/likes/Location.csv")
-    val SS_friendOf_likes = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/CSV/SS/friendOf/likes.csv")
+    val SS_Location_likes = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/VHDFS/CSV/SS/Location/likes.csv")
+    val SS_age_likes = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/VHDFS/CSV/SS/age/likes.csv")
+    val SS_gender_likes = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/VHDFS/CSV/SS/gender/likes.csv")
+    val SS_givenName_likes = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/VHDFS/CSV/SS/givenName/likes.csv")
+    val SS_likes_Location = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/VHDFS/CSV/SS/likes/Location.csv")
+    val SS_friendOf_likes = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/VHDFS/CSV/SS/friendOf/likes.csv")
 
 
     //F1 FOR 10M STRUCTURE
-    val SO_tag_hasGenre = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/CSV/SO/tag/hasGenre.csv")
-    val SO_type_hasGenre = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/CSV/SO/type/hasGenre.csv")
-    val SS_hasGenre_trailer = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/CSV/SS/hasGenre/trailer.csv")
-    val SS_type_trailer = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/CSV/SS/type/trailer.csv")
-    val SS_keywords_trailer = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/CSV/SS/keywords/trailer.csv")
-    val SS_trailer_keywords = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/CSV/SS/trailer/keywords.csv")
+    val SO_tag_hasGenre = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/VHDFS/CSV/SO/tag/hasGenre.csv")
+    val SO_type_hasGenre = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/VHDFS/CSV/SO/type/hasGenre.csv")
+    val SS_hasGenre_trailer = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/VHDFS/CSV/SS/hasGenre/trailer.csv")
+    val SS_type_trailer = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/VHDFS/CSV/SS/type/trailer.csv")
+    val SS_keywords_trailer = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/VHDFS/CSV/SS/keywords/trailer.csv")
+    val SS_trailer_keywords = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/VHDFS/CSV/SS/trailer/keywords.csv")
 
     //F2 FOR 10M STRUCTURE
-    val SS_hasGenre_caption = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/CSV/SS/hasGenre/caption.csv")
-    val SS_homepage_caption = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/CSV/SS/homepage/caption.csv")
-    val SS_caption_homepage = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/CSV/SS/caption/homepage.csv")
-    val SS_description_caption = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/CSV/SS/sorg_description/caption.csv")
-    val SS_title_caption = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/CSV/SS/og_title/caption.csv")
-    val SS_type_caption = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/CSV/SS/type/caption.csv")
-    val SO_url_homepage = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/CSV/SO/url/homepage.csv")
-    val SO_hits_homepage = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/CSV/SO/hits/homepage.csv")
+    val SS_hasGenre_caption = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/VHDFS/CSV/SS/hasGenre/caption.csv")
+    val SS_homepage_caption = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/VHDFS/CSV/SS/homepage/caption.csv")
+    val SS_caption_homepage = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/VHDFS/CSV/SS/caption/homepage.csv")
+    val SS_description_caption = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/VHDFS/CSV/SS/sorg_description/caption.csv")
+    val SS_title_caption = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/VHDFS/CSV/SS/og_title/caption.csv")
+    val SS_type_caption = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/VHDFS/CSV/SS/type/caption.csv")
+    val SO_url_homepage = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/VHDFS/CSV/SO/url/homepage.csv")
+    val SO_hits_homepage = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/VHDFS/CSV/SO/hits/homepage.csv")
 
 
     //F3 FOR 10M STRUCTURE
-    val SS_hasGenre_contentSize = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/CSV/SS/hasGenre/contentSize.csv")
-    val SS_contentRating_contentSize = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/CSV/SS/contentRating/contentSize.csv")
-    val SS_contentSize_contentRating = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/CSV/SS/contentSize/contentRating.csv")
-    val OS_purchaseFor_contentSize = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/CSV/OS/purchaseFor/contentSize.csv")
-    val OS_makesPurchase_purchaseDate = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/CSV/OS/makesPurchase/purchaseDate.csv")
-    //val SO_purchaseDate_makesPurchase = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/CSV/OS/makesPurchase/purchaseDate.csv") // *********NOT FOUND in 10M **********
+    val SS_hasGenre_contentSize = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/VHDFS/CSV/SS/hasGenre/contentSize.csv")
+    val SS_contentRating_contentSize = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/VHDFS/CSV/SS/contentRating/contentSize.csv")
+    val SS_contentSize_contentRating = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/VHDFS/CSV/SS/contentSize/contentRating.csv")
+    val OS_purchaseFor_contentSize = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/VHDFS/CSV/OS/purchaseFor/contentSize.csv")
+    val OS_makesPurchase_purchaseDate = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/VHDFS/CSV/OS/makesPurchase/purchaseDate.csv")
+    //val SO_purchaseDate_makesPurchase = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/VHDFS/CSV/OS/makesPurchase/purchaseDate.csv") // *********NOT FOUND in 10M **********
     //INSTEAD WE USE The following <VP_purchaseDate>)
     val VP_purchaseDate = spark.read.format("csv").option("header", true).load(s"$path/VP/CSV/purchaseDate.csv")
 
 
     //F4 FOR 10M STRUCTURE
-    val SO_language_homepage = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/CSV/SO/language/homepage.csv")
-    val SS_homepage_contentSize = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/CSV/SS/homepage/contentSize.csv")
-    val SS_tag_contentSize = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/CSV/SS/tag/contentSize.csv")
-    val SS_contentSize_homepage = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/CSV/SS/contentSize/homepage.csv")
-    val SS_description_contentSize = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/CSV/SS/sorg_description/contentSize.csv")
-    val OS_includes_contentSize = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/CSV/OS/includes/contentSize.csv")
-    val OS_likes_contentSize = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/CSV/OS/likes/contentSize.csv")
+    val SO_language_homepage = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/VHDFS/CSV/SO/language/homepage.csv")
+    val SS_homepage_contentSize = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/VHDFS/CSV/SS/homepage/contentSize.csv")
+    val SS_tag_contentSize = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/VHDFS/CSV/SS/tag/contentSize.csv")
+    val SS_contentSize_homepage = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/VHDFS/CSV/SS/contentSize/homepage.csv")
+    val SS_description_contentSize = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/VHDFS/CSV/SS/sorg_description/contentSize.csv")
+    val OS_includes_contentSize = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/VHDFS/CSV/OS/includes/contentSize.csv")
+    val OS_likes_contentSize = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/VHDFS/CSV/OS/likes/contentSize.csv")
 
     //F5 FOR 10M STRUCTURE
-    val OS_offers_validThrough = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/CSV/OS/offers/validThrough.csv")
-    val SO_validThrough_offers = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/CSV/SO/validThrough/offers.csv")
-    val SS_includes_validThrough = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/CSV/SS/includes/validThrough.csv")
-    val SO_title_includes = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/CSV/SO/og_title/includes.csv")
-    val SO_type_includes = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/CSV/SO/type/includes.csv")
-    val SS_price_validThrough = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/CSV/SS/price/validThrough.csv")
+    val OS_offers_validThrough = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/VHDFS/CSV/OS/offers/validThrough.csv")
+    val SO_validThrough_offers = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/VHDFS/CSV/SO/validThrough/offers.csv")
+    val SS_includes_validThrough = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/VHDFS/CSV/SS/includes/validThrough.csv")
+    val SO_title_includes = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/VHDFS/CSV/SO/og_title/includes.csv")
+    val SO_type_includes = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/VHDFS/CSV/SO/type/includes.csv")
+    val SS_price_validThrough = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/VHDFS/CSV/SS/price/validThrough.csv")
 
 
     //L1 FOR 10M STRUCTURE
-    val SS_subscribes_likes = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/CSV/SS/subscribes/likes.csv")
-    val OS_likes_caption = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/CSV/OS/likes/caption.csv")
-    val SO_caption_likes = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/CSV/SO/caption/likes.csv")
+    val SS_subscribes_likes = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/VHDFS/CSV/SS/subscribes/likes.csv")
+    val OS_likes_caption = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/VHDFS/CSV/OS/likes/caption.csv")
+    val SO_caption_likes = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/VHDFS/CSV/SO/caption/likes.csv")
 
 
     //L2 FOR 10M STRUCTURE
-    val SS_nationality_likes = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/CSV/SS/nationality/likes.csv")
-    val SS_likes_nationality = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/CSV/SS/likes/nationality.csv")
+    val SS_nationality_likes = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/VHDFS/CSV/SS/nationality/likes.csv")
+    val SS_likes_nationality = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/VHDFS/CSV/SS/likes/nationality.csv")
     val VP_parentCountry = spark.read.format("csv").option("header", true).load(s"$path/VP/CSV/parentCountry.csv")
 
     //L3 FOR 10M STRUCTURE
-    val SS_likes_subscribes = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/CSV/SS/likes/subscribes.csv")
+    val SS_likes_subscribes = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/VHDFS/CSV/SS/likes/subscribes.csv")
 
     //L4 FOR 10M STRUCTURE
-    val SS_tag_caption = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/CSV/SS/tag/caption.csv")
-    val SS_caption_tag = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/CSV/SS/caption/tag.csv")
+    val SS_tag_caption = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/VHDFS/CSV/SS/tag/caption.csv")
+    val SS_caption_tag = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/VHDFS/CSV/SS/caption/tag.csv")
 
     //L5 FOR 10M STRUCTURE
-    val SS_nationality_jobTitle = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/CSV/SS/nationality/jobTitle.csv")
-    val SS_jobTitle_nationality = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/CSV/SS/jobTitle/nationality.csv")
+    val SS_nationality_jobTitle = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/VHDFS/CSV/SS/nationality/jobTitle.csv")
+    val SS_jobTitle_nationality = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/VHDFS/CSV/SS/jobTitle/nationality.csv")
 
     //S1
-    val OS_offers_priceValidUntil = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/CSV/OS/offers/priceValidUntil.csv")
-    val SS_validFrom_priceValidUntil = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/CSV/SS/validFrom/priceValidUntil.csv")
-    val SS_priceValidUntil_validFrom = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/CSV/SS/priceValidUntil/validFrom.csv")
-    val SS_validThrough_priceValidUntil = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/CSV/SS/validThrough/priceValidUntil.csv")
-    val SS_includes_priceValidUntil = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/CSV/SS/includes/priceValidUntil.csv")
-    val SS_price_priceValidUntil = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/CSV/SS/price/priceValidUntil.csv")
-    val SS_serialNumber_priceValidUntil = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/CSV/SS/serialNumber/priceValidUntil.csv")
-    val SS_eligibleQuantity_priceValidUntil = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/CSV/SS/eligibleQuantity/priceValidUntil.csv")
-    val SS_eligibleRegion_priceValidUntil = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/CSV/SS/eligibleRegion/priceValidUntil.csv")
+    val OS_offers_priceValidUntil = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/VHDFS/CSV/OS/offers/priceValidUntil.csv")
+    val SS_validFrom_priceValidUntil = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/VHDFS/CSV/SS/validFrom/priceValidUntil.csv")
+    val SS_priceValidUntil_validFrom = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/VHDFS/CSV/SS/priceValidUntil/validFrom.csv")
+    val SS_validThrough_priceValidUntil = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/VHDFS/CSV/SS/validThrough/priceValidUntil.csv")
+    val SS_includes_priceValidUntil = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/VHDFS/CSV/SS/includes/priceValidUntil.csv")
+    val SS_price_priceValidUntil = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/VHDFS/CSV/SS/price/priceValidUntil.csv")
+    val SS_serialNumber_priceValidUntil = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/VHDFS/CSV/SS/serialNumber/priceValidUntil.csv")
+    val SS_eligibleQuantity_priceValidUntil = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/VHDFS/CSV/SS/eligibleQuantity/priceValidUntil.csv")
+    val SS_eligibleRegion_priceValidUntil = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/VHDFS/CSV/SS/eligibleRegion/priceValidUntil.csv")
 
     //S2
-    val SS_nationality_Location = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/CSV/SS/nationality/Location.csv")
-    val SS_type_nationality = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/CSV/SS/type/Location.csv")
-    val SS_Location_nationality = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/CSV/SS/Location/nationality.csv")
-    val SS_gender_nationality = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/CSV/SS/gender/nationality.csv")
+    val SS_nationality_Location = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/VHDFS/CSV/SS/nationality/Location.csv")
+    val SS_type_nationality = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/VHDFS/CSV/SS/type/Location.csv")
+    val SS_Location_nationality = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/VHDFS/CSV/SS/Location/nationality.csv")
+    val SS_gender_nationality = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/VHDFS/CSV/SS/gender/nationality.csv")
 
     //S3
-    val SS_type_publisher = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/CSV/SS/type/publisher.csv")
-    val SS_caption_publisher = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/CSV/SS/caption/publisher.csv")
-    val SS_publisher_caption = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/CSV/SS/publisher/caption.csv")
-    val SS_hasGenre_publisher = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/CSV/SS/hasGenre/publisher.csv")
+    val SS_type_publisher = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/VHDFS/CSV/SS/type/publisher.csv")
+    val SS_caption_publisher = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/VHDFS/CSV/SS/caption/publisher.csv")
+    val SS_publisher_caption = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/VHDFS/CSV/SS/publisher/caption.csv")
+    val SS_hasGenre_publisher = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/VHDFS/CSV/SS/hasGenre/publisher.csv")
 
     //S4
-    val SO_nationality_artist = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/CSV/SO/nationality/artist.csv")
-    val SO_age_artist = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/CSV/SO/age/artist.csv")
-    val OS_artist_nationality = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/CSV/OS/artist/nationality.csv")
-    val SO_familyName_artist = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/CSV/SO/familyName/artist.csv")
+    val SO_nationality_artist = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/VHDFS/CSV/SO/nationality/artist.csv")
+    val SO_age_artist = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/VHDFS/CSV/SO/age/artist.csv")
+    val OS_artist_nationality = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/VHDFS/CSV/OS/artist/nationality.csv")
+    val SO_familyName_artist = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/VHDFS/CSV/SO/familyName/artist.csv")
 
     //S5
-    val SS_language_keywords = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/CSV/SS/language/keywords.csv")
-    val SS_type_language = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/CSV/SS/type/language.csv")
-    val SS_keywords_language = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/CSV/SS/keywords/language.csv")
-    val SS_description_language = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/CSV/SS/sorg_description/language.csv")
+    val SS_language_keywords = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/VHDFS/CSV/SS/language/keywords.csv")
+    val SS_type_language = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/VHDFS/CSV/SS/type/language.csv")
+    val SS_keywords_language = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/VHDFS/CSV/SS/keywords/language.csv")
+    val SS_description_language = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/VHDFS/CSV/SS/sorg_description/language.csv")
 
     //S6
-    val SS_hasGenre_conductor = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/CSV/SS/hasGenre/conductor.csv")
+    val SS_hasGenre_conductor = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/VHDFS/CSV/SS/hasGenre/conductor.csv")
     val VP_conductor = spark.read.format("csv").option("header", true).load(s"$path/VP/CSV/conductor.csv")
-    val SS_type_conductor = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/CSV/SS/type/conductor.csv")
+    val SS_type_conductor = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/VHDFS/CSV/SS/type/conductor.csv")
 
     //S7
-    val OS_likes_text = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/CSV/OS/likes/sorg_text.csv")
-    val SO_text_likes = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/CSV/SO/sorg_text/likes.csv")
-    val SS_type_text = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/CSV/SS/type/sorg_text.csv")
+    val OS_likes_text = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/VHDFS/CSV/OS/likes/sorg_text.csv")
+    val SO_text_likes = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/VHDFS/CSV/SO/sorg_text/likes.csv")
+    val SS_type_text = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/VHDFS/CSV/SS/type/sorg_text.csv")
 
 
     //C1
