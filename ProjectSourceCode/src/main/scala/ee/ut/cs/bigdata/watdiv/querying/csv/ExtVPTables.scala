@@ -45,7 +45,7 @@ object ExtVPTables {
     //C2 FOR 10M STRUCTURE
     val SO_eligibleRegion_offers = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/VHDFS/CSV/SO/eligibleRegion/offers.csv")
     val SS_offers_legalName = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/VHDFS/CSV/SS/offers/legalName.csv")
-    val VP_LegalName = spark.read.format("csv").option("header", true).load(s"$path/VP/VHDFS/VHDFS/CSV/legalName.csv")
+    val VP_LegalName = spark.read.format("csv").option("header", true).load(s"$path/VP/VHDFS/CSV/legalName.csv")
     val OS_includes_hasReview = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/VHDFS/CSV/OS/includes/hasReview.csv")
     val OS_hasReview_totalVotes = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/VHDFS/CSV/OS/hasReview/totalVotes.csv")
     val SO_totalVotes_hasReview = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/VHDFS/CSV/SO/totalVotes/hasReview.csv")
@@ -170,7 +170,7 @@ object ExtVPTables {
 
     //S6
     val SS_hasGenre_conductor = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/VHDFS/CSV/SS/hasGenre/conductor.csv")
-    val VP_conductor = spark.read.format("csv").option("header", true).load(s"$path/VP/VHDFS/VHDFS/CSV/conductor.csv")
+    val VP_conductor = spark.read.format("csv").option("header", true).load(s"$path/VP/VHDFS/CSV/conductor.csv")
     val SS_type_conductor = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/VHDFS/CSV/SS/type/conductor.csv")
 
     //S7
