@@ -33,11 +33,7 @@ object ExtVPTables {
     val SS_text_caption = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/VHDFS/CSV/SS/sorg_text/caption.csv")
     val SS_hasReview_caption = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/VHDFS/CSV/SS/hasReview/caption.csv")
     val SO_title_hasReview=spark.read.format("csv").option("header", true).load(s"$path/ExtVP/VHDFS/CSV/SO/rev_title/hasReview.csv")
-    //INSTEAD WE USE The following (VP	<rev__title>)
-//    val VP_Rev_title = spark.read.format("csv").option("header", true).load(s"$path/VP/VHDFS/CSV/rev_title.csv")
     val SS_reviewer_title=spark.read.format("csv").option("header", true).load(s"$path/ExtVP/VHDFS/CSV/SS/reviewer/rev_title.csv")
-    //INSTEAD WE USE The following <rev__reviewer>)
-//    val VP_Reviewer = spark.read.format("csv").option("header", true).load(s"$path/VP/VHDFS/CSV/reviewer.csv")
     val SS_actor_language = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/VHDFS/CSV/SS/actor/language.csv")
     val SS_language_actor = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/VHDFS/CSV/SS/language/actor.csv")
 
@@ -88,8 +84,6 @@ object ExtVPTables {
     val SS_contentSize_contentRating = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/VHDFS/CSV/SS/contentSize/contentRating.csv")
     val OS_purchaseFor_contentSize = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/VHDFS/CSV/OS/purchaseFor/contentSize.csv")
     val OS_makesPurchase_purchaseDate = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/VHDFS/CSV/OS/makesPurchase/purchaseDate.csv")
-    //val SO_purchaseDate_makesPurchase = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/VHDFS/CSV/OS/makesPurchase/purchaseDate.csv") // *********NOT FOUND in 10M **********
-    //INSTEAD WE USE The following <VP_purchaseDate>)
     val VP_purchaseDate = spark.read.format("csv").option("header", true).load(s"$path/VP/VHDFS/CSV/purchaseDate.csv")
 
 
