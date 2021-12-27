@@ -500,7 +500,7 @@ class ExtVPQueries {
       |WHERE object = 'http://db.uwaterloo.ca/~galuc/wsdbm/Country1') tab3
       |JOIN    (SELECT subject AS v0
       |FROM SO_age_artist
-      |WHERE object = 'http://db.uwaterloo.ca/~galuc/wsdbm/AgeGroup1') tab0
+      |WHERE object = 'http://db.uwaterloo.ca/~galuc/wsdbm/AgeGroup5') tab0
       |ON(tab3.v0=tab0.v0)
       |JOIN    (SELECT object AS v0 , subject AS v3
       |FROM OS_artist_nationality) tab2
