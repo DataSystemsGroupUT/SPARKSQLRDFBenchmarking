@@ -329,7 +329,7 @@ object ExtVPTables {
 
 
     //create file to write the query run time results
-//    val fos = new FileOutputStream(new File(s"/home/hadoop/RDFBenchMarking/logs/$ds/csv/ExtVP/VHDFS$ds.txt"),true)
+    val fos = new FileOutputStream(new File(s"/home/hadoop/RDFBenchMarking/logs2/watdiv/$ds/csv/ExtVP/VHDFS$ds.txt"),true)
 
     val queries = List(
       new ExtVPQueries C1, new ExtVPQueries C2, new ExtVPQueries C3,
@@ -338,17 +338,26 @@ object ExtVPTables {
       new ExtVPQueries S1, new ExtVPQueries S2, new ExtVPQueries S3,new ExtVPQueries S4, new ExtVPQueries S5,new ExtVPQueries S6,new ExtVPQueries S7
     )
 
-
-    var count = 1
+ var count = 1
     for (query <- queries) {
       //run query and calculate the run time
       val startTime = System.nanoTime()
-      val df= spark.sql(query)
-      val df_count=df.count()
+      val df_count = spark.sql(query).count()
       println(df_count)
-//      df.take(100).foreach(println)
+      //df.take(100).foreach(println)
       val endTime = System.nanoTime()
       val result = (endTime - startTime).toDouble / 1000000000
+
+      //write the result into the log file
+      if (count != queries.size) {
+        Console.withOut(fos) {
+          print(result + ",")
+        }
+      } else {
+        Console.withOut(fos) {
+          println(result)
+        }
+      }
       count += 1
     }
     println("All Queries are Done - CSV - VP!")
