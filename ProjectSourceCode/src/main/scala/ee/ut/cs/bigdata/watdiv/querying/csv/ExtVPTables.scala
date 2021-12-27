@@ -358,6 +358,6 @@ object ExtVPTables {
       }
       count += 1
     }
-    println("All Queries are Done - CSV - VP!")
+    println("All Queries are Done - CSV - ExtVP!")
   }
 }
