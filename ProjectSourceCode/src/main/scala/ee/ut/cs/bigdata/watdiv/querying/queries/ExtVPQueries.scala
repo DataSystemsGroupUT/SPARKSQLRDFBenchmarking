@@ -550,7 +550,7 @@ class ExtVPQueries {
       |SELECT tab0.v1 AS v1 , tab2.v0 AS v0 , tab1.v2 AS v2
       |FROM    (SELECT object AS v0
       |FROM OS_likes_text
-      |WHERE subject = 'http://db.uwaterloo.ca/~galuc/wsdbm/User100') tab2
+      |WHERE subject = 'http://db.uwaterloo.ca/~galuc/wsdbm/User54768') tab2
       |JOIN    (SELECT subject AS v0 , object AS v2
       |FROM SO_text_likes) tab1
       |ON(tab2.v0=tab1.v0)
