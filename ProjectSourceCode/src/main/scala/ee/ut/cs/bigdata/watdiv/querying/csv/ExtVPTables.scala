@@ -156,13 +156,14 @@ object ExtVPTables {
     val SS_caption_publisher = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/VHDFS/CSV/SS/caption/publisher.csv")
     val SS_publisher_caption = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/VHDFS/CSV/SS/publisher/caption.csv")
     val SS_hasGenre_publisher = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/VHDFS/CSV/SS/hasGenre/publisher.csv")
-
+*/
     //S4
     val SO_nationality_artist = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/VHDFS/CSV/SO/nationality/artist.csv")
     val SO_age_artist = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/VHDFS/CSV/SO/age/artist.csv")
     val OS_artist_nationality = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/VHDFS/CSV/OS/artist/nationality.csv")
     val SO_familyName_artist = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/VHDFS/CSV/SO/familyName/artist.csv")
 
+    /*
     //S5
     val SS_language_keywords = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/VHDFS/CSV/SS/language/keywords.csv")
     val SS_type_language = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/VHDFS/CSV/SS/type/language.csv")
@@ -173,13 +174,13 @@ object ExtVPTables {
     val SS_hasGenre_conductor = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/VHDFS/CSV/SS/hasGenre/conductor.csv")
     val VP_conductor = spark.read.format("csv").option("header", true).load(s"$path/VP/VHDFS/CSV/conductor.csv")
     val SS_type_conductor = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/VHDFS/CSV/SS/type/conductor.csv")
-    */
+
 
     //S7
     val OS_likes_text = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/VHDFS/CSV/OS/likes/sorg_text.csv")
     val SO_text_likes = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/VHDFS/CSV/SO/sorg_text/likes.csv")
     val SS_type_text = spark.read.format("csv").option("header", true).load(s"$path/ExtVP/VHDFS/CSV/SS/type/sorg_text.csv")
-
+    */
 
     /*
     //C1
@@ -307,12 +308,15 @@ object ExtVPTables {
     SS_publisher_caption.createOrReplaceTempView("SS_publisher_caption")
     SS_hasGenre_publisher.createOrReplaceTempView("SS_hasGenre_publisher")
 
+    */
+
     //S4
     SO_nationality_artist.createOrReplaceTempView("SO_nationality_artist")
     SO_age_artist.createOrReplaceTempView("SO_age_artist")
     OS_artist_nationality.createOrReplaceTempView("OS_artist_nationality")
     SO_familyName_artist.createOrReplaceTempView("SO_familyName_artist")
 
+/*
     //S5
     SS_language_keywords.createOrReplaceTempView("SS_language_keywords")
     SS_type_language.createOrReplaceTempView("SS_type_language")
@@ -324,15 +328,12 @@ object ExtVPTables {
     VP_conductor.createOrReplaceTempView("VP_conductor")
     SS_type_conductor.createOrReplaceTempView("SS_type_conductor")
 
-     */
-
-
 
     //S7
     OS_likes_text.createOrReplaceTempView("OS_likes_text")
     SO_text_likes.createOrReplaceTempView("SO_text_likes")
     SS_type_text.createOrReplaceTempView("SS_type_text")
-
+    */
 
     //create file to write the query run time results
     val fos = new FileOutputStream(new File(s"/home/hadoop/RDFBenchMarking/logs2/watdiv/$ds/csv/ExtVP/VHDFS$ds.txt"),true)
@@ -341,8 +342,8 @@ object ExtVPTables {
 //      new ExtVPQueries C1, new ExtVPQueries C2, new ExtVPQueries C3,
 //      new ExtVPQueries F1, new ExtVPQueries F2, new ExtVPQueries F3, new ExtVPQueries F4, new ExtVPQueries F5,
 //      new ExtVPQueries L1, new ExtVPQueries L2, new ExtVPQueries L3,new ExtVPQueries L4, new ExtVPQueries L5,
-//      new ExtVPQueries S1, new ExtVPQueries S2, new ExtVPQueries S3,new ExtVPQueries S4, new ExtVPQueries S5,new ExtVPQueries S6,
-      new ExtVPQueries S7
+//      new ExtVPQueries S1, new ExtVPQueries S2, new ExtVPQueries S3,new ExtVPQueries S4, new ExtVPQueries S5,new ExtVPQueries S6, new ExtVPQueries S7
+      new ExtVPQueries S4
     )
 
  var count = 1
