@@ -1,15 +1,15 @@
 #!/bin/bash
 
-echo "Enter the file sizes(ex: 100M 500M 1B):"
+echo "Enter the file sizes(ex: 100M  250M  500M):"
 read -a sizes
 
-echo "Enter the file formats (ex: avro csv hive orc parquet):"
+echo "Enter the file formats (ex: avro csv orc parquet):"
 read -a file_formats
 
 echo "Enter the class names (ex: ExtVPTables ExtVPTablesPartition WPTTables WPTTablesPartition SingleStatementTable SingleStatementTablePartition VerticalTables VerticalTablesPartition PropertyTables PropertyTablesPartition):"
 read -a classes
 
-echo "Enter the partition types (ex: Horizontal Subject Predicate):"
+echo "Enter the partition types (ex: Horizontal Subject Predicate VHDFS):"
 read -a partition
 
 echo "Enter the number of runs(ex: 5):"
@@ -21,7 +21,7 @@ for i in "${!sizes[@]}"; do
       for p in "${!partition[@]}"; do
         for ((counter = 0; counter < n; counter++)); do
           spark-submit \
-            --class "ee.ut.cs.bigdata.sp2bench.${file_formats[$j]}.${classes[$k]}" \
+            --class "ee.ut.cs.bigdata.watdiv.querying.${file_formats[$j]}.${classes[$k]}" \
             --master yarn \
             --driver-memory 100G \
             --executor-memory 16G \
