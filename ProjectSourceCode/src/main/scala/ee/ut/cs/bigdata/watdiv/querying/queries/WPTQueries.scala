@@ -96,7 +96,7 @@ class WPTQueries {
 
   val l4 =
     """
-      |SELECT  T0.Subject, T0.caption
+      |SELECT  DISTINCT T0.Subject, T0.caption
       |FROM WPT T0
       |WHERE T0.tag="http://db.uwaterloo.ca/~galuc/wsdbm/Topic24"
       |AND T0.caption is not null
@@ -105,12 +105,15 @@ class WPTQueries {
 
   val l5 =
     """
-
-    """.stripMargin
+      |SELECT  T0.Subject, T0.JobTitle, T1.Subject
+      |FROM WPT T0
+      |JOIN WPT T1 ON T0.nationality= T1.Subject
+      |JOIN WPT T2 ON T1.subject=T2.parentCountry
+      |WHERE T2.Subject="http://db.uwaterloo.ca/~galuc/wsdbm/City187"
+      |""".stripMargin
 
 
   //Star (S)
-
 
   val s1 =
     """
