@@ -35,6 +35,7 @@ class WPTQueries {
       |""".stripMargin
 
 
+  //90% As Duplicates are there, it should be 434,169, but Distinct gives the right distinct count (805)
   val c3 =
     """
       |SELECT  T0.Subject
