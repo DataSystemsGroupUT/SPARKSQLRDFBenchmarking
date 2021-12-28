@@ -245,7 +245,7 @@ class WPTQueries {
       """
         |SELECT DISTINCT WPT.SUBJECT, WPT.sorg_description, WPT.KEYWORDS
         |FROM WPT
-        |WHERE WPT.TYPE="http://db.uwaterloo.ca/~galuc/wsdbm//ProductCategory8"
+        |WHERE WPT.TYPE="http://db.uwaterloo.ca/~galuc/wsdbm/ProductCategory8"
         |AND WPT.LANGUAGE="http://db.uwaterloo.ca/~galuc/wsdbm/Language0"
         |AND WPT.sorg_description IS NOT NULL
         |AND WPT.KEYWORDS IS NOT NULL

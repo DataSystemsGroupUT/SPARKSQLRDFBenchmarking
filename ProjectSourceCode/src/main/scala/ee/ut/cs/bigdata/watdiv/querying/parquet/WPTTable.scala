@@ -50,13 +50,13 @@ object WPTTables {
 //      new WPTQueries l3,
 //      new WPTQueries l4,
 //      new WPTQueries l5,
-//      new WPTQueries s1
-//      new WPTQueries s2,
-//      new WPTQueries s3,
+      new WPTQueries s1,
+      new WPTQueries s2,
+      new WPTQueries s3,
 //        new WPTQueries s4,
         new WPTQueries s5,
 //        new WPTQueries s6,
-        new WPTQueries s7
+//        new WPTQueries s7
     )
 
     var count = 1
