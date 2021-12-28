@@ -87,8 +87,10 @@ class WPTQueries {
 
   val l3 =
     """
-
-    """.stripMargin
+      |SELECT DISTINCT WPT.Subject, WPT.likes
+      |FROM WPT
+      |WHERE WPT.subscribes="http://db.uwaterloo.ca/~galuc/wsdbm/Website34"
+      |""".stripMargin
 
 
   val l4 =
