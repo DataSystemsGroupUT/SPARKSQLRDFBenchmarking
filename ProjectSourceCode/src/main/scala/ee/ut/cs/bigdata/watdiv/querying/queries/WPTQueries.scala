@@ -72,7 +72,7 @@ class WPTQueries {
   val f4 =
 
     """
-      |SELECT V0.Subject, V1.Subject, V2.Subject, V0.sorg_description, V0.contentSize, V1.url, V1.hits, V7.Subject
+      |SELECT DISTINCT V0.Subject, V1.Subject, V2.Subject, V0.sorg_description, V0.contentSize, V1.url, V1.hits, V7.Subject
       |FROM WPT V0
       |JOIN WPT V1 ON V0.homepage=V1.Subject AND V1.language="http://db.uwaterloo.ca/~galuc/wsdbm/Language0"
       |JOIN WPT V2 ON V0.Subject=V2.includes
@@ -87,8 +87,15 @@ class WPTQueries {
 
   val f5 =
     """
-
-    """.stripMargin
+      |SELECT DISTINCT V0.Subject, V1.Subject, V0.price, V0.validThrough, V1.title, V1.type
+      |FROM WPT V0
+      |JOIN WPT V1 ON V0.includes=V1.Subject
+      |JOIN WPT V2 ON V2.offers= V0.Subject AND V2.Subject="http://db.uwaterloo.ca/~galuc/wsdbm/Retailer10"
+      |WHERE V0.price is not null
+      |AND V0.validThrough is not null
+      |AND V1.title is not null
+      |AND V1.type is not null
+      |""".stripMargin
 
 
   // Linear (L)
