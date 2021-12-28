@@ -234,11 +234,9 @@ class WPTQueries {
       """
          | SELECT DISTINCT S0.SUBJECT, S0.FAMILYNAME, S3.ARTIST
          | FROM WPT S0
-         | JOIN WPT S3
-         | ON S3.SUBJECT=S0.ARTIST
+         | JOIN WPT S3 ON S3.artist=S0.Subject
          | WHERE S0.AGE = "http://db.uwaterloo.ca/~galuc/wsdbm/AgeGroup1"
          | AND S0.FAMILYNAME IS NOT NULL
-         | AND S0.ARTIST IS NOT NULL
          | AND S0.NATIONALITY="http://db.uwaterloo.ca/~galuc/wsdbm/Country1"
          | """.stripMargin
 
@@ -247,7 +245,7 @@ class WPTQueries {
       """
         |SELECT DISTINCT WPT.SUBJECT, WPT.sorg_description, WPT.KEYWORDS
         |FROM WPT
-        |WHERE WPT.TYPE="http://www.w3.org/1999/02/22-rdf-syntax-ns#/ProductCategory9"
+        |WHERE WPT.TYPE="http://www.w3.org/1999/02/22-rdf-syntax-ns#/ProductCategory8"
         |AND WPT.LANGUAGE="http://db.uwaterloo.ca/~galuc/wsdbm/Language0"
         |AND WPT.sorg_description IS NOT NULL
         |AND WPT.KEYWORDS IS NOT NULL
@@ -268,7 +266,7 @@ class WPTQueries {
       """
         |SELECT DISTINCT WPT.SUBJECT, WPT.TYPE, WPT.sorg_text
         |FROM WPT
-        |WHERE WPT.LIKES="http://db.uwaterloo.ca/~galuc/wsdbm/User828"
+        |WHERE WPT.LIKES="http://db.uwaterloo.ca/~galuc/wsdbm/User100"
         |AND WPT.TYPE IS NOT NULL
         |AND WPT.sorg_text IS NOT NULL
         |""".stripMargin
