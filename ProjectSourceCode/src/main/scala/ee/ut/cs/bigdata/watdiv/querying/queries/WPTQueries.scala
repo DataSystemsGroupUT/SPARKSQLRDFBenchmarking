@@ -43,7 +43,7 @@ class WPTQueries {
 
   val f2 =
     """
-      |SELECT V0.Subject, V0.homepage, V0.title, V0.caption, V0.description, V1.url, V1.hits
+      |SELECT V0.Subject, V0.homepage, V0.title, V0.caption, V0.sorg_description, V1.url, V1.hits
       |FROM WPT V0
       |JOIN WPT V1 ON V0.homepage =V1.Subject
       |WHERE V0.hasGenre="http://db.uwaterloo.ca/~galuc/wsdbm/SubGenre62"
