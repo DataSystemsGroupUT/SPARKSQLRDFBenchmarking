@@ -70,6 +70,7 @@ class WPTQueries {
       |FROM WPT T0
       |JOIN WPT T1 ON T0.likes=T1.Subject
       |WHERE T0.Subscribes="http://db.uwaterloo.ca/~galuc/wsdbm/Website30"
+      |AND T1.caption  is not null
       |""".stripMargin
 
 
