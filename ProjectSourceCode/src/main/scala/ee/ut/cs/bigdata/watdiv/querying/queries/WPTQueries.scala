@@ -20,8 +20,17 @@ class WPTQueries {
 
   val c2 =
     """
-
-""".stripMargin
+      |SELECT V0.Subject, V3.Subject, V4.Subject, V8.Subject
+      |FROM WPT V0
+      |JOIN WPT V2 ON V0.offers=V2.Subject AND V2.eligibleRegion="http://db.uwaterloo.ca/~galuc/wsdbm/Country3"
+      |JOIN WPT V3 ON V2.includes=V3.Subject
+      |JOIN WPT V7 ON V7.purchaseFor=V3.Subject
+      |JOIN WPT V4 ON V4.makesPurchase=V7.Subject
+      |JOIN WPT V8 ON V3.hasReview=V8.Subject
+      |WHERE V4.jobTitle is not null
+      |AND V4.homepage is not null
+      |AND V8.totalVotes is not null
+      |""".stripMargin
 
 
   val c3 =
