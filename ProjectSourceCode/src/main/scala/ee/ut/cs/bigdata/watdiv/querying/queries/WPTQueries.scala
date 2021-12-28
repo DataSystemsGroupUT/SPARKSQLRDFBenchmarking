@@ -31,7 +31,7 @@ class WPTQueries {
 
   val f1 =
     """
-      |SELECT V0.Subject, V0.type, V3.Subject, V3.trailer, V3.keywords, V3.trailer
+      |SELECT DISTINCT V0.Subject, V0.type, V3.Subject, V3.trailer, V3.keywords, V3.trailer
       |FROM WPT V0
       |JOIn WPT V3 ON V3.hasGenre=V0.Subject
       |AND V0.tag="http://db.uwaterloo.ca/~galuc/wsdbm/Topic47"
@@ -43,15 +43,30 @@ class WPTQueries {
 
   val f2 =
     """
-
-    """.stripMargin
+      |SELECT V0.Subject, V0.homepage, V0.title, V0.caption, V0.description, V1.url, V1.hits
+      |FROM WPT V0
+      |JOIN WPT V1 WHERE V0.homepage =V1.Subject
+      |WHERE V0.hasGenre="http://db.uwaterloo.ca/~galuc/wsdbm/SubGenre62"
+      |AND V0.title is not null
+      |AND V0.caption is not null
+      |AND V0.description is not null
+      |AND V1.url is not null
+      |AND V1.hits is not null
+      |""".stripMargin
 
 
   val f3 =
 
     """
-
-  """.stripMargin
+      |SELECT V0.Subject, V0.contentRating, V0.contentSize, V4.Subject, V5.Subject, V5.purchaseDate
+      |FROM WPT V0
+      |JOIN WPT V5 ON V0.Subject=V5.purchaseFor
+      |AND V0.subGenre="http://db.uwaterloo.ca/~galuc/wsdbm/SubGenre131"
+      |JOIN WPT V4 ON V4.makesPurchase=V5.Subject
+      |WHERE V0.contentRating is not null
+      |WHERE V0.contentSize is not null
+      |WHERE V5.purchaseDate is not null
+      |""".stripMargin
 
 
   val f4 =
