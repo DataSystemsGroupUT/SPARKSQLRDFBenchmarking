@@ -61,7 +61,7 @@ class WPTQueries {
       |SELECT V0.Subject, V0.contentRating, V0.contentSize, V4.Subject, V5.Subject, V5.purchaseDate
       |FROM WPT V0
       |JOIN WPT V5 ON V0.Subject=V5.purchaseFor
-      |AND V0.subGenre="http://db.uwaterloo.ca/~galuc/wsdbm/SubGenre131"
+      |AND V0.hasGenre="http://db.uwaterloo.ca/~galuc/wsdbm/SubGenre131"
       |JOIN WPT V4 ON V4.makesPurchase=V5.Subject
       |WHERE V0.contentRating is not null
       |AND V0.contentSize is not null
