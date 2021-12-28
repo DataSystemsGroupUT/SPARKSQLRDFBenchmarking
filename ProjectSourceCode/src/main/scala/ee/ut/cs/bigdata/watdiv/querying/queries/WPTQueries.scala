@@ -40,8 +40,6 @@ class WPTQueries {
       |SELECT  T0.Subject, T0.friendOf, T0.likes, T0.age, T0.gender, T0.givenName
       |FROM WPT T0
       |WHERE T0.Location is not null
-      |AND   T0.friendOf is not null
-      |AND   T0.likes is not null
       |AND   T0.age is not null
       |AND   T0.gender is not null
       |AND   T0.givenName is not null
