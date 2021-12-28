@@ -76,7 +76,7 @@ class WPTQueries {
       |FROM WPT V0
       |JOIN WPT V1 ON V0.homepage=V1.Subject AND V1.language="http://db.uwaterloo.ca/~galuc/wsdbm/Language0"
       |JOIN WPT V2 ON V0.Subject=V2.includes
-      |JOIN WPT V7 ON V0.Subject=V7.Subject
+      |JOIN WPT V7 ON V0.Subject=V7.likes
       |WHERE V0.tag="http://db.uwaterloo.ca/~galuc/wsdbm/Topic52"
       |AND V0.sorg_description is not null
       |AND V0.contentSize is not null
