@@ -47,6 +47,18 @@ class WPTQueries {
       |AND   T0.givenName is not null
       |""".stripMargin
 
+  val c3_wpt_prost =
+    """
+      |SELECT  T0.s
+      |FROM WPT T0
+      |WHERE T0.http___db_uwaterloo_ca__galuc_wsdbm_likes     is not null
+      |AND   T0.http___db_uwaterloo_ca__galuc_wsdbm_friendOf  is not null
+      |AND   T0.http___purl_org_dc_terms_Location  is not null
+      |AND   T0.http___xmlns_com_foaf_age       is not null
+      |AND   T0.http___db_uwaterloo_ca__galuc_wsdbm_gender    is not null
+      |AND   T0.http___xmlns_com_foaf_givenName is not null
+      |""".stripMargin
+
 
 
   // Snow-Flake (F)
