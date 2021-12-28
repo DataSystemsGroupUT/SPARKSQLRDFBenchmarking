@@ -187,8 +187,9 @@ class WPTQueries {
       |""".stripMargin
 
 
-  //Star (S)
+  //Star (S) 100%
 
+  //100%
   val s1 =
     """
       |SELECT S1.SUBJECT, S0.Includes, S1.PRICE, S1.SERIALNUMBER, S1.VALIDFROM, S1.VALIDTHROUGH,
@@ -208,7 +209,7 @@ class WPTQueries {
       |AND S1.PRICEVALIDUNTIL is not null
       |""".stripMargin
 
-
+//100%
     val s2 =
       """
         |SELECT  DISTINCT WPT.Subject, WPT.Location, WPT.gender
@@ -218,7 +219,7 @@ class WPTQueries {
         |AND WPT.Location is not null
         |AND WPT.gender is not null
         |""".stripMargin
-
+//100%
     val s3 =
       """
         | SELECT DISTINCT WPT.Subject, WPT.caption, WPT.hasGenre, WPT.publisher
@@ -229,7 +230,7 @@ class WPTQueries {
         | AND WPT.publisher is not null
         |""".stripMargin
 
-
+//100%
     val s4 =
       """
          | SELECT DISTINCT S0.SUBJECT, S0.FAMILYNAME, S3.ARTIST
@@ -240,7 +241,7 @@ class WPTQueries {
          | AND S0.NATIONALITY="http://db.uwaterloo.ca/~galuc/wsdbm/Country1"
          | """.stripMargin
 
-
+//100%
     val s5 =
       """
         |SELECT DISTINCT WPT.SUBJECT, WPT.sorg_description, WPT.KEYWORDS
@@ -251,7 +252,7 @@ class WPTQueries {
         |AND WPT.KEYWORDS IS NOT NULL
     """.stripMargin
 
-
+//100%
     val s6 =
       """
         |SELECT DISTINCT WPT.Subject, WPT.conductor, WPT.type
@@ -261,7 +262,7 @@ class WPTQueries {
         |AND WPT.type  is not null
         |""".stripMargin
 
-
+//100%
     val s7 =
       """
         |SELECT DISTINCT T0.SUBJECT, T0.TYPE, T0.sorg_text
