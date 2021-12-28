@@ -53,9 +53,9 @@ object WPTTables {
 //      new WPTQueries s1
 //      new WPTQueries s2,
 //      new WPTQueries s3,
-        new WPTQueries s4,
+//        new WPTQueries s4,
         new WPTQueries s5,
-        new WPTQueries s6,
+//        new WPTQueries s6,
         new WPTQueries s7
     )
 

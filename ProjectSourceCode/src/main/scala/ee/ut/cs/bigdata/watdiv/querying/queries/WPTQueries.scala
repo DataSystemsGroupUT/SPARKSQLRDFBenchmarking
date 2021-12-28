@@ -245,7 +245,7 @@ class WPTQueries {
       """
         |SELECT DISTINCT WPT.SUBJECT, WPT.sorg_description, WPT.KEYWORDS
         |FROM WPT
-        |WHERE WPT.TYPE="http://www.w3.org/1999/02/22-rdf-syntax-ns#/ProductCategory8"
+        |WHERE WPT.TYPE="http://db.uwaterloo.ca/~galuc/wsdbm//ProductCategory8"
         |AND WPT.LANGUAGE="http://db.uwaterloo.ca/~galuc/wsdbm/Language0"
         |AND WPT.sorg_description IS NOT NULL
         |AND WPT.KEYWORDS IS NOT NULL
@@ -264,11 +264,11 @@ class WPTQueries {
 
     val s7 =
       """
-        |SELECT DISTINCT WPT.SUBJECT, WPT.TYPE, WPT.sorg_text
-        |FROM WPT
-        |WHERE WPT.LIKES="http://db.uwaterloo.ca/~galuc/wsdbm/User100"
-        |AND WPT.TYPE IS NOT NULL
-        |AND WPT.sorg_text IS NOT NULL
+        |SELECT DISTINCT T0.SUBJECT, T0.TYPE, T0.sorg_text
+        |FROM WPT T0
+        |JOIN WPT T1 ON T1.likes=T0.Subject AND T1.Subject="http://db.uwaterloo.ca/~galuc/wsdbm/User100"
+        |WHERE T0.TYPE IS NOT NULL
+        |AND T0.sorg_text IS NOT NULL
         |""".stripMargin
 
 
