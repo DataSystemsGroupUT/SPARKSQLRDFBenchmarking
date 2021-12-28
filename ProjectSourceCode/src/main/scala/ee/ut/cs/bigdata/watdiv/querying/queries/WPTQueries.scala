@@ -45,7 +45,7 @@ class WPTQueries {
     """
       |SELECT V0.Subject, V0.homepage, V0.title, V0.caption, V0.description, V1.url, V1.hits
       |FROM WPT V0
-      |JOIN WPT V1 WHERE V0.homepage =V1.Subject
+      |JOIN WPT V1 ON V0.homepage =V1.Subject
       |WHERE V0.hasGenre="http://db.uwaterloo.ca/~galuc/wsdbm/SubGenre62"
       |AND V0.title is not null
       |AND V0.caption is not null
