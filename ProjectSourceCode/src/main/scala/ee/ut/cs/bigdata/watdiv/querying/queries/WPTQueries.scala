@@ -3,6 +3,7 @@ package ee.ut.cs.bigdata.watdiv.querying.queries
 class WPTQueries {
   //Complex
 
+  //100% 16
   val c1 =
     """
     |SELECT DISTINCT V0.Subject, V0.hasReview, V4.reviewer, V7.language
@@ -20,7 +21,7 @@ class WPTQueries {
 
   val c2 =
     """
-      |SELECT V0.Subject, V3.Subject, V4.Subject, V8.Subject
+      |SELECT DISTINCT V0.Subject, V3.Subject, V4.Subject, V8.Subject
       |FROM WPT V0
       |JOIN WPT V2 ON V0.offers=V2.Subject AND V2.eligibleRegion="http://db.uwaterloo.ca/~galuc/wsdbm/Country3"
       |JOIN WPT V3 ON V2.includes=V3.Subject
@@ -35,8 +36,15 @@ class WPTQueries {
 
   val c3 =
     """
-
-  """.stripMargin
+      |SELECT  T0.Subject
+      |FROM WPT T0
+      |WHERE T0.Location is not null
+      |AND   T0.friendOf is not null
+      |AND   T0.likes is not null
+      |AND   T0.age is not null
+      |AND   T0.gender is not null
+      |AND   T0.givenName is not null
+      |""".stripMargin
 
 
 
