@@ -72,8 +72,16 @@ class WPTQueries {
   val f4 =
 
     """
-      |SELECT
-      |FROM WPT
+      |SELECT V0.Subject, V1.Subject, V2.Subject, V0.sorg_description, V0.contentSize, V1.url, V1.hits, V7.Subject
+      |FROM WPT V0
+      |JOIN WPT V1 ON V0.homepage=V1.Subject AND V1.language="http://db.uwaterloo.ca/~galuc/wsdbm/Language0"
+      |JOIN WPT V2 ON V0.Subject=V2.includes
+      |JOIN WPT V7 ON V0.Subject=V7.Subject
+      |WHERE V0.tag="http://db.uwaterloo.ca/~galuc/wsdbm/Topic52"
+      |AND V0.sorg_description is not null
+      |AND V0.contentSize is not null
+      |AND V1.url is not null
+      |AND V1.hits is not null
       |""".stripMargin
 
 
