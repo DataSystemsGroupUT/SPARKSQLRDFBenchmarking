@@ -79,7 +79,7 @@ class WPTQueries {
       |SELECT DISTINCT T1.Subject, T0.Subject
       |FROM WPT T0
       |JOIN WPT T1 ON T0.nationality=T1.Subject
-      |JOIN WPT T2 ON T1.Subject=T2.parentcountry
+      |JOIN WPT T2 ON T1.Subject=T2.parentCountry
       |WHERE T0.likes="http://db.uwaterloo.ca/~galuc/wsdbm/Product0"
       |AND T2.Subject="http://db.uwaterloo.ca/~galuc/wsdbm/City152"
       |""".stripMargin
