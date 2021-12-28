@@ -66,7 +66,7 @@ class WPTQueries {
 
   val l1 =
     """
-      |SELECT T0.Subject, T1.Subject, T1.caption
+      |SELECT DISTINCT T0.Subject, T1.Subject, T1.caption
       |FROM WPT T0
       |JOIN WPT T1 ON T0.likes=T1.Subject
       |WHERE T0.Subscribes="http://db.uwaterloo.ca/~galuc/wsdbm/Website30"
