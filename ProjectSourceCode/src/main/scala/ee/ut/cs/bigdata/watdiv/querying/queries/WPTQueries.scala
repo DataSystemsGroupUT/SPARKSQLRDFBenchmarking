@@ -232,7 +232,7 @@ class WPTQueries {
 
     val s4 =
       """
-         | SELECT DISTINCT SO.SUBJECT, S0.FAMILYNAME,WPT.ARTIST
+         | SELECT DISTINCT S0.SUBJECT, S0.FAMILYNAME, S3.ARTIST
          | FROM WPT S0
          | JOIN WPT S3
          | ON S3.SUBJECT=S0.ARTIST
@@ -240,10 +240,7 @@ class WPTQueries {
          | AND S0.FAMILYNAME IS NOT NULL
          | AND S0.ARTIST IS NOT NULL
          | AND S0.NATIONALITY="http://db.uwaterloo.ca/~galuc/wsdbm/Country1"
-         |
-         |
-
-    """.stripMargin
+         | """.stripMargin
 
 
     val s5 =
