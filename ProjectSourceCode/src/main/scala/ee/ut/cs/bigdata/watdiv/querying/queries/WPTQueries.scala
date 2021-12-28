@@ -39,9 +39,11 @@ class WPTQueries {
     """
       |SELECT  T0.Subject
       |FROM WPT T0
-      |WHERE T0.Location is not null
-      |AND   T0.age is not null
-      |AND   T0.gender is not null
+      |WHERE T0.likes     is not null
+      |AND   T0.friendOf  is not null
+      |AND   T0.Location  is not null
+      |AND   T0.age       is not null
+      |AND   T0.gender    is not null
       |AND   T0.givenName is not null
       |""".stripMargin
 
