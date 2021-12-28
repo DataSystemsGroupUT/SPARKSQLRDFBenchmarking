@@ -28,7 +28,7 @@ class WPTQueries {
 
   // Snow-Flake (F)
 
-
+//100%
   val f1 =
     """
       |SELECT DISTINCT V0.Subject, V0.type, V3.Subject, V3.trailer, V3.keywords, V3.trailer
@@ -40,7 +40,7 @@ class WPTQueries {
       |AND V3.trailer is not null
       |""".stripMargin
 
-
+//100%
   val f2 =
     """
       |SELECT DISTINCT V0.Subject, V0.homepage, V0.title, V0.caption, V0.sorg_description, V1.url, V1.hits
@@ -58,7 +58,7 @@ class WPTQueries {
   val f3 =
 
     """
-      |SELECT V0.Subject, V0.contentRating, V0.contentSize, V4.Subject, V5.Subject, V5.purchaseDate
+      |SELECT DISTINCT V0.Subject, V0.contentRating, V0.contentSize, V4.Subject, V5.Subject, V5.purchaseDate
       |FROM WPT V0
       |JOIN WPT V5 ON V0.Subject=V5.purchaseFor
       |AND V0.hasGenre="http://db.uwaterloo.ca/~galuc/wsdbm/SubGenre131"
@@ -72,8 +72,9 @@ class WPTQueries {
   val f4 =
 
     """
-
-    """.stripMargin
+      |SELECT
+      |FROM WPT
+      |""".stripMargin
 
 
   val f5 =
