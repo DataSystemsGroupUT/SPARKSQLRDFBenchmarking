@@ -6,7 +6,7 @@ import org.apache.log4j.{Level, Logger}
 import org.apache.spark.sql.SparkSession
 import org.apache.spark.{SparkConf, SparkContext}
 
-object WPTTable {
+object WPTTables {
 
   def main(args: Array[String]): Unit = {
 
@@ -45,7 +45,7 @@ object WPTTable {
 //      new WPTQueries f3,
 //      new WPTQueries f4,
 //      new WPTQueries f4,
-      new WPTQueries l1
+        new WPTQueries l1
 //      new WPTQueries l2,
 //      new WPTQueries l3,
 //      new WPTQueries l4,
