@@ -29,6 +29,7 @@ class WPTQueries {
       |JOIN WPT V4 ON V4.makesPurchase=V7.Subject
       |JOIN WPT V8 ON V3.hasReview=V8.Subject
       |WHERE V4.jobTitle is not null
+      |AND V0.legalName is not null
       |AND V4.homepage is not null
       |AND V8.totalVotes is not null
       |""".stripMargin
@@ -36,7 +37,7 @@ class WPTQueries {
 
   val c3 =
     """
-      |SELECT  T0.Subject
+      |SELECT DISTINCT T0.Subject
       |FROM WPT T0
       |WHERE T0.Location is not null
       |AND   T0.friendOf is not null
@@ -76,7 +77,7 @@ class WPTQueries {
       |AND V1.hits is not null
       |""".stripMargin
 
-
+//100%
   val f3 =
 
     """
@@ -90,7 +91,7 @@ class WPTQueries {
       |AND V5.purchaseDate is not null
       |""".stripMargin
 
-
+//100%
   val f4 =
 
     """
@@ -106,7 +107,7 @@ class WPTQueries {
       |AND V1.hits is not null
       |""".stripMargin
 
-
+//100%
   val f5 =
     """
       |SELECT DISTINCT V0.Subject, V1.Subject, V0.price, V0.validThrough, V1.title, V1.type
@@ -141,7 +142,7 @@ class WPTQueries {
       |JOIN WPT T1 ON T0.nationality=T1.Subject
       |JOIN WPT T2 ON T1.Subject=T2.parentCountry
       |WHERE T0.likes="http://db.uwaterloo.ca/~galuc/wsdbm/Product0"
-      |AND T2.Subject="http://db.uwaterloo.ca/~galuc/wsdbm/City152"
+      |AND   T2.Subject="http://db.uwaterloo.ca/~galuc/wsdbm/City152"
       |""".stripMargin
 
 //100%
