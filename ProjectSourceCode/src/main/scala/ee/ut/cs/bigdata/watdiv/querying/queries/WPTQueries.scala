@@ -31,8 +31,14 @@ class WPTQueries {
 
   val f1 =
     """
-
-    """.stripMargin
+      |SELECT V0.Subject, V0.type, V3.Subject, V3.trailer, V3.keywords, V3.trailer
+      |FROM WPT V0
+      |JOIn WPT V3 ON V3.hasGenre=V0.Subject
+      |AND V0.tag="http://db.uwaterloo.ca/~galuc/wsdbm/Topic47"
+      |WHERE V3.type="http://db.uwaterloo.ca/~galuc/wsdbm/ProductCategory2"
+      |AND V3.keywords is not null
+      |AND V3.trailer is not null
+      |""".stripMargin
 
 
   val f2 =
@@ -63,7 +69,7 @@ class WPTQueries {
 
   // Linear (L)
 
-
+//100%
   val l1 =
     """
       |SELECT DISTINCT T0.Subject, T1.Subject, T1.caption
@@ -74,6 +80,7 @@ class WPTQueries {
       |""".stripMargin
 
 
+  //
   val l2 =
     """
       |SELECT DISTINCT T1.Subject, T0.Subject
@@ -84,7 +91,7 @@ class WPTQueries {
       |AND T2.Subject="http://db.uwaterloo.ca/~galuc/wsdbm/City152"
       |""".stripMargin
 
-
+//100%
   val l3 =
     """
       |SELECT DISTINCT T0.Subject, T0.likes
@@ -93,7 +100,7 @@ class WPTQueries {
       |AND T0.likes is not null
       |""".stripMargin
 
-
+//100%
   val l4 =
     """
       |SELECT  DISTINCT T0.Subject, T0.caption

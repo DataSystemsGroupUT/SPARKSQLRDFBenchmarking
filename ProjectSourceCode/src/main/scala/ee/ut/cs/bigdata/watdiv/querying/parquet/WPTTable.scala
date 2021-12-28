@@ -40,14 +40,11 @@ object WPTTables {
 //      new WPTQueries c1,
 //      new WPTQueries c2,
 //      new WPTQueries c3,
-//      new WPTQueries f1,
+      new WPTQueries f1
 //      new WPTQueries f2,
 //      new WPTQueries f3,
 //      new WPTQueries f4,
 //      new WPTQueries f4,
-        new WPTQueries l3,
-        new WPTQueries l4,
-       new WPTQueries l5
 //      new WPTQueries l2,
 //      new WPTQueries l3,
 //      new WPTQueries l4,
