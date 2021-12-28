@@ -29,8 +29,8 @@ object WPTTables {
 
 
     //read tables from HDFS
-//    val wptDF = spark.read.format("parquet").load(s"$path/WidePropertyTable.parquet").toDF()
-    val wptDF = spark.read.format("parquet").load(s"/user/hive/warehouse/watdiv.db/wide_property_table").toDF()
+    val wptDF = spark.read.format("parquet").load(s"$path/WidePropertyTable.parquet").toDF()
+//    val wptDF = spark.read.format("parquet").load(s"/user/hive/warehouse/watdiv.db/wide_property_table").toDF()
 
     wptDF.createOrReplaceTempView("WPT")
 
