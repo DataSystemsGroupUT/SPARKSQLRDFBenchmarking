@@ -49,7 +49,7 @@ class WPTQueries {
       |WHERE V0.hasGenre="http://db.uwaterloo.ca/~galuc/wsdbm/SubGenre62"
       |AND V0.title is not null
       |AND V0.caption is not null
-      |AND V0.description is not null
+      |AND V0.sorg_description is not null
       |AND V1.url is not null
       |AND V1.hits is not null
       |""".stripMargin
