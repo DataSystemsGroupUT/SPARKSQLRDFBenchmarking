@@ -87,16 +87,20 @@ class WPTQueries {
 
   val l3 =
     """
-      |SELECT DISTINCT WPT.Subject, WPT.likes
-      |FROM WPT
-      |WHERE WPT.subscribes="http://db.uwaterloo.ca/~galuc/wsdbm/Website34"
+      |SELECT DISTINCT T0.Subject, T0.likes
+      |FROM WPT T0
+      |WHERE T0.subscribes="http://db.uwaterloo.ca/~galuc/wsdbm/Website34"
+      |AND T0.likes is not null
       |""".stripMargin
 
 
   val l4 =
     """
-
-    """.stripMargin
+      |SELECT  T0.Subject, T0.caption
+      |FROM WPT T0
+      |WHERE T0.tag="http://db.uwaterloo.ca/~galuc/wsdbm/Topic24"
+      |AND T0.caption is not null
+      |""".stripMargin
 
 
   val l5 =
