@@ -5,11 +5,16 @@ class WPTQueries {
 
   val c1 =
     """
-    |SELECT DISTINCT
+    |SELECT DISTINCT V0.Subject, V0.hasReview, V4.reviewer, V7.language
     |FROM WPT V0
-    |JOIN WPT V4
-    |ON V0.HASREVIEW IS NOT NULL
-    |AND
+    |JOIN WPT V4  ON V0.hasReview=V4.Subject
+    |JOIN WPT V6  ON V4.reviewer=V6.Subject
+    |JOIN WPT V7  ON V6.Subject=V7.actor
+    |WHERE  V0.caption is not null
+    |AND V0.sorg_text is not null
+    |AND V0.contentRating is not null
+    |AND V4.rev_title is not null
+    |AND V7.language is not null
   """.stripMargin
 
 

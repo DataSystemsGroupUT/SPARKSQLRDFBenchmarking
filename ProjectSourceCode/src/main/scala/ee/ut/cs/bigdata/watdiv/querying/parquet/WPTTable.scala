@@ -37,11 +37,10 @@ object WPTTables {
    // val fos = new FileOutputStream(new File(s"/home/hadoop/RDFBenchMarking/logs/$ds/parquet/ST/$ds$partitionType.txt"), true)
 
      val queries = List(
-//      new WPTQueries c1,
+      new WPTQueries c1
 //      new WPTQueries c2,
 //      new WPTQueries c3,
 //      new WPTQueries f1,
-      new WPTQueries f4, new WPTQueries f5
 //      new WPTQueries f2,
 //      new WPTQueries f3,
 //      new WPTQueries f4,
