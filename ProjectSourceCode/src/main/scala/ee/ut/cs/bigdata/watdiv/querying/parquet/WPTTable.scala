@@ -65,7 +65,7 @@ object WPTTables {
       val startTime = System.nanoTime()
       val df_count = spark.sql(query).count()
       println(df_count)
-      spark.sql(query).show(1000,false)
+//      spark.sql(query).show(1000,false)
       //df.take(100).foreach(println)
 //      val endTime = System.nanoTime()
 //      val result = (endTime - startTime).toDouble / 1000000000
