@@ -37,7 +37,7 @@ class WPTQueries {
 
   val c3 =
     """
-      |SELECT  T0.Subject, T0.friendOf, T0.likes, T0.age, T0.gender, T0.givenName
+      |SELECT  T0.Subject
       |FROM WPT T0
       |WHERE T0.Location is not null
       |AND   T0.age is not null
