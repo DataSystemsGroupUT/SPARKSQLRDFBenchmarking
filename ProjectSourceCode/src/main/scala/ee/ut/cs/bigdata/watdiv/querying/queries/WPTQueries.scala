@@ -18,7 +18,7 @@ class WPTQueries {
     |AND V7.language is not null
   """.stripMargin
 
-
+  //100%
   val c2 =
     """
       |SELECT DISTINCT V0.Subject, V3.Subject, V4.Subject, V8.Subject
@@ -37,7 +37,7 @@ class WPTQueries {
 
   val c3 =
     """
-      |SELECT  T0.Subject
+      |SELECT  T0.Subject, T0.friendOf, T0.likes, T0.age, T0.gender, T0.givenName
       |FROM WPT T0
       |WHERE T0.Location is not null
       |AND   T0.friendOf is not null
