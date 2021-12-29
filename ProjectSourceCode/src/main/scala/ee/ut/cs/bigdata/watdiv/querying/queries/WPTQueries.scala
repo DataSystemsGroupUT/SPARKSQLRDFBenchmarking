@@ -158,6 +158,14 @@ class WPTQueries {
       |AND   T2.Subject="http://db.uwaterloo.ca/~galuc/wsdbm/City152"
       |""".stripMargin
 
+  val l2_test =
+    """
+      |SELECT DISTINCT T1.Subject, T0.Subject
+      |FROM WPT T0
+      |JOIN WPT T1 ON T0.nationality=T1.Subject
+      |WHERE T0.likes="http://db.uwaterloo.ca/~galuc/wsdbm/Product0"
+      |""".stripMargin
+
 //100%
   val l3 =
     """
