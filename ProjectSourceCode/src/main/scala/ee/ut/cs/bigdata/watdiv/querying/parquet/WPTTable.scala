@@ -10,7 +10,7 @@ object WPTTables {
 
   def main(args: Array[String]): Unit = {
 
-    println("Starting....")
+    println("Starting WPT VHDFS")
     val conf = new SparkConf()
     Logger.getLogger("org").setLevel(Level.OFF)
     Logger.getLogger("akka").setLevel(Level.OFF)

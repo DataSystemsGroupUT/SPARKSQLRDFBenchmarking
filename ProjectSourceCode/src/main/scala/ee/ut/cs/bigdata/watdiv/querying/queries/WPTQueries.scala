@@ -160,10 +160,10 @@ class WPTQueries {
 
   val l2_test =
     """
-      |SELECT DISTINCT T1.Subject, T0.Subject
-      |FROM WPT T0
-      |JOIN WPT T1 ON T0.nationality=T1.Subject
-      |WHERE T0.likes="http://db.uwaterloo.ca/~galuc/wsdbm/Product0"
+      |SELECT DISTINCT *
+      |FROM WPT T1
+      |JOIN WPT T2 ON T2.parentCountry=T1.Subject
+      |WHERE T2.Subject="http://db.uwaterloo.ca/~galuc/wsdbm/City152"
       |""".stripMargin
 
 //100%
