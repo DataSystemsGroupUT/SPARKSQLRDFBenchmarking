@@ -160,9 +160,8 @@ class WPTQueries {
 
   val l2_test =
     """
-      |SELECT DISTINCT *
-      |FROM WPT T1
-      |JOIN WPT T2 ON T2.parentCountry=T1.Subject
+      |SELECT DISTINCT T2.Subject, T2.parentCountry
+      |FROM WPT T2
       |WHERE T2.Subject="http://db.uwaterloo.ca/~galuc/wsdbm/City152"
       |""".stripMargin
 
