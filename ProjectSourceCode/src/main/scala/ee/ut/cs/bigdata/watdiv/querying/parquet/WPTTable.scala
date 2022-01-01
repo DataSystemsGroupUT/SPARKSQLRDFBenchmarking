@@ -37,11 +37,9 @@ object WPTTables {
     //create file to write the query run time results
    // val fos = new FileOutputStream(new File(s"/home/hadoop/RDFBenchMarking/logs/$ds/parquet/ST/$ds$partitionType.txt"), true)
 
-    val Q= new WPTQueries ()
 
      val queries = List(
-        Q.l2_test
-//      new WPTQueries c1,
+      new WPTQueries().c1,
 //      new WPTQueries c2,
 //      new WPTQueries c3,
 //      new WPTQueries f1,
