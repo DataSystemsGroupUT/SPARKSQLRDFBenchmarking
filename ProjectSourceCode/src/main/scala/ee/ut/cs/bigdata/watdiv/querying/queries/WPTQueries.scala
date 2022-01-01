@@ -147,23 +147,16 @@ class WPTQueries {
       |""".stripMargin
 
 
-  //
+  //100%
   val l2 =
-    """
-      |SELECT DISTINCT T1.Subject, T0.Subject
-      |FROM WPT T0
-      |JOIN WPT T1 ON T0.nationality=T1.Subject
-      |JOIN WPT T2 ON T1.Subject=T2.parentCountry
-      |WHERE T0.likes="http://db.uwaterloo.ca/~galuc/wsdbm/Product0"
-      |AND   T2.Subject="http://db.uwaterloo.ca/~galuc/wsdbm/City152"
+       """
+      |SELECT DISTINCT T_User.Subject, TT.parentCountry
+      |FROM WPT T_User
+      |JOIN (SELECT T_City.parentCountry FROM WPT T_City WHERE T_City.Subject="http://db.uwaterloo.ca/~galuc/wsdbm/City152") TT
+      |ON TT.parentCountry=T_User.nationality
+      |WHERE T_User.likes="http://db.uwaterloo.ca/~galuc/wsdbm/Product0"
       |""".stripMargin
 
-  val l2_test =
-  """
-      |SELECT DISTINCT T2.Subject, T2.parentCountry
-      |FROM WPT T2
-      |WHERE T2.Subject="http://db.uwaterloo.ca/~galuc/wsdbm/City152"
-      |""".stripMargin
 
 //100%
   val l3 =
@@ -183,14 +176,14 @@ class WPTQueries {
       |AND T0.caption is not null
       |""".stripMargin
 
-
-  val l5 =
-    """
-      |SELECT  T0.Subject, T0.JobTitle, T1.Subject
-      |FROM WPT T0
-      |JOIN WPT T1 ON T0.nationality= T1.Subject
-      |JOIN WPT T2 ON T1.subject=T2.parentCountry
-      |WHERE T2.Subject="http://db.uwaterloo.ca/~galuc/wsdbm/City187"
+  //100%
+    val l5 =
+       """
+      |SELECT DISTINCT T_User.Subject, T_User.JobTitle, TT.parentCountry
+      |FROM WPT T_User
+      |JOIN (SELECT T_City.parentCountry FROM WPT T_City WHERE T_City.Subject="http://db.uwaterloo.ca/~galuc/wsdbm/City187") TT
+      |ON TT.parentCountry=T_User.nationality
+      |WHERE T_User.JobTitle is not null
       |""".stripMargin
 
 
