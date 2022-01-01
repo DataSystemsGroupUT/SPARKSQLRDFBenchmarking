@@ -159,7 +159,7 @@ class WPTQueries {
       |""".stripMargin
 
   val l2_test =
-    """
+  """
       |SELECT DISTINCT T2.Subject, T2.parentCountry
       |FROM WPT T2
       |WHERE T2.Subject="http://db.uwaterloo.ca/~galuc/wsdbm/City152"

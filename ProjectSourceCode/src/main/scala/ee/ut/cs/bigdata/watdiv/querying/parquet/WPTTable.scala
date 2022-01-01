@@ -1,7 +1,7 @@
 package ee.ut.cs.bigdata.watdiv.querying.parquet
 
 import java.io.{File, FileOutputStream}
-import ee.ut.cs.bigdata.watdiv.querying.queries.WPTQueries
+import ee.ut.cs.bigdata.watdiv.querying.queries.{WPTQueries}
 import org.apache.log4j.{Level, Logger}
 import org.apache.spark.sql.SparkSession
 import org.apache.spark.{SparkConf, SparkContext}
@@ -37,8 +37,11 @@ object WPTTables {
     //create file to write the query run time results
    // val fos = new FileOutputStream(new File(s"/home/hadoop/RDFBenchMarking/logs/$ds/parquet/ST/$ds$partitionType.txt"), true)
 
+    val Q= new WPTQueries ()
+
      val queries = List(
-//      new WPTQueries c1
+        Q.l2_test
+//      new WPTQueries c1,
 //      new WPTQueries c2,
 //      new WPTQueries c3,
 //      new WPTQueries f1,
@@ -46,18 +49,21 @@ object WPTTables {
 //      new WPTQueries f3,
 //      new WPTQueries f4,
 //      new WPTQueries f4,
-        new WPTQueries l2_test
+//      new WPTQueries l1,
+//      new WPTQueries l2,
 //      new WPTQueries l3,
 //      new WPTQueries l4,
 //      new WPTQueries l5,
 //      new WPTQueries s1,
 //      new WPTQueries s2,
 //      new WPTQueries s3,
-//        new WPTQueries s4,
-//        new WPTQueries s5,
-//        new WPTQueries s6,
-//        new WPTQueries s7
+//      new WPTQueries s4,
+//      new WPTQueries s5,
+//      new WPTQueries s6,
+//      new WPTQueries s7
     )
+
+
 
     var count = 1
     for (query <- queries) {
