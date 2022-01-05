@@ -39,7 +39,8 @@ class WPTQueries {
   val c3 =
     """
       |SELECT  T0.Subject
-      |FROM WPT T0
+      |FROM  WPT T0
+      |
       |WHERE T0.likes     is not null
       |AND   T0.friendOf  is not null
       |AND   T0.Location  is not null
