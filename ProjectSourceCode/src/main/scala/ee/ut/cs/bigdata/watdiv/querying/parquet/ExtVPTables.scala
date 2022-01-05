@@ -29,151 +29,151 @@ object ExtVPTables {
 
 
     //C1 FOR 10M STRUCTURE (WE NEED TO FIX THE PATH)
-    val SS_caption_hasReview = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/CSV/SS/caption/hasReview.parquet")
-    val SS_contentRating_caption = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/CSV/SS/contentRating/caption.parquet")
-    val SS_text_caption = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/CSV/SS/sorg_text/caption.parquet")
-    val SS_hasReview_caption = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/CSV/SS/hasReview/caption.parquet")
-    val SO_title_hasReview=spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/CSV/SO/rev_title/hasReview.parquet")
-    val SS_reviewer_title=spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/CSV/SS/reviewer/rev_title.parquet")
-    val SS_actor_language = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/CSV/SS/actor/language.parquet")
-    val SS_language_actor = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/CSV/SS/language/actor.parquet")
+    val SS_caption_hasReview = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/Parquet/SS/caption/hasReview.parquet")
+    val SS_contentRating_caption = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/Parquet/SS/contentRating/caption.parquet")
+    val SS_text_caption = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/Parquet/SS/sorg_text/caption.parquet")
+    val SS_hasReview_caption = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/Parquet/SS/hasReview/caption.parquet")
+    val SO_title_hasReview=spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/Parquet/SO/rev_title/hasReview.parquet")
+    val SS_reviewer_title=spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/Parquet/SS/reviewer/rev_title.parquet")
+    val SS_actor_language = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/Parquet/SS/actor/language.parquet")
+    val SS_language_actor = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/Parquet/SS/language/actor.parquet")
 
 
     //C2 FOR 10M STRUCTURE
-    val SO_eligibleRegion_offers = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/CSV/SO/eligibleRegion/offers.parquet")
-    val SS_offers_legalName = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/CSV/SS/offers/legalName.parquet")
-    val VP_LegalName = spark.read.format("parquet").load(s"$path/VP/VHDFS/CSV/legalName.parquet")
-    val OS_includes_hasReview = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/CSV/OS/includes/hasReview.parquet")
-    val OS_hasReview_totalVotes = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/CSV/OS/hasReview/totalVotes.parquet")
-    val SO_totalVotes_hasReview = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/CSV/SO/totalVotes/hasReview.parquet")
-    val OS_purchaseFor_hasReview = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/CSV/OS/purchaseFor/hasReview.parquet")
-    val SS_makesPurchase_homepage = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/CSV/SS/makesPurchase/homepage.parquet")
-    val SS_jobTitle_homepage = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/CSV/SS/jobTitle/homepage.parquet")
-    val SS_homepage_jobTitle = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/CSV/SS/homepage/jobTitle.parquet")
+    val SO_eligibleRegion_offers = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/Parquet/SO/eligibleRegion/offers.parquet")
+    val SS_offers_legalName = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/Parquet/SS/offers/legalName.parquet")
+    val VP_LegalName = spark.read.format("parquet").load(s"$path/VP/VHDFS/Parquet/legalName.parquet")
+    val OS_includes_hasReview = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/Parquet/OS/includes/hasReview.parquet")
+    val OS_hasReview_totalVotes = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/Parquet/OS/hasReview/totalVotes.parquet")
+    val SO_totalVotes_hasReview = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/Parquet/SO/totalVotes/hasReview.parquet")
+    val OS_purchaseFor_hasReview = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/Parquet/OS/purchaseFor/hasReview.parquet")
+    val SS_makesPurchase_homepage = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/Parquet/SS/makesPurchase/homepage.parquet")
+    val SS_jobTitle_homepage = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/Parquet/SS/jobTitle/homepage.parquet")
+    val SS_homepage_jobTitle = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/Parquet/SS/homepage/jobTitle.parquet")
 
     //C3 FOR 10M STRUCTURE
-    val SS_Location_likes = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/CSV/SS/Location/likes.parquet")
-    val SS_age_likes = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/CSV/SS/age/likes.parquet")
-    val SS_gender_likes = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/CSV/SS/gender/likes.parquet")
-    val SS_givenName_likes = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/CSV/SS/givenName/likes.parquet")
-    val SS_likes_Location = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/CSV/SS/likes/Location.parquet")
-    val SS_friendOf_likes = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/CSV/SS/friendOf/likes.parquet")
+    val SS_Location_likes = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/Parquet/SS/Location/likes.parquet")
+    val SS_age_likes = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/Parquet/SS/age/likes.parquet")
+    val SS_gender_likes = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/Parquet/SS/gender/likes.parquet")
+    val SS_givenName_likes = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/Parquet/SS/givenName/likes.parquet")
+    val SS_likes_Location = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/Parquet/SS/likes/Location.parquet")
+    val SS_friendOf_likes = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/Parquet/SS/friendOf/likes.parquet")
 
 
     //F1 FOR 10M STRUCTURE
-    val SO_tag_hasGenre = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/CSV/SO/tag/hasGenre.parquet")
-    val SO_type_hasGenre = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/CSV/SO/type/hasGenre.parquet")
-    val SS_hasGenre_trailer = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/CSV/SS/hasGenre/trailer.parquet")
-    val SS_type_trailer = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/CSV/SS/type/trailer.parquet")
-    val SS_keywords_trailer = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/CSV/SS/keywords/trailer.parquet")
-    val SS_trailer_keywords = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/CSV/SS/trailer/keywords.parquet")
+    val SO_tag_hasGenre = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/Parquet/SO/tag/hasGenre.parquet")
+    val SO_type_hasGenre = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/Parquet/SO/type/hasGenre.parquet")
+    val SS_hasGenre_trailer = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/Parquet/SS/hasGenre/trailer.parquet")
+    val SS_type_trailer = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/Parquet/SS/type/trailer.parquet")
+    val SS_keywords_trailer = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/Parquet/SS/keywords/trailer.parquet")
+    val SS_trailer_keywords = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/Parquet/SS/trailer/keywords.parquet")
 
     //F2 FOR 10M STRUCTURE
-    val SS_hasGenre_caption = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/CSV/SS/hasGenre/caption.parquet")
-    val SS_homepage_caption = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/CSV/SS/homepage/caption.parquet")
-    val SS_caption_homepage = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/CSV/SS/caption/homepage.parquet")
-    val SS_description_caption = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/CSV/SS/sorg_description/caption.parquet")
-    val SS_title_caption = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/CSV/SS/og_title/caption.parquet")
-    val SS_type_caption = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/CSV/SS/type/caption.parquet")
-    val SO_url_homepage = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/CSV/SO/url/homepage.parquet")
-    val SO_hits_homepage = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/CSV/SO/hits/homepage.parquet")
+    val SS_hasGenre_caption = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/Parquet/SS/hasGenre/caption.parquet")
+    val SS_homepage_caption = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/Parquet/SS/homepage/caption.parquet")
+    val SS_caption_homepage = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/Parquet/SS/caption/homepage.parquet")
+    val SS_description_caption = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/Parquet/SS/sorg_description/caption.parquet")
+    val SS_title_caption = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/Parquet/SS/og_title/caption.parquet")
+    val SS_type_caption = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/Parquet/SS/type/caption.parquet")
+    val SO_url_homepage = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/Parquet/SO/url/homepage.parquet")
+    val SO_hits_homepage = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/Parquet/SO/hits/homepage.parquet")
 
 
     //F3 FOR 10M STRUCTURE
-    val SS_hasGenre_contentSize = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/CSV/SS/hasGenre/contentSize.parquet")
-    val SS_contentRating_contentSize = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/CSV/SS/contentRating/contentSize.parquet")
-    val SS_contentSize_contentRating = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/CSV/SS/contentSize/contentRating.parquet")
-    val OS_purchaseFor_contentSize = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/CSV/OS/purchaseFor/contentSize.parquet")
-    val OS_makesPurchase_purchaseDate = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/CSV/OS/makesPurchase/purchaseDate.parquet")
-    val VP_purchaseDate = spark.read.format("parquet").load(s"$path/VP/VHDFS/CSV/purchaseDate.parquet")
+    val SS_hasGenre_contentSize = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/Parquet/SS/hasGenre/contentSize.parquet")
+    val SS_contentRating_contentSize = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/Parquet/SS/contentRating/contentSize.parquet")
+    val SS_contentSize_contentRating = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/Parquet/SS/contentSize/contentRating.parquet")
+    val OS_purchaseFor_contentSize = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/Parquet/OS/purchaseFor/contentSize.parquet")
+    val OS_makesPurchase_purchaseDate = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/Parquet/OS/makesPurchase/purchaseDate.parquet")
+    val VP_purchaseDate = spark.read.format("parquet").load(s"$path/VP/VHDFS/Parquet/purchaseDate.parquet")
 
 
     //F4 FOR 10M STRUCTURE
-    val SO_language_homepage = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/CSV/SO/language/homepage.parquet")
-    val SS_homepage_contentSize = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/CSV/SS/homepage/contentSize.parquet")
-    val SS_tag_contentSize = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/CSV/SS/tag/contentSize.parquet")
-    val SS_contentSize_homepage = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/CSV/SS/contentSize/homepage.parquet")
-    val SS_description_contentSize = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/CSV/SS/sorg_description/contentSize.parquet")
-    val OS_includes_contentSize = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/CSV/OS/includes/contentSize.parquet")
-    val OS_likes_contentSize = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/CSV/OS/likes/contentSize.parquet")
+    val SO_language_homepage = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/Parquet/SO/language/homepage.parquet")
+    val SS_homepage_contentSize = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/Parquet/SS/homepage/contentSize.parquet")
+    val SS_tag_contentSize = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/Parquet/SS/tag/contentSize.parquet")
+    val SS_contentSize_homepage = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/Parquet/SS/contentSize/homepage.parquet")
+    val SS_description_contentSize = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/Parquet/SS/sorg_description/contentSize.parquet")
+    val OS_includes_contentSize = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/Parquet/OS/includes/contentSize.parquet")
+    val OS_likes_contentSize = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/Parquet/OS/likes/contentSize.parquet")
 
     //F5 FOR 10M STRUCTURE
-    val OS_offers_validThrough = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/CSV/OS/offers/validThrough.parquet")
-    val SO_validThrough_offers = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/CSV/SO/validThrough/offers.parquet")
-    val SS_includes_validThrough = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/CSV/SS/includes/validThrough.parquet")
-    val SO_title_includes = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/CSV/SO/og_title/includes.parquet")
-    val SO_type_includes = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/CSV/SO/type/includes.parquet")
-    val SS_price_validThrough = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/CSV/SS/price/validThrough.parquet")
+    val OS_offers_validThrough = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/Parquet/OS/offers/validThrough.parquet")
+    val SO_validThrough_offers = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/Parquet/SO/validThrough/offers.parquet")
+    val SS_includes_validThrough = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/Parquet/SS/includes/validThrough.parquet")
+    val SO_title_includes = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/Parquet/SO/og_title/includes.parquet")
+    val SO_type_includes = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/Parquet/SO/type/includes.parquet")
+    val SS_price_validThrough = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/Parquet/SS/price/validThrough.parquet")
 
 
     //L1 FOR 10M STRUCTURE
-    val SS_subscribes_likes = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/CSV/SS/subscribes/likes.parquet")
-    val OS_likes_caption = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/CSV/OS/likes/caption.parquet")
-    val SO_caption_likes = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/CSV/SO/caption/likes.parquet")
+    val SS_subscribes_likes = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/Parquet/SS/subscribes/likes.parquet")
+    val OS_likes_caption = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/Parquet/OS/likes/caption.parquet")
+    val SO_caption_likes = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/Parquet/SO/caption/likes.parquet")
 
 
     //L2 FOR 10M STRUCTURE
-    val SS_nationality_likes = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/CSV/SS/nationality/likes.parquet")
-    val SS_likes_nationality = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/CSV/SS/likes/nationality.parquet")
-    val VP_parentCountry = spark.read.format("parquet").load(s"$path/VP/VHDFS/CSV/parentCountry.parquet")
+    val SS_nationality_likes = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/Parquet/SS/nationality/likes.parquet")
+    val SS_likes_nationality = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/Parquet/SS/likes/nationality.parquet")
+    val VP_parentCountry = spark.read.format("parquet").load(s"$path/VP/VHDFS/Parquet/parentCountry.parquet")
 
     //L3 FOR 10M STRUCTURE
-    val SS_likes_subscribes = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/CSV/SS/likes/subscribes.parquet")
+    val SS_likes_subscribes = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/Parquet/SS/likes/subscribes.parquet")
 
     //L4 FOR 10M STRUCTURE
-    val SS_tag_caption = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/CSV/SS/tag/caption.parquet")
-    val SS_caption_tag = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/CSV/SS/caption/tag.parquet")
+    val SS_tag_caption = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/Parquet/SS/tag/caption.parquet")
+    val SS_caption_tag = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/Parquet/SS/caption/tag.parquet")
 
     //L5 FOR 10M STRUCTURE
-    val SS_nationality_jobTitle = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/CSV/SS/nationality/jobTitle.parquet")
-    val SS_jobTitle_nationality = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/CSV/SS/jobTitle/nationality.parquet")
+    val SS_nationality_jobTitle = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/Parquet/SS/nationality/jobTitle.parquet")
+    val SS_jobTitle_nationality = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/Parquet/SS/jobTitle/nationality.parquet")
 
     //S1
-    val OS_offers_priceValidUntil = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/CSV/OS/offers/priceValidUntil.parquet")
-    val SS_validFrom_priceValidUntil = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/CSV/SS/validFrom/priceValidUntil.parquet")
-    val SS_priceValidUntil_validFrom = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/CSV/SS/priceValidUntil/validFrom.parquet")
-    val SS_validThrough_priceValidUntil = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/CSV/SS/validThrough/priceValidUntil.parquet")
-    val SS_includes_priceValidUntil = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/CSV/SS/includes/priceValidUntil.parquet")
-    val SS_price_priceValidUntil = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/CSV/SS/price/priceValidUntil.parquet")
-    val SS_serialNumber_priceValidUntil = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/CSV/SS/serialNumber/priceValidUntil.parquet")
-    val SS_eligibleQuantity_priceValidUntil = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/CSV/SS/eligibleQuantity/priceValidUntil.parquet")
-    val SS_eligibleRegion_priceValidUntil = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/CSV/SS/eligibleRegion/priceValidUntil.parquet")
+    val OS_offers_priceValidUntil = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/Parquet/OS/offers/priceValidUntil.parquet")
+    val SS_validFrom_priceValidUntil = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/Parquet/SS/validFrom/priceValidUntil.parquet")
+    val SS_priceValidUntil_validFrom = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/Parquet/SS/priceValidUntil/validFrom.parquet")
+    val SS_validThrough_priceValidUntil = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/Parquet/SS/validThrough/priceValidUntil.parquet")
+    val SS_includes_priceValidUntil = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/Parquet/SS/includes/priceValidUntil.parquet")
+    val SS_price_priceValidUntil = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/Parquet/SS/price/priceValidUntil.parquet")
+    val SS_serialNumber_priceValidUntil = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/Parquet/SS/serialNumber/priceValidUntil.parquet")
+    val SS_eligibleQuantity_priceValidUntil = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/Parquet/SS/eligibleQuantity/priceValidUntil.parquet")
+    val SS_eligibleRegion_priceValidUntil = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/Parquet/SS/eligibleRegion/priceValidUntil.parquet")
 
     //S2
-    val SS_nationality_Location = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/CSV/SS/nationality/Location.parquet")
-    val SS_type_nationality = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/CSV/SS/type/Location.parquet")
-    val SS_Location_nationality = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/CSV/SS/Location/nationality.parquet")
-    val SS_gender_nationality = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/CSV/SS/gender/nationality.parquet")
+    val SS_nationality_Location = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/Parquet/SS/nationality/Location.parquet")
+    val SS_type_nationality = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/Parquet/SS/type/Location.parquet")
+    val SS_Location_nationality = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/Parquet/SS/Location/nationality.parquet")
+    val SS_gender_nationality = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/Parquet/SS/gender/nationality.parquet")
 
     //S3
-    val SS_type_publisher = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/CSV/SS/type/publisher.parquet")
-    val SS_caption_publisher = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/CSV/SS/caption/publisher.parquet")
-    val SS_publisher_caption = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/CSV/SS/publisher/caption.parquet")
-    val SS_hasGenre_publisher = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/CSV/SS/hasGenre/publisher.parquet")
+    val SS_type_publisher = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/Parquet/SS/type/publisher.parquet")
+    val SS_caption_publisher = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/Parquet/SS/caption/publisher.parquet")
+    val SS_publisher_caption = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/Parquet/SS/publisher/caption.parquet")
+    val SS_hasGenre_publisher = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/Parquet/SS/hasGenre/publisher.parquet")
 
     //S4
-    val SO_nationality_artist = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/CSV/SO/nationality/artist.parquet")
-    val SO_age_artist = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/CSV/SO/age/artist.parquet")
-    val OS_artist_nationality = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/CSV/OS/artist/nationality.parquet")
-    val SO_familyName_artist = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/CSV/SO/familyName/artist.parquet")
+    val SO_nationality_artist = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/Parquet/SO/nationality/artist.parquet")
+    val SO_age_artist = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/Parquet/SO/age/artist.parquet")
+    val OS_artist_nationality = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/Parquet/OS/artist/nationality.parquet")
+    val SO_familyName_artist = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/Parquet/SO/familyName/artist.parquet")
 
 
     //S5
-    val SS_language_keywords = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/CSV/SS/language/keywords.parquet")
-    val SS_type_language = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/CSV/SS/type/language.parquet")
-    val SS_keywords_language = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/CSV/SS/keywords/language.parquet")
-    val SS_description_language = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/CSV/SS/sorg_description/language.parquet")
+    val SS_language_keywords = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/Parquet/SS/language/keywords.parquet")
+    val SS_type_language = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/Parquet/SS/type/language.parquet")
+    val SS_keywords_language = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/Parquet/SS/keywords/language.parquet")
+    val SS_description_language = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/Parquet/SS/sorg_description/language.parquet")
 
     //S6
-    val SS_hasGenre_conductor = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/CSV/SS/hasGenre/conductor.parquet")
-    val VP_conductor = spark.read.format("parquet").load(s"$path/VP/VHDFS/CSV/conductor.parquet")
-    val SS_type_conductor = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/CSV/SS/type/conductor.parquet")
+    val SS_hasGenre_conductor = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/Parquet/SS/hasGenre/conductor.parquet")
+    val VP_conductor = spark.read.format("parquet").load(s"$path/VP/VHDFS/Parquet/conductor.parquet")
+    val SS_type_conductor = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/Parquet/SS/type/conductor.parquet")
 
 
     //S7
-    val OS_likes_text = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/CSV/OS/likes/sorg_text.parquet")
-    val SO_text_likes = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/CSV/SO/sorg_text/likes.parquet")
-    val SS_type_text = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/CSV/SS/type/sorg_text.parquet")
+    val OS_likes_text = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/Parquet/OS/likes/sorg_text.parquet")
+    val SO_text_likes = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/Parquet/SO/sorg_text/likes.parquet")
+    val SS_type_text = spark.read.format("parquet").load(s"$path/ExtVP/VHDFS/Parquet/SS/type/sorg_text.parquet")
 
 
     //C1
