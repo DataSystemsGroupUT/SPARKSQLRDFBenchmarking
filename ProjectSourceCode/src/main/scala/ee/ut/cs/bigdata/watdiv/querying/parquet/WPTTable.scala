@@ -39,7 +39,7 @@ object WPTTables {
 
 
      val queries = List(
-      new WPTQueries().c1,
+      new WPTQueries().c3,
 //      new WPTQueries c2,
 //      new WPTQueries c3,
 //      new WPTQueries f1,
