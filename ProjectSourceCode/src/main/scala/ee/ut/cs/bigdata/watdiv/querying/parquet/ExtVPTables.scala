@@ -347,6 +347,18 @@ object ExtVPTables {
       //df.take(100).foreach(println)
       val endTime = System.nanoTime()
       val result = (endTime - startTime).toDouble / 1000000000
+
+      //write the result into the log file
+      if (count != queries.size) {
+        Console.withOut(fos) {
+          print(result + ",")
+        }
+      } else {
+        Console.withOut(fos) {
+          println(result)
+        }
+      }
+
       count += 1
     }
     println("All Queries are Done - Parquet - VP!")
