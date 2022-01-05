@@ -71,7 +71,7 @@ class WPTQueries {
       |SELECT DISTINCT V0.Subject, V0.type, V3.Subject, V3.trailer, V3.keywords, V3.trailer
       |FROM WPT V0
       |JOIn WPT V3 ON V3.hasGenre=V0.Subject
-      |AND V0.tag="http://db.uwaterloo.ca/~galuc/wsdbm/Topic47"
+      |AND V0.tag="http://db.uwaterloo.ca/~galuc/wsdbm/Topic8"
       |WHERE V3.type="http://db.uwaterloo.ca/~galuc/wsdbm/ProductCategory2"
       |AND V3.keywords is not null
       |AND V3.trailer is not null
@@ -83,7 +83,7 @@ class WPTQueries {
       |SELECT DISTINCT V0.Subject, V0.homepage, V0.title, V0.caption, V0.sorg_description, V1.url, V1.hits
       |FROM WPT V0
       |JOIN WPT V1 ON V0.homepage =V1.Subject
-      |WHERE V0.hasGenre="http://db.uwaterloo.ca/~galuc/wsdbm/SubGenre62"
+      |WHERE V0.hasGenre="http://db.uwaterloo.ca/~galuc/wsdbm/SubGenre117"
       |AND V0.title is not null
       |AND V0.caption is not null
       |AND V0.sorg_description is not null
@@ -98,7 +98,7 @@ class WPTQueries {
       |SELECT DISTINCT V0.Subject, V0.contentRating, V0.contentSize, V4.Subject, V5.Subject, V5.purchaseDate
       |FROM WPT V0
       |JOIN WPT V5 ON V0.Subject=V5.purchaseFor
-      |AND V0.hasGenre="http://db.uwaterloo.ca/~galuc/wsdbm/SubGenre131"
+      |AND V0.hasGenre="http://db.uwaterloo.ca/~galuc/wsdbm/SubGenre111"
       |JOIN WPT V4 ON V4.makesPurchase=V5.Subject
       |WHERE V0.contentRating is not null
       |AND V0.contentSize is not null
@@ -114,7 +114,7 @@ class WPTQueries {
       |JOIN WPT V1 ON V0.homepage=V1.Subject AND V1.language="http://db.uwaterloo.ca/~galuc/wsdbm/Language0"
       |JOIN WPT V2 ON V0.Subject=V2.includes
       |JOIN WPT V7 ON V0.Subject=V7.likes
-      |WHERE V0.tag="http://db.uwaterloo.ca/~galuc/wsdbm/Topic52"
+      |WHERE V0.tag="http://db.uwaterloo.ca/~galuc/wsdbm/Topic122"
       |AND V0.sorg_description is not null
       |AND V0.contentSize is not null
       |AND V1.url is not null
@@ -127,7 +127,7 @@ class WPTQueries {
       |SELECT DISTINCT V0.Subject, V1.Subject, V0.price, V0.validThrough, V1.title, V1.type
       |FROM WPT V0
       |JOIN WPT V1 ON V0.includes=V1.Subject
-      |JOIN WPT V2 ON V2.offers= V0.Subject AND V2.Subject="http://db.uwaterloo.ca/~galuc/wsdbm/Retailer10"
+      |JOIN WPT V2 ON V2.offers= V0.Subject AND V2.Subject="http://db.uwaterloo.ca/~galuc/wsdbm/Retailer9885"
       |WHERE V0.price is not null
       |AND V0.validThrough is not null
       |AND V1.title is not null
@@ -143,7 +143,7 @@ class WPTQueries {
       |SELECT DISTINCT T0.Subject, T1.Subject, T1.caption
       |FROM WPT T0
       |JOIN WPT T1 ON T0.likes=T1.Subject
-      |WHERE T0.Subscribes="http://db.uwaterloo.ca/~galuc/wsdbm/Website30"
+      |WHERE T0.Subscribes="http://db.uwaterloo.ca/~galuc/wsdbm/Website7355"
       |AND T1.caption  is not null
       |""".stripMargin
 
@@ -153,7 +153,8 @@ class WPTQueries {
        """
       |SELECT DISTINCT T_User.Subject, TT.parentCountry
       |FROM WPT T_User
-      |JOIN (SELECT T_City.parentCountry FROM WPT T_City WHERE T_City.Subject="http://db.uwaterloo.ca/~galuc/wsdbm/City152") TT
+      |JOIN (SELECT T_City.parentCountry FROM WPT T_City
+      |WHERE T_City.Subject="http://db.uwaterloo.ca/~galuc/wsdbm/City70") TT
       |ON TT.parentCountry=T_User.nationality
       |WHERE T_User.likes="http://db.uwaterloo.ca/~galuc/wsdbm/Product0"
       |""".stripMargin
@@ -164,7 +165,7 @@ class WPTQueries {
     """
       |SELECT DISTINCT T0.Subject, T0.likes
       |FROM WPT T0
-      |WHERE T0.subscribes="http://db.uwaterloo.ca/~galuc/wsdbm/Website34"
+      |WHERE T0.subscribes="http://db.uwaterloo.ca/~galuc/wsdbm/Website43164"
       |AND T0.likes is not null
       |""".stripMargin
 
@@ -173,7 +174,7 @@ class WPTQueries {
     """
       |SELECT  DISTINCT T0.Subject, T0.caption
       |FROM WPT T0
-      |WHERE T0.tag="http://db.uwaterloo.ca/~galuc/wsdbm/Topic24"
+      |WHERE T0.tag="http://db.uwaterloo.ca/~galuc/wsdbm/Topic142"
       |AND T0.caption is not null
       |""".stripMargin
 
@@ -182,7 +183,8 @@ class WPTQueries {
        """
       |SELECT DISTINCT T_User.Subject, T_User.JobTitle, TT.parentCountry
       |FROM WPT T_User
-      |JOIN (SELECT T_City.parentCountry FROM WPT T_City WHERE T_City.Subject="http://db.uwaterloo.ca/~galuc/wsdbm/City187") TT
+      |JOIN (SELECT T_City.parentCountry FROM WPT T_City
+      |WHERE T_City.Subject="http://db.uwaterloo.ca/~galuc/wsdbm/City40") TT
       |ON TT.parentCountry=T_User.nationality
       |WHERE T_User.JobTitle is not null
       |""".stripMargin
@@ -198,7 +200,7 @@ class WPTQueries {
       |FROM WPT S0
       |JOIN WPT S1
       |ON S1.SUBJECT=S0.Offers
-      |AND S0.Subject='http://db.uwaterloo.ca/~galuc/wsdbm/Retailer4'
+      |AND S0.Subject='http://db.uwaterloo.ca/~galuc/wsdbm/Retailer8535'
       |WHERE
       |S1.INCLUDES  is not null
       |AND S1.PRICE is not null
@@ -237,7 +239,7 @@ class WPTQueries {
          | SELECT DISTINCT S0.SUBJECT, S0.FAMILYNAME, S3.ARTIST
          | FROM WPT S0
          | JOIN WPT S3 ON S3.artist=S0.Subject
-         | WHERE S0.AGE = "http://db.uwaterloo.ca/~galuc/wsdbm/AgeGroup1"
+         | WHERE S0.AGE = "http://db.uwaterloo.ca/~galuc/wsdbm/AgeGroup5"
          | AND S0.FAMILYNAME IS NOT NULL
          | AND S0.NATIONALITY="http://db.uwaterloo.ca/~galuc/wsdbm/Country1"
          | """.stripMargin
@@ -247,7 +249,7 @@ class WPTQueries {
       """
         |SELECT DISTINCT WPT.SUBJECT, WPT.sorg_description, WPT.KEYWORDS
         |FROM WPT
-        |WHERE WPT.TYPE="http://db.uwaterloo.ca/~galuc/wsdbm/ProductCategory2"
+        |WHERE WPT.TYPE="http://db.uwaterloo.ca/~galuc/wsdbm/ProductCategory3"
         |AND WPT.LANGUAGE="http://db.uwaterloo.ca/~galuc/wsdbm/Language0"
         |AND WPT.sorg_description IS NOT NULL
         |AND WPT.KEYWORDS IS NOT NULL
@@ -258,7 +260,7 @@ class WPTQueries {
       """
         |SELECT DISTINCT WPT.Subject, WPT.conductor, WPT.type
         |FROM WPT
-        |WHERE WPT.hasgenre="http://db.uwaterloo.ca/~galuc/wsdbm/SubGenre115"
+        |WHERE WPT.hasgenre="http://db.uwaterloo.ca/~galuc/wsdbm/SubGenre130"
         |AND WPT.conductor is not null
         |AND WPT.type  is not null
         |""".stripMargin
@@ -268,7 +270,8 @@ class WPTQueries {
       """
         |SELECT DISTINCT T0.SUBJECT, T0.TYPE, T0.sorg_text
         |FROM WPT T0
-        |JOIN WPT T1 ON T1.likes=T0.Subject AND T1.Subject="http://db.uwaterloo.ca/~galuc/wsdbm/User100"
+        |JOIN WPT T1 ON T1.likes=T0.Subject
+        |AND T1.Subject="http://db.uwaterloo.ca/~galuc/wsdbm/User54768"
         |WHERE T0.TYPE IS NOT NULL
         |AND T0.sorg_text IS NOT NULL
         |""".stripMargin
