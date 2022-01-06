@@ -25,7 +25,7 @@ object ExtVerticalTablesPartition {
 
     val ds = args(0) //value = {"100M", "500M, or "1B"}
     val partitionType = args(1).toLowerCase //value = {"Horizontal", "Subject", or "Predicate"}
-    val path = s"hdfs://172.17.77.48:9000/user/hadoop/RDFBench/WATDIV/$ds/ExtVP/"
+    val path = s"hdfs://172.17.77.48:9000/user/hadoop/RDFBench/WATDIV/$ds/"
 
     //read tables from HDFS
 
