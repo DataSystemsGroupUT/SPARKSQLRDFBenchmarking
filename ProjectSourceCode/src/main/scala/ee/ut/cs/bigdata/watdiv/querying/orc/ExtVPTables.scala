@@ -27,156 +27,153 @@ object ExtVPTables {
 
     //read tables from HDFS
 
+
     //C1 FOR 10M STRUCTURE (WE NEED TO FIX THE PATH)
-    val SS_caption_hasReview = spark.read.format("orc").load(s"$path/ExtVP/ORC/SS/caption/hasReview.orc")
-    val SS_contentRating_caption = spark.read.format("orc").load(s"$path/ExtVP/ORC/SS/contentRating/caption.orc")
-    val SS_text_caption = spark.read.format("orc").load(s"$path/ExtVP/ORC/SS/text/caption.orc")
-    val SS_hasReview_caption = spark.read.format("orc").load(s"$path/ExtVP/ORC/SS/hasReview/caption.orc")
-    //val SO_title_hasReview=spark.read.format("orc").load(s"$path/ExtVP/ORC/") *********NOT FOUND in 10M **********
-    //INSTEAD WE USE The following (VP	<rev__title>)
-    val VP_Rev_title = spark.read.format("orc").load(s"$path/VP/ORC/rev_title.orc")
-    //val SS_reviewer_title=spark.read.format("orc").load(s"$path/ExtVP/ORC/") *********NOT FOUND in 10M **********
-    //INSTEAD WE USE The following <rev__reviewer>)
-    val VP_Reviewer = spark.read.format("orc").load(s"$path/VP/ORC/reviewer.orc")
-    val SS_actor_language = spark.read.format("orc").load(s"$path/ExtVP/ORC/SS/actor/language.orc")
-    val SS_language_actor = spark.read.format("orc").load(s"$path/ExtVP/ORC/SS/language/actor.orc")
+    val SS_caption_hasReview = spark.read.format("orc").load(s"$path/ExtVP/VHDFS/ORC/SS/caption/hasReview.orc")
+    val SS_contentRating_caption = spark.read.format("orc").load(s"$path/ExtVP/VHDFS/ORC/SS/contentRating/caption.orc")
+    val SS_text_caption = spark.read.format("orc").load(s"$path/ExtVP/VHDFS/ORC/SS/sorg_text/caption.orc")
+    val SS_hasReview_caption = spark.read.format("orc").load(s"$path/ExtVP/VHDFS/ORC/SS/hasReview/caption.orc")
+    val SO_title_hasReview=spark.read.format("orc").load(s"$path/ExtVP/VHDFS/ORC/SO/rev_title/hasReview.orc")
+    val SS_reviewer_title=spark.read.format("orc").load(s"$path/ExtVP/VHDFS/ORC/SS/reviewer/rev_title.orc")
+    val SS_actor_language = spark.read.format("orc").load(s"$path/ExtVP/VHDFS/ORC/SS/actor/language.orc")
+    val SS_language_actor = spark.read.format("orc").load(s"$path/ExtVP/VHDFS/ORC/SS/language/actor.orc")
 
 
     //C2 FOR 10M STRUCTURE
-    val SO_eligibleRegion_offers = spark.read.format("orc").load(s"$path/ExtVP/ORC/SO/eligibleRegion/offers.orc")
-    val SS_offers_legalName = spark.read.format("orc").load(s"$path/ExtVP/ORC/SS/offers/legalName.orc")
-    val VP_LegalName = spark.read.format("orc").load(s"$path/VP/ORC/legalName.orc")
-    val OS_includes_hasReview = spark.read.format("orc").load(s"$path/ExtVP/ORC/OS/includes/hasReview.orc")
-    val OS_hasReview_totalVotes = spark.read.format("orc").load(s"$path/ExtVP/ORC/OS/hasReview/totalVotes.orc")
-    val SO_totalVotes_hasReview = spark.read.format("orc").load(s"$path/ExtVP/ORC/SO/totalVotes/hasReview.orc")
-    val OS_purchaseFor_hasReview = spark.read.format("orc").load(s"$path/ExtVP/ORC/OS/purchaseFor/hasReview.orc")
-    val SS_makesPurchase_homepage = spark.read.format("orc").load(s"$path/ExtVP/ORC/SS/makesPurchase/homepage.orc")
-    val SS_jobTitle_homepage = spark.read.format("orc").load(s"$path/ExtVP/ORC/SS/jobTitle/homepage.orc")
-    val SS_homepage_jobTitle = spark.read.format("orc").load(s"$path/ExtVP/ORC/SS/homepage/jobTitle.orc")
+    val SO_eligibleRegion_offers = spark.read.format("orc").load(s"$path/ExtVP/VHDFS/ORC/SO/eligibleRegion/offers.orc")
+    val SS_offers_legalName = spark.read.format("orc").load(s"$path/ExtVP/VHDFS/ORC/SS/offers/legalName.orc")
+    val VP_LegalName = spark.read.format("orc").load(s"$path/VP/VHDFS/ORC/legalName.orc")
+    val OS_includes_hasReview = spark.read.format("orc").load(s"$path/ExtVP/VHDFS/ORC/OS/includes/hasReview.orc")
+    val OS_hasReview_totalVotes = spark.read.format("orc").load(s"$path/ExtVP/VHDFS/ORC/OS/hasReview/totalVotes.orc")
+    val SO_totalVotes_hasReview = spark.read.format("orc").load(s"$path/ExtVP/VHDFS/ORC/SO/totalVotes/hasReview.orc")
+    val OS_purchaseFor_hasReview = spark.read.format("orc").load(s"$path/ExtVP/VHDFS/ORC/OS/purchaseFor/hasReview.orc")
+    val SS_makesPurchase_homepage = spark.read.format("orc").load(s"$path/ExtVP/VHDFS/ORC/SS/makesPurchase/homepage.orc")
+    val SS_jobTitle_homepage = spark.read.format("orc").load(s"$path/ExtVP/VHDFS/ORC/SS/jobTitle/homepage.orc")
+    val SS_homepage_jobTitle = spark.read.format("orc").load(s"$path/ExtVP/VHDFS/ORC/SS/homepage/jobTitle.orc")
 
     //C3 FOR 10M STRUCTURE
-    val SS_Location_likes = spark.read.format("orc").load(s"$path/ExtVP/ORC/SS/Location/likes.orc")
-    val SS_age_likes = spark.read.format("orc").load(s"$path/ExtVP/ORC/SS/age/likes.orc")
-    val SS_gender_likes = spark.read.format("orc").load(s"$path/ExtVP/ORC/SS/gender/likes.orc")
-    val SS_givenName_likes = spark.read.format("orc").load(s"$path/ExtVP/ORC/SS/givenName/likes.orc")
-    val SS_likes_Location = spark.read.format("orc").load(s"$path/ExtVP/ORC/SS/likes/Location.orc")
-    val SS_friendOf_likes = spark.read.format("orc").load(s"$path/ExtVP/ORC/SS/friendOf/likes.orc")
+    val SS_Location_likes = spark.read.format("orc").load(s"$path/ExtVP/VHDFS/ORC/SS/Location/likes.orc")
+    val SS_age_likes = spark.read.format("orc").load(s"$path/ExtVP/VHDFS/ORC/SS/age/likes.orc")
+    val SS_gender_likes = spark.read.format("orc").load(s"$path/ExtVP/VHDFS/ORC/SS/gender/likes.orc")
+    val SS_givenName_likes = spark.read.format("orc").load(s"$path/ExtVP/VHDFS/ORC/SS/givenName/likes.orc")
+    val SS_likes_Location = spark.read.format("orc").load(s"$path/ExtVP/VHDFS/ORC/SS/likes/Location.orc")
+    val SS_friendOf_likes = spark.read.format("orc").load(s"$path/ExtVP/VHDFS/ORC/SS/friendOf/likes.orc")
 
 
     //F1 FOR 10M STRUCTURE
-    val SO_tag_hasGenre = spark.read.format("orc").load(s"$path/ExtVP/ORC/SO/tag/hasGenre.orc")
-    val SO_type_hasGenre = spark.read.format("orc").load(s"$path/ExtVP/ORC/SO/type/hasGenre.orc")
-    val SS_hasGenre_trailer = spark.read.format("orc").load(s"$path/ExtVP/ORC/SS/hasGenre/trailer.orc")
-    val SS_type_trailer = spark.read.format("orc").load(s"$path/ExtVP/ORC/SS/type/trailer.orc")
-    val SS_keywords_trailer = spark.read.format("orc").load(s"$path/ExtVP/ORC/SS/keywords/trailer.orc")
-    val SS_trailer_keywords = spark.read.format("orc").load(s"$path/ExtVP/ORC/SS/trailer/keywords.orc")
+    val SO_tag_hasGenre = spark.read.format("orc").load(s"$path/ExtVP/VHDFS/ORC/SO/tag/hasGenre.orc")
+    val SO_type_hasGenre = spark.read.format("orc").load(s"$path/ExtVP/VHDFS/ORC/SO/type/hasGenre.orc")
+    val SS_hasGenre_trailer = spark.read.format("orc").load(s"$path/ExtVP/VHDFS/ORC/SS/hasGenre/trailer.orc")
+    val SS_type_trailer = spark.read.format("orc").load(s"$path/ExtVP/VHDFS/ORC/SS/type/trailer.orc")
+    val SS_keywords_trailer = spark.read.format("orc").load(s"$path/ExtVP/VHDFS/ORC/SS/keywords/trailer.orc")
+    val SS_trailer_keywords = spark.read.format("orc").load(s"$path/ExtVP/VHDFS/ORC/SS/trailer/keywords.orc")
 
     //F2 FOR 10M STRUCTURE
-    val SS_hasGenre_caption = spark.read.format("orc").load(s"$path/ExtVP/ORC/SS/hasGenre/caption.orc")
-    val SS_homepage_caption = spark.read.format("orc").load(s"$path/ExtVP/ORC/SS/homepage/caption.orc")
-    val SS_caption_homepage = spark.read.format("orc").load(s"$path/ExtVP/ORC/SS/caption/homepage.orc")
-    val SS_description_caption = spark.read.format("orc").load(s"$path/ExtVP/ORC/SS/description/caption.orc")
-    val SS_title_caption = spark.read.format("orc").load(s"$path/ExtVP/ORC/SS/title/caption.orc")
-    val SS_type_caption = spark.read.format("orc").load(s"$path/ExtVP/ORC/SS/type/caption.orc")
-    val SO_url_homepage = spark.read.format("orc").load(s"$path/ExtVP/ORC/SO/url/homepage.orc")
-    val SO_hits_homepage = spark.read.format("orc").load(s"$path/ExtVP/ORC/SO/hits/homepage.orc")
+    val SS_hasGenre_caption = spark.read.format("orc").load(s"$path/ExtVP/VHDFS/ORC/SS/hasGenre/caption.orc")
+    val SS_homepage_caption = spark.read.format("orc").load(s"$path/ExtVP/VHDFS/ORC/SS/homepage/caption.orc")
+    val SS_caption_homepage = spark.read.format("orc").load(s"$path/ExtVP/VHDFS/ORC/SS/caption/homepage.orc")
+    val SS_description_caption = spark.read.format("orc").load(s"$path/ExtVP/VHDFS/ORC/SS/sorg_description/caption.orc")
+    val SS_title_caption = spark.read.format("orc").load(s"$path/ExtVP/VHDFS/ORC/SS/og_title/caption.orc")
+    val SS_type_caption = spark.read.format("orc").load(s"$path/ExtVP/VHDFS/ORC/SS/type/caption.orc")
+    val SO_url_homepage = spark.read.format("orc").load(s"$path/ExtVP/VHDFS/ORC/SO/url/homepage.orc")
+    val SO_hits_homepage = spark.read.format("orc").load(s"$path/ExtVP/VHDFS/ORC/SO/hits/homepage.orc")
 
 
     //F3 FOR 10M STRUCTURE
-    val SS_hasGenre_contentSize = spark.read.format("orc").load(s"$path/ExtVP/ORC/SS/hasGenre/contentSize.orc")
-    val SS_contentRating_contentSize = spark.read.format("orc").load(s"$path/ExtVP/ORC/SS/contentRating/contentSize.orc")
-    val SS_contentSize_contentRating = spark.read.format("orc").load(s"$path/ExtVP/ORC/SS/contentSize/contentRating.orc")
-    val OS_purchaseFor_contentSize = spark.read.format("orc").load(s"$path/ExtVP/ORC/OS/purchaseFor/contentSize.orc")
-    val OS_makesPurchase_purchaseDate = spark.read.format("orc").load(s"$path/ExtVP/ORC/OS/makesPurchase/purchaseDate.orc")
-    //val SO_purchaseDate_makesPurchase = spark.read.format("orc").load(s"$path/ExtVP/ORC/OS/makesPurchase/purchaseDate.orc") // *********NOT FOUND in 10M **********
-    //INSTEAD WE USE The following <VP_purchaseDate>)
-    val VP_purchaseDate = spark.read.format("orc").load(s"$path/VP/ORC/purchaseDate.orc")
+    val SS_hasGenre_contentSize = spark.read.format("orc").load(s"$path/ExtVP/VHDFS/ORC/SS/hasGenre/contentSize.orc")
+    val SS_contentRating_contentSize = spark.read.format("orc").load(s"$path/ExtVP/VHDFS/ORC/SS/contentRating/contentSize.orc")
+    val SS_contentSize_contentRating = spark.read.format("orc").load(s"$path/ExtVP/VHDFS/ORC/SS/contentSize/contentRating.orc")
+    val OS_purchaseFor_contentSize = spark.read.format("orc").load(s"$path/ExtVP/VHDFS/ORC/OS/purchaseFor/contentSize.orc")
+    val OS_makesPurchase_purchaseDate = spark.read.format("orc").load(s"$path/ExtVP/VHDFS/ORC/OS/makesPurchase/purchaseDate.orc")
+    val VP_purchaseDate = spark.read.format("orc").load(s"$path/VP/VHDFS/ORC/purchaseDate.orc")
 
 
     //F4 FOR 10M STRUCTURE
-    val SO_language_homepage = spark.read.format("orc").load(s"$path/ExtVP/ORC/SO/language/homepage.orc")
-    val SS_homepage_contentSize = spark.read.format("orc").load(s"$path/ExtVP/ORC/SS/homepage/contentSize.orc")
-    val SS_tag_contentSize = spark.read.format("orc").load(s"$path/ExtVP/ORC/SS/tag/contentSize.orc")
-    val SS_contentSize_homepage = spark.read.format("orc").load(s"$path/ExtVP/ORC/SS/contentSize/homepage.orc")
-    val SS_description_contentSize = spark.read.format("orc").load(s"$path/ExtVP/ORC/SS/description/contentSize.orc")
-    val OS_includes_contentSize = spark.read.format("orc").load(s"$path/ExtVP/ORC/OS/includes/contentSize.orc")
-    val OS_likes_contentSize = spark.read.format("orc").load(s"$path/ExtVP/ORC/OS/likes/contentSize.orc")
+    val SO_language_homepage = spark.read.format("orc").load(s"$path/ExtVP/VHDFS/ORC/SO/language/homepage.orc")
+    val SS_homepage_contentSize = spark.read.format("orc").load(s"$path/ExtVP/VHDFS/ORC/SS/homepage/contentSize.orc")
+    val SS_tag_contentSize = spark.read.format("orc").load(s"$path/ExtVP/VHDFS/ORC/SS/tag/contentSize.orc")
+    val SS_contentSize_homepage = spark.read.format("orc").load(s"$path/ExtVP/VHDFS/ORC/SS/contentSize/homepage.orc")
+    val SS_description_contentSize = spark.read.format("orc").load(s"$path/ExtVP/VHDFS/ORC/SS/sorg_description/contentSize.orc")
+    val OS_includes_contentSize = spark.read.format("orc").load(s"$path/ExtVP/VHDFS/ORC/OS/includes/contentSize.orc")
+    val OS_likes_contentSize = spark.read.format("orc").load(s"$path/ExtVP/VHDFS/ORC/OS/likes/contentSize.orc")
 
     //F5 FOR 10M STRUCTURE
-    val OS_offers_validThrough = spark.read.format("orc").load(s"$path/ExtVP/ORC/OS/offers/validThrough.orc")
-    val SO_validThrough_offers = spark.read.format("orc").load(s"$path/ExtVP/ORC/SO/validThrough/offers.orc")
-    val SS_includes_validThrough = spark.read.format("orc").load(s"$path/ExtVP/ORC/SS/includes/validThrough.orc")
-    val SO_title_includes = spark.read.format("orc").load(s"$path/ExtVP/ORC/SO/title/includes.orc")
-    val SO_type_includes = spark.read.format("orc").load(s"$path/ExtVP/ORC/SO/type/includes.orc")
-    val SS_price_validThrough = spark.read.format("orc").load(s"$path/ExtVP/ORC/SS/price/validThrough.orc")
+    val OS_offers_validThrough = spark.read.format("orc").load(s"$path/ExtVP/VHDFS/ORC/OS/offers/validThrough.orc")
+    val SO_validThrough_offers = spark.read.format("orc").load(s"$path/ExtVP/VHDFS/ORC/SO/validThrough/offers.orc")
+    val SS_includes_validThrough = spark.read.format("orc").load(s"$path/ExtVP/VHDFS/ORC/SS/includes/validThrough.orc")
+    val SO_title_includes = spark.read.format("orc").load(s"$path/ExtVP/VHDFS/ORC/SO/og_title/includes.orc")
+    val SO_type_includes = spark.read.format("orc").load(s"$path/ExtVP/VHDFS/ORC/SO/type/includes.orc")
+    val SS_price_validThrough = spark.read.format("orc").load(s"$path/ExtVP/VHDFS/ORC/SS/price/validThrough.orc")
 
 
     //L1 FOR 10M STRUCTURE
-    val SS_subscribes_likes = spark.read.format("orc").load(s"$path/ExtVP/ORC/SS/subscribes/likes.orc")
-    val OS_likes_caption = spark.read.format("orc").load(s"$path/ExtVP/ORC/OS/likes/caption.orc")
-    val SO_caption_likes = spark.read.format("orc").load(s"$path/ExtVP/ORC/SO/caption/likes.orc")
+    val SS_subscribes_likes = spark.read.format("orc").load(s"$path/ExtVP/VHDFS/ORC/SS/subscribes/likes.orc")
+    val OS_likes_caption = spark.read.format("orc").load(s"$path/ExtVP/VHDFS/ORC/OS/likes/caption.orc")
+    val SO_caption_likes = spark.read.format("orc").load(s"$path/ExtVP/VHDFS/ORC/SO/caption/likes.orc")
 
 
     //L2 FOR 10M STRUCTURE
-    val SS_nationality_likes = spark.read.format("orc").load(s"$path/ExtVP/ORC/SS/nationality/likes.orc")
-    val SS_likes_nationality = spark.read.format("orc").load(s"$path/ExtVP/ORC/SS/likes/nationality.orc")
-    val VP_parentCountry = spark.read.format("orc").load(s"$path/VP/ORC/parentCountry.orc")
+    val SS_nationality_likes = spark.read.format("orc").load(s"$path/ExtVP/VHDFS/ORC/SS/nationality/likes.orc")
+    val SS_likes_nationality = spark.read.format("orc").load(s"$path/ExtVP/VHDFS/ORC/SS/likes/nationality.orc")
+    val VP_parentCountry = spark.read.format("orc").load(s"$path/VP/VHDFS/ORC/parentCountry.orc")
 
     //L3 FOR 10M STRUCTURE
-    val SS_likes_subscribes = spark.read.format("orc").load(s"$path/ExtVP/ORC/SS/likes/subscribes.orc")
+    val SS_likes_subscribes = spark.read.format("orc").load(s"$path/ExtVP/VHDFS/ORC/SS/likes/subscribes.orc")
 
     //L4 FOR 10M STRUCTURE
-    val SS_tag_caption = spark.read.format("orc").load(s"$path/ExtVP/ORC/SS/tag/caption.orc")
-    val SS_caption_tag = spark.read.format("orc").load(s"$path/ExtVP/ORC/SS/caption/tag.orc")
+    val SS_tag_caption = spark.read.format("orc").load(s"$path/ExtVP/VHDFS/ORC/SS/tag/caption.orc")
+    val SS_caption_tag = spark.read.format("orc").load(s"$path/ExtVP/VHDFS/ORC/SS/caption/tag.orc")
 
     //L5 FOR 10M STRUCTURE
-    val SS_nationality_jobTitle = spark.read.format("orc").load(s"$path/ExtVP/ORC/SS/nationality/jobTitle.orc")
-    val SS_jobTitle_nationality = spark.read.format("orc").load(s"$path/ExtVP/ORC/SS/jobTitle/nationality.orc")
+    val SS_nationality_jobTitle = spark.read.format("orc").load(s"$path/ExtVP/VHDFS/ORC/SS/nationality/jobTitle.orc")
+    val SS_jobTitle_nationality = spark.read.format("orc").load(s"$path/ExtVP/VHDFS/ORC/SS/jobTitle/nationality.orc")
 
     //S1
-    val OS_offers_priceValidUntil = spark.read.format("orc").load(s"$path/ExtVP/ORC/OS/offers/priceValidUntil.orc")
-    val SS_validFrom_priceValidUntil = spark.read.format("orc").load(s"$path/ExtVP/ORC/SS/validFrom/priceValidUntil.orc")
-    val SS_priceValidUntil_validFrom = spark.read.format("orc").load(s"$path/ExtVP/ORC/SS/priceValidUntil/validFrom.orc")
-    val SS_validThrough_priceValidUntil = spark.read.format("orc").load(s"$path/ExtVP/ORC/SS/validThrough/priceValidUntil.orc")
-    val SS_includes_priceValidUntil = spark.read.format("orc").load(s"$path/ExtVP/ORC/SS/includes/priceValidUntil.orc")
-    val SS_price_priceValidUntil = spark.read.format("orc").load(s"$path/ExtVP/ORC/SS/price/priceValidUntil.orc")
-    val SS_serialNumber_priceValidUntil = spark.read.format("orc").load(s"$path/ExtVP/ORC/SS/serialNumber/priceValidUntil.orc")
-    val SS_eligibleQuantity_priceValidUntil = spark.read.format("orc").load(s"$path/ExtVP/ORC/SS/eligibleQuantity/priceValidUntil.orc")
-    val SS_eligibleRegion_priceValidUntil = spark.read.format("orc").load(s"$path/ExtVP/ORC/SS/eligibleRegion/priceValidUntil.orc")
+    val OS_offers_priceValidUntil = spark.read.format("orc").load(s"$path/ExtVP/VHDFS/ORC/OS/offers/priceValidUntil.orc")
+    val SS_validFrom_priceValidUntil = spark.read.format("orc").load(s"$path/ExtVP/VHDFS/ORC/SS/validFrom/priceValidUntil.orc")
+    val SS_priceValidUntil_validFrom = spark.read.format("orc").load(s"$path/ExtVP/VHDFS/ORC/SS/priceValidUntil/validFrom.orc")
+    val SS_validThrough_priceValidUntil = spark.read.format("orc").load(s"$path/ExtVP/VHDFS/ORC/SS/validThrough/priceValidUntil.orc")
+    val SS_includes_priceValidUntil = spark.read.format("orc").load(s"$path/ExtVP/VHDFS/ORC/SS/includes/priceValidUntil.orc")
+    val SS_price_priceValidUntil = spark.read.format("orc").load(s"$path/ExtVP/VHDFS/ORC/SS/price/priceValidUntil.orc")
+    val SS_serialNumber_priceValidUntil = spark.read.format("orc").load(s"$path/ExtVP/VHDFS/ORC/SS/serialNumber/priceValidUntil.orc")
+    val SS_eligibleQuantity_priceValidUntil = spark.read.format("orc").load(s"$path/ExtVP/VHDFS/ORC/SS/eligibleQuantity/priceValidUntil.orc")
+    val SS_eligibleRegion_priceValidUntil = spark.read.format("orc").load(s"$path/ExtVP/VHDFS/ORC/SS/eligibleRegion/priceValidUntil.orc")
 
     //S2
-    val SS_nationality_Location = spark.read.format("orc").load(s"$path/ExtVP/ORC/SS/nationality/Location.orc")
-    val SS_type_nationality = spark.read.format("orc").load(s"$path/ExtVP/ORC/SS/type/Location.orc")
-    val SS_Location_nationality = spark.read.format("orc").load(s"$path/ExtVP/ORC/SS/Location/nationality.orc")
-    val SS_gender_nationality = spark.read.format("orc").load(s"$path/ExtVP/ORC/SS/gender/nationality.orc")
+    val SS_nationality_Location = spark.read.format("orc").load(s"$path/ExtVP/VHDFS/ORC/SS/nationality/Location.orc")
+    val SS_type_nationality = spark.read.format("orc").load(s"$path/ExtVP/VHDFS/ORC/SS/type/Location.orc")
+    val SS_Location_nationality = spark.read.format("orc").load(s"$path/ExtVP/VHDFS/ORC/SS/Location/nationality.orc")
+    val SS_gender_nationality = spark.read.format("orc").load(s"$path/ExtVP/VHDFS/ORC/SS/gender/nationality.orc")
 
     //S3
-    val SS_type_publisher = spark.read.format("orc").load(s"$path/ExtVP/ORC/SS/type/publisher.orc")
-    val SS_caption_publisher = spark.read.format("orc").load(s"$path/ExtVP/ORC/SS/caption/publisher.orc")
-    val SS_publisher_caption = spark.read.format("orc").load(s"$path/ExtVP/ORC/SS/publisher/caption.orc")
-    val SS_hasGenre_publisher = spark.read.format("orc").load(s"$path/ExtVP/ORC/SS/hasGenre/publisher.orc")
+    val SS_type_publisher = spark.read.format("orc").load(s"$path/ExtVP/VHDFS/ORC/SS/type/publisher.orc")
+    val SS_caption_publisher = spark.read.format("orc").load(s"$path/ExtVP/VHDFS/ORC/SS/caption/publisher.orc")
+    val SS_publisher_caption = spark.read.format("orc").load(s"$path/ExtVP/VHDFS/ORC/SS/publisher/caption.orc")
+    val SS_hasGenre_publisher = spark.read.format("orc").load(s"$path/ExtVP/VHDFS/ORC/SS/hasGenre/publisher.orc")
 
     //S4
-    val SO_nationality_artist = spark.read.format("orc").load(s"$path/ExtVP/ORC/SO/nationality/artist.orc")
-    val SO_age_artist = spark.read.format("orc").load(s"$path/ExtVP/ORC/SO/age/artist.orc")
-    val OS_artist_nationality = spark.read.format("orc").load(s"$path/ExtVP/ORC/OS/artist/nationality.orc")
-    val SO_familyName_artist = spark.read.format("orc").load(s"$path/ExtVP/ORC/SO/familyName/artist.orc")
+    val SO_nationality_artist = spark.read.format("orc").load(s"$path/ExtVP/VHDFS/ORC/SO/nationality/artist.orc")
+    val SO_age_artist = spark.read.format("orc").load(s"$path/ExtVP/VHDFS/ORC/SO/age/artist.orc")
+    val OS_artist_nationality = spark.read.format("orc").load(s"$path/ExtVP/VHDFS/ORC/OS/artist/nationality.orc")
+    val SO_familyName_artist = spark.read.format("orc").load(s"$path/ExtVP/VHDFS/ORC/SO/familyName/artist.orc")
+
 
     //S5
-    val SS_language_keywords = spark.read.format("orc").load(s"$path/ExtVP/ORC/SS/language/keywords.orc")
-    val SS_type_language = spark.read.format("orc").load(s"$path/ExtVP/ORC/SS/type/language.orc")
-    val SS_keywords_language = spark.read.format("orc").load(s"$path/ExtVP/ORC/SS/keywords/language.orc")
-    val SS_description_language = spark.read.format("orc").load(s"$path/ExtVP/ORC/SS/description/language.orc")
+    val SS_language_keywords = spark.read.format("orc").load(s"$path/ExtVP/VHDFS/ORC/SS/language/keywords.orc")
+    val SS_type_language = spark.read.format("orc").load(s"$path/ExtVP/VHDFS/ORC/SS/type/language.orc")
+    val SS_keywords_language = spark.read.format("orc").load(s"$path/ExtVP/VHDFS/ORC/SS/keywords/language.orc")
+    val SS_description_language = spark.read.format("orc").load(s"$path/ExtVP/VHDFS/ORC/SS/sorg_description/language.orc")
 
     //S6
-    val SS_hasGenre_conductor = spark.read.format("orc").load(s"$path/ExtVP/ORC/SS/hasGenre/conductor.orc")
-    val VP_conductor = spark.read.format("orc").load(s"$path/VP/ORC/conductor.orc")
-    val SS_type_conductor = spark.read.format("orc").load(s"$path/ExtVP/ORC/SS/type/conductor.orc")
+    val SS_hasGenre_conductor = spark.read.format("orc").load(s"$path/ExtVP/VHDFS/ORC/SS/hasGenre/conductor.orc")
+    val VP_conductor = spark.read.format("orc").load(s"$path/VP/VHDFS/ORC/conductor.orc")
+    val SS_type_conductor = spark.read.format("orc").load(s"$path/ExtVP/VHDFS/ORC/SS/type/conductor.orc")
+
 
     //S7
-    val OS_likes_text = spark.read.format("orc").load(s"$path/ExtVP/ORC/OS/likes/text.orc")
-    val SO_text_likes = spark.read.format("orc").load(s"$path/ExtVP/ORC/SO/text/likes.orc")
-    val SS_type_text = spark.read.format("orc").load(s"$path/ExtVP/ORC/SS/type/text.orc")
+    val OS_likes_text = spark.read.format("orc").load(s"$path/ExtVP/VHDFS/ORC/OS/likes/sorg_text.orc")
+    val SO_text_likes = spark.read.format("orc").load(s"$path/ExtVP/VHDFS/ORC/SO/sorg_text/likes.orc")
+    val SS_type_text = spark.read.format("orc").load(s"$path/ExtVP/VHDFS/ORC/SS/type/sorg_text.orc")
 
 
     //C1
@@ -184,8 +181,9 @@ object ExtVPTables {
     SS_contentRating_caption.createOrReplaceTempView("SS_contentRating_caption")
     SS_text_caption.createOrReplaceTempView("SS_text_caption")
     SS_hasReview_caption.createOrReplaceTempView("SS_hasReview_caption")
-    VP_Rev_title.createOrReplaceTempView("VP_Rev_title")
-    VP_Reviewer.createOrReplaceTempView("VP_Reviewer")
+//    VP_Rev_title.createOrReplaceTempView("VP_Rev_title")
+    SO_title_hasReview.createOrReplaceTempView("SO_title_hasReview")
+    SS_reviewer_title.createOrReplaceTempView("SS_reviewer_title")
     SS_actor_language.createOrReplaceTempView("SS_actor_language")
     SS_language_actor.createOrReplaceTempView("SS_language_actor")
 
@@ -303,11 +301,14 @@ object ExtVPTables {
     SS_publisher_caption.createOrReplaceTempView("SS_publisher_caption")
     SS_hasGenre_publisher.createOrReplaceTempView("SS_hasGenre_publisher")
 
+
+
     //S4
     SO_nationality_artist.createOrReplaceTempView("SO_nationality_artist")
     SO_age_artist.createOrReplaceTempView("SO_age_artist")
     OS_artist_nationality.createOrReplaceTempView("OS_artist_nationality")
     SO_familyName_artist.createOrReplaceTempView("SO_familyName_artist")
+
 
     //S5
     SS_language_keywords.createOrReplaceTempView("SS_language_keywords")
@@ -326,9 +327,8 @@ object ExtVPTables {
     SO_text_likes.createOrReplaceTempView("SO_text_likes")
     SS_type_text.createOrReplaceTempView("SS_type_text")
 
-
     //create file to write the query run time results
-    val fos = new FileOutputStream(new File(s"/home/hadoop/RDFBenchMarking/logs/$ds/orc/ExtVP/$ds.txt"),true)
+    val fos = new FileOutputStream(new File(s"/home/hadoop/RDFBenchMarking/logs2/watdiv/$ds/ORC/ExtVP/VHDFS$ds.txt"),true)
 
     val queries = List(
       new ExtVPQueries C1, new ExtVPQueries C2, new ExtVPQueries C3,
@@ -347,8 +347,21 @@ object ExtVPTables {
       //df.take(100).foreach(println)
       val endTime = System.nanoTime()
       val result = (endTime - startTime).toDouble / 1000000000
+
+      //write the result into the log file
+      if (count != queries.size) {
+        Console.withOut(fos) {
+          print(result + ",")
+        }
+      } else {
+        Console.withOut(fos) {
+          println(result)
+        }
+      }
+
       count += 1
     }
     println("All Queries are Done - ORC - VP!")
   }
+
 }
