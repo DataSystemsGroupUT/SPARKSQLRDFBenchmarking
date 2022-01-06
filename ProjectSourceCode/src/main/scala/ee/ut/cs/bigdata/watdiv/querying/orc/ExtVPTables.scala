@@ -181,7 +181,6 @@ object ExtVPTables {
     SS_contentRating_caption.createOrReplaceTempView("SS_contentRating_caption")
     SS_text_caption.createOrReplaceTempView("SS_text_caption")
     SS_hasReview_caption.createOrReplaceTempView("SS_hasReview_caption")
-//    VP_Rev_title.createOrReplaceTempView("VP_Rev_title")
     SO_title_hasReview.createOrReplaceTempView("SO_title_hasReview")
     SS_reviewer_title.createOrReplaceTempView("SS_reviewer_title")
     SS_actor_language.createOrReplaceTempView("SS_actor_language")
@@ -233,8 +232,6 @@ object ExtVPTables {
     SS_contentSize_contentRating.createOrReplaceTempView("SS_contentSize_contentRating")
     OS_purchaseFor_contentSize.createOrReplaceTempView("OS_purchaseFor_contentSize")
     OS_makesPurchase_purchaseDate.createOrReplaceTempView("OS_makesPurchase_purchaseDate")
-    // SO_purchaseDate_makesPurchase.createOrReplaceTempView("SO_purchaseDate_makesPurchase") =
-    //INSTEAD WE USE The following <VP_purchaseDate>)
     VP_purchaseDate.createOrReplaceTempView("VP_purchaseDate")
 
     //F4

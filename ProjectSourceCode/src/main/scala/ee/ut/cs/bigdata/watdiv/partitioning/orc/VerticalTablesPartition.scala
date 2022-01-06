@@ -84,7 +84,6 @@ object VerticalTablesPartition {
 
     println("WatDiv VP Tables Read!")
 
-
     //partition and save on HDFS
     if (partitionType == "subject") {
 
