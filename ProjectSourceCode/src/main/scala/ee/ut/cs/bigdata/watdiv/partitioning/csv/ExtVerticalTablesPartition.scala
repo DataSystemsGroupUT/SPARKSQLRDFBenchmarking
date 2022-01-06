@@ -184,152 +184,152 @@ object ExtVerticalTablesPartition {
     if (partitionType == "subject") {
 
           //C1
-    SS_caption_hasReview.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Subject/CSV/SS_caption_hasReview.csv")
-    SS_contentRating_caption.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Subject/CSV/SS_contentRating_caption.csv")
-    SS_text_caption.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Subject/CSV/SS_text_caption.csv")
-    SS_hasReview_caption.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Subject/CSV/SS_hasReview_caption.csv")
-    SO_title_hasReview.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Subject/CSV/SO_title_hasReview.csv")
-    SS_reviewer_title.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Subject/CSV/SS_reviewer_title.csv")
-    SS_actor_language.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Subject/CSV/SS_actor_language.csv")
-    SS_language_actor.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Subject/CSV/SS_language_actor.csv")
+    SS_caption_hasReview.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/CSV/SS_caption_hasReview.csv")
+    SS_contentRating_caption.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/CSV/SS_contentRating_caption.csv")
+    SS_text_caption.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/CSV/SS_text_caption.csv")
+    SS_hasReview_caption.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/CSV/SS_hasReview_caption.csv")
+    SO_title_hasReview.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/CSV/SO_title_hasReview.csv")
+    SS_reviewer_title.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/CSV/SS_reviewer_title.csv")
+    SS_actor_language.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/CSV/SS_actor_language.csv")
+    SS_language_actor.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/CSV/SS_language_actor.csv")
 
 
     //C2
-    SO_eligibleRegion_offers.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Subject/CSV/SO_eligibleRegion_offers.csv")
-    SS_offers_legalName.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Subject/CSV/SS_offers_legalName.csv")
-    VP_LegalName.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Subject/CSV/VP_LegalName.csv")
-    OS_includes_hasReview.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Subject/CSV/OS_includes_hasReview.csv")
-    OS_hasReview_totalVotes.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Subject/CSV/OS_hasReview_totalVotes.csv")
-    SO_totalVotes_hasReview.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Subject/CSV/SO_totalVotes_hasReview.csv")
-    OS_purchaseFor_hasReview.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Subject/CSV/OS_purchaseFor_hasReview.csv")
-    SS_makesPurchase_homepage.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Subject/CSV/SS_makesPurchase_homepage.csv")
-    SS_jobTitle_homepage.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Subject/CSV/SS_jobTitle_homepage.csv")
-    SS_homepage_jobTitle.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Subject/CSV/SS_homepage_jobTitle.csv")
+    SO_eligibleRegion_offers.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/CSV/SO_eligibleRegion_offers.csv")
+    SS_offers_legalName.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/CSV/SS_offers_legalName.csv")
+    VP_LegalName.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/CSV/VP_LegalName.csv")
+    OS_includes_hasReview.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/CSV/OS_includes_hasReview.csv")
+    OS_hasReview_totalVotes.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/CSV/OS_hasReview_totalVotes.csv")
+    SO_totalVotes_hasReview.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/CSV/SO_totalVotes_hasReview.csv")
+    OS_purchaseFor_hasReview.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/CSV/OS_purchaseFor_hasReview.csv")
+    SS_makesPurchase_homepage.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/CSV/SS_makesPurchase_homepage.csv")
+    SS_jobTitle_homepage.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/CSV/SS_jobTitle_homepage.csv")
+    SS_homepage_jobTitle.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/CSV/SS_homepage_jobTitle.csv")
 
 
     //C3
-    SS_Location_likes.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Subject/CSV/SS_Location_likes.csv")
-    SS_age_likes.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Subject/CSV/SS_age_likes.csv")
-    SS_gender_likes.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Subject/CSV/SS_gender_likes.csv")
-    SS_givenName_likes.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Subject/CSV/SS_givenName_likes.csv")
-    SS_likes_Location.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Subject/CSV/SS_likes_Location.csv")
-    SS_friendOf_likes.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Subject/CSV/SS_friendOf_likes.csv")
+    SS_Location_likes.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/CSV/SS_Location_likes.csv")
+    SS_age_likes.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/CSV/SS_age_likes.csv")
+    SS_gender_likes.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/CSV/SS_gender_likes.csv")
+    SS_givenName_likes.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/CSV/SS_givenName_likes.csv")
+    SS_likes_Location.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/CSV/SS_likes_Location.csv")
+    SS_friendOf_likes.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/CSV/SS_friendOf_likes.csv")
 
     //F1
-    SO_tag_hasGenre.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Subject/CSV/SO_tag_hasGenre.csv")
-    SO_type_hasGenre.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Subject/CSV/SO_type_hasGenre.csv")
-    SS_hasGenre_trailer.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Subject/CSV/SS_hasGenre_trailer.csv")
-    SS_type_trailer.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Subject/CSV/SS_type_trailer.csv")
-    SS_keywords_trailer.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Subject/CSV/SS_keywords_trailer.csv")
-    SS_trailer_keywords.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Subject/CSV/SS_trailer_keywords.csv")
+    SO_tag_hasGenre.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/CSV/SO_tag_hasGenre.csv")
+    SO_type_hasGenre.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/CSV/SO_type_hasGenre.csv")
+    SS_hasGenre_trailer.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/CSV/SS_hasGenre_trailer.csv")
+    SS_type_trailer.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/CSV/SS_type_trailer.csv")
+    SS_keywords_trailer.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/CSV/SS_keywords_trailer.csv")
+    SS_trailer_keywords.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/CSV/SS_trailer_keywords.csv")
 
     //F2
-    SS_hasGenre_caption.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Subject/CSV/SS_hasGenre_caption.csv")
-    SS_homepage_caption.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Subject/CSV/SS_homepage_caption.csv")
-    SS_caption_homepage.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Subject/CSV/SS_caption_homepage.csv")
-    SS_description_caption.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Subject/CSV/SS_description_caption.csv")
-    SS_title_caption.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Subject/CSV/SS_title_caption.csv")
-    SS_type_caption.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Subject/CSV/SS_type_caption.csv")
-    SO_url_homepage.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Subject/CSV/SO_url_homepage.csv")
-    SO_hits_homepage.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Subject/CSV/SO_hits_homepage.csv")
+    SS_hasGenre_caption.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/CSV/SS_hasGenre_caption.csv")
+    SS_homepage_caption.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/CSV/SS_homepage_caption.csv")
+    SS_caption_homepage.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/CSV/SS_caption_homepage.csv")
+    SS_description_caption.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/CSV/SS_description_caption.csv")
+    SS_title_caption.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/CSV/SS_title_caption.csv")
+    SS_type_caption.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/CSV/SS_type_caption.csv")
+    SO_url_homepage.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/CSV/SO_url_homepage.csv")
+    SO_hits_homepage.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/CSV/SO_hits_homepage.csv")
 
     //F3
-    SS_hasGenre_contentSize.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Subject/CSV/SS_hasGenre_contentSize.csv")
-    SS_contentRating_contentSize.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Subject/CSV/SS_contentRating_contentSize.csv")
-    SS_contentSize_contentRating.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Subject/CSV/SS_contentSize_contentRating.csv")
-    OS_purchaseFor_contentSize.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Subject/CSV/OS_purchaseFor_contentSize.csv")
-    OS_makesPurchase_purchaseDate.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Subject/CSV/OS_makesPurchase_purchaseDate.csv")
-    VP_purchaseDate.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Subject/CSV/VP_purchaseDate.csv")
+    SS_hasGenre_contentSize.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/CSV/SS_hasGenre_contentSize.csv")
+    SS_contentRating_contentSize.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/CSV/SS_contentRating_contentSize.csv")
+    SS_contentSize_contentRating.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/CSV/SS_contentSize_contentRating.csv")
+    OS_purchaseFor_contentSize.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/CSV/OS_purchaseFor_contentSize.csv")
+    OS_makesPurchase_purchaseDate.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/CSV/OS_makesPurchase_purchaseDate.csv")
+    VP_purchaseDate.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/CSV/VP_purchaseDate.csv")
 
     //F4
-    SO_language_homepage.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Subject/CSV/SO_language_homepage.csv")
-    SS_homepage_contentSize.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Subject/CSV/SS_homepage_contentSize.csv")
-    SS_tag_contentSize.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Subject/CSV/SS_tag_contentSize.csv")
-    SS_contentSize_homepage.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Subject/CSV/SS_contentSize_homepage.csv")
-    SS_description_contentSize.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Subject/CSV/SS_description_contentSize.csv")
-    OS_includes_contentSize.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Subject/CSV/OS_includes_contentSize.csv")
-    OS_likes_contentSize.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Subject/CSV/OS_likes_contentSize.csv")
+    SO_language_homepage.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/CSV/SO_language_homepage.csv")
+    SS_homepage_contentSize.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/CSV/SS_homepage_contentSize.csv")
+    SS_tag_contentSize.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/CSV/SS_tag_contentSize.csv")
+    SS_contentSize_homepage.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/CSV/SS_contentSize_homepage.csv")
+    SS_description_contentSize.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/CSV/SS_description_contentSize.csv")
+    OS_includes_contentSize.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/CSV/OS_includes_contentSize.csv")
+    OS_likes_contentSize.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/CSV/OS_likes_contentSize.csv")
 
     //F5
-    OS_offers_validThrough.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Subject/CSV/OS_offers_validThrough.csv")
-    SO_validThrough_offers.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Subject/CSV/SO_validThrough_offers.csv")
-    SS_includes_validThrough.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Subject/CSV/SS_includes_validThrough.csv")
-    SO_title_includes.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Subject/CSV/SO_title_includes.csv")
-    SO_type_includes.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Subject/CSV/SO_type_includes.csv")
-    SS_price_validThrough.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Subject/CSV/SS_price_validThrough.csv")
+    OS_offers_validThrough.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/CSV/OS_offers_validThrough.csv")
+    SO_validThrough_offers.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/CSV/SO_validThrough_offers.csv")
+    SS_includes_validThrough.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/CSV/SS_includes_validThrough.csv")
+    SO_title_includes.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/CSV/SO_title_includes.csv")
+    SO_type_includes.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/CSV/SO_type_includes.csv")
+    SS_price_validThrough.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/CSV/SS_price_validThrough.csv")
 
     //L1
-    SS_subscribes_likes.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Subject/CSV/SS_subscribes_likes.csv")
-    OS_likes_caption.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Subject/CSV/OS_likes_caption.csv")
-    SO_caption_likes.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Subject/CSV/SO_caption_likes.csv")
+    SS_subscribes_likes.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/CSV/SS_subscribes_likes.csv")
+    OS_likes_caption.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/CSV/OS_likes_caption.csv")
+    SO_caption_likes.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/CSV/SO_caption_likes.csv")
 
     //L2
-    SS_nationality_likes.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Subject/CSV/SS_nationality_likes.csv")
-    SS_likes_nationality.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Subject/CSV/SS_likes_nationality.csv")
-    VP_parentCountry.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Subject/CSV/VP_parentCountry.csv")
+    SS_nationality_likes.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/CSV/SS_nationality_likes.csv")
+    SS_likes_nationality.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/CSV/SS_likes_nationality.csv")
+    VP_parentCountry.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/CSV/VP_parentCountry.csv")
 
     //L3
-     SS_likes_subscribes.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Subject/CSV/SS_likes_subscribes.csv")
+     SS_likes_subscribes.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/CSV/SS_likes_subscribes.csv")
 
     //L4
-    SS_tag_caption.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Subject/CSV/SS_tag_caption.csv")
-    SS_caption_tag.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Subject/CSV/SS_caption_tag.csv")
+    SS_tag_caption.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/CSV/SS_tag_caption.csv")
+    SS_caption_tag.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/CSV/SS_caption_tag.csv")
 
     //L5
-    SS_nationality_jobTitle.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Subject/CSV/SS_nationality_jobTitle.csv")
-    SS_jobTitle_nationality.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Subject/CSV/SS_jobTitle_nationality.csv")
+    SS_nationality_jobTitle.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/CSV/SS_nationality_jobTitle.csv")
+    SS_jobTitle_nationality.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/CSV/SS_jobTitle_nationality.csv")
 
 
     //S1
-    OS_offers_priceValidUntil.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Subject/CSV/OS_offers_priceValidUntil.csv")
-    SS_validFrom_priceValidUntil.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Subject/CSV/SS_validFrom_priceValidUntil.csv")
-    SS_priceValidUntil_validFrom.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Subject/CSV/SS_priceValidUntil_validFrom.csv")
-    SS_validThrough_priceValidUntil.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Subject/CSV/SS_validThrough_priceValidUntil.csv")
-    SS_includes_priceValidUntil.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Subject/CSV/SS_includes_priceValidUntil.csv")
-    SS_price_priceValidUntil.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Subject/CSV/SS_price_priceValidUntil.csv")
-    SS_serialNumber_priceValidUntil.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Subject/CSV/SS_serialNumber_priceValidUntil.csv")
-    SS_eligibleQuantity_priceValidUntil.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Subject/CSV/SS_eligibleQuantity_priceValidUntil.csv")
-    SS_eligibleRegion_priceValidUntil.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Subject/CSV/SS_eligibleRegion_priceValidUntil.csv")
+    OS_offers_priceValidUntil.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/CSV/OS_offers_priceValidUntil.csv")
+    SS_validFrom_priceValidUntil.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/CSV/SS_validFrom_priceValidUntil.csv")
+    SS_priceValidUntil_validFrom.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/CSV/SS_priceValidUntil_validFrom.csv")
+    SS_validThrough_priceValidUntil.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/CSV/SS_validThrough_priceValidUntil.csv")
+    SS_includes_priceValidUntil.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/CSV/SS_includes_priceValidUntil.csv")
+    SS_price_priceValidUntil.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/CSV/SS_price_priceValidUntil.csv")
+    SS_serialNumber_priceValidUntil.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/CSV/SS_serialNumber_priceValidUntil.csv")
+    SS_eligibleQuantity_priceValidUntil.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/CSV/SS_eligibleQuantity_priceValidUntil.csv")
+    SS_eligibleRegion_priceValidUntil.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/CSV/SS_eligibleRegion_priceValidUntil.csv")
 
 
     //S2
-    SS_nationality_Location.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Subject/CSV/SS_nationality_Location.csv")
-    SS_type_nationality.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Subject/CSV/SS_type_nationality.csv")
-    SS_Location_nationality.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Subject/CSV/SS_Location_nationality.csv")
-    SS_gender_nationality.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Subject/CSV/SS_gender_nationality.csv")
+    SS_nationality_Location.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/CSV/SS_nationality_Location.csv")
+    SS_type_nationality.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/CSV/SS_type_nationality.csv")
+    SS_Location_nationality.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/CSV/SS_Location_nationality.csv")
+    SS_gender_nationality.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/CSV/SS_gender_nationality.csv")
 
 
     //S3
-    SS_type_publisher.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Subject/CSV/SS_type_publisher.csv")
-    SS_caption_publisher.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Subject/CSV/SS_caption_publisher.csv")
-    SS_publisher_caption.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Subject/CSV/SS_publisher_caption.csv")
-    SS_hasGenre_publisher.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Subject/CSV/SS_hasGenre_publisher.csv")
+    SS_type_publisher.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/CSV/SS_type_publisher.csv")
+    SS_caption_publisher.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/CSV/SS_caption_publisher.csv")
+    SS_publisher_caption.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/CSV/SS_publisher_caption.csv")
+    SS_hasGenre_publisher.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/CSV/SS_hasGenre_publisher.csv")
 
 
 
     //S4
-    SO_nationality_artist.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Subject/CSV/SO_nationality_artist.csv")
-    SO_age_artist.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Subject/CSV/SO_age_artist.csv")
-    OS_artist_nationality.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Subject/CSV/OS_artist_nationality.csv")
-    SO_familyName_artist.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Subject/CSV/SO_familyName_artist.csv")
+    SO_nationality_artist.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/CSV/SO_nationality_artist.csv")
+    SO_age_artist.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/CSV/SO_age_artist.csv")
+    OS_artist_nationality.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/CSV/OS_artist_nationality.csv")
+    SO_familyName_artist.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/CSV/SO_familyName_artist.csv")
 
 
     //S5
-    SS_language_keywords.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Subject/CSV/SS_language_keywords.csv")
-    SS_type_language.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Subject/CSV/SS_type_language.csv")
-    SS_keywords_language.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Subject/CSV/SS_keywords_language.csv")
-    SS_description_language.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Subject/CSV/SS_description_language.csv")
+    SS_language_keywords.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/CSV/SS_language_keywords.csv")
+    SS_type_language.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/CSV/SS_type_language.csv")
+    SS_keywords_language.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/CSV/SS_keywords_language.csv")
+    SS_description_language.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/CSV/SS_description_language.csv")
 
     //S6
-    SS_hasGenre_conductor.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Subject/CSV/SS_hasGenre_conductor.csv")
-    VP_conductor.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Subject/CSV/VP_conductor.csv")
-    SS_type_conductor.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Subject/CSV/SS_type_conductor.csv")
+    SS_hasGenre_conductor.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/CSV/SS_hasGenre_conductor.csv")
+    VP_conductor.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/CSV/VP_conductor.csv")
+    SS_type_conductor.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/CSV/SS_type_conductor.csv")
 
 
     //S7
-    OS_likes_text.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Subject/CSV/OS_likes_text.csv")
-    SO_text_likes.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Subject/CSV/SO_text_likes.csv")
-    SS_type_text.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Subject/CSV/SS_type_text.csv")
+    OS_likes_text.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/CSV/OS_likes_text.csv")
+    SO_text_likes.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/CSV/SO_text_likes.csv")
+    SS_type_text.repartition(84, $"Subject").write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/CSV/SS_type_text.csv")
 
       println("CSV ExtVP partitioned and saved! Subject based Partitioning")
     }
@@ -337,152 +337,152 @@ object ExtVerticalTablesPartition {
     else if (partitionType == "horizontal") {
 
     //C1
-    SS_caption_hasReview.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Horizontal/CSV/SS_caption_hasReview.csv")
-    SS_contentRating_caption.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Horizontal/CSV/SS_contentRating_caption.csv")
-    SS_text_caption.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Horizontal/CSV/SS_text_caption.csv")
-    SS_hasReview_caption.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Horizontal/CSV/SS_hasReview_caption.csv")
-    SO_title_hasReview.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Horizontal/CSV/SO_title_hasReview.csv")
-    SS_reviewer_title.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Horizontal/CSV/SS_reviewer_title.csv")
-    SS_actor_language.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Horizontal/CSV/SS_actor_language.csv")
-    SS_language_actor.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Horizontal/CSV/SS_language_actor.csv")
+    SS_caption_hasReview.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/CSV/SS_caption_hasReview.csv")
+    SS_contentRating_caption.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/CSV/SS_contentRating_caption.csv")
+    SS_text_caption.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/CSV/SS_text_caption.csv")
+    SS_hasReview_caption.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/CSV/SS_hasReview_caption.csv")
+    SO_title_hasReview.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/CSV/SO_title_hasReview.csv")
+    SS_reviewer_title.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/CSV/SS_reviewer_title.csv")
+    SS_actor_language.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/CSV/SS_actor_language.csv")
+    SS_language_actor.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/CSV/SS_language_actor.csv")
 
 
     //C2
-    SO_eligibleRegion_offers.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Horizontal/CSV/SO_eligibleRegion_offers.csv")
-    SS_offers_legalName.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Horizontal/CSV/SS_offers_legalName.csv")
-    VP_LegalName.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Horizontal/CSV/VP_LegalName.csv")
-    OS_includes_hasReview.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Horizontal/CSV/OS_includes_hasReview.csv")
-    OS_hasReview_totalVotes.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Horizontal/CSV/OS_hasReview_totalVotes.csv")
-    SO_totalVotes_hasReview.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Horizontal/CSV/SO_totalVotes_hasReview.csv")
-    OS_purchaseFor_hasReview.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Horizontal/CSV/OS_purchaseFor_hasReview.csv")
-    SS_makesPurchase_homepage.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Horizontal/CSV/SS_makesPurchase_homepage.csv")
-    SS_jobTitle_homepage.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Horizontal/CSV/SS_jobTitle_homepage.csv")
-    SS_homepage_jobTitle.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Horizontal/CSV/SS_homepage_jobTitle.csv")
+    SO_eligibleRegion_offers.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/CSV/SO_eligibleRegion_offers.csv")
+    SS_offers_legalName.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/CSV/SS_offers_legalName.csv")
+    VP_LegalName.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/CSV/VP_LegalName.csv")
+    OS_includes_hasReview.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/CSV/OS_includes_hasReview.csv")
+    OS_hasReview_totalVotes.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/CSV/OS_hasReview_totalVotes.csv")
+    SO_totalVotes_hasReview.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/CSV/SO_totalVotes_hasReview.csv")
+    OS_purchaseFor_hasReview.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/CSV/OS_purchaseFor_hasReview.csv")
+    SS_makesPurchase_homepage.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/CSV/SS_makesPurchase_homepage.csv")
+    SS_jobTitle_homepage.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/CSV/SS_jobTitle_homepage.csv")
+    SS_homepage_jobTitle.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/CSV/SS_homepage_jobTitle.csv")
 
 
     //C3
-    SS_Location_likes.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Horizontal/CSV/SS_Location_likes.csv")
-    SS_age_likes.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Horizontal/CSV/SS_age_likes.csv")
-    SS_gender_likes.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Horizontal/CSV/SS_gender_likes.csv")
-    SS_givenName_likes.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Horizontal/CSV/SS_givenName_likes.csv")
-    SS_likes_Location.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Horizontal/CSV/SS_likes_Location.csv")
-    SS_friendOf_likes.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Horizontal/CSV/SS_friendOf_likes.csv")
+    SS_Location_likes.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/CSV/SS_Location_likes.csv")
+    SS_age_likes.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/CSV/SS_age_likes.csv")
+    SS_gender_likes.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/CSV/SS_gender_likes.csv")
+    SS_givenName_likes.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/CSV/SS_givenName_likes.csv")
+    SS_likes_Location.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/CSV/SS_likes_Location.csv")
+    SS_friendOf_likes.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/CSV/SS_friendOf_likes.csv")
 
     //F1
-    SO_tag_hasGenre.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Horizontal/CSV/SO_tag_hasGenre.csv")
-    SO_type_hasGenre.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Horizontal/CSV/SO_type_hasGenre.csv")
-    SS_hasGenre_trailer.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Horizontal/CSV/SS_hasGenre_trailer.csv")
-    SS_type_trailer.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Horizontal/CSV/SS_type_trailer.csv")
-    SS_keywords_trailer.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Horizontal/CSV/SS_keywords_trailer.csv")
-    SS_trailer_keywords.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Horizontal/CSV/SS_trailer_keywords.csv")
+    SO_tag_hasGenre.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/CSV/SO_tag_hasGenre.csv")
+    SO_type_hasGenre.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/CSV/SO_type_hasGenre.csv")
+    SS_hasGenre_trailer.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/CSV/SS_hasGenre_trailer.csv")
+    SS_type_trailer.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/CSV/SS_type_trailer.csv")
+    SS_keywords_trailer.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/CSV/SS_keywords_trailer.csv")
+    SS_trailer_keywords.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/CSV/SS_trailer_keywords.csv")
 
     //F2
-    SS_hasGenre_caption.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Horizontal/CSV/SS_hasGenre_caption.csv")
-    SS_homepage_caption.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Horizontal/CSV/SS_homepage_caption.csv")
-    SS_caption_homepage.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Horizontal/CSV/SS_caption_homepage.csv")
-    SS_description_caption.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Horizontal/CSV/SS_description_caption.csv")
-    SS_title_caption.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Horizontal/CSV/SS_title_caption.csv")
-    SS_type_caption.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Horizontal/CSV/SS_type_caption.csv")
-    SO_url_homepage.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Horizontal/CSV/SO_url_homepage.csv")
-    SO_hits_homepage.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Horizontal/CSV/SO_hits_homepage.csv")
+    SS_hasGenre_caption.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/CSV/SS_hasGenre_caption.csv")
+    SS_homepage_caption.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/CSV/SS_homepage_caption.csv")
+    SS_caption_homepage.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/CSV/SS_caption_homepage.csv")
+    SS_description_caption.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/CSV/SS_description_caption.csv")
+    SS_title_caption.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/CSV/SS_title_caption.csv")
+    SS_type_caption.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/CSV/SS_type_caption.csv")
+    SO_url_homepage.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/CSV/SO_url_homepage.csv")
+    SO_hits_homepage.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/CSV/SO_hits_homepage.csv")
 
     //F3
-    SS_hasGenre_contentSize.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Horizontal/CSV/SS_hasGenre_contentSize.csv")
-    SS_contentRating_contentSize.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Horizontal/CSV/SS_contentRating_contentSize.csv")
-    SS_contentSize_contentRating.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Horizontal/CSV/SS_contentSize_contentRating.csv")
-    OS_purchaseFor_contentSize.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Horizontal/CSV/OS_purchaseFor_contentSize.csv")
-    OS_makesPurchase_purchaseDate.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Horizontal/CSV/OS_makesPurchase_purchaseDate.csv")
-    VP_purchaseDate.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Horizontal/CSV/VP_purchaseDate.csv")
+    SS_hasGenre_contentSize.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/CSV/SS_hasGenre_contentSize.csv")
+    SS_contentRating_contentSize.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/CSV/SS_contentRating_contentSize.csv")
+    SS_contentSize_contentRating.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/CSV/SS_contentSize_contentRating.csv")
+    OS_purchaseFor_contentSize.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/CSV/OS_purchaseFor_contentSize.csv")
+    OS_makesPurchase_purchaseDate.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/CSV/OS_makesPurchase_purchaseDate.csv")
+    VP_purchaseDate.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/CSV/VP_purchaseDate.csv")
 
     //F4
-    SO_language_homepage.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Horizontal/CSV/SO_language_homepage.csv")
-    SS_homepage_contentSize.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Horizontal/CSV/SS_homepage_contentSize.csv")
-    SS_tag_contentSize.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Horizontal/CSV/SS_tag_contentSize.csv")
-    SS_contentSize_homepage.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Horizontal/CSV/SS_contentSize_homepage.csv")
-    SS_description_contentSize.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Horizontal/CSV/SS_description_contentSize.csv")
-    OS_includes_contentSize.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Horizontal/CSV/OS_includes_contentSize.csv")
-    OS_likes_contentSize.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Horizontal/CSV/OS_likes_contentSize.csv")
+    SO_language_homepage.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/CSV/SO_language_homepage.csv")
+    SS_homepage_contentSize.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/CSV/SS_homepage_contentSize.csv")
+    SS_tag_contentSize.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/CSV/SS_tag_contentSize.csv")
+    SS_contentSize_homepage.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/CSV/SS_contentSize_homepage.csv")
+    SS_description_contentSize.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/CSV/SS_description_contentSize.csv")
+    OS_includes_contentSize.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/CSV/OS_includes_contentSize.csv")
+    OS_likes_contentSize.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/CSV/OS_likes_contentSize.csv")
 
     //F5
-    OS_offers_validThrough.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Horizontal/CSV/OS_offers_validThrough.csv")
-    SO_validThrough_offers.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Horizontal/CSV/SO_validThrough_offers.csv")
-    SS_includes_validThrough.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Horizontal/CSV/SS_includes_validThrough.csv")
-    SO_title_includes.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Horizontal/CSV/SO_title_includes.csv")
-    SO_type_includes.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Horizontal/CSV/SO_type_includes.csv")
-    SS_price_validThrough.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Horizontal/CSV/SS_price_validThrough.csv")
+    OS_offers_validThrough.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/CSV/OS_offers_validThrough.csv")
+    SO_validThrough_offers.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/CSV/SO_validThrough_offers.csv")
+    SS_includes_validThrough.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/CSV/SS_includes_validThrough.csv")
+    SO_title_includes.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/CSV/SO_title_includes.csv")
+    SO_type_includes.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/CSV/SO_type_includes.csv")
+    SS_price_validThrough.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/CSV/SS_price_validThrough.csv")
 
     //L1
-    SS_subscribes_likes.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Horizontal/CSV/SS_subscribes_likes.csv")
-    OS_likes_caption.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Horizontal/CSV/OS_likes_caption.csv")
-    SO_caption_likes.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Horizontal/CSV/SO_caption_likes.csv")
+    SS_subscribes_likes.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/CSV/SS_subscribes_likes.csv")
+    OS_likes_caption.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/CSV/OS_likes_caption.csv")
+    SO_caption_likes.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/CSV/SO_caption_likes.csv")
 
     //L2
-    SS_nationality_likes.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Horizontal/CSV/SS_nationality_likes.csv")
-    SS_likes_nationality.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Horizontal/CSV/SS_likes_nationality.csv")
-    VP_parentCountry.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Horizontal/CSV/VP_parentCountry.csv")
+    SS_nationality_likes.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/CSV/SS_nationality_likes.csv")
+    SS_likes_nationality.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/CSV/SS_likes_nationality.csv")
+    VP_parentCountry.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/CSV/VP_parentCountry.csv")
 
     //L3
-     SS_likes_subscribes.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Horizontal/CSV/SS_likes_subscribes.csv")
+     SS_likes_subscribes.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/CSV/SS_likes_subscribes.csv")
 
     //L4
-    SS_tag_caption.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Horizontal/CSV/SS_tag_caption.csv")
-    SS_caption_tag.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Horizontal/CSV/SS_caption_tag.csv")
+    SS_tag_caption.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/CSV/SS_tag_caption.csv")
+    SS_caption_tag.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/CSV/SS_caption_tag.csv")
 
     //L5
-    SS_nationality_jobTitle.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Horizontal/CSV/SS_nationality_jobTitle.csv")
-    SS_jobTitle_nationality.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Horizontal/CSV/SS_jobTitle_nationality.csv")
+    SS_nationality_jobTitle.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/CSV/SS_nationality_jobTitle.csv")
+    SS_jobTitle_nationality.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/CSV/SS_jobTitle_nationality.csv")
 
 
     //S1
-    OS_offers_priceValidUntil.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Horizontal/CSV/OS_offers_priceValidUntil.csv")
-    SS_validFrom_priceValidUntil.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Horizontal/CSV/SS_validFrom_priceValidUntil.csv")
-    SS_priceValidUntil_validFrom.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Horizontal/CSV/SS_priceValidUntil_validFrom.csv")
-    SS_validThrough_priceValidUntil.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Horizontal/CSV/SS_validThrough_priceValidUntil.csv")
-    SS_includes_priceValidUntil.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Horizontal/CSV/SS_includes_priceValidUntil.csv")
-    SS_price_priceValidUntil.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Horizontal/CSV/SS_price_priceValidUntil.csv")
-    SS_serialNumber_priceValidUntil.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Horizontal/CSV/SS_serialNumber_priceValidUntil.csv")
-    SS_eligibleQuantity_priceValidUntil.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Horizontal/CSV/SS_eligibleQuantity_priceValidUntil.csv")
-    SS_eligibleRegion_priceValidUntil.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Horizontal/CSV/SS_eligibleRegion_priceValidUntil.csv")
+    OS_offers_priceValidUntil.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/CSV/OS_offers_priceValidUntil.csv")
+    SS_validFrom_priceValidUntil.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/CSV/SS_validFrom_priceValidUntil.csv")
+    SS_priceValidUntil_validFrom.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/CSV/SS_priceValidUntil_validFrom.csv")
+    SS_validThrough_priceValidUntil.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/CSV/SS_validThrough_priceValidUntil.csv")
+    SS_includes_priceValidUntil.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/CSV/SS_includes_priceValidUntil.csv")
+    SS_price_priceValidUntil.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/CSV/SS_price_priceValidUntil.csv")
+    SS_serialNumber_priceValidUntil.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/CSV/SS_serialNumber_priceValidUntil.csv")
+    SS_eligibleQuantity_priceValidUntil.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/CSV/SS_eligibleQuantity_priceValidUntil.csv")
+    SS_eligibleRegion_priceValidUntil.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/CSV/SS_eligibleRegion_priceValidUntil.csv")
 
 
     //S2
-    SS_nationality_Location.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Horizontal/CSV/SS_nationality_Location.csv")
-    SS_type_nationality.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Horizontal/CSV/SS_type_nationality.csv")
-    SS_Location_nationality.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Horizontal/CSV/SS_Location_nationality.csv")
-    SS_gender_nationality.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Horizontal/CSV/SS_gender_nationality.csv")
+    SS_nationality_Location.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/CSV/SS_nationality_Location.csv")
+    SS_type_nationality.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/CSV/SS_type_nationality.csv")
+    SS_Location_nationality.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/CSV/SS_Location_nationality.csv")
+    SS_gender_nationality.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/CSV/SS_gender_nationality.csv")
 
 
     //S3
-    SS_type_publisher.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Horizontal/CSV/SS_type_publisher.csv")
-    SS_caption_publisher.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Horizontal/CSV/SS_caption_publisher.csv")
-    SS_publisher_caption.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Horizontal/CSV/SS_publisher_caption.csv")
-    SS_hasGenre_publisher.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Horizontal/CSV/SS_hasGenre_publisher.csv")
+    SS_type_publisher.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/CSV/SS_type_publisher.csv")
+    SS_caption_publisher.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/CSV/SS_caption_publisher.csv")
+    SS_publisher_caption.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/CSV/SS_publisher_caption.csv")
+    SS_hasGenre_publisher.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/CSV/SS_hasGenre_publisher.csv")
 
 
 
     //S4
-    SO_nationality_artist.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Horizontal/CSV/SO_nationality_artist.csv")
-    SO_age_artist.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Horizontal/CSV/SO_age_artist.csv")
-    OS_artist_nationality.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Horizontal/CSV/OS_artist_nationality.csv")
-    SO_familyName_artist.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Horizontal/CSV/SO_familyName_artist.csv")
+    SO_nationality_artist.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/CSV/SO_nationality_artist.csv")
+    SO_age_artist.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/CSV/SO_age_artist.csv")
+    OS_artist_nationality.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/CSV/OS_artist_nationality.csv")
+    SO_familyName_artist.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/CSV/SO_familyName_artist.csv")
 
 
     //S5
-    SS_language_keywords.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Horizontal/CSV/SS_language_keywords.csv")
-    SS_type_language.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Horizontal/CSV/SS_type_language.csv")
-    SS_keywords_language.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Horizontal/CSV/SS_keywords_language.csv")
-    SS_description_language.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Horizontal/CSV/SS_description_language.csv")
+    SS_language_keywords.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/CSV/SS_language_keywords.csv")
+    SS_type_language.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/CSV/SS_type_language.csv")
+    SS_keywords_language.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/CSV/SS_keywords_language.csv")
+    SS_description_language.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/CSV/SS_description_language.csv")
 
     //S6
-    SS_hasGenre_conductor.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Horizontal/CSV/SS_hasGenre_conductor.csv")
-    VP_conductor.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Horizontal/CSV/VP_conductor.csv")
-    SS_type_conductor.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Horizontal/CSV/SS_type_conductor.csv")
+    SS_hasGenre_conductor.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/CSV/SS_hasGenre_conductor.csv")
+    VP_conductor.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/CSV/VP_conductor.csv")
+    SS_type_conductor.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/CSV/SS_type_conductor.csv")
 
 
     //S7
-    OS_likes_text.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Horizontal/CSV/OS_likes_text.csv")
-    SO_text_likes.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Horizontal/CSV/SO_text_likes.csv")
-    SS_type_text.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "Horizontal/CSV/SS_type_text.csv")
+    OS_likes_text.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/CSV/OS_likes_text.csv")
+    SO_text_likes.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/CSV/SO_text_likes.csv")
+    SS_type_text.repartition(84).write.option("header", "true").format("csv").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/CSV/SS_type_text.csv")
 
     println("CSV ExtVP partitioned and saved! Horizontal partitioning")
 

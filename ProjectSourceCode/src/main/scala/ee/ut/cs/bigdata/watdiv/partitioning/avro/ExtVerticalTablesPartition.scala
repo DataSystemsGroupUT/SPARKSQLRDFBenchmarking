@@ -181,152 +181,152 @@ object ExtVerticalTablesPartition {
     if (partitionType == "subject") {
 
           //C1
-    SS_caption_hasReview.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Subject/Avro/SS_caption_hasReview.avro")
-    SS_contentRating_caption.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Subject/Avro/SS_contentRating_caption.avro")
-    SS_text_caption.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Subject/Avro/SS_text_caption.avro")
-    SS_hasReview_caption.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Subject/Avro/SS_hasReview_caption.avro")
-    SO_title_hasReview.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Subject/Avro/SO_title_hasReview.avro")
-    SS_reviewer_title.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Subject/Avro/SS_reviewer_title.avro")
-    SS_actor_language.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Subject/Avro/SS_actor_language.avro")
-    SS_language_actor.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Subject/Avro/SS_language_actor.avro")
+    SS_caption_hasReview.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/Avro/SS_caption_hasReview.avro")
+    SS_contentRating_caption.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/Avro/SS_contentRating_caption.avro")
+    SS_text_caption.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/Avro/SS_text_caption.avro")
+    SS_hasReview_caption.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/Avro/SS_hasReview_caption.avro")
+    SO_title_hasReview.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/Avro/SO_title_hasReview.avro")
+    SS_reviewer_title.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/Avro/SS_reviewer_title.avro")
+    SS_actor_language.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/Avro/SS_actor_language.avro")
+    SS_language_actor.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/Avro/SS_language_actor.avro")
 
 
     //C2
-    SO_eligibleRegion_offers.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Subject/Avro/SO_eligibleRegion_offers.avro")
-    SS_offers_legalName.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Subject/Avro/SS_offers_legalName.avro")
-    VP_LegalName.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Subject/Avro/VP_LegalName.avro")
-    OS_includes_hasReview.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Subject/Avro/OS_includes_hasReview.avro")
-    OS_hasReview_totalVotes.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Subject/Avro/OS_hasReview_totalVotes.avro")
-    SO_totalVotes_hasReview.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Subject/Avro/SO_totalVotes_hasReview.avro")
-    OS_purchaseFor_hasReview.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Subject/Avro/OS_purchaseFor_hasReview.avro")
-    SS_makesPurchase_homepage.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Subject/Avro/SS_makesPurchase_homepage.avro")
-    SS_jobTitle_homepage.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Subject/Avro/SS_jobTitle_homepage.avro")
-    SS_homepage_jobTitle.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Subject/Avro/SS_homepage_jobTitle.avro")
+    SO_eligibleRegion_offers.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/Avro/SO_eligibleRegion_offers.avro")
+    SS_offers_legalName.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/Avro/SS_offers_legalName.avro")
+    VP_LegalName.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/Avro/VP_LegalName.avro")
+    OS_includes_hasReview.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/Avro/OS_includes_hasReview.avro")
+    OS_hasReview_totalVotes.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/Avro/OS_hasReview_totalVotes.avro")
+    SO_totalVotes_hasReview.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/Avro/SO_totalVotes_hasReview.avro")
+    OS_purchaseFor_hasReview.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/Avro/OS_purchaseFor_hasReview.avro")
+    SS_makesPurchase_homepage.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/Avro/SS_makesPurchase_homepage.avro")
+    SS_jobTitle_homepage.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/Avro/SS_jobTitle_homepage.avro")
+    SS_homepage_jobTitle.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/Avro/SS_homepage_jobTitle.avro")
 
 
     //C3
-    SS_Location_likes.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Subject/Avro/SS_Location_likes.avro")
-    SS_age_likes.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Subject/Avro/SS_age_likes.avro")
-    SS_gender_likes.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Subject/Avro/SS_gender_likes.avro")
-    SS_givenName_likes.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Subject/Avro/SS_givenName_likes.avro")
-    SS_likes_Location.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Subject/Avro/SS_likes_Location.avro")
-    SS_friendOf_likes.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Subject/Avro/SS_friendOf_likes.avro")
+    SS_Location_likes.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/Avro/SS_Location_likes.avro")
+    SS_age_likes.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/Avro/SS_age_likes.avro")
+    SS_gender_likes.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/Avro/SS_gender_likes.avro")
+    SS_givenName_likes.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/Avro/SS_givenName_likes.avro")
+    SS_likes_Location.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/Avro/SS_likes_Location.avro")
+    SS_friendOf_likes.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/Avro/SS_friendOf_likes.avro")
 
     //F1
-    SO_tag_hasGenre.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Subject/Avro/SO_tag_hasGenre.avro")
-    SO_type_hasGenre.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Subject/Avro/SO_type_hasGenre.avro")
-    SS_hasGenre_trailer.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Subject/Avro/SS_hasGenre_trailer.avro")
-    SS_type_trailer.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Subject/Avro/SS_type_trailer.avro")
-    SS_keywords_trailer.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Subject/Avro/SS_keywords_trailer.avro")
-    SS_trailer_keywords.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Subject/Avro/SS_trailer_keywords.avro")
+    SO_tag_hasGenre.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/Avro/SO_tag_hasGenre.avro")
+    SO_type_hasGenre.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/Avro/SO_type_hasGenre.avro")
+    SS_hasGenre_trailer.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/Avro/SS_hasGenre_trailer.avro")
+    SS_type_trailer.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/Avro/SS_type_trailer.avro")
+    SS_keywords_trailer.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/Avro/SS_keywords_trailer.avro")
+    SS_trailer_keywords.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/Avro/SS_trailer_keywords.avro")
 
     //F2
-    SS_hasGenre_caption.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Subject/Avro/SS_hasGenre_caption.avro")
-    SS_homepage_caption.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Subject/Avro/SS_homepage_caption.avro")
-    SS_caption_homepage.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Subject/Avro/SS_caption_homepage.avro")
-    SS_description_caption.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Subject/Avro/SS_description_caption.avro")
-    SS_title_caption.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Subject/Avro/SS_title_caption.avro")
-    SS_type_caption.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Subject/Avro/SS_type_caption.avro")
-    SO_url_homepage.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Subject/Avro/SO_url_homepage.avro")
-    SO_hits_homepage.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Subject/Avro/SO_hits_homepage.avro")
+    SS_hasGenre_caption.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/Avro/SS_hasGenre_caption.avro")
+    SS_homepage_caption.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/Avro/SS_homepage_caption.avro")
+    SS_caption_homepage.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/Avro/SS_caption_homepage.avro")
+    SS_description_caption.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/Avro/SS_description_caption.avro")
+    SS_title_caption.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/Avro/SS_title_caption.avro")
+    SS_type_caption.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/Avro/SS_type_caption.avro")
+    SO_url_homepage.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/Avro/SO_url_homepage.avro")
+    SO_hits_homepage.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/Avro/SO_hits_homepage.avro")
 
     //F3
-    SS_hasGenre_contentSize.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Subject/Avro/SS_hasGenre_contentSize.avro")
-    SS_contentRating_contentSize.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Subject/Avro/SS_contentRating_contentSize.avro")
-    SS_contentSize_contentRating.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Subject/Avro/SS_contentSize_contentRating.avro")
-    OS_purchaseFor_contentSize.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Subject/Avro/OS_purchaseFor_contentSize.avro")
-    OS_makesPurchase_purchaseDate.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Subject/Avro/OS_makesPurchase_purchaseDate.avro")
-    VP_purchaseDate.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Subject/Avro/VP_purchaseDate.avro")
+    SS_hasGenre_contentSize.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/Avro/SS_hasGenre_contentSize.avro")
+    SS_contentRating_contentSize.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/Avro/SS_contentRating_contentSize.avro")
+    SS_contentSize_contentRating.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/Avro/SS_contentSize_contentRating.avro")
+    OS_purchaseFor_contentSize.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/Avro/OS_purchaseFor_contentSize.avro")
+    OS_makesPurchase_purchaseDate.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/Avro/OS_makesPurchase_purchaseDate.avro")
+    VP_purchaseDate.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/Avro/VP_purchaseDate.avro")
 
     //F4
-    SO_language_homepage.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Subject/Avro/SO_language_homepage.avro")
-    SS_homepage_contentSize.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Subject/Avro/SS_homepage_contentSize.avro")
-    SS_tag_contentSize.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Subject/Avro/SS_tag_contentSize.avro")
-    SS_contentSize_homepage.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Subject/Avro/SS_contentSize_homepage.avro")
-    SS_description_contentSize.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Subject/Avro/SS_description_contentSize.avro")
-    OS_includes_contentSize.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Subject/Avro/OS_includes_contentSize.avro")
-    OS_likes_contentSize.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Subject/Avro/OS_likes_contentSize.avro")
+    SO_language_homepage.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/Avro/SO_language_homepage.avro")
+    SS_homepage_contentSize.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/Avro/SS_homepage_contentSize.avro")
+    SS_tag_contentSize.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/Avro/SS_tag_contentSize.avro")
+    SS_contentSize_homepage.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/Avro/SS_contentSize_homepage.avro")
+    SS_description_contentSize.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/Avro/SS_description_contentSize.avro")
+    OS_includes_contentSize.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/Avro/OS_includes_contentSize.avro")
+    OS_likes_contentSize.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/Avro/OS_likes_contentSize.avro")
 
     //F5
-    OS_offers_validThrough.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Subject/Avro/OS_offers_validThrough.avro")
-    SO_validThrough_offers.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Subject/Avro/SO_validThrough_offers.avro")
-    SS_includes_validThrough.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Subject/Avro/SS_includes_validThrough.avro")
-    SO_title_includes.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Subject/Avro/SO_title_includes.avro")
-    SO_type_includes.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Subject/Avro/SO_type_includes.avro")
-    SS_price_validThrough.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Subject/Avro/SS_price_validThrough.avro")
+    OS_offers_validThrough.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/Avro/OS_offers_validThrough.avro")
+    SO_validThrough_offers.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/Avro/SO_validThrough_offers.avro")
+    SS_includes_validThrough.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/Avro/SS_includes_validThrough.avro")
+    SO_title_includes.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/Avro/SO_title_includes.avro")
+    SO_type_includes.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/Avro/SO_type_includes.avro")
+    SS_price_validThrough.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/Avro/SS_price_validThrough.avro")
 
     //L1
-    SS_subscribes_likes.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Subject/Avro/SS_subscribes_likes.avro")
-    OS_likes_caption.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Subject/Avro/OS_likes_caption.avro")
-    SO_caption_likes.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Subject/Avro/SO_caption_likes.avro")
+    SS_subscribes_likes.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/Avro/SS_subscribes_likes.avro")
+    OS_likes_caption.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/Avro/OS_likes_caption.avro")
+    SO_caption_likes.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/Avro/SO_caption_likes.avro")
 
     //L2
-    SS_nationality_likes.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Subject/Avro/SS_nationality_likes.avro")
-    SS_likes_nationality.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Subject/Avro/SS_likes_nationality.avro")
-    VP_parentCountry.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Subject/Avro/VP_parentCountry.avro")
+    SS_nationality_likes.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/Avro/SS_nationality_likes.avro")
+    SS_likes_nationality.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/Avro/SS_likes_nationality.avro")
+    VP_parentCountry.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/Avro/VP_parentCountry.avro")
 
     //L3
-     SS_likes_subscribes.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Subject/Avro/SS_likes_subscribes.avro")
+     SS_likes_subscribes.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/Avro/SS_likes_subscribes.avro")
 
     //L4
-    SS_tag_caption.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Subject/Avro/SS_tag_caption.avro")
-    SS_caption_tag.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Subject/Avro/SS_caption_tag.avro")
+    SS_tag_caption.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/Avro/SS_tag_caption.avro")
+    SS_caption_tag.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/Avro/SS_caption_tag.avro")
 
     //L5
-    SS_nationality_jobTitle.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Subject/Avro/SS_nationality_jobTitle.avro")
-    SS_jobTitle_nationality.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Subject/Avro/SS_jobTitle_nationality.avro")
+    SS_nationality_jobTitle.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/Avro/SS_nationality_jobTitle.avro")
+    SS_jobTitle_nationality.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/Avro/SS_jobTitle_nationality.avro")
 
 
     //S1
-    OS_offers_priceValidUntil.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Subject/Avro/OS_offers_priceValidUntil.avro")
-    SS_validFrom_priceValidUntil.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Subject/Avro/SS_validFrom_priceValidUntil.avro")
-    SS_priceValidUntil_validFrom.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Subject/Avro/SS_priceValidUntil_validFrom.avro")
-    SS_validThrough_priceValidUntil.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Subject/Avro/SS_validThrough_priceValidUntil.avro")
-    SS_includes_priceValidUntil.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Subject/Avro/SS_includes_priceValidUntil.avro")
-    SS_price_priceValidUntil.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Subject/Avro/SS_price_priceValidUntil.avro")
-    SS_serialNumber_priceValidUntil.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Subject/Avro/SS_serialNumber_priceValidUntil.avro")
-    SS_eligibleQuantity_priceValidUntil.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Subject/Avro/SS_eligibleQuantity_priceValidUntil.avro")
-    SS_eligibleRegion_priceValidUntil.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Subject/Avro/SS_eligibleRegion_priceValidUntil.avro")
+    OS_offers_priceValidUntil.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/Avro/OS_offers_priceValidUntil.avro")
+    SS_validFrom_priceValidUntil.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/Avro/SS_validFrom_priceValidUntil.avro")
+    SS_priceValidUntil_validFrom.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/Avro/SS_priceValidUntil_validFrom.avro")
+    SS_validThrough_priceValidUntil.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/Avro/SS_validThrough_priceValidUntil.avro")
+    SS_includes_priceValidUntil.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/Avro/SS_includes_priceValidUntil.avro")
+    SS_price_priceValidUntil.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/Avro/SS_price_priceValidUntil.avro")
+    SS_serialNumber_priceValidUntil.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/Avro/SS_serialNumber_priceValidUntil.avro")
+    SS_eligibleQuantity_priceValidUntil.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/Avro/SS_eligibleQuantity_priceValidUntil.avro")
+    SS_eligibleRegion_priceValidUntil.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/Avro/SS_eligibleRegion_priceValidUntil.avro")
 
 
     //S2
-    SS_nationality_Location.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Subject/Avro/SS_nationality_Location.avro")
-    SS_type_nationality.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Subject/Avro/SS_type_nationality.avro")
-    SS_Location_nationality.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Subject/Avro/SS_Location_nationality.avro")
-    SS_gender_nationality.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Subject/Avro/SS_gender_nationality.avro")
+    SS_nationality_Location.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/Avro/SS_nationality_Location.avro")
+    SS_type_nationality.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/Avro/SS_type_nationality.avro")
+    SS_Location_nationality.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/Avro/SS_Location_nationality.avro")
+    SS_gender_nationality.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/Avro/SS_gender_nationality.avro")
 
 
     //S3
-    SS_type_publisher.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Subject/Avro/SS_type_publisher.avro")
-    SS_caption_publisher.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Subject/Avro/SS_caption_publisher.avro")
-    SS_publisher_caption.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Subject/Avro/SS_publisher_caption.avro")
-    SS_hasGenre_publisher.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Subject/Avro/SS_hasGenre_publisher.avro")
+    SS_type_publisher.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/Avro/SS_type_publisher.avro")
+    SS_caption_publisher.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/Avro/SS_caption_publisher.avro")
+    SS_publisher_caption.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/Avro/SS_publisher_caption.avro")
+    SS_hasGenre_publisher.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/Avro/SS_hasGenre_publisher.avro")
 
 
 
     //S4
-    SO_nationality_artist.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Subject/Avro/SO_nationality_artist.avro")
-    SO_age_artist.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Subject/Avro/SO_age_artist.avro")
-    OS_artist_nationality.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Subject/Avro/OS_artist_nationality.avro")
-    SO_familyName_artist.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Subject/Avro/SO_familyName_artist.avro")
+    SO_nationality_artist.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/Avro/SO_nationality_artist.avro")
+    SO_age_artist.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/Avro/SO_age_artist.avro")
+    OS_artist_nationality.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/Avro/OS_artist_nationality.avro")
+    SO_familyName_artist.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/Avro/SO_familyName_artist.avro")
 
 
     //S5
-    SS_language_keywords.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Subject/Avro/SS_language_keywords.avro")
-    SS_type_language.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Subject/Avro/SS_type_language.avro")
-    SS_keywords_language.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Subject/Avro/SS_keywords_language.avro")
-    SS_description_language.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Subject/Avro/SS_description_language.avro")
+    SS_language_keywords.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/Avro/SS_language_keywords.avro")
+    SS_type_language.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/Avro/SS_type_language.avro")
+    SS_keywords_language.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/Avro/SS_keywords_language.avro")
+    SS_description_language.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/Avro/SS_description_language.avro")
 
     //S6
-    SS_hasGenre_conductor.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Subject/Avro/SS_hasGenre_conductor.avro")
-    VP_conductor.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Subject/Avro/VP_conductor.avro")
-    SS_type_conductor.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Subject/Avro/SS_type_conductor.avro")
+    SS_hasGenre_conductor.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/Avro/SS_hasGenre_conductor.avro")
+    VP_conductor.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/Avro/VP_conductor.avro")
+    SS_type_conductor.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/Avro/SS_type_conductor.avro")
 
 
     //S7
-    OS_likes_text.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Subject/Avro/OS_likes_text.avro")
-    SO_text_likes.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Subject/Avro/SO_text_likes.avro")
-    SS_type_text.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Subject/Avro/SS_type_text.avro")
+    OS_likes_text.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/Avro/OS_likes_text.avro")
+    SO_text_likes.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/Avro/SO_text_likes.avro")
+    SS_type_text.repartition(84, $"Subject").write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Subject/Avro/SS_type_text.avro")
 
       println("Avro ExtVP partitioned and saved! Subject based Partitioning")
     }
@@ -334,152 +334,152 @@ object ExtVerticalTablesPartition {
     else if (partitionType == "horizontal") {
 
     //C1
-    SS_caption_hasReview.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Horizontal/Avro/SS_caption_hasReview.avro")
-    SS_contentRating_caption.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Horizontal/Avro/SS_contentRating_caption.avro")
-    SS_text_caption.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Horizontal/Avro/SS_text_caption.avro")
-    SS_hasReview_caption.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Horizontal/Avro/SS_hasReview_caption.avro")
-    SO_title_hasReview.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Horizontal/Avro/SO_title_hasReview.avro")
-    SS_reviewer_title.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Horizontal/Avro/SS_reviewer_title.avro")
-    SS_actor_language.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Horizontal/Avro/SS_actor_language.avro")
-    SS_language_actor.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Horizontal/Avro/SS_language_actor.avro")
+    SS_caption_hasReview.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/Avro/SS_caption_hasReview.avro")
+    SS_contentRating_caption.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/Avro/SS_contentRating_caption.avro")
+    SS_text_caption.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/Avro/SS_text_caption.avro")
+    SS_hasReview_caption.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/Avro/SS_hasReview_caption.avro")
+    SO_title_hasReview.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/Avro/SO_title_hasReview.avro")
+    SS_reviewer_title.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/Avro/SS_reviewer_title.avro")
+    SS_actor_language.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/Avro/SS_actor_language.avro")
+    SS_language_actor.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/Avro/SS_language_actor.avro")
 
 
     //C2
-    SO_eligibleRegion_offers.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Horizontal/Avro/SO_eligibleRegion_offers.avro")
-    SS_offers_legalName.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Horizontal/Avro/SS_offers_legalName.avro")
-    VP_LegalName.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Horizontal/Avro/VP_LegalName.avro")
-    OS_includes_hasReview.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Horizontal/Avro/OS_includes_hasReview.avro")
-    OS_hasReview_totalVotes.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Horizontal/Avro/OS_hasReview_totalVotes.avro")
-    SO_totalVotes_hasReview.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Horizontal/Avro/SO_totalVotes_hasReview.avro")
-    OS_purchaseFor_hasReview.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Horizontal/Avro/OS_purchaseFor_hasReview.avro")
-    SS_makesPurchase_homepage.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Horizontal/Avro/SS_makesPurchase_homepage.avro")
-    SS_jobTitle_homepage.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Horizontal/Avro/SS_jobTitle_homepage.avro")
-    SS_homepage_jobTitle.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Horizontal/Avro/SS_homepage_jobTitle.avro")
+    SO_eligibleRegion_offers.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/Avro/SO_eligibleRegion_offers.avro")
+    SS_offers_legalName.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/Avro/SS_offers_legalName.avro")
+    VP_LegalName.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/Avro/VP_LegalName.avro")
+    OS_includes_hasReview.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/Avro/OS_includes_hasReview.avro")
+    OS_hasReview_totalVotes.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/Avro/OS_hasReview_totalVotes.avro")
+    SO_totalVotes_hasReview.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/Avro/SO_totalVotes_hasReview.avro")
+    OS_purchaseFor_hasReview.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/Avro/OS_purchaseFor_hasReview.avro")
+    SS_makesPurchase_homepage.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/Avro/SS_makesPurchase_homepage.avro")
+    SS_jobTitle_homepage.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/Avro/SS_jobTitle_homepage.avro")
+    SS_homepage_jobTitle.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/Avro/SS_homepage_jobTitle.avro")
 
 
     //C3
-    SS_Location_likes.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Horizontal/Avro/SS_Location_likes.avro")
-    SS_age_likes.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Horizontal/Avro/SS_age_likes.avro")
-    SS_gender_likes.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Horizontal/Avro/SS_gender_likes.avro")
-    SS_givenName_likes.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Horizontal/Avro/SS_givenName_likes.avro")
-    SS_likes_Location.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Horizontal/Avro/SS_likes_Location.avro")
-    SS_friendOf_likes.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Horizontal/Avro/SS_friendOf_likes.avro")
+    SS_Location_likes.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/Avro/SS_Location_likes.avro")
+    SS_age_likes.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/Avro/SS_age_likes.avro")
+    SS_gender_likes.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/Avro/SS_gender_likes.avro")
+    SS_givenName_likes.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/Avro/SS_givenName_likes.avro")
+    SS_likes_Location.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/Avro/SS_likes_Location.avro")
+    SS_friendOf_likes.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/Avro/SS_friendOf_likes.avro")
 
     //F1
-    SO_tag_hasGenre.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Horizontal/Avro/SO_tag_hasGenre.avro")
-    SO_type_hasGenre.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Horizontal/Avro/SO_type_hasGenre.avro")
-    SS_hasGenre_trailer.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Horizontal/Avro/SS_hasGenre_trailer.avro")
-    SS_type_trailer.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Horizontal/Avro/SS_type_trailer.avro")
-    SS_keywords_trailer.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Horizontal/Avro/SS_keywords_trailer.avro")
-    SS_trailer_keywords.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Horizontal/Avro/SS_trailer_keywords.avro")
+    SO_tag_hasGenre.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/Avro/SO_tag_hasGenre.avro")
+    SO_type_hasGenre.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/Avro/SO_type_hasGenre.avro")
+    SS_hasGenre_trailer.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/Avro/SS_hasGenre_trailer.avro")
+    SS_type_trailer.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/Avro/SS_type_trailer.avro")
+    SS_keywords_trailer.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/Avro/SS_keywords_trailer.avro")
+    SS_trailer_keywords.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/Avro/SS_trailer_keywords.avro")
 
     //F2
-    SS_hasGenre_caption.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Horizontal/Avro/SS_hasGenre_caption.avro")
-    SS_homepage_caption.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Horizontal/Avro/SS_homepage_caption.avro")
-    SS_caption_homepage.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Horizontal/Avro/SS_caption_homepage.avro")
-    SS_description_caption.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Horizontal/Avro/SS_description_caption.avro")
-    SS_title_caption.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Horizontal/Avro/SS_title_caption.avro")
-    SS_type_caption.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Horizontal/Avro/SS_type_caption.avro")
-    SO_url_homepage.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Horizontal/Avro/SO_url_homepage.avro")
-    SO_hits_homepage.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Horizontal/Avro/SO_hits_homepage.avro")
+    SS_hasGenre_caption.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/Avro/SS_hasGenre_caption.avro")
+    SS_homepage_caption.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/Avro/SS_homepage_caption.avro")
+    SS_caption_homepage.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/Avro/SS_caption_homepage.avro")
+    SS_description_caption.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/Avro/SS_description_caption.avro")
+    SS_title_caption.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/Avro/SS_title_caption.avro")
+    SS_type_caption.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/Avro/SS_type_caption.avro")
+    SO_url_homepage.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/Avro/SO_url_homepage.avro")
+    SO_hits_homepage.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/Avro/SO_hits_homepage.avro")
 
     //F3
-    SS_hasGenre_contentSize.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Horizontal/Avro/SS_hasGenre_contentSize.avro")
-    SS_contentRating_contentSize.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Horizontal/Avro/SS_contentRating_contentSize.avro")
-    SS_contentSize_contentRating.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Horizontal/Avro/SS_contentSize_contentRating.avro")
-    OS_purchaseFor_contentSize.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Horizontal/Avro/OS_purchaseFor_contentSize.avro")
-    OS_makesPurchase_purchaseDate.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Horizontal/Avro/OS_makesPurchase_purchaseDate.avro")
-    VP_purchaseDate.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Horizontal/Avro/VP_purchaseDate.avro")
+    SS_hasGenre_contentSize.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/Avro/SS_hasGenre_contentSize.avro")
+    SS_contentRating_contentSize.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/Avro/SS_contentRating_contentSize.avro")
+    SS_contentSize_contentRating.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/Avro/SS_contentSize_contentRating.avro")
+    OS_purchaseFor_contentSize.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/Avro/OS_purchaseFor_contentSize.avro")
+    OS_makesPurchase_purchaseDate.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/Avro/OS_makesPurchase_purchaseDate.avro")
+    VP_purchaseDate.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/Avro/VP_purchaseDate.avro")
 
     //F4
-    SO_language_homepage.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Horizontal/Avro/SO_language_homepage.avro")
-    SS_homepage_contentSize.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Horizontal/Avro/SS_homepage_contentSize.avro")
-    SS_tag_contentSize.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Horizontal/Avro/SS_tag_contentSize.avro")
-    SS_contentSize_homepage.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Horizontal/Avro/SS_contentSize_homepage.avro")
-    SS_description_contentSize.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Horizontal/Avro/SS_description_contentSize.avro")
-    OS_includes_contentSize.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Horizontal/Avro/OS_includes_contentSize.avro")
-    OS_likes_contentSize.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Horizontal/Avro/OS_likes_contentSize.avro")
+    SO_language_homepage.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/Avro/SO_language_homepage.avro")
+    SS_homepage_contentSize.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/Avro/SS_homepage_contentSize.avro")
+    SS_tag_contentSize.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/Avro/SS_tag_contentSize.avro")
+    SS_contentSize_homepage.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/Avro/SS_contentSize_homepage.avro")
+    SS_description_contentSize.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/Avro/SS_description_contentSize.avro")
+    OS_includes_contentSize.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/Avro/OS_includes_contentSize.avro")
+    OS_likes_contentSize.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/Avro/OS_likes_contentSize.avro")
 
     //F5
-    OS_offers_validThrough.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Horizontal/Avro/OS_offers_validThrough.avro")
-    SO_validThrough_offers.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Horizontal/Avro/SO_validThrough_offers.avro")
-    SS_includes_validThrough.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Horizontal/Avro/SS_includes_validThrough.avro")
-    SO_title_includes.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Horizontal/Avro/SO_title_includes.avro")
-    SO_type_includes.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Horizontal/Avro/SO_type_includes.avro")
-    SS_price_validThrough.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Horizontal/Avro/SS_price_validThrough.avro")
+    OS_offers_validThrough.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/Avro/OS_offers_validThrough.avro")
+    SO_validThrough_offers.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/Avro/SO_validThrough_offers.avro")
+    SS_includes_validThrough.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/Avro/SS_includes_validThrough.avro")
+    SO_title_includes.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/Avro/SO_title_includes.avro")
+    SO_type_includes.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/Avro/SO_type_includes.avro")
+    SS_price_validThrough.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/Avro/SS_price_validThrough.avro")
 
     //L1
-    SS_subscribes_likes.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Horizontal/Avro/SS_subscribes_likes.avro")
-    OS_likes_caption.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Horizontal/Avro/OS_likes_caption.avro")
-    SO_caption_likes.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Horizontal/Avro/SO_caption_likes.avro")
+    SS_subscribes_likes.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/Avro/SS_subscribes_likes.avro")
+    OS_likes_caption.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/Avro/OS_likes_caption.avro")
+    SO_caption_likes.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/Avro/SO_caption_likes.avro")
 
     //L2
-    SS_nationality_likes.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Horizontal/Avro/SS_nationality_likes.avro")
-    SS_likes_nationality.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Horizontal/Avro/SS_likes_nationality.avro")
-    VP_parentCountry.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Horizontal/Avro/VP_parentCountry.avro")
+    SS_nationality_likes.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/Avro/SS_nationality_likes.avro")
+    SS_likes_nationality.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/Avro/SS_likes_nationality.avro")
+    VP_parentCountry.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/Avro/VP_parentCountry.avro")
 
     //L3
-     SS_likes_subscribes.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Horizontal/Avro/SS_likes_subscribes.avro")
+     SS_likes_subscribes.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/Avro/SS_likes_subscribes.avro")
 
     //L4
-    SS_tag_caption.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Horizontal/Avro/SS_tag_caption.avro")
-    SS_caption_tag.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Horizontal/Avro/SS_caption_tag.avro")
+    SS_tag_caption.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/Avro/SS_tag_caption.avro")
+    SS_caption_tag.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/Avro/SS_caption_tag.avro")
 
     //L5
-    SS_nationality_jobTitle.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Horizontal/Avro/SS_nationality_jobTitle.avro")
-    SS_jobTitle_nationality.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Horizontal/Avro/SS_jobTitle_nationality.avro")
+    SS_nationality_jobTitle.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/Avro/SS_nationality_jobTitle.avro")
+    SS_jobTitle_nationality.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/Avro/SS_jobTitle_nationality.avro")
 
 
     //S1
-    OS_offers_priceValidUntil.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Horizontal/Avro/OS_offers_priceValidUntil.avro")
-    SS_validFrom_priceValidUntil.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Horizontal/Avro/SS_validFrom_priceValidUntil.avro")
-    SS_priceValidUntil_validFrom.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Horizontal/Avro/SS_priceValidUntil_validFrom.avro")
-    SS_validThrough_priceValidUntil.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Horizontal/Avro/SS_validThrough_priceValidUntil.avro")
-    SS_includes_priceValidUntil.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Horizontal/Avro/SS_includes_priceValidUntil.avro")
-    SS_price_priceValidUntil.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Horizontal/Avro/SS_price_priceValidUntil.avro")
-    SS_serialNumber_priceValidUntil.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Horizontal/Avro/SS_serialNumber_priceValidUntil.avro")
-    SS_eligibleQuantity_priceValidUntil.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Horizontal/Avro/SS_eligibleQuantity_priceValidUntil.avro")
-    SS_eligibleRegion_priceValidUntil.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Horizontal/Avro/SS_eligibleRegion_priceValidUntil.avro")
+    OS_offers_priceValidUntil.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/Avro/OS_offers_priceValidUntil.avro")
+    SS_validFrom_priceValidUntil.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/Avro/SS_validFrom_priceValidUntil.avro")
+    SS_priceValidUntil_validFrom.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/Avro/SS_priceValidUntil_validFrom.avro")
+    SS_validThrough_priceValidUntil.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/Avro/SS_validThrough_priceValidUntil.avro")
+    SS_includes_priceValidUntil.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/Avro/SS_includes_priceValidUntil.avro")
+    SS_price_priceValidUntil.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/Avro/SS_price_priceValidUntil.avro")
+    SS_serialNumber_priceValidUntil.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/Avro/SS_serialNumber_priceValidUntil.avro")
+    SS_eligibleQuantity_priceValidUntil.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/Avro/SS_eligibleQuantity_priceValidUntil.avro")
+    SS_eligibleRegion_priceValidUntil.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/Avro/SS_eligibleRegion_priceValidUntil.avro")
 
 
     //S2
-    SS_nationality_Location.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Horizontal/Avro/SS_nationality_Location.avro")
-    SS_type_nationality.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Horizontal/Avro/SS_type_nationality.avro")
-    SS_Location_nationality.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Horizontal/Avro/SS_Location_nationality.avro")
-    SS_gender_nationality.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Horizontal/Avro/SS_gender_nationality.avro")
+    SS_nationality_Location.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/Avro/SS_nationality_Location.avro")
+    SS_type_nationality.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/Avro/SS_type_nationality.avro")
+    SS_Location_nationality.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/Avro/SS_Location_nationality.avro")
+    SS_gender_nationality.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/Avro/SS_gender_nationality.avro")
 
 
     //S3
-    SS_type_publisher.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Horizontal/Avro/SS_type_publisher.avro")
-    SS_caption_publisher.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Horizontal/Avro/SS_caption_publisher.avro")
-    SS_publisher_caption.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Horizontal/Avro/SS_publisher_caption.avro")
-    SS_hasGenre_publisher.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Horizontal/Avro/SS_hasGenre_publisher.avro")
+    SS_type_publisher.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/Avro/SS_type_publisher.avro")
+    SS_caption_publisher.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/Avro/SS_caption_publisher.avro")
+    SS_publisher_caption.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/Avro/SS_publisher_caption.avro")
+    SS_hasGenre_publisher.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/Avro/SS_hasGenre_publisher.avro")
 
 
 
     //S4
-    SO_nationality_artist.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Horizontal/Avro/SO_nationality_artist.avro")
-    SO_age_artist.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Horizontal/Avro/SO_age_artist.avro")
-    OS_artist_nationality.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Horizontal/Avro/OS_artist_nationality.avro")
-    SO_familyName_artist.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Horizontal/Avro/SO_familyName_artist.avro")
+    SO_nationality_artist.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/Avro/SO_nationality_artist.avro")
+    SO_age_artist.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/Avro/SO_age_artist.avro")
+    OS_artist_nationality.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/Avro/OS_artist_nationality.avro")
+    SO_familyName_artist.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/Avro/SO_familyName_artist.avro")
 
 
     //S5
-    SS_language_keywords.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Horizontal/Avro/SS_language_keywords.avro")
-    SS_type_language.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Horizontal/Avro/SS_type_language.avro")
-    SS_keywords_language.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Horizontal/Avro/SS_keywords_language.avro")
-    SS_description_language.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Horizontal/Avro/SS_description_language.avro")
+    SS_language_keywords.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/Avro/SS_language_keywords.avro")
+    SS_type_language.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/Avro/SS_type_language.avro")
+    SS_keywords_language.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/Avro/SS_keywords_language.avro")
+    SS_description_language.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/Avro/SS_description_language.avro")
 
     //S6
-    SS_hasGenre_conductor.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Horizontal/Avro/SS_hasGenre_conductor.avro")
-    VP_conductor.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Horizontal/Avro/VP_conductor.avro")
-    SS_type_conductor.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Horizontal/Avro/SS_type_conductor.avro")
+    SS_hasGenre_conductor.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/Avro/SS_hasGenre_conductor.avro")
+    VP_conductor.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/Avro/VP_conductor.avro")
+    SS_type_conductor.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/Avro/SS_type_conductor.avro")
 
 
     //S7
-    OS_likes_text.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Horizontal/Avro/OS_likes_text.avro")
-    SO_text_likes.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Horizontal/Avro/SO_text_likes.avro")
-    SS_type_text.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "Horizontal/Avro/SS_type_text.avro")
+    OS_likes_text.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/Avro/OS_likes_text.avro")
+    SO_text_likes.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/Avro/SO_text_likes.avro")
+    SS_type_text.repartition(84).write.option("header", "true").format("avro").mode(SaveMode.Overwrite).save(path+ "ExtVP/Horizontal/Avro/SS_type_text.avro")
 
     println("Avro ExtVP partitioned and saved! Horizontal partitioning")
 
