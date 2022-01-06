@@ -31,7 +31,7 @@ object ExtVerticalTablesQP {
     println("ExtVP Querying!")
     FileSystem.get(sc.hadoopConfiguration).listStatus(new Path(s"$path/$partitionType/CSV")).foreach {
       x =>
-        val extVPTable = spark.read.format("csv").load(x.getPath().toString)
+        val extVPTable = spark.read.option("header", "true").format("csv").load(x.getPath().toString)
         extVPTable.createOrReplaceTempView(x.getPath().getName().substring(0, x.getPath().getName().lastIndexOf('.')))
     }
 
