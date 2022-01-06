@@ -7,6 +7,8 @@ import org.apache.spark.{SparkConf, SparkContext}
 object ExtVerticalTablesPartition {
   def main(args: Array[String]): Unit = {
 
+    println("Start Watdiv ExtVP Partitioning Avro...")
+
     val conf = new SparkConf()
     Logger.getLogger("org").setLevel(Level.OFF)
     Logger.getLogger("akka").setLevel(Level.OFF)
@@ -24,8 +26,6 @@ object ExtVerticalTablesPartition {
     val ds = args(0) //value = {"100M", "500M, or "1B"}
     val partitionType = args(1).toLowerCase //value = {"Horizontal", "Subject", or "Predicate"}
     val path = s"hdfs://172.17.77.48:9000/user/hadoop/RDFBench/WATDIV/$ds/ExtVP/"
-
-    println("Start Watdiv ExtVP Partitioning Avro...")
 
     //read tables from HDFS
 
