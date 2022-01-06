@@ -328,7 +328,7 @@ object ExtVPTables {
     SS_type_text.createOrReplaceTempView("SS_type_text")
 
     //create file to write the query run time results
-    val fos = new FileOutputStream(new File(s"/home/hadoop/RDFBenchMarking/logs2/watdiv/$ds/ORC/ExtVP/VHDFS$ds.txt"),true)
+    val fos = new FileOutputStream(new File(s"/home/hadoop/RDFBenchMarking/logs2/watdiv/$ds/orc/ExtVP/VHDFS$ds.txt"),true)
 
     val queries = List(
       new ExtVPQueries C1, new ExtVPQueries C2, new ExtVPQueries C3,
