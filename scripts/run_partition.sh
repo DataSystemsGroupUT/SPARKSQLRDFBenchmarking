@@ -1,10 +1,10 @@
 #!/bin/bash
 
-BENCHMARK=sp2bench
-SCHEMA=WPTTablesPartition
+BENCHMARK=watdiv
+SCHEMA=ExtVerticalTablesPartition
 FORMATS=(parquet avro csv orc)
 DS=100M
-PARTITION=Predicate # Subject | Horizontal | Predicate
+PARTITION=Subject # Subject | Horizontal | Predicate
 
 RDF_BENCHMARK_JAR="/home/hadoop/SPARKSQLRDFBenchmarking/ProjectSourceCode/target/scala-2.12/rdfbenchmarkingproject_2.12-0.1.jar"
 
