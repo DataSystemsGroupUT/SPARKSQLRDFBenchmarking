@@ -28,12 +28,16 @@ object WPTTables {
     val path = s"hdfs://172.17.77.48:9000/user/hadoop/RDFBench/WATDIV/$ds/WPT/VHDFS/Parquet"
 //    val path = s"hdfs://172.17.77.48:9000/user/hive/warehouse/watdiv.db"
 
+    println(s"$path")
+
 
     //read tables from HDFS
     val wptDF = spark.read.format("parquet").load(s"$path/WidePropertyTable.parquet").toDF()
 //    val wptDF = spark.read.format("parquet").load(s"/user/hive/warehouse/watdiv.db/wide_property_table").toDF()
 
     wptDF.createOrReplaceTempView("WPT")
+
+    wptDF.show(false)
 
     //create file to write the query run time results
    // val fos = new FileOutputStream(new File(s"/home/hadoop/RDFBenchMarking/logs/$ds/parquet/ST/$ds$partitionType.txt"), true)
