@@ -51,7 +51,7 @@ class WPTQueries {
 
   val c3_wpt_prost =
     """
-      |SELECT  DISTINCT T0.s
+      |SELECT  T0.s
       |FROM WPT T0
       |WHERE T0.http___db_uwaterloo_ca__galuc_wsdbm_likes     is not null
       |AND   T0.http___db_uwaterloo_ca__galuc_wsdbm_friendOf  is not null
