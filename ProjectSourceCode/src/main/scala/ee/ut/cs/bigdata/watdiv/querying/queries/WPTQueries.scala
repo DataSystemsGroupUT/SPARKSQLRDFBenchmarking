@@ -127,7 +127,8 @@ class WPTQueries {
       |SELECT DISTINCT V0.Subject, V1.Subject, V0.price, V0.validThrough, V1.title, V1.type
       |FROM WPT V0
       |JOIN WPT V1 ON V0.includes=V1.Subject
-      |JOIN WPT V2 ON V2.offers= V0.Subject AND V2.Subject="http://db.uwaterloo.ca/~galuc/wsdbm/Retailer9885"
+      |JOIN WPT V2 ON V2.offers= V0.Subject
+      |AND V2.Subject="http://db.uwaterloo.ca/~galuc/wsdbm/Retailer9885"
       |WHERE V0.price is not null
       |AND V0.validThrough is not null
       |AND V1.title is not null
