@@ -77,6 +77,17 @@ class WPTQueries {
       |AND V3.trailer is not null
       |""".stripMargin
 
+    val f1_prost =
+    """
+      |SELECT DISTINCT V0.s, V0.http___www_w3_org_1999_02_22_rdf_syntax_ns_type, V3.s, V3.http___schema_org_trailer, V3.http___schema_org_keywords, V3.http___schema_org_trailer
+      |FROM WPT V0
+      |JOIn WPT V3 ON V3.http___db_uwaterloo_ca__galuc_wsdbm_hasGenre=V0.s
+      |AND V0.http___ogp_me_ns_tag="http://db.uwaterloo.ca/~galuc/wsdbm/Topic8"
+      |WHERE V3.http___www_w3_org_1999_02_22_rdf_syntax_ns_type="http://db.uwaterloo.ca/~galuc/wsdbm/ProductCategory2"
+      |AND V3.http___schema_org_keywords is not null
+      |AND V3.http___schema_org_trailer is not null
+      |""".stripMargin
+
 //100%
   val f2 =
     """
