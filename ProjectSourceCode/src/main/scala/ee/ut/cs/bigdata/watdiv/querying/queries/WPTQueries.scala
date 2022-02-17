@@ -224,6 +224,29 @@ class WPTQueries {
       |AND S1.PRICEVALIDUNTIL is not null
       |""".stripMargin
 
+
+    val s1_prost =
+    """
+      |SELECT S1.s, S0.http___purl_org_goodrelations_includes, S1.http___purl_org_goodrelations_price,
+      |S1.http___purl_org_goodrelations_serialNumber, S1.http___purl_org_goodrelations_validFrom, S1.http___purl_org_goodrelations_validThrough,
+      |S1.http___schema_org_eligibleQuantity, S1.http___schema_org_eligibleRegion, S1.http___schema_org_priceValidUntil
+      |FROM WPT S0
+      |JOIN WPT S1
+      |ON S1.s=S0.http___purl_org_goodrelations_offers
+      |AND S0.s='<http://db.uwaterloo.ca/~galuc/wsdbm/Retailer8535>'
+      |WHERE
+      |S1.http___purl_org_goodrelations_includes  is not null
+      |AND S1.http___purl_org_goodrelations_price is not null
+      |AND S1.http___purl_org_goodrelations_serialNumber is not null
+      |AND S1.http___purl_org_goodrelations_validFrom is not null
+      |AND S1.http___purl_org_goodrelations_validThrough is not null
+      |AND S1.http___schema_org_eligibleQuantity is not null
+      |AND S1.http___schema_org_eligibleRegion is not null
+      |AND S1.http___schema_org_priceValidUntil is not null
+      |""".stripMargin
+
+
+
 //100%
     val s2 =
       """
