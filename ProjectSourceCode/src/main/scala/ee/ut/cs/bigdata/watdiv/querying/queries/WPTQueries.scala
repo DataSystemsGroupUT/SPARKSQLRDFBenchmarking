@@ -77,6 +77,17 @@ class WPTQueries {
       |AND V3.trailer is not null
       |""".stripMargin
 
+    val f1_prost =
+    """
+      |SELECT DISTINCT V0.s, V0.http___www_w3_org_1999_02_22_rdf_syntax_ns_type, V3.s, V3.http___schema_org_trailer, V3.http___schema_org_keywords, V3.http___schema_org_trailer
+      |FROM WPT V0
+      |JOIn WPT V3 ON V3.http___db_uwaterloo_ca__galuc_wsdbm_hasGenre=V0.s
+      |AND V0.http___ogp_me_ns_tag="<http://db.uwaterloo.ca/~galuc/wsdbm/Topic8>"
+      |WHERE V3.http___www_w3_org_1999_02_22_rdf_syntax_ns_type="<http://db.uwaterloo.ca/~galuc/wsdbm/ProductCategory2>"
+      |AND V3.http___schema_org_keywords is not null
+      |AND V3.http___schema_org_trailer is not null
+      |""".stripMargin
+
 //100%
   val f2 =
     """
@@ -127,7 +138,8 @@ class WPTQueries {
       |SELECT DISTINCT V0.Subject, V1.Subject, V0.price, V0.validThrough, V1.title, V1.type
       |FROM WPT V0
       |JOIN WPT V1 ON V0.includes=V1.Subject
-      |JOIN WPT V2 ON V2.offers= V0.Subject AND V2.Subject="http://db.uwaterloo.ca/~galuc/wsdbm/Retailer9885"
+      |JOIN WPT V2 ON V2.offers= V0.Subject
+      |AND V2.Subject="http://db.uwaterloo.ca/~galuc/wsdbm/Retailer9885"
       |WHERE V0.price is not null
       |AND V0.validThrough is not null
       |AND V1.title is not null
@@ -211,6 +223,29 @@ class WPTQueries {
       |AND S1.ELIGIBLEREGION is not null
       |AND S1.PRICEVALIDUNTIL is not null
       |""".stripMargin
+
+
+    val s1_prost =
+    """
+      |SELECT S1.s, S0.http___purl_org_goodrelations_includes, S1.http___purl_org_goodrelations_price,
+      |S1.http___purl_org_goodrelations_serialNumber, S1.http___purl_org_goodrelations_validFrom, S1.http___purl_org_goodrelations_validThrough,
+      |S1.http___schema_org_eligibleQuantity, S1.http___schema_org_eligibleRegion, S1.http___schema_org_priceValidUntil
+      |FROM WPT S0
+      |JOIN WPT S1
+      |ON S1.s=S0.http___purl_org_goodrelations_offers
+      |AND S0.s='<http://db.uwaterloo.ca/~galuc/wsdbm/Retailer8535>'
+      |WHERE
+      |S1.http___purl_org_goodrelations_includes  is not null
+      |AND S1.http___purl_org_goodrelations_price is not null
+      |AND S1.http___purl_org_goodrelations_serialNumber is not null
+      |AND S1.http___purl_org_goodrelations_validFrom is not null
+      |AND S1.http___purl_org_goodrelations_validThrough is not null
+      |AND S1.http___schema_org_eligibleQuantity is not null
+      |AND S1.http___schema_org_eligibleRegion is not null
+      |AND S1.http___schema_org_priceValidUntil is not null
+      |""".stripMargin
+
+
 
 //100%
     val s2 =

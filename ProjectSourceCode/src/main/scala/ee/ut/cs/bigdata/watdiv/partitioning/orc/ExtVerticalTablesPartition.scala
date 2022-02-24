@@ -7,7 +7,7 @@ import org.apache.spark.{SparkConf, SparkContext}
 object ExtVerticalTablesPartition {
   def main(args: Array[String]): Unit = {
 
-    println("Start Watdiv ExtVP Partitioning ORC...")
+    println("Start WatDiv ExtVP Partitioning ORC!!")
 
     val conf = new SparkConf()
     Logger.getLogger("org").setLevel(Level.OFF)

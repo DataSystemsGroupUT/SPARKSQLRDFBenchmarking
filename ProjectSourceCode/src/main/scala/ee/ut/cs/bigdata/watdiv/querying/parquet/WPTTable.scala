@@ -1,6 +1,5 @@
 package ee.ut.cs.bigdata.watdiv.querying.parquet
 
-import java.io.{File, FileOutputStream}
 import ee.ut.cs.bigdata.watdiv.querying.queries.{WPTQueries}
 import org.apache.log4j.{Level, Logger}
 import org.apache.spark.sql.SparkSession
@@ -28,26 +27,23 @@ object WPTTables {
     val path = s"hdfs://172.17.77.48:9000/user/hadoop/RDFBench/WATDIV/$ds/WPT/VHDFS/Parquet"
 //    val path = s"hdfs://172.17.77.48:9000/user/hive/warehouse/watdiv.db"
 
-    println(s"$path")
-
-
     //read tables from HDFS
     val wptDF = spark.read.format("parquet").load(s"$path/WidePropertyTable.parquet").toDF()
 //    val wptDF = spark.read.format("parquet").load(s"/user/hive/warehouse/watdiv.db/wide_property_table").toDF()
 
     wptDF.createOrReplaceTempView("WPT")
 
-    wptDF.show(false)
+//    wptDF.show(false)
 
     //create file to write the query run time results
    // val fos = new FileOutputStream(new File(s"/home/hadoop/RDFBenchMarking/logs/$ds/parquet/ST/$ds$partitionType.txt"), true)
 
 
      val queries = List(
-      new WPTQueries().c3_wpt_prost,
+//      new WPTQueries c1,
 //      new WPTQueries c2,
 //      new WPTQueries c3,
-//      new WPTQueries f1,
+//      new WPTQueries f1_prost,
 //      new WPTQueries f2,
 //      new WPTQueries f3,
 //      new WPTQueries f4,
@@ -57,7 +53,7 @@ object WPTTables {
 //      new WPTQueries l3,
 //      new WPTQueries l4,
 //      new WPTQueries l5,
-//      new WPTQueries s1,
+      new WPTQueries s1_prost,
 //      new WPTQueries s2,
 //      new WPTQueries s3,
 //      new WPTQueries s4,

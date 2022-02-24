@@ -332,6 +332,7 @@ object ExtVPTables {
       new ExtVPQueries F1, new ExtVPQueries F2, new ExtVPQueries F3, new ExtVPQueries F4, new ExtVPQueries F5,
       new ExtVPQueries L1, new ExtVPQueries L2, new ExtVPQueries L3,new ExtVPQueries L4, new ExtVPQueries L5,
       new ExtVPQueries S1, new ExtVPQueries S2, new ExtVPQueries S3,new ExtVPQueries S4, new ExtVPQueries S5,new ExtVPQueries S6, new ExtVPQueries S7
+
     )
 
 
@@ -358,7 +359,7 @@ object ExtVPTables {
 
       count += 1
     }
-    println("All Queries are Done - ORC - VP!")
+    println("All Queries are Done - ORC - ExtVP!")
   }
 
 }
