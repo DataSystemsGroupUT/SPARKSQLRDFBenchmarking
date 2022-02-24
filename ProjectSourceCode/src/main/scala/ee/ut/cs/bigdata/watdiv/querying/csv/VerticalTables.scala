@@ -92,7 +92,7 @@ object VerticalTables {
     vpcontentRating.createOrReplaceTempView("contentRating")
     vphasReview.createOrReplaceTempView("hasReview")
     vpTitle.createOrReplaceTempView("title")
-    vpRevTitle.createOrReplaceTempView("revTitle")
+    vpRevTitle.createOrReplaceTempView("rev_Title")
     vpreviewer.createOrReplaceTempView("reviewer")
     vpActor.createOrReplaceTempView("actor")
     vpLanguage.createOrReplaceTempView("language")
