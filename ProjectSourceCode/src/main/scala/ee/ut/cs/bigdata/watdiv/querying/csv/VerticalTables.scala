@@ -34,7 +34,7 @@ object VerticalTables {
     val vpParentCount = spark.read.option("header", true).csv(path + "CSV/" + "parentCountry.csv")
     val vpNationality = spark.read.option("header", true).csv(path + "CSV/" + "nationality.csv")
     val vpjobTitle = spark.read.option("header", true).csv(path + "CSV/" + "jobTitle.csv")
-    val vpText = spark.read.option("header", true).csv(path + "CSV/" + "text.csv")
+    val vpText = spark.read.option("header", true).csv(path + "CSV/" + "sorg_text.csv")
     val vpcontentRating = spark.read.option("header", true).csv(path + "CSV/" + "contentRating.csv")
     val vpcontentSize = spark.read.option("header", true).csv(path + "CSV/" + "contentSize.csv")
     val vphasReview = spark.read.option("header", true).csv(path + "CSV/" + "hasReview.csv")

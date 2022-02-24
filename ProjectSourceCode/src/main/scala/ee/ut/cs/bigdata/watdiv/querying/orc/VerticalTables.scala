@@ -34,7 +34,7 @@ object VerticalTables {
     val vpParentCount = spark.read.format("orc").load(path+ "ORC/" + "parentCountry.orc")
     val vpNationality = spark.read.format("orc").load(path+ "ORC/" + "nationality.orc")
     val vpjobTitle = spark.read.format("orc").load(path+ "ORC/" + "jobTitle.orc")
-    val vpText = spark.read.format("orc").load(path+ "ORC/" + "text.orc")
+    val vpText = spark.read.format("orc").load(path+ "ORC/" + "sorg_text.orc")
     val vpcontentRating = spark.read.format("orc").load(path+ "ORC/" + "contentRating.orc")
     val vpcontentSize = spark.read.format("orc").load(path+ "ORC/" + "contentSize.orc")
     val vphasReview = spark.read.format("orc").load(path+ "ORC/" + "hasReview.orc")
