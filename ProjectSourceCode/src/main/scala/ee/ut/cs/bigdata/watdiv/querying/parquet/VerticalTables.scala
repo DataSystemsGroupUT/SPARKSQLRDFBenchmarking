@@ -62,7 +62,7 @@ object VerticalTables {
     val vptrailer = spark.read.format("parquet").load(path+ "Parquet/" + "trailer.parquet")
     val vpkeywords = spark.read.format("parquet").load(path+ "Parquet/" + "keywords.parquet")
     val vphasGenre = spark.read.format("parquet").load(path+ "Parquet/" + "hasGenre.parquet")
-    val vpdescription = spark.read.format("parquet").load(path+ "Parquet/" + "description.parquet")
+    val vpdescription = spark.read.format("parquet").load(path+ "Parquet/" + "sorg_description.parquet")
     val vpurl = spark.read.format("parquet").load(path+ "Parquet/" + "url.parquet")
     val vphits = spark.read.format("parquet").load(path+ "Parquet/" + "hits.parquet")
     val vpprice = spark.read.format("parquet").load(path+ "Parquet/" + "price.parquet")

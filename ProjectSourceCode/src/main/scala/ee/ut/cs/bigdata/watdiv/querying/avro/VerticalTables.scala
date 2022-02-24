@@ -62,7 +62,7 @@ object VerticalTables {
     val vptrailer = spark.read.format("avro").load(path+ "Avro/" + "trailer.avro")
     val vpkeywords = spark.read.format("avro").load(path+ "Avro/" + "keywords.avro")
     val vphasGenre = spark.read.format("avro").load(path+ "Avro/" + "hasGenre.avro")
-    val vpdescription = spark.read.format("avro").load(path+ "Avro/" + "description.avro")
+    val vpdescription = spark.read.format("avro").load(path+ "Avro/" + "sorg_description.avro")
     val vpurl = spark.read.format("avro").load(path+ "Avro/" + "url.avro")
     val vphits = spark.read.format("avro").load(path+ "Avro/" + "hits.avro")
     val vpprice = spark.read.format("avro").load(path+ "Avro/" + "price.avro")

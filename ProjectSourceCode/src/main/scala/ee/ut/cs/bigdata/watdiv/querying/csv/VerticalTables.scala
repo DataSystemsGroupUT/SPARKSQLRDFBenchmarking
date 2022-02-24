@@ -62,7 +62,7 @@ object VerticalTables {
     val vptrailer = spark.read.option("header", true).csv(path + "CSV/" + "trailer.csv")
     val vpkeywords = spark.read.option("header", true).csv(path + "CSV/" + "keywords.csv")
     val vphasGenre = spark.read.option("header", true).csv(path + "CSV/" + "hasGenre.csv")
-    val vpdescription = spark.read.option("header", true).csv(path + "CSV/" + "description.csv")
+    val vpdescription = spark.read.option("header", true).csv(path + "CSV/" + "sorg_description.csv")
     val vpurl = spark.read.option("header", true).csv(path + "CSV/" + "url.csv")
     val vphits = spark.read.option("header", true).csv(path + "CSV/" + "hits.csv")
     val vpprice = spark.read.option("header", true).csv(path + "CSV/" + "price.csv")
