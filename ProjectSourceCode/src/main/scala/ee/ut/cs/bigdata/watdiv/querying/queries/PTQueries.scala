@@ -1,6 +1,7 @@
 package ee.ut.cs.bigdata.watdiv.querying.queries
 
 class PTQueries {
+
   //Complex
 
   val c1 =

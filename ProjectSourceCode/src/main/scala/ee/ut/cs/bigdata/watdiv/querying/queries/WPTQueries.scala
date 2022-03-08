@@ -1,6 +1,606 @@
 package ee.ut.cs.bigdata.watdiv.querying.queries
 
 class WPTQueries {
+
+///*********** COMPLEX ************////
+
+val c1_prost =
+    """
+    |SELECT DISTINCT V0.s, hasReview, V4.http___purl_org_stuff_rev_reviewer, language
+    |FROM WPT10MParquet V0
+    |JOIN WPT10MParquet V4
+    |ON array_contains (V0.http___purl_org_stuff_rev_hasReview,V4.s)
+    |JOIN WPT10MParquet V6
+    |ON V4.http___purl_org_stuff_rev_reviewer=V6.s
+    |JOIN WPT10MParquet V7
+    |ON  array_contains(V7.http___schema_org_actor, V6.s)
+    |lateral view explode (V0.http___purl_org_stuff_rev_hasReview) V0HasReview as hasReview
+    |lateral view explode (V7.http___schema_org_language) V7Langauage as language
+    |WHERE  V0.http___schema_org_caption is not null
+    |AND V0.http___schema_org_text is not null
+    |AND V0.http___schema_org_contentRating is not null
+    |AND V4.http___purl_org_stuff_rev_title is not null
+    |AND V7.http___schema_org_language is not null
+  """.stripMargin
+
+
+
+val c1_prost_csv =
+    """
+    |SELECT DISTINCT V0.s, hasReview, V4.http___purl_org_stuff_rev_reviewer, V7.s
+    |FROM WPT10MParquet V0
+    |JOIN WPT10MParquet V4
+    |ON array_contains (V0.http___purl_org_stuff_rev_hasReview,V4.s)
+    |JOIN WPT10MParquet V6
+    |ON V4.http___purl_org_stuff_rev_reviewer=V6.s
+    |JOIN WPT10MParquet V7
+    |ON  array_contains(V7.http___schema_org_actor, V6.s)
+    |lateral view explode (V0.http___purl_org_stuff_rev_hasReview) V0HasReview as hasReview
+    |WHERE  V0.http___schema_org_caption is not null
+    |AND V0.http___schema_org_text is not null
+    |AND V0.http___schema_org_contentRating is not null
+    |AND V4.http___purl_org_stuff_rev_title is not null
+    |AND V7.http___schema_org_language is not null
+  """.stripMargin
+
+
+
+
+  val c2_prost =
+    """
+      |SELECT DISTINCT V0.s, V3.s, V4.s, V8.s
+      |FROM WPT10MParquet V0
+      |JOIN WPT10MParquet V2
+      |ON  array_contains(V0.http___purl_org_goodrelations_offers,V2.s)
+      |AND array_contains(V2.http___schema_org_eligibleRegion,"<http://db.uwaterloo.ca/~galuc/wsdbm/Country3>")
+      |JOIN WPT10MParquet V3 ON V2.http___purl_org_goodrelations_includes=V3.s
+      |JOIN WPT10MParquet V7 ON V7.http___db_uwaterloo_ca__galuc_wsdbm_purchaseFor=V3.s
+      |JOIN WPT10MParquet V4 ON array_contains (V4.http___db_uwaterloo_ca__galuc_wsdbm_makesPurchase,V7.s)
+      |JOIN WPT10MParquet V8 ON array_contains(V3.http___purl_org_stuff_rev_hasReview,V8.s)
+      |WHERE V4.http___schema_org_jobTitle is not null
+      |AND V0.http___schema_org_legalName is not null
+      |AND V4.http___xmlns_com_foaf_homepage is not null
+      |AND V8.http___purl_org_stuff_rev_totalVotes is not null
+      |""".stripMargin
+
+
+//Fails because of driver-memeory
+
+  val c2_prost_csv =
+    """
+      |SELECT DISTINCT V0.s, V3.s, V4.s, V8.s
+      |FROM WPT10MCSV V0
+      |JOIN WPT10MCSV V2
+      |ON  array_contains(split(rtrim(']', ltrim('[',V0.http___purl_org_goodrelations_offers)),','),V2.s)
+      |AND array_contains(split(rtrim(']', ltrim('[',V2.http___schema_org_eligibleRegion)),',') ,"<http://db.uwaterloo.ca/~galuc/wsdbm/Country3>")
+      |JOIN WPT10MCSV V3 ON V2.http___purl_org_goodrelations_includes=V3.s
+      |JOIN WPT10MCSV V7 ON V7.http___db_uwaterloo_ca__galuc_wsdbm_purchaseFor=V3.s
+      |JOIN WPT10MCSV V4 ON array_contains (split(rtrim(']', ltrim('[',V4.http___db_uwaterloo_ca__galuc_wsdbm_makesPurchase)),','),V7.s)
+      |JOIN WPT10MCSV V8 ON array_contains( split(rtrim(']', ltrim('[',V3.http___purl_org_stuff_rev_hasReview)),','),V8.s)
+      |WHERE V4.http___schema_org_jobTitle is not null
+      |AND V0.http___schema_org_legalName is not null
+      |AND V4.http___xmlns_com_foaf_homepage is not null
+      |AND V8.http___purl_org_stuff_rev_totalVotes is not null
+      |""".stripMargin
+
+
+val c3_prost =
+    """
+      |SELECT  T0.s
+      |FROM  WPT10MParquet T0
+      |
+      |WHERE T0.http___db_uwaterloo_ca__galuc_wsdbm_likes  is not null
+      |AND   T0.http___db_uwaterloo_ca__galuc_wsdbm_friendOf  is not null
+      |AND   T0.http___purl_org_dc_terms_Location  is not null
+      |AND   T0.http___xmlns_com_foaf_age       is not null
+      |AND   T0.http___db_uwaterloo_ca__galuc_wsdbm_gender    is not null
+      |AND   T0.http___xmlns_com_foaf_givenName is not null
+      |""".stripMargin
+
+
+// C3 with the CSV is the same
+
+
+val c3_prost_csv =
+    """
+      |SELECT  T0.s
+      |FROM  WPT10MCSV T0
+      |
+      |WHERE T0.http___db_uwaterloo_ca__galuc_wsdbm_likes  is not null
+      |AND   T0.http___db_uwaterloo_ca__galuc_wsdbm_friendOf  is not null
+      |AND   T0.http___purl_org_dc_terms_Location  is not null
+      |AND   T0.http___xmlns_com_foaf_age       is not null
+      |AND   T0.http___db_uwaterloo_ca__galuc_wsdbm_gender    is not null
+      |AND   T0.http___xmlns_com_foaf_givenName is not null
+      |""".stripMargin
+
+
+  ///*********** SNOWFLAKES ************////
+
+
+val f1_prost =
+    """
+      |SELECT DISTINCT V0.s, V0.http___www_w3_org_1999_02_22_rdf_syntax_ns_type, V3.s, trailer, V3.http___schema_org_keywords
+      |FROM WPT10MParquet V0
+      |JOIn WPT10MParquet V3
+      |ON   array_contains   (V3.http___db_uwaterloo_ca__galuc_wsdbm_hasGenre,V0.s)
+      |AND  array_contains  (V0.http___ogp_me_ns_tag, "<http://db.uwaterloo.ca/~galuc/wsdbm/Topic8>")
+      |lateral view explode (V3.http___schema_org_trailer) V3Trailer as trailer
+      |WHERE array_contains(V3.http___www_w3_org_1999_02_22_rdf_syntax_ns_type, "<http://db.uwaterloo.ca/~galuc/wsdbm/ProductCategory2>")
+      |AND V3.http___schema_org_keywords is not null
+      |AND V3.http___schema_org_trailer is not null
+      |""".stripMargin
+
+
+val f1_prost_csv =
+    """
+      |SELECT DISTINCT V0.s, V0.http___www_w3_org_1999_02_22_rdf_syntax_ns_type, V3.s, trailer, V3.http___schema_org_keywords
+      |FROM WPT10MCSV V0
+      |JOIn WPT10MCSV V3
+      |ON   array_contains   (split(rtrim(']', ltrim('[',V3.http___db_uwaterloo_ca__galuc_wsdbm_hasGenre)),',') ,V0.s)
+      |AND  array_contains   (split(rtrim(']', ltrim('[',V0.http___ogp_me_ns_tag)),',') , "<http://db.uwaterloo.ca/~galuc/wsdbm/Topic8>")
+      |lateral view explode (split(rtrim(']', ltrim('[',V3.http___schema_org_trailer)),',') ) V3Trailer as trailer
+      |WHERE array_contains(split(rtrim(']', ltrim('[',V3.http___www_w3_org_1999_02_22_rdf_syntax_ns_type)),',')   , "<http://db.uwaterloo.ca/~galuc/wsdbm/ProductCategory2>")
+      |AND V3.http___schema_org_keywords is not null
+      |AND V3.http___schema_org_trailer is not null
+      |""".stripMargin
+
+
+  val f2_prost =
+    """
+      |SELECT DISTINCT V0.s, V0.http___xmlns_com_foaf_homepage, V0.http___ogp_me_ns_title, V0.http___schema_org_caption, V0.http___schema_org_description, V1.http___schema_org_url, V1.http___db_uwaterloo_ca__galuc_wsdbm_hits
+      |FROM WPT10MParquet V0
+      |JOIN WPT10MParquet V1
+      |ON V0.http___xmlns_com_foaf_homepage =V1.s
+      |WHERE array_contains (V0.http___db_uwaterloo_ca__galuc_wsdbm_hasGenre,"<http://db.uwaterloo.ca/~galuc/wsdbm/SubGenre117>")
+      |AND V0.http___ogp_me_ns_title is not null
+      |AND V0.http___schema_org_caption is not null
+      |AND V0.http___schema_org_description is not null
+      |AND V1.http___schema_org_url is not null
+      |AND V1.http___db_uwaterloo_ca__galuc_wsdbm_hits is not null
+      |""".stripMargin
+
+
+
+  val f2_prost_csv =
+    """
+      |SELECT DISTINCT V0.s, V0.http___xmlns_com_foaf_homepage, V0.http___ogp_me_ns_title, V0.http___schema_org_caption, V0.http___schema_org_description, V1.http___schema_org_url, V1.http___db_uwaterloo_ca__galuc_wsdbm_hits
+      |FROM WPT10MCSV V0
+      |JOIN WPT10MCSV V1
+      |ON V0.http___xmlns_com_foaf_homepage =V1.s
+      |WHERE array_contains (split(rtrim(']', ltrim('[',V0.http___db_uwaterloo_ca__galuc_wsdbm_hasGenre)),',') ,"<http://db.uwaterloo.ca/~galuc/wsdbm/SubGenre117>")
+      |AND V0.http___ogp_me_ns_title is not null
+      |AND V0.http___schema_org_caption is not null
+      |AND V0.http___schema_org_description is not null
+      |AND V1.http___schema_org_url is not null
+      |AND V1.http___db_uwaterloo_ca__galuc_wsdbm_hits is not null
+      |""".stripMargin
+
+
+val f3_prost =
+
+    """
+      |SELECT DISTINCT V0.s, V0.http___schema_org_contentRating, V0.http___schema_org_contentSize, V4.s, V5.s, V5.http___db_uwaterloo_ca__galuc_wsdbm_purchaseDate
+      |FROM WPT10MParquet V0
+      |JOIN WPT10MParquet V5
+      |ON V0.s=V5.http___db_uwaterloo_ca__galuc_wsdbm_purchaseFor
+      |AND array_contains (V0.http___db_uwaterloo_ca__galuc_wsdbm_hasGenre,"<http://db.uwaterloo.ca/~galuc/wsdbm/SubGenre111>")
+      |JOIN WPT10MParquet V4
+      |ON  array_contains (V4.http___db_uwaterloo_ca__galuc_wsdbm_makesPurchase,V5.s)
+      |WHERE V0.http___schema_org_contentRating is not null
+      |AND V0.http___schema_org_contentSize is not null
+      |AND V5.http___db_uwaterloo_ca__galuc_wsdbm_purchaseDate is not null
+      |""".stripMargin
+
+
+
+val f3_prost_csv =
+
+    """
+      |SELECT DISTINCT V0.s, V0.http___schema_org_contentRating, V0.http___schema_org_contentSize, V4.s, V5.s, V5.http___db_uwaterloo_ca__galuc_wsdbm_purchaseDate
+      |FROM WPT10MCSV V0
+      |JOIN WPT10MCSV V5
+      |ON V0.s=V5.http___db_uwaterloo_ca__galuc_wsdbm_purchaseFor
+      |AND array_contains (split(rtrim(']', ltrim('[',V0.http___db_uwaterloo_ca__galuc_wsdbm_hasGenre)),','),"<http://db.uwaterloo.ca/~galuc/wsdbm/SubGenre111>")
+      |JOIN WPT10MCSV V4
+      |ON  array_contains ( split(rtrim(']', ltrim('[',V4.http___db_uwaterloo_ca__galuc_wsdbm_makesPurchase)),',')  ,V5.s)
+      |WHERE V0.http___schema_org_contentRating is not null
+      |AND V0.http___schema_org_contentSize is not null
+      |AND V5.http___db_uwaterloo_ca__galuc_wsdbm_purchaseDate is not null
+      |""".stripMargin
+
+
+
+  val f4_prost =
+
+    """
+      |SELECT DISTINCT V0.s, V1.s, V2.s, V0.http___schema_org_description, V0.http___schema_org_contentSize, V1.http___schema_org_url, V1.http___db_uwaterloo_ca__galuc_wsdbm_hits, V7.s
+      |FROM WPT10MParquet V0
+      |JOIN WPT10MParquet V1
+      |ON V0.http___xmlns_com_foaf_homepage=V1.s
+      |AND   array_contains (V1.http___schema_org_language,"<http://db.uwaterloo.ca/~galuc/wsdbm/Language0>")
+      |JOIN WPT10MParquet V2
+      |ON V0.s=V2.http___purl_org_goodrelations_includes
+      |JOIN WPT10MParquet V7
+      |ON   array_contains (V7.http___db_uwaterloo_ca__galuc_wsdbm_likes,V0.s)
+      |WHERE array_contains (V0.http___ogp_me_ns_tag,"<http://db.uwaterloo.ca/~galuc/wsdbm/Topic122>")
+      |AND V0.http___schema_org_description is not null
+      |AND V0.http___schema_org_contentSize is not null
+      |AND V1.http___schema_org_url is not null
+      |AND V1.http___db_uwaterloo_ca__galuc_wsdbm_hits is not null
+      |""".stripMargin
+
+
+  val f4_prost_csv =
+
+    """
+      |SELECT DISTINCT V0.s, V1.s, V2.s, V0.http___schema_org_description, V0.http___schema_org_contentSize, V1.http___schema_org_url, V1.http___db_uwaterloo_ca__galuc_wsdbm_hits, V7.s
+      |FROM WPT10MCSV V0
+      |JOIN WPT10MCSV V1
+      |ON V0.http___xmlns_com_foaf_homepage=V1.s
+      |AND   array_contains (split(rtrim(']', ltrim('[',V1.http___schema_org_language)),','),"<http://db.uwaterloo.ca/~galuc/wsdbm/Language0>")
+      |JOIN WPT10MCSV V2
+      |ON V0.s=V2.http___purl_org_goodrelations_includes
+      |JOIN WPT10MCSV V7
+      |ON   array_contains (split(rtrim(']', ltrim('[',V7.http___db_uwaterloo_ca__galuc_wsdbm_likes)),',') ,V0.s)
+      |WHERE array_contains (split(rtrim(']', ltrim('[',V0.http___ogp_me_ns_tag)),',') ,"<http://db.uwaterloo.ca/~galuc/wsdbm/Topic122>")
+      |AND V0.http___schema_org_description is not null
+      |AND V0.http___schema_org_contentSize is not null
+      |AND V1.http___schema_org_url is not null
+      |AND V1.http___db_uwaterloo_ca__galuc_wsdbm_hits is not null
+      |""".stripMargin
+
+
+  val f5_prost =
+    """
+      |SELECT DISTINCT V0.s, V1.s, V0.http___purl_org_goodrelations_price, V0.http___purl_org_goodrelations_validThrough, V1.http___ogp_me_ns_title, type
+      |FROM WPT10MParquet V0
+      |JOIN WPT10MParquet V1
+      |ON V0.http___purl_org_goodrelations_includes=V1.s
+      |JOIN WPT10MParquet V2
+      |ON  array_contains(V2.http___purl_org_goodrelations_offers,V0.s)
+      |AND V2.s="<http://db.uwaterloo.ca/~galuc/wsdbm/Retailer9885>"
+      |lateral view explode (V1.http___www_w3_org_1999_02_22_rdf_syntax_ns_type) V1Type as type
+      |WHERE V0.http___purl_org_goodrelations_price is not null
+      |AND V0.http___purl_org_goodrelations_validThrough is not null
+      |AND V1.http___ogp_me_ns_title is not null
+      |AND V1.http___www_w3_org_1999_02_22_rdf_syntax_ns_type is not null
+      |""".stripMargin
+
+
+  val f5_prost_csv =
+    """
+      |SELECT DISTINCT V0.s, V1.s, V0.http___purl_org_goodrelations_price,
+      |V0.http___purl_org_goodrelations_validThrough, V1.http___ogp_me_ns_title, type
+      |FROM WPT10MCSV V0
+      |JOIN WPT10MCSV V1
+      |ON V0.http___purl_org_goodrelations_includes=V1.s
+      |JOIN WPT10MCSV V2
+      |ON  array_contains(split(rtrim(']', ltrim('[',V2.http___purl_org_goodrelations_offers)),',') ,V0.s)
+      |AND V2.s="<http://db.uwaterloo.ca/~galuc/wsdbm/Retailer9885>"
+      |lateral view explode (split(rtrim(']', ltrim('[',V1.http___www_w3_org_1999_02_22_rdf_syntax_ns_type)),',') ) V1Type as type
+      |WHERE V0.http___purl_org_goodrelations_price is not null
+      |AND V0.http___purl_org_goodrelations_validThrough is not null
+      |AND V1.http___ogp_me_ns_title is not null
+      |AND V1.http___www_w3_org_1999_02_22_rdf_syntax_ns_type is not null
+      |""".stripMargin
+
+
+
+
+///*********** LINEARS ************////
+
+  val l1_prost =
+    """
+      |SELECT DISTINCT T0.s, T1.s, T1.http___schema_org_caption
+      |FROM WPT10MParquet T0
+      |JOIN WPT10MParquet T1
+      |ON array_contains (T0.http___db_uwaterloo_ca__galuc_wsdbm_likes,T1.s)
+      |WHERE  array_contains ( T0.http___db_uwaterloo_ca__galuc_wsdbm_subscribes ,"<http://db.uwaterloo.ca/~galuc/wsdbm/Website7355>")
+      |AND T1.http___schema_org_caption  is not null
+      |""".stripMargin
+
+
+  val l1_prost_csv =
+    """
+      |SELECT DISTINCT T0.s, T1.s, T1.http___schema_org_caption
+      |FROM WPT10MCSV T0
+      |JOIN WPT10MCSV T1
+      |ON array_contains (split(rtrim(']', ltrim('[',T0.http___db_uwaterloo_ca__galuc_wsdbm_likes)),',') ,T1.s)
+      |WHERE  array_contains (split(rtrim(']', ltrim('[',T0.http___db_uwaterloo_ca__galuc_wsdbm_subscribes)),','),"<http://db.uwaterloo.ca/~galuc/wsdbm/Website7355>")
+      |AND T1.http___schema_org_caption  is not null
+      |""".stripMargin
+
+
+  val l2_prost =
+       """
+      |SELECT DISTINCT T_User.s, TT.http___www_geonames_org_ontology_parentCountry
+      |FROM WPT10MParquet T_User
+      |JOIN (
+      |SELECT T_City.http___www_geonames_org_ontology_parentCountry
+      |FROM WPT10MParquet T_City
+      |WHERE T_City.s="<http://db.uwaterloo.ca/~galuc/wsdbm/City70>") TT
+      |ON TT.http___www_geonames_org_ontology_parentCountry=T_User.http___schema_org_nationality
+      |WHERE array_contains(T_User.http___db_uwaterloo_ca__galuc_wsdbm_likes,"<http://db.uwaterloo.ca/~galuc/wsdbm/Product0>")
+      |""".stripMargin
+
+
+
+  val l2_prost_csv =
+       """
+      |SELECT DISTINCT T_User.s, TT.http___www_geonames_org_ontology_parentCountry
+      |FROM WPT10MCSV T_User
+      |JOIN (
+      |SELECT T_City.http___www_geonames_org_ontology_parentCountry
+      |FROM WPT10MCSV T_City
+      |WHERE T_City.s="<http://db.uwaterloo.ca/~galuc/wsdbm/City70>") TT
+      |ON TT.http___www_geonames_org_ontology_parentCountry=T_User.http___schema_org_nationality
+      |WHERE array_contains(split(rtrim(']', ltrim('[',T_User.http___db_uwaterloo_ca__galuc_wsdbm_likes)),',')   ,"<http://db.uwaterloo.ca/~galuc/wsdbm/Product0>")
+      |""".stripMargin
+
+
+  val l3_prost =
+    """
+      |SELECT DISTINCT T0.s, likes
+      |FROM WPT10MParquet T0
+      |lateral view explode (T0.http___db_uwaterloo_ca__galuc_wsdbm_likes) T0Likes as likes
+      |WHERE array_contains (T0.http___db_uwaterloo_ca__galuc_wsdbm_subscribes ,"<http://db.uwaterloo.ca/~galuc/wsdbm/Website43164>")
+      |AND T0.http___db_uwaterloo_ca__galuc_wsdbm_likes is not null
+      |""".stripMargin
+
+  val l3_prost_csv =
+    """
+      |SELECT DISTINCT T0.s, likes
+      |FROM WPT10MCSV T0
+      |lateral view explode (split(rtrim(']', ltrim('[',T0.http___db_uwaterloo_ca__galuc_wsdbm_likes)),',')) T0Likes as likes
+      |WHERE array_contains (split(rtrim(']', ltrim('[',T0.http___db_uwaterloo_ca__galuc_wsdbm_subscribes)),',')  ,"<http://db.uwaterloo.ca/~galuc/wsdbm/Website43164>")
+      |AND T0.http___db_uwaterloo_ca__galuc_wsdbm_likes is not null
+      |""".stripMargin
+
+  val l4_prost =
+    """
+      |SELECT  DISTINCT T0.s, T0.http___schema_org_caption
+      |FROM WPT10MParquet T0
+      |WHERE array_contains (T0.http___ogp_me_ns_tag, "<http://db.uwaterloo.ca/~galuc/wsdbm/Topic142>")
+      |AND T0.http___schema_org_caption is not null
+      |""".stripMargin
+
+  val l4_prost_csv =
+    """
+      |SELECT  DISTINCT T0.s, T0.http___schema_org_caption
+      |FROM WPT10MCSV T0
+      |WHERE array_contains (split(rtrim(']', ltrim('[',T0.http___ogp_me_ns_tag)),','), "<http://db.uwaterloo.ca/~galuc/wsdbm/Topic142>")
+      |AND T0.http___schema_org_caption is not null
+      |""".stripMargin
+
+
+    val l5_prost =
+       """
+      |SELECT DISTINCT T_User.s, T_User.http___schema_org_jobTitle, TT.http___www_geonames_org_ontology_parentCountry
+      |FROM WPT10MParquet T_User
+      |JOIN (
+      |SELECT T_City.http___www_geonames_org_ontology_parentCountry
+      |FROM WPT10MParquet T_City
+      |WHERE T_City.s="<http://db.uwaterloo.ca/~galuc/wsdbm/City40>") TT
+      |ON TT.http___www_geonames_org_ontology_parentCountry=T_User.http___schema_org_nationality
+      |WHERE T_User.http___schema_org_jobTitle is not null
+      |""".stripMargin
+
+
+  //The same query no difference
+    val l5_prost_csv =
+       """
+      |SELECT DISTINCT T_User.s, T_User.http___schema_org_jobTitle, TT.http___www_geonames_org_ontology_parentCountry
+      |FROM WPT10MCSV T_User
+      |JOIN (
+      |SELECT T_City.http___www_geonames_org_ontology_parentCountry
+      |FROM WPT10MCSV T_City
+      |WHERE T_City.s="<http://db.uwaterloo.ca/~galuc/wsdbm/City40>") TT
+      |ON TT.http___www_geonames_org_ontology_parentCountry=T_User.http___schema_org_nationality
+      |WHERE T_User.http___schema_org_jobTitle is not null
+      |""".stripMargin
+
+
+///*********** STARS ************////
+
+
+val s1_prost =
+"""
+  |SELECT S1.s, S1.http___purl_org_goodrelations_includes, S1.http___purl_org_goodrelations_price,
+  |S1.http___purl_org_goodrelations_serialNumber, S1.http___purl_org_goodrelations_validFrom, S1.http___purl_org_goodrelations_validThrough,
+  |eligbileRegion, S1.http___schema_org_eligibleQuantity, S1.http___schema_org_priceValidUntil
+  |FROM WPT10MParquet S0
+  |JOIN WPT10MParquet S1
+  |ON  array_contains(S0.http___purl_org_goodrelations_offers,S1.s)
+  |AND S0.s='<http://db.uwaterloo.ca/~galuc/wsdbm/Retailer8535>'
+  |lateral view explode (S1.http___schema_org_eligibleRegion) S1Eligible as eligbileRegion
+  |WHERE
+  |S1.http___purl_org_goodrelations_includes  is not null
+  |AND S1.http___purl_org_goodrelations_price is not null
+  |AND S1.http___purl_org_goodrelations_serialNumber is not null
+  |AND S1.http___purl_org_goodrelations_validFrom is not null
+  |AND S1.http___purl_org_goodrelations_validThrough is not null
+  |AND S1.http___schema_org_eligibleQuantity is not null
+  |AND S1.http___schema_org_eligibleRegion is not null
+  |AND S1.http___schema_org_priceValidUntil is not null
+  |""".stripMargin
+
+
+val s1_prost_csv =
+"""
+  |SELECT S1.s, S1.http___purl_org_goodrelations_includes, S1.http___purl_org_goodrelations_price,
+  |S1.http___purl_org_goodrelations_serialNumber, S1.http___purl_org_goodrelations_validFrom, S1.http___purl_org_goodrelations_validThrough,
+  |eligbileRegion, S1.http___schema_org_eligibleQuantity, S1.http___schema_org_priceValidUntil
+  |FROM WPT10MCSV S0
+  |JOIN WPT10MCSV S1
+  |ON  array_contains(split(rtrim(']', ltrim('[',S0.http___purl_org_goodrelations_offers)),','), S1.s)
+  |AND S0.s='<http://db.uwaterloo.ca/~galuc/wsdbm/Retailer8535>'
+  |lateral view explode (split(rtrim(']', ltrim('[',S1.http___schema_org_eligibleRegion)),',')) S1Eligible as eligbileRegion
+  |WHERE
+  |S1.http___purl_org_goodrelations_includes  is not null
+  |AND S1.http___purl_org_goodrelations_price is not null
+  |AND S1.http___purl_org_goodrelations_serialNumber is not null
+  |AND S1.http___purl_org_goodrelations_validFrom is not null
+  |AND S1.http___purl_org_goodrelations_validThrough is not null
+  |AND S1.http___schema_org_eligibleQuantity is not null
+  |AND S1.http___schema_org_eligibleRegion is not null
+  |AND S1.http___schema_org_priceValidUntil is not null
+  |""".stripMargin
+
+
+
+val s2_prost =
+"""
+|SELECT  DISTINCT S0.s, S0.http___purl_org_dc_terms_Location, S0.http___db_uwaterloo_ca__galuc_wsdbm_gender
+|FROM WPT10MParquet as S0
+|WHERE S0.http___schema_org_nationality="<http://db.uwaterloo.ca/~galuc/wsdbm/Country4>"
+|AND  array_contains(S0.http___www_w3_org_1999_02_22_rdf_syntax_ns_type,"<http://db.uwaterloo.ca/~galuc/wsdbm/Role2>")
+|AND S0.http___purl_org_dc_terms_Location is not null
+|AND S0.http___db_uwaterloo_ca__galuc_wsdbm_gender is not null
+|""".stripMargin
+
+
+
+val s2_prost_csv =
+"""
+|SELECT  DISTINCT S0.s, S0.http___purl_org_dc_terms_Location, S0.http___db_uwaterloo_ca__galuc_wsdbm_gender
+|FROM WPT10MCSV as S0
+|WHERE S0.http___schema_org_nationality="<http://db.uwaterloo.ca/~galuc/wsdbm/Country4>"
+|AND  array_contains(split(rtrim(']', ltrim('[',S0.http___www_w3_org_1999_02_22_rdf_syntax_ns_type)),',')    ,"<http://db.uwaterloo.ca/~galuc/wsdbm/Role2>")
+|AND S0.http___purl_org_dc_terms_Location is not null
+|AND S0.http___db_uwaterloo_ca__galuc_wsdbm_gender is not null
+|""".stripMargin
+
+
+val s3_prost =
+  """
+    | SELECT DISTINCT S0.s, S0.http___schema_org_caption, hasGenre, S0.http___schema_org_publisher
+    | FROM WPT10MParquet S0
+    |lateral view explode (S0.http___db_uwaterloo_ca__galuc_wsdbm_hasGenre) S0HasGenre as hasGenre
+    | WHERE array_contains (S0.http___www_w3_org_1999_02_22_rdf_syntax_ns_type, "<http://db.uwaterloo.ca/~galuc/wsdbm/ProductCategory4>")
+    | AND S0.http___schema_org_caption is not null
+    | AND S0.http___db_uwaterloo_ca__galuc_wsdbm_hasGenre is not null
+    | AND S0.http___schema_org_publisher is not null
+    |""".stripMargin
+
+
+
+val s3_prost_csv =
+  """
+    | SELECT DISTINCT S0.s, S0.http___schema_org_caption, hasGenre, S0.http___schema_org_publisher
+    | FROM WPT10MCSV S0
+    |lateral view explode (split(rtrim(']', ltrim('[',S0.http___db_uwaterloo_ca__galuc_wsdbm_hasGenre)),',')) S0HasGenre as hasGenre
+    | WHERE array_contains (split(rtrim(']', ltrim('[',S0.http___www_w3_org_1999_02_22_rdf_syntax_ns_type)),',') , "<http://db.uwaterloo.ca/~galuc/wsdbm/ProductCategory4>")
+    | AND S0.http___schema_org_caption is not null
+    | AND S0.http___db_uwaterloo_ca__galuc_wsdbm_hasGenre is not null
+    | AND S0.http___schema_org_publisher is not null
+    |""".stripMargin
+
+
+val s4_prost =
+    """
+       | SELECT DISTINCT S0.s, S0.http___xmlns_com_foaf_familyName, S3.http___purl_org_ontology_mo_artist
+       | FROM WPT10MParquet S0
+       | JOIN WPT10MParquet S3 ON S3.http___purl_org_ontology_mo_artist=S0.s
+       | WHERE S0.http___xmlns_com_foaf_age="<http://db.uwaterloo.ca/~galuc/wsdbm/AgeGroup5>"
+       | AND S0.http___xmlns_com_foaf_familyName IS NOT NULL
+       | AND S0.http___schema_org_nationality="<http://db.uwaterloo.ca/~galuc/wsdbm/Country1>"
+       | """.stripMargin
+
+//The same will be from CSV
+val s4_prost_csv =
+    """
+       | SELECT DISTINCT S0.s, S0.http___xmlns_com_foaf_familyName, S3.http___purl_org_ontology_mo_artist
+       | FROM WPT10MCSV S0
+       | JOIN WPT10MCSV S3 ON S3.http___purl_org_ontology_mo_artist=S0.s
+       | WHERE S0.http___xmlns_com_foaf_age="<http://db.uwaterloo.ca/~galuc/wsdbm/AgeGroup5>"
+       | AND S0.http___xmlns_com_foaf_familyName IS NOT NULL
+       | AND S0.http___schema_org_nationality="<http://db.uwaterloo.ca/~galuc/wsdbm/Country1>"
+       | """.stripMargin
+
+
+val s5_prost =
+  """
+    |SELECT DISTINCT S0.s, S0.http___schema_org_description, S0.http___schema_org_keywords
+    |FROM WPT10MParquet S0
+    |WHERE array_contains (S0.http___www_w3_org_1999_02_22_rdf_syntax_ns_type, "<http://db.uwaterloo.ca/~galuc/wsdbm/ProductCategory3>")
+    |AND    array_contains (S0.http___schema_org_language,"<http://db.uwaterloo.ca/~galuc/wsdbm/Language0>")
+    |AND S0.http___schema_org_description IS NOT NULL
+    |AND S0.http___schema_org_keywords IS NOT NULL
+""".stripMargin
+
+
+
+val s5_prost_csv =
+  """
+    |SELECT DISTINCT S0.s, S0.http___schema_org_description, S0.http___schema_org_keywords
+    |FROM WPT10MCSV S0
+    |WHERE array_contains (split(rtrim(']', ltrim('[',S0.http___www_w3_org_1999_02_22_rdf_syntax_ns_type)),','),"<http://db.uwaterloo.ca/~galuc/wsdbm/ProductCategory3>")
+    |AND   array_contains (split(rtrim(']', ltrim('[',S0.http___schema_org_language)),','),"<http://db.uwaterloo.ca/~galuc/wsdbm/Language0>")
+    |AND S0.http___schema_org_description IS NOT NULL
+    |AND S0.http___schema_org_keywords IS NOT NULL
+""".stripMargin
+
+
+
+val s6_prost =
+  """
+    |SELECT DISTINCT S0.s, S0.http___purl_org_ontology_mo_conductor, type
+    |FROM WPT10MParquet S0
+    |lateral view explode (S0.http___www_w3_org_1999_02_22_rdf_syntax_ns_type) S0Type as type
+    |WHERE   array_contains (S0.http___db_uwaterloo_ca__galuc_wsdbm_hasGenre,"<http://db.uwaterloo.ca/~galuc/wsdbm/SubGenre130>")
+    |AND S0.http___purl_org_ontology_mo_conductor is not null
+    |AND S0.http___www_w3_org_1999_02_22_rdf_syntax_ns_type  is not null
+    |""".stripMargin
+
+
+val s6_prost_csv =
+  """
+    |SELECT DISTINCT S0.s, S0.http___purl_org_ontology_mo_conductor, type
+    |FROM WPT10MCSV S0
+    |lateral view explode (split(rtrim(']', ltrim('[',S0.http___www_w3_org_1999_02_22_rdf_syntax_ns_type)),',') ) S0Type as type
+    |WHERE   array_contains ( split(rtrim(']', ltrim('[',S0.http___db_uwaterloo_ca__galuc_wsdbm_hasGenre)),',') ,"<http://db.uwaterloo.ca/~galuc/wsdbm/SubGenre130>")
+    |AND S0.http___purl_org_ontology_mo_conductor is not null
+    |AND S0.http___www_w3_org_1999_02_22_rdf_syntax_ns_type  is not null
+    |""".stripMargin
+
+
+
+ val s7_prost =
+      """
+        |SELECT DISTINCT T0.s, type, T0.http___schema_org_text
+        |FROM WPT10MParquet T0
+        |JOIN WPT10MParquet T1
+        |ON array_contains (T1.http___db_uwaterloo_ca__galuc_wsdbm_likes,T0.s)
+        |AND T1.s="<http://db.uwaterloo.ca/~galuc/wsdbm/User54768>"
+        |lateral view explode (T0.http___www_w3_org_1999_02_22_rdf_syntax_ns_type) T0Type as type
+        |WHERE T0.http___www_w3_org_1999_02_22_rdf_syntax_ns_type IS NOT NULL
+        |AND T0.http___schema_org_text IS NOT NULL
+        |""".stripMargin
+
+
+ val s7_prost_csv =
+      """
+        |SELECT DISTINCT T0.s, type, T0.http___schema_org_text
+        |FROM WPT10MCSV T0
+        |JOIN WPT10MCSV T1
+        |ON array_contains (split(rtrim(']', ltrim('[',T1.http___db_uwaterloo_ca__galuc_wsdbm_likes)),',') ,T0.s)
+        |AND T1.s="<http://db.uwaterloo.ca/~galuc/wsdbm/User54768>"
+        |lateral view explode (split(rtrim(']', ltrim('[',T0.http___www_w3_org_1999_02_22_rdf_syntax_ns_type)),',')) T0Type as type
+        |WHERE T0.http___www_w3_org_1999_02_22_rdf_syntax_ns_type IS NOT NULL
+        |AND T0.http___schema_org_text IS NOT NULL
+        |""".stripMargin
+
+
+
+
+
+
+
+
+
+
+/*
   //Complex
 
   //100% 16
@@ -310,6 +910,8 @@ class WPTQueries {
         |WHERE T0.TYPE IS NOT NULL
         |AND T0.sorg_text IS NOT NULL
         |""".stripMargin
+
+  */
 
 
 }

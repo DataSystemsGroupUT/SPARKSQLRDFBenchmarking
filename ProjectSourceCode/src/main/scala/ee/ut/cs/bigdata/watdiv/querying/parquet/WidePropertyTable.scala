@@ -1,12 +1,13 @@
 package ee.ut.cs.bigdata.watdiv.querying.parquet
 
-import ee.ut.cs.bigdata.watdiv.querying.queries.{WPTQueries}
+import ee.ut.cs.bigdata.watdiv.querying.queries.WPTQueries
 import org.apache.log4j.{Level, Logger}
 import org.apache.spark.sql.SparkSession
 import org.apache.spark.{SparkConf, SparkContext}
 
-object WPTTables {
+import java.io.{File, FileOutputStream}
 
+object WidePropertyTable {
   def main(args: Array[String]): Unit = {
 
     println("Starting WPT VHDFS")
@@ -38,28 +39,27 @@ object WPTTables {
     //create file to write the query run time results
    // val fos = new FileOutputStream(new File(s"/home/hadoop/RDFBenchMarking/logs/$ds/parquet/ST/$ds$partitionType.txt"), true)
 
-
-     val queries = List(
-//      new WPTQueries c1,
-//      new WPTQueries c2,
-//      new WPTQueries c3,
+        val queries = List(
+      new WPTQueries c1_prost,
+//      new WPTQueries c2_prost,
+//      new WPTQueries c3_prost,
 //      new WPTQueries f1_prost,
-//      new WPTQueries f2,
-//      new WPTQueries f3,
-//      new WPTQueries f4,
-//      new WPTQueries f4,
-//      new WPTQueries l1,
-//      new WPTQueries l2,
-//      new WPTQueries l3,
-//      new WPTQueries l4,
-//      new WPTQueries l5,
-      new WPTQueries s1_prost,
-//      new WPTQueries s2,
-//      new WPTQueries s3,
-//      new WPTQueries s4,
-//      new WPTQueries s5,
-//      new WPTQueries s6,
-//      new WPTQueries s7
+//      new WPTQueries f2_prost,
+//      new WPTQueries f3_prost,
+//      new WPTQueries f4_prost,
+//      new WPTQueries f4_prost,
+//      new WPTQueries l1_prost,
+//      new WPTQueries l2_prost,
+//      new WPTQueries l3_prost,
+//      new WPTQueries l4_prost,
+//      new WPTQueries l5_prost,
+//      new WPTQueries s1_prost,
+//      new WPTQueries s2_prost,
+//      new WPTQueries s3_prost,
+//      new WPTQueries s4_prost,
+//      new WPTQueries s5_prost,
+//      new WPTQueries s6_prost,
+//      new WPTQueries s7_prost
     )
 
 
