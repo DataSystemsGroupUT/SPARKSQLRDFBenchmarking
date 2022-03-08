@@ -39,9 +39,9 @@ object WidePropertyTable {
     //create file to write the query run time results
    // val fos = new FileOutputStream(new File(s"/home/hadoop/RDFBenchMarking/logs/$ds/parquet/ST/$ds$partitionType.txt"), true)
 
-        val queries = List(
-      new WPTQueries c1_prost,
-//      new WPTQueries c2_prost,
+    val queries = List(
+//        new WPTQueries c1_prost,
+      new WPTQueries c2_prost,
 //      new WPTQueries c3_prost,
 //      new WPTQueries f1_prost,
 //      new WPTQueries f2_prost,
