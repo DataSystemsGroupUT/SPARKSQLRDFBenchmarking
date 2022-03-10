@@ -42,24 +42,24 @@ object WidePropertyTable {
     val queries = List(
 //        new WPTQueries c1_prost,
 //      new WPTQueries c2_prost,
-//      new WPTQueries c3_prost,
+      new WPTQueries c3_prost
 //        new WPTQueries f1_prost,
 //        new WPTQueries f2_prost,
 //        new WPTQueries f3_prost,
 //        new WPTQueries f4_prost,
 //        new WPTQueries f4_prost,
-        new WPTQueries l1_prost,
-        new WPTQueries l2_prost,
-        new WPTQueries l3_prost,
-        new WPTQueries l4_prost,
-        new WPTQueries l5_prost,
-        new WPTQueries s1_prost,
-        new WPTQueries s2_prost,
-        new WPTQueries s3_prost,
-        new WPTQueries s4_prost,
-        new WPTQueries s5_prost,
-        new WPTQueries s6_prost,
-        new WPTQueries s7_prost
+//        new WPTQueries l1_prost,
+//        new WPTQueries l2_prost,
+//        new WPTQueries l3_prost,
+//        new WPTQueries l4_prost,
+//        new WPTQueries l5_prost,
+//        new WPTQueries s1_prost,
+//        new WPTQueries s2_prost,
+//        new WPTQueries s3_prost,
+//        new WPTQueries s4_prost,
+//        new WPTQueries s5_prost,
+//        new WPTQueries s6_prost,
+//        new WPTQueries s7_prost
     )
 
 
