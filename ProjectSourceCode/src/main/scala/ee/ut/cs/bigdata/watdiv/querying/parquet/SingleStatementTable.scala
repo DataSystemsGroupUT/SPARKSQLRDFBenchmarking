@@ -25,7 +25,7 @@ object SingleStatementTable {
 
     val ds = args(0) // value = {"100M", "500M, or "1B"}
     var partitionType = args(1) // value = {"Horizontal", "Subject", or "Predicate"}
-    val path = s"hdfs://172.17.77.48:9000/user/hadoop/RDFBench/WATDIV/$ds/ST/$partitionType/Parquet"
+    val path = s"hdfs://172.17.77.48:9000/user/hadoop/RDFBench/WATDIV/$ds/ST/Parquet"
 
 
     //read tables from HDFS
