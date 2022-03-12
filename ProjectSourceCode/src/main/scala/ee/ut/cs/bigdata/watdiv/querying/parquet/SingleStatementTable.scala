@@ -37,27 +37,26 @@ object SingleStatementTable {
     val fos = new FileOutputStream(new File(s"/home/hadoop/RDFBenchMarking/logs/$ds/parquet/ST/$ds$partitionType.txt"), true)
 
     val queries = List(
-//      new STQueries c1,
-//      new STQueries c2,
-//      new STQueries c3,
-//      new STQueries f1,
-//      new STQueries f2,
-//      new STQueries f3,
-//      new STQueries f4,
-//      new STQueries f4,
-//      new STQueries l1,
-//      new STQueries l2,
-//      new STQueries l3,
-//      new STQueries l4,
-//      new STQueries l5,
-//      new STQueries s1,
-//      new STQueries s2,
-      new STQueries s3
-//      ,
-//      new STQueries s4,
-//      new STQueries s5,
-//      new STQueries s6,
-//      new STQueries s7
+      new STQueries c1,
+      new STQueries c2,
+      new STQueries c3,
+      new STQueries f1,
+      new STQueries f2,
+      new STQueries f3,
+      new STQueries f4,
+      new STQueries f4,
+      new STQueries l1,
+      new STQueries l2,
+      new STQueries l3,
+      new STQueries l4,
+      new STQueries l5,
+      new STQueries s1,
+      new STQueries s2,
+      new STQueries s3,
+      new STQueries s4,
+      new STQueries s5,
+      new STQueries s6,
+      new STQueries s7
     )
 
     var count = 1
