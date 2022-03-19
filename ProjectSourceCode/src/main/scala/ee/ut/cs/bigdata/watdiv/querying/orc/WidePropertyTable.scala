@@ -1,11 +1,9 @@
-package ee.ut.cs.bigdata.watdiv.querying.parquet
+package ee.ut.cs.bigdata.watdiv.querying.orc
 
 import ee.ut.cs.bigdata.watdiv.querying.queries.WPTQueries
 import org.apache.log4j.{Level, Logger}
 import org.apache.spark.sql.SparkSession
 import org.apache.spark.{SparkConf, SparkContext}
-
-import java.io.{File, FileOutputStream}
 
 object WidePropertyTable {
   def main(args: Array[String]): Unit = {
@@ -20,17 +18,18 @@ object WidePropertyTable {
 
     val spark = SparkSession
       .builder()
-      .appName("RDFBench Parquet WPT")
+      .appName("RDFBench ORC WPT")
       .getOrCreate()
 
     val ds = args(0) // value = {"100M", "500M, or "1B"}
     var partitionType = args(1) // value = {"Horizontal", "Subject", or "Predicate"}
-    val path = s"hdfs://172.17.77.48:9000/user/hadoop/RDFBench/WATDIV/$ds/WPT/VHDFS/Parquet"
+    val path = s"hdfs://172.17.77.48:9000/user/hadoop/RDFBench/WATDIV/$ds/WPT/VHDFS/ORC"
 
     //read tables from HDFS
-    val wptDF = spark.read.format("parquet").load(s"$path/WidePropertyTable.parquet").toDF()
+    val wptDF = spark.read.format("parquet").load(s"$path/WidePropertyTable.orc").toDF()
 
     wptDF.createOrReplaceTempView("WPT")
+
 
     //create file to write the query run time results
     // val fos = new FileOutputStream(new File(s"/home/hadoop/RDFBenchMarking/logs/$ds/parquet/ST/$ds$partitionType.txt"), true)
