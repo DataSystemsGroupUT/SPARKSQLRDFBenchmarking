@@ -42,7 +42,7 @@ object WidePropertyTable {
       new WPTQueries f2_prost_csv,
       new WPTQueries f3_prost_csv,
       new WPTQueries f4_prost_csv,
-      new WPTQueries f4_prost_csv,
+      new WPTQueries f5_prost_csv,
       new WPTQueries l1_prost_csv,
       new WPTQueries l2_prost_csv,
       new WPTQueries l3_prost_csv,

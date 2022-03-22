@@ -42,7 +42,7 @@ object WidePropertyTable {
       new WPTQueries f2_prost,
       new WPTQueries f3_prost,
       new WPTQueries f4_prost,
-      new WPTQueries f4_prost,
+      new WPTQueries f5_prost,
       new WPTQueries l1_prost,
       new WPTQueries l2_prost,
       new WPTQueries l3_prost,
