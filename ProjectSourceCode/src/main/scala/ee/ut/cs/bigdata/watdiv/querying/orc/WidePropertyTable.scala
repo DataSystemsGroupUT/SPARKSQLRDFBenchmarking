@@ -26,7 +26,7 @@ object WidePropertyTable {
     val path = s"hdfs://172.17.77.48:9000/user/hadoop/RDFBench/WATDIV/$ds/WPT/VHDFS/ORC"
 
     //read tables from HDFS
-    val wptDF = spark.read.format("parquet").load(s"$path/WidePropertyTable.orc").toDF()
+    val wptDF = spark.read.format("orc").load(s"$path/WidePropertyTable.orc").toDF()
 
     wptDF.createOrReplaceTempView("WPT")
 
