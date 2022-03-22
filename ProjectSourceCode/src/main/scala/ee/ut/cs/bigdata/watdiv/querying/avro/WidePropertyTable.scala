@@ -8,7 +8,7 @@ import org.apache.spark.{SparkConf, SparkContext}
 object WidePropertyTable {
   def main(args: Array[String]): Unit = {
 
-    println("Starting WPT VHDFS!")
+    println("Starting WPT VHDFS Avro!")
     val conf = new SparkConf()
     Logger.getLogger("org").setLevel(Level.OFF)
     Logger.getLogger("akka").setLevel(Level.OFF)

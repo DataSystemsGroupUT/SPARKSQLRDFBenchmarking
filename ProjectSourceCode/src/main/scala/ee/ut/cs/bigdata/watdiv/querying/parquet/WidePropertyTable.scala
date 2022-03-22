@@ -10,7 +10,7 @@ import java.io.{File, FileOutputStream}
 object WidePropertyTable {
   def main(args: Array[String]): Unit = {
 
-    println("Starting WPT VHDFS!")
+    println("Starting WPT VHDFS Parquet!")
     val conf = new SparkConf()
     Logger.getLogger("org").setLevel(Level.OFF)
     Logger.getLogger("akka").setLevel(Level.OFF)
