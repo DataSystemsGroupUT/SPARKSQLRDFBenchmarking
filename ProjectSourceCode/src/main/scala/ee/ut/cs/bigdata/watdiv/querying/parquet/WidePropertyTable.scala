@@ -33,7 +33,7 @@ object WidePropertyTable {
     wptDF.createOrReplaceTempView("WPT")
 
     //create file to write the query run time results
-    // val fos = new FileOutputStream(new File(s"/home/hadoop/RDFBenchMarking/logs/$ds/parquet/ST/$ds$partitionType.txt"), true)
+    val fos = new FileOutputStream(new File(s"/home/hadoop/RDFBenchMarking/logs/$ds/parquet/ST/$ds$partitionType.txt"), true)
 
     val queries = List(
       new WPTQueries c1_prost,
@@ -65,24 +65,22 @@ object WidePropertyTable {
       val startTime = System.nanoTime()
       val df_count = spark.sql(query).count()
       println(df_count)
-      //      spark.sql(query).show(1000,false)
       //df.take(100).foreach(println)
-      //      val endTime = System.nanoTime()
-      //      val result = (endTime - startTime).toDouble / 1000000000
-      //
-      //      //write the result into the log file
-      //      if (count != queries.size) {
-      //        Console.withOut(fos) {
-      //          print(result + ",")
-      //        }
-      //      } else {
-      //        Console.withOut(fos) {
-      //          println(result)
-      //        }
-      //      }
-      //      count += 1
-    }
+      val endTime = System.nanoTime()
+      val result = (endTime - startTime).toDouble / 1000000000
 
+      //write the result into the log file
+      if (count != queries.size) {
+        Console.withOut(fos) {
+          print(result + ",")
+        }
+      } else {
+        Console.withOut(fos) {
+          println(result)
+        }
+      }
+      count += 1
+    }
     println("All Queries are Done - Parquet - WPT!")
 
 

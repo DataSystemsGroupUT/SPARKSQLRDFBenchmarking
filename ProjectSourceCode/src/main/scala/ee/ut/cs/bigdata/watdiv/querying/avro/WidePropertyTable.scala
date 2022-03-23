@@ -5,10 +5,13 @@ import org.apache.log4j.{Level, Logger}
 import org.apache.spark.sql.SparkSession
 import org.apache.spark.{SparkConf, SparkContext}
 
+import java.io.{File, FileOutputStream}
+
 object WidePropertyTable {
   def main(args: Array[String]): Unit = {
 
     println("Starting WPT VHDFS Avro!")
+
     val conf = new SparkConf()
     Logger.getLogger("org").setLevel(Level.OFF)
     Logger.getLogger("akka").setLevel(Level.OFF)
@@ -31,7 +34,7 @@ object WidePropertyTable {
     wptDF.createOrReplaceTempView("WPT")
 
     //create file to write the query run time results
-    // val fos = new FileOutputStream(new File(s"/home/hadoop/RDFBenchMarking/logs/$ds/parquet/ST/$ds$partitionType.txt"), true)
+    val fos = new FileOutputStream(new File(s"/home/hadoop/RDFBenchMarking/logs/$ds/avro/WPT/$ds$partitionType.txt"), true)
 
     val queries = List(
       new WPTQueries c1_prost,
@@ -56,31 +59,28 @@ object WidePropertyTable {
       new WPTQueries s7_prost
     )
 
-
     var count = 1
     for (query <- queries) {
       //run query and calculate the run time
       val startTime = System.nanoTime()
       val df_count = spark.sql(query).count()
       println(df_count)
-      //      spark.sql(query).show(1000,false)
       //df.take(100).foreach(println)
-      //      val endTime = System.nanoTime()
-      //      val result = (endTime - startTime).toDouble / 1000000000
-      //
-      //      //write the result into the log file
-      //      if (count != queries.size) {
-      //        Console.withOut(fos) {
-      //          print(result + ",")
-      //        }
-      //      } else {
-      //        Console.withOut(fos) {
-      //          println(result)
-      //        }
-      //      }
-      //      count += 1
-    }
+      val endTime = System.nanoTime()
+      val result = (endTime - startTime).toDouble / 1000000000
 
+      //write the result into the log file
+      if (count != queries.size) {
+        Console.withOut(fos) {
+          print(result + ",")
+        }
+      } else {
+        Console.withOut(fos) {
+          println(result)
+        }
+      }
+      count += 1
+    }
     println("All Queries are Done - Parquet - WPT!")
 
 

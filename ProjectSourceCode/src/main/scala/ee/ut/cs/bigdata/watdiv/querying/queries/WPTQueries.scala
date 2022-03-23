@@ -24,7 +24,6 @@ val c1_prost =
   """.stripMargin
 
 
-
 val c1_prost_csv =
     """
     |SELECT DISTINCT V0.s, hasReview, V4.http___purl_org_stuff_rev_reviewer, V7.s
