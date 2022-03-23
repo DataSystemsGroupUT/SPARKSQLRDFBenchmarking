@@ -33,7 +33,7 @@ object WidePropertyTable {
     wptDF.createOrReplaceTempView("WPT")
 
     //create file to write the query run time results
-    val fos = new FileOutputStream(new File(s"/home/hadoop/RDFBenchMarking/logs/$ds/parquet/ST/$ds$partitionType.txt"), true)
+    val fos = new FileOutputStream(new File(s"/home/hadoop/RDFBenchMarking/logs/$ds/parquet/WPT/$ds$partitionType.txt"), true)
 
     val queries = List(
       new WPTQueries c1_prost,
@@ -58,7 +58,6 @@ object WidePropertyTable {
       new WPTQueries s7_prost
     )
 
-
     var count = 1
     for (query <- queries) {
       //run query and calculate the run time
@@ -82,7 +81,6 @@ object WidePropertyTable {
       count += 1
     }
     println("All Queries are Done - Parquet - WPT!")
-
 
   }
 
