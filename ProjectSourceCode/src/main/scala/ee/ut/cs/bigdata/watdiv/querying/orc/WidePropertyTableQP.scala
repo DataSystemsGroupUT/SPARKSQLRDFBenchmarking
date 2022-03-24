@@ -38,7 +38,7 @@ object WidePropertyTableQP {
 
     val queries = List(
       new WPTQueries c1_prost,
-      new WPTQueries c2_prost,
+      //new WPTQueries c2_prost,
       new WPTQueries c3_prost,
       new WPTQueries f1_prost,
       new WPTQueries f2_prost,
