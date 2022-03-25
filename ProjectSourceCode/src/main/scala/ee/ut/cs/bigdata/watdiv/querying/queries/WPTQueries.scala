@@ -63,7 +63,7 @@ val c1_prost_csv =
       |""".stripMargin
 
 
-//Fails because of driver-memeory
+//Fails because of driver-memory
 
   val c2_prost_csv =
     """

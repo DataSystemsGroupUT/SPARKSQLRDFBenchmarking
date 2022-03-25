@@ -40,34 +40,39 @@ object VerticalTablesQP {
     val fos = new FileOutputStream(new File(s"/home/hadoop/RDFBenchMarking/logs/$ds/orc/VP/$partitionType.txt"), true)
 
     val queries = List(
-      new VTQueries c1,
-      new VTQueries c2,
-      new VTQueries c3,
-      new VTQueries f1,
-      new VTQueries f2,
-      new VTQueries f3,
-      new VTQueries f4,
-      new VTQueries f5,
-      new VTQueries l1,
-      new VTQueries l2,
-      new VTQueries l3,
-      new VTQueries l4,
-      new VTQueries l5,
-      new VTQueries s1,
-      new VTQueries s2,
-      new VTQueries s3,
-      new VTQueries s4,
-      new VTQueries s5,
-      new VTQueries s6,
-      new VTQueries s7)
+//      new VTQueries c1,
+//      new VTQueries c2,
+//      new VTQueries c3,
+//      new VTQueries f1,
+//      new VTQueries f2,
+//      new VTQueries f3,
+//      new VTQueries f4,
+//      new VTQueries f5,
+//      new VTQueries l1,
+//      new VTQueries l2,
+//      new VTQueries l3,
+//      new VTQueries l4,
+//      new VTQueries l5,
+//      new VTQueries s1,
+//      new VTQueries s2,
+//      new VTQueries s3,
+        new VTQueries s4
+//      ,
+//      new VTQueries s5,
+//      new VTQueries s6,
+//      new VTQueries s7
+          )
 
     var count = 1
     for (query <- queries) {
       //run query and calculate the run time
       val startTime = System.nanoTime()
-      val df_count = spark.sql(query).count()
-      println(df_count)
-      //df.take(100).foreach(println)
+//      val df_count = spark.sql(query).count()
+//      println(df_count)
+
+      val df = spark.sql(query)
+      df.take(100).foreach(println)
+
       val endTime = System.nanoTime()
       val result = (endTime - startTime).toDouble / 1000000000
 
