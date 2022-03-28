@@ -14,8 +14,9 @@ val c1_prost =
     |ON V4.http___purl_org_stuff_rev_reviewer=V6.s
     |JOIN WPT V7
     |ON  array_contains(V7.http___schema_org_actor, V6.s)
-    |lateral view explode (V0.http___purl_org_stuff_rev_hasReview) V0HasReview as hasReview
-    |lateral view explode (V7.http___schema_org_language) V7Langauage as language
+    |lateral view outer explode (V0.http___purl_org_stuff_rev_hasReview) V0HasReview as hasReview
+    |lateral view outer explode (V7.http___schema_org_language) V7Langauage as language
+
     |WHERE  V0.http___schema_org_caption is not null
     |AND V0.http___schema_org_text is not null
     |AND V0.http___schema_org_contentRating is not null
