@@ -40,7 +40,8 @@ object VerticalTablesQP {
     val fos = new FileOutputStream(new File(s"/home/hadoop/RDFBenchMarking/logs/$ds/orc/VP/$partitionType.txt"), true)
 
     val queries = List(
-//      new VTQueries c1,
+      new VTQueries c1
+//      ,
 //      new VTQueries c2,
 //      new VTQueries c3,
 //      new VTQueries f1,
@@ -56,7 +57,7 @@ object VerticalTablesQP {
 //      new VTQueries s1,
 //      new VTQueries s2,
 //      new VTQueries s3,
-        new VTQueries s4
+//        new VTQueries s4
 //      ,
 //      new VTQueries s5,
 //      new VTQueries s6,
