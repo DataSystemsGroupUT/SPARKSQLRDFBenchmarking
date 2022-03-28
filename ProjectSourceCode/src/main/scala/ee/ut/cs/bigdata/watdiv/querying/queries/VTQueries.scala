@@ -26,6 +26,28 @@ class VTQueries {
   """.stripMargin
 
 
+   val c1_V2 =
+    """
+      |SELECT  tab0.v0 AS v0 , tab3.v4 AS v4 , tab5.v6 AS v6 , tab6.v7 AS v7
+      |FROM    (SELECT object AS v1 , subject AS v0  FROM caption) tab0
+      |JOIN    (SELECT subject AS v0 , object AS v2 FROM text) tab1
+      |ON(tab0.v0=tab1.v0)
+      |JOIN    (SELECT subject AS v0 , object AS v3 FROM contentRating) tab2
+      |ON(tab1.v0=tab2.v0)
+      |JOIN    (SELECT subject AS v0 , object AS v4 FROM hasReview) tab3
+      |ON(tab2.v0=tab3.v0)
+      |JOIN    (SELECT object AS v5 , subject AS v4
+      |FROM rev_Title) tab4
+      |ON(tab3.v4=tab4.v4)
+      |JOIN    (SELECT object AS v6 , subject AS v4 FROM reviewer) tab5
+      |ON(tab4.v4=tab5.v4)
+      |JOIN    (SELECT subject AS v7 , object AS v6 FROM actor) tab6
+      |ON(tab5.v6=tab6.v6)
+      |JOIN    (SELECT subject AS v7 , object AS v8 FROM language) tab7
+      | ON(tab6.v7=tab7.v7)
+  """.stripMargin
+
+
   val c2 =
     """
       |SELECT tab1.v0 AS v0 , tab3.v3 AS v3, tab6.v4 AS v4 , tab8.v8 AS v8
