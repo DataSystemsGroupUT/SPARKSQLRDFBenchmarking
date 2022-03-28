@@ -41,8 +41,29 @@ val c1_prost =
     |AND V0.http___schema_org_contentRating is not null
     |AND V4.http___purl_org_stuff_rev_title is not null
     |AND language is not null
+    |AND hasReview is not null
   """.stripMargin
 
+
+
+  val c1_prost_V3 =
+    """
+    |SELECT DISTINCT V0.s, hasReview, V4.http___purl_org_stuff_rev_reviewer, language
+    |FROM WPT V0
+    |JOIN WPT V4
+    |ON array_contains (V0.http___purl_org_stuff_rev_hasReview,V4.s)
+    |JOIN WPT V6
+    |ON V4.http___purl_org_stuff_rev_reviewer=V6.s
+    |JOIN WPT V7
+    |ON  array_contains(V7.http___schema_org_actor, V6.s)
+    |lateral view outer explode (V0.http___purl_org_stuff_rev_hasReview) V0HasReview as hasReview
+    |lateral view outer explode (V7.http___schema_org_language) V7Langauage as language
+    |WHERE  V0.http___schema_org_caption is not null
+    |AND V0.http___schema_org_text is not null
+    |AND V0.http___schema_org_contentRating is not null
+    |AND V4.http___purl_org_stuff_rev_title is not null
+    |AND language is not null
+  """.stripMargin
 
 val c1_prost_csv =
     """
