@@ -65,11 +65,11 @@ object WidePropertyTableQP {
     for (query <- queries) {
       //run query and calculate the run time
       val startTime = System.nanoTime()
-//      val df_count = spark.sql(query).count()
-//      println(df_count)
+      val df_count = spark.sql(query).count()
+      println(df_count)
 
-      val df = spark.sql(query)
-      df.take(100).foreach(println)
+//      val df = spark.sql(query)
+//      df.take(100).foreach(println)
 
       val endTime = System.nanoTime()
       val result = (endTime - startTime).toDouble / 1000000000
