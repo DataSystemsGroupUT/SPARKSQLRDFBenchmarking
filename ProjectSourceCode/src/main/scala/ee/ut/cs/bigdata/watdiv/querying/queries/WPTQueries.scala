@@ -539,7 +539,7 @@ val s3_prost_csv =
 
 val s4_prost =
     """
-       | SELECT DISTINCT S0.s, S0.http___xmlns_com_foaf_familyName, S3.http___purl_org_ontology_mo_artist
+       | SELECT DISTINCT S0.s, S0.http___xmlns_com_foaf_familyName, S3.s
        | FROM WPT S0
        | JOIN WPT S3 ON S3.http___purl_org_ontology_mo_artist=S0.s
        | WHERE S0.http___xmlns_com_foaf_age="<http://db.uwaterloo.ca/~galuc/wsdbm/AgeGroup5>"

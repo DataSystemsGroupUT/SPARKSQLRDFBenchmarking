@@ -345,7 +345,7 @@ class VTQueries {
       |WHERE object = 'http://db.uwaterloo.ca/~galuc/wsdbm/AgeGroup5'
       |) tab0
       |ON(tab3.v0=tab0.v0)
-      |JOIN    (SELECT object AS v0 , subject AS v3
+      |JOIN  (SELECT object AS v0 , subject AS v3
       |FROM artist
       |) tab2
       |ON(tab0.v0=tab2.v0)
