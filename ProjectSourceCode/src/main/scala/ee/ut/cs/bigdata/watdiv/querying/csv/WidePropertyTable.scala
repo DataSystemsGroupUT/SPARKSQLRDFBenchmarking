@@ -37,9 +37,9 @@ object WidePropertyTable {
      val fos = new FileOutputStream(new File(s"/home/hadoop/RDFBenchMarking/logs/$ds/csv/WPT/$ds$partitionType.txt"), true)
 
     val queries = List(
-      new WPTQueries c1_prost_csv,
-      new WPTQueries c2_prost_csv,
-      new WPTQueries c3_prost_csv,
+//      new WPTQueries c1_prost_csv,
+//      new WPTQueries c2_prost_csv,
+//      new WPTQueries c3_prost_csv,
       new WPTQueries f1_prost_csv,
       new WPTQueries f2_prost_csv,
       new WPTQueries f3_prost_csv,
