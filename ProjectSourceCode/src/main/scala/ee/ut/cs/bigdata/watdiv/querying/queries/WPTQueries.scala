@@ -92,7 +92,7 @@ val c1_prost_csv =
       |FROM WPT V0
       |JOIN WPT V2
       |ON  array_contains(V0.http___purl_org_goodrelations_offers,V2.s)
-      |AND array_contains(V2.http___schema_org_eligibleRegion,"<http://db.uwaterloo.ca/~galuc/wsdbm/Country3>")
+      |AND array_contains(V2.http___schema_org_eligibleRegion,"<http://db.uwaterloo.ca/~galuc/wsdbm/Country5>")
       |JOIN WPT V3 ON V2.http___purl_org_goodrelations_includes=V3.s
       |JOIN WPT V7 ON V7.http___db_uwaterloo_ca__galuc_wsdbm_purchaseFor=V3.s
       |JOIN WPT V4 ON array_contains (V4.http___db_uwaterloo_ca__galuc_wsdbm_makesPurchase,V7.s)
@@ -112,7 +112,7 @@ val c1_prost_csv =
       |FROM WPT V0
       |JOIN WPT V2
       |ON  array_contains(split(rtrim(']', ltrim('[',V0.http___purl_org_goodrelations_offers)),','),V2.s)
-      |AND array_contains(split(rtrim(']', ltrim('[',V2.http___schema_org_eligibleRegion)),',') ,"<http://db.uwaterloo.ca/~galuc/wsdbm/Country3>")
+      |AND array_contains(split(rtrim(']', ltrim('[',V2.http___schema_org_eligibleRegion)),',') ,"<http://db.uwaterloo.ca/~galuc/wsdbm/Country5>")
       |JOIN WPT V3 ON V2.http___purl_org_goodrelations_includes=V3.s
       |JOIN WPT V7 ON V7.http___db_uwaterloo_ca__galuc_wsdbm_purchaseFor=V3.s
       |JOIN WPT V4 ON array_contains (split(rtrim(']', ltrim('[',V4.http___db_uwaterloo_ca__galuc_wsdbm_makesPurchase)),','),V7.s)
@@ -164,7 +164,7 @@ val f1_prost =
       |FROM WPT V0
       |JOIn WPT V3
       |ON   array_contains   (V3.http___db_uwaterloo_ca__galuc_wsdbm_hasGenre,V0.s)
-      |AND  array_contains  (V0.http___ogp_me_ns_tag, "<http://db.uwaterloo.ca/~galuc/wsdbm/Topic8>")
+      |AND  array_contains  (V0.http___ogp_me_ns_tag, "<http://db.uwaterloo.ca/~galuc/wsdbm/Topic168>")
       |lateral view explode (V3.http___schema_org_trailer) V3Trailer as trailer
       |WHERE array_contains(V3.http___www_w3_org_1999_02_22_rdf_syntax_ns_type, "<http://db.uwaterloo.ca/~galuc/wsdbm/ProductCategory2>")
       |AND V3.http___schema_org_keywords is not null
@@ -192,7 +192,7 @@ val f1_prost_csv =
       |FROM WPT V0
       |JOIN WPT V1
       |ON V0.http___xmlns_com_foaf_homepage =V1.s
-      |WHERE array_contains (V0.http___db_uwaterloo_ca__galuc_wsdbm_hasGenre,"<http://db.uwaterloo.ca/~galuc/wsdbm/SubGenre117>")
+      |WHERE array_contains (V0.http___db_uwaterloo_ca__galuc_wsdbm_hasGenre,"<http://db.uwaterloo.ca/~galuc/wsdbm/SubGenre136>")
       |AND V0.http___ogp_me_ns_title is not null
       |AND V0.http___schema_org_caption is not null
       |AND V0.http___schema_org_description is not null
@@ -208,7 +208,7 @@ val f1_prost_csv =
       |FROM WPT V0
       |JOIN WPT V1
       |ON V0.http___xmlns_com_foaf_homepage =V1.s
-      |WHERE array_contains (split(rtrim(']', ltrim('[',V0.http___db_uwaterloo_ca__galuc_wsdbm_hasGenre)),',') ,"<http://db.uwaterloo.ca/~galuc/wsdbm/SubGenre117>")
+      |WHERE array_contains (split(rtrim(']', ltrim('[',V0.http___db_uwaterloo_ca__galuc_wsdbm_hasGenre)),',') ,"<http://db.uwaterloo.ca/~galuc/wsdbm/SubGenre136>")
       |AND V0.http___ogp_me_ns_title is not null
       |AND V0.http___schema_org_caption is not null
       |AND V0.http___schema_org_description is not null
@@ -224,7 +224,7 @@ val f3_prost =
       |FROM WPT V0
       |JOIN WPT V5
       |ON V0.s=V5.http___db_uwaterloo_ca__galuc_wsdbm_purchaseFor
-      |AND array_contains (V0.http___db_uwaterloo_ca__galuc_wsdbm_hasGenre,"<http://db.uwaterloo.ca/~galuc/wsdbm/SubGenre111>")
+      |AND array_contains (V0.http___db_uwaterloo_ca__galuc_wsdbm_hasGenre,"<http://db.uwaterloo.ca/~galuc/wsdbm/SubGenre144>")
       |JOIN WPT V4
       |ON  array_contains (V4.http___db_uwaterloo_ca__galuc_wsdbm_makesPurchase,V5.s)
       |WHERE V0.http___schema_org_contentRating is not null
@@ -241,7 +241,7 @@ val f3_prost_csv =
       |FROM WPT V0
       |JOIN WPT V5
       |ON V0.s=V5.http___db_uwaterloo_ca__galuc_wsdbm_purchaseFor
-      |AND array_contains (split(rtrim(']', ltrim('[',V0.http___db_uwaterloo_ca__galuc_wsdbm_hasGenre)),','),"<http://db.uwaterloo.ca/~galuc/wsdbm/SubGenre111>")
+      |AND array_contains (split(rtrim(']', ltrim('[',V0.http___db_uwaterloo_ca__galuc_wsdbm_hasGenre)),','),"<http://db.uwaterloo.ca/~galuc/wsdbm/SubGenre144>")
       |JOIN WPT V4
       |ON  array_contains ( split(rtrim(']', ltrim('[',V4.http___db_uwaterloo_ca__galuc_wsdbm_makesPurchase)),',')  ,V5.s)
       |WHERE V0.http___schema_org_contentRating is not null
@@ -263,7 +263,7 @@ val f3_prost_csv =
       |ON V0.s=V2.http___purl_org_goodrelations_includes
       |JOIN WPT V7
       |ON   array_contains (V7.http___db_uwaterloo_ca__galuc_wsdbm_likes,V0.s)
-      |WHERE array_contains (V0.http___ogp_me_ns_tag,"<http://db.uwaterloo.ca/~galuc/wsdbm/Topic122>")
+      |WHERE array_contains (V0.http___ogp_me_ns_tag,"<http://db.uwaterloo.ca/~galuc/wsdbm/Topic249>")
       |AND V0.http___schema_org_description is not null
       |AND V0.http___schema_org_contentSize is not null
       |AND V1.http___schema_org_url is not null
@@ -283,7 +283,7 @@ val f3_prost_csv =
       |ON V0.s=V2.http___purl_org_goodrelations_includes
       |JOIN WPT V7
       |ON   array_contains (split(rtrim(']', ltrim('[',V7.http___db_uwaterloo_ca__galuc_wsdbm_likes)),',') ,V0.s)
-      |WHERE array_contains (split(rtrim(']', ltrim('[',V0.http___ogp_me_ns_tag)),',') ,"<http://db.uwaterloo.ca/~galuc/wsdbm/Topic122>")
+      |WHERE array_contains (split(rtrim(']', ltrim('[',V0.http___ogp_me_ns_tag)),',') ,"<http://db.uwaterloo.ca/~galuc/wsdbm/Topic249>")
       |AND V0.http___schema_org_description is not null
       |AND V0.http___schema_org_contentSize is not null
       |AND V1.http___schema_org_url is not null
@@ -299,7 +299,7 @@ val f3_prost_csv =
       |ON V0.http___purl_org_goodrelations_includes=V1.s
       |JOIN WPT V2
       |ON  array_contains(V2.http___purl_org_goodrelations_offers,V0.s)
-      |AND V2.s="<http://db.uwaterloo.ca/~galuc/wsdbm/Retailer9885>"
+      |AND V2.s="<http://db.uwaterloo.ca/~galuc/wsdbm/Retailer36485>"
       |lateral view explode (V1.http___www_w3_org_1999_02_22_rdf_syntax_ns_type) V1Type as type
       |WHERE V0.http___purl_org_goodrelations_price is not null
       |AND V0.http___purl_org_goodrelations_validThrough is not null
@@ -317,7 +317,7 @@ val f3_prost_csv =
       |ON V0.http___purl_org_goodrelations_includes=V1.s
       |JOIN WPT V2
       |ON  array_contains(split(rtrim(']', ltrim('[',V2.http___purl_org_goodrelations_offers)),',') ,V0.s)
-      |AND V2.s="<http://db.uwaterloo.ca/~galuc/wsdbm/Retailer9885>"
+      |AND V2.s="<http://db.uwaterloo.ca/~galuc/wsdbm/Retailer36485>"
       |lateral view explode (split(rtrim(']', ltrim('[',V1.http___www_w3_org_1999_02_22_rdf_syntax_ns_type)),',') ) V1Type as type
       |WHERE V0.http___purl_org_goodrelations_price is not null
       |AND V0.http___purl_org_goodrelations_validThrough is not null
@@ -336,7 +336,7 @@ val f3_prost_csv =
       |FROM WPT T0
       |JOIN WPT T1
       |ON array_contains (T0.http___db_uwaterloo_ca__galuc_wsdbm_likes,T1.s)
-      |WHERE  array_contains ( T0.http___db_uwaterloo_ca__galuc_wsdbm_subscribes ,"<http://db.uwaterloo.ca/~galuc/wsdbm/Website7355>")
+      |WHERE  array_contains ( T0.http___db_uwaterloo_ca__galuc_wsdbm_subscribes ,"<http://db.uwaterloo.ca/~galuc/wsdbm/Website184946>")
       |AND T1.http___schema_org_caption  is not null
       |""".stripMargin
 
@@ -347,7 +347,7 @@ val f3_prost_csv =
       |FROM WPT T0
       |JOIN WPT T1
       |ON array_contains (split(rtrim(']', ltrim('[',T0.http___db_uwaterloo_ca__galuc_wsdbm_likes)),',') ,T1.s)
-      |WHERE  array_contains (split(rtrim(']', ltrim('[',T0.http___db_uwaterloo_ca__galuc_wsdbm_subscribes)),','),"<http://db.uwaterloo.ca/~galuc/wsdbm/Website7355>")
+      |WHERE  array_contains (split(rtrim(']', ltrim('[',T0.http___db_uwaterloo_ca__galuc_wsdbm_subscribes)),','),"<http://db.uwaterloo.ca/~galuc/wsdbm/Website184946>")
       |AND T1.http___schema_org_caption  is not null
       |""".stripMargin
 
@@ -359,7 +359,7 @@ val f3_prost_csv =
       |JOIN (
       |SELECT T_City.http___www_geonames_org_ontology_parentCountry
       |FROM WPT T_City
-      |WHERE T_City.s="<http://db.uwaterloo.ca/~galuc/wsdbm/City70>") TT
+      |WHERE T_City.s="<http://db.uwaterloo.ca/~galuc/wsdbm/City219>") TT
       |ON TT.http___www_geonames_org_ontology_parentCountry=T_User.http___schema_org_nationality
       |WHERE array_contains(T_User.http___db_uwaterloo_ca__galuc_wsdbm_likes,"<http://db.uwaterloo.ca/~galuc/wsdbm/Product0>")
       |""".stripMargin
@@ -373,7 +373,7 @@ val f3_prost_csv =
       |JOIN (
       |SELECT T_City.http___www_geonames_org_ontology_parentCountry
       |FROM WPT T_City
-      |WHERE T_City.s="<http://db.uwaterloo.ca/~galuc/wsdbm/City70>") TT
+      |WHERE T_City.s="<http://db.uwaterloo.ca/~galuc/wsdbm/City219>") TT
       |ON TT.http___www_geonames_org_ontology_parentCountry=T_User.http___schema_org_nationality
       |WHERE array_contains(split(rtrim(']', ltrim('[',T_User.http___db_uwaterloo_ca__galuc_wsdbm_likes)),',')   ,"<http://db.uwaterloo.ca/~galuc/wsdbm/Product0>")
       |""".stripMargin
@@ -384,7 +384,7 @@ val f3_prost_csv =
       |SELECT DISTINCT T0.s, likes
       |FROM WPT T0
       |lateral view explode (T0.http___db_uwaterloo_ca__galuc_wsdbm_likes) T0Likes as likes
-      |WHERE array_contains (T0.http___db_uwaterloo_ca__galuc_wsdbm_subscribes ,"<http://db.uwaterloo.ca/~galuc/wsdbm/Website43164>")
+      |WHERE array_contains (T0.http___db_uwaterloo_ca__galuc_wsdbm_subscribes ,"<http://db.uwaterloo.ca/~galuc/wsdbm/Website165116>")
       |AND T0.http___db_uwaterloo_ca__galuc_wsdbm_likes is not null
       |""".stripMargin
 
@@ -393,7 +393,7 @@ val f3_prost_csv =
       |SELECT DISTINCT T0.s, likes
       |FROM WPT T0
       |lateral view explode (split(rtrim(']', ltrim('[',T0.http___db_uwaterloo_ca__galuc_wsdbm_likes)),',')) T0Likes as likes
-      |WHERE array_contains (split(rtrim(']', ltrim('[',T0.http___db_uwaterloo_ca__galuc_wsdbm_subscribes)),',')  ,"<http://db.uwaterloo.ca/~galuc/wsdbm/Website43164>")
+      |WHERE array_contains (split(rtrim(']', ltrim('[',T0.http___db_uwaterloo_ca__galuc_wsdbm_subscribes)),',')  ,"<http://db.uwaterloo.ca/~galuc/wsdbm/Website165116>")
       |AND T0.http___db_uwaterloo_ca__galuc_wsdbm_likes is not null
       |""".stripMargin
 
@@ -401,7 +401,7 @@ val f3_prost_csv =
     """
       |SELECT  DISTINCT T0.s, T0.http___schema_org_caption
       |FROM WPT T0
-      |WHERE array_contains (T0.http___ogp_me_ns_tag, "<http://db.uwaterloo.ca/~galuc/wsdbm/Topic142>")
+      |WHERE array_contains (T0.http___ogp_me_ns_tag, "<http://db.uwaterloo.ca/~galuc/wsdbm/Topic245>")
       |AND T0.http___schema_org_caption is not null
       |""".stripMargin
 
@@ -409,7 +409,7 @@ val f3_prost_csv =
     """
       |SELECT  DISTINCT T0.s, T0.http___schema_org_caption
       |FROM WPT T0
-      |WHERE array_contains (split(rtrim(']', ltrim('[',T0.http___ogp_me_ns_tag)),','), "<http://db.uwaterloo.ca/~galuc/wsdbm/Topic142>")
+      |WHERE array_contains (split(rtrim(']', ltrim('[',T0.http___ogp_me_ns_tag)),','), "<http://db.uwaterloo.ca/~galuc/wsdbm/Topic245>")
       |AND T0.http___schema_org_caption is not null
       |""".stripMargin
 
@@ -421,7 +421,7 @@ val f3_prost_csv =
       |JOIN (
       |SELECT T_City.http___www_geonames_org_ontology_parentCountry
       |FROM WPT T_City
-      |WHERE T_City.s="<http://db.uwaterloo.ca/~galuc/wsdbm/City40>") TT
+      |WHERE T_City.s="<http://db.uwaterloo.ca/~galuc/wsdbm/City169>") TT
       |ON TT.http___www_geonames_org_ontology_parentCountry=T_User.http___schema_org_nationality
       |WHERE T_User.http___schema_org_jobTitle is not null
       |""".stripMargin
@@ -435,7 +435,7 @@ val f3_prost_csv =
       |JOIN (
       |SELECT T_City.http___www_geonames_org_ontology_parentCountry
       |FROM WPT T_City
-      |WHERE T_City.s="<http://db.uwaterloo.ca/~galuc/wsdbm/City40>") TT
+      |WHERE T_City.s="<http://db.uwaterloo.ca/~galuc/wsdbm/City169>") TT
       |ON TT.http___www_geonames_org_ontology_parentCountry=T_User.http___schema_org_nationality
       |WHERE T_User.http___schema_org_jobTitle is not null
       |""".stripMargin
@@ -452,7 +452,7 @@ val s1_prost =
   |FROM WPT S0
   |JOIN WPT S1
   |ON  array_contains(S0.http___purl_org_goodrelations_offers,S1.s)
-  |AND S0.s='<http://db.uwaterloo.ca/~galuc/wsdbm/Retailer8535>'
+  |AND S0.s='<http://db.uwaterloo.ca/~galuc/wsdbm/Retailer30473>'
   |lateral view explode (S1.http___schema_org_eligibleRegion) S1Eligible as eligbileRegion
   |WHERE
   |S1.http___purl_org_goodrelations_includes  is not null
@@ -474,7 +474,7 @@ val s1_prost_csv =
   |FROM WPT S0
   |JOIN WPT S1
   |ON  array_contains(split(rtrim(']', ltrim('[',S0.http___purl_org_goodrelations_offers)),','), S1.s)
-  |AND S0.s='<http://db.uwaterloo.ca/~galuc/wsdbm/Retailer8535>'
+  |AND S0.s='<http://db.uwaterloo.ca/~galuc/wsdbm/Retailer30473>'
   |lateral view explode (split(rtrim(']', ltrim('[',S1.http___schema_org_eligibleRegion)),',')) S1Eligible as eligbileRegion
   |WHERE
   |S1.http___purl_org_goodrelations_includes  is not null
@@ -493,7 +493,7 @@ val s2_prost =
 """
 |SELECT  DISTINCT S0.s, S0.http___purl_org_dc_terms_Location, S0.http___db_uwaterloo_ca__galuc_wsdbm_gender
 |FROM WPT as S0
-|WHERE S0.http___schema_org_nationality="<http://db.uwaterloo.ca/~galuc/wsdbm/Country4>"
+|WHERE S0.http___schema_org_nationality="<http://db.uwaterloo.ca/~galuc/wsdbm/Country24>"
 |AND  array_contains(S0.http___www_w3_org_1999_02_22_rdf_syntax_ns_type,"<http://db.uwaterloo.ca/~galuc/wsdbm/Role2>")
 |AND S0.http___purl_org_dc_terms_Location is not null
 |AND S0.http___db_uwaterloo_ca__galuc_wsdbm_gender is not null
@@ -505,7 +505,7 @@ val s2_prost_csv =
 """
 |SELECT  DISTINCT S0.s, S0.http___purl_org_dc_terms_Location, S0.http___db_uwaterloo_ca__galuc_wsdbm_gender
 |FROM WPT as S0
-|WHERE S0.http___schema_org_nationality="<http://db.uwaterloo.ca/~galuc/wsdbm/Country4>"
+|WHERE S0.http___schema_org_nationality="<http://db.uwaterloo.ca/~galuc/wsdbm/Country24>"
 |AND  array_contains(split(rtrim(']', ltrim('[',S0.http___www_w3_org_1999_02_22_rdf_syntax_ns_type)),',')    ,"<http://db.uwaterloo.ca/~galuc/wsdbm/Role2>")
 |AND S0.http___purl_org_dc_terms_Location is not null
 |AND S0.http___db_uwaterloo_ca__galuc_wsdbm_gender is not null
@@ -517,7 +517,7 @@ val s3_prost =
     | SELECT DISTINCT S0.s, S0.http___schema_org_caption, hasGenre, S0.http___schema_org_publisher
     | FROM WPT S0
     |lateral view explode (S0.http___db_uwaterloo_ca__galuc_wsdbm_hasGenre) S0HasGenre as hasGenre
-    | WHERE array_contains (S0.http___www_w3_org_1999_02_22_rdf_syntax_ns_type, "<http://db.uwaterloo.ca/~galuc/wsdbm/ProductCategory4>")
+    | WHERE array_contains (S0.http___www_w3_org_1999_02_22_rdf_syntax_ns_type, "<http://db.uwaterloo.ca/~galuc/wsdbm/ProductCategory8>")
     | AND S0.http___schema_org_caption is not null
     | AND S0.http___db_uwaterloo_ca__galuc_wsdbm_hasGenre is not null
     | AND S0.http___schema_org_publisher is not null
@@ -530,7 +530,7 @@ val s3_prost_csv =
     | SELECT DISTINCT S0.s, S0.http___schema_org_caption, hasGenre, S0.http___schema_org_publisher
     | FROM WPT S0
     |lateral view explode (split(rtrim(']', ltrim('[',S0.http___db_uwaterloo_ca__galuc_wsdbm_hasGenre)),',')) S0HasGenre as hasGenre
-    | WHERE array_contains (split(rtrim(']', ltrim('[',S0.http___www_w3_org_1999_02_22_rdf_syntax_ns_type)),',') , "<http://db.uwaterloo.ca/~galuc/wsdbm/ProductCategory4>")
+    | WHERE array_contains (split(rtrim(']', ltrim('[',S0.http___www_w3_org_1999_02_22_rdf_syntax_ns_type)),',') , "<http://db.uwaterloo.ca/~galuc/wsdbm/ProductCategory8>")
     | AND S0.http___schema_org_caption is not null
     | AND S0.http___db_uwaterloo_ca__galuc_wsdbm_hasGenre is not null
     | AND S0.http___schema_org_publisher is not null
@@ -542,7 +542,7 @@ val s4_prost =
        | SELECT DISTINCT S0.s, S0.http___xmlns_com_foaf_familyName, S3.s
        | FROM WPT S0
        | JOIN WPT S3 ON S3.http___purl_org_ontology_mo_artist=S0.s
-       | WHERE S0.http___xmlns_com_foaf_age="<http://db.uwaterloo.ca/~galuc/wsdbm/AgeGroup5>"
+       | WHERE S0.http___xmlns_com_foaf_age="<http://db.uwaterloo.ca/~galuc/wsdbm/AgeGroup8>"
        | AND S0.http___xmlns_com_foaf_familyName IS NOT NULL
        | AND S0.http___schema_org_nationality="<http://db.uwaterloo.ca/~galuc/wsdbm/Country1>"
        | """.stripMargin
@@ -553,7 +553,7 @@ val s4_prost_csv =
        | SELECT DISTINCT S0.s, S0.http___xmlns_com_foaf_familyName, S3.http___purl_org_ontology_mo_artist
        | FROM WPT S0
        | JOIN WPT S3 ON S3.http___purl_org_ontology_mo_artist=S0.s
-       | WHERE S0.http___xmlns_com_foaf_age="<http://db.uwaterloo.ca/~galuc/wsdbm/AgeGroup5>"
+       | WHERE S0.http___xmlns_com_foaf_age="<http://db.uwaterloo.ca/~galuc/wsdbm/AgeGroup8>"
        | AND S0.http___xmlns_com_foaf_familyName IS NOT NULL
        | AND S0.http___schema_org_nationality="<http://db.uwaterloo.ca/~galuc/wsdbm/Country1>"
        | """.stripMargin
@@ -563,7 +563,7 @@ val s5_prost =
   """
     |SELECT DISTINCT S0.s, S0.http___schema_org_description, S0.http___schema_org_keywords
     |FROM WPT S0
-    |WHERE array_contains (S0.http___www_w3_org_1999_02_22_rdf_syntax_ns_type, "<http://db.uwaterloo.ca/~galuc/wsdbm/ProductCategory3>")
+    |WHERE array_contains (S0.http___www_w3_org_1999_02_22_rdf_syntax_ns_type, "<http://db.uwaterloo.ca/~galuc/wsdbm/ProductCategory12>")
     |AND    array_contains (S0.http___schema_org_language,"<http://db.uwaterloo.ca/~galuc/wsdbm/Language0>")
     |AND S0.http___schema_org_description IS NOT NULL
     |AND S0.http___schema_org_keywords IS NOT NULL
@@ -575,7 +575,7 @@ val s5_prost_csv =
   """
     |SELECT DISTINCT S0.s, S0.http___schema_org_description, S0.http___schema_org_keywords
     |FROM WPT S0
-    |WHERE array_contains (split(rtrim(']', ltrim('[',S0.http___www_w3_org_1999_02_22_rdf_syntax_ns_type)),','),"<http://db.uwaterloo.ca/~galuc/wsdbm/ProductCategory3>")
+    |WHERE array_contains (split(rtrim(']', ltrim('[',S0.http___www_w3_org_1999_02_22_rdf_syntax_ns_type)),','),"<http://db.uwaterloo.ca/~galuc/wsdbm/ProductCategory12>")
     |AND   array_contains (split(rtrim(']', ltrim('[',S0.http___schema_org_language)),','),"<http://db.uwaterloo.ca/~galuc/wsdbm/Language0>")
     |AND S0.http___schema_org_description IS NOT NULL
     |AND S0.http___schema_org_keywords IS NOT NULL
@@ -588,7 +588,7 @@ val s6_prost =
     |SELECT DISTINCT S0.s, S0.http___purl_org_ontology_mo_conductor, type
     |FROM WPT S0
     |lateral view explode (S0.http___www_w3_org_1999_02_22_rdf_syntax_ns_type) S0Type as type
-    |WHERE   array_contains (S0.http___db_uwaterloo_ca__galuc_wsdbm_hasGenre,"<http://db.uwaterloo.ca/~galuc/wsdbm/SubGenre130>")
+    |WHERE   array_contains (S0.http___db_uwaterloo_ca__galuc_wsdbm_hasGenre,"<http://db.uwaterloo.ca/~galuc/wsdbm/SubGenre132>")
     |AND S0.http___purl_org_ontology_mo_conductor is not null
     |AND S0.http___www_w3_org_1999_02_22_rdf_syntax_ns_type  is not null
     |""".stripMargin
@@ -599,7 +599,7 @@ val s6_prost_csv =
     |SELECT DISTINCT S0.s, S0.http___purl_org_ontology_mo_conductor, type
     |FROM WPT S0
     |lateral view explode (split(rtrim(']', ltrim('[',S0.http___www_w3_org_1999_02_22_rdf_syntax_ns_type)),',') ) S0Type as type
-    |WHERE   array_contains ( split(rtrim(']', ltrim('[',S0.http___db_uwaterloo_ca__galuc_wsdbm_hasGenre)),',') ,"<http://db.uwaterloo.ca/~galuc/wsdbm/SubGenre130>")
+    |WHERE   array_contains ( split(rtrim(']', ltrim('[',S0.http___db_uwaterloo_ca__galuc_wsdbm_hasGenre)),',') ,"<http://db.uwaterloo.ca/~galuc/wsdbm/SubGenre132>")
     |AND S0.http___purl_org_ontology_mo_conductor is not null
     |AND S0.http___www_w3_org_1999_02_22_rdf_syntax_ns_type  is not null
     |""".stripMargin
@@ -612,7 +612,7 @@ val s6_prost_csv =
         |FROM WPT T0
         |JOIN WPT T1
         |ON array_contains (T1.http___db_uwaterloo_ca__galuc_wsdbm_likes,T0.s)
-        |AND T1.s="<http://db.uwaterloo.ca/~galuc/wsdbm/User54768>"
+        |AND T1.s="<http://db.uwaterloo.ca/~galuc/wsdbm/User477817>"
         |lateral view explode (T0.http___www_w3_org_1999_02_22_rdf_syntax_ns_type) T0Type as type
         |WHERE T0.http___www_w3_org_1999_02_22_rdf_syntax_ns_type IS NOT NULL
         |AND T0.http___schema_org_text IS NOT NULL
@@ -625,7 +625,7 @@ val s6_prost_csv =
         |FROM WPT T0
         |JOIN WPT T1
         |ON array_contains (split(rtrim(']', ltrim('[',T1.http___db_uwaterloo_ca__galuc_wsdbm_likes)),',') ,T0.s)
-        |AND T1.s="<http://db.uwaterloo.ca/~galuc/wsdbm/User54768>"
+        |AND T1.s="<http://db.uwaterloo.ca/~galuc/wsdbm/User477817>"
         |lateral view explode (split(rtrim(']', ltrim('[',T0.http___www_w3_org_1999_02_22_rdf_syntax_ns_type)),',')) T0Type as type
         |WHERE T0.http___www_w3_org_1999_02_22_rdf_syntax_ns_type IS NOT NULL
         |AND T0.http___schema_org_text IS NOT NULL
